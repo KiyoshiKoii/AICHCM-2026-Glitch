@@ -12,4 +12,4 @@ Dưới đây là các hạng mục công việc cần hoàn thiện cho Phase 2
 Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/frontend/`**.
 - Khuyến nghị sử dụng các Component có khả năng tái sử dụng cao (VD: `ImageCard.jsx`, `TimelineViewer.jsx`).
 - Tuân thủ nguyên tắc Graceful Degradation đã được thống nhất: UI không được lỗi (crash) khi data bị thiếu các trường không bắt buộc (dùng optional chaining `?.`).
-- Các file giả lập dữ liệu (như `search_response_v1.json`) nên được để gọn gàng trong thư mục `src/frontend/src/mock/`.
+- Các file giả lập dữ liệu (như `search_response_v1.json`) nên được để gọn gàng trong thư mục `src/frontend/mock/`.

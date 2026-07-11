@@ -5,7 +5,7 @@ Tài liệu này hướng dẫn cách tích hợp file mock data để phát tri
 ## 1. Import Mock Data
 Bạn có thể import trực tiếp file JSON vào React Component:
 ```javascript
-import searchMockData from '../../src/mock/search_response_v1.json';
+import searchMockData from '../mock/search_response_v1.json';
 ```
 
 ## 2. Giả lập API Call với Delay (Loading State)
