@@ -32,7 +32,7 @@ Dưới đây là các hạng mục công việc cần hoàn thiện:
 
 ## 📂 Hướng dẫn Tổ chức Thư mục & Code (Codebase Guidelines)
 Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/visual_pipeline/`**.
-- Môi trường chạy chung (Python 3.10) đã được cấu hình ở thư mục gốc (`AICHCM-2026-Glitch/`). Sử dụng `conda env create -f environment.yml` (khuyên dùng) hoặc `pip install -r requirements.txt` để cài đặt một lần cho toàn bộ các luồng.
+- Môi trường chạy chung (Python 3.11) đã được cấu hình ở thư mục gốc (`AICHCM-2026-Glitch/`). Sử dụng `conda env create -f environment.yml` (khuyên dùng) hoặc `pip install -r requirements.txt` để cài đặt một lần cho toàn bộ các luồng.
 - Code đã được tạo sẵn khung (scaffold) với các file: `extractor.py` (cho Task 1), `database.py` (cho Task 2), và `server.py` (cho Task 3).
 - Lưu trữ local database của Qdrant thẳng vào thư mục `local_qdrant_db/` trong `src/visual_pipeline` (thư mục này đã được cấu hình chặn sẵn trong file `.gitignore` chung ở gốc để không bị push nhầm lên mạng).
 
