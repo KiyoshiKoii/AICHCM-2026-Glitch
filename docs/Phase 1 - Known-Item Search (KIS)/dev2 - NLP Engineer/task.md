@@ -35,7 +35,7 @@ Dưới đây là các hạng mục công việc cần hoàn thiện:
 
 ## 📂 Hướng dẫn Tổ chức Thư mục & Code (Codebase Guidelines)
 Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/semantic_pipeline/`**.
-- Môi trường chạy chung (Python 3.9) đã được cấu hình ở thư mục gốc (`AICHCM-2026-Glitch/`). Sử dụng `conda env create -f environment.yml` (khuyên dùng) hoặc `pip install -r requirements.txt` để cài đặt một lần cho toàn bộ các luồng.
+- Môi trường chạy chung (Python 3.10) đã được cấu hình ở thư mục gốc (`AICHCM-2026-Glitch/`). Sử dụng `conda env create -f environment.yml` (khuyên dùng) hoặc `pip install -r requirements.txt` để cài đặt một lần cho toàn bộ các luồng.
 - Code đã được tạo sẵn khung (scaffold) với các file: `extractor.py` (cho Task 1), `database.py` (cho Task 2), và `server.py` (cho Task 3).
 - **Lưu ý**: Đối với dữ liệu thô `metadata.json` hay `.csv`, file `.gitignore` chung ở thư mục gốc đã được cấu hình sẵn để tự động chặn không cho push lên Git vì dung lượng chúng rất nặng.
 
