@@ -12,3 +12,10 @@ Dưới đây là các hạng mục công việc cần hoàn thiện cho (Online
 Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/backend/`**.
 - Nên thiết lập cấu trúc thư mục theo chuẩn của FastAPI: chia thành `routers/` (chứa các API endpoint), `services/` (chứa logic gọi LLM, gọi API nội bộ), `utils/` (chứa thuật toán RRF, xử lý chuỗi frame_id).
 - Hãy viết code module hóa để sau này dễ dàng mở rộng khi hệ thống phình to.
+
+## 📚 Tài liệu Tham khảo (Reference Papers)
+- **Leveraging LLMs and Generative Models for Interactive Known-Item Video Search**: Hướng dẫn dùng LLM để viết lại câu và mở rộng ngữ nghĩa tránh lỗi Out-of-vocabulary, kèm chiến lược chống ảo giác (hallucination).
+- **LLandMark: A Multi-Agent Framework...**: Thiết kế kiến trúc Multi-Agent để phân rã câu hỏi (parsing & planning) và tách các trường logic độc lập.
+- **Reciprocal Rank Fusion outperforms condorcet...**: Bài báo nền tảng về thuật toán RRF, giải thích lý do dùng công thức $1/(60+rank)$ thay vì cộng điểm thô.
+- **Exploring the Best Practices of Query Expansion with LLMs**: Nghiên cứu cách LLM tự viết lại và mở rộng câu truy vấn, giới thiệu toolkit QueryGym.
+- **NTCIR-18 Lifelog 6 Task papers**: Tham khảo cách các đội quốc tế dùng LLM trích xuất thực thể và tạo prompt cho mô hình Vision-Language.
