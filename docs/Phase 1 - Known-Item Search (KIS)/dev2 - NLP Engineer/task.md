@@ -45,3 +45,12 @@ Toàn bộ source code của bạn sẽ được phát triển trong thư mục 
 - **Elasticsearch Documentation & Advanced BM25 Tuning**: Tài liệu nền tảng về hệ thống tìm kiếm Full-text search hiện đại, giúp dễ dàng chuyển đổi cấu trúc BM25 thuần lên kiến trúc Microservice và tinh chỉnh trọng số tìm kiếm chuẩn xác.
 - **Visual Spatial Reasoning (VSR) & Grounding**: Các nghiên cứu về cách buộc mô hình VLM sinh mô tả gắn liền với tọa độ không gian (Bounding Boxes) để giải quyết các truy vấn yêu cầu định hướng không gian khắt khe.
 - **Information Extraction using LLMs**: Khai thác sức mạnh của LLM (như Llama-3, Mistral) để cấu trúc hóa dữ liệu phi cấu trúc (Unstructured Text) thành các schema JSON tĩnh như Thời gian, Địa điểm, Đối tượng nhằm hỗ trợ Metadata Filtering.
+
+## 🌿 Hướng dẫn Git & Đặt tên Branch (Git Workflow & Branching)
+Mỗi dev sẽ có một branch chính để làm việc. Branch chính của bạn là: **`feat/semantic-pipeline`**.
+
+- **Quy tắc đặt tên nếu bạn tạo thêm branch phụ (mở rộng tính năng/sửa bug):**
+  - Cú pháp: `feat/semantic-pipeline-<loại>-<tên_chức_năng>`
+  - Ví dụ thêm tính năng: `feat/semantic-pipeline-feature-yolo-model`
+  - Ví dụ sửa lỗi: `feat/semantic-pipeline-bugfix-vector-dim`
+- Hãy nhớ **push code thường xuyên** lên branch của mình trên GitHub để backup.

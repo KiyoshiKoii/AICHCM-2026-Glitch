@@ -19,3 +19,12 @@ Toàn bộ source code của bạn sẽ được phát triển trong thư mục 
 - **Reciprocal Rank Fusion outperforms condorcet...**: Bài báo nền tảng về thuật toán RRF, giải thích lý do dùng công thức $1/(60+rank)$ thay vì cộng điểm thô.
 - **Exploring the Best Practices of Query Expansion with LLMs**: Nghiên cứu cách LLM tự viết lại và mở rộng câu truy vấn, giới thiệu toolkit QueryGym.
 - **NTCIR-18 Lifelog 6 Task papers**: Tham khảo cách các đội quốc tế dùng LLM trích xuất thực thể và tạo prompt cho mô hình Vision-Language.
+
+## 🌿 Hướng dẫn Git & Đặt tên Branch (Git Workflow & Branching)
+Mỗi dev sẽ có một branch chính để làm việc. Branch chính của bạn là: **`feat/backend-services`**.
+
+- **Quy tắc đặt tên nếu bạn tạo thêm branch phụ (mở rộng tính năng/sửa bug):**
+  - Cú pháp: `feat/backend-services-<loại>-<tên_chức_năng>`
+  - Ví dụ thêm tính năng: `feat/backend-services-feature-yolo-model`
+  - Ví dụ sửa lỗi: `feat/backend-services-bugfix-vector-dim`
+- Hãy nhớ **push code thường xuyên** lên branch của mình trên GitHub để backup.

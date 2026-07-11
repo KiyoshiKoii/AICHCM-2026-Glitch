@@ -43,3 +43,12 @@ Toàn bộ source code của bạn sẽ được phát triển trong thư mục 
 - **InternVideo2 (Video Foundation Model)**: Bài báo giới thiệu kiến trúc nắm bắt chuỗi hành động và chuyển động theo thời gian cực kỳ mạnh mẽ, chuyên trị các câu query yêu cầu tính logic diễn biến (ví dụ: "đang đứng rồi ngồi xuống").
 - **Matryoshka Representation Learning (MRL)**: Hướng dẫn kỹ thuật ép nhỏ kích thước Vector (từ 512 chiều xuống còn 64 chiều hoặc nhỏ hơn) mà vẫn giữ được độ chính xác gần như nguyên vẹn, là "cứu cánh" để giải quyết bài toán tràn RAM khi nạp 100GB dữ liệu vào Qdrant.
 - **ColPali / ColBERT (Late Interaction)**: Cung cấp cơ chế tìm kiếm lai bằng cách lưu nhiều vector cho các vùng nhỏ (patch) của cùng một bức ảnh, giúp không bỏ sót các vật thể li ti mà mô hình sinh vector đơn (Single-vector model) hay bị mất thông tin.
+
+## 🌿 Hướng dẫn Git & Đặt tên Branch (Git Workflow & Branching)
+Mỗi dev sẽ có một branch chính để làm việc. Branch chính của bạn là: **`feat/visual-pipeline`**.
+
+- **Quy tắc đặt tên nếu bạn tạo thêm branch phụ (mở rộng tính năng/sửa bug):**
+  - Cú pháp: `feat/visual-pipeline-<loại>-<tên_chức_năng>`
+  - Ví dụ thêm tính năng: `feat/visual-pipeline-feature-yolo-model`
+  - Ví dụ sửa lỗi: `feat/visual-pipeline-bugfix-vector-dim`
+- Hãy nhớ **push code thường xuyên** lên branch của mình trên GitHub để backup.
