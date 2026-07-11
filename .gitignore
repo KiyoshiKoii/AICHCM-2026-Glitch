@@ -1,0 +1,27 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dev 1 (Visual Pipeline) - Vector Database
+src/visual_pipeline/local_qdrant_db/
+
+# Dev 2 (Semantic Pipeline) - Raw Data
+src/semantic_pipeline/metadata.json
+src/semantic_pipeline/*.csv
+
+# Node (Frontend)
+node_modules/
+dist/
+build/

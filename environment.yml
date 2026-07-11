@@ -1,0 +1,19 @@
+name: aichcm2026
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - torch
+    - transformers
+    - sentence-transformers
+    - qdrant-client
+    - fastapi
+    - uvicorn
+    - Pillow
+    - einops
+    - timm
+    - rank_bm25
