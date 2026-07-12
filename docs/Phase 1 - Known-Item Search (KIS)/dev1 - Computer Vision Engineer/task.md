@@ -2,12 +2,12 @@
 
 Dưới đây là các hạng mục công việc cần hoàn thiện:
 
-- [ ] **Task 1: Xây dựng Luồng Trích xuất Vector (Visual Pipeline)**
+- [x] **Task 1: Xây dựng Luồng Trích xuất Vector (Visual Pipeline)**
   - **Tải Model**: Cài đặt và sử dụng model `openai/clip-vit-base-patch32` thông qua thư viện `sentence-transformers` hoặc `transformers` trên máy local.
   - **Trích xuất ảnh**: Viết script đọc thư mục ảnh đầu vào và nhúng (embed) chúng thành các Vector đặc trưng 512 chiều.
   - **Ép hiệu năng (Batch Inference)**: Viết code đẩy data vào model theo lô với Batch Size = 16 hoặc 32 để tránh nghẽn cổ chai. **Lưu ý quan trọng**: Phải code tự động nhận diện phần cứng (`device = "cuda" if torch.cuda.is_available() else "cpu"`). Khi test ở local máy tính chỉ có CPU thì hệ thống vẫn chạy bình thường (dù chậm), sau này quăng lên Cloud có GPU thì code vẫn tương thích 100%.
 
-- [ ] **Task 2: Thiết lập Vector DB (Chạy Local, KHÔNG Docker)**
+- [x] **Task 2: Thiết lập Vector DB (Chạy Local, KHÔNG Docker)**
   - **Khởi tạo Qdrant**: Dùng thư viện Python `qdrant-client` cấu hình chế độ Local Storage (`path="./local_qdrant_db"`) để tạo DB lưu trực tiếp trên ổ cứng.
   - **Tạo Collection**: Định nghĩa cấu trúc lưu trữ và nạp toàn bộ Vector sinh ra ở Task 1 vào database.
   - **Gắn Payload**: Đảm bảo mỗi vector nạp vào đều được gắn metadata (Payload) chính là tên file ảnh (`frame_id`).
