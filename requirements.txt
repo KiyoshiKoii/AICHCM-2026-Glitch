@@ -1,5 +1,7 @@
 # Lưu ý: Cài đặt PyTorch thủ công theo cấu hình máy (xem hướng dẫn ở task.md)
-transformers
+
+# Florence-2 lỗi với transformers >= 4.50 (bug trust_remote_code). PHẢI pin < 4.50.
+transformers==4.49.0
 sentence-transformers
 qdrant-client
 fastapi
@@ -8,3 +10,11 @@ Pillow
 einops
 timm
 rank_bm25
+
+# --- OCR tiếng Việt (Dev 2, Task 1) ---
+paddlepaddle        # backend; bản CPU. GPU: cài paddlepaddle-gpu tương ứng.
+paddleocr           # detect vùng chữ (PP-OCRv6)
+sentencepiece       # tokenizer cho model dịch Helsinki-NLP (MarianMT)
+gdown               # VietOCR tải weights (bản >= 5, không cần pkg_resources)
+# VietOCR: PHẢI cài riêng bằng --no-deps để tránh pin độc (einops==0.2.0, gdown==4.4.0):
+#   pip install vietocr --no-deps
