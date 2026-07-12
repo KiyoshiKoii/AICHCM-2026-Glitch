@@ -161,6 +161,24 @@
   }
 }
 
+.timeline-viewer {
+  display: flex;
+  overflow-x: auto;
+  cursor: grab;
+  user-select: none;
+  gap: 8px;
+  padding: 12px;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.timeline-track {
+  display: flex;
+  gap: 8px;
+}
+
 .ticks {
   position: relative;
   width: 100%;
