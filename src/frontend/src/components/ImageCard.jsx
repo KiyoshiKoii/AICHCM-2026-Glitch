@@ -1,4 +1,4 @@
-function ImageCard({ result }) {
+function ImageCard({ result = {} }) {
   const {
     frame_id: frameId,
     thumbnail_url: thumbnailUrl,
@@ -11,7 +11,7 @@ function ImageCard({ result }) {
 
   return (
     <figure className="image-card">
-      <img src={thumbnailUrl} alt={frameId} loading="lazy" />
+      <img src={thumbnailUrl} alt={frameId ?? 'unknown frame'} loading="lazy" />
       <figcaption>
         <span className="video-name">{videoLabel}</span>
         <span className="timestamp">{timestamp}</span>
