@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SearchBar from './components/SearchBar.jsx';
+import ResultGrid from './components/ResultGrid.jsx';
 import { fetchSearchResults } from './api/mockClient.js';
 import './App.css';
 
@@ -20,17 +21,7 @@ function App() {
   return (
     <div className="app">
       <SearchBar onSearch={runSearch} onImageSearch={runSearch} />
-      {isLoading ? (
-        <p>Đang tìm kiếm...</p>
-      ) : (
-        <ul className="results-preview">
-          {results.map((result) => (
-            <li key={result.frame_id}>
-              {result.frame_id} — score {result.score}
-            </li>
-          ))}
-        </ul>
-      )}
+      {isLoading ? <p>Đang tìm kiếm...</p> : <ResultGrid results={results} />}
     </div>
   );
 }
