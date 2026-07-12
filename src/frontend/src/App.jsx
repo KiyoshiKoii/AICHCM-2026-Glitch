@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SearchBar from './components/SearchBar.jsx';
 import ResultGrid from './components/ResultGrid.jsx';
+import TimelineViewer from './components/TimelineViewer.jsx';
 import { fetchSearchResults, getFrameContext } from './api/mockClient.js';
 import './App.css';
 
@@ -39,19 +40,7 @@ function App() {
         <ResultGrid results={results} onCardDoubleClick={handleCardDoubleClick} />
       )}
       {isContextLoading && <p>Đang tải ngữ cảnh...</p>}
-      {frameContext && !isContextLoading && (
-        <ul className="frame-context-preview">
-          {frameContext.before_frames.map((frame) => (
-            <li key={frame.frame_id}>{frame.frame_id}</li>
-          ))}
-          <li>
-            <strong>{frameContext.center_frame.frame_id}</strong>
-          </li>
-          {frameContext.after_frames.map((frame) => (
-            <li key={frame.frame_id}>{frame.frame_id}</li>
-          ))}
-        </ul>
-      )}
+      {!isContextLoading && <TimelineViewer frameContext={frameContext} />}
     </div>
   );
 }
