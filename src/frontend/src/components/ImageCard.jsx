@@ -1,4 +1,4 @@
-function ImageCard({ result = {} }) {
+function ImageCard({ result = {}, onDoubleClick }) {
   const {
     frame_id: frameId,
     thumbnail_url: thumbnailUrl,
@@ -10,7 +10,10 @@ function ImageCard({ result = {} }) {
   const timestamp = metadata?.timestamp ?? 'Unknown time';
 
   return (
-    <figure className="image-card">
+    <figure
+      className="image-card"
+      onDoubleClick={() => onDoubleClick?.(frameId)}
+    >
       <img src={thumbnailUrl} alt={frameId ?? 'unknown frame'} loading="lazy" />
       <figcaption>
         <span className="video-name">{videoLabel}</span>
