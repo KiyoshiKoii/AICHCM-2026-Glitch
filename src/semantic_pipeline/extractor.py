@@ -185,7 +185,7 @@ if __name__ == "__main__":
         description="Trích xuất caption (Florence-2) + OCR đã dịch (PaddleOCR+VietOCR+MT) ra metadata.json"
     )
     parser.add_argument("--input-dir", default="src/semantic_pipeline/sample_frames")
-    parser.add_argument("--output", default="src/semantic_pipeline/metadata.json")
+    parser.add_argument("--output", default="src/semantic_pipeline/sample_frames/metadata.json")
     parser.add_argument("--limit", type=int, default=None, help="Chỉ xử lý N ảnh đầu (test nhanh)")
     args = parser.parse_args()
 
