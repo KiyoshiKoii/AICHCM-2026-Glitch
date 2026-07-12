@@ -2,6 +2,7 @@ import { useState } from 'react';
 import SearchBar from './components/SearchBar.jsx';
 import ResultGrid from './components/ResultGrid.jsx';
 import TimelineViewer from './components/TimelineViewer.jsx';
+import LoadingSpinner from './components/LoadingSpinner.jsx';
 import { fetchSearchResults, getFrameContext } from './api/mockClient.js';
 import './App.css';
 
@@ -35,12 +36,15 @@ function App() {
     <div className="app">
       <SearchBar onSearch={runSearch} onImageSearch={runSearch} />
       {isLoading ? (
-        <p>Đang tìm kiếm...</p>
+        <LoadingSpinner label="Đang tìm kiếm..." />
       ) : (
         <ResultGrid results={results} onCardDoubleClick={handleCardDoubleClick} />
       )}
-      {isContextLoading && <p>Đang tải ngữ cảnh...</p>}
-      {!isContextLoading && <TimelineViewer frameContext={frameContext} />}
+      {isContextLoading ? (
+        <LoadingSpinner label="Đang tải ngữ cảnh..." />
+      ) : (
+        <TimelineViewer frameContext={frameContext} />
+      )}
     </div>
   );
 }
