@@ -33,6 +33,13 @@ Dưới đây là các hạng mục công việc cần hoàn thiện:
   - **API Test**: Xây dựng bài test cho endpoint `/internal/search/text` để đảm bảo kết quả JSON trả về đúng format `[frame_id, score, video_name, frame_index]` với HTTP Status 200.
   - **Accuracy & Speed Test**: Đo lường tốc độ query của BM25 trên local RAM và test chéo độ chuẩn xác của nội dung OCR sinh ra từ Florence-2.
 
+- [ ] **Task 6: Benchmark & So sánh Model Semantic**
+  - **Thiết lập benchmark cố định**: Tạo và sử dụng chung manifest query/ground truth (`qrels.jsonl`) trong `tests/semantic_pipeline/benchmark/`, đồng thời có tập annotation nhỏ cho OCR/caption.
+  - **Chấm baseline trước**: Đo `microsoft/Florence-2-base` + BM25 trước khi thử Florence-2-large, Moondream hoặc model mới. Mọi model phải dùng cùng corpus, prompt/task, tokenizer, schema metadata và `top_k`.
+  - **Đo chỉ số bắt buộc**: Tính Recall@1, Recall@5, Recall@10, MRR@10; trên tập có nhãn tính thêm OCR CER, Word F1 và Concept Recall của caption; đo p50/p95 query, tốc độ sinh metadata và RAM/VRAM.
+  - **Lưu kết quả có thể tái lập**: Ghi model revision, commit, hash manifest, prompt/task, batch size, precision, phần cứng và cấu hình BM25. Raw output đặt trong `tests/semantic_pipeline/benchmark/results/` (không commit); thêm bảng tóm tắt vào `benchmark_results.md`.
+  - **Làm theo hướng dẫn**: Đọc và tuân thủ [benchmark_guide.md](benchmark_guide.md) trước khi báo cáo model tốt hơn baseline.
+
 ## 📂 Hướng dẫn Tổ chức Thư mục & Code (Codebase Guidelines)
 Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/semantic_pipeline/`**.
 - **Cài đặt môi trường**: 

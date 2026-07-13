@@ -25,3 +25,8 @@ src/semantic_pipeline/*.csv
 node_modules/
 dist/
 build/
+
+# Benchmark generated artifacts (keep scripts, compact fixtures, and docs tracked)
+tests/**/benchmark/data/
+tests/**/benchmark/results/
+tests/**/benchmark/artifacts/

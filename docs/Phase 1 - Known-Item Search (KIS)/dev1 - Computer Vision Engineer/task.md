@@ -30,6 +30,13 @@ Dưới đây là các hạng mục công việc cần hoàn thiện:
   - **API Test**: Xây dựng test cho endpoint `/internal/search/visual` đảm bảo response trả về đúng format `[frame_id, score, video_name, frame_index]` và HTTP status 200.
   - **Performance Test**: Đo tốc độ trích xuất Vector với Batch Inference và tốc độ truy vấn Qdrant để đảm bảo đạt độ trễ cho phép (dưới 500ms).
 
+- [ ] **Task 6: Benchmark & So sánh Model Visual**
+  - **Thiết lập benchmark cố định**: Tạo và sử dụng chung manifest query/ground truth (`qrels.jsonl`) trong `tests/visual_pipeline/benchmark/`; không chọn thủ công query có lợi cho model.
+  - **Chấm baseline trước**: Đo `openai/clip-vit-base-patch32` trước khi thử SigLIP, InternVideo hoặc model mới. Mọi model phải dùng cùng corpus, preprocessing, metric Cosine, cấu hình Qdrant và `top_k`.
+  - **Đo chỉ số bắt buộc**: Tính Recall@1, Recall@5, Recall@10, MRR@10; đo p50/p95 query, tốc độ embedding/index và RAM/VRAM/dung lượng index.
+  - **Lưu kết quả có thể tái lập**: Ghi model revision, commit, hash manifest, batch size, precision, phần cứng và cấu hình index. Raw output đặt trong `tests/visual_pipeline/benchmark/results/` (không commit); thêm bảng tóm tắt vào `benchmark_results.md`.
+  - **Làm theo hướng dẫn**: Đọc và tuân thủ [benchmark_guide.md](benchmark_guide.md) trước khi báo cáo model tốt hơn baseline.
+
 ## 📂 Hướng dẫn Tổ chức Thư mục & Code (Codebase Guidelines)
 Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/visual_pipeline/`**.
 - **Cài đặt môi trường**: 
