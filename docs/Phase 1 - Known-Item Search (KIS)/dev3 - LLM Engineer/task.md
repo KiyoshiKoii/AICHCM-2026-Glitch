@@ -1,17 +1,47 @@
 # Tasks for Dev 3 (LLM Engineer / Backend)
 
-Dưới đây là các hạng mục công việc cần hoàn thiện cho (Online Serving):
+Dưới đây là các hạng mục công việc cần hoàn thiện cho (Online Serving) - Phase 1:
 
-- [ ] **Nghiên cứu & Tích hợp LLM Parser**: Đánh giá và tìm hiểu các mô hình ngôn ngữ (bao gồm cả các bản trả phí như GPT-4, Claude,... để đảm bảo chất lượng). Tuy nhiên, trong quá trình test code ban đầu, tạm thời dùng Ollama tự host ở local. Yêu cầu: Nhận câu query tiếng Việt -> Prompt tiếng Anh (Visual) & Keywords đồng nghĩa (Semantic).
-- [ ] **API Query by Text (`POST /search/text`)**: Gọi song song 2 API nội bộ (Dev 1 & Dev 2), dùng công thức **RRF** để trộn điểm, gộp kết quả, cắt lấy Top 20 (để tránh tải quá nặng cho UI) và gán URL thumbnail.
-- [ ] **API Query by Image (`POST /search/image`)**: Forward trực tiếp ảnh upload từ UI sang Dev 1 (Vector DB pipeline) mà không qua LLM hay Dev 2.
-- [ ] **API Temporal Navigation (`GET /frames/context/{frame_id}`)**: Xử lý logic chuỗi, tách số thứ tự trong `frame_id` (VD: `vid05_f1024` -> `1024`), cộng trừ để lấy ra mảng 11 frames liền kề (5 trước, 5 sau).
-- [ ] **Unit Testing & API Testing**: Xây dựng Unit test cho các function cốt lõi (đặc biệt là hàm tính điểm RRF và module phân tích LLM JSON parser) để đảm bảo không bị lỗi dữ liệu đầu ra.
+## 📂 Kiến trúc & Tổ chức Source Code (Codebase Guidelines)
 
-## 📂 Hướng dẫn Tổ chức Thư mục & Code (Codebase Guidelines)
-Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/backend/`**.
-- Nên thiết lập cấu trúc thư mục theo chuẩn của FastAPI: chia thành `routers/` (chứa các API endpoint), `services/` (chứa logic gọi LLM, gọi API nội bộ), `utils/` (chứa thuật toán RRF, xử lý chuỗi frame_id).
-- Hãy viết code module hóa để sau này dễ dàng mở rộng khi hệ thống phình to.
+Toàn bộ source code của bạn sẽ được phát triển trong thư mục **`src/backend/`**. 
+Cấu trúc đã được tổ chức theo từng Domain cụ thể để dễ bảo trì và mở rộng cho các Phase tiếp theo:
+
+```text
+src/backend/
+├── main.py                          # FastAPI app factory + mount static files
+├── config.py                        # Cấu hình tập trung (ports, model names, paths)
+├── routers/                         # Các API endpoint (thin layer, chỉ nhận/trả request)
+├── services/                        # Business logic chính
+├── clients/                         # HTTP clients gọi các service nội bộ
+├── schemas/                         # Pydantic models cho request/response
+└── utils/                           # Hàm tiện ích thuần túy (stateless, dễ unit test)
+```
+
+## ✅ Checklist Công việc
+
+### 1. Phân tích Truy vấn & Tích hợp LLM (`services/query_analyzer.py`)
+- [ ] **Nghiên cứu & Tích hợp LLM Parser**: Đánh giá và tìm hiểu các mô hình ngôn ngữ (bao gồm cả các bản trả phí như GPT-4, Claude,... để đảm bảo chất lượng). Tạm thời dùng Ollama tự host ở local.
+- [ ] Viết hàm nhận câu query tiếng Việt -> Nhả JSON gồm: Prompt tiếng Anh (Visual) & Keywords đồng nghĩa (Semantic).
+
+### 2. Giao tiếp Dịch vụ Nội bộ (`clients/`)
+- [ ] **`visual_client.py`**: Viết hàm HTTP POST gọi sang `localhost:8001/internal/search/visual` (Dev 1).
+- [ ] **`semantic_client.py`**: Viết hàm HTTP POST gọi sang `localhost:8002/internal/search/text` (Dev 2).
+
+### 3. Điều phối Tìm kiếm (`services/search_orchestrator.py` & `utils/rrf.py`)
+- [ ] Cài đặt thuật toán Reciprocal Rank Fusion (RRF) trong `utils/rrf.py` (công thức $1/(60+rank)$).
+- [ ] Tại `search_orchestrator.py`: Viết logic gọi song song 2 clients trên, nhận kết quả, dùng RRF trộn điểm, gộp kết quả, cắt lấy Top 20 và gán URL thumbnail.
+
+### 4. API Endpoints (`routers/`)
+- [ ] Định nghĩa Pydantic Models trong `schemas/search.py` và `schemas/frames.py` bám sát tài liệu API Contract.
+- [ ] **`routers/search.py`**: 
+  - `POST /search/text`: Nhận query văn bản -> Gọi `query_analyzer` -> Gọi `search_orchestrator` -> Trả về kết quả.
+  - `POST /search/image`: Forward trực tiếp ảnh upload sang Dev 1 (Vector DB pipeline).
+- [ ] **`routers/frames.py`**:
+  - `GET /frames/context/{frame_id}`: Xử lý logic chuỗi, tách số thứ tự trong `frame_id` (VD: `vid05_f1024` -> `1024`), cộng trừ để lấy ra mảng 11 frames liền kề (5 trước, 5 sau). Viết hàm tiện ích xử lý frame_id trong `utils/frame_id.py`.
+
+### 5. Kiểm thử (Unit Testing)
+- [ ] Xây dựng Unit test cho các function cốt lõi (đặc biệt là hàm tính điểm RRF và module phân tích LLM JSON parser) để đảm bảo không bị lỗi dữ liệu đầu ra.
 
 ## 📚 Tài liệu Tham khảo (Reference Papers)
 - **Leveraging LLMs and Generative Models for Interactive Known-Item Video Search**: Hướng dẫn dùng LLM để viết lại câu và mở rộng ngữ nghĩa tránh lỗi Out-of-vocabulary, kèm chiến lược chống ảo giác (hallucination).
