@@ -153,16 +153,19 @@ class SemanticExtractor:
         return info
 
 
-def extract_metadata(input_dir: str, output_path: str, limit: int | None = None):
+def extract_metadata(input_dir: str, output_path: str, limit: int | None = None, single_image: str | None = None):
     extractor = SemanticExtractor()
 
-    image_paths = sorted(
-        p for p in Path(input_dir).iterdir() if p.suffix.lower() in IMAGE_EXTENSIONS
-    )
-    if limit is not None:
-        image_paths = image_paths[:limit]
-
-    print(f"[run] Found {len(image_paths)} images in {input_dir}")
+    if single_image:
+        image_paths = [Path(single_image)]
+        print(f"[run] Processing single image: {single_image}")
+    else:
+        image_paths = sorted(
+            p for p in Path(input_dir).iterdir() if p.suffix.lower() in IMAGE_EXTENSIONS
+        )
+        if limit is not None:
+            image_paths = image_paths[:limit]
+        print(f"[run] Found {len(image_paths)} images in {input_dir}")
 
     results = []
     for i, img_path in enumerate(image_paths, start=1):
@@ -187,6 +190,7 @@ if __name__ == "__main__":
     parser.add_argument("--input-dir", default="src/semantic_pipeline/sample_frames")
     parser.add_argument("--output", default="src/semantic_pipeline/sample_frames/metadata.json")
     parser.add_argument("--limit", type=int, default=None, help="Chỉ xử lý N ảnh đầu (test nhanh)")
+    parser.add_argument("--image", type=str, default=None, help="Đường dẫn đến 1 tấm ảnh cụ thể cần test")
     args = parser.parse_args()
 
-    extract_metadata(args.input_dir, args.output, args.limit)
+    extract_metadata(args.input_dir, args.output, args.limit, args.image)
