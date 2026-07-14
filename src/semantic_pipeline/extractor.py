@@ -20,6 +20,10 @@ FLORENCE_MODEL_ID = "microsoft/Florence-2-base"
 TRANSLATION_MODEL_ID = "Helsinki-NLP/opus-mt-vi-en"
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 
+# Nới rộng box khi crop: dấu thanh tiếng Việt nằm PHÍA TRÊN chữ, crop sát viền
+# box sẽ cắt mất dấu ("bắt buộc" -> "bát buộc").
+CROP_PADDING = 4
+
 VIETNAMESE_CHARS = re.compile(
     r"[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]",
     re.IGNORECASE,
@@ -107,28 +111,42 @@ class SemanticExtractor:
         return self._florence_task(image, "<DETAILED_CAPTION>")
 
     def ocr_lines(self, image: Image.Image, image_path: Path) -> list[str]:
-        # PaddleOCR chỉ dùng để lấy box vùng chữ; VietOCR đọc từng box.
+        # PaddleOCR chỉ dùng để lấy box vùng chữ; VietOCR đọc cả loạt box một lần.
         result = self.detector.predict(str(image_path))
         if not result:
             return []
         res = result[0]
         polys = res.get("rec_polys", res.get("dt_polys")) or []
 
-        lines = []
+        width, height = image.size
+        crops = []
         for poly in polys:
             pts = np.array(poly).reshape(-1, 2)
-            x1, y1 = int(pts[:, 0].min()), int(pts[:, 1].min())
-            x2, y2 = int(pts[:, 0].max()), int(pts[:, 1].max())
+            x1 = max(int(pts[:, 0].min()) - CROP_PADDING, 0)
+            y1 = max(int(pts[:, 1].min()) - CROP_PADDING, 0)
+            x2 = min(int(pts[:, 0].max()) + CROP_PADDING, width)
+            y2 = min(int(pts[:, 1].max()) + CROP_PADDING, height)
             if x2 - x1 < 2 or y2 - y1 < 2:
                 continue
-            crop = image.crop((x1, y1, x2, y2))
-            try:
-                text = self.recognizer.predict(crop)
-            except Exception:
-                text = ""
-            if text.strip():
-                lines.append(text.strip())
-        return lines
+            crops.append(image.crop((x1, y1, x2, y2)))
+
+        if not crops:
+            return []
+
+        # Đọc cả batch 1 lần thay vì tuần tự từng crop (mỗi ảnh có 24-50 crop).
+        try:
+            texts = self.recognizer.predict_batch(crops)
+        except Exception as exc:
+            # Batch lỗi -> lùi về đọc từng crop, để 1 crop hỏng không mất cả ảnh.
+            print(f"  [warn] predict_batch failed ({exc}), fallback per-crop")
+            texts = []
+            for crop in crops:
+                try:
+                    texts.append(self.recognizer.predict(crop))
+                except Exception:
+                    texts.append("")
+
+        return [text.strip() for text in texts if text and text.strip()]
 
     def translate_lines(self, lines: list[str]) -> list[str]:
         # Chỉ dịch dòng có chữ tiếng Việt; dòng tiếng Anh/mã (ActualStartTime...) giữ nguyên.
