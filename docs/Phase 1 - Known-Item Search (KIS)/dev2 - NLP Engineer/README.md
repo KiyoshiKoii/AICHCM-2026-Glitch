@@ -5,7 +5,7 @@ Source: **`src/semantic_pipeline/`** · Branch: **`feat/semantic-pipeline`**
 | Task | Nội dung | Trạng thái |
 |---|---|---|
 | **Task 1** | Trích xuất ngữ nghĩa (caption + OCR) → `metadata.json` | ✅ Xong |
-| Task 2 | Text DB bằng BM25 (`rank_bm25`) | ⬜ |
+| **Task 2** | Text DB bằng BM25 (`rank_bm25`) | ✅ Xong |
 | Task 3 | Internal API (FastAPI, port 8002) | ⬜ |
 | Task 4 | R&D (Elasticsearch, Spatial Reasoning, Entity Extraction) | ⬜ |
 | Task 5 | Unit Testing & Performance Testing | ⬜ |
@@ -37,7 +37,38 @@ python src/semantic_pipeline/extractor.py             # chạy full
 
 ---
 
+## ✅ Đã làm được (Task 2)
+
+Text DB bằng BM25 trong [`database.py`](../../../src/semantic_pipeline/database.py) — class `TextDatabase`:
+
+```
+metadata.json ──► ghép caption + ocr_text ──► tokenize ──► BM25Okapi
+                                                              │
+   keywords (tiếng Anh) ──► tokenize ──► get_scores() ────────┘
+                                              └──► sort ──► top_k
+```
+
+- **Tokenize** = lowercase → tách từ → **bỏ stopword** → **chuẩn hóa bất quy tắc** → **stemming**. Dùng **chung một hàm** cho cả document lẫn query, nếu khác nhau sẽ không bao giờ khớp.
+  - Stemming (Porter): query `"motorbike"` khớp document `"motorbikes"`, `"drop"` khớp `"dropping"`.
+  - Bảng bất quy tắc: `men→man`, `women→woman`, `children→child`, `people→person`... (Porter bó tay với các từ này, mà query KIS lại toàn về **người**).
+  - Bỏ stopword: cắt **36%** token thừa trong index.
+- Chỉ index `caption` + `ocr_text` (đều tiếng Anh). **Không** index `ocr_text_raw` (tiếng Việt) vì keywords Dev 3 gửi sang là tiếng Anh.
+- `corpus[i]` ↔ `records[i]` để map ngược ra `frame_id` (khóa chính).
+- Trả **điểm BM25 thô, KHÔNG chuẩn hóa** (đúng luật task.md), lọc bỏ `score <= 0`.
+- `float(score)` — bắt buộc, vì `numpy.float64` không JSON-serialize được (Task 3 sẽ crash).
+- Output đúng API Contract: `frame_id`, `score`, `video_name`, `frame_index`.
+
+**Đã kiểm chứng:** 12/12 test PASS trên corpus giả + xếp hạng chính xác trên 24 record thật (`booking/entity/record` → đúng ảnh ERD; `snowden/whistleblower` → đúng ảnh báo Guardian).
+
+**Chạy:** `python src/semantic_pipeline/database.py`
+
+> ⚠️ **Corpus phải đủ lớn.** Với ~2 document, công thức IDF của BM25 ra **0 hoặc số âm** → mọi điểm bằng 0, không có kết quả. Đây không phải bug — cần chạy extractor đủ nhiều ảnh trước.
+
+---
+
 ## ⚠️ Điểm cần cải thiện
+
+### Task 1
 
 | # | Vấn đề | Hướng cải thiện |
 |---|---|---|
@@ -45,6 +76,15 @@ python src/semantic_pipeline/extractor.py             # chạy full
 | 2 | VietOCR còn sạn: ký tự `—`, `/` thành `?`; hallucination lặp từ; vài lỗi dấu lẻ | Lọc theo confidence (`return_prob=True`); bật `beamsearch=True` (chậm hơn nhưng chuẩn hơn); ensemble với PaddleOCR-rec |
 | 3 | Caption Florence-2 tự "đọc" chữ và đọc sai tiếng Việt | Ưu tiên thấp (frame thật ít chữ). Nếu cần: bỏ phần trong ngoặc kép của caption |
 | 4 | **Chậm trên CPU** (chạy 4 model tuần tự) | Giảm `num_beams` của Florence-2 (3 → 1); chạy GPU (code đã auto-detect `cuda`, riêng Paddle cần `paddlepaddle-gpu`); thêm cơ chế resume để chạy lại không mất công |
+
+### Task 2
+
+| # | Vấn đề | Trạng thái / Hướng cải thiện |
+|---|---|---|
+| 5 | Porter stemmer không xử lý được bất quy tắc (`men` ↛ `man`) → query về **người** bị trượt | ✅ **Đã sửa** bằng bảng ánh xạ thủ công. ⚠️ **Đừng dùng `WordNetLemmatizer`** — đã thử: nó **vẫn không sửa được `men`→`man`**, lại cần POS tag và làm hỏng ca khác (`riding`→`rid`) |
+| 6 | Chưa loại stopword → nhiễu điểm | ✅ **Đã sửa**, cắt 36% token. ⚠️ Đừng tin "IDF tự hạ điểm từ phổ biến" — `rank_bm25` có **epsilon floor** biến IDF âm thành **dương** (`0.25 × avg_idf`), nên stopword **vẫn cộng điểm nhiễu** |
+| 7 | Index dựng lại mỗi lần khởi động, giữ hết trên RAM | ⏸️ **Chưa cần.** Index chỉ dựng **1 lần lúc server start** (trong `__init__`), không phải mỗi request → lợi ích hiện tại bằng 0. Data lớn (100GB) mới cần → **Elasticsearch** (Task 4) |
+| 8 | `caption` và `ocr_text` gộp chung, **trọng số bằng nhau** — OCR (chữ thật trong ảnh) đáng tin hơn caption do model sinh ra | ⏸️ **Chưa làm.** `rank_bm25` **không hỗ trợ BM25F**; muốn làm phải dựng 2 index rồi cộng trọng số — nhưng **chưa có ground truth để chỉnh trọng số**, chỉnh mò dễ làm tệ hơn. Đợi Task 5 có data đánh giá |
 
 ---
 
