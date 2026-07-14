@@ -10,7 +10,9 @@ from pathlib import Path
 from nltk.stem import PorterStemmer
 from rank_bm25 import BM25Okapi
 
-DEFAULT_METADATA_PATH = "src/semantic_pipeline/sample_frames/metadata.json"
+# Tính từ vị trí file này, KHÔNG phụ thuộc thư mục đang chạy lệnh.
+# (Trước đây dùng đường dẫn tương đối nên chỉ chạy được khi đứng ở gốc repo.)
+DEFAULT_METADATA_PATH = Path(__file__).parent / "sample_frames" / "metadata.json"
 
 _stemmer = PorterStemmer()
 
@@ -67,10 +69,16 @@ def tokenize(text: str) -> list[str]:
 class TextDatabase:
     """BM25 full-text search trên caption + ocr_text của từng frame."""
 
-    def __init__(self, metadata_path: str = DEFAULT_METADATA_PATH):
-        self.records = json.loads(Path(metadata_path).read_text(encoding="utf-8"))
+    def __init__(self, metadata_path: str | Path = DEFAULT_METADATA_PATH):
+        path = Path(metadata_path)
+        if not path.exists():
+            raise FileNotFoundError(
+                f"Không tìm thấy {path} — chạy extractor.py để sinh metadata.json trước."
+            )
+
+        self.records = json.loads(path.read_text(encoding="utf-8"))
         if not self.records:
-            raise ValueError(f"{metadata_path} rỗng — chạy extractor.py trước.")
+            raise ValueError(f"{path} rỗng — chạy extractor.py trước.")
 
         # corpus[i] tương ứng records[i] -> đây là cách map ngược ra frame_id.
         # Chỉ lấy caption + ocr_text (đều tiếng Anh); KHÔNG lấy ocr_text_raw (tiếng Việt)
