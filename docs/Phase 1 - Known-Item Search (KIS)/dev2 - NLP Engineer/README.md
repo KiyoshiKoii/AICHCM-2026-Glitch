@@ -8,7 +8,7 @@ Source: **`src/semantic_pipeline/`** · Branch: **`feat/semantic-pipeline`**
 | **Task 2** | Text DB bằng BM25 (`rank_bm25`) | ✅ Xong |
 | **Task 3** | Internal API (FastAPI, port 8002) | ✅ Xong |
 | Task 4 | R&D (Elasticsearch, Spatial Reasoning, Entity Extraction) | ⬜ |
-| Task 5 | Unit Testing & Performance Testing | ⬜ |
+| **Task 5** | Unit Testing & Performance Testing | ✅ Xong |
 
 ---
 
@@ -87,7 +87,7 @@ Internal API bằng **FastAPI** trong [`server.py`](../../../src/semantic_pipeli
 
 1. **Phải chạy bằng `python server.py`**, KHÔNG dùng `uvicorn server:app`. Fix dual-stack socket nằm trong `__main__`; chạy bằng lệnh `uvicorn` sẽ mất fix và **độ trễ vọt lên 2 giây**.
 2. **Dùng `def` chứ KHÔNG phải `async def`** cho endpoint. FastAPI chạy hàm `def` trong threadpool nên BM25 (nặng CPU) không chặn event loop. Đổi sang `async def` sẽ khiến mọi request xếp hàng chờ nhau.
-3. `metadata.json` bị `.gitignore` chặn → **không có trên GitHub**. Ai clone repo về phải chạy `extractor.py` trước, nếu không server sẽ báo `FileNotFoundError` ngay lúc khởi động.
+3. `metadata.json` **được commit lên git** (24 frame mẫu chỉ ~37KB) để test chạy được ngay sau khi clone. ⚠️ Khi chuyển sang dataset thật của BTC (hàng chục nghìn frame), file này sẽ phình lên hàng trăm MB → **phải chặn lại trong `.gitignore`** và đổi test sang fixture nhỏ.
 
 ### 📊 Hiệu năng (đo thật, 20 request)
 
@@ -101,6 +101,47 @@ Yêu cầu task là < 500ms → **đạt thoải mái**. Lưu ý: ~35ms kia gầ
 
 ---
 
+## ✅ Đã làm được (Task 5)
+
+**37 test** trong [`tests/`](../../../src/semantic_pipeline/tests/) — lưới an toàn cho cả Task 1–3.
+
+**Chạy:** `pytest src/semantic_pipeline/tests/ -v`
+
+| File | Nội dung |
+|---|---|
+| `test_api.py` (17) | Endpoint `/internal/search/text`: đúng 4 field contract, HTTP 200, payload sai → 422, Swagger |
+| `test_database.py` (13) | BM25: tokenizer (stemming/stopword/bất quy tắc), xếp hạng, khóa chính `frame_id`, **+ đo tốc độ** |
+| `test_ocr_accuracy.py` (7) | Độ chính xác OCR so với **ground truth gõ tay từ ảnh gốc**, + kiểm tra tầng dịch |
+
+### 📊 Kết quả đo thật
+
+| Hạng mục | Kết quả |
+|---|---|
+| OCR tiếng Anh | **100%** |
+| OCR tiếng Việt **có dấu** | **100%** |
+| OCR ký hiệu toán | **100%** (trước ensemble: 92.3%) |
+| BM25 query | **0.051 ms** (yêu cầu < 500ms) |
+| Dựng index (24 doc) | 1.9 ms |
+
+> Con số **100% tiếng Việt có dấu** chứng minh dứt khoát quyết định thay Florence-2 (vốn đọc `"Nếu giữ"` thành `"Neu giüt"`) bằng VietOCR là đúng.
+
+### 🔀 Ensemble OCR (phát hiện & sửa nhờ Task 5)
+
+Test lộ ra một lỗi chưa từng biết: VietOCR **đọc sai ký hiệu toán** — `1 + 2 + 3 + 4 = 10` thành `1%2%344-10` (dấu `+` → `%`, `=` → `-`).
+
+Nguyên nhân **không phải** thiếu vocab (VietOCR có đủ `+`, `=`), mà là nhận diện sai về thị giác vì nó train chủ yếu trên văn bản tiếng Việt.
+
+Cách sửa: PaddleOCR chạy để detect vùng chữ **cũng tự đọc text luôn** — mà code cũ **vứt bỏ**. Giờ dùng cả hai, chọn theo thế mạnh:
+
+| Loại dòng | Model dùng | Vì sao |
+|---|---|---|
+| CÓ dấu tiếng Việt | **VietOCR** | Đọc dấu 100%; PaddleOCR rớt dấu (`"Nếu giữ"` → `"Nu gi"`) |
+| KHÔNG dấu (Anh/toán) | **PaddleOCR** | Đọc ký hiệu đúng; tiếng Anh cũng tốt ngang VietOCR |
+
+> **Không tốn thêm model, không chậm thêm** — cả hai vốn đã chạy sẵn.
+
+---
+
 ## ⚠️ Điểm cần cải thiện
 
 ### Task 1
@@ -108,7 +149,7 @@ Yêu cầu task là < 500ms → **đạt thoải mái**. Lưu ý: ~35ms kia gầ
 | # | Vấn đề | Hướng cải thiện |
 |---|---|---|
 | 1 | Nhận diện tiếng Việt **chỉ dựa vào dấu** → chữ Việt không dấu (`"khong tach"`) không được dịch | Dùng language detection thật (`fasttext lid.176`) thay regex. Cẩn thận: nới lỏng quá dễ dịch nhầm từ tiếng Anh |
-| 2 | VietOCR còn sạn: ký tự `—`, `/` thành `?`; hallucination lặp từ; vài lỗi dấu lẻ | Lọc theo confidence (`return_prob=True`); bật `beamsearch=True` (chậm hơn nhưng chuẩn hơn); ensemble với PaddleOCR-rec |
+| 2 | VietOCR còn sạn: ký tự `—`, `/` thành `?`; vài lỗi dấu lẻ | ✅ **Đã sửa phần lớn** bằng ensemble với PaddleOCR (xem Task 5) + crop padding. Còn có thể: lọc theo confidence (`return_prob=True`); bật `beamsearch=True` (chuẩn hơn nhưng chậm) |
 | 3 | Caption Florence-2 tự "đọc" chữ và đọc sai tiếng Việt | Ưu tiên thấp (frame thật ít chữ). Nếu cần: bỏ phần trong ngoặc kép của caption |
 | 4 | **Chậm trên CPU** (chạy 4 model tuần tự) | Giảm `num_beams` của Florence-2 (3 → 1); chạy GPU (code đã auto-detect `cuda`, riêng Paddle cần `paddlepaddle-gpu`); thêm cơ chế resume để chạy lại không mất công |
 
