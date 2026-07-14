@@ -111,16 +111,24 @@ class SemanticExtractor:
         return self._florence_task(image, "<DETAILED_CAPTION>")
 
     def ocr_lines(self, image: Image.Image, image_path: Path) -> list[str]:
-        # PaddleOCR chỉ dùng để lấy box vùng chữ; VietOCR đọc cả loạt box một lần.
+        """Đọc chữ bằng ENSEMBLE hai model, chọn theo thế mạnh của từng cái.
+
+        PaddleOCR vừa detect vùng chữ vừa tự đọc luôn (rec_texts) — ta tận dụng cả hai:
+          - Dòng CÓ dấu tiếng Việt  -> lấy VietOCR   (PaddleOCR rớt dấu: "Nếu giữ" -> "Nu gi")
+          - Dòng KHÔNG dấu (Anh/toán) -> lấy PaddleOCR (VietOCR đọc sai ký hiệu:
+            "1 + 2 + 3 + 4 = 10" -> "1%2%344-10")
+        """
         result = self.detector.predict(str(image_path))
         if not result:
             return []
         res = result[0]
         polys = res.get("rec_polys", res.get("dt_polys")) or []
+        paddle_texts = res.get("rec_texts") or []
 
         width, height = image.size
         crops = []
-        for poly in polys:
+        kept_paddle_texts = []  # phải song song với crops, vì có box bị bỏ qua
+        for poly, paddle_text in zip(polys, paddle_texts):
             pts = np.array(poly).reshape(-1, 2)
             x1 = max(int(pts[:, 0].min()) - CROP_PADDING, 0)
             y1 = max(int(pts[:, 1].min()) - CROP_PADDING, 0)
@@ -129,24 +137,35 @@ class SemanticExtractor:
             if x2 - x1 < 2 or y2 - y1 < 2:
                 continue
             crops.append(image.crop((x1, y1, x2, y2)))
+            kept_paddle_texts.append(paddle_text)
 
         if not crops:
             return []
 
         # Đọc cả batch 1 lần thay vì tuần tự từng crop (mỗi ảnh có 24-50 crop).
         try:
-            texts = self.recognizer.predict_batch(crops)
+            viet_texts = self.recognizer.predict_batch(crops)
         except Exception as exc:
             # Batch lỗi -> lùi về đọc từng crop, để 1 crop hỏng không mất cả ảnh.
             print(f"  [warn] predict_batch failed ({exc}), fallback per-crop")
-            texts = []
+            viet_texts = []
             for crop in crops:
                 try:
-                    texts.append(self.recognizer.predict(crop))
+                    viet_texts.append(self.recognizer.predict(crop))
                 except Exception:
-                    texts.append("")
+                    viet_texts.append("")
 
-        return [text.strip() for text in texts if text and text.strip()]
+        lines = []
+        for paddle_text, viet_text in zip(kept_paddle_texts, viet_texts):
+            viet_text = (viet_text or "").strip()
+            paddle_text = (paddle_text or "").strip()
+
+            chosen = viet_text if is_vietnamese(viet_text) else paddle_text
+            if not chosen:  # model được chọn đọc ra rỗng -> lấy model còn lại
+                chosen = viet_text or paddle_text
+            if chosen:
+                lines.append(chosen)
+        return lines
 
     def translate_lines(self, lines: list[str]) -> list[str]:
         # Chỉ dịch dòng có chữ tiếng Việt; dòng tiếng Anh/mã (ActualStartTime...) giữ nguyên.
