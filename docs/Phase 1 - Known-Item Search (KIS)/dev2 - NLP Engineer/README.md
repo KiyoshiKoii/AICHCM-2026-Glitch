@@ -6,7 +6,7 @@ Source: **`src/semantic_pipeline/`** · Branch: **`feat/semantic-pipeline`**
 |---|---|---|
 | **Task 1** | Trích xuất ngữ nghĩa (caption + OCR) → `metadata.json` | ✅ Xong |
 | **Task 2** | Text DB bằng BM25 (`rank_bm25`) | ✅ Xong |
-| Task 3 | Internal API (FastAPI, port 8002) | ⬜ |
+| **Task 3** | Internal API (FastAPI, port 8002) | ✅ Xong |
 | Task 4 | R&D (Elasticsearch, Spatial Reasoning, Entity Extraction) | ⬜ |
 | Task 5 | Unit Testing & Performance Testing | ⬜ |
 
@@ -66,6 +66,41 @@ metadata.json ──► ghép caption + ocr_text ──► tokenize ──► BM
 
 ---
 
+## ✅ Đã làm được (Task 3)
+
+Internal API bằng **FastAPI** trong [`server.py`](../../../src/semantic_pipeline/server.py), chạy port **8002**.
+
+**Chạy:** `python src/semantic_pipeline/server.py` → mở **http://localhost:8002/docs** (Swagger UI, test được ngay không cần code).
+
+| Endpoint | Công dụng |
+|---|---|
+| `POST /internal/search/text` | Nhận `{keywords, top_k}` → trả `{status, data:[frame_id, score, video_name, frame_index]}` đúng API Contract |
+| `GET /health` | Dev 3 kiểm tra service sống chưa + index nạp bao nhiêu doc |
+
+- **Vì sao FastAPI chứ không Flask:** Dev 3 (người gọi API này) đã dùng FastAPI; env đã có sẵn `fastapi`+`uvicorn` (chưa có Flask); Pydantic tự validate và trả **422** khi payload sai; có sẵn **Swagger UI** để Dev 3 tự test.
+- Index BM25 dựng **1 lần lúc khởi động** (qua `lifespan`), không dựng lại mỗi request.
+- Phân biệt rõ 2 loại "rỗng": `keywords: ["zzzz"]` (từ khóa hợp lệ, không frame nào khớp) → **200 + `data: []`**; còn `keywords: []` (không gửi từ khóa) → **422** để Dev 3 biết là bug bên họ.
+
+**Đã kiểm chứng:** 18/18 test PASS (contract, ca biên, hạ tầng).
+
+### ⚠️ 3 điều BẮT BUỘC nhớ
+
+1. **Phải chạy bằng `python server.py`**, KHÔNG dùng `uvicorn server:app`. Fix dual-stack socket nằm trong `__main__`; chạy bằng lệnh `uvicorn` sẽ mất fix và **độ trễ vọt lên 2 giây**.
+2. **Dùng `def` chứ KHÔNG phải `async def`** cho endpoint. FastAPI chạy hàm `def` trong threadpool nên BM25 (nặng CPU) không chặn event loop. Đổi sang `async def` sẽ khiến mọi request xếp hàng chờ nhau.
+3. `metadata.json` bị `.gitignore` chặn → **không có trên GitHub**. Ai clone repo về phải chạy `extractor.py` trước, nếu không server sẽ báo `FileNotFoundError` ngay lúc khởi động.
+
+### 📊 Hiệu năng (đo thật, 20 request)
+
+| | Độ trễ |
+|---|---|
+| `db.search()` thuần (không HTTP) | **0.06 ms** |
+| Qua HTTP (`localhost`) | ~37 ms |
+| Qua HTTP + tái dùng connection | **~2 ms** |
+
+Yêu cầu task là < 500ms → **đạt thoải mái**. Lưu ý: ~35ms kia gần như toàn bộ là chi phí **tạo kết nối TCP mới mỗi request** của client, không phải xử lý của server. Nên khuyên Dev 3 dùng **connection pooling** (`httpx.Client()` tái sử dụng) để xuống ~2ms.
+
+---
+
 ## ⚠️ Điểm cần cải thiện
 
 ### Task 1
@@ -81,8 +116,6 @@ metadata.json ──► ghép caption + ocr_text ──► tokenize ──► BM
 
 | # | Vấn đề | Trạng thái / Hướng cải thiện |
 |---|---|---|
-| 5 | Porter stemmer không xử lý được bất quy tắc (`men` ↛ `man`) → query về **người** bị trượt | ✅ **Đã sửa** bằng bảng ánh xạ thủ công. ⚠️ **Đừng dùng `WordNetLemmatizer`** — đã thử: nó **vẫn không sửa được `men`→`man`**, lại cần POS tag và làm hỏng ca khác (`riding`→`rid`) |
-| 6 | Chưa loại stopword → nhiễu điểm | ✅ **Đã sửa**, cắt 36% token. ⚠️ Đừng tin "IDF tự hạ điểm từ phổ biến" — `rank_bm25` có **epsilon floor** biến IDF âm thành **dương** (`0.25 × avg_idf`), nên stopword **vẫn cộng điểm nhiễu** |
 | 7 | Index dựng lại mỗi lần khởi động, giữ hết trên RAM | ⏸️ **Chưa cần.** Index chỉ dựng **1 lần lúc server start** (trong `__init__`), không phải mỗi request → lợi ích hiện tại bằng 0. Data lớn (100GB) mới cần → **Elasticsearch** (Task 4) |
 | 8 | `caption` và `ocr_text` gộp chung, **trọng số bằng nhau** — OCR (chữ thật trong ảnh) đáng tin hơn caption do model sinh ra | ⏸️ **Chưa làm.** `rank_bm25` **không hỗ trợ BM25F**; muốn làm phải dựng 2 index rồi cộng trọng số — nhưng **chưa có ground truth để chỉnh trọng số**, chỉnh mò dễ làm tệ hơn. Đợi Task 5 có data đánh giá |
 
@@ -96,6 +129,8 @@ metadata.json ──► ghép caption + ocr_text ──► tokenize ──► BM
 | `einops` bị hạ cấp → hỏng Florence-2; `No module named 'pkg_resources'` | `vietocr` ghim cứng lib cũ → cài bằng **`pip install vietocr --no-deps`** |
 | `NotImplementedError: ConvertPirAttribute2RuntimeAttribute` | Bug oneDNN của `paddlepaddle 3.x` trên CPU → truyền **`enable_mkldnn=False`** vào `PaddleOCR(...)`. Biến môi trường `FLAGS_use_mkldnn=0` **không có tác dụng** |
 | `This tokenizer cannot be instantiated` | Thiếu **`sentencepiece`** (tokenizer MarianMT cần) |
+| **API chậm 2 GIÂY dù BM25 chỉ tốn 0.06ms** | Windows phân giải `localhost` thành `::1` (IPv6) **trước**. Server bind `0.0.0.0` (chỉ IPv4) → client phải chờ IPv6 timeout ~2s rồi mới fallback. ⚠️ Bind `host="::"` **KHÔNG sửa được** — trên Windows uvicorn tạo socket **IPv6-only**, làm `127.0.0.1` chết luôn. Phải **tự tạo socket** rồi tắt cờ `IPV6_V6ONLY` mới nghe được cả hai |
+| `ModuleNotFoundError: No module named 'database'` khi viết test | `server.py` import `from database import ...` chỉ chạy khi gọi trực tiếp. Đã bọc `try/except ImportError` để fallback sang relative import (`from .database import ...`) cho pytest |
 
 ---
 
