@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 *.pyo
+.pytest_cache/
 
 # Environments
 .env
@@ -18,8 +19,10 @@ Thumbs.db
 src/visual_pipeline/local_qdrant_db/
 
 # Dev 2 (Semantic Pipeline) - Raw Data
-src/semantic_pipeline/metadata.json
-src/semantic_pipeline/**/metadata.json
+# metadata.json ĐƯỢC commit: với 24 frame mẫu nó chỉ ~37KB, và test (Task 5)
+# cần nó để chạy được ngay sau khi clone.
+# ⚠️ Khi chuyển sang dataset thật của BTC (hàng chục nghìn frame), file này sẽ
+# phình lên hàng trăm MB -> lúc đó phải chặn lại và đổi test sang fixture nhỏ.
 src/semantic_pipeline/*.csv
 
 # Node (Frontend)
