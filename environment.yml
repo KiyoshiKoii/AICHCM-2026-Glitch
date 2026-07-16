@@ -18,8 +18,11 @@ dependencies:
     - einops
     - timm
     - rank_bm25
+    - nltk
     - paddlepaddle
     - paddleocr
     - sentencepiece
     - gdown
     - vietocr
+    # Test suite for the semantic pipeline (Task 5)
+    - pytest

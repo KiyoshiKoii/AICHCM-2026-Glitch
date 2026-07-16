@@ -12,6 +12,7 @@ einops
 timm
 rank_bm25
 nltk                # PorterStemmer cho BM25 (Task 2). Không cần nltk.download().
+pytest              # Chạy bộ test Task 5: pytest src/semantic_pipeline/tests/ -v
 
 # --- OCR tiếng Việt (Dev 2, Task 1) ---
 paddlepaddle        # backend; bản CPU. GPU: cài paddlepaddle-gpu tương ứng.
