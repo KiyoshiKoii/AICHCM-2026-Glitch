@@ -9,6 +9,7 @@ import pytest
 import elasticsearch_backend as elasticsearch_backend_module
 from elasticsearch_backend import (
     DEFAULT_DEFINITION_PATH,
+    DEFAULT_INDEX_NAME,
     ElasticsearchBackend,
     activate_alias,
     create_client,
@@ -172,6 +173,19 @@ class TestIndexDefinition:
         assert mappings["properties"]["frame_id"]["type"] == "keyword"
         assert mappings["properties"]["detections"]["type"] == "nested"
         assert mappings["properties"]["spatial_relations"]["type"] == "nested"
+        code = mappings["properties"]["code"]
+        assert code["type"] == "object"
+        assert code["dynamic"] == "strict"
+        assert code["properties"]["language"]["type"] == "keyword"
+        assert code["properties"]["statement_type"]["type"] == "keyword"
+        assert code["properties"]["search_terms"]["type"] == "text"
+        assert code["properties"]["patterns"]["fields"]["keyword"]["type"] == (
+            "keyword"
+        )
+        assert code["properties"]["evidence"]["index"] is False
+
+    def test_default_physical_index_is_v5_for_code_mapping(self):
+        assert DEFAULT_INDEX_NAME == "semantic_frames_v5"
 
     def test_mapping_json_is_valid_utf8(self):
         raw = json.loads(DEFAULT_DEFINITION_PATH.read_text(encoding="utf-8"))
@@ -224,6 +238,44 @@ class TestBulkIngest:
             first["_source"]["processing"]["spatial_relations_indexed_count"]
             == 0
         )
+        sql_frame = next(action for action in actions if action["_id"] == "vid03_f0004")
+        assert sql_frame["_source"]["code"]["language"] == "sql"
+        assert "not exists" in sql_frame["_source"]["code"]["patterns"]
+
+    def test_index_projection_preserves_preclassified_code_metadata(
+        self, monkeypatch
+    ):
+        code_metadata = {
+            "language": "sql",
+            "statement_type": "select",
+            "patterns": ["select_from", "order_by"],
+            "search_terms": ["select", "customers", "order by"],
+            "evidence": ["SELECT customer FROM orders ORDER BY customer"],
+            "classifier_version": "code-rules-v1",
+        }
+
+        class ClassifiedRecord:
+            frame_id = "sql_f0001"
+            spatial_relations = []
+
+            def model_dump(self, mode):
+                assert mode == "json"
+                return {
+                    "frame_id": self.frame_id,
+                    "processing": {},
+                    "code": code_metadata.copy(),
+                }
+
+        monkeypatch.setattr(
+            elasticsearch_backend_module,
+            "validate_metadata_file",
+            lambda _path: [ClassifiedRecord()],
+        )
+
+        action = next(iter_bulk_actions("unused.json", "semantic_frames_v5"))
+
+        assert action["_index"] == "semantic_frames_v5"
+        assert action["_source"]["code"] == code_metadata
 
     def test_collapses_query_equivalent_instances_but_keeps_best_confidence(self):
         def relation(subject_id, predicate, object_id, confidence):
@@ -298,6 +350,8 @@ class TestSearch:
         )
         multi_match = query["bool"]["must"][0]["multi_match"]
         assert multi_match["fields"] == [
+            "code.search_terms^4.0",
+            "code.patterns^3.0",
             "ocr_text^2.0",
             "ocr_text.stemmed^1.5",
             "caption",
@@ -311,11 +365,31 @@ class TestSearch:
             {
                 "multi_match": {
                     "query": "red car",
-                    "fields": ["ocr_text^3.0", "caption^2.0"],
+                    "fields": [
+                        "code.search_terms^5.0",
+                        "code.patterns^4.0",
+                        "ocr_text^3.0",
+                        "caption^2.0",
+                    ],
                     "type": "phrase",
                     "boost": 2.0,
                 }
             }
+        ]
+
+    def test_code_language_and_patterns_use_exact_all_of_filters(self):
+        query = build_search_query(
+            ["select customers"],
+            filters={
+                "code_language": "sql",
+                "code_patterns": ["select_from", "order_by"],
+            },
+        )
+
+        assert query["bool"]["filter"] == [
+            {"term": {"code.language": "sql"}},
+            {"term": {"code.patterns.keyword": "select_from"}},
+            {"term": {"code.patterns.keyword": "order_by"}},
         ]
 
     def test_rejects_unknown_filter(self):
@@ -377,9 +451,33 @@ class TestCliSafety:
 
     def test_explicit_versioned_index_is_accepted(self):
         args = build_parser().parse_args(
-            ["--index-name", "semantic_frames_v4", "bootstrap"]
+            ["--index-name", "semantic_frames_v5", "bootstrap"]
         )
         validate_cli_args(args)
+
+    def test_search_cli_accepts_code_filters(self):
+        args = build_parser().parse_args(
+            [
+                "search",
+                "select",
+                "customers",
+                "--code-language",
+                "sql",
+                "--code-pattern",
+                "not exists",
+                "--code-pattern",
+                "correlated",
+            ]
+        )
+
+        assert args.code_language == "sql"
+        assert args.code_patterns == ["not exists", "correlated"]
+
+    def test_search_cli_rejects_unknown_code_language(self):
+        with pytest.raises(SystemExit):
+            build_parser().parse_args(
+                ["search", "query", "--code-language", "python"]
+            )
 
 
 @pytest.mark.skipif(
@@ -391,3 +489,4 @@ def test_live_bootstrapped_elasticsearch():
     assert backend.ping()
     assert backend.document_count() == 24
     assert backend.search(["booking", "entity"], top_k=5)
+    assert backend.search(["sql query"], top_k=5)[0]["frame_id"] == "vid03_f0004"

@@ -84,6 +84,24 @@
     "tags": ["ocr", "sql"]
   },
   {
+    "query_id": "sql_query_template",
+    "query": "a generic SQL query template written as SELECT ellipsis FROM a table",
+    "keywords": ["SQL query"],
+    "relevant_frame_ids": ["vid03_f0004"],
+    "tags": ["ocr", "sql", "derived-code", "template"]
+  },
+  {
+    "query_id": "sql_correlated_not_exists",
+    "query": "SQL query pattern using a correlated NOT EXISTS subquery",
+    "keywords": ["SQL query", "NOT EXISTS", "correlated subquery"],
+    "relevant_frame_ids": ["vid03_f0004"],
+    "tags": ["ocr", "sql", "derived-code", "filter"],
+    "filters": {
+      "code_language": "sql",
+      "code_patterns": ["not exists", "correlated"]
+    }
+  },
+  {
     "query_id": "sql_self_join_aliases",
     "query": "SQL self join using two aliases for the same member table and matching birth years",
     "keywords": ["self join", "two aliases", "same table", "birth year", "HOIVIEN"],

@@ -75,6 +75,13 @@ class TestEvaluationDataset:
         ids = [case.query_id for case in cases]
         assert len(ids) == len(set(ids))
 
+    def test_sql_template_case_is_exact_and_unfiltered(self):
+        cases = load_query_cases(QUERY_PATH)
+        case = next(item for item in cases if item.query_id == "sql_query_template")
+        assert case.keywords == ("SQL query",)
+        assert case.filters is None
+        assert case.relevant_frame_ids == {"vid03_f0004"}
+
 
 class TestEvaluator:
     def test_aggregate_metrics_and_latency_schema(self):
@@ -140,3 +147,8 @@ class TestEvaluator:
         assert report["corpus_documents"] == 24
         assert report["query_count"] >= 10
         assert 0.0 <= report["quality"]["5"]["recall"] <= 1.0
+        sql_row = next(
+            row for row in report["queries"] if row["query_id"] == "sql_query_template"
+        )
+        assert sql_row["first_relevant_rank"] == 1
+        assert sql_row["retrieved_frame_ids"][0] == "vid03_f0004"

@@ -19,19 +19,29 @@ chưa đạt gate.
 
 ## Bằng chứng nghiệm thu
 
-### Elasticsearch v4
+### Elasticsearch v5
 
-- Alias `semantic_frames` trỏ duy nhất tới `semantic_frames_v4`; đủ đúng 24 `_id`.
+- Alias `semantic_frames` trỏ duy nhất tới `semantic_frames_v5`; đủ đúng 24 `_id`.
 - Mapping strict có provenance cho contextual label grounding.
 - Raw instance relations được giữ trong metadata để evaluation; indexed
   projection collapse relation trùng label triple từ `216` xuống `9`.
-- 15 query benchmark, gồm 2 metadata/spatial filter case; cả hai relevant frame
-  ở rank 1.
-- Recall@5 `1.0000`; MRR@5 `0.9333`; NDCG@5 `0.9508`.
-- Local p95 lần cuối (300 mẫu): `10.592 ms`, đạt gate `< 50 ms`.
-- Scale pilot trên physical index riêng có `10.000` synthetic document:
-  throughput khoảng `1,386 docs/s`, steady-state p95 `48.058 ms`.
+- 17 query benchmark, gồm 3 metadata/spatial/code filter case; tất cả relevant
+  frame ở rank 1.
+- Recall@5 `1.0000`; MRR@5 `0.9412`; NDCG@5 `0.9566`.
+- Local p95 lần cuối (340 mẫu): `7.474 ms`, đạt gate `< 50 ms`.
+- Scale pilot v2 trên physical index riêng có `10.000` synthetic document:
+  throughput khoảng `1,558.9 docs/s`, p95 `47.915 ms`.
 - Mutating CLI bắt buộc `--index-name`; scale index không được gắn alias.
+
+### Deterministic SQL classification
+
+- Classifier `code-rules-v1` chạy trên caption, translated OCR và raw OCR; không
+  dùng `frame_id`, không gọi thêm Ollama và không chạy lại model ảnh.
+- Cả hai artifact có classifier provenance `24/24`: 7 SQL, 17 unknown.
+- `vid03_f0004` được xác định là SQL SELECT template với evidence
+  `select/from/where/not exists/correlated`.
+- Query không filter `sql query` trả frame này rank 1 trên cả BM25 và
+  Elasticsearch; exact code filter cũng trả đúng duy nhất frame này.
 
 ### Entity Extraction + visual truth
 
@@ -69,7 +79,7 @@ metadata chưa đủ chính xác cho production filtering.
   secret ngoài repository, public CA được verify bởi Python client.
 - Python client từ chối gửi credential qua HTTP và không có đường tắt
   `verify_certs=False`.
-- Offline suite: `142 passed, 2 skipped`; live FastAPI → Elasticsearch: `1 passed`.
+- Offline suite: `166 passed, 2 skipped`; live FastAPI → Elasticsearch: `1 passed`.
 - `httpx2` thay backend TestClient cũ nên không còn Starlette deprecation warning.
 
 ## Production gates còn fail
@@ -85,6 +95,8 @@ metadata chưa đủ chính xác cho production filtering.
 - Secure profile vẫn single-node; production cần HA, snapshot/restore drill,
   monitoring/audit, certificate rotation, managed PKI/firewall/secret manager.
 - Florence `<OD>` không trả calibrated box score; confidence `0.5` vẫn là proxy.
+- SQL classifier v1 mới có sample nhỏ và chưa hỗ trợ taxonomy cho các ngôn ngữ
+  lập trình khác; cần holdout có OCR noise để đo precision/recall độc lập.
 
 ## Lệnh tái kiểm tra
 
@@ -94,13 +106,13 @@ python src/semantic_pipeline/benchmark_spatial.py
 
 python src/semantic_pipeline/benchmark_elasticsearch.py `
   --index semantic_frames `
-  --output src/semantic_pipeline/baseline_report_elasticsearch_v4_filters.json
+  --output src/semantic_pipeline/baseline_report_elasticsearch_v5_filters.json
 
 python src/semantic_pipeline/benchmark_scale.py `
-  --index-name semantic_frames_scale_10k_v1 `
+  --index-name semantic_frames_scale_10k_v2 `
   --documents 10000 `
   --skip-ingest `
-  --output src/semantic_pipeline/scale_benchmark_report_10k_steady_v1.json
+  --output src/semantic_pipeline/scale_benchmark_report_10k_v2.json
 
 python src/semantic_pipeline/task4_acceptance.py --check-live-elasticsearch
 python -m pytest -q src/semantic_pipeline/tests

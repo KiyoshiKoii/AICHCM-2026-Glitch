@@ -82,6 +82,53 @@ class FrameEntities(StrictModel):
         return unique
 
 
+class CodeMetadata(StrictModel):
+    """Auditable code-language signals derived from caption and OCR text.
+
+    ``sql`` describes text shown in the frame, so it is kept separate from
+    physical visual entities. Legacy Task 1 records remain valid via defaults.
+    """
+
+    language: Literal["unknown", "sql"] = "unknown"
+    statement_type: Literal[
+        "unknown", "select", "insert", "update", "delete", "create", "alter", "drop"
+    ] = "unknown"
+    patterns: list[NonEmptyString] = Field(default_factory=list)
+    search_terms: list[NonEmptyString] = Field(default_factory=list)
+    evidence: list[NonEmptyString] = Field(default_factory=list)
+    classifier_version: NonEmptyString | None = None
+
+    @field_validator("patterns", "search_terms", "evidence")
+    @classmethod
+    def normalise_code_values(cls, values: list[str]) -> list[str]:
+        unique: list[str] = []
+        seen: set[str] = set()
+        for value in values:
+            normalised = value.strip().casefold()
+            if normalised not in seen:
+                seen.add(normalised)
+                unique.append(normalised)
+        return unique
+
+    @model_validator(mode="after")
+    def validate_code_classification(self) -> "CodeMetadata":
+        if self.language == "unknown" and self.statement_type != "unknown":
+            raise ValueError("unknown code language cannot declare a statement type")
+        if self.language == "unknown" and (self.patterns or self.search_terms or self.evidence):
+            raise ValueError("unknown code language cannot declare SQL-derived values")
+        if self.language == "sql" and (
+            not self.patterns
+            or not self.search_terms
+            or not self.evidence
+            or self.classifier_version is None
+        ):
+            raise ValueError(
+                "SQL classification requires patterns, search_terms, evidence, "
+                "and classifier_version"
+            )
+        return self
+
+
 class Detection(StrictModel):
     object_id: NonEmptyString
     label: NonEmptyString
@@ -180,6 +227,7 @@ class FrameMetadata(StrictModel):
     ocr_text_raw: str = ""
 
     entities: FrameEntities = Field(default_factory=FrameEntities)
+    code: CodeMetadata = Field(default_factory=CodeMetadata)
     detections: list[Detection] = Field(default_factory=list)
     spatial_relations: list[SpatialRelation] = Field(default_factory=list)
     processing: ProcessingMetadata = Field(default_factory=ProcessingMetadata)

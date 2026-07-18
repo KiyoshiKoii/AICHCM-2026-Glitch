@@ -94,6 +94,31 @@ class TestEdgeCases:
         )
         assert r.status_code == 422
 
+    def test_invalid_code_language_is_rejected(self, client):
+        r = client.post(
+            ENDPOINT,
+            json={
+                "keywords": ["query"],
+                "filters": {"code_language": "python"},
+            },
+        )
+        assert r.status_code == 422
+
+    def test_empty_or_blank_code_patterns_are_rejected(self, client):
+        empty = client.post(
+            ENDPOINT,
+            json={"keywords": ["query"], "filters": {"code_patterns": []}},
+        )
+        blank = client.post(
+            ENDPOINT,
+            json={
+                "keywords": ["query"],
+                "filters": {"code_patterns": ["   "]},
+            },
+        )
+        assert empty.status_code == 422
+        assert blank.status_code == 422
+
 
 class TestInfrastructure:
     def test_health_endpoint(self, client):
@@ -132,6 +157,8 @@ def test_api_forwards_valid_filters_to_capable_backend(monkeypatch):
             "filters": {
                 "setting": "outdoor",
                 "colors": ["blue"],
+                "code_language": "sql",
+                "code_patterns": [" group by ", "not exists"],
                 "spatial_relations": [
                     {"subject": "person", "predicate": "left_of", "object": "car"}
                 ],
@@ -148,6 +175,8 @@ def test_api_forwards_valid_filters_to_capable_backend(monkeypatch):
         {
             "setting": "outdoor",
             "colors": ["blue"],
+            "code_language": "sql",
+            "code_patterns": ["group by", "not exists"],
             "spatial_relations": [
                 {"subject": "person", "predicate": "left_of", "object": "car"}
             ],

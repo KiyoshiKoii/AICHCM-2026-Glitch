@@ -105,7 +105,7 @@ old v2 physical index. After the full run succeeds:
 
 ```powershell
 python src/semantic_pipeline/elasticsearch_backend.py `
-  --index-name semantic_frames_v4 `
+  --index-name semantic_frames_v5 `
   bootstrap `
   --metadata src/semantic_pipeline/sample_frames/metadata_spatial.json
 ```

@@ -66,6 +66,15 @@ class TestSearch:
         json.dumps(db.search(["booking"], top_k=5))  # không được ném TypeError
 
 
+    def test_sql_semantic_terms_find_not_exists_frame(self, db):
+        results = db.search(["sql query"], top_k=5)
+        assert results[0]["frame_id"] == "vid03_f0004"
+        record = next(r for r in db.records if r["frame_id"] == "vid03_f0004")
+        assert record["code"]["language"] == "sql"
+        assert "not exists" in record["code"]["patterns"]
+        assert "sql query template" in record["code"]["search_terms"]
+
+
 class TestPerformance:
     """Task 5 - Speed Test: đo tốc độ query BM25 trên RAM."""
 

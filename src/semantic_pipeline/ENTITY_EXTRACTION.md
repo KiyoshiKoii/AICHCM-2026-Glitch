@@ -66,6 +66,10 @@ Use `--force` to restart from the original input. Use `--overwrite-existing`
 only when intentionally replacing entities already produced by a previous
 model/prompt version.
 
+Every record also receives deterministic `code` metadata from caption/OCR,
+including records skipped during resume. This does not make another Ollama
+call. See `CODE_CLASSIFICATION.md` for SQL rules and standalone reclassification.
+
 ## 5. Validate enriched metadata
 
 ```powershell
@@ -75,17 +79,17 @@ python src/semantic_pipeline/schemas.py `
 
 ## 6. Ingest into a new Elasticsearch index version
 
-Keep the text-only index as rollback and create `v2` for enriched documents:
+The current full Task 4 mapping is v5 (entity + code + spatial metadata):
 
 ```powershell
 python src/semantic_pipeline/elasticsearch_backend.py `
-  --index-name semantic_frames_v2 `
+  --index-name semantic_frames_v5 `
   bootstrap `
-  --metadata src/semantic_pipeline/sample_frames/metadata_entities.json
+  --metadata src/semantic_pipeline/sample_frames/metadata_spatial.json
 ```
 
 Bootstrap activates alias `semantic_frames` only after successful validation
-and ingest. The old physical index `semantic_frames_v1` remains intact.
+and ingest. Older physical indices remain intact as rollback points.
 
 ## 7. Tests
 
@@ -95,7 +99,7 @@ pytest src/semantic_pipeline/tests/test_entity_extractor.py -v
 
 ## 8. Verify a metadata filter
 
-After the v2 bootstrap, this query should return `vid02_f0001` only:
+After bootstrap, this query should return `vid02_f0001` only:
 
 ```powershell
 python src/semantic_pipeline/elasticsearch_backend.py search image `

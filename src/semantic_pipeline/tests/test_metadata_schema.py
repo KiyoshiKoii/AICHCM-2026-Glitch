@@ -7,6 +7,7 @@ from pydantic import ValidationError
 
 from migrate_metadata import migrate_file, migrate_records, write_json_atomically
 from schemas import (
+    CodeMetadata,
     Detection,
     FrameMetadata,
     SCHEMA_VERSION,
@@ -38,6 +39,7 @@ class TestLegacyCompatibility:
         assert len(records) == 24
         assert all(record.schema_version == SCHEMA_VERSION for record in records)
         assert all(record.entities.time_of_day.value == "unknown" for record in records)
+        assert all(record.code.language == "unknown" for record in records)
         assert all(record.detections == [] for record in records)
 
     def test_migration_adds_all_v1_defaults(self):
@@ -46,6 +48,7 @@ class TestLegacyCompatibility:
         assert record["schema_version"] == "1.0"
         assert record["timestamp_ms"] is None
         assert record["entities"]["setting"] == "unknown"
+        assert record["code"]["language"] == "unknown"
         assert record["detections"] == []
         assert record["spatial_relations"] == []
         assert "processing" in record
@@ -162,3 +165,25 @@ class TestDocumentIntegrity:
     def test_rejects_unknown_fields(self):
         with pytest.raises(ValidationError, match="Extra inputs"):
             FrameMetadata.model_validate(minimal_record(capton="misspelled"))
+
+
+class TestCodeMetadata:
+    def test_accepts_auditable_sql_classification(self):
+        code = CodeMetadata(
+            language="sql",
+            statement_type="select",
+            patterns=["SELECT", "from", "select"],
+            search_terms=["SQL query"],
+            evidence=["ocr_text:select"],
+            classifier_version="code-rules-v1",
+        )
+        assert code.patterns == ["select", "from"]
+        assert code.search_terms == ["sql query"]
+
+    def test_rejects_sql_without_provenance(self):
+        with pytest.raises(ValidationError, match="SQL classification requires"):
+            CodeMetadata(language="sql")
+
+    def test_rejects_statement_type_for_unknown_language(self):
+        with pytest.raises(ValidationError, match="cannot declare a statement type"):
+            CodeMetadata(statement_type="select")

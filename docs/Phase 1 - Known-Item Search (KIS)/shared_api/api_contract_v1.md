@@ -138,6 +138,8 @@ hoạt động như trước.
     "objects": ["person", "car"],
     "actions": ["standing"],
     "colors": ["red"],
+    "code_language": "sql",
+    "code_patterns": ["not exists", "correlated"],
     "spatial_relations": [
       {"subject": "person", "predicate": "left_of", "object": "car"}
     ]
@@ -146,7 +148,9 @@ hoạt động như trước.
 ```
 
 - Các field hỗ trợ: `time_of_day`, `setting`, `locations`, `objects`,
-  `actions`, `colors`, `spatial_relations`.
+  `actions`, `colors`, `code_language`, `code_patterns`, `spatial_relations`.
+- `code_language` hiện nhận `unknown` hoặc `sql`; `code_patterns` là các tín
+  hiệu cú pháp đã chuẩn hóa như `not exists`, `group by`, `correlated`.
 - Mảng dùng semantics **all-of (AND)**: `objects=["person","car"]` yêu cầu
   frame có đủ cả hai object.
 - Predicate không gian: `left_of`, `right_of`, `above`, `below`, `overlapping`.

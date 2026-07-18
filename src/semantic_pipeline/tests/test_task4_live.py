@@ -1,4 +1,4 @@
-"""Opt-in live acceptance: FastAPI -> Elasticsearch v4 -> metadata filters."""
+"""Opt-in live acceptance: FastAPI -> Elasticsearch v5 -> metadata filters."""
 
 import os
 
@@ -7,7 +7,7 @@ import pytest
 
 @pytest.mark.skipif(
     os.getenv("RUN_TASK4_LIVE") != "1",
-    reason="set RUN_TASK4_LIVE=1 with Elasticsearch v4 running",
+    reason="set RUN_TASK4_LIVE=1 with Elasticsearch v5 running",
 )
 def test_live_fastapi_entity_spatial_and_all_of_filters(monkeypatch):
     from fastapi.testclient import TestClient
@@ -58,6 +58,29 @@ def test_live_fastapi_entity_spatial_and_all_of_filters(monkeypatch):
         assert spatial_filtered.status_code == 200
         assert [item["frame_id"] for item in spatial_filtered.json()["data"]] == [
             "vid01_f0007"
+        ]
+
+        sql_text_only = client.post(
+            "/internal/search/text",
+            json={"keywords": ["SQL query"], "top_k": 5},
+        )
+        assert sql_text_only.status_code == 200
+        assert sql_text_only.json()["data"][0]["frame_id"] == "vid03_f0004"
+
+        sql_filtered = client.post(
+            "/internal/search/text",
+            json={
+                "keywords": ["SQL query", "correlated subquery"],
+                "top_k": 5,
+                "filters": {
+                    "code_language": "sql",
+                    "code_patterns": ["not exists", "correlated"],
+                },
+            },
+        )
+        assert sql_filtered.status_code == 200
+        assert [item["frame_id"] for item in sql_filtered.json()["data"]] == [
+            "vid03_f0004"
         ]
 
         # List filters are AND/all-of: adding an absent object must exclude it.

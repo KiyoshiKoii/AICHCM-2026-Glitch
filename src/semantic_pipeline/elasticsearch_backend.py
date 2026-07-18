@@ -22,18 +22,26 @@ except ImportError:  # BM25-only development remains supported.
     streaming_bulk = None
 
 try:
-    from schemas import DEFAULT_METADATA_PATH, validate_metadata_file
+    from code_classifier import classify_record
+    from schemas import DEFAULT_METADATA_PATH, FrameMetadata, validate_metadata_file
 except ImportError:
-    from .schemas import DEFAULT_METADATA_PATH, validate_metadata_file
+    from .code_classifier import classify_record
+    from .schemas import DEFAULT_METADATA_PATH, FrameMetadata, validate_metadata_file
 
 SEMANTIC_DIR = Path(__file__).resolve().parent
 DEFAULT_DEFINITION_PATH = SEMANTIC_DIR / "elasticsearch_index.json"
 DEFAULT_ELASTICSEARCH_URL = "http://127.0.0.1:9200"
-DEFAULT_INDEX_NAME = "semantic_frames_v4"
+DEFAULT_INDEX_NAME = "semantic_frames_v5"
 DEFAULT_ALIAS_NAME = "semantic_frames"
 MUTATING_COMMANDS = {"setup", "activate", "ingest", "bootstrap"}
 
-SEARCH_FIELDS = ["ocr_text^2.0", "ocr_text.stemmed^1.5", "caption"]
+SEARCH_FIELDS = [
+    "code.search_terms^4.0",
+    "code.patterns^3.0",
+    "ocr_text^2.0",
+    "ocr_text.stemmed^1.5",
+    "caption",
+]
 FILTER_FIELDS = {
     "time_of_day": "entities.time_of_day",
     "setting": "entities.setting",
@@ -41,6 +49,8 @@ FILTER_FIELDS = {
     "objects": "entities.objects",
     "actions": "entities.actions",
     "colors": "entities.colors",
+    "code_language": "code.language",
+    "code_patterns": "code.patterns.keyword",
 }
 SPATIAL_PREDICATES = {
     "left_of",
@@ -205,6 +215,11 @@ def iter_bulk_actions(
 ) -> Iterator[dict]:
     """Stream validated documents without loading a second raw corpus copy."""
     for record in validate_metadata_file(metadata_path):
+        # Real validated records are classified at the ingestion boundary too,
+        # so bootstrapping directly from legacy metadata cannot silently index
+        # every code.language as unknown. Lightweight test doubles are preserved.
+        if isinstance(record, FrameMetadata):
+            record = classify_record(record)
         indexed_relations = collapse_spatial_relations_for_index(
             record.spatial_relations
         )
@@ -350,7 +365,12 @@ def build_search_query(keywords: list[str], filters: dict | None = None) -> dict
         {
             "multi_match": {
                 "query": keyword,
-                "fields": ["ocr_text^3.0", "caption^2.0"],
+                "fields": [
+                    "code.search_terms^5.0",
+                    "code.patterns^4.0",
+                    "ocr_text^3.0",
+                    "caption^2.0",
+                ],
                 "type": "phrase",
                 "boost": 2.0,
             }
@@ -468,6 +488,8 @@ def build_parser() -> argparse.ArgumentParser:
     search.add_argument("--object", dest="objects", action="append")
     search.add_argument("--action", dest="actions", action="append")
     search.add_argument("--color", dest="colors", action="append")
+    search.add_argument("--code-language", choices=("unknown", "sql"))
+    search.add_argument("--code-pattern", dest="code_patterns", action="append")
     search.add_argument(
         "--spatial",
         nargs=3,
@@ -486,7 +508,7 @@ def validate_cli_args(args: argparse.Namespace) -> None:
     if args.command in MUTATING_COMMANDS and not args.index_name:
         raise ValueError(
             f"--index-name is required for {args.command}; use an explicit "
-            "version such as semantic_frames_v4"
+            "version such as semantic_frames_v5"
         )
 
 
@@ -535,6 +557,8 @@ def main() -> None:
                     "objects": args.objects,
                     "actions": args.actions,
                     "colors": args.colors,
+                    "code_language": args.code_language,
+                    "code_patterns": args.code_patterns,
                     "spatial_relations": [
                         {"subject": item[0], "predicate": item[1], "object": item[2]}
                         for item in (args.spatial or [])

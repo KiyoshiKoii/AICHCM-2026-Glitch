@@ -208,6 +208,23 @@ class TestBatchEnrichment:
         assert extractor.calls == 1
         assert records[0].processing.entity_model == "previous-model"
 
+    def test_sql_classifier_still_runs_when_ollama_entity_is_skipped(self):
+        record = frame(entity_model="previous-model").model_copy(
+            update={
+                "ocr_text": "select ... from A where not exists (select * from B)",
+                "ocr_text_raw": "correlated subquery",
+            }
+        )
+        records = [record]
+        extractor = FakeExtractor()
+
+        summary = enrich_records(records, extractor)
+
+        assert summary == {"processed": 0, "skipped": 1, "total": 1}
+        assert extractor.calls == 0
+        assert records[0].code.language == "sql"
+        assert records[0].code.classifier_version == "code-rules-v1"
+
     def test_limit_counts_only_eligible_records(self):
         records = [frame(1, entity_model="done"), frame(2), frame(3)]
         extractor = FakeExtractor()

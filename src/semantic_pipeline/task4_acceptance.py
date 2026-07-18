@@ -1,4 +1,4 @@
-"""Generate a reproducible acceptance report for all three Task 4 tracks."""
+"""Generate one reproducible acceptance report for all Task 4 tracks."""
 
 from __future__ import annotations
 
@@ -11,18 +11,22 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 try:
+    from code_classifier import CODE_CLASSIFIER_VERSION, classify_code
     from elasticsearch_backend import (
         DEFAULT_ALIAS_NAME,
         DEFAULT_ELASTICSEARCH_URL,
+        build_search_query,
         collapse_spatial_relations_for_index,
         create_client,
     )
     from migrate_metadata import write_json_atomically
     from schemas import FrameMetadata, validate_metadata_file
 except ImportError:
+    from .code_classifier import CODE_CLASSIFIER_VERSION, classify_code
     from .elasticsearch_backend import (
         DEFAULT_ALIAS_NAME,
         DEFAULT_ELASTICSEARCH_URL,
+        build_search_query,
         collapse_spatial_relations_for_index,
         create_client,
     )
@@ -35,11 +39,11 @@ DEFAULT_ENTITY_METADATA = SEMANTIC_DIR / "sample_frames" / "metadata_entities.js
 DEFAULT_SPATIAL_METADATA = SEMANTIC_DIR / "sample_frames" / "metadata_spatial.json"
 DEFAULT_BM25_REPORT = REPOSITORY_DIR / "baseline_report_bm25_v0.json"
 DEFAULT_ELASTICSEARCH_REPORT = (
-    SEMANTIC_DIR / "baseline_report_elasticsearch_v4_filters.json"
+    SEMANTIC_DIR / "baseline_report_elasticsearch_v5_filters.json"
 )
 DEFAULT_SPATIAL_REPORT = SEMANTIC_DIR / "spatial_benchmark_report_v1.json"
 DEFAULT_ENTITY_BENCHMARK_REPORT = SEMANTIC_DIR / "entity_benchmark_report_v1.json"
-DEFAULT_SCALE_REPORT = SEMANTIC_DIR / "scale_benchmark_report_10k_v1.json"
+DEFAULT_SCALE_REPORT = SEMANTIC_DIR / "scale_benchmark_report_10k_v2.json"
 DEFAULT_ACCEPTANCE_REPORT = SEMANTIC_DIR / "task4_acceptance_report.json"
 PLACEHOLDER_VALUES = {
     "none",
@@ -133,6 +137,58 @@ def audit_entities(records: list[FrameMetadata]) -> dict:
         "models": dict(models),
         "prompt_versions": dict(prompts),
         "passed": len(processed) == len(records) and not placeholders,
+    }
+
+
+def audit_code_classification(
+    records: list[FrameMetadata],
+    target_frame_id: str = "vid03_f0004",
+) -> dict:
+    classified = [record for record in records if record.code.classifier_version]
+    sql_records = [record for record in records if record.code.language == "sql"]
+    target = next(
+        (record for record in records if record.frame_id == target_frame_id), None
+    )
+    target_checks = {
+        "present": target is not None,
+        "language_sql": target is not None and target.code.language == "sql",
+        "statement_select": target is not None
+        and target.code.statement_type == "select",
+        "not_exists_pattern": target is not None
+        and "not exists" in target.code.patterns,
+        "correlated_pattern": target is not None
+        and "correlated" in target.code.patterns,
+        "sql_query_search_term": target is not None
+        and "sql query" in target.code.search_terms,
+    }
+    versions = Counter(record.code.classifier_version for record in classified)
+    current_version_coverage = sum(
+        record.code.classifier_version == CODE_CLASSIFIER_VERSION
+        for record in records
+    )
+    metadata_matches_classifier = all(
+        record.code
+        == classify_code(record.caption, record.ocr_text, record.ocr_text_raw)
+        for record in records
+    )
+    return {
+        "records": len(records),
+        "classified_records": len(classified),
+        "coverage": len(classified) / len(records),
+        "sql_records": len(sql_records),
+        "sql_frame_ids": [record.frame_id for record in sql_records],
+        "classifier_versions": dict(versions),
+        "current_version": CODE_CLASSIFIER_VERSION,
+        "current_version_coverage": current_version_coverage / len(records),
+        "metadata_matches_classifier": metadata_matches_classifier,
+        "target_frame_id": target_frame_id,
+        "target_checks": target_checks,
+        "passed": (
+            current_version_coverage == len(records)
+            and bool(sql_records)
+            and metadata_matches_classifier
+            and all(target_checks.values())
+        ),
     }
 
 
@@ -260,6 +316,31 @@ def audit_filtered_queries(elasticsearch_report: dict) -> dict:
     }
 
 
+def audit_required_rank1_query(
+    report: dict,
+    query_id: str = "sql_query_template",
+    expected_frame_id: str = "vid03_f0004",
+) -> dict:
+    row = next(
+        (item for item in report.get("queries", []) if item.get("query_id") == query_id),
+        None,
+    )
+    checks = {
+        "present": row is not None,
+        "unfiltered": row is not None and row.get("filters") is None,
+        "rank1": row is not None and row.get("first_relevant_rank") == 1,
+        "expected_first": row is not None
+        and bool(row.get("retrieved_frame_ids"))
+        and row["retrieved_frame_ids"][0] == expected_frame_id,
+    }
+    return {
+        "query_id": query_id,
+        "expected_frame_id": expected_frame_id,
+        "checks": checks,
+        "passed": all(checks.values()),
+    }
+
+
 def audit_live_elasticsearch(
     url: str,
     alias: str,
@@ -284,6 +365,14 @@ def audit_live_elasticsearch(
         text="The runners are running",
     )
     tokens = [token["token"] for token in analyzed["tokens"]]
+    sql_response = client.search(
+        index=alias,
+        size=1,
+        query=build_search_query(["sql query"]),
+        source=False,
+    )
+    sql_hits = sql_response["hits"]["hits"]
+    sql_query_rank1 = bool(sql_hits) and sql_hits[0]["_id"] == "vid03_f0004"
     alias_ok = targets == [expected_index]
     ids_ok = actual_ids == expected_frame_ids
     analyzer_ok = "the" not in tokens and "are" not in tokens and bool(tokens)
@@ -301,8 +390,9 @@ def audit_live_elasticsearch(
             "alias_target": alias_ok,
             "exact_document_ids": ids_ok,
             "english_analyzer": analyzer_ok,
+            "sql_query_rank1": sql_query_rank1,
         },
-        "passed": alias_ok and ids_ok and analyzer_ok,
+        "passed": alias_ok and ids_ok and analyzer_ok and sql_query_rank1,
     }
 
 
@@ -329,8 +419,19 @@ def build_report(
     scale_benchmark = _load_json(scale_report_path)
 
     entity_audit = audit_entities(entity_records)
+    entity_code_audit = audit_code_classification(entity_records)
+    spatial_code_audit = audit_code_classification(spatial_records)
+    code_consistent = {
+        record.frame_id: record.code.model_dump(mode="json")
+        for record in entity_records
+    } == {
+        record.frame_id: record.code.model_dump(mode="json")
+        for record in spatial_records
+    }
     spatial_audit = audit_spatial(spatial_records)
     text_quality = compare_text_quality(bm25_report, elasticsearch_report)
+    bm25_sql_query = audit_required_rank1_query(bm25_report)
+    elasticsearch_sql_query = audit_required_rank1_query(elasticsearch_report)
     filtered_queries = audit_filtered_queries(elasticsearch_report)
     latency = elasticsearch_report["latency_ms"]
     latency_check = {
@@ -340,10 +441,18 @@ def build_report(
     }
     core_checks = {
         "entity_pipeline": entity_audit["passed"],
+        "code_classifier": (
+            entity_code_audit["passed"]
+            and spatial_code_audit["passed"]
+            and code_consistent
+        ),
         "entity_visual_benchmark": entity_benchmark["acceptance"]["passed"],
         "spatial_schema_and_reciprocals": spatial_audit["passed"],
         "spatial_manual_benchmark": spatial_benchmark["acceptance"]["passed"],
         "text_quality_no_regression": text_quality["passed"],
+        "sql_query_template_rank1": (
+            bm25_sql_query["passed"] and elasticsearch_sql_query["passed"]
+        ),
         "filtered_queries_end_to_end": filtered_queries["passed"],
         "elasticsearch_latency": latency_check["passed"],
         "elasticsearch_scale_pilot": scale_benchmark["pilot_gate"]["passed"],
@@ -425,6 +534,10 @@ def build_report(
         "production_gates": production_gates,
         "elasticsearch": {
             "text_quality": text_quality,
+            "sql_query_template": {
+                "bm25": bm25_sql_query,
+                "elasticsearch": elasticsearch_sql_query,
+            },
             "filtered_queries": filtered_queries,
             "latency": latency_check,
             "live": live_elasticsearch,
@@ -432,6 +545,11 @@ def build_report(
         "entity_extraction": {
             "artifact": entity_audit,
             "visual_benchmark": entity_benchmark,
+        },
+        "code_classification": {
+            "entity_artifact": entity_code_audit,
+            "spatial_artifact": spatial_code_audit,
+            "artifacts_consistent": code_consistent,
         },
         "spatial_reasoning": {
             "artifact": spatial_audit,
@@ -478,7 +596,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--check-live-elasticsearch", action="store_true")
     parser.add_argument("--url", default=DEFAULT_ELASTICSEARCH_URL)
     parser.add_argument("--alias", default=DEFAULT_ALIAS_NAME)
-    parser.add_argument("--expected-index", default="semantic_frames_v4")
+    parser.add_argument("--expected-index", default="semantic_frames_v5")
     return parser
 
 

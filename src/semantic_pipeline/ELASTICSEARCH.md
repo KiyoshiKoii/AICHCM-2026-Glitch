@@ -36,14 +36,17 @@ Invoke-RestMethod http://127.0.0.1:9200
 
 The current Task 4 bootstrap performs three safe steps:
 
-1. Create the versioned physical index `semantic_frames_v4` if absent.
+1. Create the versioned physical index `semantic_frames_v5` if absent.
 2. Validate and bulk-index the full entity + spatial metadata using `frame_id`
    as Elasticsearch `_id`.
 3. Atomically point the stable alias `semantic_frames` at that index.
 
+Version v5 adds deterministic SQL metadata and code filters. See
+`CODE_CLASSIFICATION.md` for the schema, provenance, and standalone command.
+
 ```powershell
 python src/semantic_pipeline/elasticsearch_backend.py `
-  --index-name semantic_frames_v4 `
+  --index-name semantic_frames_v5 `
   bootstrap `
   --metadata src/semantic_pipeline/sample_frames/metadata_spatial.json
 python src/semantic_pipeline/elasticsearch_backend.py health
@@ -65,6 +68,9 @@ Run a search:
 
 ```powershell
 python src/semantic_pipeline/elasticsearch_backend.py search booking entity record --top-k 5
+
+python src/semantic_pipeline/elasticsearch_backend.py `
+  search "sql query" --top-k 5
 ```
 
 ## 4. Benchmark against BM25
@@ -75,7 +81,7 @@ Use the current alias and keep the filter-aware report beside the Task 4 tools:
 python src/semantic_pipeline/benchmark_elasticsearch.py `
   --index semantic_frames `
   --latency-runs 20 `
-  --output src/semantic_pipeline/baseline_report_elasticsearch_v4_filters.json
+  --output src/semantic_pipeline/baseline_report_elasticsearch_v5_filters.json
 ```
 
 Compare Recall/MRR/NDCG with `baseline_report_bm25_v0.json`. The evaluation
@@ -86,11 +92,11 @@ alias:
 
 ```powershell
 python src/semantic_pipeline/benchmark_scale.py `
-  --index-name semantic_frames_scale_10k_v1 `
+  --index-name semantic_frames_scale_10k_v2 `
   --documents 10000 `
   --warmup-runs 3 `
   --latency-runs 20 `
-  --output src/semantic_pipeline/scale_benchmark_report_10k_v1.json
+  --output src/semantic_pipeline/scale_benchmark_report_10k_v2.json
 ```
 
 Use `--skip-ingest` on subsequent measurements. Synthetic replication measures
@@ -110,19 +116,23 @@ object when Elasticsearch is enabled:
     "setting": "outdoor",
     "locations": ["field"],
     "objects": ["flowers"],
-    "colors": ["blue"]
+    "colors": ["blue"],
+    "code_language": "sql",
+    "code_patterns": ["not exists", "correlated"]
   }
 }
 ```
 
 Supported fields are `time_of_day`, `setting`, `locations`, `objects`,
-`actions`, `colors`, and `spatial_relations`. A spatial relation is a complete
+`actions`, `colors`, `code_language`, `code_patterns`, and `spatial_relations`.
+A spatial relation is a complete
 triple such as `{"subject":"person","predicate":"left_of","object":"car"}`.
 Requests without `filters` remain backward-compatible. BM25 returns HTTP 400
 for a filter request instead of silently ignoring it.
 
 Lists use **all-of (AND)** semantics. For example, `"objects":["person","car"]`
 requires both object labels in the same frame; it does not mean either one.
+The same rule applies to `code_patterns`.
 
 ```powershell
 $env:SEMANTIC_SEARCH_BACKEND = "elasticsearch"

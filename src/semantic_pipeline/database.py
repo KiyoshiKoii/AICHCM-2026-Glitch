@@ -10,6 +10,11 @@ from pathlib import Path
 from nltk.stem import PorterStemmer
 from rank_bm25 import BM25Okapi
 
+try:
+    from code_classifier import classify_code
+except ImportError:
+    from .code_classifier import classify_code
+
 # Tính từ vị trí file này, KHÔNG phụ thuộc thư mục đang chạy lệnh.
 # (Trước đây dùng đường dẫn tương đối nên chỉ chạy được khi đứng ở gốc repo.)
 DEFAULT_METADATA_PATH = Path(__file__).parent / "sample_frames" / "metadata.json"
@@ -67,7 +72,7 @@ def tokenize(text: str) -> list[str]:
 
 
 class TextDatabase:
-    """BM25 full-text search trên caption + ocr_text của từng frame."""
+    """BM25 trên caption, translated OCR và derived code search terms."""
 
     def __init__(self, metadata_path: str | Path = DEFAULT_METADATA_PATH):
         path = Path(metadata_path)
@@ -81,12 +86,29 @@ class TextDatabase:
             raise ValueError(f"{path} rỗng — chạy extractor.py trước.")
 
         # corpus[i] tương ứng records[i] -> đây là cách map ngược ra frame_id.
-        # Chỉ lấy caption + ocr_text (đều tiếng Anh); KHÔNG lấy ocr_text_raw (tiếng Việt)
-        # vì keywords Dev 3 gửi sang là tiếng Anh.
-        corpus = [
-            tokenize(f"{r.get('caption', '')} {r.get('ocr_text', '')}")
-            for r in self.records
-        ]
+        # Index caption + translated OCR trực tiếp. Raw OCR không được đưa nguyên
+        # văn vào BM25, nhưng classifier có thể dùng nó làm evidence để sinh các
+        # alias tiếng Anh như "correlated subquery".
+        corpus = []
+        for record in self.records:
+            code = classify_code(
+                record.get("caption", ""),
+                record.get("ocr_text", ""),
+                record.get("ocr_text_raw", ""),
+            )
+            # Classify legacy Task 1 metadata in memory; no source overwrite is
+            # required just to make SQL semantic terms searchable.
+            record["code"] = code.model_dump(mode="json")
+            # Raw SQL syntax is already present in ocr_text. Add only semantic
+            # aliases here; duplicating every matched pattern would distort the
+            # established OCR ranking for queries such as NOT IN + NULL.
+            derived_text = " ".join(code.search_terms)
+            corpus.append(
+                tokenize(
+                    f"{record.get('caption', '')} {record.get('ocr_text', '')} "
+                    f"{derived_text}"
+                )
+            )
         self.bm25 = BM25Okapi(corpus)
 
     def search(self, keywords: list[str], top_k: int = 200) -> list[dict]:

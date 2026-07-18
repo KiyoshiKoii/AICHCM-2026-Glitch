@@ -31,6 +31,8 @@ class SearchFilters(BaseModel):
     objects: list[FilterValue] | None = Field(default=None, min_length=1)
     actions: list[FilterValue] | None = Field(default=None, min_length=1)
     colors: list[FilterValue] | None = Field(default=None, min_length=1)
+    code_language: Literal["unknown", "sql"] | None = None
+    code_patterns: list[FilterValue] | None = Field(default=None, min_length=1)
     spatial_relations: list["SpatialRelationFilter"] | None = Field(
         default=None, min_length=1
     )
@@ -131,7 +133,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Semantic Pipeline API (Dev 2)",
-    description="BM25 full-text search trên caption + OCR của các frame.",
+    description="Semantic search trên caption, OCR, entity/spatial và code metadata.",
     version="1.0.0",
     lifespan=lifespan,
 )

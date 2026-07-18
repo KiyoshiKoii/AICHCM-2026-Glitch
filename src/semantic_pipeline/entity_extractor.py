@@ -20,6 +20,7 @@ import httpx
 from pydantic import ValidationError
 
 try:
+    from code_classifier import classify_record
     from migrate_metadata import write_json_atomically
     from schemas import (
         DEFAULT_METADATA_PATH,
@@ -29,6 +30,7 @@ try:
         validate_metadata_records,
     )
 except ImportError:
+    from .code_classifier import classify_record
     from .migrate_metadata import write_json_atomically
     from .schemas import (
         DEFAULT_METADATA_PATH,
@@ -483,6 +485,10 @@ def enrich_records(
     skipped = 0
     eligible = 0
     for index, record in enumerate(records):
+        # This deterministic stage is cheap, so it runs even when an expensive
+        # Ollama entity record is skipped during resume.
+        record = classify_record(record)
+        records[index] = record
         already_done = record.processing.entity_model is not None
         if already_done and not overwrite_existing:
             skipped += 1

@@ -68,6 +68,39 @@
         "type": "text",
         "index": false
       },
+      "code": {
+        "type": "object",
+        "dynamic": "strict",
+        "properties": {
+          "language": {
+            "type": "keyword",
+            "normalizer": "lowercase_keyword"
+          },
+          "statement_type": {
+            "type": "keyword",
+            "normalizer": "lowercase_keyword"
+          },
+          "patterns": {
+            "type": "text",
+            "analyzer": "kis_ocr",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase_keyword"
+              }
+            }
+          },
+          "search_terms": {
+            "type": "text",
+            "analyzer": "kis_ocr"
+          },
+          "evidence": {
+            "type": "text",
+            "index": false
+          },
+          "classifier_version": {"type": "keyword"}
+        }
+      },
       "entities": {
         "properties": {
           "time_of_day": {"type": "keyword", "normalizer": "lowercase_keyword"},

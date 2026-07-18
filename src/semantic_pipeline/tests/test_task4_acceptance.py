@@ -1,9 +1,12 @@
 """Unit tests for Task 4 acceptance checks and regression comparisons."""
 
+from code_classifier import classify_record
 from schemas import FrameMetadata
 from task4_acceptance import (
+    audit_code_classification,
     audit_entities,
     audit_filtered_queries,
+    audit_required_rank1_query,
     audit_spatial,
     compare_text_quality,
 )
@@ -93,6 +96,37 @@ def test_entity_and_spatial_artifact_audits_pass_complete_record():
     assert spatial["indexed_query_relations"] == 2
 
 
+def test_code_audit_requires_current_version_and_sql_target_evidence():
+    record = FrameMetadata.model_validate(
+        {
+            "frame_id": "vid03_f0004",
+            "video_name": "vid03.mp4",
+            "frame_index": 4,
+            "caption": "A code template",
+            "ocr_text": "select ... from A where not exists (select * from B)",
+            "ocr_text_raw": "correlated subquery",
+        }
+    )
+    record = classify_record(record)
+    audit = audit_code_classification([record])
+    assert audit["passed"] is True
+    assert audit["target_checks"]["sql_query_search_term"] is True
+
+    stale = record.model_copy(
+        update={
+            "code": record.code.model_copy(update={"classifier_version": "old-rules"})
+        }
+    )
+    assert audit_code_classification([stale])["passed"] is False
+
+    tampered = record.model_copy(
+        update={
+            "code": record.code.model_copy(update={"search_terms": ["sql"]})
+        }
+    )
+    assert audit_code_classification([tampered])["metadata_matches_classifier"] is False
+
+
 def test_spatial_audit_detects_missing_inverse():
     record = complete_record()
     record = record.model_copy(update={"spatial_relations": record.spatial_relations[:1]})
@@ -121,3 +155,18 @@ def test_filtered_query_audit_requires_two_applied_rank_one_cases():
         }
     )
     assert audit_filtered_queries(report)["passed"] is True
+
+
+def test_required_sql_query_must_be_unfiltered_and_rank_first():
+    report = retrieval_report()
+    row = report["queries"][0]
+    row.update(
+        {
+            "query_id": "sql_query_template",
+            "retrieved_frame_ids": ["vid03_f0004", "vid03_f0003"],
+        }
+    )
+    assert audit_required_rank1_query(report)["passed"] is True
+
+    row["filters"] = {"code_language": "sql"}
+    assert audit_required_rank1_query(report)["passed"] is False
