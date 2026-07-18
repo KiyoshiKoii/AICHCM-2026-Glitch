@@ -1,0 +1,120 @@
+[
+  {
+    "query_id": "booking_entity_record",
+    "query": "the database design page about separating check-in from a booking entity",
+    "keywords": ["booking", "entity", "check-in", "record"],
+    "relevant_frame_ids": ["vid01_f0001"],
+    "tags": ["ocr", "database"]
+  },
+  {
+    "query_id": "triangle_middle_sections",
+    "query": "triangle ABC with three internal lines and a horizontal line through the middle sections",
+    "keywords": ["triangle ABC", "three internal lines", "horizontal line", "middle sections"],
+    "relevant_frame_ids": ["vid01_f0002"],
+    "tags": ["caption", "ocr", "math"]
+  },
+  {
+    "query_id": "triangle_base_formula",
+    "query": "the solution using the base formula where the total number of triangles is thirteen",
+    "keywords": ["base formula", "partial line", "total", "13"],
+    "relevant_frame_ids": ["vid01_f0003"],
+    "tags": ["ocr", "math"]
+  },
+  {
+    "query_id": "triangle_three_layers",
+    "query": "triangle with one internal line cut by two horizontal lines to form three layers",
+    "keywords": ["triangle", "one internal line", "two horizontal lines", "three layers"],
+    "relevant_frame_ids": ["vid01_f0004"],
+    "tags": ["ocr", "math"]
+  },
+  {
+    "query_id": "snowden_guardian",
+    "query": "Guardian article about Edward Snowden and the NSA surveillance revelations",
+    "keywords": ["Guardian", "Edward Snowden", "NSA", "surveillance", "whistleblower"],
+    "relevant_frame_ids": ["vid01_f0006"],
+    "tags": ["caption", "ocr", "news"]
+  },
+  {
+    "query_id": "domino_solution_5266",
+    "query": "solution arranging eight dominoes into a four by four grid with result 5266",
+    "keywords": ["dominoes", "4x4 grid", "solution", "5266"],
+    "relevant_frame_ids": ["vid01_f0008"],
+    "tags": ["ocr", "math"]
+  },
+  {
+    "query_id": "captain_gold_sacks",
+    "query": "Captain Beard buried gold coins in six magic sacks on a deserted island",
+    "keywords": ["Captain Beard", "gold coins", "six magic sacks", "deserted island"],
+    "relevant_frame_ids": ["vid02_f0001"],
+    "tags": ["caption", "ocr", "translated"]
+  },
+  {
+    "query_id": "treasure_hunter_map",
+    "query": "treasure hunter moving from the top left across a map while avoiding dangers",
+    "keywords": ["treasure hunter", "map", "top left", "dangers"],
+    "relevant_frame_ids": ["vid02_f0003"],
+    "tags": ["ocr", "math"]
+  },
+  {
+    "query_id": "europe_work_hours_charts",
+    "query": "charts of weekly industrial work hours in four European countries in 2002",
+    "keywords": ["work hours per week", "industrial", "European countries", "2002", "charts"],
+    "relevant_frame_ids": ["vid02_f0005"],
+    "tags": ["ocr", "chart"]
+  },
+  {
+    "query_id": "unsupported_model_pipeline",
+    "query": "terminal message saying the requested model is not supported while running the Step 1 pipeline",
+    "keywords": ["requested model", "not supported", "Step1", "pipeline", "SKILL.md"],
+    "relevant_frame_ids": ["vid02_f0008"],
+    "tags": ["ocr", "software"]
+  },
+  {
+    "query_id": "sql_not_in_null",
+    "query": "SQL tutorial warning that NOT IN gives a wrong result when the subquery contains NULL",
+    "keywords": ["SQL", "NOT IN", "NULL", "NOT EXISTS", "subquery"],
+    "relevant_frame_ids": ["vid03_f0002"],
+    "tags": ["ocr", "sql"]
+  },
+  {
+    "query_id": "sql_group_by_having",
+    "query": "SQL example using GROUP BY and HAVING count greater than or equal to two",
+    "keywords": ["GROUP BY", "HAVING", "count", "greater than", "two"],
+    "relevant_frame_ids": ["vid03_f0005"],
+    "tags": ["ocr", "sql"]
+  },
+  {
+    "query_id": "sql_self_join_aliases",
+    "query": "SQL self join using two aliases for the same member table and matching birth years",
+    "keywords": ["self join", "two aliases", "same table", "birth year", "HOIVIEN"],
+    "relevant_frame_ids": ["vid03_f0008"],
+    "tags": ["ocr", "sql"]
+  },
+  {
+    "query_id": "flower_field",
+    "query": "a colorful field of flowers under a bright blue sky with white clouds",
+    "keywords": ["field", "flowers", "bright blue sky", "white clouds"],
+    "relevant_frame_ids": ["vid03_f0009"],
+    "tags": ["caption", "natural-scene"],
+    "filters": {
+      "setting": "outdoor",
+      "objects": ["flowers"]
+    }
+  },
+  {
+    "query_id": "domino_left_of_domino",
+    "query": "two domino pieces where one is positioned to the left of the other",
+    "keywords": ["domino", "pieces"],
+    "relevant_frame_ids": ["vid01_f0007"],
+    "tags": ["spatial", "left-right", "filter"],
+    "filters": {
+      "spatial_relations": [
+        {
+          "subject": "domino",
+          "predicate": "left_of",
+          "object": "domino"
+        }
+      ]
+    }
+  }
+]

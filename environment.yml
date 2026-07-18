@@ -19,10 +19,13 @@ dependencies:
     - timm
     - rank_bm25
     - nltk
+    - elasticsearch==9.4.1
+    - httpx
+    - httpx2>=2.7,<3
+    # Test suite for the semantic pipeline (Task 5)
+    - pytest>=9,<10
     - paddlepaddle
     - paddleocr
     - sentencepiece
     - gdown
     - vietocr
-    # Test suite for the semantic pipeline (Task 5)
-    - pytest

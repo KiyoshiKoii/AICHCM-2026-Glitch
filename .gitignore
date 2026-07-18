@@ -15,6 +15,14 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Developer-local editor/scratch files
+.vscode/
+src/semantic_pipeline/note.txt
+
+# Local secure Elasticsearch secrets/cert exports (templates stay tracked)
+.env.elasticsearch.secure
+src/semantic_pipeline/.local-secure/
+
 # Dev 1 (Visual Pipeline) - Vector Database
 src/visual_pipeline/local_qdrant_db/
 
@@ -24,6 +32,17 @@ src/visual_pipeline/local_qdrant_db/
 # ⚠️ Khi chuyển sang dataset thật của BTC (hàng chục nghìn frame), file này sẽ
 # phình lên hàng trăm MB -> lúc đó phải chặn lại và đổi test sang fixture nhỏ.
 src/semantic_pipeline/*.csv
+src/semantic_pipeline/sample_frames/metadata_v1.json
+src/semantic_pipeline/sample_frames/metadata_entities*.json
+src/semantic_pipeline/sample_frames/metadata_spatial*.json
+
+# Local reports / temporary test data (Dev 2)
+baseline_report_*.json
+spatial_benchmark_report_*.json
+entity_benchmark_report_*.json
+scale_benchmark_report_*.json
+task4_acceptance_report.json
+.pytest-local-temp/
 
 # Node (Frontend)
 node_modules/
