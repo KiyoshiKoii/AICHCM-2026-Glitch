@@ -7,26 +7,24 @@ from pydantic import BaseModel
 from transformers import CLIPProcessor, CLIPModel
 from qdrant_client import QdrantClient
 
+from config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME
+
 # Fix encoding issue for Vietnamese characters in Windows Terminal
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
 app = FastAPI(title="CV Internal API", description="API for Text-to-Video Search")
 
-print("Đang khởi tạo CLIP Model...")
-model_id = "openai/clip-vit-base-patch32"
-model = CLIPModel.from_pretrained(model_id)
-processor = CLIPProcessor.from_pretrained(model_id)
+print(f"Đang khởi tạo CLIP Model ({CLIP_MODEL_ID})...")
+model = CLIPModel.from_pretrained(CLIP_MODEL_ID)
+processor = CLIPProcessor.from_pretrained(CLIP_MODEL_ID)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 print(f"Model CLIP đã sẵn sàng trên {device.upper()}.")
 
-print("Đang kết nối Qdrant DB...")
-script_dir = os.path.dirname(os.path.abspath(__file__))
-db_path = os.path.join(script_dir, "local_qdrant_db")
-client = QdrantClient(path=db_path)
-collection_name = "kis_images"
+print(f"Đang kết nối Qdrant DB tại: {QDRANT_DB_PATH}")
+client = QdrantClient(path=QDRANT_DB_PATH)
 print("Qdrant Client đã sẵn sàng.")
 
 class SearchRequest(BaseModel):
@@ -36,34 +34,27 @@ class SearchRequest(BaseModel):
 @app.post("/internal/search/visual")
 async def search_visual(req: SearchRequest):
     try:
-        # 1. Encode câu visual_prompt bằng CLIP thành vector
+        # 1. Encode câu visual_prompt bằng CLIP thành vector text
         inputs = processor(text=[req.visual_prompt], return_tensors="pt", padding=True).to(device)
-        
+
         with torch.no_grad():
-            outputs = model.get_text_features(**inputs)
-            
-            # QUAN TRỌNG: Phải mirror đúng pipeline của embed_folder.py
-            # embed_folder.py lưu: L2_norm(vision_pooler_output) -- KHÔNG qua visual_projection
-            # vì vision_pooler_output là 512-dim, visual_projection.in_features=768 => dim check thất bại
-            # => text phải dùng: L2_norm(text_pooler_output) -- KHÔNG qua text_projection
-            if isinstance(outputs, torch.Tensor):
-                # Transformers cũ: trả thẳng tensor đã projected
-                # Trong trường hợp này image vectors cũng sẽ đã projected, nên dùng thẳng
-                text_features = outputs
-            elif hasattr(outputs, "pooler_output"):
-                # Transformers v5: trả BaseModelOutputWithPooling, lấy pooler_output thô
-                text_features = outputs.pooler_output
-            else:
-                text_features = outputs[1]
-                
-        # L2 normalize — mirror y chang bước cuoi cua embed_folder.py
+            # get_text_features() symmetric với get_image_features() trong extractor.py
+            text_features = model.get_text_features(**inputs)
+
+        # Một số phiên bản transformers trả về BaseModelOutputWithPooling
+        # thay vì tensor trực tiếp — cần extract đúng trường
+        if hasattr(text_features, "text_embeds"):
+            text_features = text_features.text_embeds
+        elif hasattr(text_features, "pooler_output"):
+            text_features = text_features.pooler_output
+
+        # L2 normalize — mirror y hệt bước cuối của extractor.py
         text_features = text_features / text_features.norm(p=2, dim=-1, keepdim=True)
-        query_vector = text_features.cpu().numpy()[0].tolist()
-        query_vector = [float(x) for x in query_vector]
+        query_vector = [float(x) for x in text_features.cpu().numpy()[0]]
 
         # 2. Truy vấn Qdrant DB
         search_results = client.query_points(
-            collection_name=collection_name,
+            collection_name=COLLECTION_NAME,
             query=query_vector,
             limit=req.top_k
         )
