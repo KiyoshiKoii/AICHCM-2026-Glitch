@@ -68,11 +68,19 @@ def check_server_alive() -> bool:
         return False
 
 
-def validate_response(results: list, prompt: str) -> list[str]:
+def validate_response(response: dict, prompt: str) -> list[str]:
     """Kiểm tra format response. Trả về danh sách lỗi (rỗng = OK)."""
     errors = []
+    if not isinstance(response, dict):
+        errors.append(f"Response không phải dict: {type(response)}")
+        return errors
+
+    if response.get("status") != "success":
+        errors.append(f"Response status không phải 'success': {response.get('status')}")
+
+    results = response.get("data")
     if not isinstance(results, list):
-        errors.append(f"Response không phải list: {type(results)}")
+        errors.append(f"Response data không phải list: {type(results)}")
         return errors
 
     for i, item in enumerate(results):
@@ -99,15 +107,12 @@ def validate_response(results: list, prompt: str) -> list[str]:
     return errors
 
 
-def print_results(results: list, prompt: str, elapsed_ms: float):
-    """In kết quả search theo dạng bảng đẹp."""
-    print(f"\n  {'Rank':<5} {'video_name':<15} {'frame_id':<15} "
-          f"{'frame_idx':>9} {'score':>8}")
-    print(f"  {'─'*5} {'─'*15} {'─'*15} {'─'*9} {'─'*8}")
-    for i, item in enumerate(results, 1):
-        print(f"  {i:<5} {item['video_name']:<15} {item['frame_id']:<15} "
-              f"{item['frame_index']:>9} {item['score']:>8.4f}")
+def print_results(response: dict, prompt: str, elapsed_ms: float):
+    """In kết quả search theo dạng JSON chuẩn."""
     print(f"\n  {CYAN}⏱  Latency: {elapsed_ms:.1f} ms{RESET}")
+    json_str = json.dumps(response, indent=2, ensure_ascii=False)
+    for line in json_str.split("\n"):
+        print(f"  {line}")
 
 
 def run_test(prompt: str, top_k: int = DEFAULT_TOP_K) -> bool:
@@ -118,26 +123,28 @@ def run_test(prompt: str, top_k: int = DEFAULT_TOP_K) -> bool:
     # Gọi API
     t0 = time.perf_counter()
     try:
-        results = post_search(prompt, top_k)
+        response = post_search(prompt, top_k)
     except urllib.error.URLError as e:
         print(f"  {RED}❌ Không kết nối được server: {e}{RESET}")
         return False
     elapsed_ms = (time.perf_counter() - t0) * 1000
 
-    # Validate HTTP + count
-    if len(results) == 0 and top_k > 0:
-        print(f"  {YELLOW}⚠  Response rỗng (không có kết quả nào){RESET}")
-
     # Validate format
-    errors = validate_response(results, prompt)
+    errors = validate_response(response, prompt)
     if errors:
         print(f"  {RED}❌ Lỗi format:{RESET}")
         for err in errors:
             print(f"     • {err}")
         return False
 
+    results = response.get("data", [])
+
+    # Validate HTTP + count
+    if len(results) == 0 and top_k > 0:
+        print(f"  {YELLOW}⚠  Response rỗng (không có kết quả nào){RESET}")
+
     # In kết quả
-    print_results(results, prompt, elapsed_ms)
+    print_results(response, prompt, elapsed_ms)
 
     # Kiểm tra số lượng kết quả
     if len(results) != top_k:

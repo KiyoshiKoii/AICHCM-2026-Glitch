@@ -85,7 +85,10 @@ async def search_visual(req: SearchRequest):
                 "frame_index": frame_index
             })
 
-        return results
+        return {
+            "status": "success",
+            "data": results
+        }
     except Exception as e:
         print(f"Error during search: {e}")
         raise HTTPException(status_code=500, detail=str(e))
