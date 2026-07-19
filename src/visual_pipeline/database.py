@@ -4,103 +4,131 @@ import numpy as np
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 
+from config import (
+    KEYFRAME_DIR, NPY_DIR, QDRANT_DB_PATH,
+    COLLECTION_NAME, VECTOR_SIZE,
+    print_config
+)
+
 # Fix encoding cho in tiếng Việt trên Terminal Windows
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
-# Khai báo đường dẫn
-script_dir = os.path.dirname(os.path.abspath(__file__))
-dev1_dir = os.path.join(script_dir, "..", "..", "docs", "Phase 1 - Known-Item Search (KIS)", "dev1 - Computer Vision Engineer")
-db_path = os.path.join(script_dir, "local_qdrant_db")
+# ──────────────────────────────────────────────────────────────────────────────
+# Kiểm tra điều kiện tiên quyết
+# ──────────────────────────────────────────────────────────────────────────────
+print_config()
 
-# 1. Khởi tạo Qdrant Client (Chế độ Local Storage - Không cần Docker)
-print(f"Đang khởi tạo Qdrant DB tại: {db_path}")
-client = QdrantClient(path=db_path)
+if not os.path.exists(NPY_DIR):
+    print(f"❌ Chưa có thư mục npy_features tại: {NPY_DIR}")
+    print("👉 Hãy chạy extractor.py trước để sinh ra các file .npy")
+    sys.exit(0)
 
-# Thư mục chứa vector đã được trích xuất
-npy_dir = os.path.join(dev1_dir, "npy_features")
-
-collection_name = "kis_images"
-vector_size = 512
-
-# 2. Reset Collection (Xóa cũ đi tạo lại để tránh trùng lặp dữ liệu)
-if client.collection_exists(collection_name=collection_name):
-    print(f"Phát hiện Collection '{collection_name}' đã tồn tại. Đang xóa để nạp lại từ đầu...")
-    client.delete_collection(collection_name=collection_name)
-
-print(f"Đang tạo Collection mới: '{collection_name}' (kích thước {vector_size}, khoảng cách Cosine)...")
-client.create_collection(
-    collection_name=collection_name,
-    vectors_config=VectorParams(size=vector_size, distance=Distance.COSINE),
-)
-print("Tạo Collection thành công!\n")
-
-# 3. Quét tất cả file .npy trong thư mục npy_features và nạp dữ liệu
-npy_dir = os.path.join(script_dir, "npy_features")
-
-if not os.path.exists(npy_dir):
-    print(f"Không tìm thấy thư mục chứa file npy: {npy_dir}")
-    npy_files = []
-else:
-    npy_files = [f for f in os.listdir(npy_dir) if f.endswith(".npy") and f.startswith("L")]
-
-npy_files.sort()
+npy_files = sorted([
+    f for f in os.listdir(NPY_DIR)
+    if f.endswith(".npy") and f.startswith("L") and not f.endswith("_filenames.npy")
+])
 
 if not npy_files:
-    print("Không tìm thấy file .npy nào bắt đầu bằng 'L' trong thư mục npy_features!")
-else:
-    print(f"Tìm thấy {len(npy_files)} file .npy. Bắt đầu xử lý hàng loạt...")
-    
-    global_id = 0 # Biến ID toàn cục đếm liên tục cho tất cả các ảnh của mọi thư mục
-    valid_extensions = {".jpg", ".jpeg", ".png", ".bmp"}
-    
-    # Thư mục gốc chứa toàn bộ các folder ảnh (Keyframes)
-    keyframe_dir = os.path.join(script_dir, "keyframe")
-    
-    for npy_filename in npy_files:
-        video_name = npy_filename.replace(".npy", "")
-        npy_path = os.path.join(npy_dir, npy_filename)
-        image_dir = os.path.join(keyframe_dir, video_name)
-        
-        print(f"\n--- Đang xử lý Video: {video_name} ---")
-        features = np.load(npy_path)
-        num_vectors = features.shape[0]
-        
-        image_filenames = []
+    print(f"⚠️  Không tìm thấy file .npy nào trong: {NPY_DIR}")
+    print("👉 Hãy chạy extractor.py trước.")
+    sys.exit(0)
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Khởi tạo Qdrant Client (Local Storage — không cần Docker)
+# ──────────────────────────────────────────────────────────────────────────────
+os.makedirs(QDRANT_DB_PATH, exist_ok=True)
+print(f"Đang khởi tạo Qdrant DB tại: {QDRANT_DB_PATH}")
+client = QdrantClient(path=QDRANT_DB_PATH)
+
+# Reset Collection (xóa & tạo lại để tránh trùng dữ liệu)
+if client.collection_exists(collection_name=COLLECTION_NAME):
+    print(f"Phát hiện Collection '{COLLECTION_NAME}' đã tồn tại. Đang xóa để nạp lại...")
+    client.delete_collection(collection_name=COLLECTION_NAME)
+
+print(f"Đang tạo Collection '{COLLECTION_NAME}' (size={VECTOR_SIZE}, Cosine)...")
+client.create_collection(
+    collection_name=COLLECTION_NAME,
+    vectors_config=VectorParams(size=VECTOR_SIZE, distance=Distance.COSINE),
+)
+print("✅ Tạo Collection thành công!\n")
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Nạp dữ liệu từ các file .npy vào Qdrant
+# ──────────────────────────────────────────────────────────────────────────────
+print(f"Tìm thấy {len(npy_files)} file .npy. Bắt đầu nạp dữ liệu...\n")
+
+global_id = 0
+valid_extensions = {".jpg", ".jpeg", ".png", ".bmp"}
+
+for npy_filename in npy_files:
+    video_name = npy_filename.replace(".npy", "")
+    npy_path = os.path.join(NPY_DIR, npy_filename)
+    names_path = os.path.join(NPY_DIR, f"{video_name}_filenames.npy")
+
+    print(f"{'─'*50}")
+    print(f"  VIDEO: {video_name}")
+
+    features = np.load(npy_path)
+    num_vectors = features.shape[0]
+
+    # Ưu tiên dùng file _filenames.npy (sinh bởi extractor.py mới)
+    # Fallback: scan lại thư mục keyframe nếu file tên không có
+    if os.path.exists(names_path):
+        image_filenames = list(np.load(names_path, allow_pickle=True))
+        print(f"  📋 Đọc tên file từ: {os.path.basename(names_path)}")
+    else:
+        image_dir = os.path.join(KEYFRAME_DIR, video_name)
         if os.path.exists(image_dir):
-            for f in os.listdir(image_dir):
-                if os.path.splitext(f)[1].lower() in valid_extensions:
-                    image_filenames.append(f)
-            # Quan trọng: Cần phải sort giống hệt bên file embed_folder.py
-            image_filenames.sort()
-            
-        if len(image_filenames) != num_vectors:
-            print(f"CẢNH BÁO: Số ảnh ({len(image_filenames)}) không khớp số vector ({num_vectors})!")
-            
-        points = []
-        for i in range(num_vectors):
-            vector = features[i].tolist() # Chuyển numpy array về list
-            frame_name = image_filenames[i] if i < len(image_filenames) else f"unknown_{i}"
-            
-            # Gắn Payload MỚI: Có cả tên video và tên frame ảnh
-            payload = {
+            image_filenames = sorted([
+                f for f in os.listdir(image_dir)
+                if os.path.splitext(f)[1].lower() in valid_extensions
+            ])
+            print(f"  📋 Scan thư mục keyframe: {image_dir}")
+        else:
+            image_filenames = []
+            print(f"  ⚠️  Không tìm thấy _filenames.npy lẫn thư mục keyframe!")
+
+    if len(image_filenames) != num_vectors:
+        print(f"  ⚠️  Số tên file ({len(image_filenames)}) ≠ số vector ({num_vectors})!")
+
+    # Build danh sách points để nạp vào Qdrant
+    points = []
+    for i in range(num_vectors):
+        vector = features[i].tolist()
+        frame_name = image_filenames[i] if i < len(image_filenames) else f"unknown_{i}"
+
+        # Trích xuất frame_index từ tên file (VD: "0001.jpg" → 1)
+        try:
+            frame_index = int(os.path.splitext(frame_name)[0])
+        except ValueError:
+            frame_index = i
+
+        points.append(PointStruct(
+            id=global_id,
+            vector=vector,
+            payload={
                 "video_id": video_name,
-                "frame_id": frame_name
+                "frame_id": frame_name,
+                "frame_index": frame_index,
             }
-            
-            points.append(
-                PointStruct(id=global_id, vector=vector, payload=payload)
-            )
-            global_id += 1 # Tăng ID lên cho ảnh tiếp theo
-            
-        # Nạp dữ liệu vào Qdrant
+        ))
+        global_id += 1
+
+    # Nạp theo batch để tránh OOM với video nhiều frame
+    batch_size = 256
+    for start in range(0, len(points), batch_size):
         client.upload_points(
-            collection_name=collection_name,
-            points=points
+            collection_name=COLLECTION_NAME,
+            points=points[start:start + batch_size]
         )
-        print(f"Nạp thành công {num_vectors} vector. (ID chạy đến {global_id - 1})")
-        
-    # Xác thực lại tổng số vector trong DB
-    collection_info = client.get_collection(collection_name=collection_name)
-    print(f"\n{'='*50}")
-    print(f"=> TÌNH TRẠNG DB HIỆN TẠI: Đã lưu trữ tổng cộng {collection_info.points_count} vector hoàn chỉnh!")
+
+    print(f"  ✅ Nạp thành công {num_vectors} vector (ID {global_id - num_vectors} → {global_id - 1})")
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Xác nhận kết quả cuối
+# ──────────────────────────────────────────────────────────────────────────────
+collection_info = client.get_collection(collection_name=COLLECTION_NAME)
+print(f"\n{'='*55}")
+print(f"✅ HOÀN TẤT! DB đang lưu: {collection_info.points_count} vector")
+print(f"   DB path: {QDRANT_DB_PATH}")
