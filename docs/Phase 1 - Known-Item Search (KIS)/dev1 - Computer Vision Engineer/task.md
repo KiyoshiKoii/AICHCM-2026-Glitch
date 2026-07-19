@@ -26,7 +26,7 @@ Dưới đây là các hạng mục công việc cần hoàn thiện:
   - **Tối ưu RAM (Quantization)**: Nghiên cứu tính năng lượng tử hóa ép vector xuống kiểu int8 của Qdrant và kỹ thuật MRL (Matryoshka) để chuẩn bị cho việc nạp khối dữ liệu 100GB.
   - **Late Interaction**: Đọc hiểu cơ chế ColBERT/ColPali (lưu nhiều vector cho một tấm ảnh thay vì 1 vector duy nhất) để tối ưu hóa việc tìm kiếm các vật thể li ti trong khung hình.
 
-- [ ] **Task 5: Unit Testing & Performance Testing**
+- [x] **Task 5: Unit Testing & Performance Testing**
   - **API Test**: Xây dựng test cho endpoint `/internal/search/visual` đảm bảo response trả về đúng format `[frame_id, score, video_name, frame_index]` và HTTP status 200.
   - **Performance Test**: Đo tốc độ trích xuất Vector với Batch Inference và tốc độ truy vấn Qdrant để đảm bảo đạt độ trễ cho phép (dưới 500ms).
 
