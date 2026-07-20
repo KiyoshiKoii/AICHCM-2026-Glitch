@@ -1,1 +1,2 @@
-"""AIC 2026 modular online-serving backend."""
+# Khởi tạo FastAPI app
+# Chú ý: Mount static files để host thư mục ảnh thumbnail (xem API Contract)
