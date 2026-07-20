@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import re
 
 from backend.core.errors import FrameIdError
@@ -38,6 +37,3 @@ def build_frame_context(
             )
         )
     return FrameContextResponse(current_frame_id=frame_id, frames=frames)
-=======
-# Logic parse frame_id (ví dụ: vid05_f1024 -> video_name: vid05, frame_index: 1024)
->>>>>>> 700adb8d8c8d3eea7e3ce1e2131f80b56c6ab3c1

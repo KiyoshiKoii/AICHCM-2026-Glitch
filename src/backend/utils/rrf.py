@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from typing import Any
@@ -74,6 +73,3 @@ def reciprocal_rank_fusion(
         )
         for item in ordered
     ]
-=======
-# Thuật toán Reciprocal Rank Fusion (công thức 1 / (60 + rank))
->>>>>>> 700adb8d8c8d3eea7e3ce1e2131f80b56c6ab3c1
