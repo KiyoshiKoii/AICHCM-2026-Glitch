@@ -51,6 +51,7 @@ def embed_folder(folder_path: str):
     print(f"  Tìm thấy {len(image_paths)} ảnh. Bắt đầu trích xuất...")
 
     all_features = []
+    valid_filenames = []
 
     for i in range(0, len(image_paths), BATCH_SIZE):
         batch_paths = image_paths[i:i + BATCH_SIZE]
@@ -83,6 +84,7 @@ def embed_folder(folder_path: str):
         # L2 normalize (chuẩn cho cosine similarity)
         image_features = image_features / image_features.norm(p=2, dim=-1, keepdim=True)
         all_features.append(image_features.cpu())
+        valid_filenames.extend([os.path.basename(p) for p in valid_batch_paths])
 
         done = min(i + BATCH_SIZE, len(image_paths))
         print(f"  [{done}/{len(image_paths)}] batches xong...")
@@ -92,9 +94,8 @@ def embed_folder(folder_path: str):
 
     final_features = torch.cat(all_features, dim=0)
 
-    # Trả về cả image_paths để database.py dùng — tránh mismatch khi scan lại
-    image_filenames = [os.path.basename(p) for p in image_paths]
-    return final_features, image_filenames
+    # Trả về các valid_filenames thay vì tất cả image_paths để tránh mismatch
+    return final_features, valid_filenames
 
 
 # ──────────────────────────────────────────────────────────────────────────────
