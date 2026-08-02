@@ -1,7 +1,7 @@
 import re
 
 from backend.core.errors import FrameIdError
-from backend.models.schemas import FrameContextItem, FrameContextResponse
+from backend.schemas.frames import FrameContextItem, FrameContextData, FrameContextResponse
 from backend.utils.thumbnail import build_thumbnail_url
 
 FRAME_ID_PATTERN = re.compile(r"^(?P<prefix>.+_f)(?P<index>\d+)$")
@@ -21,19 +21,40 @@ def build_frame_context(
 
     index_text = match.group("index")
     current_index = int(index_text)
-    if current_index < radius:
-        raise FrameIdError(f"frame_id must have at least {radius} preceding frames")
 
     prefix = match.group("prefix")
     width = len(index_text)
-    frames = []
-    for offset in range(-radius, radius + 1):
+    
+    before_frames = []
+    # Avoid negative indices for frames
+    min_index = max(0, current_index - radius)
+    for offset in range(min_index - current_index, 0):
         nearby_id = f"{prefix}{current_index + offset:0{width}d}"
-        frames.append(
+        before_frames.append(
             FrameContextItem(
                 frame_id=nearby_id,
-                offset=offset,
                 thumbnail_url=build_thumbnail_url(nearby_id, thumbnail_base_url),
             )
         )
-    return FrameContextResponse(current_frame_id=frame_id, frames=frames)
+
+    after_frames = []
+    for offset in range(1, radius + 1):
+        nearby_id = f"{prefix}{current_index + offset:0{width}d}"
+        after_frames.append(
+            FrameContextItem(
+                frame_id=nearby_id,
+                thumbnail_url=build_thumbnail_url(nearby_id, thumbnail_base_url),
+            )
+        )
+
+    return FrameContextResponse(
+        status="success",
+        data=FrameContextData(
+            center_frame=FrameContextItem(
+                frame_id=frame_id,
+                thumbnail_url=build_thumbnail_url(frame_id, thumbnail_base_url)
+            ),
+            before_frames=before_frames,
+            after_frames=after_frames
+        )
+    )

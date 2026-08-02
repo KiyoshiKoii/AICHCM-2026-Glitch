@@ -112,27 +112,27 @@ src/backend/
 ## ✅ Checklist Công việc
 
 ### 1. Phân tích Truy vấn & Tích hợp LLM (`services/query_analyzer.py`)
-- [ ] **Nghiên cứu & Tích hợp LLM Parser**: Đánh giá và tìm hiểu các mô hình ngôn ngữ (bao gồm cả các bản trả phí như GPT-4, Claude,... để đảm bảo chất lượng). Tạm thời dùng Ollama tự host ở local.
-- [ ] Viết hàm nhận câu query tiếng Việt -> Nhả JSON gồm: Prompt tiếng Anh (Visual) & Keywords đồng nghĩa (Semantic).
+- [x] **Nghiên cứu & Tích hợp LLM Parser**: Đánh giá và tìm hiểu các mô hình ngôn ngữ (bao gồm cả các bản trả phí như GPT-4, Claude,... để đảm bảo chất lượng). Tạm thời dùng Ollama tự host ở local.
+- [x] Viết hàm nhận câu query tiếng Việt -> Nhả JSON gồm: Prompt tiếng Anh (Visual) & Keywords đồng nghĩa (Semantic).
 
 ### 2. Giao tiếp Dịch vụ Nội bộ (`clients/`)
-- [ ] **`visual_client.py`**: Viết client HTTP gọi Dev 1 cho cả truy vấn chữ và truy vấn ảnh; có timeout, quy đổi lỗi và chuẩn hoá response. Chi tiết endpoint nội bộ cần thống nhất với Dev 1, không thêm API public mới.
-- [ ] **`semantic_client.py`**: Viết client HTTP POST gọi `localhost:8002/internal/search/text`; có timeout, quy đổi lỗi và chuẩn hoá response.
+- [x] **`visual_client.py`**: Viết client HTTP gọi Dev 1 cho cả truy vấn chữ và truy vấn ảnh; có timeout, quy đổi lỗi và chuẩn hoá response. Chi tiết endpoint nội bộ cần thống nhất với Dev 1, không thêm API public mới.
+- [x] **`semantic_client.py`**: Viết client HTTP POST gọi `localhost:8002/internal/search/text`; có timeout, quy đổi lỗi và chuẩn hoá response.
 
 ### 3. Điều phối Tìm kiếm (`services/search_orchestrator.py` & `utils/rrf.py`)
-- [ ] Cài đặt thuật toán Reciprocal Rank Fusion (RRF) trong `utils/rrf.py` (công thức $1/(60+rank)$).
-- [ ] Tại `search_orchestrator.py`: Với text search, gọi song song 2 client, dùng RRF theo `frame_id`, gộp kết quả, cắt theo `top_k` giao diện yêu cầu và gắn URL thumbnail theo API Contract.
+- [x] Cài đặt thuật toán Reciprocal Rank Fusion (RRF) trong `utils/rrf.py` (công thức $1/(60+rank)$).
+- [x] Tại `search_orchestrator.py`: Với text search, gọi song song 2 client, dùng RRF theo `frame_id`, gộp kết quả, cắt theo `top_k` giao diện yêu cầu và gắn URL thumbnail theo API Contract.
 
 ### 4. Các endpoint API (`routers/`)
-- [ ] Định nghĩa Pydantic Models trong `schemas/search.py` và `schemas/frames.py` bám sát tài liệu API Contract.
-- [ ] **`routers/search.py`**: 
+- [x] Định nghĩa Pydantic Models trong `schemas/search.py` và `schemas/frames.py` bám sát tài liệu API Contract.
+- [x] **`routers/search.py`**: 
   - `POST /search/text`: Nhận query văn bản -> Gọi `query_analyzer` -> Gọi `search_orchestrator` -> Trả về kết quả.
   - `POST /search/image`: Forward trực tiếp ảnh upload sang Dev 1 (Vector DB pipeline).
-- [ ] **`routers/frames.py`**:
+- [x] **`routers/frames.py`**:
   - `GET /frames/context/{frame_id}`: Xử lý logic chuỗi, tách số thứ tự trong `frame_id` (VD: `vid05_f1024` -> `1024`), cộng trừ để lấy ra mảng 11 frames liền kề (5 trước, 5 sau). Viết hàm tiện ích xử lý frame_id trong `utils/frame_id.py`.
 
 ### 5. Kiểm thử đơn vị
-- [ ] Xây dựng Unit test cho các function cốt lõi (đặc biệt là hàm tính điểm RRF và module phân tích LLM JSON parser) để đảm bảo không bị lỗi dữ liệu đầu ra.
+- [x] Xây dựng Unit test cho các function cốt lõi (đặc biệt là hàm tính điểm RRF và module phân tích LLM JSON parser) để đảm bảo không bị lỗi dữ liệu đầu ra.
 
 ## 📚 Tài liệu tham khảo
 - **Leveraging LLMs and Generative Models for Interactive Known-Item Video Search**: Hướng dẫn dùng LLM để viết lại câu và mở rộng ngữ nghĩa tránh lỗi Out-of-vocabulary, kèm chiến lược chống ảo giác (hallucination).

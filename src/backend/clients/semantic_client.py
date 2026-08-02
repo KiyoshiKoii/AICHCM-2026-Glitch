@@ -1,1 +1,4 @@
-# Hàm gọi API nội bộ sang Semantic Pipeline (Dev 2) - POST http://localhost:8002/internal/search/text
+# Re-use InternalPipelineClient and normalize_upstream_results for semantic client
+from backend.clients.visual_client import InternalPipelineClient, normalize_upstream_results
+
+__all__ = ["InternalPipelineClient", "normalize_upstream_results"]

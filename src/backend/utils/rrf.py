@@ -2,7 +2,7 @@ from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from typing import Any
 
-from backend.models.schemas import SearchHit, UpstreamResult
+from backend.schemas.search import SearchHit, UpstreamResult
 from backend.utils.thumbnail import build_thumbnail_url
 
 
@@ -65,10 +65,8 @@ def reciprocal_rank_fusion(
     return [
         SearchHit(
             frame_id=item.frame_id,
-            rrf_score=item.rrf_score,
+            score=item.rrf_score,
             thumbnail_url=build_thumbnail_url(item.frame_id, thumbnail_base_url),
-            source_ranks=item.source_ranks,
-            source_scores=item.source_scores,
             metadata=item.metadata,
         )
         for item in ordered
