@@ -5,7 +5,7 @@ import ResultGrid from './components/ResultGrid.jsx';
 import Pagination from './components/Pagination.jsx';
 import TimelineViewer from './components/TimelineViewer.jsx';
 import LoadingSpinner from './components/LoadingSpinner.jsx';
-import { fetchSearchResults, getFrameContext } from './api/mockClient.js';
+import { searchByText, searchByImage, getFrameContext } from './api/apiClient.js';
 import './App.css';
 
 const PAGE_SIZE = 12;
@@ -24,8 +24,16 @@ function App() {
     setCurrentPage(1);
     setLastQuery(input);
     try {
-      const response = await fetchSearchResults(input);
+      let response;
+      if (input instanceof File) {
+        response = await searchByImage(input);
+      } else {
+        response = await searchByText(input);
+      }
       setResults(response.data.results);
+    } catch (err) {
+      console.error(err);
+      alert('Lỗi trong quá trình tìm kiếm! Xem console để biết thêm chi tiết.');
     } finally {
       setIsLoading(false);
     }
@@ -36,6 +44,9 @@ function App() {
     try {
       const response = await getFrameContext(frameId);
       setFrameContext(response.data);
+    } catch (err) {
+      console.error(err);
+      alert('Lỗi tải timeline!');
     } finally {
       setIsContextLoading(false);
     }
