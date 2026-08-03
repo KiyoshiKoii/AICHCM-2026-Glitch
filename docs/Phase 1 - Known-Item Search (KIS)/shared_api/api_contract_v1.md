@@ -28,14 +28,14 @@ Tài liệu này đặc tả luồng giao tiếp dữ liệu giữa Frontend (De
     "total_results": 50,
     "results": [
       {
-        "frame_id": "vid05_f1024",
-        "video_name": "vid05.mp4",
+        "frame_id": "L21_V022_f1024",
+        "video_name": "L21_V022",
         "frame_index": 1024,
         "score": 0.98,
-        "thumbnail_url": "/media/thumbnails/vid05_f1024.jpg",
+        "thumbnail_url": "/media/thumbnails/L21_V022_f1024.jpg",
         "metadata": {
-          "camera_id": "cam_02",
-          "timestamp": "08:15:22"
+          "video_name": "L21_V022",
+          "frame_index": 1024
         }
       }
     ]
@@ -70,14 +70,14 @@ Tài liệu này đặc tả luồng giao tiếp dữ liệu giữa Frontend (De
 **Endpoint:** `GET /frames/context/{frame_id}`
 **Query Parameters:** `?window=5` (Lấy 5 frame trước và 5 frame sau)
 **Mô tả:** Frontend gọi API này khi user click đúp vào 1 bức ảnh.
-**Request URL Example:** `GET /frames/context/vid05_f1024?window=5`
+**Request URL Example:** `GET /frames/context/L21_V022_f1024?window=5`
 
 **Response (200 OK):**
 ```json
 {
   "status": "success",
   "data": {
-    "center_frame": { "frame_id": "vid05_f1024", "thumbnail_url": "..." },
+    "center_frame": { "frame_id": "L21_V022_f1024", "thumbnail_url": "..." },
     "before_frames": [...],
     "after_frames": [...]
   }
@@ -86,7 +86,7 @@ Tài liệu này đặc tả luồng giao tiếp dữ liệu giữa Frontend (De
 
 > 💡 **Bí kíp Quản trị (PM Note):**
 > - **Thumbnail Optimization:** Dev 3 must host static files. Frontend must use direct URLs in `<img src="...">`. Avoid Base64 encoding to preserve bandwidth.
-> - **Frame ID Convention:** IDs (e.g., `vid05_f1024`) include Video Name and Frame Index to allow stateless temporal calculations in the Backend.
+> - **Frame ID Convention:** IDs (e.g., `L21_V022_f1024`) include Video Name and Frame Index theo format chuẩn của BTC `L\d+_V\d+_f\d{4}` để Frontend hiển thị dễ dàng và giúp thí sinh copy nộp bài (submit) ngay lập tức.
 
 ### 4. Truy vấn Vector (Gọi Dev 1 - Visual Pipeline)
 **Endpoint:** `POST http://localhost:8001/internal/search/visual`
@@ -105,8 +105,8 @@ Tài liệu này đặc tả luồng giao tiếp dữ liệu giữa Frontend (De
 {
   "status": "success",
   "data": [
-    {"frame_id": "vid05_f1024", "score": 0.88, "video_name": "vid05.mp4", "frame_index": 1024},
-    {"frame_id": "vid12_f055", "score": 0.81, "video_name": "vid12.mp4", "frame_index": 55}
+    {"frame_id": "L21_V022_f1024", "score": 0.88, "video_name": "L21_V022", "frame_index": 1024},
+    {"frame_id": "L22_V012_f0055", "score": 0.81, "video_name": "L22_V012", "frame_index": 55}
   ]
 }
 ```
@@ -128,13 +128,13 @@ Tài liệu này đặc tả luồng giao tiếp dữ liệu giữa Frontend (De
 {
   "status": "success",
   "data": [
-    {"frame_id": "vid05_f1024", "score": 15.6, "video_name": "vid05.mp4", "frame_index": 1024},
-    {"frame_id": "vid08_f200", "score": 12.1, "video_name": "vid08.mp4", "frame_index": 200}
+    {"frame_id": "L21_V022_f1024", "score": 15.6, "video_name": "L21_V022", "frame_index": 1024},
+    {"frame_id": "L23_V008_f0200", "score": 12.1, "video_name": "L23_V008", "frame_index": 200}
   ]
 }
 ```
 
 ### 6. API Phục vụ Ảnh tĩnh (Static File Server)
-**Endpoint:** `GET /media/thumbnails/{frame_id}.jpg`
-**Mô tả:** API này không cần code logic phức tạp. Dev 3 chỉ cần dùng tính năng `StaticFiles` của FastAPI (hoặc `send_from_directory` của Flask) để trỏ thẳng vào thư mục chứa ảnh frame trên ổ cứng.
+**Endpoint:** `GET /media/thumbnails/{frame_id_ext}` (Ví dụ: `L21_V022_f1024.jpg`)
+**Mô tả:** API phục vụ hình ảnh. Route Backend hiện tại đang bóc tách `frame_id_ext` bằng regex `r"(L\d+)_V(\d+)_f(\d+)\.jpg"` để trỏ đúng vào thư mục phẳng `../data/keyframes/{l_part}_V{v_part}/`.
 **Response:** Trả về file ảnh dạng `image/jpeg`. Frontend gọi thẳng URL này trong thẻ `<img>`.
