@@ -41,6 +41,7 @@ class SearchService:
             raise UpstreamError(f"Failed to fetch from visual pipeline: {e}")
 
         from backend.utils.thumbnail import build_thumbnail_url
+        from backend.utils.keyframe_mapper import get_true_frame_idx
         results = []
         for r in dev1_results:
             video_name = r.metadata.get("video_name", "unknown")
@@ -48,11 +49,15 @@ class SearchService:
             # Create a standard frame_id format: L21_V022_f087
             formatted_frame_id = f"{video_name}_f{frame_index:04d}" if video_name != "unknown" else r.frame_id
             
+            true_frame_idx = get_true_frame_idx(video_name, frame_index)
+            if true_frame_idx is None:
+                true_frame_idx = frame_index
+            
             results.append(
                 SearchHit(
                     frame_id=formatted_frame_id,
                     video_name=video_name,
-                    frame_index=frame_index,
+                    frame_index=true_frame_idx,
                     score=r.score if r.score is not None else 0.0,
                     thumbnail_url=build_thumbnail_url(formatted_frame_id, self.settings.thumbnail_base_url),
                     metadata=r.metadata
