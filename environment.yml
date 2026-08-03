@@ -8,7 +8,8 @@ dependencies:
   - pip
   - pip:
     # Lưu ý: Cài đặt PyTorch thủ công theo cấu hình máy
-    - transformers
+    - transformers==4.49.0
+    - numpy<2.0.0
     - sentence-transformers
     - qdrant-client
     - fastapi
@@ -21,3 +22,10 @@ dependencies:
     - pydantic-settings
     - pytest
     - pytest-asyncio
+    - rank_bm25
+    - nltk
+    - paddlepaddle
+    - paddleocr
+    - sentencepiece
+    - gdown
+    - vietocr

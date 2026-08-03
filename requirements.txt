@@ -1,5 +1,8 @@
 # Lưu ý: Cài đặt PyTorch thủ công theo cấu hình máy (xem hướng dẫn ở task.md)
-transformers
+
+# Florence-2 lỗi với transformers >= 4.50 (bug trust_remote_code). PHẢI pin < 4.50.
+transformers==4.49.0
+numpy<2.0.0
 sentence-transformers
 qdrant-client
 fastapi
@@ -13,3 +16,12 @@ python-multipart
 pydantic-settings
 pytest
 pytest-asyncio
+nltk                # PorterStemmer cho BM25 (Task 2). Không cần nltk.download().
+
+# --- OCR tiếng Việt (Dev 2, Task 1) ---
+paddlepaddle        # backend; bản CPU. GPU: cài paddlepaddle-gpu tương ứng.
+paddleocr           # detect vùng chữ (PP-OCRv6)
+sentencepiece       # tokenizer cho model dịch Helsinki-NLP (MarianMT)
+gdown               # VietOCR tải weights (bản >= 5, không cần pkg_resources)
+vietocr             # Nhận diện chữ tiếng Việt
+setuptools          # Fix lỗi thiếu pkg_resources của thư viện gdown cũ
