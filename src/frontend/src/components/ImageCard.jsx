@@ -7,7 +7,11 @@ function ImageCard({ result = {}, onDoubleClick, onClick }) {
   } = result;
 
   const videoLabel = videoName || 'Unknown video';
-  const frameDisplay = frameIndex !== undefined ? `Frame: ${frameIndex}` : 'Unknown frame';
+  const fPart = frameId?.includes('_f') ? frameId.split('_f')[1] : null;
+  const fDisplay = fPart ? `[f${fPart}]` : '';
+  const frameDisplay = frameIndex !== undefined 
+    ? `${fDisplay} Frame: ${frameIndex}`.trim() 
+    : 'Unknown frame';
 
   return (
     <figure

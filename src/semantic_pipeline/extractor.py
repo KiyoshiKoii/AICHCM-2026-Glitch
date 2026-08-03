@@ -34,13 +34,13 @@ def is_vietnamese(text: str) -> bool:
     return bool(VIETNAMESE_CHARS.search(text))
 
 
-def parse_frame_info(filename: str) -> dict:
-    # "vid01_f0001.png" -> video_name="vid01.mp4", frame_index=1, frame_id="vid01_f0001"
-    stem = Path(filename).stem
-    video_name, frame_part = stem.rsplit("_f", 1)
+def parse_frame_info(filepath: Path) -> dict:
+    # filepath: data/keyframes/L21_V001/017.jpg -> video_name="L21_V001", frame_index=17
+    video_name = filepath.parent.name
+    frame_part = filepath.stem
     return {
-        "frame_id": stem,
-        "video_name": f"{video_name}.mp4",
+        "frame_id": f"{video_name}_f{int(frame_part):04d}",
+        "video_name": video_name,
         "frame_index": int(frame_part),
     }
 
@@ -89,9 +89,9 @@ class SemanticExtractor:
             device=0 if self.device == "cuda" else -1,
         )
 
-    def _florence_task(self, image: Image.Image, task_prompt: str) -> str:
+    def _florence_task_batch(self, images: list[Image.Image], task_prompt: str) -> list[str]:
         inputs = self.processor(
-            text=task_prompt, images=image, return_tensors="pt"
+            text=[task_prompt] * len(images), images=images, return_tensors="pt"
         ).to(self.device, self.dtype)
         generated_ids = self.florence.generate(
             input_ids=inputs["input_ids"],
@@ -99,16 +99,20 @@ class SemanticExtractor:
             max_new_tokens=1024,
             num_beams=3,
         )
-        generated_text = self.processor.batch_decode(
+        generated_texts = self.processor.batch_decode(
             generated_ids, skip_special_tokens=False
-        )[0]
-        parsed = self.processor.post_process_generation(
-            generated_text, task=task_prompt, image_size=(image.width, image.height)
         )
-        return parsed[task_prompt]
+        
+        results = []
+        for gen_text, img in zip(generated_texts, images):
+            parsed = self.processor.post_process_generation(
+                gen_text, task=task_prompt, image_size=(img.width, img.height)
+            )
+            results.append(parsed[task_prompt])
+        return results
 
-    def caption(self, image: Image.Image) -> str:
-        return self._florence_task(image, "<DETAILED_CAPTION>")
+    def caption_batch(self, images: list[Image.Image]) -> list[str]:
+        return self._florence_task_batch(images, "<DETAILED_CAPTION>")
 
     def ocr_lines(self, image: Image.Image, image_path: Path) -> list[str]:
         """Đọc chữ bằng ENSEMBLE hai model, chọn theo thế mạnh của từng cái.
@@ -177,47 +181,85 @@ class SemanticExtractor:
                 out[i] = tr["translation_text"]
         return out
 
-    def process_image(self, image_path: Path) -> dict:
-        image = Image.open(image_path).convert("RGB")
-        caption = self.caption(image)
-        raw_lines = self.ocr_lines(image, image_path)
-        en_lines = self.translate_lines(raw_lines)
+    def process_batch(self, image_paths: list[Path]) -> list[dict]:
+        images = [Image.open(p).convert("RGB") for p in image_paths]
+        
+        # 1. Florence-2 Batching (Heavy GPU load)
+        captions = self.caption_batch(images)
+        
+        # 2. OCR and Translation (CPU/Light GPU) - Loop over batch
+        batch_results = []
+        for img, path, caption in zip(images, image_paths, captions):
+            raw_lines = self.ocr_lines(img, path)
+            en_lines = self.translate_lines(raw_lines)
+            
+            info = parse_frame_info(path)
+            info["caption"] = caption
+            info["ocr_text"] = " ".join(en_lines)
+            info["ocr_text_raw"] = " ".join(raw_lines)
+            batch_results.append(info)
+            
+        return batch_results
 
-        info = parse_frame_info(image_path.name)
-        info["caption"] = caption
-        info["ocr_text"] = " ".join(en_lines)  # tiếng Anh -> nạp BM25 (Task 2)
-        info["ocr_text_raw"] = " ".join(raw_lines)  # VietOCR gốc -> đối chiếu (Task 5)
-        return info
 
-
-def extract_metadata(input_dir: str, output_path: str, limit: int | None = None, single_image: str | None = None):
+def extract_metadata(input_dir: str, output_path: str, limit: int | None = None, single_image: str | None = None, batch_size: int = 4):
     extractor = SemanticExtractor()
+    out_file = Path(output_path)
+    
+    # --- Resume Logic ---
+    existing_map = {}
+    if out_file.exists():
+        try:
+            existing_records = json.loads(out_file.read_text(encoding="utf-8"))
+            for r in existing_records:
+                if r.get("frame_id"):
+                    existing_map[r["frame_id"]] = r
+            print(f"[resume] Loaded {len(existing_map)} existing records. Continuing...")
+        except Exception as e:
+            print(f"[resume] Could not load existing {output_path}: {e}")
 
     if single_image:
         image_paths = [Path(single_image)]
         print(f"[run] Processing single image: {single_image}")
     else:
-        image_paths = sorted(
-            p for p in Path(input_dir).iterdir() if p.suffix.lower() in IMAGE_EXTENSIONS
+        # Skip processed images
+        all_paths = sorted(
+            p for p in Path(input_dir).rglob("*") if p.suffix.lower() in IMAGE_EXTENSIONS
         )
+        image_paths = [p for p in all_paths if parse_frame_info(p)["frame_id"] not in existing_map]
+        
         if limit is not None:
             image_paths = image_paths[:limit]
-        print(f"[run] Found {len(image_paths)} images in {input_dir}")
+        print(f"[run] Found {len(image_paths)} NEW images to process in {input_dir}")
 
-    results = []
-    for i, img_path in enumerate(image_paths, start=1):
-        start = time.time()
+    if not image_paths:
+        print("[run] No new images to process. Exiting.")
+        return
+
+    from tqdm import tqdm
+    
+    # --- Batching Logic ---
+    for i in tqdm(range(0, len(image_paths), batch_size), desc="Processing Batches"):
+        batch_paths = image_paths[i : i + batch_size]
         try:
-            record = extractor.process_image(img_path)
-            results.append(record)
-            print(f"[{i}/{len(image_paths)}] {img_path.name} done in {time.time() - start:.1f}s")
-        except Exception as exc:  # 1 ảnh hỏng không làm chết cả batch
-            print(f"[{i}/{len(image_paths)}] {img_path.name} FAILED: {exc}")
+            batch_records = extractor.process_batch(batch_paths)
+            for r in batch_records:
+                fid = r["frame_id"]
+                if fid in existing_map:
+                    existing_map[fid].update(r)
+                else:
+                    existing_map[fid] = r
+            
+            # Save checkpoints every batch to avoid data loss (preserving existing fields like 'objects')
+            out_file.write_text(
+                json.dumps(list(existing_map.values()), ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+        except Exception as exc:
+            print(f"\n[error] Batch starting at {batch_paths[0].name} FAILED: {exc}")
+            import traceback
+            traceback.print_exc()
 
-    Path(output_path).write_text(
-        json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"[run] Saved {len(results)} records to {output_path}")
+    print(f"\n[run] Saved total {len(existing_map)} records to {output_path}")
 
 
 if __name__ == "__main__":
@@ -228,6 +270,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", default="src/semantic_pipeline/sample_frames/metadata.json")
     parser.add_argument("--limit", type=int, default=None, help="Chỉ xử lý N ảnh đầu (test nhanh)")
     parser.add_argument("--image", type=str, default=None, help="Đường dẫn đến 1 tấm ảnh cụ thể cần test")
+    parser.add_argument("--batch-size", type=int, default=4, help="Số lượng ảnh xử lý cùng lúc trên GPU")
     args = parser.parse_args()
 
-    extract_metadata(args.input_dir, args.output, args.limit, args.image)
+    extract_metadata(args.input_dir, args.output, args.limit, args.image, args.batch_size)

@@ -78,8 +78,10 @@ async def search_visual(req: SearchRequest):
             except ValueError:
                 pass
                 
+            formatted_frame_id = f"{video_name}_f{frame_index:04d}" if video_name != "unknown" else frame_name
+
             results.append({
-                "frame_id": frame_name,
+                "frame_id": formatted_frame_id,
                 "score": float(normalized_score),
                 "video_name": video_name,
                 "frame_index": frame_index

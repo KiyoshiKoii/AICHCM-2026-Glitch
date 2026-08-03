@@ -1,6 +1,10 @@
+import os
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
+# Fix for httpx/ssl crashing when SSL_CERT_FILE points to a non-existent file
+if "SSL_CERT_FILE" in os.environ and not os.path.exists(os.environ["SSL_CERT_FILE"]):
+    del os.environ["SSL_CERT_FILE"]
 import httpx
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -75,6 +79,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     @app.get("/media/thumbnails/{frame_id_ext}")
     async def get_thumbnail(frame_id_ext: str):
+        if frame_id_ext.lower().endswith(".jpg.jpg"):
+            frame_id_ext = frame_id_ext[:-4]
+            
         match = re.match(r"(L\d+)_V(\d+)_f(\d+)\.jpg", frame_id_ext)
         if not match:
             raise HTTPException(status_code=404, detail="Invalid frame ID format")

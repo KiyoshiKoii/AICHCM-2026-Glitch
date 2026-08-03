@@ -11,8 +11,8 @@ from nltk.stem import PorterStemmer
 from rank_bm25 import BM25Okapi
 
 # Tính từ vị trí file này, KHÔNG phụ thuộc thư mục đang chạy lệnh.
-# (Trước đây dùng đường dẫn tương đối nên chỉ chạy được khi đứng ở gốc repo.)
-DEFAULT_METADATA_PATH = Path(__file__).parent / "sample_frames" / "metadata.json"
+# Trỏ ra thư mục data ở ngoài cùng
+DEFAULT_METADATA_PATH = Path(__file__).parent.parent.parent / "data" / "metadata.json"
 
 _stemmer = PorterStemmer()
 
@@ -61,13 +61,13 @@ def tokenize(text: str) -> list[str]:
     """
     return [
         _normalize(word)
-        for word in re.findall(r"[a-z0-9]+", text.lower())
+        for word in re.findall(r"\w+", text.lower())
         if word not in STOPWORDS
     ]
 
 
 class TextDatabase:
-    """BM25 full-text search trên caption + ocr_text của từng frame."""
+    """BM25 full-text search trên caption + ocr_text + ocr_text_raw + objects."""
 
     def __init__(self, metadata_path: str | Path = DEFAULT_METADATA_PATH):
         path = Path(metadata_path)
@@ -80,11 +80,9 @@ class TextDatabase:
         if not self.records:
             raise ValueError(f"{path} rỗng — chạy extractor.py trước.")
 
-        # corpus[i] tương ứng records[i] -> đây là cách map ngược ra frame_id.
-        # Chỉ lấy caption + ocr_text (đều tiếng Anh); KHÔNG lấy ocr_text_raw (tiếng Việt)
-        # vì keywords Dev 3 gửi sang là tiếng Anh.
+        # Nạp tất cả: caption, ocr_text (tiếng Anh), ocr_text_raw (tiếng Việt), objects
         corpus = [
-            tokenize(f"{r.get('caption', '')} {r.get('ocr_text', '')}")
+            tokenize(f"{r.get('caption', '')} {r.get('ocr_text', '')} {r.get('ocr_text_raw', '')} {r.get('objects', '')}")
             for r in self.records
         ]
         self.bm25 = BM25Okapi(corpus)

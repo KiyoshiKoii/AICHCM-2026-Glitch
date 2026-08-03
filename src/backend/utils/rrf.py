@@ -46,8 +46,12 @@ def reciprocal_rank_fusion(
                 )
                 first_seen_counter += 1
 
+            # Give a slight weight boost to semantic pipeline (dev2) to break ties
+            # where an image matches perfectly in text but not in visual.
+            weight = 1.05 if source == "dev2" else 1.0
+
             item = accumulators[result.frame_id]
-            item.rrf_score += 1.0 / (k + rank)
+            item.rrf_score += (1.0 / (k + rank)) * weight
             item.source_ranks[source] = rank
             item.source_scores[source] = result.score
             for key, value in result.metadata.items():

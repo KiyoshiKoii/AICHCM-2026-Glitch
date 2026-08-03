@@ -27,49 +27,59 @@ class SearchService:
         self.dev2 = dev2
 
     async def search_text(self, query: str, top_k: int) -> TextSearchResponse:
-        # Fallback to raw query if parser is not available or LLM is offline
         try:
             parsed = await self.parser.parse(query)
             visual_prompt = parsed.visual_prompt
+            semantic_keywords = parsed.semantic_keywords + [query]
         except Exception:
             visual_prompt = query
+            semantic_keywords = [query]
 
         try:
-            dev1_response = await self.dev1.search_text({"visual_prompt": visual_prompt, "top_k": top_k})
-            dev1_results = normalize_upstream_results(dev1_response, source="dev1")
-        except Exception as e:
-            raise UpstreamError(f"Failed to fetch from visual pipeline: {e}")
-
-        from backend.utils.thumbnail import build_thumbnail_url
-        from backend.utils.keyframe_mapper import get_true_frame_idx
-        results = []
-        for r in dev1_results:
-            video_name = r.metadata.get("video_name", "unknown")
-            frame_index = r.metadata.get("frame_index", 0)
-            # Create a standard frame_id format: L21_V022_f087
-            formatted_frame_id = f"{video_name}_f{frame_index:04d}" if video_name != "unknown" else r.frame_id
+            dev1_task = self.dev1.search_text({"visual_prompt": visual_prompt, "top_k": top_k * 2})
+            dev2_task = self.dev2.search_text({"keywords": semantic_keywords, "top_k": top_k * 2})
             
-            true_frame_idx = get_true_frame_idx(video_name, frame_index)
-            if true_frame_idx is None:
-                true_frame_idx = frame_index
+            dev1_res, dev2_res = await asyncio.gather(dev1_task, dev2_task, return_exceptions=True)
             
-            results.append(
-                SearchHit(
-                    frame_id=formatted_frame_id,
-                    video_name=video_name,
-                    frame_index=true_frame_idx,
-                    score=r.score if r.score is not None else 0.0,
-                    thumbnail_url=build_thumbnail_url(formatted_frame_id, self.settings.thumbnail_base_url),
-                    metadata=r.metadata
-                )
+            rankings = {}
+            if not isinstance(dev1_res, Exception):
+                rankings["dev1"] = normalize_upstream_results(dev1_res, source="dev1")
+            
+            if not isinstance(dev2_res, Exception):
+                rankings["dev2"] = normalize_upstream_results(dev2_res, source="dev2")
+                
+            merged_hits = reciprocal_rank_fusion(
+                rankings,
+                limit=top_k,
+                thumbnail_base_url=self.settings.thumbnail_base_url,
             )
+        except Exception as e:
+            raise UpstreamError(f"Failed to fetch from upstream pipelines: {e}")
+
+        from backend.utils.keyframe_mapper import get_true_frame_idx
+        
+        for hit in merged_hits:
+            if "_f" in hit.frame_id:
+                video_name, frame_part = hit.frame_id.rsplit("_f", 1)
+                try:
+                    frame_index = int(frame_part)
+                except ValueError:
+                    frame_index = 0
+            else:
+                video_name = "unknown"
+                frame_index = 0
+                
+            true_frame_idx = get_true_frame_idx(video_name, frame_index)
+            
+            hit.video_name = video_name
+            hit.frame_index = true_frame_idx if true_frame_idx is not None else frame_index
             
         return TextSearchResponse(
             status="success",
-            message="Retrieved successfully from Visual Pipeline",
+            message="Retrieved successfully from Visual & Semantic Pipelines",
             data=SearchData(
-                total_results=len(results),
-                results=results,
+                total_results=len(merged_hits),
+                results=merged_hits,
             )
         )
 
