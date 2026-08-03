@@ -1,7 +1,7 @@
 # Cấu trúc Thư mục Dữ liệu (Data Structure)
 
 Thư mục `data/` là nơi chứa toàn bộ dữ liệu thô (ảnh) và các metadata (JSON) được sinh ra từ các luồng trích xuất của hệ thống (Pipeline).
-**Lưu ý:** Thư mục `data/keyframes/` (chứa hình ảnh dung lượng lớn) đã được chặn trong `.gitignore`, các file metadata khác vẫn được phép push lên Git.
+**Lưu ý:** Thư mục `data/keyframes/` (ảnh thô) và `data/objects/` (JSON vật thể rác/lẻ) đã được chặn trong `.gitignore`, các file metadata chính khác vẫn được phép push lên Git.
 
 ## Cấu trúc chi tiết
 

@@ -25,9 +25,11 @@ Hệ thống kiến trúc Microservices bao gồm 4 luồng server chạy song s
    npm install
    ```
 
-3. **Tải Dữ liệu Hình ảnh (Keyframes):** 
-   - Vì thư mục `data/keyframes/` (chứa hàng nghìn ảnh thô) bị loại trừ bởi `.gitignore` để tránh nặng repo, thành viên mới khi clone dự án về cần truy cập vào bảng Google Sheet chứa link tải dữ liệu của team: [Google Sheet Link Dữ Liệu Keyframes](https://docs.google.com/spreadsheets/d/1rfn1fieTThS_Ki3SIoJ6uXOx2AhMq7wGCak6W4jZyZM/edit?gid=0#gid=0).
-   - Tiến hành tải lần lượt các file có tên bắt đầu bằng chữ `keyframes` (ví dụ: keyframes_L21.zip, keyframes_L22.zip...), giải nén toàn bộ và đặt vào đúng đường dẫn: `data/keyframes/`.
+3. **Tải Dữ liệu Hình ảnh (Keyframes) & Objects:** 
+   - Vì hai thư mục `data/keyframes/` (ảnh thô) và `data/objects/` (hàng vạn file JSON vật thể) bị loại trừ bởi `.gitignore` để tránh nặng repo, thành viên mới khi clone dự án về cần truy cập vào bảng Google Sheet chứa link tải dữ liệu của team: [Google Sheet Link Dữ Liệu Keyframes & Objects](https://docs.google.com/spreadsheets/d/1rfn1fieTThS_Ki3SIoJ6uXOx2AhMq7wGCak6W4jZyZM/edit?gid=0#gid=0).
+   - Tiến hành tải các file/thư mục tương ứng:
+     - Tải lần lượt các file có tên bắt đầu bằng chữ `keyframes` (ví dụ: `keyframes_L21.zip`, `keyframes_L22.zip`...), giải nén toàn bộ và đặt vào đúng đường dẫn: `data/keyframes/`.
+     - Tải bộ dữ liệu `objects`, giải nén và đặt vào đúng đường dẫn: `data/objects/`.
 
 ---
 
