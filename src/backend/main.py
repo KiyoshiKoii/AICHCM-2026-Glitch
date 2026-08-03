@@ -68,12 +68,31 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     app.include_router(api_router, prefix="/api/v1")
     
-    # Mount static files if needed for relative thumbnails
-    # In a real app this directory must exist, but we mount it safely
     import os
-    media_dir = "media/thumbnails"
-    os.makedirs(media_dir, exist_ok=True)
-    app.mount("/media/thumbnails", StaticFiles(directory=media_dir), name="thumbnails")
+    import re
+    from fastapi.responses import FileResponse
+    from fastapi import HTTPException
+
+    @app.get("/media/thumbnails/{frame_id_ext}")
+    async def get_thumbnail(frame_id_ext: str):
+        match = re.match(r"(L\d+)_V(\d+)_f(\d+)\.jpg", frame_id_ext)
+        if not match:
+            raise HTTPException(status_code=404, detail="Invalid frame ID format")
+        
+        l_part, v_part, f_part = match.groups()
+        f_int = int(f_part)
+        filename = f"{f_int:03d}.jpg"
+        
+        path = os.path.join(
+            "..", 
+            "data", 
+            "keyframes", 
+            f"{l_part}_V{v_part}", 
+            filename
+        )
+        if not os.path.exists(path):
+            raise HTTPException(status_code=404, detail="Image not found")
+        return FileResponse(path)
 
     @app.exception_handler(ServiceError)
     async def handle_service_error(_: Request, exc: ServiceError) -> JSONResponse:

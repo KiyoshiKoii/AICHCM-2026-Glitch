@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Nếu muốn trỏ ra ngoài, thay bằng đường dẫn tuyệt đối, ví dụ:
 #   DATA_DIR = r"D:\MyDataset\aic2026"
 # ──────────────────────────────────────────────────────────────────────────────
-DATA_DIR = os.path.join(BASE_DIR, "data")
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(BASE_DIR)), "data")
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Các đường dẫn con — không cần sửa nếu bạn giữ nguyên cấu trúc bên trên
