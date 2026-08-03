@@ -26,8 +26,8 @@ Hệ thống kiến trúc Microservices bao gồm 4 luồng server chạy song s
    ```
 
 3. **Tải Dữ liệu Hình ảnh (Keyframes):** 
-   - Vì thư mục `data/keyframes/` (chứa hàng nghìn ảnh thô) bị loại trừ bởi `.gitignore` để tránh nặng repo, thành viên mới khi clone dự án về cần lên **Google Drive chung của team**.
-   - Tìm thư mục chứa bộ `keyframes`, tải về và giải nén đặt vào đúng đường dẫn: `data/keyframes/`.
+   - Vì thư mục `data/keyframes/` (chứa hàng nghìn ảnh thô) bị loại trừ bởi `.gitignore` để tránh nặng repo, thành viên mới khi clone dự án về cần truy cập vào bảng Google Sheet chứa link tải dữ liệu của team: [Google Sheet Link Dữ Liệu Keyframes](https://docs.google.com/spreadsheets/d/1rfn1fieTThS_Ki3SIoJ6uXOx2AhMq7wGCak6W4jZyZM/edit?gid=0#gid=0).
+   - Tiến hành tải lần lượt các file có tên bắt đầu bằng chữ `keyframes` (ví dụ: keyframes_L21.zip, keyframes_L22.zip...), giải nén toàn bộ và đặt vào đúng đường dẫn: `data/keyframes/`.
 
 ---
 

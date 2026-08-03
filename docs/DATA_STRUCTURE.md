@@ -17,6 +17,7 @@ data/
 ├── map-keyframes/              # Chứa các file CSV map giữa frame_id và timestamp thực tế của video (từ BTC).
 ├── media-info/                 # Chứa thông tin YouTube gốc của video (Tiêu đề, Kênh, Description, Keywords, URL...).
 ├── npy_features/               # Chứa các file Vector Embeddings (.npy) do mô hình CLIP trích xuất ra (để nạp vào Qdrant).
+├── objects/                    # Chứa file JSON liệt kê tất cả vật thể (object) phát hiện được từ mô hình Faster R-CNN pretrained trên OpenImages V4.
 ├── metadata/                   # Thư mục gom chung các file metadata sinh ra từ hệ thống
 │   ├── metadata.json           # Output Bước 1: Chứa Detailed Caption và raw OCR text (từ Florence-2 và PaddleOCR).
 │   ├── metadata_entities.json  # Output Bước 2: Chứa danh sách đối tượng (Objects) được Llama-3 chắt lọc từ metadata.json.
