@@ -3,11 +3,11 @@ function ImageCard({ result = {}, onDoubleClick }) {
     frame_id: frameId,
     thumbnail_url: thumbnailUrl,
     video_name: videoName,
-    metadata,
+    frame_index: frameIndex,
   } = result;
 
   const videoLabel = videoName || 'Unknown video';
-  const timestamp = metadata?.timestamp ?? 'Unknown time';
+  const frameDisplay = frameIndex !== undefined ? `Frame: ${frameIndex}` : 'Unknown frame';
 
   return (
     <figure
@@ -17,7 +17,7 @@ function ImageCard({ result = {}, onDoubleClick }) {
       <img src={thumbnailUrl} alt={frameId ?? 'unknown frame'} loading="lazy" />
       <figcaption>
         <span className="video-name">{videoLabel}</span>
-        <span className="timestamp">{timestamp}</span>
+        <span className="timestamp">{frameDisplay}</span>
       </figcaption>
     </figure>
   );
