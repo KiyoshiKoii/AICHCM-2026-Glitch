@@ -96,20 +96,50 @@ Tài liệu này đặc tả luồng giao tiếp dữ liệu giữa Frontend (De
 ```json
 {
   "visual_prompt": "A person dropping a pink teddy bear keychain",
+  "prompt_variants": [
+    "A pink teddy bear keychain falling from a person's hand"
+  ],
+  "candidate_k": 50,
+  "temporal_window": 5,
   "top_k": 200
 }
 ```
+
+- `prompt_variants` là tùy chọn. Server normalize từng text embedding, lấy vector
+  trung bình, normalize lần nữa rồi query Qdrant một lần.
+- `candidate_k`: số candidate lấy trước temporal dedup; mặc định `50`.
+- `temporal_window`: trong cùng video, chỉ giữ frame tốt nhất trong cửa sổ
+  `±temporal_window`; mặc định `5`.
+- Bỏ qua `prompt_variants` hoặc truyền `[]` để dùng embedding của prompt gốc.
+- Sau temporal dedup, số kết quả có thể nhỏ hơn `top_k` nếu candidate pool chứa
+  nhiều frame liền kề của cùng một đoạn.
 
 **Response (200 OK):**
 ```json
 {
   "status": "success",
   "data": [
-    {"frame_id": "L21_V022_f1024", "score": 0.88, "video_name": "L21_V022", "frame_index": 1024},
-    {"frame_id": "L22_V012_f0055", "score": 0.81, "video_name": "L22_V012", "frame_index": 55}
+    {
+      "frame_id": "L21_V022_f1024",
+      "score": 0.27472,
+      "normalized_score": 0.63736,
+      "video_name": "L21_V022",
+      "frame_index": 1024
+    },
+    {
+      "frame_id": "L22_V012_f0055",
+      "score": 0.27121,
+      "normalized_score": 0.63561,
+      "video_name": "L22_V012",
+      "frame_index": 55
+    }
   ]
 }
 ```
+
+- `score`: cosine similarity gốc trong `[-1, 1]`, dùng để xếp hạng giảm dần.
+- `normalized_score`: `(score + 1) / 2` trong `[0, 1]`, chỉ dùng để hiển thị;
+  không phải xác suất hay confidence.
 
 ### 5. Truy vấn Ngữ nghĩa (Gọi Dev 2 - Semantic Pipeline)
 **Endpoint:** `POST http://localhost:8002/internal/search/text`
