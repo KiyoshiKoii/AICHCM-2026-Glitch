@@ -83,8 +83,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         f_int = int(f_part)
         filename = f"{f_int:03d}.jpg"
         
+        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         path = os.path.join(
-            "..", 
+            base_dir, 
             "data", 
             "keyframes", 
             f"{l_part}_V{v_part}", 
