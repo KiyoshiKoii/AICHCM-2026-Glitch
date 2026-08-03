@@ -15,7 +15,7 @@ function SearchBar({ onSearch, onImageSearch }) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     // Video KIS (image) takes priority over Textual KIS when both are set,
     // matching the "Luồng 2" flow which bypasses the LLM/text pipeline entirely.
     if (imageFile) {
@@ -25,6 +25,13 @@ function SearchBar({ onSearch, onImageSearch }) {
     const trimmed = query.trim();
     if (!trimmed) return;
     onSearch?.(trimmed);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); // Prevent default new line
+      handleSubmit(e);
+    }
   };
 
   return (
@@ -49,6 +56,7 @@ function SearchBar({ onSearch, onImageSearch }) {
         rows={4}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={handleKeyDown}
         placeholder="Mô tả cảnh cần tìm (VD: người đàn ông làm rơi ví)"
       />
 

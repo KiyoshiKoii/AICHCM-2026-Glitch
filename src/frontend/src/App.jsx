@@ -18,6 +18,7 @@ function App() {
   const [isContextLoading, setIsContextLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [lastQuery, setLastQuery] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const runSearch = async (input) => {
     setIsLoading(true);
@@ -87,7 +88,11 @@ function App() {
             <LoadingSpinner label="Đang tìm kiếm..." />
           ) : (
             <>
-              <ResultGrid results={pageResults} onCardDoubleClick={handleCardDoubleClick} />
+              <ResultGrid 
+                results={pageResults} 
+                onCardDoubleClick={handleCardDoubleClick} 
+                onCardClick={(url) => setSelectedImage(url)} 
+              />
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
@@ -99,6 +104,15 @@ function App() {
             <LoadingSpinner label="Đang tải ngữ cảnh..." />
           ) : (
             <TimelineViewer frameContext={frameContext} />
+          )}
+
+          {selectedImage && (
+            <div className="image-modal-overlay" onClick={() => setSelectedImage(null)}>
+              <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+                <button className="image-modal-close" onClick={() => setSelectedImage(null)}>&times;</button>
+                <img src={selectedImage} alt="Enlarged view" className="image-modal-img" />
+              </div>
+            </div>
           )}
         </main>
       </div>

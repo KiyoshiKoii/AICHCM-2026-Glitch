@@ -1,4 +1,4 @@
-function ImageCard({ result = {}, onDoubleClick }) {
+function ImageCard({ result = {}, onDoubleClick, onClick }) {
   const {
     frame_id: frameId,
     thumbnail_url: thumbnailUrl,
@@ -12,6 +12,7 @@ function ImageCard({ result = {}, onDoubleClick }) {
   return (
     <figure
       className="image-card"
+      onClick={onClick}
       onDoubleClick={() => onDoubleClick?.(frameId)}
     >
       <img src={thumbnailUrl} alt={frameId ?? 'unknown frame'} loading="lazy" />
