@@ -79,6 +79,46 @@ class TestEdgeCases:
         r = client.post(ENDPOINT, json={"keywords": ["booking"], "top_k": 1000})
         assert r.status_code == 200
 
+    def test_filters_require_elasticsearch_backend(self, client):
+        r = client.post(
+            ENDPOINT,
+            json={"keywords": ["image"], "filters": {"objects": ["pot"]}},
+        )
+        assert r.status_code == 400
+        assert "SEMANTIC_SEARCH_BACKEND=elasticsearch" in r.json()["detail"]
+
+    def test_invalid_filter_is_rejected(self, client):
+        r = client.post(
+            ENDPOINT,
+            json={"keywords": ["image"], "filters": {"setting": "somewhere"}},
+        )
+        assert r.status_code == 422
+
+    def test_invalid_code_language_is_rejected(self, client):
+        r = client.post(
+            ENDPOINT,
+            json={
+                "keywords": ["query"],
+                "filters": {"code_language": "python"},
+            },
+        )
+        assert r.status_code == 422
+
+    def test_empty_or_blank_code_patterns_are_rejected(self, client):
+        empty = client.post(
+            ENDPOINT,
+            json={"keywords": ["query"], "filters": {"code_patterns": []}},
+        )
+        blank = client.post(
+            ENDPOINT,
+            json={
+                "keywords": ["query"],
+                "filters": {"code_patterns": ["   "]},
+            },
+        )
+        assert empty.status_code == 422
+        assert blank.status_code == 422
+
 
 class TestInfrastructure:
     def test_health_endpoint(self, client):
@@ -93,3 +133,52 @@ class TestInfrastructure:
         """Dev 3 phải xem được hình dạng response trên Swagger."""
         schema = client.get("/openapi.json").json()
         assert "SearchResponse" in schema["components"]["schemas"]
+
+
+def test_api_forwards_valid_filters_to_capable_backend(monkeypatch):
+    import server
+
+    class FilterBackend:
+        supports_filters = True
+
+        def __init__(self):
+            self.call = None
+
+        def search(self, keywords, top_k, filters=None):
+            self.call = (keywords, top_k, filters)
+            return []
+
+    backend = FilterBackend()
+    monkeypatch.setattr(server, "db", backend)
+    request = server.SearchRequest.model_validate(
+        {
+            "keywords": ["image"],
+            "top_k": 5,
+            "filters": {
+                "setting": "outdoor",
+                "colors": ["blue"],
+                "code_language": "sql",
+                "code_patterns": [" group by ", "not exists"],
+                "spatial_relations": [
+                    {"subject": "person", "predicate": "left_of", "object": "car"}
+                ],
+            },
+        }
+    )
+
+    response = server.search_text(request)
+
+    assert response.data == []
+    assert backend.call == (
+        ["image"],
+        5,
+        {
+            "setting": "outdoor",
+            "colors": ["blue"],
+            "code_language": "sql",
+            "code_patterns": ["group by", "not exists"],
+            "spatial_relations": [
+                {"subject": "person", "predicate": "left_of", "object": "car"}
+            ],
+        },
+    )

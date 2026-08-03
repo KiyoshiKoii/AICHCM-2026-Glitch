@@ -1,11 +1,13 @@
 # Task 3: API Server (FastAPI) - Port 8002
 # Viết endpoint POST /internal/search/text
 
+import os
 import socket
 from contextlib import asynccontextmanager
+from typing import Annotated, Literal
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints
 
 try:
     # Chạy trực tiếp: python src/semantic_pipeline/server.py
@@ -13,6 +15,37 @@ try:
 except ImportError:
     # Import như package (pytest ở Task 5, hoặc uvicorn src.semantic_pipeline.server:app)
     from .database import TextDatabase
+
+
+FilterValue = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
+
+
+class SearchFilters(BaseModel):
+    """Optional exact metadata filters, available with Elasticsearch backend."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    time_of_day: Literal["unknown", "morning", "afternoon", "evening", "night"] | None = None
+    setting: Literal["unknown", "indoor", "outdoor"] | None = None
+    locations: list[FilterValue] | None = Field(default=None, min_length=1)
+    objects: list[FilterValue] | None = Field(default=None, min_length=1)
+    actions: list[FilterValue] | None = Field(default=None, min_length=1)
+    colors: list[FilterValue] | None = Field(default=None, min_length=1)
+    code_language: Literal["unknown", "sql"] | None = None
+    code_patterns: list[FilterValue] | None = Field(default=None, min_length=1)
+    spatial_relations: list["SpatialRelationFilter"] | None = Field(
+        default=None, min_length=1
+    )
+
+
+class SpatialRelationFilter(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    subject: FilterValue
+    predicate: Literal[
+        "left_of", "right_of", "above", "below", "overlapping"
+    ]
+    object: FilterValue
 
 
 class SearchRequest(BaseModel):
@@ -29,6 +62,7 @@ class SearchRequest(BaseModel):
     # Mặc định 200 theo contract. Chặn trên 1000 để Dev 3 không vô tình gửi
     # top_k=999999 làm server phải sort/serialize cả corpus.
     top_k: int = Field(default=200, ge=1, le=1000)
+    filters: SearchFilters | None = None
 
 
 class FrameResult(BaseModel):
@@ -48,7 +82,34 @@ class SearchResponse(BaseModel):
 
 
 # Giữ index BM25 trên RAM, dùng lại cho mọi request.
-db: TextDatabase | None = None
+db = None
+
+
+def _create_search_backend():
+    """Select BM25 by default; Elasticsearch is an opt-in Task 4 upgrade."""
+    backend_name = os.getenv("SEMANTIC_SEARCH_BACKEND", "bm25").lower()
+    if backend_name == "bm25":
+        return TextDatabase()
+    if backend_name == "elasticsearch":
+        try:
+            from elasticsearch_backend import ElasticsearchBackend
+        except ImportError:
+            from .elasticsearch_backend import ElasticsearchBackend
+        backend = ElasticsearchBackend()
+        if not backend.ping():
+            raise RuntimeError("Elasticsearch backend is configured but not reachable")
+        return backend
+    raise ValueError(
+        "SEMANTIC_SEARCH_BACKEND must be either 'bm25' or 'elasticsearch'"
+    )
+
+
+def _document_count() -> int:
+    if db is None:
+        return 0
+    if hasattr(db, "document_count"):
+        return db.document_count()
+    return len(db.records)
 
 
 @asynccontextmanager
@@ -59,8 +120,10 @@ async def lifespan(app: FastAPI):
     API, server sẽ đọc lại metadata.json và dựng lại toàn bộ index -> rất chậm.
     """
     global db
-    db = TextDatabase()
-    print(f"[startup] BM25 sẵn sàng: {len(db.records)} documents")
+    db = _create_search_backend()
+    print(
+        f"[startup] {type(db).__name__} sẵn sàng: {_document_count()} documents"
+    )
 
     yield  # server phục vụ request ở đây
 
@@ -70,7 +133,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Semantic Pipeline API (Dev 2)",
-    description="BM25 full-text search trên caption + OCR của các frame.",
+    description="Semantic search trên caption, OCR, entity/spatial và code metadata.",
     version="1.0.0",
     lifespan=lifespan,
 )
@@ -81,7 +144,11 @@ def health() -> dict:
     """Dev 3 kiểm tra service sống chưa, index đã nạp bao nhiêu document."""
     if db is None:
         raise HTTPException(status_code=503, detail="BM25 index chưa sẵn sàng")
-    return {"status": "ok", "documents": len(db.records)}
+    return {
+        "status": "ok",
+        "backend": type(db).__name__,
+        "documents": _document_count(),
+    }
 
 
 # Dùng `def` chứ KHÔNG phải `async def`: FastAPI chạy hàm def thường trong
@@ -97,7 +164,23 @@ def search_text(request: SearchRequest) -> SearchResponse:
     if db is None:  # lifespan chưa chạy xong
         raise HTTPException(status_code=503, detail="BM25 index chưa sẵn sàng")
 
-    results = db.search(request.keywords, request.top_k)
+    filters = (
+        request.filters.model_dump(exclude_none=True)
+        if request.filters is not None
+        else {}
+    )
+    if filters and not getattr(db, "supports_filters", False):
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Metadata filters require SEMANTIC_SEARCH_BACKEND=elasticsearch"
+            ),
+        )
+
+    if filters:
+        results = db.search(request.keywords, request.top_k, filters=filters)
+    else:
+        results = db.search(request.keywords, request.top_k)
     return SearchResponse(status="success", data=results)
 
 

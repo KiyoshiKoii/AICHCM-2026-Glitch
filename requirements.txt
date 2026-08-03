@@ -17,6 +17,10 @@ pydantic-settings
 pytest
 pytest-asyncio
 nltk                # PorterStemmer cho BM25 (Task 2). Không cần nltk.download().
+elasticsearch==9.4.1  # Official client cho Elasticsearch 9.4.x (Task 4).
+httpx                # Gọi Ollama structured-output API cho Entity Extraction.
+httpx2>=2.7,<3       # TestClient backend mới của Starlette; bỏ deprecation warning.
+pytest>=9,<10        # Unit/integration/acceptance tests (Task 5).
 
 # --- OCR tiếng Việt (Dev 2, Task 1) ---
 paddlepaddle        # backend; bản CPU. GPU: cài paddlepaddle-gpu tương ứng.

@@ -1,0 +1,155 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "normalizer": {
+        "lowercase_keyword": {
+          "type": "custom",
+          "filter": ["lowercase", "asciifolding"]
+        }
+      },
+      "filter": {
+        "english_stop": {
+          "type": "stop",
+          "stopwords": "_english_"
+        },
+        "english_possessive_stemmer": {
+          "type": "stemmer",
+          "language": "possessive_english"
+        },
+        "english_stemmer": {
+          "type": "stemmer",
+          "language": "english"
+        }
+      },
+      "analyzer": {
+        "kis_english": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "english_possessive_stemmer",
+            "lowercase",
+            "english_stop",
+            "english_stemmer"
+          ]
+        },
+        "kis_ocr": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "schema_version": {"type": "keyword"},
+      "frame_id": {"type": "keyword"},
+      "video_name": {"type": "keyword"},
+      "frame_index": {"type": "integer"},
+      "timestamp_ms": {"type": "long"},
+      "caption": {
+        "type": "text",
+        "analyzer": "kis_english"
+      },
+      "ocr_text": {
+        "type": "text",
+        "analyzer": "kis_ocr",
+        "fields": {
+          "stemmed": {
+            "type": "text",
+            "analyzer": "kis_english"
+          }
+        }
+      },
+      "ocr_text_raw": {
+        "type": "text",
+        "index": false
+      },
+      "code": {
+        "type": "object",
+        "dynamic": "strict",
+        "properties": {
+          "language": {
+            "type": "keyword",
+            "normalizer": "lowercase_keyword"
+          },
+          "statement_type": {
+            "type": "keyword",
+            "normalizer": "lowercase_keyword"
+          },
+          "patterns": {
+            "type": "text",
+            "analyzer": "kis_ocr",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "normalizer": "lowercase_keyword"
+              }
+            }
+          },
+          "search_terms": {
+            "type": "text",
+            "analyzer": "kis_ocr"
+          },
+          "evidence": {
+            "type": "text",
+            "index": false
+          },
+          "classifier_version": {"type": "keyword"}
+        }
+      },
+      "entities": {
+        "properties": {
+          "time_of_day": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "setting": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "locations": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "objects": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "actions": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "colors": {"type": "keyword", "normalizer": "lowercase_keyword"}
+        }
+      },
+      "detections": {
+        "type": "nested",
+        "properties": {
+          "object_id": {"type": "keyword"},
+          "label": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "raw_label": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "label_source": {"type": "keyword"},
+          "label_evidence": {"type": "keyword", "index": false},
+          "bbox": {"type": "float", "index": false},
+          "confidence": {"type": "half_float"}
+        }
+      },
+      "spatial_relations": {
+        "type": "nested",
+        "properties": {
+          "subject_id": {"type": "keyword"},
+          "subject_label": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "predicate": {"type": "keyword"},
+          "object_id": {"type": "keyword"},
+          "object_label": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "confidence": {"type": "half_float"}
+        }
+      },
+      "processing": {
+        "properties": {
+          "caption_model": {"type": "keyword"},
+          "ocr_models": {"type": "keyword"},
+          "entity_model": {"type": "keyword"},
+          "prompt_version": {"type": "keyword"},
+          "processed_at": {"type": "date"},
+          "detection_model": {"type": "keyword"},
+          "label_grounding_version": {"type": "keyword"},
+          "spatial_rule_version": {"type": "keyword"},
+          "spatial_processed_at": {"type": "date"},
+          "spatial_index_policy": {"type": "keyword"},
+          "spatial_relations_raw_count": {"type": "integer"},
+          "spatial_relations_indexed_count": {"type": "integer"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "version": "1.0",
+  "annotation_method": "Independent manual inspection of all 24 repository sample images; 12 stratified frames were annotated directly from pixels before comparing them with metadata_entities.json.",
+  "annotation_policy": {
+    "selection": "Four document/diagram frames, four screenshot/code frames, two illustrated worksheets, one physical notebook photo, and one natural scene.",
+    "source_of_truth": "Only visible pixels. Captions, OCR, model predictions, and Elasticsearch documents are not annotation sources.",
+    "objects": "Use concise, search-worthy visible objects. Prefer a specific concept over redundant generic containers; do not label generic text, font, border, background, data, numbers, or items.",
+    "actions": "Only visually observable dynamic interactions; static layout words such as shows, contains, arranged, displayed, and surrounded are negatives.",
+    "colors": "Annotate semantically descriptive object/scene colors, not default document ink, page backgrounds, or UI theme colors.",
+    "unknown_and_negative": "Scalar 'unknown' is an explicit scorable class. null would mean intentionally unscored ambiguity. [] is a known negative and predictions in that field count as false positives.",
+    "aliases": "Aliases are accepted only for lexical synonyms of the same visual concept. Matching is one-to-one, so redundant broad and specific predictions cannot both claim one truth entity."
+  },
+  "frames": [
+    {
+      "frame_id": "vid01_f0002",
+      "image_file": "sample_frames/vid01_f0002.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          {"value": "worksheet", "aliases": ["work sheet"]},
+          {"value": "triangle", "aliases": ["triangle abc"]},
+          {"value": "line", "aliases": ["lines", "horizontal line"]}
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid01_f0006",
+      "image_file": "sample_frames/vid01_f0006.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "screenshot",
+          {"value": "website", "aliases": ["web page", "webpage"]},
+          {"value": "news article", "aliases": ["article"]}
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid01_f0007",
+      "image_file": "sample_frames/vid01_f0007.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "worksheet",
+          {"value": "domino", "aliases": ["dominoes", "domino tile", "domino tiles"]},
+          {"value": "grid", "aliases": ["grid pattern"]}
+        ],
+        "actions": [],
+        "colors": ["black", "white"]
+      }
+    },
+    {
+      "frame_id": "vid01_f0008",
+      "image_file": "sample_frames/vid01_f0008.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          {"value": "page", "aliases": ["document page"]},
+          {"value": "equation", "aliases": ["math equation", "calculation"]}
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid02_f0001",
+      "image_file": "sample_frames/vid02_f0001.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "worksheet",
+          {"value": "money bag", "aliases": ["sack", "bag"]}
+        ],
+        "actions": [],
+        "colors": ["orange"]
+      }
+    },
+    {
+      "frame_id": "vid02_f0003",
+      "image_file": "sample_frames/vid02_f0003.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "worksheet",
+          {"value": "grid", "aliases": ["grid diagram"]},
+          {"value": "x mark", "aliases": ["x marks", "obstacle marker"]}
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid02_f0005",
+      "image_file": "sample_frames/vid02_f0005.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "worksheet",
+          {"value": "bar chart", "aliases": ["bar graph", "chart"]}
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid02_f0007",
+      "image_file": "sample_frames/vid02_f0007.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "notebook",
+          "hand",
+          {"value": "entity relationship diagram", "aliases": ["er diagram", "diagram"]}
+        ],
+        "actions": ["holding"],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid02_f0008",
+      "image_file": "sample_frames/vid02_f0008.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "screenshot",
+          {"value": "chat interface", "aliases": ["chat ui", "chat window"]},
+          "message"
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid03_f0002",
+      "image_file": "sample_frames/vid03_f0002.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "screenshot",
+          {"value": "sql code", "aliases": ["code", "code block"]}
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid03_f0005",
+      "image_file": "sample_frames/vid03_f0005.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "unknown",
+        "locations": [],
+        "objects": [
+          "screenshot",
+          {"value": "presentation slide", "aliases": ["slide"]},
+          {"value": "sql code", "aliases": ["code", "code block"]}
+        ],
+        "actions": [],
+        "colors": []
+      }
+    },
+    {
+      "frame_id": "vid03_f0009",
+      "image_file": "sample_frames/vid03_f0009.png",
+      "entities": {
+        "time_of_day": "unknown",
+        "setting": "outdoor",
+        "locations": [
+          {"value": "flower field", "aliases": ["field", "meadow"]}
+        ],
+        "objects": [
+          {"value": "flower", "aliases": ["flowers"]},
+          "sky",
+          {"value": "cloud", "aliases": ["clouds"]},
+          "grass"
+        ],
+        "actions": [],
+        "colors": ["blue", "white", "green", "pink", "orange", "yellow", "purple"]
+      }
+    }
+  ]
+}
