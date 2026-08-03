@@ -82,7 +82,7 @@ def merge_objects(metadata_path: str, objects_dir: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Merge object detection JSONs into metadata.json")
-    parser.add_argument("--metadata", default="data/metadata.json", help="Path to metadata.json")
+    parser.add_argument("--metadata", default="data/metadata/metadata.json", help="Path to metadata.json")
     parser.add_argument("--objects-dir", default="data/objects", help="Path to objects root directory")
     
     args = parser.parse_args()

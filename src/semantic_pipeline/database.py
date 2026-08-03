@@ -17,7 +17,7 @@ except ImportError:
 
 # Tính từ vị trí file này, KHÔNG phụ thuộc thư mục đang chạy lệnh.
 # Trỏ ra thư mục data ở ngoài cùng
-DEFAULT_METADATA_PATH = Path(__file__).parent.parent.parent / "data" / "metadata.json"
+DEFAULT_METADATA_PATH = Path(__file__).parent.parent.parent / "data" / "metadata" / "metadata.json"
 
 _stemmer = PorterStemmer()
 
