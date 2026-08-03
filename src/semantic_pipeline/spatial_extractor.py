@@ -504,14 +504,20 @@ def _image_index(image_dir: str | Path) -> dict[str, Path]:
     if not image_dir.is_dir():
         raise FileNotFoundError(f"Image directory does not exist: {image_dir}")
     index: dict[str, Path] = {}
-    for path in image_dir.iterdir():
+    for path in image_dir.rglob("*.*"):
         if path.is_file() and path.suffix.casefold() in IMAGE_EXTENSIONS:
-            if path.stem in index:
+            stem = path.stem
+            if "_f" in stem:
+                frame_id = stem
+            else:
+                video_name = path.parent.name
+                frame_id = f"{video_name}_f{int(stem):04d}"
+            if frame_id in index:
                 raise ValueError(
-                    f"Multiple images have frame_id {path.stem!r}: "
-                    f"{index[path.stem]} and {path}"
+                    f"Multiple images have frame_id {frame_id!r}: "
+                    f"{index[frame_id]} and {path}"
                 )
-            index[path.stem] = path
+            index[frame_id] = path
     return index
 
 

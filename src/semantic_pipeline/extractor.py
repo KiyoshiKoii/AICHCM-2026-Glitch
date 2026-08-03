@@ -35,14 +35,22 @@ def is_vietnamese(text: str) -> bool:
 
 
 def parse_frame_info(filepath: Path) -> dict:
-    # filepath: data/keyframes/L21_V001/017.jpg -> video_name="L21_V001", frame_index=17
-    video_name = filepath.parent.name
-    frame_part = filepath.stem
-    return {
-        "frame_id": f"{video_name}_f{int(frame_part):04d}",
-        "video_name": video_name,
-        "frame_index": int(frame_part),
-    }
+    stem = filepath.stem
+    if "_f" in stem:
+        video_name, frame_part = stem.rsplit("_f", 1)
+        return {
+            "frame_id": stem,
+            "video_name": f"{video_name}.mp4" if not video_name.endswith(".mp4") else video_name,
+            "frame_index": int(frame_part),
+        }
+    else:
+        video_name = filepath.parent.name
+        frame_part = stem
+        return {
+            "frame_id": f"{video_name}_f{int(frame_part):04d}",
+            "video_name": video_name,
+            "frame_index": int(frame_part),
+        }
 
 
 class SemanticExtractor:
