@@ -1,7 +1,7 @@
 # Cấu trúc Thư mục Dữ liệu (Data Structure)
 
 Thư mục `data/` là nơi chứa toàn bộ dữ liệu thô (ảnh) và các metadata (JSON) được sinh ra từ các luồng trích xuất của hệ thống (Pipeline).
-**Lưu ý:** Thư mục `data/keyframes/` (ảnh thô) và `data/objects/` (JSON vật thể rác/lẻ) đã được chặn trong `.gitignore`, các file metadata chính khác vẫn được phép push lên Git.
+**Lưu ý:** Thư mục `data/keyframes/` (ảnh thô), `data/objects/` (JSON vật thể rác/lẻ) và `data/videos/` (video gốc) đã được chặn trong `.gitignore`, các file metadata chính khác vẫn được phép push lên Git.
 
 ## Cấu trúc chi tiết
 
@@ -14,6 +14,7 @@ data/
 │   │   └── ...
 │   └── L21_V002/
 │       └── ...
+├── videos/                     # Chứa video gốc (VD: L21_V001.mp4) — input cho ASR (Dev 4)
 ├── map-keyframes/              # Chứa các file CSV map giữa frame_id và timestamp thực tế của video (từ BTC).
 ├── media-info/                 # Chứa thông tin YouTube gốc của video (Tiêu đề, Kênh, Description, Keywords, URL...).
 ├── npy_features/               # Chứa các file Vector Embeddings (.npy) do mô hình CLIP trích xuất ra (để nạp vào Qdrant).
