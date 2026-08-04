@@ -3,6 +3,7 @@
 Không cần cài faster-whisper / tải model để chạy các test này — model thật
 chỉ được load bên trong ASRExtractor.__init__, còn ở đây ta monkeypatch nó
 bằng một stub để kiểm tra logic scan/resume/checkpoint độc lập với model.
+Bước tách audio (ffmpeg) cũng được stub để test không phụ thuộc ffmpeg.
 """
 
 import json
@@ -73,14 +74,31 @@ class _StubExtractor:
     def __init__(self, *args, **kwargs):
         pass
 
-    def transcribe(self, video_path, language=None):
-        name = normalize_video_name(video_path)
-        segments = [{"start": 0.0, "end": 1.0, "text": f"transcript of {name}"}]
-        return build_video_record(name, segments)
+    def transcribe(self, audio_path, video_name):
+        segments = [{"start": 0.0, "end": 1.0, "text": f"transcript of {video_name}"}]
+        return build_video_record(video_name, segments)
+
+
+@pytest.fixture
+def stub_pipeline(monkeypatch):
+    """Stub cả model lẫn ffmpeg để test chạy được ở môi trường không có GPU/ffmpeg."""
+    monkeypatch.setattr(extractor_module, "ASRExtractor", _StubExtractor)
+
+    extracted = []
+
+    def fake_extract_audio(video_path, output_path, overwrite=False):
+        output_path = Path(output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_bytes(b"RIFF-fake-wav")
+        extracted.append(Path(video_path).name)
+        return output_path
+
+    monkeypatch.setattr(extractor_module, "extract_audio", fake_extract_audio)
+    return extracted
 
 
 class TestExtractAsrResumeAndCheckpoint:
-    def test_skips_videos_already_in_output(self, tmp_path, monkeypatch):
+    def test_skips_videos_already_in_output(self, tmp_path, stub_pipeline):
         video_dir = tmp_path / "videos"
         video_dir.mkdir()
         (video_dir / "L21_V001.mp4").write_bytes(b"")
@@ -92,15 +110,16 @@ class TestExtractAsrResumeAndCheckpoint:
             encoding="utf-8",
         )
 
-        monkeypatch.setattr(extractor_module, "ASRExtractor", _StubExtractor)
-
-        extract_asr(video_dir=str(video_dir), output_path=str(output_path))
+        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+                    cache_dir=str(tmp_path / "cache"))
 
         records = {r["video_name"]: r for r in json.loads(output_path.read_text(encoding="utf-8"))}
         assert records["L21_V001"]["full_transcript"] == "old"  # unchanged, was skipped
         assert records["L21_V002"]["full_transcript"] == "transcript of L21_V002"
+        # Video đã xử lý rồi thì không tốn công tách audio lại
+        assert stub_pipeline == ["L21_V002.mp4"]
 
-    def test_overwrite_reprocesses_existing_videos(self, tmp_path, monkeypatch):
+    def test_overwrite_reprocesses_existing_videos(self, tmp_path, stub_pipeline):
         video_dir = tmp_path / "videos"
         video_dir.mkdir()
         (video_dir / "L21_V001.mp4").write_bytes(b"")
@@ -111,14 +130,86 @@ class TestExtractAsrResumeAndCheckpoint:
             encoding="utf-8",
         )
 
-        monkeypatch.setattr(extractor_module, "ASRExtractor", _StubExtractor)
-
-        extract_asr(video_dir=str(video_dir), output_path=str(output_path), overwrite=True)
+        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+                    cache_dir=str(tmp_path / "cache"), overwrite=True)
 
         records = json.loads(output_path.read_text(encoding="utf-8"))
         assert records[0]["full_transcript"] == "transcript of L21_V001"
 
-    def test_missing_video_dir_does_not_raise(self, tmp_path, capsys):
+    def test_processes_all_videos_in_order(self, tmp_path, stub_pipeline):
+        video_dir = tmp_path / "videos"
+        video_dir.mkdir()
+        for name in ["L21_V003.mp4", "L21_V001.mp4", "L21_V002.mp4"]:
+            (video_dir / name).write_bytes(b"")
+
+        output_path = tmp_path / "metadata_asr.json"
+        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+                    cache_dir=str(tmp_path / "cache"))
+
+        records = json.loads(output_path.read_text(encoding="utf-8"))
+        assert {r["video_name"] for r in records} == {"L21_V001", "L21_V002", "L21_V003"}
+
+    def test_limit_only_processes_first_n(self, tmp_path, stub_pipeline):
+        video_dir = tmp_path / "videos"
+        video_dir.mkdir()
+        for name in ["L21_V001.mp4", "L21_V002.mp4", "L21_V003.mp4"]:
+            (video_dir / name).write_bytes(b"")
+
+        output_path = tmp_path / "metadata_asr.json"
+        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+                    cache_dir=str(tmp_path / "cache"), limit=2)
+
+        records = json.loads(output_path.read_text(encoding="utf-8"))
+        assert len(records) == 2
+
+    def test_cleans_up_audio_cache_by_default(self, tmp_path, stub_pipeline):
+        video_dir = tmp_path / "videos"
+        video_dir.mkdir()
+        (video_dir / "L21_V001.mp4").write_bytes(b"")
+        cache_dir = tmp_path / "cache"
+
+        extract_asr(video_dir=str(video_dir), output_path=str(tmp_path / "out.json"),
+                    cache_dir=str(cache_dir))
+
+        assert not (cache_dir / "L21_V001.wav").exists()
+
+    def test_keep_audio_retains_wav(self, tmp_path, stub_pipeline):
+        video_dir = tmp_path / "videos"
+        video_dir.mkdir()
+        (video_dir / "L21_V001.mp4").write_bytes(b"")
+        cache_dir = tmp_path / "cache"
+
+        extract_asr(video_dir=str(video_dir), output_path=str(tmp_path / "out.json"),
+                    cache_dir=str(cache_dir), keep_audio=True)
+
+        assert (cache_dir / "L21_V001.wav").exists()
+
+    def test_audio_failure_does_not_abort_remaining_videos(self, tmp_path, monkeypatch):
+        video_dir = tmp_path / "videos"
+        video_dir.mkdir()
+        (video_dir / "L21_V001.mp4").write_bytes(b"")
+        (video_dir / "L21_V002.mp4").write_bytes(b"")
+
+        monkeypatch.setattr(extractor_module, "ASRExtractor", _StubExtractor)
+
+        def flaky_extract(video_path, output_path, overwrite=False):
+            if Path(video_path).stem == "L21_V001":
+                raise RuntimeError("ffmpeg boom")
+            output_path = Path(output_path)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path.write_bytes(b"RIFF-fake-wav")
+            return output_path
+
+        monkeypatch.setattr(extractor_module, "extract_audio", flaky_extract)
+
+        output_path = tmp_path / "metadata_asr.json"
+        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+                    cache_dir=str(tmp_path / "cache"))
+
+        records = json.loads(output_path.read_text(encoding="utf-8"))
+        assert [r["video_name"] for r in records] == ["L21_V002"]
+
+    def test_missing_video_dir_does_not_raise(self, tmp_path):
         extract_asr(video_dir=str(tmp_path / "does-not-exist"),
-                     output_path=str(tmp_path / "metadata_asr.json"))
+                    output_path=str(tmp_path / "metadata_asr.json"))
         assert not (tmp_path / "metadata_asr.json").exists()
