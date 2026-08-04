@@ -159,7 +159,10 @@ def _audio_producer(video_paths: list[Path], cache_dir: Path, queue: Queue,
 
     try:
         with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="ffmpeg") as pool:
-            # map() giữ nguyên thứ tự video và tự chặn lại khi queue đầy.
+            # Video vào hàng đợi theo thứ tự TÁCH XONG chứ không theo thứ tự ban đầu
+            # (video ngắn tách nhanh hơn nên có thể vượt lên trước) — không sao vì
+            # record được gom theo khoá video_name. queue.put() bị chặn khi hàng đợi
+            # đầy nên pool tự động chậm lại theo tốc độ của GPU.
             list(pool.map(work, video_paths))
     finally:
         queue.put(_QUEUE_DONE)
