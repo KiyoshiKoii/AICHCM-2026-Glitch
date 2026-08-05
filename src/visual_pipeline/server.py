@@ -9,7 +9,10 @@ from pydantic import BaseModel, Field
 from transformers import CLIPProcessor, CLIPModel
 from qdrant_client import QdrantClient
 
-from config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME
+try:
+    from config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME
+except ImportError:
+    from .config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME
 
 # Fix encoding issue for Vietnamese characters in Windows Terminal
 if sys.stdout.encoding != 'utf-8':
