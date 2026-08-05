@@ -8,6 +8,12 @@ from pydantic import ValidationError
 from backend.core.errors import LLMParserError
 from backend.schemas.search import ParsedQuery
 
+try:
+    from google import genai
+    from google.genai import types
+except ImportError:
+    genai = None
+
 SYSTEM_PROMPT = """You are a query parser for an egocentric video retrieval system.
 Convert a Vietnamese search query into exactly two English fields:
 1. visual_prompt: a concise, natural description containing only visible people,
@@ -93,3 +99,37 @@ class OllamaQueryParser:
             # Fallback on any error (network, parse, validation)
             print(f"[Warning] QueryParser fallback used due to: {exc}")
             return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
+
+
+class GeminiQueryParser:
+    def __init__(self, api_key: str | None, model_name: str = "gemini-3.1-flash-lite") -> None:
+        self.api_key = api_key
+        self.model_name = model_name
+        self.client = genai.Client(api_key=api_key) if api_key and genai else None
+
+    async def parse(self, query: str) -> ParsedQuery:
+        if not self.client:
+            print("[Warning] GeminiQueryParser: No API key or genai lib found. Using fallback.")
+            return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
+
+        schema = ParsedQuery.model_json_schema()
+        prompt = (
+            f"{SYSTEM_PROMPT}\n\n"
+            "Parse this Vietnamese query. Return JSON only.\n"
+            f"JSON schema: {json.dumps(schema, ensure_ascii=False)}\n"
+            f"Query: {query}"
+        )
+        try:
+            response = await self.client.aio.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.0,
+                )
+            )
+            return parse_llm_json(response.text)
+        except Exception as exc:
+            print(f"[Warning] GeminiQueryParser fallback used due to: {exc}")
+            return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
+

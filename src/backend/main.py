@@ -26,11 +26,18 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         client = httpx.AsyncClient(timeout=active_settings.request_timeout_seconds)
-        parser = OllamaQueryParser(
-            client,
-            active_settings.ollama_base_url,
-            active_settings.ollama_model,
-        )
+        if active_settings.gemini_api_key:
+            from backend.services.query_analyzer import GeminiQueryParser
+            parser = GeminiQueryParser(
+                api_key=active_settings.gemini_api_key,
+                model_name="gemini-3.1-flash-lite",
+            )
+        else:
+            parser = OllamaQueryParser(
+                client,
+                active_settings.ollama_base_url,
+                active_settings.ollama_model,
+            )
         dev1 = VisualPipelineClient(
             client,
             source="dev1",

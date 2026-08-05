@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", "../.env"),
         env_file_encoding="utf-8",
         extra="ignore",
         str_strip_whitespace=True,
@@ -17,6 +17,8 @@ class Settings(BaseSettings):
 
     ollama_base_url: str = "http://localhost:11434"
     ollama_model: str = "qwen2.5:7b"
+    
+    gemini_api_key: str | None = None
 
     dev1_base_url: str = "http://localhost:8001"
     dev1_text_path: str = "/internal/search/visual"
@@ -26,7 +28,7 @@ class Settings(BaseSettings):
     dev2_text_path: str = "/internal/search/text"
 
     upstream_top_k: int = Field(default=200, ge=20, le=1000)
-    output_top_k: int = Field(default=50, ge=1, le=100)
+    output_top_k: int = Field(default=100, ge=1, le=200)
     rrf_k: int = Field(default=60, gt=0)
     allow_partial_results: bool = True
 

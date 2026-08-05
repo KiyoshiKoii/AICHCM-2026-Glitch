@@ -76,6 +76,7 @@ class SearchHit(BaseModel):
 class SearchData(BaseModel):
     total_results: int
     results: list[SearchHit]
+    llm_reranked_results: list[SearchHit] | None = Field(default=None, description="Kết quả sau khi LLM chấm điểm lại")
 
 
 class TextSearchResponse(BaseModel):

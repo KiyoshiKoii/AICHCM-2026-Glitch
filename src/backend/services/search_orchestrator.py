@@ -8,6 +8,9 @@ from backend.clients.visual_client import InternalPipelineClient, normalize_upst
 from backend.utils.rrf import reciprocal_rank_fusion
 
 
+from backend.services.llm_reranker import GeminiReRanker
+
+
 class QueryParser(Protocol):
     async def parse(self, query: str) -> ParsedQuery: ...
 
@@ -25,6 +28,7 @@ class SearchService:
         self.parser = parser
         self.dev1 = dev1
         self.dev2 = dev2
+        self.reranker = GeminiReRanker(api_key=settings.gemini_api_key)
 
     async def search_text(self, query: str, top_k: int) -> TextSearchResponse:
         try:
@@ -74,12 +78,22 @@ class SearchService:
             hit.video_name = video_name
             hit.frame_index = true_frame_idx if true_frame_idx is not None else frame_index
             
+        # Execute LLM Reranking on Top 100
+        llm_reranked_results = None
+        if self.reranker.client:
+            top_100 = merged_hits[:100]
+            reranked_top_100 = await self.reranker.rerank(query, top_100)
+            
+            # Combine the newly reranked top 100 with the rest (if any)
+            llm_reranked_results = reranked_top_100 + merged_hits[100:]
+            
         return TextSearchResponse(
             status="success",
             message="Retrieved successfully from Visual & Semantic Pipelines",
             data=SearchData(
                 total_results=len(merged_hits),
                 results=merged_hits,
+                llm_reranked_results=llm_reranked_results,
             )
         )
 
