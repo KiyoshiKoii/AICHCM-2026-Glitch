@@ -13,6 +13,7 @@ const PAGE_SIZE = 12;
 function App() {
   const [dataset, setDataset] = useState('V3C1');
   const [results, setResults] = useState([]);
+  const [llmResults, setLlmResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [frameContext, setFrameContext] = useState(null);
   const [isContextLoading, setIsContextLoading] = useState(false);
@@ -31,7 +32,8 @@ function App() {
       } else {
         response = await searchByText(input);
       }
-      setResults(response.data.results);
+      setResults(response.data.results || []);
+      setLlmResults(response.data.llm_reranked_results || []);
     } catch (err) {
       console.error(err);
       alert('Lỗi trong quá trình tìm kiếm! Xem console để biết thêm chi tiết.');
@@ -55,6 +57,7 @@ function App() {
 
   const handleNewSearch = () => {
     setResults([]);
+    setLlmResults([]);
     setFrameContext(null);
     setCurrentPage(1);
     setLastQuery(null);
@@ -66,6 +69,10 @@ function App() {
 
   const totalPages = Math.ceil(results.length / PAGE_SIZE) || 1;
   const pageResults = results.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+  const pageLlmResults = llmResults.slice(
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE
   );
@@ -88,6 +95,18 @@ function App() {
             <LoadingSpinner label="Đang tìm kiếm..." />
           ) : (
             <>
+              {llmResults.length > 0 && (
+                <div className="results-section">
+                  <h3 style={{ marginLeft: '1rem', marginTop: '1rem', color: '#888' }}>✨ Kết quả LLM Re-ranking (Gemini 3.1 Flash Lite)</h3>
+                  <ResultGrid 
+                    results={pageLlmResults} 
+                    onCardDoubleClick={handleCardDoubleClick} 
+                    onCardClick={(url) => setSelectedImage(url)} 
+                  />
+                  <hr style={{ margin: '2rem 1rem', borderColor: '#333' }} />
+                  <h3 style={{ marginLeft: '1rem', color: '#888' }}>🔍 Kết quả RRF (Khoảng cách Vector)</h3>
+                </div>
+              )}
               <ResultGrid 
                 results={pageResults} 
                 onCardDoubleClick={handleCardDoubleClick} 
