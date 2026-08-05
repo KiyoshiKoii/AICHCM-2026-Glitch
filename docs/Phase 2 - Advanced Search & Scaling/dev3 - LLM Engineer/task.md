@@ -2,9 +2,16 @@
 
 Trong Phase 2, Dev 3 đóng vai trò là "Tổng tư lệnh" đứng giữa, chịu trách nhiệm kết hợp LLM thế hệ mới và đảm bảo hệ thống chịu được lượng request dồn dập lúc thi.
 
-- [ ] **Task 1: Nâng cấp Prompt LLM cho Spatial Reasoning**
-  - Viết lại Prompt cho LLM (Llama-3/OpenAI) để nó tự động parse được các truy vấn không gian phức tạp thành chuẩn JSON Filters (VD: "Tìm người mặc áo đỏ đứng bên trái cái xe" $\rightarrow$ Sinh ra filter `spatial_relations: [{subject: "person red shirt", predicate: "left_of", object: "car"}]`).
-- [ ] **Task 2: Tích hợp Redis Caching**
-  - Lúc thi đấu, các đội hay search lại các câu query giống nhau. Cần setup Redis để cache kết quả API, giảm tải cho Qdrant và Elasticsearch.
-- [ ] **Task 3: Tối ưu hóa RRF (Reciprocal Rank Fusion)**
-  - Thay vì RRF trọng số tĩnh `1/(k+60)`, thử nghiệm trọng số động dựa trên độ tự tin (Confidence Score) của LLM về việc câu hỏi thiên về Hình ảnh (Visual) hay Văn bản (Semantic).
+*(Đã cập nhật theo bài toán VQA và định hướng xử lý Top kết quả từ vòng sơ tuyển AIC 2026)*
+
+- [ ] **Task 1: LLM Re-ranking & Verification (Kiểm duyệt Top 10)**
+  - Sau khi hệ thống truy xuất thô trả về Top 50 hình ảnh/khoảnh khắc tiềm năng nhất, xây dựng luồng pipeline đưa Top 10 ảnh đầu tiên qua mô hình Vision LLM.
+  - Prompt cho LLM đối chiếu kỹ hình ảnh với mô tả truy vấn ban đầu để loại bỏ các "false positive" (nhận diện sai) và xếp hạng lại (re-rank) sao cho kết quả chuẩn xác nhất vươn lên Top 1.
+
+- [ ] **Task 2: Trích xuất câu trả lời cho bài toán VQA (Visual Question Answering)**
+  - Xử lý Truy vấn dạng 2 của vòng sơ tuyển: Vừa tìm khoảnh khắc, vừa trả lời câu hỏi chi tiết.
+  - Thiết kế prompt để Vision LLM dựa vào các khung hình Top đầu phân tích thông tin cụ thể (VD: đếm số lượng, màu sắc, hành động,...) và sinh ra câu trả lời cực kỳ ngắn gọn (bằng tiếng Việt hoặc tiếng Anh) đúng chuẩn định dạng đầu ra của BTC.
+
+- [ ] **Task 3: Tích hợp API các mô hình Vision LLM thương mại (GPT-4o, Gemini 1.5 Pro, Claude 3.5 Sonnet)**
+  - Thay vì chạy các mô hình local (như LLaVA, InternVideo2) vốn nặng và suy luận chưa đủ sâu cho VQA phức tạp, xây dựng module gọi API trực tiếp đến các provider.
+  - Xử lý các vấn đề kĩ thuật khi gọi API: resize/compress hình ảnh trước khi gửi (base64) để tiết kiệm token và thời gian; quản lý Rate Limit (giới hạn request); và áp dụng xử lý bất đồng bộ (Asynchronous calls/Concurrency) để tăng tốc độ phản hồi lúc thi đấu.
