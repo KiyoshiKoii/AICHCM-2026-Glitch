@@ -32,7 +32,7 @@ from config import (
     DEFAULT_CPU_COMPUTE_TYPE,
     DEFAULT_GPU_COMPUTE_TYPE,
     DEFAULT_LANGUAGE,
-    OUTPUT_PATH,
+    OUTPUT_DIR,
     PREFETCH_QUEUE_SIZE,
     VIDEO_DIR,
     VIDEO_EXTENSIONS,
@@ -81,6 +81,34 @@ def build_video_record(video_name: str, segments: list[dict]) -> dict:
         "full_transcript": build_full_transcript(segments),
         "segments": segments,
     }
+
+
+def record_path(video_name: str, output_dir: "Path | str") -> Path:
+    """Đường dẫn file JSON của 1 video trong thư mục output."""
+    return Path(output_dir) / f"{video_name}.json"
+
+
+def write_record(record: dict, output_dir: "Path | str") -> Path:
+    """Ghi record của 1 video ra file riêng, kiểu ghi tạm-rồi-đổi-tên.
+
+    Ghi thẳng vào file đích mà bị Ctrl+C giữa chừng sẽ để lại JSON cụt, lần chạy
+    sau tưởng video đã xong và bỏ qua luôn -> mất dữ liệu âm thầm.
+    """
+    out_path = record_path(record["video_name"], output_dir)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = out_path.with_suffix(".json.part")
+    tmp_path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp_path.replace(out_path)
+    return out_path
+
+
+def load_done_videos(output_dir: "Path | str") -> set[str]:
+    """Danh sách video đã transcribe xong — chỉ cần liệt kê tên file, không phải
+    parse nội dung, nên resume gần như tức thì kể cả với hàng nghìn video."""
+    output_dir = Path(output_dir)
+    if not output_dir.exists():
+        return set()
+    return {p.stem for p in output_dir.glob("*.json")}
 
 
 class ASRExtractor:
@@ -168,7 +196,7 @@ def _audio_producer(video_paths: list[Path], cache_dir: Path, queue: Queue,
         queue.put(_QUEUE_DONE)
 
 
-def extract_asr(video_dir: str = VIDEO_DIR, output_path: str = OUTPUT_PATH,
+def extract_asr(video_dir: str = VIDEO_DIR, output_dir: str = OUTPUT_DIR,
                 model: str | None = None, device: str = "auto",
                 compute_type: str | None = None, language: str | None = DEFAULT_LANGUAGE,
                 beam_size: int = BEAM_SIZE, batch_size: int = BATCH_SIZE,
@@ -176,21 +204,14 @@ def extract_asr(video_dir: str = VIDEO_DIR, output_path: str = OUTPUT_PATH,
                 audio_workers: int = AUDIO_WORKERS, cache_dir: str = AUDIO_CACHE_DIR,
                 limit: int | None = None, overwrite: bool = False,
                 single_video: str | None = None, keep_audio: bool = False) -> None:
-    out_file = Path(output_path)
-    out_file.parent.mkdir(parents=True, exist_ok=True)
+    out_dir = Path(output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
     cache_path = Path(cache_dir)
 
     # --- Resume logic: bỏ qua video đã xử lý (trừ khi --overwrite) ---
-    existing_map: dict[str, dict] = {}
-    if out_file.exists():
-        try:
-            existing_records = json.loads(out_file.read_text(encoding="utf-8"))
-            for r in existing_records:
-                if r.get("video_name"):
-                    existing_map[r["video_name"]] = r
-            print(f"[resume] Loaded {len(existing_map)} existing records.")
-        except Exception as e:
-            print(f"[resume] Could not load existing {output_path}: {e}")
+    done_videos = load_done_videos(out_dir)
+    if done_videos:
+        print(f"[resume] Đã có sẵn {len(done_videos)} video trong {out_dir}.")
 
     if single_video:
         video_paths = [Path(single_video)]
@@ -212,7 +233,7 @@ def extract_asr(video_dir: str = VIDEO_DIR, output_path: str = OUTPUT_PATH,
         if overwrite:
             video_paths = all_paths
         else:
-            video_paths = [p for p in all_paths if normalize_video_name(p) not in existing_map]
+            video_paths = [p for p in all_paths if normalize_video_name(p) not in done_videos]
 
         if limit is not None:
             video_paths = video_paths[:limit]
@@ -258,14 +279,11 @@ def extract_asr(video_dir: str = VIDEO_DIR, output_path: str = OUTPUT_PATH,
 
             try:
                 record = extractor.transcribe(wav_path, normalize_video_name(video_path))
-                existing_map[record["video_name"]] = record
 
-                # Lưu checkpoint sau mỗi video để không mất tiến độ khi crash giữa chừng
-                out_file.write_text(
-                    json.dumps(list(existing_map.values()), ensure_ascii=False, indent=2),
-                    encoding="utf-8",
-                )
-                print(f"  💾 Đã lưu: {out_file}")
+                # Checkpoint sau mỗi video: chỉ ghi đúng file của video đó.
+                saved_path = write_record(record, out_dir)
+                done_videos.add(record["video_name"])
+                print(f"  💾 Đã lưu: {saved_path.name}")
             except Exception as exc:
                 failed += 1
                 print(f"  ⚠️  Lỗi khi transcribe {video_path.name}: {exc}")
@@ -282,9 +300,10 @@ def extract_asr(video_dir: str = VIDEO_DIR, output_path: str = OUTPUT_PATH,
 
     elapsed = time.perf_counter() - started
     print(f"\n{'=' * 55}")
-    print(f"✅ Hoàn tất! Tổng cộng {len(existing_map)} video trong {output_path}")
+    print(f"✅ Hoàn tất! Tổng cộng {len(done_videos)} video trong {out_dir}")
     print(f"   Lượt chạy này: {processed - failed} thành công, {failed} lỗi, "
           f"{elapsed / 60:.1f} phút.")
+    print(f"👉 Gộp thành file bàn giao cho Dev 2: python merge_asr.py")
 
 
 if __name__ == "__main__":
@@ -292,7 +311,8 @@ if __name__ == "__main__":
         description="Trích xuất transcript (PhoWhisper/faster-whisper) từ video ra metadata_asr.json"
     )
     parser.add_argument("--video-dir", default=VIDEO_DIR)
-    parser.add_argument("--output", default=OUTPUT_PATH)
+    parser.add_argument("--output-dir", default=OUTPUT_DIR,
+                         help="Thư mục chứa output, mỗi video 1 file JSON")
     parser.add_argument("--model", default=None,
                          help="Thư mục model CT2, repo HuggingFace, hoặc size Whisper "
                               "('large-v3'). Mặc định: PhoWhisper đã convert.")
@@ -321,7 +341,7 @@ if __name__ == "__main__":
 
     extract_asr(
         video_dir=args.video_dir,
-        output_path=args.output,
+        output_dir=args.output_dir,
         model=args.model,
         device=args.device,
         compute_type=args.compute_type,

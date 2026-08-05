@@ -27,7 +27,8 @@ data/
 │   ├── metadata_spatial.json   # Output Bước 3: Chứa tọa độ Bounding Box và quan hệ không gian (Trái/Phải/Trên/Dưới) từ Florence-2 Object Detection.
 │   ├── metadata_youtube.jsonl  # Dữ liệu sạch cào từ YouTube (Tiêu đề, Kênh, Description) copy từ luồng preprocess.
 │   ├── metadata_youtube_bm25.pkl # Index BM25 dựng sẵn từ metadata_youtube.jsonl (để Dev 2 tích hợp tìm kiếm Video).
-│   └── metadata_asr.json       # Output ASR từ Dev 4: Chứa lời thoại/phụ đề trích xuất từ âm thanh video.
+│   ├── metadata_asr/           # Output thô của ASR (Dev 4): MỖI VIDEO 1 FILE (L21_V001.json...) để checkpoint/resume nhanh.
+│   └── metadata_asr.json       # File ASR bàn giao cho Dev 2 (mảng JSON), gộp từ metadata_asr/ bằng `python merge_asr.py`.
 ```
 
 ## Quy ước Nguồn dữ liệu

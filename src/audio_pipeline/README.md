@@ -1,8 +1,32 @@
 # Audio Pipeline (ASR) — Dev 4, Phase 2
 
-Trích xuất transcript tiếng Việt từ video gốc, output ra `data/metadata/metadata_asr.json`
-theo format quy định trong
+Trích xuất transcript tiếng Việt từ video gốc theo format quy định trong
 [`task.md`](../../docs/Phase%202%20-%20Advanced%20Search%20&%20Scaling/dev4%20-%20Full-Stack%20Engineer/task.md).
+
+## Cấu trúc output (2 bước)
+
+```text
+data/metadata/
+├── metadata_asr/           ← BƯỚC 1: extractor.py ghi mỗi video 1 file
+│   ├── L21_V001.json
+│   ├── L21_V002.json
+│   └── ...
+└── metadata_asr.json       ← BƯỚC 2: merge_asr.py gộp lại, bàn giao Dev 2
+```
+
+Vì sao không ghi thẳng 1 file lớn? Với 873 video, checkpoint sau mỗi video sẽ phải ghi
+đè lại toàn bộ mảng JSON (~70MB ở cuối) → tổng lượt ghi đĩa tăng theo **O(n²)**. Tách
+file thì mỗi checkpoint chỉ ghi ~80KB, resume chỉ cần liệt kê tên file thay vì parse cả
+file lớn, và nhiều máy chạy song song từng phần rồi gộp lại cũng không đụng nhau.
+
+File bàn giao cuối cùng `metadata_asr.json` vẫn **đúng y format mảng JSON** mà task.md
+quy định — sinh ra bằng 1 lệnh sau khi transcribe xong:
+
+```bash
+python merge_asr.py            # metadata_asr/*.json -> metadata_asr.json
+python merge_asr.py --check    # chỉ kiểm tra tính hợp lệ, không ghi
+python merge_asr.py --split    # chiều ngược lại (migrate file gộp cũ sang cấu trúc mới)
+```
 
 ## Luồng xử lý
 
@@ -168,13 +192,14 @@ python extractor.py --device cpu --model medium --batch-size 4
 ## Sử dụng
 
 ```bash
-# Quét toàn bộ data/videos/, resume tự động (bỏ qua video đã có trong output)
+# Quét toàn bộ data/videos/, resume tự động (bỏ qua video đã có file trong output)
 python extractor.py
+python merge_asr.py            # gộp lại để bàn giao Dev 2
 
 # Test nhanh 1 video cụ thể
 python extractor.py --video ../../data/videos/L21_V001.mp4
 
-# Chỉ lấy N video đầu (test nhanh trên tập nhỏ)
+# Chỉ lấy N video CHƯA xử lý (limit áp dụng SAU khi lọc resume)
 python extractor.py --limit 3
 
 # Tăng throughput trên card VRAM lớn
@@ -185,8 +210,9 @@ python extractor.py --overwrite
 ```
 
 Chạy được nhiều phiên: checkpoint ghi sau **mỗi video**, nên `Ctrl+C` giữa chừng rồi chạy
-lại sẽ tự bỏ qua các video đã xong. File WAV tạm cũng tự xoá sau mỗi video (giữ lại bằng
-`--keep-audio` nếu cần debug).
+lại sẽ tự bỏ qua các video đã xong. Video lỗi giữa chừng sẽ không sinh file nên lần chạy
+sau tự động thử lại. File WAV tạm cũng tự xoá sau mỗi video (giữ lại bằng `--keep-audio`
+nếu cần debug).
 
 Xem toàn bộ flag qua `python extractor.py --help`.
 

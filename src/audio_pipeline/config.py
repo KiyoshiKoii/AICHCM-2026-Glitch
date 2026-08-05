@@ -16,7 +16,10 @@ Cấu trúc thư mục chuẩn (mặc định):
     ├── audio_cache/            ← WAV 16kHz tạm, tự sinh & tự xoá khi chạy
     ├── models/                 ← model PhoWhisper đã convert (tự sinh)
     └── metadata/
-        └── metadata_asr.json   ← tự sinh khi chạy extractor.py
+        ├── metadata_asr/       ← output chính: mỗi video 1 file (extractor.py)
+        │   ├── L21_V001.json
+        │   └── L21_V002.json
+        └── metadata_asr.json   ← file gộp bàn giao Dev 2 (merge_asr.py)
 """
 
 import os
@@ -43,7 +46,16 @@ VIDEO_DIR = os.path.join(DATA_DIR, "videos")
 # Thư mục chứa các file metadata output (chung với các pipeline khác)
 METADATA_DIR = os.path.join(DATA_DIR, "metadata")
 
-# File output cuối cùng — theo đúng format quy định trong task.md của Dev 4
+# Thư mục output chính: MỖI VIDEO 1 FILE (VD: metadata_asr/L21_V001.json).
+# Tách nhỏ thay vì gom vào 1 file lớn vì:
+#   - Checkpoint sau mỗi video chỉ ghi ~20KB thay vì ghi đè lại cả file ~17MB
+#     (gom 1 file thì với 873 video sẽ thành O(n²) lượt ghi đĩa).
+#   - Resume chỉ cần kiểm tra file tồn tại, không phải parse cả file lớn.
+#   - Nhiều người chạy song song trên các máy khác nhau rồi gộp lại không bị đụng file.
+OUTPUT_DIR = os.path.join(METADATA_DIR, "metadata_asr")
+
+# File gộp cuối cùng — ĐÚNG format mảng JSON quy định trong task.md của Dev 4,
+# sinh ra từ OUTPUT_DIR bằng `python merge_asr.py` để bàn giao cho Dev 2.
 OUTPUT_PATH = os.path.join(METADATA_DIR, "metadata_asr.json")
 
 # Thư mục đệm chứa WAV 16kHz tách ra từ video. File được xoá ngay sau khi
@@ -145,7 +157,7 @@ def print_config():
     print(f"  DATA_DIR      : {DATA_DIR}")
     print(f"  VIDEO_DIR     : {VIDEO_DIR}")
     print(f"  AUDIO_CACHE   : {AUDIO_CACHE_DIR}")
-    print(f"  OUTPUT_PATH   : {OUTPUT_PATH}")
+    print(f"  OUTPUT_DIR    : {OUTPUT_DIR}")
     print(f"  MODEL         : {resolve_model()}")
     print(f"  LANGUAGE      : {DEFAULT_LANGUAGE or 'auto-detect'}")
     print(f"  BATCH_SIZE    : {BATCH_SIZE}")

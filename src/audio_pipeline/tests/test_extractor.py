@@ -18,7 +18,10 @@ from extractor import (
     build_segments,
     build_video_record,
     extract_asr,
+    load_done_videos,
     normalize_video_name,
+    record_path,
+    write_record,
 )
 
 
@@ -68,6 +71,34 @@ class TestBuildVideoRecord:
         }
 
 
+class TestPerVideoFiles:
+    def test_record_path_uses_video_name(self):
+        assert record_path("L21_V001", "out") == Path("out/L21_V001.json")
+
+    def test_write_record_creates_readable_json(self, tmp_path):
+        record = build_video_record("L21_V001", [{"start": 0.0, "end": 1.0, "text": "xin chào"}])
+        path = write_record(record, tmp_path)
+        assert json.loads(path.read_text(encoding="utf-8")) == record
+
+    def test_write_record_leaves_no_part_file(self, tmp_path):
+        write_record(build_video_record("L21_V001", []), tmp_path)
+        assert list(tmp_path.glob("*.part")) == []
+
+    def test_write_record_preserves_vietnamese_diacritics(self, tmp_path):
+        record = build_video_record("L21_V001", [{"start": 0.0, "end": 1.0,
+                                                   "text": "sụt lún sông Cửu Long"}])
+        path = write_record(record, tmp_path)
+        assert "sụt lún sông Cửu Long" in path.read_text(encoding="utf-8")
+
+    def test_load_done_videos_lists_stems(self, tmp_path):
+        for name in ["L21_V001", "L21_V002"]:
+            write_record(build_video_record(name, []), tmp_path)
+        assert load_done_videos(tmp_path) == {"L21_V001", "L21_V002"}
+
+    def test_load_done_videos_on_missing_dir(self, tmp_path):
+        assert load_done_videos(tmp_path / "nope") == set()
+
+
 class _StubExtractor:
     """Thay cho ASRExtractor thật — trả record giả dựa trên tên file, không load model."""
 
@@ -97,6 +128,10 @@ def stub_pipeline(monkeypatch):
     return extracted
 
 
+def read_record(out_dir: Path, video_name: str) -> dict:
+    return json.loads((out_dir / f"{video_name}.json").read_text(encoding="utf-8"))
+
+
 class TestExtractAsrResumeAndCheckpoint:
     def test_skips_videos_already_in_output(self, tmp_path, stub_pipeline):
         video_dir = tmp_path / "videos"
@@ -104,18 +139,14 @@ class TestExtractAsrResumeAndCheckpoint:
         (video_dir / "L21_V001.mp4").write_bytes(b"")
         (video_dir / "L21_V002.mp4").write_bytes(b"")
 
-        output_path = tmp_path / "metadata_asr.json"
-        output_path.write_text(
-            json.dumps([{"video_name": "L21_V001", "full_transcript": "old", "segments": []}]),
-            encoding="utf-8",
-        )
+        out_dir = tmp_path / "metadata_asr"
+        write_record({"video_name": "L21_V001", "full_transcript": "old", "segments": []}, out_dir)
 
-        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+        extract_asr(video_dir=str(video_dir), output_dir=str(out_dir),
                     cache_dir=str(tmp_path / "cache"))
 
-        records = {r["video_name"]: r for r in json.loads(output_path.read_text(encoding="utf-8"))}
-        assert records["L21_V001"]["full_transcript"] == "old"  # unchanged, was skipped
-        assert records["L21_V002"]["full_transcript"] == "transcript of L21_V002"
+        assert read_record(out_dir, "L21_V001")["full_transcript"] == "old"  # skipped
+        assert read_record(out_dir, "L21_V002")["full_transcript"] == "transcript of L21_V002"
         # Video đã xử lý rồi thì không tốn công tách audio lại
         assert stub_pipeline == ["L21_V002.mp4"]
 
@@ -124,30 +155,25 @@ class TestExtractAsrResumeAndCheckpoint:
         video_dir.mkdir()
         (video_dir / "L21_V001.mp4").write_bytes(b"")
 
-        output_path = tmp_path / "metadata_asr.json"
-        output_path.write_text(
-            json.dumps([{"video_name": "L21_V001", "full_transcript": "old", "segments": []}]),
-            encoding="utf-8",
-        )
+        out_dir = tmp_path / "metadata_asr"
+        write_record({"video_name": "L21_V001", "full_transcript": "old", "segments": []}, out_dir)
 
-        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+        extract_asr(video_dir=str(video_dir), output_dir=str(out_dir),
                     cache_dir=str(tmp_path / "cache"), overwrite=True)
 
-        records = json.loads(output_path.read_text(encoding="utf-8"))
-        assert records[0]["full_transcript"] == "transcript of L21_V001"
+        assert read_record(out_dir, "L21_V001")["full_transcript"] == "transcript of L21_V001"
 
-    def test_processes_all_videos_in_order(self, tmp_path, stub_pipeline):
+    def test_writes_one_file_per_video(self, tmp_path, stub_pipeline):
         video_dir = tmp_path / "videos"
         video_dir.mkdir()
         for name in ["L21_V003.mp4", "L21_V001.mp4", "L21_V002.mp4"]:
             (video_dir / name).write_bytes(b"")
 
-        output_path = tmp_path / "metadata_asr.json"
-        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+        out_dir = tmp_path / "metadata_asr"
+        extract_asr(video_dir=str(video_dir), output_dir=str(out_dir),
                     cache_dir=str(tmp_path / "cache"))
 
-        records = json.loads(output_path.read_text(encoding="utf-8"))
-        assert {r["video_name"] for r in records} == {"L21_V001", "L21_V002", "L21_V003"}
+        assert {p.stem for p in out_dir.glob("*.json")} == {"L21_V001", "L21_V002", "L21_V003"}
 
     def test_limit_only_processes_first_n(self, tmp_path, stub_pipeline):
         video_dir = tmp_path / "videos"
@@ -155,12 +181,11 @@ class TestExtractAsrResumeAndCheckpoint:
         for name in ["L21_V001.mp4", "L21_V002.mp4", "L21_V003.mp4"]:
             (video_dir / name).write_bytes(b"")
 
-        output_path = tmp_path / "metadata_asr.json"
-        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+        out_dir = tmp_path / "metadata_asr"
+        extract_asr(video_dir=str(video_dir), output_dir=str(out_dir),
                     cache_dir=str(tmp_path / "cache"), limit=2)
 
-        records = json.loads(output_path.read_text(encoding="utf-8"))
-        assert len(records) == 2
+        assert len(list(out_dir.glob("*.json"))) == 2
 
     def test_cleans_up_audio_cache_by_default(self, tmp_path, stub_pipeline):
         video_dir = tmp_path / "videos"
@@ -168,7 +193,7 @@ class TestExtractAsrResumeAndCheckpoint:
         (video_dir / "L21_V001.mp4").write_bytes(b"")
         cache_dir = tmp_path / "cache"
 
-        extract_asr(video_dir=str(video_dir), output_path=str(tmp_path / "out.json"),
+        extract_asr(video_dir=str(video_dir), output_dir=str(tmp_path / "out"),
                     cache_dir=str(cache_dir))
 
         assert not (cache_dir / "L21_V001.wav").exists()
@@ -179,7 +204,7 @@ class TestExtractAsrResumeAndCheckpoint:
         (video_dir / "L21_V001.mp4").write_bytes(b"")
         cache_dir = tmp_path / "cache"
 
-        extract_asr(video_dir=str(video_dir), output_path=str(tmp_path / "out.json"),
+        extract_asr(video_dir=str(video_dir), output_dir=str(tmp_path / "out"),
                     cache_dir=str(cache_dir), keep_audio=True)
 
         assert (cache_dir / "L21_V001.wav").exists()
@@ -202,14 +227,14 @@ class TestExtractAsrResumeAndCheckpoint:
 
         monkeypatch.setattr(extractor_module, "extract_audio", flaky_extract)
 
-        output_path = tmp_path / "metadata_asr.json"
-        extract_asr(video_dir=str(video_dir), output_path=str(output_path),
+        out_dir = tmp_path / "metadata_asr"
+        extract_asr(video_dir=str(video_dir), output_dir=str(out_dir),
                     cache_dir=str(tmp_path / "cache"))
 
-        records = json.loads(output_path.read_text(encoding="utf-8"))
-        assert [r["video_name"] for r in records] == ["L21_V002"]
+        # Video lỗi không được tạo file -> lần chạy sau tự động thử lại
+        assert {p.stem for p in out_dir.glob("*.json")} == {"L21_V002"}
 
     def test_missing_video_dir_does_not_raise(self, tmp_path):
-        extract_asr(video_dir=str(tmp_path / "does-not-exist"),
-                    output_path=str(tmp_path / "metadata_asr.json"))
-        assert not (tmp_path / "metadata_asr.json").exists()
+        out_dir = tmp_path / "metadata_asr"
+        extract_asr(video_dir=str(tmp_path / "does-not-exist"), output_dir=str(out_dir))
+        assert list(out_dir.glob("*.json")) == []
