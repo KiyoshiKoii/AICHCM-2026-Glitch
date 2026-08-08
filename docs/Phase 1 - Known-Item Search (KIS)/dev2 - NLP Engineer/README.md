@@ -219,7 +219,7 @@ Kết quả spatial pilot:
 - Scale harness v2 đã index `10.000` document synthetic với mapping code mới trên physical index riêng: khoảng `1,558.9 docs/s`, p95 `47.915 ms`, không thay đổi alias production.
 - Có profile Docker riêng dùng authentication + HTTPS/transport TLS tại `docker-compose.elasticsearch.secure.yml`; secret nằm ngoài repository, port/data/volume tách khỏi local stack.
 - Trạng thái nghiệm thu hiện tại: `research_complete=True`, `production_ready=False`.
-- Báo cáo chi tiết: [TASK4_REPORT.md](TASK4_REPORT.md); contract dùng chung: [shared_api/api_contract_v1.md](../shared_api/api_contract_v1.md).
+- Báo cáo chi tiết: [TASK4_REPORT.md](TASK4_REPORT.md); contract dùng chung: [API_CONTRACT.md](../../API_CONTRACT.md).
 
 ### Artifact cần giữ và file có thể tái tạo
 

@@ -14,7 +14,7 @@ Dưới đây là các hạng mục công việc cần thực hiện:
 - [ ] **Task 2: Thiết lập Elasticsearch (Scale & Filter)**
   - **Dựng server**: Viết cấu hình `docker-compose.yml` để khởi chạy Elasticsearch qua Docker.
   - **Data Indexing & Mapping Research**: Tự nghiên cứu và định nghĩa Mapping Index phù hợp nhất để nạp dữ liệu từ `data/metadata/metadata_spatial.json` vào Elasticsearch. Mục tiêu là phải hỗ trợ được cả tìm kiếm full-text (cho Caption/OCR) và lọc dữ liệu đa chiều phức tạp (như Objects, Spatial Relations, Time, Setting).
-  - **API Integration**: Cập nhật hàm search trong `server.py` để sử dụng Elasticsearch client. Đảm bảo hỗ trợ các tính năng `Filters` được định nghĩa trong tài liệu `api_contract_v1.md`.
+  - **API Integration**: Cập nhật hàm search trong `server.py` để sử dụng Elasticsearch client. Đảm bảo hỗ trợ các tính năng `Filters` được định nghĩa trong [`docs/API_CONTRACT.md`](../../API_CONTRACT.md).
 
 - [ ] **Task 3: Nâng cấp Mô hình Trích xuất (Fix Visual F1)**
   - **Thực trạng**: Theo báo cáo Task 4 của Phase 1, `Florence-2` sinh ra nhiều lỗi ảo giác (nhận diện sai vật thể), khiến chỉ số Entity Visual F1 chỉ đạt `0.4194` (chưa đạt chuẩn Production gate 0.70).

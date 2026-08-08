@@ -14,4 +14,4 @@ Tài liệu này tổng hợp kiến trúc luồng dữ liệu của hệ thốn
 - `dev2`: Nâng cấp Elasticsearch & VLM Model.
 - `dev3`: Tối ưu hóa LLM Prompt & Caching.
 - `dev4`: Trích xuất Script Video (ASR/Whisper) & Vẽ Bounding Box.
-- `shared_api`: Đặc tả API Contract v2.
+- API dùng chung: [`docs/API_CONTRACT.md`](../API_CONTRACT.md).
