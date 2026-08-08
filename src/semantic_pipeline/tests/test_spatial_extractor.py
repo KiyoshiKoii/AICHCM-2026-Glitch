@@ -134,6 +134,19 @@ class TestSpatialGeometry:
 
 
 class TestContextualLabelGrounding:
+    def test_preserves_btc_detector_provenance_without_correction(self):
+        car = Detection(
+            object_id="car_0",
+            label="car",
+            mid="/m/0k4j",
+            label_source="btc_detector",
+            bbox=(0.1, 0.2, 0.3, 0.5),
+            confidence=0.9,
+        )
+        grounded, count = ground_detection_labels([car], frame())
+        assert count == 0
+        assert grounded[0].label_source == "btc_detector"
+
     def test_corrects_known_confusion_only_when_frame_has_evidence(self):
         record = frame()
         record = record.model_copy(

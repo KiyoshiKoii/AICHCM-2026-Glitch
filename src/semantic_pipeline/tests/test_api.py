@@ -119,6 +119,24 @@ class TestEdgeCases:
         assert empty.status_code == 422
         assert blank.status_code == 422
 
+    def test_invalid_btc_object_filters_are_rejected(self, client):
+        score = client.post(
+            ENDPOINT,
+            json={
+                "keywords": ["car"],
+                "filters": {"objects": ["car"], "min_object_score": 1.1},
+            },
+        )
+        count = client.post(
+            ENDPOINT,
+            json={
+                "keywords": ["people"],
+                "filters": {"object_counts": {"person": 0}},
+            },
+        )
+        assert score.status_code == 422
+        assert count.status_code == 422
+
 
 class TestInfrastructure:
     def test_health_endpoint(self, client):

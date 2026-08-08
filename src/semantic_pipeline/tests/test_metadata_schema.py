@@ -45,7 +45,11 @@ class TestLegacyCompatibility:
     def test_migration_adds_all_v1_defaults(self):
         migrated = migrate_records([minimal_record()])
         record = migrated[0]
-        assert record["schema_version"] == "1.0"
+        assert record["schema_version"] == "1.1"
+        assert record["keyframe_n"] is None
+        assert record["object_text"] == ""
+        assert record["object_counts"] == {}
+        assert record["has_visual_text"] is False
         assert record["timestamp_ms"] is None
         assert record["entities"]["setting"] == "unknown"
         assert record["code"]["language"] == "unknown"

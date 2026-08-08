@@ -38,6 +38,11 @@
           "type": "custom",
           "tokenizer": "standard",
           "filter": ["lowercase"]
+        },
+        "kis_vietnamese": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase", "asciifolding"]
         }
       }
     }
@@ -49,7 +54,15 @@
       "frame_id": {"type": "keyword"},
       "video_name": {"type": "keyword"},
       "frame_index": {"type": "integer"},
+      "keyframe_n": {"type": "integer"},
       "timestamp_ms": {"type": "long"},
+      "video_title": {"type": "text", "analyzer": "kis_vietnamese"},
+      "video_description": {"type": "text", "analyzer": "kis_vietnamese"},
+      "video_keywords": {"type": "text", "analyzer": "kis_vietnamese"},
+      "object_text": {"type": "text", "analyzer": "kis_english"},
+      "object_labels": {"type": "keyword", "normalizer": "lowercase_keyword"},
+      "object_counts": {"type": "flattened"},
+      "has_visual_text": {"type": "boolean"},
       "caption": {
         "type": "text",
         "analyzer": "kis_english"
@@ -119,8 +132,22 @@
           "raw_label": {"type": "keyword", "normalizer": "lowercase_keyword"},
           "label_source": {"type": "keyword"},
           "label_evidence": {"type": "keyword", "index": false},
+          "mid": {"type": "keyword"},
+          "grid_cell": {"type": "keyword"},
+          "area": {"type": "float"},
+          "color": {"type": "keyword", "normalizer": "lowercase_keyword"},
           "bbox": {"type": "float", "index": false},
           "confidence": {"type": "half_float"}
+        }
+      },
+      "objects": {
+        "type": "nested",
+        "properties": {
+          "label": {"type": "keyword", "normalizer": "lowercase_keyword"},
+          "mid": {"type": "keyword"},
+          "score": {"type": "float"},
+          "grid_cell": {"type": "keyword"},
+          "bbox": {"type": "float", "index": false}
         }
       },
       "spatial_relations": {

@@ -3,6 +3,7 @@
 from code_classifier import classify_record
 from schemas import FrameMetadata
 from task4_acceptance import (
+    audit_btc_object_fusion,
     audit_code_classification,
     audit_entities,
     audit_filtered_queries,
@@ -10,6 +11,33 @@ from task4_acceptance import (
     audit_spatial,
     compare_text_quality,
 )
+
+
+def test_btc_object_fusion_gate_uses_detector_entities_and_native_identity():
+    record = FrameMetadata.model_validate(
+        {
+            "schema_version": "1.1",
+            "frame_id": "L21_V001_f0261",
+            "video_name": "L21_V001",
+            "frame_index": 261,
+            "keyframe_n": 3,
+            "object_counts": {"car": 1},
+            "entities": {"objects": ["car"]},
+            "detections": [
+                {
+                    "object_id": "car_0",
+                    "label": "car",
+                    "mid": "/m/0k4j",
+                    "label_source": "btc_detector",
+                    "bbox": [0.1, 0.2, 0.5, 0.8],
+                    "confidence": 0.9,
+                }
+            ],
+        }
+    )
+    audit = audit_btc_object_fusion([record])
+    assert audit["passed"] is True
+    assert audit["entity_objects"]["f1"] == 1.0
 
 
 def complete_record():

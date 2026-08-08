@@ -396,6 +396,72 @@ def audit_live_elasticsearch(
     }
 
 
+def audit_btc_object_fusion(records: list[FrameMetadata]) -> dict:
+    """Gate BTC-native identity and detector-backed ``entities.objects``."""
+    true_positive = false_positive = false_negative = 0
+    identity_failures: list[str] = []
+    object_failures: list[str] = []
+    for record in records:
+        expected = {item.label.casefold() for item in record.detections}
+        actual = {item.casefold() for item in record.entities.objects}
+        true_positive += len(expected & actual)
+        false_positive += len(actual - expected)
+        false_negative += len(expected - actual)
+        if (
+            record.keyframe_n is None
+            or "_V" not in record.video_name
+            or record.frame_id != f"{record.video_name}_f{record.frame_index:04d}"
+        ):
+            identity_failures.append(record.frame_id)
+        if (
+            len(record.detections) > 15
+            or any(
+                item.label_source not in {"btc_detector", "context_grounding"}
+                or item.mid is None
+                or item.confidence < 0.2
+                for item in record.detections
+            )
+            or sum(record.object_counts.values()) != len(record.detections)
+        ):
+            object_failures.append(record.frame_id)
+    precision = (
+        true_positive / (true_positive + false_positive)
+        if true_positive + false_positive
+        else 1.0
+    )
+    recall = (
+        true_positive / (true_positive + false_negative)
+        if true_positive + false_negative
+        else 1.0
+    )
+    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
+    return {
+        "records": len(records),
+        "entity_objects": {
+            "precision": precision,
+            "recall": recall,
+            "f1": f1,
+            "minimum_f1": 0.70,
+        },
+        "identity_failures": identity_failures[:20],
+        "object_filter_failures": object_failures[:20],
+        "passed": (
+            bool(records)
+            and not identity_failures
+            and not object_failures
+            and f1 >= 0.70
+        ),
+    }
+
+
+def load_metadata_directory(path: str | Path) -> list[FrameMetadata]:
+    directory = Path(path)
+    files = sorted(directory.glob("*.json"))
+    if not files:
+        raise ValueError(f"No BTC metadata JSON files found in {directory}")
+    return [record for source in files for record in validate_metadata_file(source)]
+
+
 def build_report(
     entity_path: Path,
     spatial_path: Path,
@@ -405,6 +471,7 @@ def build_report(
     entity_benchmark_report_path: Path,
     scale_report_path: Path,
     live_elasticsearch: dict | None = None,
+    btc_records: list[FrameMetadata] | None = None,
 ) -> dict:
     entity_records = validate_metadata_file(entity_path)
     spatial_records = validate_metadata_file(spatial_path)
@@ -459,6 +526,9 @@ def build_report(
     }
     if live_elasticsearch is not None:
         core_checks["live_elasticsearch"] = live_elasticsearch["passed"]
+    btc_audit = audit_btc_object_fusion(btc_records) if btc_records is not None else None
+    if btc_audit is not None:
+        core_checks["btc_object_fusion"] = btc_audit["passed"]
 
     label_accuracy = spatial_benchmark["metrics"]["labels"][
         "accuracy_on_localized_objects"
@@ -484,6 +554,10 @@ def build_report(
         "elasticsearch_10k_scale_pilot": scale_benchmark["pilot_gate"]["passed"],
         "target_video_distribution_evaluated": False,
     }
+    if btc_audit is not None:
+        production_gates["btc_entity_objects_f1_at_least_0_7"] = (
+            btc_audit["entity_objects"]["f1"] >= 0.70
+        )
     research_complete = all(core_checks.values())
     production_ready = research_complete and all(production_gates.values())
     limitations = [
@@ -546,6 +620,7 @@ def build_report(
             "artifact": entity_audit,
             "visual_benchmark": entity_benchmark,
         },
+        "btc_object_fusion": btc_audit,
         "code_classification": {
             "entity_artifact": entity_code_audit,
             "spatial_artifact": spatial_code_audit,
@@ -594,9 +669,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--scale-report", type=Path, default=DEFAULT_SCALE_REPORT)
     parser.add_argument("--output", type=Path, default=DEFAULT_ACCEPTANCE_REPORT)
     parser.add_argument("--check-live-elasticsearch", action="store_true")
+    parser.add_argument(
+        "--btc-metadata-dir",
+        type=Path,
+        help="Optional schema v1.1 per-video metadata directory for the BTC gate.",
+    )
     parser.add_argument("--url", default=DEFAULT_ELASTICSEARCH_URL)
     parser.add_argument("--alias", default=DEFAULT_ALIAS_NAME)
-    parser.add_argument("--expected-index", default="semantic_frames_v5")
+    parser.add_argument("--expected-index", default="semantic_frames_v6")
     return parser
 
 
@@ -624,6 +704,11 @@ def main() -> None:
             args.entity_benchmark_report,
             args.scale_report,
             live_elasticsearch=live,
+            btc_records=(
+                load_metadata_directory(args.btc_metadata_dir)
+                if args.btc_metadata_dir is not None
+                else None
+            ),
         )
         write_json_atomically(args.output, report, overwrite=True)
     except Exception as exc:

@@ -36,7 +36,7 @@ Invoke-RestMethod http://127.0.0.1:9200
 
 The current Task 4 bootstrap performs three safe steps:
 
-1. Create the versioned physical index `semantic_frames_v5` if absent.
+1. Create the versioned physical index `semantic_frames_v6` if absent.
 2. Validate and bulk-index the full entity + spatial metadata using `frame_id`
    as Elasticsearch `_id`.
 3. Atomically point the stable alias `semantic_frames` at that index.
@@ -46,7 +46,7 @@ Version v5 adds deterministic SQL metadata and code filters. See
 
 ```powershell
 python src/semantic_pipeline/elasticsearch_backend.py `
-  --index-name semantic_frames_v5 `
+  --index-name semantic_frames_v6 `
   bootstrap `
   --metadata src/semantic_pipeline/sample_frames/metadata_spatial.json
 python src/semantic_pipeline/elasticsearch_backend.py health

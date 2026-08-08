@@ -5,16 +5,22 @@
 #   - Helsinki-NLP dịch dòng tiếng Việt sang tiếng Anh (dòng tiếng Anh giữ nguyên)
 # Kết quả gom vào metadata.json theo schema cho Task 2 (BM25).
 
+from __future__ import annotations
+
 import argparse
 import json
 import re
+import sys
 import time
 from pathlib import Path
 
-import numpy as np
-import torch
-from PIL import Image
-from transformers import AutoProcessor, AutoModelForCausalLM, pipeline
+try:
+    from common.frame_ref import frame_id as btc_frame_id
+    from common.frame_ref import resolve as resolve_btc_frame
+except ImportError:  # direct package import from repository root
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from common.frame_ref import frame_id as btc_frame_id
+    from common.frame_ref import resolve as resolve_btc_frame
 
 FLORENCE_MODEL_ID = "microsoft/Florence-2-base"
 TRANSLATION_MODEL_ID = "Helsinki-NLP/opus-mt-vi-en"
@@ -34,9 +40,21 @@ def is_vietnamese(text: str) -> bool:
     return bool(VIETNAMESE_CHARS.search(text))
 
 
-def parse_frame_info(filename: str) -> dict:
+def parse_frame_info(filename: str | Path) -> dict:
+    path = Path(filename)
+    if re.fullmatch(r"L\d+_V\d+", path.parent.name) and path.stem.isdigit():
+        ref = resolve_btc_frame(path.parent.name, int(path.stem))
+        return {
+            "schema_version": "1.1",
+            "frame_id": btc_frame_id(ref),
+            "video_name": ref.video_id,
+            "frame_index": ref.frame_idx,
+            "keyframe_n": ref.keyframe_n,
+            "timestamp_ms": ref.timestamp_ms,
+            "has_visual_text": True,
+        }
     # "vid01_f0001.png" -> video_name="vid01.mp4", frame_index=1, frame_id="vid01_f0001"
-    stem = Path(filename).stem
+    stem = path.stem
     video_name, frame_part = stem.rsplit("_f", 1)
     return {
         "frame_id": stem,
@@ -49,6 +67,13 @@ class SemanticExtractor:
     """Gom 4 model: Florence-2 (caption) + PaddleOCR (detect) + VietOCR (rec) + translator."""
 
     def __init__(self):
+        import numpy as np
+        import torch
+        from PIL import Image
+        from transformers import AutoModelForCausalLM, AutoProcessor, pipeline
+
+        self.np = np
+        self.Image = Image
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.dtype = torch.float16 if self.device == "cuda" else torch.float32
         print(f"[init] device={self.device}, dtype={self.dtype}")
@@ -129,7 +154,7 @@ class SemanticExtractor:
         crops = []
         kept_paddle_texts = []  # phải song song với crops, vì có box bị bỏ qua
         for poly, paddle_text in zip(polys, paddle_texts):
-            pts = np.array(poly).reshape(-1, 2)
+            pts = self.np.array(poly).reshape(-1, 2)
             x1 = max(int(pts[:, 0].min()) - CROP_PADDING, 0)
             y1 = max(int(pts[:, 1].min()) - CROP_PADDING, 0)
             x2 = min(int(pts[:, 0].max()) + CROP_PADDING, width)
@@ -178,12 +203,16 @@ class SemanticExtractor:
         return out
 
     def process_image(self, image_path: Path) -> dict:
-        image = Image.open(image_path).convert("RGB")
-        caption = self.caption(image)
-        raw_lines = self.ocr_lines(image, image_path)
+        with self.Image.open(image_path) as source:
+            image = source.convert("RGB")
+        try:
+            caption = self.caption(image)
+            raw_lines = self.ocr_lines(image, image_path)
+        finally:
+            image.close()
         en_lines = self.translate_lines(raw_lines)
 
-        info = parse_frame_info(image_path.name)
+        info = parse_frame_info(image_path)
         info["caption"] = caption
         info["ocr_text"] = " ".join(en_lines)  # tiếng Anh -> nạp BM25 (Task 2)
         info["ocr_text_raw"] = " ".join(raw_lines)  # VietOCR gốc -> đối chiếu (Task 5)
@@ -198,7 +227,8 @@ def extract_metadata(input_dir: str, output_path: str, limit: int | None = None,
         print(f"[run] Processing single image: {single_image}")
     else:
         image_paths = sorted(
-            p for p in Path(input_dir).iterdir() if p.suffix.lower() in IMAGE_EXTENSIONS
+            p for p in Path(input_dir).rglob("*")
+            if p.is_file() and p.suffix.lower() in IMAGE_EXTENSIONS
         )
         if limit is not None:
             image_paths = image_paths[:limit]

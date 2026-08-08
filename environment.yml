@@ -10,6 +10,7 @@ dependencies:
     # Lưu ý: Cài đặt PyTorch thủ công theo cấu hình máy
     - transformers==4.49.0
     - numpy<2.0.0
+    - pyarrow>=15,<20
     - sentence-transformers
     - qdrant-client
     - fastapi

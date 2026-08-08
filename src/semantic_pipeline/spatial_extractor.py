@@ -16,7 +16,7 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Protocol
+from typing import Literal, Protocol
 
 from PIL import Image
 
@@ -43,7 +43,7 @@ except ImportError:
 
 FLORENCE_MODEL_ID = "microsoft/Florence-2-base"
 FLORENCE_OD_TASK = "<OD>"
-SPATIAL_RULE_VERSION = "spatial-v2"
+SPATIAL_RULE_VERSION = "spatial-v3"
 LABEL_GROUNDING_VERSION = "label-grounding-v1"
 DEFAULT_INPUT_PATH = DEFAULT_METADATA_PATH.with_name("metadata_entities.json")
 DEFAULT_OUTPUT_PATH = DEFAULT_METADATA_PATH.with_name("metadata_spatial.json")
@@ -112,6 +112,8 @@ class RawDetection:
     # Pixel coordinates [x1, y1, x2, y2] in the original image.
     bbox: tuple[float, float, float, float]
     confidence: float | None = None
+    mid: str | None = None
+    label_source: Literal["detector", "btc_detector"] = "detector"
 
 
 class ObjectDetector(Protocol):
@@ -205,6 +207,27 @@ class FlorenceObjectDetector:
         return raw
 
 
+class BTCObjectDetector:
+    """Record-aware detector backed by the per-video BTC Parquet index."""
+
+    model = "btc-openimages-v4"
+
+    def detect_frame(self, record: FrameMetadata) -> list[Detection]:
+        if record.keyframe_n is None:
+            raise ValueError(
+                f"BTC object lookup requires keyframe_n on {record.frame_id}"
+            )
+        try:
+            from btc_objects import load_frame_detections
+        except ImportError:
+            from .btc_objects import load_frame_detections
+        return load_frame_detections(
+            Path(record.video_name).stem,
+            record.keyframe_n,
+            prefer_parquet=True,
+        )
+
+
 def bbox_iou(
     first: tuple[float, float, float, float],
     second: tuple[float, float, float, float],
@@ -250,7 +273,15 @@ def normalise_detections(
     if max_detections < 1:
         raise ValueError("max_detections must be at least 1")
 
-    candidates: list[tuple[str, tuple[float, float, float, float], float]] = []
+    candidates: list[
+        tuple[
+            str,
+            tuple[float, float, float, float],
+            float,
+            str | None,
+            Literal["detector", "btc_detector"],
+        ]
+    ] = []
     for raw in raw_detections:
         label = _clean_label(raw.label)
         if not label or len(raw.bbox) != 4 or not all(
@@ -273,15 +304,15 @@ def normalise_detections(
         box = (x1, y1, x2, y2)
         if any(
             previous_label == label and bbox_iou(previous_box, box) >= duplicate_iou
-            for previous_label, previous_box, _ in candidates
+            for previous_label, previous_box, *_ in candidates
         ):
             continue
-        candidates.append((label, box, confidence))
+        candidates.append((label, box, confidence, raw.mid, raw.label_source))
 
     candidates.sort(key=lambda item: (item[0], item[1][0], item[1][1], item[1][2]))
     counts: defaultdict[str, int] = defaultdict(int)
     detections: list[Detection] = []
-    for label, box, confidence in candidates[:max_detections]:
+    for label, box, confidence, mid, label_source in candidates[:max_detections]:
         base = _object_id_base(label)
         occurrence = counts[base]
         counts[base] += 1
@@ -291,6 +322,8 @@ def normalise_detections(
                 label=label,
                 bbox=box,
                 confidence=confidence,
+                mid=mid,
+                label_source=label_source,
             )
         )
     return detections
@@ -362,12 +395,13 @@ def ground_detection_labels(
         detector_label = detection.raw_label or detection.label
         target_label, evidence = _grounded_label(detection, record)
         if target_label == detector_label:
+            detector_source = "btc_detector" if detection.mid else "detector"
             grounded.append(
                 detection.model_copy(
                     update={
                         "label": detector_label,
                         "raw_label": None,
-                        "label_source": "detector",
+                        "label_source": detector_source,
                         "label_evidence": [],
                     }
                 )
@@ -533,10 +567,22 @@ def preflight_inputs(
     return records, images
 
 
+def preflight_metadata(
+    metadata_path: str | Path,
+    frame_ids: set[str] | None = None,
+) -> list[FrameMetadata]:
+    records = validate_metadata_records(load_metadata_file(metadata_path))
+    known_ids = {record.frame_id for record in records}
+    unknown = (frame_ids or set()) - known_ids
+    if unknown:
+        raise ValueError(f"Unknown --frame-id values: {sorted(unknown)}")
+    return records
+
+
 def enrich_spatial_records(
     records: list[FrameMetadata],
     detector: ObjectDetector,
-    image_loader: Callable[[FrameMetadata], Image.Image],
+    image_loader: Callable[[FrameMetadata], Image.Image] | None,
     frame_ids: set[str] | None = None,
     limit: int | None = None,
     overwrite_existing: bool = False,
@@ -568,20 +614,26 @@ def enrich_spatial_records(
             continue
         eligible += 1
 
-        image = image_loader(record)
-        try:
-            raw = detector.detect(image)
-            detections = normalise_detections(
-                raw,
-                image.width,
-                image.height,
-                default_confidence=default_confidence,
-                min_box_area=min_box_area,
-                duplicate_iou=duplicate_iou,
-                max_detections=max_detections,
-            )
-        finally:
-            image.close()
+        detect_frame = getattr(detector, "detect_frame", None)
+        if callable(detect_frame):
+            detections = detect_frame(record)
+        else:
+            if image_loader is None:
+                raise ValueError("image_loader is required for image-based detectors")
+            image = image_loader(record)
+            try:
+                raw = detector.detect(image)
+                detections = normalise_detections(
+                    raw,
+                    image.width,
+                    image.height,
+                    default_confidence=default_confidence,
+                    min_box_area=min_box_area,
+                    duplicate_iou=duplicate_iou,
+                    max_detections=max_detections,
+                )
+            finally:
+                image.close()
         detections, grounded_labels = ground_detection_labels(detections, record)
         relations = infer_spatial_relations(
             detections,
@@ -709,6 +761,7 @@ def enrich_spatial_file(
     force: bool = False,
     overwrite_existing: bool = False,
     checkpoint_every: int = 5,
+    source: Literal["florence", "btc-objects"] = "florence",
     **reasoning_options,
 ) -> dict:
     input_path = Path(input_path).resolve()
@@ -718,7 +771,11 @@ def enrich_spatial_file(
     if checkpoint_every < 1:
         raise ValueError("checkpoint_every must be at least 1")
 
-    source_records, images = preflight_inputs(input_path, image_dir, frame_ids)
+    if source == "btc-objects":
+        source_records = preflight_metadata(input_path, frame_ids)
+        images: dict[str, Path] = {}
+    else:
+        source_records, images = preflight_inputs(input_path, image_dir, frame_ids)
     if resume:
         if not output_path.exists():
             raise FileNotFoundError(f"Cannot resume; output does not exist: {output_path}")
@@ -746,7 +803,7 @@ def enrich_spatial_file(
         summary = enrich_spatial_records(
             records,
             detector,
-            load_image,
+            None if source == "btc-objects" else load_image,
             frame_ids=frame_ids,
             limit=limit,
             overwrite_existing=overwrite_existing,
@@ -769,6 +826,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)
     parser.add_argument("--model", default=os.getenv("FLORENCE_MODEL", FLORENCE_MODEL_ID))
     parser.add_argument("--device", choices=["auto", "cpu", "cuda"], default="auto")
+    parser.add_argument(
+        "--source",
+        choices=["florence", "btc-objects"],
+        default="florence",
+        help="Use BTC Parquet detections without requiring keyframe images.",
+    )
     parser.add_argument("--frame-id", action="append")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--checkpoint-every", type=int, default=5)
@@ -808,11 +871,14 @@ def main() -> None:
     frame_ids = set(args.frame_id) if args.frame_id else None
     try:
         if args.check_input:
-            records, images = preflight_inputs(args.input, args.image_dir, frame_ids)
+            if args.source == "btc-objects":
+                records = preflight_metadata(args.input, frame_ids)
+            else:
+                records, _ = preflight_inputs(args.input, args.image_dir, frame_ids)
             selected = frame_ids or {record.frame_id for record in records}
             print(
                 f"Spatial input ready: records={len(records)}, "
-                f"selected_images={len(selected)}, image_dir={args.image_dir.resolve()}"
+                f"selected={len(selected)}, source={args.source}"
             )
             return
 
@@ -838,7 +904,11 @@ def main() -> None:
             )
             return
 
-        detector = FlorenceObjectDetector(model_id=args.model, device=args.device)
+        detector = (
+            BTCObjectDetector()
+            if args.source == "btc-objects"
+            else FlorenceObjectDetector(model_id=args.model, device=args.device)
+        )
         summary = enrich_spatial_file(
             input_path=args.input,
             image_dir=args.image_dir,
@@ -850,6 +920,7 @@ def main() -> None:
             force=args.force,
             overwrite_existing=args.overwrite_existing,
             checkpoint_every=args.checkpoint_every,
+            source=args.source,
             default_confidence=args.detection_confidence,
             min_box_area=args.min_box_area,
             max_detections=args.max_detections,

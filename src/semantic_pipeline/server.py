@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 from typing import Annotated, Literal
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_validator
 
 try:
     # Chạy trực tiếp: python src/semantic_pipeline/server.py
@@ -29,6 +29,8 @@ class SearchFilters(BaseModel):
     setting: Literal["unknown", "indoor", "outdoor"] | None = None
     locations: list[FilterValue] | None = Field(default=None, min_length=1)
     objects: list[FilterValue] | None = Field(default=None, min_length=1)
+    min_object_score: float | None = Field(default=None, ge=0.0, le=1.0)
+    object_counts: dict[str, int] | None = None
     actions: list[FilterValue] | None = Field(default=None, min_length=1)
     colors: list[FilterValue] | None = Field(default=None, min_length=1)
     code_language: Literal["unknown", "sql"] | None = None
@@ -36,6 +38,21 @@ class SearchFilters(BaseModel):
     spatial_relations: list["SpatialRelationFilter"] | None = Field(
         default=None, min_length=1
     )
+
+    @field_validator("object_counts")
+    @classmethod
+    def validate_object_counts(cls, value: dict[str, int] | None) -> dict[str, int] | None:
+        if value is None:
+            return None
+        if not value:
+            raise ValueError("object_counts must not be empty")
+        cleaned: dict[str, int] = {}
+        for label, count in value.items():
+            normalized = " ".join(label.strip().casefold().split())
+            if not normalized or count < 1:
+                raise ValueError("object_counts requires labels and counts >= 1")
+            cleaned[normalized] = count
+        return cleaned
 
 
 class SpatialRelationFilter(BaseModel):
@@ -134,7 +151,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Semantic Pipeline API (Dev 2)",
     description="Semantic search trên caption, OCR, entity/spatial và code metadata.",
-    version="1.0.0",
+    version="1.1.0",
     lifespan=lifespan,
 )
 

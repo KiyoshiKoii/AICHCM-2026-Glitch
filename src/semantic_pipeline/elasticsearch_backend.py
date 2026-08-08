@@ -23,30 +23,35 @@ except ImportError:  # BM25-only development remains supported.
 
 try:
     from code_classifier import classify_record
+    from object_ontology import get_default_ontology
     from schemas import DEFAULT_METADATA_PATH, FrameMetadata, validate_metadata_file
 except ImportError:
     from .code_classifier import classify_record
+    from .object_ontology import get_default_ontology
     from .schemas import DEFAULT_METADATA_PATH, FrameMetadata, validate_metadata_file
 
 SEMANTIC_DIR = Path(__file__).resolve().parent
 DEFAULT_DEFINITION_PATH = SEMANTIC_DIR / "elasticsearch_index.json"
 DEFAULT_ELASTICSEARCH_URL = "http://127.0.0.1:9200"
-DEFAULT_INDEX_NAME = "semantic_frames_v5"
+DEFAULT_INDEX_NAME = "semantic_frames_v6"
 DEFAULT_ALIAS_NAME = "semantic_frames"
 MUTATING_COMMANDS = {"setup", "activate", "ingest", "bootstrap"}
 
 SEARCH_FIELDS = [
     "code.search_terms^4.0",
     "code.patterns^3.0",
-    "ocr_text^2.0",
-    "ocr_text.stemmed^1.5",
-    "caption",
+    "ocr_text^3.0",
+    "ocr_text.stemmed^2.0",
+    "object_text^2.0",
+    "caption^2.0",
+    "video_title^1.5",
+    "video_description^0.5",
+    "video_keywords",
 ]
 FILTER_FIELDS = {
     "time_of_day": "entities.time_of_day",
     "setting": "entities.setting",
     "locations": "entities.locations",
-    "objects": "entities.objects",
     "actions": "entities.actions",
     "colors": "entities.colors",
     "code_language": "code.language",
@@ -214,32 +219,53 @@ def iter_bulk_actions(
     index_name: str = DEFAULT_INDEX_NAME,
 ) -> Iterator[dict]:
     """Stream validated documents without loading a second raw corpus copy."""
-    for record in validate_metadata_file(metadata_path):
-        # Real validated records are classified at the ingestion boundary too,
-        # so bootstrapping directly from legacy metadata cannot silently index
-        # every code.language as unknown. Lightweight test doubles are preserved.
-        if isinstance(record, FrameMetadata):
-            record = classify_record(record)
-        indexed_relations = collapse_spatial_relations_for_index(
-            record.spatial_relations
-        )
-        source = record.model_dump(mode="json")
-        source["spatial_relations"] = [
-            relation.model_dump(mode="json") for relation in indexed_relations
-        ]
-        source["processing"].update(
-            {
-                "spatial_index_policy": SPATIAL_INDEX_POLICY,
-                "spatial_relations_raw_count": len(record.spatial_relations),
-                "spatial_relations_indexed_count": len(indexed_relations),
+    source_path = Path(metadata_path)
+    metadata_files = (
+        sorted(source_path.glob("*.json")) if source_path.is_dir() else [source_path]
+    )
+    if not metadata_files:
+        raise ValueError(f"No metadata JSON files found in {source_path}")
+    for metadata_file in metadata_files:
+        for record in validate_metadata_file(metadata_file):
+            # Classify at ingestion so legacy metadata cannot silently index
+            # every code.language as unknown. Test doubles are preserved.
+            if isinstance(record, FrameMetadata):
+                record = classify_record(record)
+            indexed_relations = collapse_spatial_relations_for_index(
+                record.spatial_relations
+            )
+            source = record.model_dump(mode="json")
+            # Flattened values are keywords. Padding preserves numeric ranges.
+            source["object_counts"] = {
+                label: f"{count:03d}"
+                for label, count in getattr(record, "object_counts", {}).items()
             }
-        )
-        yield {
-            "_op_type": "index",
-            "_index": index_name,
-            "_id": record.frame_id,
-            "_source": source,
-        }
+            source["spatial_relations"] = [
+                relation.model_dump(mode="json") for relation in indexed_relations
+            ]
+            source["objects"] = [
+                {
+                    "label": detection.label,
+                    "mid": detection.mid,
+                    "score": detection.confidence,
+                    "grid_cell": detection.grid_cell,
+                    "bbox": list(detection.bbox),
+                }
+                for detection in getattr(record, "detections", [])
+            ]
+            source["processing"].update(
+                {
+                    "spatial_index_policy": SPATIAL_INDEX_POLICY,
+                    "spatial_relations_raw_count": len(record.spatial_relations),
+                    "spatial_relations_indexed_count": len(indexed_relations),
+                }
+            )
+            yield {
+                "_op_type": "index",
+                "_index": index_name,
+                "_id": record.frame_id,
+                "_source": source,
+            }
 
 
 def bulk_ingest(
@@ -288,7 +314,60 @@ def build_search_query(keywords: list[str], filters: dict | None = None) -> dict
         return {"match_none": {}}
 
     filter_clauses = []
-    for name, value in (filters or {}).items():
+    supplied_filters = dict(filters or {})
+    min_object_score = supplied_filters.pop("min_object_score", 0.2)
+    if not isinstance(min_object_score, (int, float)) or not 0 <= min_object_score <= 1:
+        raise ValueError("Filter 'min_object_score' must be between 0 and 1")
+    object_count_filters = supplied_filters.pop("object_counts", None)
+    object_filters = supplied_filters.pop("objects", None)
+
+    if object_filters is not None:
+        if not isinstance(object_filters, list) or not object_filters or not all(
+            isinstance(item, str) and item.strip() for item in object_filters
+        ):
+            raise ValueError("Filter 'objects' must be a non-empty string list")
+        ontology = get_default_ontology()
+        for term in object_filters:
+            mids, unmapped = ontology.map_query_terms([term])
+            identity_clause = (
+                {"terms": {"objects.mid": sorted(mids)}}
+                if mids
+                else {"term": {"objects.label": unmapped[0].casefold()}}
+            )
+            filter_clauses.append(
+                {
+                    "nested": {
+                        "path": "objects",
+                        "query": {
+                            "bool": {
+                                "filter": [
+                                    identity_clause,
+                                    {"range": {"objects.score": {"gte": min_object_score}}},
+                                ]
+                            }
+                        },
+                    }
+                }
+            )
+
+    if object_count_filters is not None:
+        if not isinstance(object_count_filters, dict) or not object_count_filters:
+            raise ValueError("Filter 'object_counts' must be a non-empty object")
+        for term, minimum in object_count_filters.items():
+            if not isinstance(term, str) or not term.strip() or not isinstance(minimum, int) or minimum < 1:
+                raise ValueError("Object count filters require non-empty labels and counts >= 1")
+            canonical = term.strip()
+            filter_clauses.append(
+                {
+                    "range": {
+                        f"object_counts.{canonical.casefold()}": {
+                            "gte": f"{minimum:03d}"
+                        }
+                    }
+                }
+            )
+
+    for name, value in supplied_filters.items():
         if name == "spatial_relations":
             if not isinstance(value, list) or not value:
                 raise ValueError("Filter 'spatial_relations' must be a non-empty list")
@@ -369,7 +448,9 @@ def build_search_query(keywords: list[str], filters: dict | None = None) -> dict
                     "code.search_terms^5.0",
                     "code.patterns^4.0",
                     "ocr_text^3.0",
+                    "object_text^2.0",
                     "caption^2.0",
+                    "video_title^1.5",
                 ],
                 "type": "phrase",
                 "boost": 2.0,
@@ -486,6 +567,13 @@ def build_parser() -> argparse.ArgumentParser:
     search.add_argument("--setting")
     search.add_argument("--location", dest="locations", action="append")
     search.add_argument("--object", dest="objects", action="append")
+    search.add_argument("--min-object-score", type=float, default=0.2)
+    search.add_argument(
+        "--object-count",
+        dest="object_counts",
+        action="append",
+        metavar="LABEL=MINIMUM",
+    )
     search.add_argument("--action", dest="actions", action="append")
     search.add_argument("--color", dest="colors", action="append")
     search.add_argument("--code-language", choices=("unknown", "sql"))
@@ -508,8 +596,26 @@ def validate_cli_args(args: argparse.Namespace) -> None:
     if args.command in MUTATING_COMMANDS and not args.index_name:
         raise ValueError(
             f"--index-name is required for {args.command}; use an explicit "
-            "version such as semantic_frames_v5"
+            "version such as semantic_frames_v6"
         )
+
+
+def parse_object_counts(values: list[str] | None) -> dict[str, int] | None:
+    if not values:
+        return None
+    result: dict[str, int] = {}
+    for value in values:
+        label, separator, minimum = value.rpartition("=")
+        if not separator or not label.strip():
+            raise ValueError("--object-count must have form LABEL=MINIMUM")
+        try:
+            parsed = int(minimum)
+        except ValueError as exc:
+            raise ValueError("--object-count minimum must be an integer") from exc
+        if parsed < 1:
+            raise ValueError("--object-count minimum must be at least 1")
+        result[label.strip()] = parsed
+    return result
 
 
 def main() -> None:
@@ -555,6 +661,10 @@ def main() -> None:
                     "setting": args.setting,
                     "locations": args.locations,
                     "objects": args.objects,
+                    "min_object_score": (
+                        args.min_object_score if args.objects is not None else None
+                    ),
+                    "object_counts": parse_object_counts(args.object_counts),
                     "actions": args.actions,
                     "colors": args.colors,
                     "code_language": args.code_language,

@@ -56,7 +56,7 @@ Mapping v4 không có object `code`, nên phải dùng physical index v5:
 
 ```powershell
 python src/semantic_pipeline/elasticsearch_backend.py `
-  --index-name semantic_frames_v5 `
+  --index-name semantic_frames_v6 `
   bootstrap `
   --metadata src/semantic_pipeline/sample_frames/metadata_spatial.json
 ```

@@ -23,14 +23,35 @@ src/semantic_pipeline/note.txt
 .env.elasticsearch.secure
 src/semantic_pipeline/.local-secure/
 
+# ============================================================
+# DATASET BTC - TUYỆT ĐỐI KHÔNG COMMIT (hàng chục GB, hàng trăm nghìn file)
+# ============================================================
+# Dùng `data/*` chứ không phải `data/` — git không cho phép re-include file nằm
+# trong một thư mục đã bị exclude, nên phải chặn từng cấp để chừa đường cho `!`.
+data/*
+!data/README.md
+!data/raw/
+data/raw/*
+!data/raw/MANIFEST.csv
+
+# Chặn luôn tên thư mục gốc lúc mới giải nén, phòng trường hợp `git add .`
+# chạy trước khi kịp gom vào data/raw/ bằng scripts/organize_data.ps1
+/Keyframes_*/
+/objects-aic*/
+/clip-features-*/
+/map-keyframes-*/
+/media-info-*/
+/vbs2023-*/
+
 # Dev 1 (Visual Pipeline) - Vector Database
 src/visual_pipeline/local_qdrant_db/
 
 # Dev 2 (Semantic Pipeline) - Raw Data
 # metadata.json ĐƯỢC commit: với 24 frame mẫu nó chỉ ~37KB, và test (Task 5)
 # cần nó để chạy được ngay sau khi clone.
-# ⚠️ Khi chuyển sang dataset thật của BTC (hàng chục nghìn frame), file này sẽ
-# phình lên hàng trăm MB -> lúc đó phải chặn lại và đổi test sang fixture nhỏ.
+# sample_frames/ giữ nguyên vai trò FIXTURE TEST. Metadata chạy trên dataset
+# thật của BTC phải ghi ra data/processed/metadata/ (đã bị chặn ở khối data/
+# phía trên), tuyệt đối không ghi đè lên sample_frames/metadata.json.
 src/semantic_pipeline/*.csv
 src/semantic_pipeline/sample_frames/metadata_v1.json
 src/semantic_pipeline/sample_frames/metadata_code*.json

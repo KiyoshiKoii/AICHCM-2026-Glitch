@@ -3,6 +3,7 @@
 # Florence-2 lỗi với transformers >= 4.50 (bug trust_remote_code). PHẢI pin < 4.50.
 transformers==4.49.0
 numpy<2.0.0
+pyarrow>=15,<20     # Gom BTC objects JSON thanh Parquet theo tung video.
 sentence-transformers
 qdrant-client
 fastapi

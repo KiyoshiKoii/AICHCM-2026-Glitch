@@ -184,12 +184,15 @@ class TestIndexDefinition:
         )
         assert code["properties"]["evidence"]["index"] is False
 
-    def test_default_physical_index_is_v5_for_code_mapping(self):
-        assert DEFAULT_INDEX_NAME == "semantic_frames_v5"
+    def test_default_physical_index_is_v6_for_btc_mapping(self):
+        assert DEFAULT_INDEX_NAME == "semantic_frames_v6"
 
     def test_mapping_json_is_valid_utf8(self):
         raw = json.loads(DEFAULT_DEFINITION_PATH.read_text(encoding="utf-8"))
         assert "kis_english" in raw["settings"]["analysis"]["analyzer"]
+        assert "kis_vietnamese" in raw["settings"]["analysis"]["analyzer"]
+        assert raw["mappings"]["properties"]["objects"]["type"] == "nested"
+        assert raw["mappings"]["properties"]["object_counts"]["type"] == "flattened"
 
     def test_ensure_index_creates_once_without_deleting(self):
         client = FakeClient(exists=False)
@@ -228,12 +231,13 @@ class TestBulkIngest:
         first = actions[0]
         assert first["_id"] == first["_source"]["frame_id"]
         assert first["_index"] == "semantic_frames_test"
-        assert first["_source"]["schema_version"] == "1.0"
+        assert first["_source"]["schema_version"] == "1.1"
         assert first["_source"]["entities"]["setting"] == "unknown"
         assert first["_source"]["processing"]["spatial_index_policy"] == (
             "label-triple-max-confidence-v1"
         )
         assert first["_source"]["processing"]["spatial_relations_raw_count"] == 0
+        assert first["_source"]["objects"] == []
         assert (
             first["_source"]["processing"]["spatial_relations_indexed_count"]
             == 0
@@ -272,9 +276,9 @@ class TestBulkIngest:
             lambda _path: [ClassifiedRecord()],
         )
 
-        action = next(iter_bulk_actions("unused.json", "semantic_frames_v5"))
+        action = next(iter_bulk_actions("unused.json", "semantic_frames_v6"))
 
-        assert action["_index"] == "semantic_frames_v5"
+        assert action["_index"] == "semantic_frames_v6"
         assert action["_source"]["code"] == code_metadata
 
     def test_collapses_query_equivalent_instances_but_keeps_best_confidence(self):
@@ -352,15 +356,24 @@ class TestSearch:
         assert multi_match["fields"] == [
             "code.search_terms^4.0",
             "code.patterns^3.0",
-            "ocr_text^2.0",
-            "ocr_text.stemmed^1.5",
-            "caption",
+            "ocr_text^3.0",
+            "ocr_text.stemmed^2.0",
+            "object_text^2.0",
+            "caption^2.0",
+            "video_title^1.5",
+            "video_description^0.5",
+            "video_keywords",
         ]
-        assert query["bool"]["filter"] == [
-            {"term": {"entities.setting": "outdoor"}},
-            {"term": {"entities.objects": "person"}},
-            {"term": {"entities.objects": "car"}},
-        ]
+        filters = query["bool"]["filter"]
+        assert {"term": {"entities.setting": "outdoor"}} in filters
+        object_filters = [item["nested"] for item in filters if "nested" in item]
+        assert len(object_filters) == 2
+        assert all(item["path"] == "objects" for item in object_filters)
+        assert all(
+            item["query"]["bool"]["filter"][-1]
+            == {"range": {"objects.score": {"gte": 0.2}}}
+            for item in object_filters
+        )
         assert query["bool"]["should"] == [
             {
                 "multi_match": {
@@ -369,7 +382,9 @@ class TestSearch:
                         "code.search_terms^5.0",
                         "code.patterns^4.0",
                         "ocr_text^3.0",
+                        "object_text^2.0",
                         "caption^2.0",
+                        "video_title^1.5",
                     ],
                     "type": "phrase",
                     "boost": 2.0,
@@ -390,6 +405,24 @@ class TestSearch:
             {"term": {"code.language": "sql"}},
             {"term": {"code.patterns.keyword": "select_from"}},
             {"term": {"code.patterns.keyword": "order_by"}},
+        ]
+
+    def test_btc_object_score_and_count_filters(self):
+        query = build_search_query(
+            ["three people near a car"],
+            filters={
+                "objects": ["car"],
+                "min_object_score": 0.6,
+                "object_counts": {"person": 3},
+            },
+        )
+        nested = query["bool"]["filter"][0]["nested"]
+        assert nested["path"] == "objects"
+        assert nested["query"]["bool"]["filter"][-1] == {
+            "range": {"objects.score": {"gte": 0.6}}
+        }
+        assert {"range": {"object_counts.person": {"gte": "003"}}} in query["bool"][
+            "filter"
         ]
 
     def test_rejects_unknown_filter(self):
@@ -451,7 +484,7 @@ class TestCliSafety:
 
     def test_explicit_versioned_index_is_accepted(self):
         args = build_parser().parse_args(
-            ["--index-name", "semantic_frames_v5", "bootstrap"]
+            ["--index-name", "semantic_frames_v6", "bootstrap"]
         )
         validate_cli_args(args)
 

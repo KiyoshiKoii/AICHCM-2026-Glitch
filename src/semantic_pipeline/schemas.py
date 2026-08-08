@@ -24,7 +24,7 @@ from pydantic import (
     model_validator,
 )
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "1.1"
 DEFAULT_METADATA_PATH = Path(__file__).resolve().parent / "sample_frames" / "metadata.json"
 
 NonEmptyString = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
@@ -136,8 +136,24 @@ class Detection(StrictModel):
     # corrects a known visual-label confusion.  Old metadata remains valid:
     # detector-only records use the defaults below.
     raw_label: NonEmptyString | None = None
-    label_source: Literal["detector", "context_grounding"] = "detector"
+    label_source: Literal[
+        "detector", "context_grounding", "btc_detector"
+    ] = "detector"
     label_evidence: list[NonEmptyString] = Field(default_factory=list)
+    mid: NonEmptyString | None = None
+    grid_cell: Literal[
+        "top-left",
+        "top-center",
+        "top-right",
+        "center-left",
+        "center",
+        "center-right",
+        "bottom-left",
+        "bottom-center",
+        "bottom-right",
+    ] | None = None
+    area: Annotated[float, Field(gt=0.0, le=1.0)] | None = None
+    color: NonEmptyString | None = None
     # Normalised [x1, y1, x2, y2], measured from the image's top-left corner.
     bbox: tuple[
         NormalizedCoordinate,
@@ -164,7 +180,7 @@ class Detection(StrictModel):
         x1, y1, x2, y2 = self.bbox
         if x1 >= x2 or y1 >= y2:
             raise ValueError("bbox must satisfy x1 < x2 and y1 < y2")
-        if self.label_source == "detector" and (
+        if self.label_source in {"detector", "btc_detector"} and (
             self.raw_label is not None or self.label_evidence
         ):
             raise ValueError(
@@ -178,6 +194,9 @@ class Detection(StrictModel):
             raise ValueError(
                 "context-grounded labels require a different raw_label and evidence"
             )
+        expected_area = (x2 - x1) * (y2 - y1)
+        if self.area is not None and abs(self.area - expected_area) > 1e-5:
+            raise ValueError("area must equal the normalized bbox area")
         return self
 
 
@@ -216,21 +235,46 @@ class ProcessingMetadata(StrictModel):
 class FrameMetadata(StrictModel):
     """Canonical persisted document for one video frame."""
 
-    schema_version: Literal["1.0"] = SCHEMA_VERSION
+    schema_version: Literal["1.0", "1.1"] = SCHEMA_VERSION
     frame_id: NonEmptyString
     video_name: NonEmptyString
     frame_index: Annotated[int, Field(ge=0)]
+    keyframe_n: Annotated[int, Field(ge=1)] | None = None
     timestamp_ms: Annotated[int, Field(ge=0)] | None = None
 
-    caption: str
+    caption: str = ""
     ocr_text: str = ""
     ocr_text_raw: str = ""
+
+    video_title: str = ""
+    video_description: str = ""
+    video_keywords: list[NonEmptyString] = Field(default_factory=list)
+    object_text: str = ""
+    object_labels: list[NonEmptyString] = Field(default_factory=list)
+    object_counts: dict[NonEmptyString, Annotated[int, Field(ge=1)]] = Field(
+        default_factory=dict
+    )
+    has_visual_text: bool = False
 
     entities: FrameEntities = Field(default_factory=FrameEntities)
     code: CodeMetadata = Field(default_factory=CodeMetadata)
     detections: list[Detection] = Field(default_factory=list)
     spatial_relations: list[SpatialRelation] = Field(default_factory=list)
     processing: ProcessingMetadata = Field(default_factory=ProcessingMetadata)
+
+    @field_validator("video_keywords", "object_labels")
+    @classmethod
+    def normalise_search_values(cls, values: list[str]) -> list[str]:
+        return list(dict.fromkeys(value.strip().casefold() for value in values))
+
+    @field_validator("object_counts")
+    @classmethod
+    def normalise_object_counts(cls, values: dict[str, int]) -> dict[str, int]:
+        normalised: dict[str, int] = {}
+        for label, count in values.items():
+            key = " ".join(label.strip().casefold().split())
+            normalised[key] = normalised.get(key, 0) + count
+        return normalised
 
     @model_validator(mode="after")
     def validate_identity_and_references(self) -> "FrameMetadata":
