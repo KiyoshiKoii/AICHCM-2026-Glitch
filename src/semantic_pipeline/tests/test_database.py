@@ -1,5 +1,7 @@
 """Task 5 - Test tầng BM25 (tokenizer, xếp hạng, khóa chính)."""
 
+import json
+
 import pytest
 
 from database import tokenize
@@ -32,6 +34,9 @@ class TestTokenizer:
     def test_empty_and_punctuation_only(self):
         assert tokenize("") == []
         assert tokenize("!!! ???") == []
+
+    def test_vietnamese_diacritics_are_ascii_folded(self):
+        assert tokenize("người và phương tiện") == tokenize("nguoi phuong tien")
 
 
 class TestSearch:
@@ -73,6 +78,50 @@ class TestSearch:
         assert record["code"]["language"] == "sql"
         assert "not exists" in record["code"]["patterns"]
         assert "sql query template" in record["code"]["search_terms"]
+
+    def test_directory_metadata_indexes_btc_object_and_media_text(self, tmp_path):
+        from database import TextDatabase
+
+        first = [
+            {
+                "frame_id": "L21_V001_f0010",
+                "video_name": "L21_V001",
+                "frame_index": 10,
+                "object_text": "1 motorcycle at center, aliases xe may",
+                "video_title": "Giao thông thành phố",
+            }
+        ]
+        second = [
+            {
+                "frame_id": "L21_V002_f0020",
+                "video_name": "L21_V002",
+                "frame_index": 20,
+                "object_text": "1 teddy bear at center",
+            }
+        ]
+        third = [
+            {
+                "frame_id": "L21_V003_f0030",
+                "video_name": "L21_V003",
+                "frame_index": 30,
+                "object_text": "1 laptop at center",
+            }
+        ]
+        (tmp_path / "L21_V001.json").write_text(
+            json.dumps(first), encoding="utf-8"
+        )
+        (tmp_path / "L21_V002.json").write_text(
+            json.dumps(second), encoding="utf-8"
+        )
+        (tmp_path / "L21_V003.json").write_text(
+            json.dumps(third), encoding="utf-8"
+        )
+
+        database = TextDatabase(tmp_path)
+
+        assert len(database.records) == 3
+        assert database.search(["xe máy"], top_k=1)[0]["frame_id"] == "L21_V001_f0010"
+        assert database.search(["teddy bear"], top_k=1)[0]["frame_id"] == "L21_V002_f0020"
 
 
 class TestPerformance:

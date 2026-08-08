@@ -3,6 +3,14 @@ __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
 
 # Environments
 .env
@@ -18,6 +26,8 @@ Thumbs.db
 # Developer-local editor/scratch files
 .vscode/
 src/semantic_pipeline/note.txt
+*.log
+*.tmp
 
 # Local secure Elasticsearch secrets/cert exports (templates stay tracked)
 .env.elasticsearch.secure
@@ -65,6 +75,15 @@ entity_benchmark_report_*.json
 scale_benchmark_report_*.json
 task4_acceptance_report.json
 .pytest-local-temp/
+src/semantic_pipeline/*.parquet
+src/semantic_pipeline/*.jsonl
+src/semantic_pipeline/sample_frames/*_checkpoint.json
+
+# Model/download caches must stay local. Generated BTC/Open Images resources
+# belong under data/external or data/processed, both already ignored above.
+.cache/
+.huggingface/
+.paddleocr/
 
 # Node (Frontend)
 node_modules/

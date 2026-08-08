@@ -9,12 +9,16 @@ Caption/OCR remains optional and can be fused when keyframe images exist.
 python scripts/download_openimages_metadata.py
 python scripts/build_objects_index.py --videos L21,L22 --resume
 python -m src.semantic_pipeline.metadata_builder --videos L21,L22 --resume
+python scripts/audit_btc_pipeline.py --raw-videos L21,L22 --processed-videos L21,L22
 python -m pytest src/semantic_pipeline/tests -q
 ```
 
 For all attached videos, omit `--videos` from `build_objects_index.py`, then pass
 all required BTC groups or video IDs to `metadata_builder.py`. Outputs are
 written per video under `data/processed/` and are intentionally ignored by Git.
+Use `python scripts/audit_btc_pipeline.py` with no `--raw-videos` argument for a
+release/full-pack audit. Machine-readable audit and benchmark output belongs in
+`data/processed/reports/`, never beside source files.
 
 To merge Task 1 caption/OCR records, pass `--visual-metadata <file-or-directory>`.
 Records without those signals remain searchable through object and media text;
@@ -57,9 +61,12 @@ python -m src.semantic_pipeline.elasticsearch_backend `
   --metadata data/processed/metadata
 ```
 
-The physical v6 index adds object/media fields, nested exact object filtering,
-minimum object score, object counts, and Vietnamese ASCII folding. The stable
-`semantic_frames` alias is moved atomically after ingest.
+The physical v6 index adds object/media fields, score-aware nested object
+filtering, alias/ancestor-aware object counts, and Vietnamese ASCII folding.
+Each nested object carries its canonical MID plus ancestor MIDs, so a broad
+filter such as `vehicle` matches a detected `car` without making a narrow query
+match a broad-only detection. The stable `semantic_frames` alias is moved
+atomically after ingest.
 
 API filters remain optional and the four-field response contract is unchanged:
 

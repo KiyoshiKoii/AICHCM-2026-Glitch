@@ -4,6 +4,7 @@
 
 import json
 import re
+import unicodedata
 from functools import lru_cache
 from pathlib import Path
 
@@ -46,6 +47,8 @@ STOPWORDS = {
     "those", "is", "are", "was", "were", "be", "been", "being", "am", "it",
     "its", "as", "there", "here", "he", "she", "they", "them", "his", "her",
     "their", "you", "your", "we", "our", "i", "me", "my",
+    # High-frequency Vietnamese function words after ASCII folding.
+    "va", "cua", "la", "mot", "nhung", "cac", "cho", "voi", "tai", "tu",
 }
 
 
@@ -64,26 +67,75 @@ def tokenize(text: str) -> list[str]:
 
     "A man DROPPING red shirts!" -> ['man', 'drop', 'red', 'shirt']
     """
+    folded = unicodedata.normalize(
+        "NFKD", text.casefold().replace("đ", "d")
+    )
+    folded = "".join(
+        character
+        for character in folded
+        if unicodedata.category(character) != "Mn"
+    )
     return [
         _normalize(word)
-        for word in re.findall(r"[a-z0-9]+", text.lower())
+        for word in re.findall(r"[a-z0-9]+", folded)
         if word not in STOPWORDS
     ]
 
 
+def _metadata_files(path: Path) -> list[Path]:
+    if path.is_dir():
+        files = sorted(path.glob("*.json"))
+        if not files:
+            raise ValueError(f"{path} không chứa metadata JSON theo video.")
+        return files
+    if not path.is_file():
+        raise FileNotFoundError(
+            f"Không tìm thấy {path} — chạy extractor/metadata_builder trước."
+        )
+    return [path]
+
+
+def _load_search_records(path: Path) -> list[dict]:
+    """Load only fields required by BM25 instead of retaining spatial payloads."""
+    records: list[dict] = []
+    for source in _metadata_files(path):
+        payload = json.loads(source.read_text(encoding="utf-8"))
+        if not isinstance(payload, list):
+            raise ValueError(f"{source} phải chứa một JSON array.")
+        for position, record in enumerate(payload):
+            if not isinstance(record, dict):
+                raise ValueError(f"{source}[{position}] phải là JSON object.")
+            missing = {"frame_id", "video_name", "frame_index"} - record.keys()
+            if missing:
+                raise ValueError(
+                    f"{source}[{position}] thiếu field bắt buộc: {sorted(missing)}"
+                )
+            records.append(
+                {
+                    "frame_id": record["frame_id"],
+                    "video_name": record["video_name"],
+                    "frame_index": record["frame_index"],
+                    "caption": record.get("caption", ""),
+                    "ocr_text": record.get("ocr_text", ""),
+                    "ocr_text_raw": record.get("ocr_text_raw", ""),
+                    "object_text": record.get("object_text", ""),
+                    "video_title": record.get("video_title", ""),
+                    "video_description": record.get("video_description", ""),
+                    "video_keywords": record.get("video_keywords", []),
+                    "code": record.get("code", {}),
+                }
+            )
+    return records
+
+
 class TextDatabase:
-    """BM25 trên caption, translated OCR và derived code search terms."""
+    """BM25 over visual text, BTC objects/media, and derived code terms."""
 
     def __init__(self, metadata_path: str | Path = DEFAULT_METADATA_PATH):
         path = Path(metadata_path)
-        if not path.exists():
-            raise FileNotFoundError(
-                f"Không tìm thấy {path} — chạy extractor.py để sinh metadata.json trước."
-            )
-
-        self.records = json.loads(path.read_text(encoding="utf-8"))
+        self.records = _load_search_records(path)
         if not self.records:
-            raise ValueError(f"{path} rỗng — chạy extractor.py trước.")
+            raise ValueError(f"{path} không có metadata record nào.")
 
         # corpus[i] tương ứng records[i] -> đây là cách map ngược ra frame_id.
         # Index caption + translated OCR trực tiếp. Raw OCR không được đưa nguyên
@@ -103,9 +155,18 @@ class TextDatabase:
             # aliases here; duplicating every matched pattern would distort the
             # established OCR ranking for queries such as NOT IN + NULL.
             derived_text = " ".join(code.search_terms)
+            video_keywords = record.get("video_keywords", [])
+            keyword_text = (
+                " ".join(video_keywords)
+                if isinstance(video_keywords, list)
+                else str(video_keywords)
+            )
             corpus.append(
                 tokenize(
                     f"{record.get('caption', '')} {record.get('ocr_text', '')} "
+                    f"{record.get('object_text', '')} "
+                    f"{record.get('video_title', '')} "
+                    f"{record.get('video_description', '')} {keyword_text} "
                     f"{derived_text}"
                 )
             )

@@ -283,7 +283,12 @@ def run_benchmark(
         from .database import TextDatabase
 
     metadata_path = Path(metadata_path)
-    metadata_size_mb = metadata_path.stat().st_size / (1024 * 1024)
+    metadata_size_bytes = (
+        sum(source.stat().st_size for source in metadata_path.glob("*.json"))
+        if metadata_path.is_dir()
+        else metadata_path.stat().st_size
+    )
+    metadata_size_mb = metadata_size_bytes / (1024 * 1024)
 
     tracemalloc.start()
     started = time.perf_counter()

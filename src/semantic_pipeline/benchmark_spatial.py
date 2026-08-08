@@ -4,8 +4,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any
+
+try:
+    from common import paths
+except ImportError:  # pragma: no cover - package import from repository root
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from common import paths
 
 try:
     from migrate_metadata import write_json_atomically
@@ -18,7 +25,7 @@ except ImportError:
 
 SEMANTIC_DIR = Path(__file__).resolve().parent
 DEFAULT_GROUND_TRUTH_PATH = SEMANTIC_DIR / "spatial_ground_truth.json"
-DEFAULT_REPORT_PATH = SEMANTIC_DIR / "spatial_benchmark_report_v1.json"
+DEFAULT_REPORT_PATH = paths.reports_dir() / "spatial_benchmark_report_v1.json"
 VALID_PREDICATES = {"left_of", "right_of", "above", "below", "overlapping"}
 
 

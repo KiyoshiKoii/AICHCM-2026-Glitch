@@ -129,12 +129,18 @@ def embeddings_dir() -> Path:
     return PROCESSED / "embeddings"
 
 
+def reports_dir() -> Path:
+    """Machine-readable audit/benchmark reports generated from local BTC data."""
+    return PROCESSED / "reports"
+
+
 def ensure_processed_dirs() -> None:
     """Tạo sẵn cây thư mục ``processed/``. An toàn khi gọi nhiều lần."""
     for path in (
         processed_metadata_dir(),
         PROCESSED / "objects_index",
         embeddings_dir(),
+        reports_dir(),
     ):
         path.mkdir(parents=True, exist_ok=True)
 

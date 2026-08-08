@@ -21,7 +21,8 @@ data/
 ├── processed/              # output do pipeline của team sinh ra — xoá lúc nào cũng được
 │   ├── metadata/           # dev2: metadata_*.json
 │   ├── objects_index/      # objects gộp theo video (parquet/jsonl) cho nhanh
-│   └── embeddings/
+│   ├── embeddings/
+│   └── reports/            # audit/benchmark có thể tái sinh, không commit
 └── external/               # repo/model tham khảo (vbs2023-..., checkpoint, v.v.)
 ```
 

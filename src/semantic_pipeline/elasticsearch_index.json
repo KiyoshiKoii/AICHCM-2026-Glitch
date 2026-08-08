@@ -145,6 +145,7 @@
         "properties": {
           "label": {"type": "keyword", "normalizer": "lowercase_keyword"},
           "mid": {"type": "keyword"},
+          "ontology_mids": {"type": "keyword"},
           "score": {"type": "float"},
           "grid_cell": {"type": "keyword"},
           "bbox": {"type": "float", "index": false}

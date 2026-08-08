@@ -9,6 +9,7 @@ Source: **`src/semantic_pipeline/`**
 | **Task 3** | Internal API (FastAPI, port 8002) | ✅ Xong |
 | **Task 4** | R&D (Elasticsearch, SQL Classification, Spatial Reasoning, Entity Extraction) | ✅ Hoàn tất R&D; chưa production-ready ([báo cáo](TASK4_REPORT.md)) |
 | **Task 5** | Unit Testing & Performance Testing | ✅ Xong |
+| **Task 6** | BTC-native identity, object fusion, ontology và Elasticsearch v6 | ✅ Hoàn tất cho L21/L22; full raw audit 873 video ([báo cáo](TASK6_REPORT.md)) |
 
 ---
 
@@ -24,7 +25,8 @@ Source: **`src/semantic_pipeline/`**
 - **Ensemble OCR**: chọn model đọc chữ theo thế mạnh — dòng có dấu tiếng Việt lấy VietOCR, dòng tiếng Anh/ký hiệu toán lấy PaddleOCR. Không tốn thêm model vì cả hai vốn đã chạy sẵn.
 - **Crop padding** (nới rộng 4px khi crop vùng chữ) → tránh cắt mất dấu thanh tiếng Việt.
 - **Batch VietOCR** (`predict_batch`) → đọc cả loạt vùng chữ 1 lần thay vì tuần tự.
-- Output `metadata.json` gồm: `frame_id`, `video_name`, `frame_index`, `caption`, `ocr_text` (tiếng Anh, cho BM25), `ocr_text_raw` (gốc, đối chiếu).
+- Output `metadata.json` gồm: `frame_id`, `video_name`, `frame_index`, `caption`, `ocr_text` (tiếng Anh, cho BM25), `ocr_text_raw` (gốc, đối chiếu). Với cây keyframe BTC (`Lxx_Vxxx/001.jpg`), identity được resolve từ `map-keyframes` và có thêm `keyframe_n`, `timestamp_ms`, schema v1.1.
+- Input directory được quét đệ quy, nên có thể trỏ trực tiếp vào `data/raw/keyframes`; model nặng chỉ được import khi thực sự khởi tạo extractor.
 - Commit 24 ảnh mẫu (`sample_frames/`) làm fixture test.
 
 ### Hạn chế & Hướng cải thiện
@@ -39,10 +41,10 @@ Source: **`src/semantic_pipeline/`**
 Các thiếu sót riêng của `extractor.py` ở Task 1 cần nhớ:
 
 - Chưa có resume/checkpoint; chạy lại sẽ xử lý lại toàn bộ và ghi đè output. Entity và spatial ở Task 4 đã có checkpoint/resume.
-- Tên file bắt buộc theo mẫu `video_f0001`; filename sai sẽ lỗi.
+- File fixture cũ vẫn theo mẫu `video_f0001`; file BTC dùng đúng cây `<video_id>/<keyframe_n>.jpg` và resolve qua map, không còn suy identity từ tên ảnh.
 - Nhận diện ngôn ngữ chỉ dựa trên dấu tiếng Việt.
 - Chưa có thống kê lỗi hoặc danh sách frame thất bại riêng.
-- Chưa benchmark trên dữ liệu thực tế lớn.
+- Caption/OCR model chưa được chạy full trên ảnh BTC; nhánh object-only đã được audit trên toàn bộ object pack và benchmark trên metadata L21/L22.
 
 ### Lệnh chạy
 
@@ -72,7 +74,13 @@ python src/semantic_pipeline/extractor.py --input-dir <thư_mục_ảnh> --outpu
   - Bảng bất quy tắc: `men→man`, `women→woman`, `children→child`, `people→person`...
   - Bỏ stopword: cắt ~36% token thừa.
 - Index `caption` + `ocr_text` (tiếng Anh) cùng semantic `code.search_terms` được
-  suy ra từ cả translated/raw OCR. Không index trực tiếp toàn bộ `ocr_text_raw`.
+  suy ra từ cả translated/raw OCR. Schema v1.1 index thêm `object_text`, title,
+  description và keywords của video; không index trực tiếp toàn bộ `ocr_text_raw`.
+- Đọc được một metadata JSON fixture hoặc cả thư mục JSON theo video. Với metadata
+  thật, loader chỉ giữ field tìm kiếm/identity, không giữ detection và hàng triệu
+  spatial relation trong RAM.
+- Tokenizer đã ASCII-fold tiếng Việt (`người` ↔ `nguoi`) và bỏ một số stopword
+  tiếng Việt phổ biến.
 - Trả điểm BM25 **thô, không chuẩn hóa**. Lọc bỏ `score <= 0`.
 - `float(score)` — ép kiểu vì `numpy.float64` không JSON-serialize được.
 - Output đúng API Contract: `frame_id`, `score`, `video_name`, `frame_index`.
@@ -81,9 +89,9 @@ python src/semantic_pipeline/extractor.py --input-dir <thư_mục_ảnh> --outpu
 
 | # | Hạn chế | Hướng cải thiện |
 |---|---|---|
-| 1 | Backend BM25 dựng lại index khi khởi động và giữ corpus trên RAM | Đã có backend **Elasticsearch v5** ở Task 4; giữ BM25 làm baseline/rollback nhẹ |
+| 1 | Backend BM25 dựng lại index khi khởi động và giữ corpus trên RAM | Backend **Elasticsearch v6** là đường scale chính; giữ BM25 làm baseline/rollback nhẹ |
 | 2 | `caption` và `ocr_text` bị gộp, không đặt trọng số riêng được | Elasticsearch đã tách field và boost `ocr_text` cao hơn `caption`; vẫn cần tập relevance lớn hơn để tuning |
-| 3 | Benchmark hiện chỉ có 24 document | Bổ sung benchmark/load test theo nhiều mức dữ liệu trước khi dùng với kho video lớn |
+| 3 | Gold set BTC mới có một relevant frame/case nên chưa phản ánh mọi frame đúng | Mở rộng relevance theo shot/scene và dùng Elasticsearch filter khi benchmark production |
 
 ### Lệnh chạy
 
@@ -102,7 +110,8 @@ python src/semantic_pipeline/database.py
 - Endpoint `POST /internal/search/text`: nhận `{keywords, top_k, filters?}` → trả `{status, data: [{frame_id, score, video_name, frame_index}]}`.
 - Endpoint `GET /health`: kiểm tra service sống chưa, index nạp bao nhiêu doc.
 - Chọn backend bằng `SEMANTIC_SEARCH_BACKEND`: mặc định BM25; Elasticsearch là bản nâng cấp tùy chọn và giữ nguyên response contract.
-- Với Elasticsearch, API hỗ trợ entity filter và spatial triple; mọi list filter dùng semantics **all-of (AND)**.
+- Với Elasticsearch, API hỗ trợ entity/spatial filter, BTC object filter theo MID,
+  `min_object_score` và `object_counts`; mọi list filter dùng semantics **all-of (AND)**.
 - Index/backend được khởi tạo **1 lần lúc startup** (`lifespan`), không dựng lại mỗi request.
 - Validate payload bằng Pydantic: `keywords: []` → 422, `keywords: ["zzzz"]` (không khớp) → 200 + `data: []`.
 - Dùng `def` (không phải `async def`) → FastAPI chạy trong threadpool, BM25 (CPU) không chặn event loop.
@@ -144,7 +153,7 @@ curl http://localhost:8002/health
 
 ### Đã làm
 
-#### 1. Elasticsearch v5
+#### 1. Elasticsearch v5 (baseline R&D trước BTC)
 
 - Chạy Elasticsearch `9.4.2` bằng Docker Compose, chỉ bind local tại `127.0.0.1:9200`.
 - Mapping `dynamic: strict`, English analyzer có lowercase/stopword/stemming; `ocr_text` được boost cao hơn `caption`.
@@ -153,6 +162,10 @@ curl http://localhost:8002/health
 - CLI có thay đổi dữ liệu bắt buộc truyền `--index-name`, tránh vô tình trỏ alias ngược về index cũ.
 - Search hỗ trợ `time_of_day`, `setting`, `locations`, `objects`, `actions`, `colors` và nested `spatial_relations`.
 - Benchmark hiện có 17 query; 3 query filter được thực sự truyền xuống backend và đều đưa frame đúng lên rank 1.
+
+Mapping/search hiện hành đã được nâng lên **Elasticsearch v6** ở Task 6. Các số
+liệu v5 bên dưới được giữ làm baseline lịch sử; chưa thay bằng số live v6 khi máy
+không có Elasticsearch đang chạy.
 
 Kết quả Elasticsearch v5 trên 24 frame mẫu:
 
@@ -230,7 +243,9 @@ Giữ các input/output dùng cho kiểm thử hiện tại:
 - `sample_frames/metadata_spatial.json`: full output spatial `24/24`.
 - `baseline_report_bm25_v0.json`: baseline để kiểm tra regression.
 - `spatial_ground_truth.json`, `entity_visual_ground_truth.json`: ground truth cần commit để tái lập benchmark.
-- `baseline_report_elasticsearch_v5_filters.json`, `spatial_benchmark_report_v1.json`, `entity_benchmark_report_v1.json`, `scale_benchmark_report_10k_v2.json`, `task4_acceptance_report.json`: các report mới nhất.
+- Các report Elasticsearch/entity/spatial/scale/acceptance là output có thể tái
+  sinh. Report mới phải ghi vào `data/processed/reports/` và không commit; các
+  filename v5 còn trên máy chỉ là baseline lịch sử trước BTC.
 
 Các output chạy thử như `metadata_entities_test.json`, `metadata_spatial_test.json`, `metadata_v1.json` và report Elasticsearch v1/v2/v3 không-filter đã được xóa sau khi xác nhận có bản đầy đủ/mới hơn. Chúng đều có thể sinh lại bằng các lệnh trong `ENTITY_EXTRACTION.md`, `SPATIAL_REASONING.md` và phần test bên dưới. Metadata/report sinh ra được `.gitignore`; khi clone máy mới cần chạy lại pipeline hoặc nhận artifact từ kho dữ liệu chung của nhóm.
 
@@ -255,9 +270,9 @@ python src/semantic_pipeline/code_classifier.py `
   --input src/semantic_pipeline/sample_frames/metadata_spatial.json `
   --in-place
 
-# Nếu là máy mới/chưa có v5: validate, ingest rồi atomically kích hoạt alias
+# Nếu là máy mới/chưa có v6: validate, ingest rồi atomically kích hoạt alias
 python src/semantic_pipeline/elasticsearch_backend.py `
-  --index-name semantic_frames_v5 `
+  --index-name semantic_frames_v6 `
   bootstrap `
   --metadata src/semantic_pipeline/sample_frames/metadata_spatial.json
 
@@ -272,7 +287,7 @@ python src/semantic_pipeline/benchmark_entities.py
 python src/semantic_pipeline/benchmark_spatial.py
 python src/semantic_pipeline/benchmark_elasticsearch.py `
   --index semantic_frames `
-  --output src/semantic_pipeline/baseline_report_elasticsearch_v5_filters.json
+  --output data/processed/reports/baseline_report_elasticsearch_v6_btc.json
 
 # 4. Scale pilot lần đầu trên physical index riêng
 python src/semantic_pipeline/benchmark_scale.py `
@@ -307,7 +322,11 @@ python -m pytest -q src/semantic_pipeline/tests/test_elasticsearch_backend.py
 Remove-Item Env:RUN_ELASTICSEARCH_INTEGRATION
 ```
 
-Kỳ vọng: health báo alias có `24` document và live acceptance xác nhận alias trỏ `semantic_frames_v5`; hai schema hợp lệ `24/24`; classifier báo `7` SQL/`17` unknown; acceptance báo `research_complete=True`, `production_ready=False`. Cấu hình auth/TLS xem `src/semantic_pipeline/ELASTICSEARCH_SECURE.md`.
+Kỳ vọng với fixture: health báo alias có `24` document và live acceptance xác
+nhận alias trỏ `semantic_frames_v6`; hai schema hợp lệ `24/24`; classifier báo
+`7` SQL/`17` unknown. Với metadata BTC, document count phải bằng số record
+canonical trong audit report. Cấu hình auth/TLS xem
+`src/semantic_pipeline/ELASTICSEARCH_SECURE.md`.
 
 ### Hạn chế còn lại & Ưu tiên cải thiện
 
@@ -330,7 +349,7 @@ Không nên xem `52 detections` hoặc `216 relations` là accuracy. Gate quan t
 
 ### Đã làm
 
-- **166 test pass, 2 test skip** trong `tests/` ở lần chạy nghiệm thu gần nhất; các test skip là integration cần service live/biến môi trường.
+- **191 test pass, 2 test skip** trong `tests/` ở lần chạy nghiệm thu gần nhất; các test skip là integration cần Elasticsearch live/biến môi trường.
 - Task 1–3: API contract, payload validation, BM25/tokenizer/ranking, baseline evaluator và OCR ground truth.
 - Metadata/Task 4: schema, Elasticsearch query/mapping/alias/bulk ingest, entity evidence guard/checkpoint, spatial geometry/checkpoint, spatial benchmark và acceptance aggregator.
 - `test_task4_live.py`: integration opt-in đi từ FastAPI tới Elasticsearch thật, không chạy mặc định để unit suite vẫn dùng được khi Docker tắt.
@@ -342,8 +361,8 @@ Không nên xem `52 detections` hoặc `216 relations` là accuracy. Gate quan t
 | OCR tiếng Anh | **100%** |
 | OCR tiếng Việt có dấu | **100%** |
 | OCR ký hiệu toán | **100%** (trước ensemble: 92.3%) |
-| BM25 query latency | **0.051 ms** (yêu cầu < 500ms) |
-| Dựng index (24 doc) | 1.9 ms |
+| BM25 fixture p95 | **0.234 ms** (yêu cầu < 500ms) |
+| Dựng index fixture (24 doc) | 187.895 ms khi đo cùng `tracemalloc` |
 | Elasticsearch v5 Recall@5 / MRR@5 / NDCG@5 | **1.0000 / 0.9412 / 0.9566** |
 | Elasticsearch v5 local p95 (lần chạy cuối, 340 mẫu) | **7.474 ms** — đạt gate `< 50 ms` |
 | Elasticsearch scale 10k v2 throughput / p95 | **1,558.9 docs/s / 47.915 ms** |
@@ -371,3 +390,154 @@ python -m pytest src/semantic_pipeline/tests/test_ocr_accuracy.py -v
 # Chạy test với output chi tiết (hiện kết quả đo performance)
 python -m pytest src/semantic_pipeline/tests -v -s
 ```
+
+---
+
+## Task 6 — BTC-native Object Integration
+
+### Cấu trúc file và dữ liệu
+
+Các file đã được tách theo trách nhiệm; artifact tái sinh không nằm cạnh source:
+
+```text
+data/
+├── raw/                         # BTC gốc, chỉ MANIFEST.csv được commit
+├── external/openimages/         # ontology tải ngoài, không commit
+└── processed/
+    ├── objects_index/           # một Parquet/video
+    ├── metadata/                # một schema v1.1 JSON/video
+    └── reports/                 # audit/benchmark machine-readable
+scripts/
+├── organize_data.ps1            # gom pack BTC, mặc định dry-run
+├── build_manifest.py            # kiểm kê core data
+├── build_objects_index.py       # JSON nhỏ → Parquet
+├── download_openimages_metadata.py
+└── audit_btc_pipeline.py        # full raw + processed + query audit
+src/common/
+├── paths.py                     # nguồn duy nhất cho data path
+└── frame_ref.py                 # identity BTC canonical
+src/semantic_pipeline/
+├── btc_objects.py               # adapter/filter detection
+├── object_ontology.py           # Open Images + EN/VI query bridge
+├── object_lexicon.json          # 120 MID ưu tiên, được commit
+├── metadata_builder.py          # fusion schema v1.1 theo video
+└── evaluation_queries_btc.json  # 30 query KIS thật
+```
+
+`.gitignore` chặn toàn bộ raw/external/processed data, report sinh lại, Parquet,
+JSONL, checkpoint, log, temp, coverage và cache của Python/model. Hai file data
+được commit có chủ đích là `data/README.md` và `data/raw/MANIFEST.csv`.
+
+### Identity và object fusion
+
+- `frame_index` lấy đúng `map-keyframes.frame_idx`; `keyframe_n` dùng để join
+  `001.jpg`/`001.json`; timestamp lấy từ `pts_time`.
+- 192/873 map có `frame_idx` lặp (614 dòng). Pipeline giữ `n` đầu tiên làm
+  document canonical, tránh trùng `_id`, nhưng vẫn join object theo `n`.
+- 100 prediction BTC/frame được xử lý theo đúng thứ tự: score `>= 0.20`, area
+  `>= 0.0001`, class-wise NMS IoU `0.60`, rồi top 15.
+- Detection giữ MID Open Images, score thật, normalized XYXY bbox, area, grid và
+  provenance `btc_detector`. `entities.objects`, `object_counts` và `object_text`
+  đều được dẫn xuất lại từ detection sau lọc.
+- Object index-side có cả MID gốc và ancestor MIDs. Vì vậy filter rộng `vehicle`
+  match `car`, trong khi query hẹp không match ngược một detection chỉ có nhãn
+  rộng. Count projection cộng theo canonical label và alias; `{"person": 3}`
+  đếm gộp person/man/woman phù hợp ontology.
+
+### Audit trực tiếp trên data BTC
+
+Lần audit release ngày 2026-08-09 chạy lệnh:
+
+```powershell
+python scripts/build_manifest.py --check
+python scripts/audit_btc_pipeline.py --processed-videos L21,L22 --workers 8
+```
+
+Kết quả raw toàn kho:
+
+| Hạng mục | Kết quả |
+|---|---:|
+| Video có map/object/media/CLIP đầy đủ | **873/873** |
+| Object JSON/map row đã parse và join | **177.321/177.321** |
+| Detection nguồn đã kiểm score/MID/label/YXYX | **17.732.100** |
+| Detection score `>= 0.20` | **1.622.347** — 9,149/frame |
+| Video/keyframe image hiện đã gắn | **60 / 16.896** (L21 + L22) |
+| Raw validation errors | **0** |
+
+Kết quả artifact L21/L22:
+
+| Hạng mục | Kết quả |
+|---|---:|
+| Metadata canonical validate schema v1.1 | **16.886/16.886** |
+| Detection sau lọc trong metadata | **160.418** — 9,500/frame |
+| Identity / Parquet join / media projection errors | **0 / 0 / 0** |
+| `entities.objects` / count / provenance errors | **0 / 0 / 0** |
+| Raw relation | 1.331.648 — 78,861/frame |
+| Relation projection đưa vào Elasticsearch | 604.347 — 35,790/frame |
+| Giảm nested relation khi index | **54,62%** |
+| Lexicon coverage theo detection occurrence | **98,24%** |
+| Query filter hợp lệ trên relevant frame | **30/30** |
+| Query đã đối chiếu trực tiếp với ảnh | **8/30** |
+
+Report đầy đủ được ghi ở
+`data/processed/reports/btc_pipeline_audit.json` và bị ignore có chủ đích.
+Acceptance tổng hợp với BTC metadata báo
+`research_complete_with_known_limitations`, `research_complete=True`,
+`production_ready=False`; BTC object fusion F1 `1,0000`, không có identity/filter
+failure. Trạng thái production vẫn giữ `False` vì chưa có live Elasticsearch v6,
+target-video holdout và relevance annotation đủ rộng.
+
+### Retrieval pilot trên 16.886 document thật
+
+BM25 đã được sửa để đọc thư mục metadata theo video và index `object_text` cùng
+media text. Loader chỉ giữ search projection, nên peak Python khi dựng index là
+**115,1 MB** dù metadata trên đĩa là **410,3 MiB**.
+
+```powershell
+python src/semantic_pipeline/baseline.py `
+  --metadata data/processed/metadata `
+  --queries src/semantic_pipeline/evaluation_queries_btc.json `
+  --top-k 1,5,10,100 `
+  --latency-runs 5 `
+  --output data/processed/reports/bm25_btc_l21_l22.json
+```
+
+| Metric | Kết quả |
+|---|---:|
+| Recall@1 / MRR@1 / NDCG@1 | 0,6000 / 0,6000 / 0,6000 |
+| Recall@5 / MRR@5 / NDCG@5 | **0,8333 / 0,6917 / 0,7274** |
+| Recall@10 | **0,9333** |
+| Query latency p50 / p95 | 48,490 / 68,598 ms |
+| Index build | 61,196 s |
+
+Hai case chưa thấy relevant frame trong top 100 là cảnh tai nạn xe máy và động vật
+trên bãi cát. Cả hai cần ngữ nghĩa thị giác không có trong Open Images object
+labels; `has_visual_text=False` vì chưa chạy caption/OCR trên BTC. Ngoài ra gold
+set hiện chỉ gắn một frame đúng cho mỗi query, trong khi nhiều frame cùng shot có
+thể cũng liên quan. Vì vậy kết quả này là pilot có giới hạn, chưa phải production
+quality gate. Elasticsearch v6 với exact object/count/spatial filter là đường
+chính khi scale; cần chạy live benchmark sau khi Docker/Elasticsearch sẵn sàng.
+
+Baseline fixture 24 frame không regression sau thay đổi BM25: Recall@5 `1,0000`,
+MRR@5 `0,9412`, NDCG@5 `0,9566`, p95 `0,234 ms`.
+
+### Quy trình khi BTC gắn thêm keyframe
+
+```powershell
+# Ví dụ BTC gắn thêm L23/L24
+python scripts/build_manifest.py --check
+python scripts/build_objects_index.py --videos L23,L24 --resume
+python -m src.semantic_pipeline.metadata_builder --videos L23,L24 --resume
+
+# Audit nhanh đúng batch vừa build
+python scripts/audit_btc_pipeline.py `
+  --raw-videos L23,L24 `
+  --processed-videos L23,L24
+
+# Trước release hoặc sau khi BTC giao pack mới: bỏ --raw-videos để quét 873 video
+python scripts/audit_btc_pipeline.py --processed-videos L21,L22,L23,L24
+```
+
+Không dùng `--resume` nếu thay threshold/NMS/ontology/schema và cần rebuild output
+cũ. Xóa đúng artifact của các video cần rebuild dưới `data/processed/`, không sửa
+file trong `data/raw/`.

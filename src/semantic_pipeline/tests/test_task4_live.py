@@ -7,7 +7,7 @@ import pytest
 
 @pytest.mark.skipif(
     os.getenv("RUN_TASK4_LIVE") != "1",
-    reason="set RUN_TASK4_LIVE=1 with Elasticsearch v5 running",
+    reason="set RUN_TASK4_LIVE=1 with Elasticsearch v6 running",
 )
 def test_live_fastapi_entity_spatial_and_all_of_filters(monkeypatch):
     from fastapi.testclient import TestClient

@@ -81,7 +81,7 @@ Use the current alias and keep the filter-aware report beside the Task 4 tools:
 python src/semantic_pipeline/benchmark_elasticsearch.py `
   --index semantic_frames `
   --latency-runs 20 `
-  --output src/semantic_pipeline/baseline_report_elasticsearch_v5_filters.json
+  --output data/processed/reports/baseline_report_elasticsearch_v6_btc.json
 ```
 
 Compare Recall/MRR/NDCG with `baseline_report_bm25_v0.json`. The evaluation

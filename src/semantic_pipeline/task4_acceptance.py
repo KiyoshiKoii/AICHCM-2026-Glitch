@@ -6,9 +6,16 @@ import argparse
 import hashlib
 import json
 import subprocess
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+
+try:
+    from common import paths
+except ImportError:  # pragma: no cover - package import from repository root
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from common import paths
 
 try:
     from code_classifier import CODE_CLASSIFIER_VERSION, classify_code
@@ -35,16 +42,17 @@ except ImportError:
 
 SEMANTIC_DIR = Path(__file__).resolve().parent
 REPOSITORY_DIR = SEMANTIC_DIR.parent.parent
+REPORT_DIR = paths.reports_dir()
 DEFAULT_ENTITY_METADATA = SEMANTIC_DIR / "sample_frames" / "metadata_entities.json"
 DEFAULT_SPATIAL_METADATA = SEMANTIC_DIR / "sample_frames" / "metadata_spatial.json"
-DEFAULT_BM25_REPORT = REPOSITORY_DIR / "baseline_report_bm25_v0.json"
+DEFAULT_BM25_REPORT = REPORT_DIR / "baseline_report_bm25_v0.json"
 DEFAULT_ELASTICSEARCH_REPORT = (
-    SEMANTIC_DIR / "baseline_report_elasticsearch_v5_filters.json"
+    REPORT_DIR / "baseline_report_elasticsearch_v6_btc.json"
 )
-DEFAULT_SPATIAL_REPORT = SEMANTIC_DIR / "spatial_benchmark_report_v1.json"
-DEFAULT_ENTITY_BENCHMARK_REPORT = SEMANTIC_DIR / "entity_benchmark_report_v1.json"
-DEFAULT_SCALE_REPORT = SEMANTIC_DIR / "scale_benchmark_report_10k_v2.json"
-DEFAULT_ACCEPTANCE_REPORT = SEMANTIC_DIR / "task4_acceptance_report.json"
+DEFAULT_SPATIAL_REPORT = REPORT_DIR / "spatial_benchmark_report_v1.json"
+DEFAULT_ENTITY_BENCHMARK_REPORT = REPORT_DIR / "entity_benchmark_report_v1.json"
+DEFAULT_SCALE_REPORT = REPORT_DIR / "scale_benchmark_report_10k_v2.json"
+DEFAULT_ACCEPTANCE_REPORT = REPORT_DIR / "task4_acceptance_report.json"
 PLACEHOLDER_VALUES = {
     "none",
     "none mentioned",

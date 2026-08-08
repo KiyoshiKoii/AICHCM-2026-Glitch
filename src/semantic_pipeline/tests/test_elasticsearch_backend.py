@@ -15,6 +15,7 @@ from elasticsearch_backend import (
     create_client,
     build_search_query,
     bulk_ingest,
+    build_object_index_projection,
     collapse_spatial_relations_for_index,
     ensure_index,
     iter_bulk_actions,
@@ -192,6 +193,12 @@ class TestIndexDefinition:
         assert "kis_english" in raw["settings"]["analysis"]["analyzer"]
         assert "kis_vietnamese" in raw["settings"]["analysis"]["analyzer"]
         assert raw["mappings"]["properties"]["objects"]["type"] == "nested"
+        assert (
+            raw["mappings"]["properties"]["objects"]["properties"][
+                "ontology_mids"
+            ]["type"]
+            == "keyword"
+        )
         assert raw["mappings"]["properties"]["object_counts"]["type"] == "flattened"
 
     def test_ensure_index_creates_once_without_deleting(self):
@@ -245,6 +252,39 @@ class TestBulkIngest:
         sql_frame = next(action for action in actions if action["_id"] == "vid03_f0004")
         assert sql_frame["_source"]["code"]["language"] == "sql"
         assert "not exists" in sql_frame["_source"]["code"]["patterns"]
+
+    def test_object_projection_expands_ancestors_aliases_and_counts(self, monkeypatch):
+        class FakeOntology:
+            def ancestors(self, mid):
+                assert mid == "/m/car"
+                return ("/m/vehicle",)
+
+            def expand_for_index(self, mid):
+                assert mid == "/m/car"
+                return {"car", "vehicle", "xe", "phương tiện"}
+
+        class Detection:
+            label = "Car"
+            mid = "/m/car"
+            confidence = 0.9
+            grid_cell = "center"
+            bbox = (0.1, 0.2, 0.5, 0.6)
+
+        monkeypatch.setattr(
+            elasticsearch_backend_module,
+            "get_default_ontology",
+            lambda: FakeOntology(),
+        )
+
+        objects, counts = build_object_index_projection([Detection()])
+
+        assert objects[0]["ontology_mids"] == ["/m/car", "/m/vehicle"]
+        assert counts == {
+            "car": "001",
+            "phuong tien": "001",
+            "vehicle": "001",
+            "xe": "001",
+        }
 
     def test_index_projection_preserves_preclassified_code_metadata(
         self, monkeypatch
@@ -374,6 +414,11 @@ class TestSearch:
             == {"range": {"objects.score": {"gte": 0.2}}}
             for item in object_filters
         )
+        assert all(
+            "objects.ontology_mids"
+            in item["query"]["bool"]["filter"][0].get("terms", {})
+            for item in object_filters
+        )
         assert query["bool"]["should"] == [
             {
                 "multi_match": {
@@ -423,6 +468,14 @@ class TestSearch:
         }
         assert {"range": {"object_counts.person": {"gte": "003"}}} in query["bool"][
             "filter"
+        ]
+
+    def test_object_count_filter_normalises_vietnamese_term(self):
+        query = build_search_query(
+            ["ba người"], filters={"object_counts": {"Người": 3}}
+        )
+        assert query["bool"]["filter"] == [
+            {"range": {"object_counts.nguoi": {"gte": "003"}}}
         ]
 
     def test_rejects_unknown_filter(self):

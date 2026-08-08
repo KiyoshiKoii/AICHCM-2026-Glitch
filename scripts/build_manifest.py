@@ -12,7 +12,8 @@ file mới biết:
 Chạy lại mỗi khi BTC thả thêm data:
 
     python scripts/build_manifest.py
-    python scripts/build_manifest.py --check    # chỉ báo cáo, không ghi file
+    python scripts/build_manifest.py --check    # chỉ báo cáo core data, không ghi file
+    python scripts/build_manifest.py --check --require-keyframes
 """
 
 from __future__ import annotations
@@ -134,7 +135,7 @@ def build_rows() -> list[dict[str, object]]:
     return rows
 
 
-def report(rows: list[dict[str, object]]) -> int:
+def report(rows: list[dict[str, object]], *, require_keyframes: bool = False) -> int:
     """In tóm tắt. Trả về số video có vấn đề."""
     if not rows:
         print("Chua co video nao trong data/raw/keyframes/.")
@@ -146,8 +147,13 @@ def report(rows: list[dict[str, object]]) -> int:
         groups[str(row["group"])] = groups.get(str(row["group"]), 0) + 1
 
     total_keyframes = sum(int(row["n_keyframes"]) for row in rows)
+    videos_with_keyframes = sum(bool(row["n_keyframes"]) for row in rows)
     print(f"{len(rows)} video, {total_keyframes} keyframe")
     print("  theo nhom: " + ", ".join(f"{g}={n}" for g, n in sorted(groups.items())))
+    print(
+        f"  anh keyframe da gan: {videos_with_keyframes}/{len(rows)} video "
+        "(khong bat buoc cho object pipeline)"
+    )
 
     problems = []
     for row in rows:
@@ -162,7 +168,7 @@ def report(rows: list[dict[str, object]]) -> int:
         ]
         if not row["n_objects"]:
             missing.append("objects")
-        if not row["n_keyframes"]:
+        if require_keyframes and not row["n_keyframes"]:
             missing.append("keyframes")
         if missing:
             problems.append((str(row["video_id"]), missing))
@@ -191,13 +197,18 @@ def main() -> int:
         action="store_true",
         help="chi bao cao, khong ghi MANIFEST.csv",
     )
+    parser.add_argument(
+        "--require-keyframes",
+        action="store_true",
+        help="xem keyframe image la bat buoc (mac dinh object pipeline khong can anh)",
+    )
     args = parser.parse_args()
 
     print(paths.describe())
     print()
 
     rows = build_rows()
-    problems = report(rows)
+    problems = report(rows, require_keyframes=args.require_keyframes)
 
     if args.check:
         return 1 if problems else 0

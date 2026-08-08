@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from collections import Counter
 from collections.abc import Callable, Iterator
 from pathlib import Path
 from typing import Any
@@ -23,11 +24,11 @@ except ImportError:  # BM25-only development remains supported.
 
 try:
     from code_classifier import classify_record
-    from object_ontology import get_default_ontology
+    from object_ontology import get_default_ontology, normalize_term
     from schemas import DEFAULT_METADATA_PATH, FrameMetadata, validate_metadata_file
 except ImportError:
     from .code_classifier import classify_record
-    from .object_ontology import get_default_ontology
+    from .object_ontology import get_default_ontology, normalize_term
     from .schemas import DEFAULT_METADATA_PATH, FrameMetadata, validate_metadata_file
 
 SEMANTIC_DIR = Path(__file__).resolve().parent
@@ -214,6 +215,48 @@ def collapse_spatial_relations_for_index(relations: list[Any]) -> list[Any]:
     return [best[key] for key in sorted(best)]
 
 
+def build_object_index_projection(
+    detections: list[Any],
+    fallback_counts: dict[str, int] | None = None,
+) -> tuple[list[dict[str, Any]], dict[str, str]]:
+    """Build score-aware nested objects and alias/ancestor-aware count keys."""
+    ontology = get_default_ontology()
+    objects: list[dict[str, Any]] = []
+    expanded_counts: Counter[str] = Counter()
+    for detection in detections:
+        mid = getattr(detection, "mid", None)
+        ontology_mids = [mid, *ontology.ancestors(mid)] if mid else []
+        terms = {normalize_term(getattr(detection, "label", ""))}
+        if mid:
+            terms.update(
+                normalize_term(term) for term in ontology.expand_for_index(mid)
+            )
+        terms.discard("")
+        expanded_counts.update(terms)
+        objects.append(
+            {
+                "label": detection.label,
+                "mid": mid,
+                "ontology_mids": ontology_mids,
+                "score": detection.confidence,
+                "grid_cell": detection.grid_cell,
+                "bbox": list(detection.bbox),
+            }
+        )
+
+    if not detections:
+        expanded_counts.update(
+            {
+                normalize_term(label): count
+                for label, count in (fallback_counts or {}).items()
+                if normalize_term(label)
+            }
+        )
+    return objects, {
+        label: f"{count:03d}" for label, count in sorted(expanded_counts.items())
+    }
+
+
 def iter_bulk_actions(
     metadata_path: str | Path = DEFAULT_METADATA_PATH,
     index_name: str = DEFAULT_INDEX_NAME,
@@ -235,24 +278,16 @@ def iter_bulk_actions(
                 record.spatial_relations
             )
             source = record.model_dump(mode="json")
+            objects, object_counts = build_object_index_projection(
+                list(getattr(record, "detections", [])),
+                getattr(record, "object_counts", {}),
+            )
             # Flattened values are keywords. Padding preserves numeric ranges.
-            source["object_counts"] = {
-                label: f"{count:03d}"
-                for label, count in getattr(record, "object_counts", {}).items()
-            }
+            source["object_counts"] = object_counts
             source["spatial_relations"] = [
                 relation.model_dump(mode="json") for relation in indexed_relations
             ]
-            source["objects"] = [
-                {
-                    "label": detection.label,
-                    "mid": detection.mid,
-                    "score": detection.confidence,
-                    "grid_cell": detection.grid_cell,
-                    "bbox": list(detection.bbox),
-                }
-                for detection in getattr(record, "detections", [])
-            ]
+            source["objects"] = objects
             source["processing"].update(
                 {
                     "spatial_index_policy": SPATIAL_INDEX_POLICY,
@@ -330,7 +365,7 @@ def build_search_query(keywords: list[str], filters: dict | None = None) -> dict
         for term in object_filters:
             mids, unmapped = ontology.map_query_terms([term])
             identity_clause = (
-                {"terms": {"objects.mid": sorted(mids)}}
+                {"terms": {"objects.ontology_mids": sorted(mids)}}
                 if mids
                 else {"term": {"objects.label": unmapped[0].casefold()}}
             )
@@ -354,9 +389,14 @@ def build_search_query(keywords: list[str], filters: dict | None = None) -> dict
         if not isinstance(object_count_filters, dict) or not object_count_filters:
             raise ValueError("Filter 'object_counts' must be a non-empty object")
         for term, minimum in object_count_filters.items():
-            if not isinstance(term, str) or not term.strip() or not isinstance(minimum, int) or minimum < 1:
+            if (
+                not isinstance(term, str)
+                or not term.strip()
+                or not isinstance(minimum, int)
+                or minimum < 1
+            ):
                 raise ValueError("Object count filters require non-empty labels and counts >= 1")
-            canonical = term.strip()
+            canonical = normalize_term(term)
             filter_clauses.append(
                 {
                     "range": {
@@ -398,7 +438,9 @@ def build_search_query(keywords: list[str], filters: dict | None = None) -> dict
                                     "filter": [
                                         {
                                             "term": {
-                                                "spatial_relations.subject_label": subject.strip().casefold()
+                                                "spatial_relations.subject_label": (
+                                                    subject.strip().casefold()
+                                                )
                                             }
                                         },
                                         {
@@ -408,7 +450,9 @@ def build_search_query(keywords: list[str], filters: dict | None = None) -> dict
                                         },
                                         {
                                             "term": {
-                                                "spatial_relations.object_label": object_.strip().casefold()
+                                                "spatial_relations.object_label": (
+                                                    object_.strip().casefold()
+                                                )
                                             }
                                         },
                                     ]
