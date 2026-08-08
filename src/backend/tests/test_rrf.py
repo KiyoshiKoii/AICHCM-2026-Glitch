@@ -27,11 +27,11 @@ def test_rrf_basic():
     )
     
     # B appears in both, should have highest score
-    # A appears in dev1 (rank 1), C in dev2 (rank 2)
+    # C receives the configured semantic-source weight boost and outranks A.
     assert len(results) == 3
     assert results[0].frame_id == "B"
-    assert results[1].frame_id == "A"
-    assert results[2].frame_id == "C"
+    assert results[1].frame_id == "C"
+    assert results[2].frame_id == "A"
 
 def test_rrf_limit():
     dev1_results = [
