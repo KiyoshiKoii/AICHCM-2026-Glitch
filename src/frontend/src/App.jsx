@@ -5,7 +5,7 @@ import ResultGrid from './components/ResultGrid.jsx';
 import Pagination from './components/Pagination.jsx';
 import TimelineViewer from './components/TimelineViewer.jsx';
 import LoadingSpinner from './components/LoadingSpinner.jsx';
-import { searchByText, searchByImage, getFrameContext } from './api/apiClient.js';
+import { answerVqa, searchByText, searchByImage, getFrameContext } from './api/apiClient.js';
 import './App.css';
 
 const PAGE_SIZE = 12;
@@ -19,12 +19,14 @@ function App() {
   const [isContextLoading, setIsContextLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [lastQuery, setLastQuery] = useState(null);
+  const [vqaQuestion, setVqaQuestion] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const runSearch = async (input) => {
     setIsLoading(true);
     setCurrentPage(1);
     setLastQuery(input);
+    setVqaQuestion(null);
     try {
       let response;
       if (input instanceof File) {
@@ -37,6 +39,24 @@ function App() {
     } catch (err) {
       console.error(err);
       alert('Lỗi trong quá trình tìm kiếm! Xem console để biết thêm chi tiết.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const runVqaSearch = async ({ query, question }) => {
+    setIsLoading(true);
+    setCurrentPage(1);
+    setLastQuery({ mode: 'vqa', query, question });
+    setVqaQuestion(question);
+    setLlmResults([]);
+    setResults([]);
+    try {
+      const response = await answerVqa(query, question);
+      setResults(response.data.candidates || []);
+    } catch (err) {
+      console.error(err);
+      alert('Lỗi trong quá trình trả lời VQA! Xem console để biết thêm chi tiết.');
     } finally {
       setIsLoading(false);
     }
@@ -61,10 +81,16 @@ function App() {
     setFrameContext(null);
     setCurrentPage(1);
     setLastQuery(null);
+    setVqaQuestion(null);
   };
 
   const handleRepeatSearch = () => {
-    if (lastQuery) runSearch(lastQuery);
+    if (!lastQuery) return;
+    if (typeof lastQuery === 'object' && lastQuery.mode === 'vqa') {
+      runVqaSearch(lastQuery);
+      return;
+    }
+    runSearch(lastQuery);
   };
 
   const totalPages = Math.ceil(results.length / PAGE_SIZE) || 1;
@@ -87,6 +113,7 @@ function App() {
           onNewSearch={handleNewSearch}
           onSearch={runSearch}
           onImageSearch={runSearch}
+          onVqaSearch={runVqaSearch}
           onRepeatSearch={handleRepeatSearch}
           canRepeatSearch={Boolean(lastQuery)}
         />
@@ -95,6 +122,12 @@ function App() {
             <LoadingSpinner label="Đang tìm kiếm..." />
           ) : (
             <>
+              {vqaQuestion && (
+                <div className="vqa-results-heading">
+                  <h3>🤖 VQA answers from Gemini 3.1 Flash</h3>
+                  <p>{vqaQuestion}</p>
+                </div>
+              )}
               {llmResults.length > 0 && (
                 <div className="results-section">
                   <h3 style={{ marginLeft: '1rem', marginTop: '1rem', color: '#888' }}>✨ Kết quả LLM Re-ranking (Gemini 3.1 Flash Lite)</h3>

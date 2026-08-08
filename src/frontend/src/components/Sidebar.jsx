@@ -9,6 +9,7 @@ function Sidebar({
   onNewSearch,
   onSearch,
   onImageSearch,
+  onVqaSearch,
   onRepeatSearch,
   canRepeatSearch,
 }) {
@@ -33,7 +34,11 @@ function Sidebar({
         </select>
       </div>
 
-      <SearchBar onSearch={onSearch} onImageSearch={onImageSearch} />
+      <SearchBar
+        onSearch={onSearch}
+        onImageSearch={onImageSearch}
+        onVqaSearch={onVqaSearch}
+      />
 
       <FilterPanel onSearch={onRepeatSearch} canSearch={canRepeatSearch} />
     </aside>

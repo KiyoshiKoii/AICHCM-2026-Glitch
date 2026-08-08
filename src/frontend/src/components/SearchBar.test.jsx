@@ -9,10 +9,10 @@ const getFileInput = (container) => container.querySelector('input[type="file"]'
 const getSubmitButton = () => screen.getByRole('button', { name: /tìm kiếm/i });
 
 describe('SearchBar', () => {
-  it('renders a text input, a file input, and a submit button', () => {
+  it('renders a text input and a submit button', () => {
     const { container } = render(<SearchBar />);
     expect(getTextInput()).toBeInTheDocument();
-    expect(getFileInput(container)).toBeInTheDocument();
+    expect(getFileInput(container)).not.toBeInTheDocument();
     expect(getSubmitButton()).toBeInTheDocument();
   });
 
@@ -40,7 +40,7 @@ describe('SearchBar', () => {
     expect(onSearch).not.toHaveBeenCalled();
   });
 
-  it('calls onImageSearch instead of onSearch when an image is selected, even with text present', async () => {
+  it('calls onImageSearch from Image Search mode', async () => {
     const user = userEvent.setup();
     const onSearch = vi.fn();
     const onImageSearch = vi.fn();
@@ -49,11 +49,27 @@ describe('SearchBar', () => {
     );
     const file = new File(['fake-image-bytes'], 'query.jpg', { type: 'image/jpeg' });
 
-    await user.type(getTextInput(), 'người đàn ông làm rơi ví');
+    await user.click(screen.getByRole('tab', { name: /image search/i }));
     await user.upload(getFileInput(container), file);
     await user.click(getSubmitButton());
 
     expect(onImageSearch).toHaveBeenCalledWith(file);
     expect(onSearch).not.toHaveBeenCalled();
+  });
+
+  it('calls onVqaSearch with description and question in VQA mode', async () => {
+    const user = userEvent.setup();
+    const onVqaSearch = vi.fn();
+    render(<SearchBar onVqaSearch={onVqaSearch} />);
+
+    await user.click(screen.getByRole('tab', { name: 'VQA' }));
+    await user.type(getTextInput(), 'lễ trao giải có nhiều người trên sân khấu');
+    await user.type(screen.getByPlaceholderText(/câu hỏi cần trả lời/i), 'Có bao nhiêu người?');
+    await user.click(screen.getByRole('button', { name: /trả lời/i }));
+
+    expect(onVqaSearch).toHaveBeenCalledWith({
+      query: 'lễ trao giải có nhiều người trên sân khấu',
+      question: 'Có bao nhiêu người?',
+    });
   });
 });

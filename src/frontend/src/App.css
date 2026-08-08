@@ -147,6 +147,15 @@
   gap: 10px;
 }
 
+.search-field-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
 .search-tabs {
   display: flex;
   gap: 6px;
@@ -352,6 +361,25 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.vqa-answer {
+  margin-top: 3px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.vqa-results-heading {
+  margin: 0 0 4px;
+}
+
+.vqa-results-heading h3 {
+  margin: 0 0 4px;
+  color: var(--text-h);
+}
+
+.vqa-results-heading p {
+  color: var(--text);
 }
 
 /* ---------- Pagination ---------- */

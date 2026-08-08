@@ -34,6 +34,31 @@ export const searchByImage = async (imageFile, topK = 50) => {
   return response.json();
 };
 
+export const answerVqa = async (
+  query,
+  question,
+  retrievalTopK = 50,
+  answerTopK = 10,
+) => {
+  const response = await fetch('/api/v1/vqa', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      query,
+      question,
+      retrieval_top_k: retrievalTopK,
+      answer_top_k: answerTopK,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`VQA failed with status ${response.status}`);
+  }
+  return response.json();
+};
+
 export const getFrameContext = async (frameId, window = 5) => {
   const response = await fetch(`/api/v1/frames/context/${frameId}?window=${window}`, {
     method: 'GET',

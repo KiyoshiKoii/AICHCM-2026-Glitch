@@ -4,6 +4,8 @@ function ImageCard({ result = {}, onDoubleClick, onClick }) {
     thumbnail_url: thumbnailUrl,
     video_name: videoName,
     frame_index: frameIndex,
+    answer,
+    confidence,
   } = result;
 
   const videoLabel = videoName || 'Unknown video';
@@ -23,6 +25,11 @@ function ImageCard({ result = {}, onDoubleClick, onClick }) {
       <figcaption>
         <span className="video-name">{videoLabel}</span>
         <span className="timestamp">{frameDisplay}</span>
+        {answer && (
+          <span className="vqa-answer">
+            Answer: {answer}{confidence !== null && confidence !== undefined ? ` (${Math.round(confidence * 100)}%)` : ''}
+          </span>
+        )}
       </figcaption>
     </figure>
   );
