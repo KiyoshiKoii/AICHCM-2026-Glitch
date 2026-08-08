@@ -18,6 +18,8 @@ from backend.services.query_analyzer import OllamaQueryParser
 from backend.clients.visual_client import InternalPipelineClient as VisualPipelineClient
 from backend.clients.semantic_client import InternalPipelineClient as SemanticPipelineClient
 from backend.services.search_orchestrator import SearchService
+from backend.services.vqa_answerer import GeminiVQAAnswerer
+from backend.services.vqa_service import VQAService
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -56,6 +58,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             parser=parser,
             dev1=dev1,
             dev2=dev2,
+        )
+        app.state.vqa_service = VQAService(
+            search_service=app.state.search_service,
+            answerer=GeminiVQAAnswerer(
+                api_key=active_settings.gemini_api_key,
+                model_name=active_settings.gemini_vqa_model,
+            ),
         )
         try:
             yield

@@ -28,3 +28,8 @@ class ImageTooLargeError(ServiceError):
 class ImageValidationError(ServiceError):
     def __init__(self, message: str):
         super().__init__("IMAGE_VALIDATION_ERROR", message, status_code=400)
+
+
+class VQAUnavailableError(ServiceError):
+    def __init__(self, message: str):
+        super().__init__("VQA_UNAVAILABLE", message, status_code=503)
