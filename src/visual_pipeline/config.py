@@ -17,11 +17,27 @@ Cấu trúc thư mục chuẩn (mặc định):
 """
 
 import os
+from pathlib import Path
 
 # ──────────────────────────────────────────────────────────────────────────────
 # ROOT — thư mục chứa script này (src/visual_pipeline/)
 # ──────────────────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def _get_env_value(name: str) -> str | None:
+    """Read an exported variable first, then the repository `.env` file."""
+    if value := os.getenv(name):
+        return value
+
+    dotenv_path = Path(BASE_DIR).parents[1] / ".env"
+    if not dotenv_path.is_file():
+        return None
+    for line in dotenv_path.read_text(encoding="utf-8").splitlines():
+        key, separator, value = line.partition("=")
+        if separator and key.strip() == name:
+            return value.strip().strip('"').strip("'") or None
+    return None
 
 # ──────────────────────────────────────────────────────────────────────────────
 # [CÓ THỂ SỬA] DATA_DIR — thư mục gốc chứa toàn bộ dữ liệu
@@ -46,7 +62,7 @@ QDRANT_DB_PATH = os.path.join(BASE_DIR, "local_qdrant_db")
 # ──────────────────────────────────────────────────────────────────────────────
 # Cấu hình Model & DB
 # ──────────────────────────────────────────────────────────────────────────────
-CLIP_MODEL_ID = "openai/clip-vit-base-patch32"
+CLIP_MODEL_ID = _get_env_value("VISUAL_CLIP_MODEL") or "openai/clip-vit-base-patch32"
 COLLECTION_NAME = "kis_images"
 VECTOR_SIZE = 512
 BATCH_SIZE = 32
