@@ -1,32 +1,11 @@
-"""Cấu hình chung cho test (Task 5).
+"""Make the source-layout package importable when pytest runs from repo root."""
 
-Test chạy trên metadata.json thật (24 frame) — file này được commit lên git nên
-ai clone repo về cũng chạy test được ngay, không cần chạy lại extractor.py.
-"""
+from __future__ import annotations
 
 import sys
 from pathlib import Path
 
-import pytest
 
-SEMANTIC_DIR = Path(__file__).resolve().parent.parent
-
-# Cho phép `import database` / `import server` khi chạy pytest từ gốc repo.
-sys.path.insert(0, str(SEMANTIC_DIR))
-
-
-@pytest.fixture(scope="session")
-def db():
-    from database import TextDatabase
-
-    return TextDatabase()
-
-
-@pytest.fixture(scope="session")
-def client():
-    from fastapi.testclient import TestClient
-
-    import server
-
-    with TestClient(server.app) as test_client:
-        yield test_client
+SOURCE_ROOT = Path(__file__).resolve().parents[2]
+if str(SOURCE_ROOT) not in sys.path:
+    sys.path.insert(0, str(SOURCE_ROOT))
