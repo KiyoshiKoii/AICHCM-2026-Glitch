@@ -18,14 +18,19 @@ port `8001` và `8002`.
 ### `POST /search/text`
 
 Tìm keyframe theo mô tả sự kiện. Backend gộp kết quả Visual và Semantic bằng
-RRF; khi Gemini được cấu hình, `llm_reranked_results` chứa thứ tự sau rerank.
+RRF. Đặt `use_rerank: true` khi cần Gemini chấm lại thứ tự; khi đó
+`llm_reranked_results` chứa thứ tự sau rerank.
 
 ```json
 {
   "query": "người đàn ông mặc áo đỏ làm rơi ví",
-  "top_k": 50
+  "top_k": 50,
+  "use_rerank": false
 }
 ```
+
+- `use_rerank`: mặc định `false` để không tốn Gemini request. Khi bật, backend
+  gửi một request Gemini để re-rank các kết quả retrieval.
 
 ```json
 {
