@@ -1,3 +1,4 @@
+import asyncio
 import json
 from json import JSONDecodeError
 from typing import Any
@@ -21,6 +22,43 @@ Convert a Vietnamese search query into exactly two English fields:
 2. semantic_keywords: 5-12 short English keywords or close synonyms useful for
    lexical/metadata retrieval.
 Do not invent details. Follow the supplied JSON schema exactly."""
+
+# Gemini's response-schema endpoint accepts a constrained Schema subset.  Do
+# not pass Pydantic's generated schema here: ``extra='forbid'`` becomes
+# ``additionalProperties: false``, which Gemini rejects with HTTP 400.
+GEMINI_QUERY_RESPONSE_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "visual_prompt": {"type": "STRING"},
+        "semantic_keywords": {
+            "type": "ARRAY",
+            "items": {"type": "STRING"},
+        },
+    },
+    "required": ["visual_prompt", "semantic_keywords"],
+}
+
+
+def extract_model_text(response: Any) -> str:
+    """Read text from Gemini's convenience property or raw candidate parts.
+
+    Some Gemini responses expose ``response.text`` as ``None`` even though a
+    candidate part contains text.  Treating that property as the only source
+    caused valid parser responses to fall back to the original Vietnamese
+    query, which CLIP cannot rank reliably.
+    """
+
+    direct_text = getattr(response, "text", None)
+    if isinstance(direct_text, str) and direct_text.strip():
+        return direct_text.strip()
+
+    for candidate in getattr(response, "candidates", None) or []:
+        content = getattr(candidate, "content", None)
+        for part in getattr(content, "parts", None) or []:
+            part_text = getattr(part, "text", None)
+            if isinstance(part_text, str) and part_text.strip():
+                return part_text.strip()
+    return ""
 
 
 def parse_llm_json(raw_content: str) -> ParsedQuery:
@@ -102,7 +140,7 @@ class OllamaQueryParser:
 
 
 class GeminiQueryParser:
-    def __init__(self, api_key: str | None, model_name: str = "gemini-3.1-flash-lite") -> None:
+    def __init__(self, api_key: str | None, model_name: str) -> None:
         self.api_key = api_key
         self.model_name = model_name
         self.client = genai.Client(api_key=api_key) if api_key and genai else None
@@ -120,15 +158,27 @@ class GeminiQueryParser:
             f"Query: {query}"
         )
         try:
-            response = await self.client.aio.models.generate_content(
-                model=self.model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    temperature=0.0,
+            for attempt in range(2):
+                response = await self.client.aio.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_schema=GEMINI_QUERY_RESPONSE_SCHEMA,
+                        temperature=0.0,
+                        max_output_tokens=512,
+                    ),
                 )
-            )
-            return parse_llm_json(response.text)
+                response_text = extract_model_text(response)
+                if response_text:
+                    return parse_llm_json(response_text)
+                if attempt == 0:
+                    # Empty text is often a transient candidate-generation
+                    # issue. Retry once, but do not create an unbounded request
+                    # loop that could amplify quota usage.
+                    await asyncio.sleep(0.25)
+                    prompt += "\nReturn a non-empty JSON object now; do not return an empty response."
+            raise LLMParserError("Gemini returned no text for query parsing")
         except Exception as exc:
             print(f"[Warning] GeminiQueryParser fallback used due to: {exc}")
             return ParsedQuery(visual_prompt=query, semantic_keywords=[query])

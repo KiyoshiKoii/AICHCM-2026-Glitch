@@ -32,7 +32,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             from backend.services.query_analyzer import GeminiQueryParser
             parser = GeminiQueryParser(
                 api_key=active_settings.gemini_api_key,
-                model_name="gemini-3.1-flash-lite",
+                model_name=active_settings.gemini_query_model,
             )
         else:
             parser = OllamaQueryParser(

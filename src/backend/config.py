@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     ollama_model: str = "qwen2.5:7b"
     
     gemini_api_key: str | None = None
+    gemini_query_model: str = "gemini-3.1-flash-lite"
+    gemini_rerank_model: str = "gemini-3.1-flash-lite"
     gemini_vqa_model: str = "gemini-3.1-flash"
 
     dev1_base_url: str = "http://localhost:8001"
