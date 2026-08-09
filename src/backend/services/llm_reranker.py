@@ -25,9 +25,8 @@ class RerankResponse(BaseModel):
 
 
 class GeminiReRanker:
-    def __init__(self, api_key: str | None, model_name: str = "gemini-3.1-flash-lite"):
+    def __init__(self, api_key: str | None, model_name: str):
         self.api_key = api_key
-        # Use gemini-3.1-flash-lite which has generous free tier in 2026
         self.model_name = model_name
         if api_key and genai:
             self.client = genai.Client(api_key=api_key)

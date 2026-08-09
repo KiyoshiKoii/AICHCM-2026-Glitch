@@ -3,13 +3,13 @@
  * Giao tiếp trực tiếp với Backend (Dev 3) thông qua các endpoints của API Contract.
  */
 
-export const searchByText = async (query, topK = 50) => {
+export const searchByText = async (query, topK = 50, useRerank = false) => {
   const response = await fetch('/api/v1/search/text', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ query, top_k: topK }),
+    body: JSON.stringify({ query, top_k: topK, use_rerank: useRerank }),
   });
   
   if (!response.ok) {

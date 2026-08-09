@@ -22,17 +22,21 @@ function App() {
   const [vqaQuestion, setVqaQuestion] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const runSearch = async (input) => {
+  const runSearch = async (input, useRerank = false) => {
     setIsLoading(true);
     setCurrentPage(1);
-    setLastQuery(input);
+    setLastQuery(
+      input instanceof File
+        ? input
+        : { mode: 'text', query: input, useRerank },
+    );
     setVqaQuestion(null);
     try {
       let response;
       if (input instanceof File) {
         response = await searchByImage(input);
       } else {
-        response = await searchByText(input);
+        response = await searchByText(input, 50, useRerank);
       }
       setResults(response.data.results || []);
       setLlmResults(response.data.llm_reranked_results || []);
@@ -90,6 +94,10 @@ function App() {
       runVqaSearch(lastQuery);
       return;
     }
+    if (typeof lastQuery === 'object' && lastQuery.mode === 'text') {
+      runSearch(lastQuery.query, lastQuery.useRerank);
+      return;
+    }
     runSearch(lastQuery);
   };
 
@@ -124,13 +132,13 @@ function App() {
             <>
               {vqaQuestion && (
                 <div className="vqa-results-heading">
-                  <h3>🤖 VQA answers from Gemini 3.1 Flash</h3>
+                  <h3>🤖 VQA answers from Gemini</h3>
                   <p>{vqaQuestion}</p>
                 </div>
               )}
               {llmResults.length > 0 && (
                 <div className="results-section">
-                  <h3 style={{ marginLeft: '1rem', marginTop: '1rem', color: '#888' }}>✨ Kết quả LLM Re-ranking (Gemini 3.1 Flash Lite)</h3>
+                  <h3 style={{ marginLeft: '1rem', marginTop: '1rem', color: '#888' }}>✨ Kết quả LLM Re-ranking (Gemini)</h3>
                   <ResultGrid 
                     results={pageLlmResults} 
                     onCardDoubleClick={handleCardDoubleClick} 

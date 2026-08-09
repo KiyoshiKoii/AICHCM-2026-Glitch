@@ -25,8 +25,20 @@ describe('SearchBar', () => {
     await user.type(getTextInput(), '  người đàn ông làm rơi ví  ');
     await user.click(getSubmitButton());
 
-    expect(onSearch).toHaveBeenCalledWith('người đàn ông làm rơi ví');
+    expect(onSearch).toHaveBeenCalledWith('người đàn ông làm rơi ví', false);
     expect(onImageSearch).not.toHaveBeenCalled();
+  });
+
+  it('passes useRerank when Gemini re-rank is enabled', async () => {
+    const user = userEvent.setup();
+    const onSearch = vi.fn();
+    render(<SearchBar onSearch={onSearch} />);
+
+    await user.type(getTextInput(), 'người đàn ông làm rơi ví');
+    await user.click(screen.getByRole('checkbox', { name: /gemini re-rank/i }));
+    await user.click(getSubmitButton());
+
+    expect(onSearch).toHaveBeenCalledWith('người đàn ông làm rơi ví', true);
   });
 
   it('does not call onSearch when the query is empty or whitespace-only', async () => {

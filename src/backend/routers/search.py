@@ -19,7 +19,11 @@ async def search_text(
     body: TextSearchRequest,
     service: Annotated[SearchService, Depends(get_search_service)],
 ) -> TextSearchResponse:
-    return await service.search_text(body.query, body.top_k)
+    return await service.search_text(
+        body.query,
+        body.top_k,
+        use_rerank=body.use_rerank,
+    )
 
 
 @router.post("/image", response_model=TextSearchResponse)

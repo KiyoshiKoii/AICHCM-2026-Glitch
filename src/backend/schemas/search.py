@@ -51,6 +51,10 @@ class ParsedQuery(BaseModel):
 class TextSearchRequest(BaseModel):
     query: str = Field(min_length=2, max_length=2000)
     top_k: int = Field(default=50, ge=1, le=100)
+    use_rerank: bool = Field(
+        default=False,
+        description="Call Gemini to re-rank the retrieved results.",
+    )
 
     @field_validator("query")
     @classmethod

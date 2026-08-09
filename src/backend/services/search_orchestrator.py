@@ -28,9 +28,18 @@ class SearchService:
         self.parser = parser
         self.dev1 = dev1
         self.dev2 = dev2
-        self.reranker = GeminiReRanker(api_key=settings.gemini_api_key)
+        self.reranker = GeminiReRanker(
+            api_key=settings.gemini_api_key,
+            model_name=settings.gemini_rerank_model,
+        )
 
-    async def search_text(self, query: str, top_k: int) -> TextSearchResponse:
+    async def search_text(
+        self,
+        query: str,
+        top_k: int,
+        *,
+        use_rerank: bool = True,
+    ) -> TextSearchResponse:
         try:
             parsed = await self.parser.parse(query)
             visual_prompt = parsed.visual_prompt
@@ -80,7 +89,7 @@ class SearchService:
             
         # Execute LLM Reranking on Top 100
         llm_reranked_results = None
-        if self.reranker.client:
+        if use_rerank and self.reranker.client:
             top_100 = merged_hits[:100]
             reranked_top_100 = await self.reranker.rerank(query, top_100)
             

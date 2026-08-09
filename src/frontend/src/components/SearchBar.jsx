@@ -11,6 +11,7 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch }) {
   const [query, setQuery] = useState('');
   const [question, setQuestion] = useState('');
   const [imageFile, setImageFile] = useState(null);
+  const [useRerank, setUseRerank] = useState(false);
 
   const handleImageChange = (e) => {
     setImageFile(e.target.files?.[0] ?? null);
@@ -31,7 +32,7 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch }) {
       onVqaSearch?.({ query: trimmed, question: trimmedQuestion });
       return;
     }
-    onSearch?.(trimmed);
+    onSearch?.(trimmed, useRerank);
   };
 
   const handleKeyDown = (e) => {
@@ -94,6 +95,17 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch }) {
             accept="image/jpeg,image/png"
             onChange={handleImageChange}
           />
+        </label>
+      )}
+
+      {activeTab === 'text' && (
+        <label className="search-rerank-toggle">
+          <input
+            type="checkbox"
+            checked={useRerank}
+            onChange={(e) => setUseRerank(e.target.checked)}
+          />
+          <span>Gemini re-rank (tốn 1 request)</span>
         </label>
       )}
 
