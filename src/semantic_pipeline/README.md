@@ -39,8 +39,10 @@ the English Gemini captions separately from multilingual OCR/ticker and
 program metadata, then uses weighted BM25 clauses plus exact-phrase boosts.
 The main backend keeps fusing these lexical results with CLIP through RRF, so
 this service does not duplicate the visual embedding pipeline.
-The current endpoint intentionally accepts text keywords only; UI/API filters
-will be added after there is evidence for useful filter values.
+The endpoint also accepts optional `batch_ids` (`L21`–`L30`) and `video_ids`
+filters. Full IDs such as `L22_V030` and suffixes such as `V030` are supported;
+the main backend forwards these constraints to both Elasticsearch and CLIP
+retrieval.
 
 Start a local Elasticsearch node, create a versioned index, and atomically
 activate its stable alias:

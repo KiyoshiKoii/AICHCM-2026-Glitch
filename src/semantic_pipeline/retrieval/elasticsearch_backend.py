@@ -9,7 +9,8 @@ from __future__ import annotations
 
 import json
 import os
-from collections.abc import Iterator, Sequence
+import re
+from collections.abc import Iterator, Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -169,8 +170,11 @@ def build_frame_document(record: CompactVisualRecord, context: VideoContext | No
         "frame_number": ref.frame_index,
         "caption": record.caption,
         "detailed_caption": record.detailed_caption,
+        "caption_vi": record.caption_vi,
+        "detailed_caption_vi": record.detailed_caption_vi,
         "ocr_text": record.ocr_text,
         "news_ticker_text": record.news_ticker_text,
+        "detections": [item.model_dump(mode="json") for item in record.detections],
         "video_title": video.title,
         "video_description": video.description,
         "video_keywords": " ".join(video.keywords),
@@ -300,17 +304,105 @@ def _clean_keywords(keywords: Sequence[str]) -> list[str]:
     return result[:20]
 
 
-def build_lexical_query(keywords: Sequence[str]) -> dict[str, Any]:
+def _clean_object_queries(
+    object_queries: Sequence[Mapping[str, Any]] | None,
+) -> list[tuple[str, str]]:
+    """Keep paired English/Vietnamese phrases for one object constraint."""
+
+    result: list[tuple[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for item in object_queries or ():
+        if not isinstance(item, Mapping):
+            continue
+        english = _text(item.get("english_phrase"))
+        vietnamese = _text(item.get("vietnamese_phrase"))
+        if not english or not vietnamese:
+            continue
+        key = (english.casefold(), vietnamese.casefold())
+        if key not in seen:
+            seen.add(key)
+            result.append((english, vietnamese))
+    return result[:5]
+
+
+def _clean_scope_ids(values: Sequence[str] | None) -> list[str]:
+    result: list[str] = []
+    seen: set[str] = set()
+    for value in values or ():
+        normalized = _text(value).upper()
+        if normalized and normalized not in seen:
+            seen.add(normalized)
+            result.append(normalized)
+    return result
+
+
+OBJECT_COVERAGE_BOOST = 2.0
+
+
+def _object_nested_clause(english_phrase: str, vietnamese_phrase: str) -> dict[str, Any]:
+    """Match one object's attributes inside the same nested detection."""
+    return {
+        "nested": {
+            "path": "detections",
+            "score_mode": "max",
+            "query": {
+                "bool": {
+                    "should": [
+                        {
+                            "combined_fields": {
+                                "query": english_phrase,
+                                "fields": [
+                                    "detections.description",
+                                    "detections.attributes",
+                                    "detections.action",
+                                    "detections.label",
+                                ],
+                                "operator": "and",
+                            }
+                        },
+                        {
+                            "match": {
+                                "detections.description_vi": {
+                                    "query": vietnamese_phrase,
+                                    "operator": "and",
+                                }
+                            }
+                        },
+                    ],
+                    "minimum_should_match": 1,
+                }
+            },
+        }
+    }
+
+
+def build_lexical_query(
+    keywords: Sequence[str],
+    *,
+    object_queries: Sequence[Mapping[str, Any]] | None = None,
+    ocr_queries: Sequence[str] | None = None,
+    program_queries: Sequence[str] | None = None,
+    batch_ids: Sequence[str] | None = None,
+    video_ids: Sequence[str] | None = None,
+) -> dict[str, Any]:
     """Build a weighted, field-aware BM25 query from parsed query keywords.
 
     A parsed query contains translations and near-synonyms, so each item is a
     recall-oriented ``should`` clause rather than one over-constrained bag of
-    terms.  Captions use English stemming; OCR and program metadata preserve
-    multilingual literal matching.
+    terms. Detailed captions are the primary visual retrieval evidence;
+    concise captions only provide a small secondary boost because they are
+    intentionally lossy and can be generic in large Gemini batches. Captions
+    use English stemming; OCR and program metadata preserve multilingual
+    literal matching.
     """
 
     terms = _clean_keywords(keywords)
-    if not terms:
+    objects = _clean_object_queries(object_queries)
+    ocr_terms = _clean_keywords(ocr_queries or ())
+    program_terms = _clean_keywords(program_queries or ())
+    batches = _clean_scope_ids(batch_ids)
+    videos = _clean_scope_ids(video_ids)
+    if not (terms or objects or ocr_terms or program_terms or batches or videos):
         return {"match_none": {}}
 
     should: list[dict[str, Any]] = []
@@ -320,7 +412,14 @@ def build_lexical_query(keywords: Sequence[str]) -> dict[str, Any]:
                 {
                     "combined_fields": {
                         "query": term,
-                        "fields": ["caption^4", "detailed_caption^2"],
+                        "fields": ["detailed_caption^4", "caption"],
+                        "operator": "and",
+                    }
+                },
+                {
+                    "combined_fields": {
+                        "query": term,
+                        "fields": ["detailed_caption_vi^4", "caption_vi"],
                         "operator": "and",
                     }
                 },
@@ -344,6 +443,39 @@ def build_lexical_query(keywords: Sequence[str]) -> dict[str, Any]:
                         "operator": "and",
                     }
                 },
+                {
+                    "nested": {
+                        "path": "detections",
+                        "score_mode": "max",
+                        "query": {
+                            "bool": {
+                                "should": [
+                                    {
+                                        "combined_fields": {
+                                            "query": term,
+                                            "fields": [
+                                                "detections.description",
+                                                "detections.attributes",
+                                                "detections.action",
+                                                "detections.label",
+                                            ],
+                                            "operator": "and",
+                                        }
+                                    },
+                                    {
+                                        "match": {
+                                            "detections.description_vi": {
+                                                "query": term,
+                                                "operator": "and",
+                                            }
+                                        }
+                                    },
+                                ],
+                                "minimum_should_match": 1,
+                            }
+                        },
+                    }
+                },
             ]
         )
         if len(term.split()) > 1:
@@ -359,13 +491,97 @@ def build_lexical_query(keywords: Sequence[str]) -> dict[str, Any]:
                     {
                         "multi_match": {
                             "query": term,
-                            "fields": ["caption^2", "detailed_caption"],
+                            "fields": ["detailed_caption^2", "caption"],
+                            "type": "phrase",
+                        }
+                    },
+                    {
+                        "multi_match": {
+                            "query": term,
+                            "fields": ["detailed_caption_vi^2", "caption_vi"],
                             "type": "phrase",
                         }
                     },
                 ]
             )
-    return {"bool": {"should": should, "minimum_should_match": 1}}
+
+    # Each clause searches one nested document, so all visual constraints in
+    # an object phrase must belong to the same detected object.
+    for english_phrase, vietnamese_phrase in objects:
+        should.append(_object_nested_clause(english_phrase, vietnamese_phrase))
+
+    for phrase in ocr_terms:
+        should.append(
+            {
+                "multi_match": {
+                    "query": phrase,
+                    "fields": ["ocr_text", "news_ticker_text"],
+                    "type": "phrase",
+                }
+            }
+        )
+
+    for phrase in program_terms:
+        should.append(
+            {
+                "multi_match": {
+                    "query": phrase,
+                    "fields": [
+                        "video_title",
+                        "video_keywords",
+                        "video_description",
+                        "series_name",
+                        "broadcast_slot",
+                        "channel_name",
+                        "source_network",
+                    ],
+                    "type": "phrase",
+                }
+            }
+        )
+    filters: list[dict[str, Any]] = []
+    if batches:
+        filters.append({"terms": {"program_code": [batch.lower() for batch in batches]}})
+    if videos:
+        exact_videos = [video for video in videos if "_" in video]
+        suffix_videos = [video for video in videos if "_" not in video]
+        video_should: list[dict[str, Any]] = []
+        if exact_videos:
+            video_should.append({"terms": {"video_id": exact_videos}})
+        video_should.extend(
+            {"wildcard": {"video_id": {"value": f"*_{suffix}"}}}
+            for suffix in suffix_videos
+        )
+        filters.append(
+            video_should[0]
+            if len(video_should) == 1
+            else {"bool": {"should": video_should, "minimum_should_match": 1}}
+        )
+
+    base_query = {"bool": {"should": should, "minimum_should_match": 1}}
+    if filters:
+        base_query["bool"]["filter"] = filters
+    if not objects:
+        return base_query
+
+    # Keep partial matches for recall, but explicitly reward object coverage:
+    # each independently matched object contributes one additive boost. This
+    # makes a 3/3 object match outrank an otherwise similar 1/3 match.
+    coverage_functions = [
+        {
+            "filter": _object_nested_clause(english_phrase, vietnamese_phrase),
+            "weight": OBJECT_COVERAGE_BOOST,
+        }
+        for english_phrase, vietnamese_phrase in objects
+    ]
+    return {
+        "function_score": {
+            "query": base_query,
+            "functions": coverage_functions,
+            "score_mode": "sum",
+            "boost_mode": "sum",
+        }
+    }
 
 
 class ElasticsearchTextSearch:
@@ -381,10 +597,27 @@ class ElasticsearchTextSearch:
     def document_count(self) -> int:
         return int(self.client.count(index=self.index)["count"])
 
-    def search(self, keywords: Sequence[str], *, top_k: int = 200) -> list[dict[str, Any]]:
+    def search(
+        self,
+        keywords: Sequence[str],
+        *,
+        object_queries: Sequence[Mapping[str, Any]] | None = None,
+        ocr_queries: Sequence[str] | None = None,
+        program_queries: Sequence[str] | None = None,
+        batch_ids: Sequence[str] | None = None,
+        video_ids: Sequence[str] | None = None,
+        top_k: int = 200,
+    ) -> list[dict[str, Any]]:
         if not 1 <= top_k <= 1000:
             raise ValueError("top_k must be between 1 and 1000")
-        query = build_lexical_query(keywords)
+        query = build_lexical_query(
+            keywords,
+            object_queries=object_queries,
+            ocr_queries=ocr_queries,
+            program_queries=program_queries,
+            batch_ids=batch_ids,
+            video_ids=video_ids,
+        )
         if "match_none" in query:
             return []
         response = self.client.search(
@@ -397,6 +630,8 @@ class ElasticsearchTextSearch:
                 "frame_number",
                 "caption",
                 "detailed_caption",
+                "caption_vi",
+                "detailed_caption_vi",
                 "ocr_text",
                 "news_ticker_text",
             ],
@@ -406,6 +641,8 @@ class ElasticsearchTextSearch:
                 "fields": {
                     "caption": {},
                     "detailed_caption": {},
+                    "caption_vi": {},
+                    "detailed_caption_vi": {},
                     "ocr_text": {},
                     "news_ticker_text": {},
                 },
@@ -423,6 +660,8 @@ class ElasticsearchTextSearch:
                     "metadata": {
                         "caption": source.get("caption", ""),
                         "detailed_caption": source.get("detailed_caption", ""),
+                        "caption_vi": source.get("caption_vi", ""),
+                        "detailed_caption_vi": source.get("detailed_caption_vi", ""),
                         "ocr_text": source.get("ocr_text", ""),
                         "news_ticker_text": source.get("news_ticker_text", ""),
                         "highlights": hit.get("highlight", {}),

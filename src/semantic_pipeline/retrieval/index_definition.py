@@ -11,7 +11,7 @@ from __future__ import annotations
 from copy import deepcopy
 
 
-DEFAULT_INDEX_NAME = "semantic_frames_v1"
+DEFAULT_INDEX_NAME = "semantic_frames_v3"
 DEFAULT_ALIAS_NAME = "semantic_frames"
 
 
@@ -60,8 +60,22 @@ _DEFINITION = {
             "frame_number": {"type": "integer"},
             "caption": {"type": "text", "analyzer": "english_visual"},
             "detailed_caption": {"type": "text", "analyzer": "english_visual"},
+            "caption_vi": {"type": "text", "analyzer": "folded_text"},
+            "detailed_caption_vi": {"type": "text", "analyzer": "folded_text"},
             "ocr_text": {"type": "text", "analyzer": "folded_text"},
             "news_ticker_text": {"type": "text", "analyzer": "folded_text"},
+            "detections": {
+                "type": "nested",
+                "properties": {
+                    "object_id": {"type": "keyword"},
+                    "label": {"type": "text", "analyzer": "english_visual"},
+                    "bbox": {"type": "float"},
+                    "description": {"type": "text", "analyzer": "english_visual"},
+                    "description_vi": {"type": "text", "analyzer": "folded_text"},
+                    "attributes": {"type": "text", "analyzer": "english_visual"},
+                    "action": {"type": "text", "analyzer": "english_visual"},
+                },
+            },
             "video_title": {"type": "text", "analyzer": "folded_text"},
             "video_description": {"type": "text", "analyzer": "folded_text"},
             "video_keywords": {"type": "text", "analyzer": "folded_text"},
