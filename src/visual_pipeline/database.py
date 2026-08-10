@@ -1,5 +1,6 @@
 import os
 import sys
+import uuid
 import numpy as np
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
@@ -92,8 +93,14 @@ for idx, npy_filename in enumerate(npy_files, 1):
         except ValueError:
             frame_index = i
 
+        # Stable IDs make re-indexing idempotent: the same keyframe is updated
+        # instead of becoming another searchable point.
+        point_id = str(uuid.uuid5(
+            uuid.NAMESPACE_URL,
+            f"aic2026-keyframe/{video_name}/{frame_name}",
+        ))
         points_buffer.append(PointStruct(
-            id=global_id,
+            id=point_id,
             vector=vector,
             payload={
                 "video_id": video_name,

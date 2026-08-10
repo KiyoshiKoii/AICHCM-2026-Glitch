@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 from collections import defaultdict
 
@@ -8,11 +9,12 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from transformers import CLIPProcessor, CLIPModel
 from qdrant_client import QdrantClient
+from qdrant_client.models import FieldCondition, Filter, MatchAny
 
 try:
-    from config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME
+    from config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME, KEYFRAME_DIR
 except ImportError:
-    from .config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME
+    from .config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME, KEYFRAME_DIR
 
 # Fix encoding issue for Vietnamese characters in Windows Terminal
 if sys.stdout.encoding != 'utf-8':
@@ -35,9 +37,15 @@ print("Qdrant Client đã sẵn sàng.")
 class SearchRequest(BaseModel):
     visual_prompt: str
     prompt_variants: list[str] = Field(default_factory=list)
+    batch_ids: list[str] = Field(default_factory=list, max_length=10)
+    video_ids: list[str] = Field(default_factory=list, max_length=100)
     top_k: int = Field(default=10, ge=1)
     candidate_k: int = Field(default=50, ge=1)
-    temporal_window: int = Field(default=5, ge=0)
+    # Keyframes are already sampled sparsely.  Comparing their ordinal file
+    # numbers with a +/-5 window removes distinct moments, especially when the
+    # user scopes search to one video.  Zero still removes exact duplicate
+    # points without suppressing neighbouring keyframes.
+    temporal_window: int = Field(default=0, ge=0)
 
 
 def get_frame_index(payload: dict) -> int:
@@ -51,6 +59,48 @@ def get_frame_index(payload: dict) -> int:
         return int(os.path.splitext(frame_name)[0])
     except (TypeError, ValueError):
         return 0
+
+
+def matches_scope(video_name: str, batch_ids: list[str], video_ids: list[str]) -> bool:
+    """Apply the UI's batch/video scope to a Qdrant payload."""
+    video_name = str(video_name).strip().upper()
+    batches = {item.strip().upper() for item in batch_ids if item.strip()}
+    videos = {
+        (f"V{int(item.strip()):03d}" if re.fullmatch(r"\d{1,3}", item.strip()) else item.strip().upper())
+        for item in video_ids
+        if item.strip()
+    }
+    batch = video_name.split("_", 1)[0]
+    if batches and batch not in batches:
+        return False
+    if videos and not any(video_name == video or video_name.endswith(f"_{video}") for video in videos):
+        return False
+    return True
+
+
+def scoped_video_ids(batch_ids: list[str], video_ids: list[str]) -> list[str]:
+    """Resolve the UI scope to exact Qdrant ``video_id`` values."""
+    requested_batches = {item.strip().upper() for item in batch_ids if item.strip()}
+    requested_videos = {
+        (f"V{int(item.strip()):03d}" if re.fullmatch(r"\d{1,3}", item.strip()) else item.strip().upper())
+        for item in video_ids
+        if item.strip()
+    }
+    available = [
+        entry.name.upper()
+        for entry in os.scandir(KEYFRAME_DIR)
+        if entry.is_dir() and re.fullmatch(r"L\d+_V\d+", entry.name.upper())
+    ]
+    return [
+        video
+        for video in available
+        if (not requested_batches or video.split("_", 1)[0] in requested_batches)
+        and (
+            not requested_videos
+            or video in requested_videos
+            or any(video.endswith(f"_{suffix}") for suffix in requested_videos if "_" not in suffix)
+        )
+    ]
 
 
 def temporal_deduplicate(points, top_k: int, temporal_window: int):
@@ -121,17 +171,42 @@ async def search_visual(req: SearchRequest):
         ]
 
         # 2. Lấy ít nhất 50 candidate rồi loại frame gần nhau trong cùng video.
-        candidate_limit = max(req.top_k, req.candidate_k)
+        scope_requested = bool(req.batch_ids or req.video_ids)
+        # Temporal NMS (and any legacy duplicate points) may discard a large
+        # share of the nearest neighbours.  Pull a deeper candidate pool first
+        # so the requested top_k can still be filled after deduplication.
+        candidate_limit = min(max(req.top_k * 4, req.candidate_k), 10000)
+        exact_scope = scoped_video_ids(req.batch_ids, req.video_ids) if scope_requested else []
+        if scope_requested and not exact_scope:
+            # Fall back to broad over-fetch only when the requested scope cannot
+            # be resolved to exact video_id payloads.
+            candidate_limit = min(candidate_limit * 20, 10000)
+        scope_filter = (
+            Filter(must=[FieldCondition(key="video_id", match=MatchAny(any=exact_scope))])
+            if exact_scope
+            else None
+        )
         search_results = client.query_points(
             collection_name=COLLECTION_NAME,
             query=query_vector,
             limit=candidate_limit,
+            query_filter=scope_filter,
         )
         candidate_points = (
             search_results.points
             if hasattr(search_results, "points")
             else search_results
         )
+        if scope_requested:
+            candidate_points = [
+                point
+                for point in candidate_points
+                if matches_scope(
+                    (point.payload or {}).get("video_id", ""),
+                    req.batch_ids,
+                    req.video_ids,
+                )
+            ]
         points = temporal_deduplicate(
             candidate_points,
             top_k=req.top_k,
