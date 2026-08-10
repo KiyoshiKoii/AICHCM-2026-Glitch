@@ -40,6 +40,14 @@ def make_image(tmp_path: Path, name: str = "001.jpg") -> Path:
     return path
 
 
+def test_visual_prompt_requires_boxes_for_physical_scene_subjects():
+    prompt = build_visual_prompt()
+    assert "return at least one useful box" in prompt
+    assert "damaged pavement, rubble, pipes" in prompt
+    assert "Return an empty detections array only" in prompt
+    assert "genuinely empty/blurred frame" in prompt
+
+
 def test_parses_frame_id_from_keyframe_path(tmp_path):
     path = make_image(tmp_path, "017.jpg")
     assert frame_id_from_path(path) == "L21_V001_f0017"
@@ -64,17 +72,50 @@ def test_news_profile_requires_a_separate_bottom_ticker_transcript():
     assert "scrolling news ticker/crawl" in prompt
 
 
+def test_prompt_requests_direct_vietnamese_visual_captions():
+    prompt = build_visual_prompt()
+
+    assert "caption_vi" in prompt
+    assert "generated directly from visual" in prompt
+    assert "Do not translate or paraphrase `caption`" in prompt
+
+
+def test_prompt_limits_optional_object_enrichment():
+    prompt = build_visual_prompt()
+    normalized_prompt = " ".join(prompt.split())
+
+    assert "no more than five" in normalized_prompt
+    assert "description_vi" in prompt
+    assert "at most six short lowercase English visual attributes" in normalized_prompt
+    assert "ordinary, background, partly hidden, or non-distinctive object" in normalized_prompt
+
+
 def test_maps_gemini_boxes_to_compact_detections_and_relations(tmp_path):
     path = make_image(tmp_path)
     result = GeminiFrameResult(
         frame_id="L21_V001_f0001",
         caption=" A person next to a car. ",
         detailed_caption=" A person stands beside a parked car on a street. ",
+        caption_vi=" Một người đứng cạnh ô tô. ",
+        detailed_caption_vi=" Một người đứng bên cạnh chiếc ô tô đỗ trên đường. ",
         ocr_text="  BAI  XE ",
         news_ticker_text="  Tin tuc moi nhat ",
         detections=[
-            GeminiDetection(label="person", box_2d=[100, 100, 900, 400]),
-            GeminiDetection(label="car", box_2d=[100, 600, 900, 950]),
+            GeminiDetection(
+                label="person",
+                box_2d=[100, 100, 900, 400],
+                description=" a person wearing a bright red coat ",
+                description_vi=" một người mặc áo khoác đỏ nổi bật ",
+                attributes=[" Red Coat ", "standing", "red coat"],
+                action=" Standing ",
+            ),
+            GeminiDetection(
+                label="car",
+                box_2d=[100, 600, 900, 950],
+                description="a blue parked car",
+                description_vi="một chiếc ô tô màu xanh đang đỗ",
+                attributes=["blue", "parked"],
+            ),
         ],
     )
 
@@ -82,16 +123,49 @@ def test_maps_gemini_boxes_to_compact_detections_and_relations(tmp_path):
 
     assert record.caption == "A person next to a car."
     assert record.detailed_caption == "A person stands beside a parked car on a street."
+    assert record.caption_vi == "Một người đứng cạnh ô tô."
+    assert record.detailed_caption_vi == "Một người đứng bên cạnh chiếc ô tô đỗ trên đường."
     assert record.ocr_text == "BAI XE"
     assert record.news_ticker_text == "Tin tuc moi nhat"
     assert [item.object_id for item in record.detections] == ["car_0", "person_0"]
     assert record.detections[0].bbox == (0.6, 0.1, 0.95, 0.9)
+    assert record.detections[0].description == "a blue parked car"
+    assert record.detections[0].attributes == ["blue", "parked"]
+    assert record.detections[1].description == "a person wearing a bright red coat"
+    assert record.detections[1].description_vi == "một người mặc áo khoác đỏ nổi bật"
+    assert record.detections[1].attributes == ["red coat", "standing"]
+    assert record.detections[1].action == "standing"
     triples = {
         (item.subject_id, item.predicate, item.object_id)
         for item in record.spatial_relations
     }
     assert ("person_0", "left_of", "car_0") in triples
     assert ("car_0", "right_of", "person_0") in triples
+
+
+def test_keeps_boxes_but_enriches_at_most_five_objects(tmp_path):
+    path = make_image(tmp_path)
+    result = GeminiFrameResult(
+        frame_id="L21_V001_f0001",
+        caption="Six objects.",
+        detailed_caption="Six separate objects appear across the image.",
+        detections=[
+            GeminiDetection(
+                label=f"object {index}",
+                box_2d=[100, index * 160, 900, index * 160 + 120],
+                description=f"distinctive object {index}",
+                description_vi=f"vật thể nổi bật {index}",
+                attributes=[f"attribute {index}"],
+            )
+            for index in range(6)
+        ],
+    )
+
+    record = compact_record_from_gemini(result, path)
+
+    assert len(record.detections) == 6
+    assert sum(bool(item.description) for item in record.detections) == 5
+    assert next(item for item in record.detections if item.label == "object 5").description == ""
 
 
 def test_drops_editorial_overlay_detection_labels(tmp_path):
@@ -310,6 +384,8 @@ def test_compact_schema_omits_derived_fields(tmp_path):
         "frame_id",
         "caption",
         "detailed_caption",
+        "caption_vi",
+        "detailed_caption_vi",
         "ocr_text",
         "news_ticker_text",
         "detections",

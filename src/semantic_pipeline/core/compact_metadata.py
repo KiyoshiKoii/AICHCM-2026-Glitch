@@ -30,6 +30,12 @@ class CompactDetection(CompactModel):
         NormalizedCoordinate,
         NormalizedCoordinate,
     ]
+    # Gemini fills these only for retrieval-worthy objects. Empty defaults keep
+    # older metadata readable and avoid forcing generic descriptions.
+    description: str = ""
+    description_vi: str = ""
+    attributes: list[str] = Field(default_factory=list, max_length=6)
+    action: str = ""
 
     @model_validator(mode="after")
     def validate_box_order(self) -> "CompactDetection":
@@ -57,6 +63,10 @@ class CompactVisualRecord(CompactModel):
     # Kept separate from the short retrieval caption so a caller can display or
     # index richer visual context without making the primary caption noisy.
     detailed_caption: str = ""
+    # Generated directly from the image in Vietnamese, not translated from the
+    # English fields. Defaults keep existing checkpoints readable.
+    caption_vi: str = ""
+    detailed_caption_vi: str = ""
     ocr_text: str = ""
     # L21/L22 only: scrolling news crawl at the bottom of the broadcast frame.
     news_ticker_text: str = ""

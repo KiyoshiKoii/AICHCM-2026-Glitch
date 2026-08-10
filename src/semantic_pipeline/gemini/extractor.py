@@ -57,6 +57,7 @@ DEFAULT_REQUESTS_PER_MINUTE = 15
 DEFAULT_DAILY_REQUEST_LIMIT = 500
 MAX_TRANSIENT_RETRIES = 5
 MAX_RATE_LIMIT_RETRIES = 5
+MAX_ENRICHED_DETECTIONS = 5
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 EDITORIAL_OVERLAY_LABELS = frozenset(
     {
@@ -78,6 +79,10 @@ class GeminiModel(BaseModel):
 
 class GeminiDetection(GeminiModel):
     label: str
+    description: str = ""
+    description_vi: str = ""
+    attributes: list[str] = Field(default_factory=list)
+    action: str = ""
     # Gemini's documented order: [ymin, xmin, ymax, xmax], in [0, 1000].
     box_2d: list[float] = Field(min_length=4, max_length=4)
 
@@ -89,6 +94,16 @@ class GeminiDetection(GeminiModel):
             raise ValueError("detection label must not be blank")
         return value
 
+    @field_validator("description", "description_vi", "action", mode="before")
+    @classmethod
+    def normalise_optional_text(cls, value: Any) -> str:
+        return value if isinstance(value, str) else ""
+
+    @field_validator("attributes", mode="before")
+    @classmethod
+    def normalise_attributes(cls, value: Any) -> list[str]:
+        return value if isinstance(value, list) else []
+
 
 class GeminiFrameResult(GeminiModel):
     # ``slot`` is the authoritative request-local identity. A zero default
@@ -97,6 +112,8 @@ class GeminiFrameResult(GeminiModel):
     frame_id: str
     caption: str
     detailed_caption: str
+    caption_vi: str = ""
+    detailed_caption_vi: str = ""
     ocr_text: str = ""
     news_ticker_text: str = ""
     detections: list[GeminiDetection] = Field(default_factory=list)
@@ -138,6 +155,8 @@ GEMINI_RESPONSE_SCHEMA = {
                     "frame_id": {"type": "STRING"},
                     "caption": {"type": "STRING"},
                     "detailed_caption": {"type": "STRING"},
+                    "caption_vi": {"type": "STRING"},
+                    "detailed_caption_vi": {"type": "STRING"},
                     "ocr_text": {"type": "STRING"},
                     "news_ticker_text": {"type": "STRING"},
                     "detections": {
@@ -146,6 +165,13 @@ GEMINI_RESPONSE_SCHEMA = {
                             "type": "OBJECT",
                             "properties": {
                                 "label": {"type": "STRING"},
+                                "description": {"type": "STRING"},
+                                "description_vi": {"type": "STRING"},
+                                "attributes": {
+                                    "type": "ARRAY",
+                                    "items": {"type": "STRING"},
+                                },
+                                "action": {"type": "STRING"},
                                 "box_2d": {
                                     "type": "ARRAY",
                                     "items": {"type": "NUMBER"},
@@ -160,6 +186,8 @@ GEMINI_RESPONSE_SCHEMA = {
                     "frame_id",
                     "caption",
                     "detailed_caption",
+                    "caption_vi",
+                    "detailed_caption_vi",
                     "ocr_text",
                     "news_ticker_text",
                     "detections",
@@ -215,22 +243,57 @@ BASE_VISUAL_PROMPT = """You receive labelled keyframe images. Process every imag
 For each supplied image return exactly one item. `slot` is the authoritative identity: copy the
 integer Input Slot exactly. Return the matching frame_id too, but never use it to infer which
 image a caption belongs to.
-- caption: one short, factual English sentence for retrieval. Do not add special tokens.
-- detailed_caption: two to four factual English sentences describing the shot type, setting,
-  foreground/background layout, important visible structures/objects, and visible activity or
-  conditions. State only what is visible; do not infer names, causes, or events.
+- caption: one short, retrieval-focused English sentence. Prioritize the number of clearly
+  separable dominant foreground subjects, their left-to-right arrangement, distinctive visible
+  attributes, clothing, and actions, followed by a short setting description. Avoid vague phrases
+  such as "a group of people" when the foreground subjects can be counted and described. Omit
+  ordinary lighting, vague atmosphere, and other non-discriminative details unless they are
+  visually unusual or central to the scene. Do not add special tokens.
+- detailed_caption: two to four factual English sentences. First state the shot type and number of
+  dominant foreground subjects when clear. Then describe those subjects from left to right using
+  visible attributes, clothing, pose, and actions. Describe secondary people and background context
+  separately. For scenes without dominant people, apply the same foreground-to-background ordering
+  to important visible structures and objects. State only what is visible; do not infer names,
+  roles, relationships, causes, or events.
+- caption_vi: one short, retrieval-focused Vietnamese sentence generated directly from visual
+  evidence in the image. Do not translate or paraphrase `caption`. Independently select the most
+  discriminative visible details and write natural Vietnamese. Apply the same subject count,
+  left-to-right arrangement, attributes, clothing, action, and concise setting priorities.
+- detailed_caption_vi: two to four natural Vietnamese sentences generated directly from the image,
+  not translated or paraphrased from `detailed_caption`. Independently describe the shot, dominant
+  foreground subjects from left to right, and secondary background context. Use only visible
+  evidence and follow the same no-inference restrictions as the English fields.
 - ocr_text: transcribe only clearly visible text in its original language. Do not translate,
   infer missing characters, or include a reading of the image label. Return an empty string when
   no text is legible.
 - news_ticker_text: return an empty string unless a later video-specific instruction asks for it.
-- detections: prominent, visually bounded objects and structures, ordered most salient first.
-  In aerial/landscape shots, include identifiable structures such as a road, bridge, seawall,
-  shoreline, building, boat, or vehicle when a useful box can be drawn. Use a short lowercase
-  English noun phrase for label. For detections only, exclude broadcaster logos, watermarks,
-  lower-thirds, and other editorial overlays. If the frame is an intro, transition, title-card, or program graphic, still
-  caption and OCR it but return an empty detections array. Return box_2d as
-  exactly four values: [ymin, xmin, ymax, xmax], normalized to integers or decimals
-  from 0 to 1000. Never return a three-value or otherwise truncated box.
+- detections: return up to five of the most salient visible people, objects, or physical
+  structures, ordered most salient first. If a real scene contains any clearly visible physical
+  subject, return at least one useful box; do not use an empty array merely because the subject
+  is large, diffuse, partly occluded, or not a conventional countable object. In addition to
+  people and vehicles, box useful regions/structures such as damaged pavement, rubble, pipes,
+  walls, roads, bridges, shorelines, buildings, boats, rivers, documents, or blueprints. Use a
+  short lowercase English noun phrase for label. For detections only, exclude broadcaster logos,
+  watermarks, lower-thirds, and other editorial overlays. Return an empty detections array only
+  for a genuinely empty/blurred frame or a pure intro, transition, title-card, or abstract
+  program graphic with no useful physical subject. Return box_2d as exactly four values:
+  [ymin, xmin, ymax, xmax], normalized to integers or decimals from 0 to 1000. Never return a
+  three-value or otherwise truncated box.
+  Decide which detected objects have visually distinctive details useful for retrieval. For no
+  more than five such objects in an image, additionally return:
+  - description: one compact English noun phrase tying visible appearance, clothing, color, or
+    other distinctive detail to this exact box.
+  - description_vi: a natural Vietnamese description generated directly from the pixels, not
+    translated from description, and tied to the same object.
+  - attributes: at most six short lowercase English visual attributes suitable for later filtering.
+  - action: one short lowercase English phrase for a directly visible action, or an empty string.
+  If caption or detailed_caption explicitly mentions a distinctive attribute, clothing detail,
+  color, or action for a detected object, copy that fact into the matching detection fields;
+  do not leave the matching object enrichment empty.
+  For an ordinary, background, partly hidden, or non-distinctive object, omit these fields or
+  return empty values. Never infer identity, occupation, age, ethnicity, relationships, intent,
+  or an action that is not visually evident. Keep returning useful boxes even when their semantic
+  detail fields are empty.
   Do not output a confidence score. Do not output a box for the whole image unless the whole
   image is itself a physical object such as a document or screen.
 
@@ -304,6 +367,31 @@ def _is_editorial_overlay_label(label: str) -> bool:
     return " ".join(label.casefold().split()) in EDITORIAL_OVERLAY_LABELS
 
 
+def _detection_key(
+    label: str,
+    bbox: tuple[float, float, float, float],
+) -> tuple[str, tuple[float, float, float, float]]:
+    return (
+        " ".join(label.strip().casefold().split()),
+        tuple(round(value, 6) for value in bbox),
+    )
+
+
+def _clean_attributes(values: list[str]) -> list[str]:
+    result: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if not isinstance(value, str):
+            continue
+        text = _clean_text(value).casefold()
+        if text and text not in seen:
+            seen.add(text)
+            result.append(text)
+        if len(result) == 6:
+            break
+    return result
+
+
 def compact_record_from_gemini(
     result: GeminiFrameResult,
     image_path: Path,
@@ -316,18 +404,43 @@ def compact_record_from_gemini(
             f"Gemini returned frame_id {result.frame_id!r}; expected {expected_frame_id!r}"
         )
     width, height = _image_size(image_path)
-    raw_detections = [
-        raw
-        for detection in result.detections
-        if not _is_editorial_overlay_label(detection.label)
-        if (raw := _raw_detection_from_gemini(detection, width, height)) is not None
-    ]
+    raw_detections: list[RawDetection] = []
+    enriched_by_detection: dict[
+        tuple[str, tuple[float, float, float, float]], GeminiDetection
+    ] = {}
+    enriched_count = 0
+    for detection in result.detections:
+        if _is_editorial_overlay_label(detection.label):
+            continue
+        raw = _raw_detection_from_gemini(detection, width, height)
+        if raw is None:
+            continue
+        raw_detections.append(raw)
+        has_semantic_detail = bool(
+            _clean_text(detection.description)
+            or _clean_text(detection.description_vi)
+            or _clean_attributes(detection.attributes)
+            or _clean_text(detection.action)
+        )
+        if has_semantic_detail and enriched_count < MAX_ENRICHED_DETECTIONS:
+            normalized_bbox = (
+                raw.bbox[0] / width,
+                raw.bbox[1] / height,
+                raw.bbox[2] / width,
+                raw.bbox[3] / height,
+            )
+            enriched_by_detection.setdefault(
+                _detection_key(raw.label, normalized_bbox), detection
+            )
+            enriched_count += 1
     detections = normalise_detections(raw_detections, width, height)
     relations = infer_spatial_relations(detections) if with_spatial else []
     return CompactVisualRecord(
         frame_id=expected_frame_id,
         caption=_clean_text(result.caption),
         detailed_caption=_clean_text(result.detailed_caption),
+        caption_vi=_clean_text(result.caption_vi),
+        detailed_caption_vi=_clean_text(result.detailed_caption_vi),
         ocr_text=_clean_text(result.ocr_text),
         news_ticker_text=_clean_text(result.news_ticker_text),
         detections=[
@@ -335,8 +448,19 @@ def compact_record_from_gemini(
                 object_id=item.object_id,
                 label=item.label,
                 bbox=item.bbox,
+                description=(
+                    _clean_text(detail.description) if detail is not None else ""
+                ),
+                description_vi=(
+                    _clean_text(detail.description_vi) if detail is not None else ""
+                ),
+                attributes=(
+                    _clean_attributes(detail.attributes) if detail is not None else []
+                ),
+                action=_clean_text(detail.action).casefold() if detail is not None else "",
             )
             for item in detections
+            for detail in [enriched_by_detection.get(_detection_key(item.label, item.bbox))]
         ],
         spatial_relations=[
             CompactSpatialRelation(

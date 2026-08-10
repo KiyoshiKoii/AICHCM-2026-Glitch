@@ -36,7 +36,7 @@ data/
 
 ## Gemini compact visual metadata
 
-`src/semantic_pipeline/gemini_visual_extractor.py` creates the compact visual
+`src/semantic_pipeline/gemini/extractor.py` creates the compact visual
 artifact with the model configured by `GEMINI_VISUAL_MODEL` in `.env`. It
 processes 25 keyframes per request by default (maximum 100, and additionally
 constrained by a 14 MiB raw-image budget).
@@ -48,10 +48,20 @@ derived from the primary key:
   "frame_id": "L21_V001_f0017",
   "caption": "A warning sign beside a flooded road.",
   "detailed_caption": "A warning sign stands beside a wet road bordered by vegetation. Floodwater covers part of the road.",
+  "caption_vi": "Một biển cảnh báo nằm cạnh con đường ngập nước.",
+  "detailed_caption_vi": "Một biển cảnh báo đặt bên con đường ướt có cây cối bao quanh. Nước ngập che phủ một phần mặt đường.",
   "ocr_text": "CẢNH BÁO SẠT LỞ NGUY HIỂM",
   "news_ticker_text": "",
   "detections": [
-    {"object_id": "traffic_sign_0", "label": "traffic sign", "bbox": [0.18, 0.13, 0.42, 0.45]}
+    {
+      "object_id": "traffic_sign_0",
+      "label": "traffic sign",
+      "bbox": [0.18, 0.13, 0.42, 0.45],
+      "description": "a red triangular warning sign beside a flooded road",
+      "description_vi": "biển cảnh báo hình tam giác màu đỏ bên đường ngập nước",
+      "attributes": ["red", "triangular", "warning sign"],
+      "action": ""
+    }
   ],
   "spatial_relations": [
     {"subject_id": "person_0", "predicate": "right_of", "object_id": "traffic_sign_0"}
@@ -64,6 +74,19 @@ index needs them. The actual video timestamp requires the corresponding
 `data/map-keyframes/<video>.csv` mapping and is not persisted here. Gemini
 response boxes `[ymin, xmin, ymax, xmax]` in `[0,1000]` are converted to the
 stored `[x1, y1, x2, y2]` range `[0,1]`.
+
+Gemini decides whether a detection has enough distinctive visual evidence to
+receive semantic details. At most five salient objects per frame are enriched
+with `description`, directly generated `description_vi`, up to six normalized
+English `attributes`, and an optional visible `action`. Other useful boxes are
+kept with empty detail fields. Elasticsearch stores detections as nested
+objects, so attributes belonging to different people are not mixed together.
+
+`caption_vi` and `detailed_caption_vi` are generated directly from the image in
+natural Vietnamese within the same Gemini request. They are not produced by a
+post-processing translation step. The English fields remain available for the
+CLIP/English retrieval route, while Elasticsearch indexes the Vietnamese fields
+separately with accent folding for Vietnamese queries.
 
 Gemini prompt context is selected per video from the `L21`–`L30` profile catalog
 and the small video-level fields in `metadata_youtube.jsonl`. The context only
@@ -90,7 +113,8 @@ tracked in a local state file.
 Smoke test one batch before a full run:
 
 ```powershell
-& 'C:\Users\AnhKhoi\miniconda3\condabin\conda.bat' run -n aichcm2026 --no-capture-output python src/semantic_pipeline/gemini_visual_extractor.py --input-dir data/keyframes/L21_V001 --output-dir data/metadata/caption --limit 25 --batch-size 25
+$env:PYTHONPATH = "src"
+python -m semantic_pipeline.gemini.extractor --input-dir data/keyframes/L21_V001 --output-dir data/metadata/caption --limit 25 --batch-size 25
 ```
 
 After reviewing that artifact, replace `--limit 25` with no limit. The full
