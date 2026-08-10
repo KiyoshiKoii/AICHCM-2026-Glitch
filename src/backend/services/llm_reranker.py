@@ -1,7 +1,8 @@
+import asyncio
 import os
 import json
 import logging
-from typing import List, Dict, Any
+from typing import List
 from pydantic import BaseModel, Field
 
 try:
@@ -25,6 +26,11 @@ class RerankResponse(BaseModel):
 
 
 class GeminiReRanker:
+    """List-wise Gemini reranker with a 50-image attention budget per call."""
+
+    FIRST_PASS_BATCH_SIZE = 50
+    FINALISTS_PER_BATCH = 25
+
     def __init__(self, api_key: str | None, model_name: str):
         self.api_key = api_key
         self.model_name = model_name
@@ -39,15 +45,52 @@ class GeminiReRanker:
         if not self.client or not hits:
             return hits
 
+        if len(hits) <= self.FIRST_PASS_BATCH_SIZE:
+            return await self._rerank_once(query, hits)
+
+        # Gemini scores from separate calls are not calibrated against each
+        # other. Re-rank each 50-image group first, then compare the strongest
+        # candidates from every group together in one final call.
+        batches = [
+            hits[offset : offset + self.FIRST_PASS_BATCH_SIZE]
+            for offset in range(0, len(hits), self.FIRST_PASS_BATCH_SIZE)
+        ]
+        first_pass_batches = await asyncio.gather(
+            *(self._rerank_once(query, batch) for batch in batches)
+        )
+        finalists = [
+            hit
+            for batch in first_pass_batches
+            for hit in batch[: self.FINALISTS_PER_BATCH]
+        ]
+
+        # The public text-search endpoint returns at most 100 hits, so this
+        # final comparison receives at most 50 images (two batches x 25).
+        # Keep this safeguard if the reranker is reused by another caller.
+        if len(finalists) > self.FIRST_PASS_BATCH_SIZE:
+            logger.warning(
+                "[GeminiReRanker] %s finalists exceed the final 50-image budget; "
+                "only the first %s will receive cross-batch reranking.",
+                len(finalists),
+                self.FIRST_PASS_BATCH_SIZE,
+            )
+            finalists = finalists[: self.FIRST_PASS_BATCH_SIZE]
+
+        final_reranked = await self._rerank_once(query, finalists)
+        finalist_ids = {hit.frame_id for hit in finalists}
+
+        # Scores from independent first-pass batches cannot safely order the
+        # non-finalists globally. Preserve their original RRF order after the
+        # consistently reranked final candidates.
+        remaining_hits = [hit for hit in hits if hit.frame_id not in finalist_ids]
+        return final_reranked + remaining_hits
+
+    async def _rerank_once(self, query: str, hits: List[SearchHit]) -> List[SearchHit]:
+        """Send one list-wise image batch to Gemini (maximum 50 images)."""
         # Prepare images
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-        
-        contents = [
-            f"Here are {len(hits)} images retrieved for the query: '{query}'. "
-            "Please act as an expert judge. Evaluate how well each image matches the query. "
-            "Return the results as a JSON object mapping each frame_id to a relevance score (0.0 to 1.0)."
-        ]
-        
+
+        contents = []
         valid_hits = []
         for hit in hits:
             # Reconstruct the physical path from frame_id
@@ -81,6 +124,13 @@ class GeminiReRanker:
         if not valid_hits:
             logger.warning(f"[GeminiReRanker] No valid images found on disk out of {len(hits)} hits.")
             return hits
+
+        contents.insert(
+            0,
+            f"Here are {len(valid_hits)} images retrieved for the query: '{query}'. "
+            "Please act as an expert judge. Evaluate how well each image matches the query. "
+            "Return the results as a JSON object mapping each frame_id to a relevance score (0.0 to 1.0).",
+        )
 
         try:
             # Use structured outputs with async client

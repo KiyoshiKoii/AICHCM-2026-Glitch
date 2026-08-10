@@ -22,18 +22,28 @@ def reciprocal_rank_fusion(
     k: int = 60,
     limit: int = 20,
     thumbnail_base_url: str,
+    source_weights: Mapping[str, float] | None = None,
 ) -> list[SearchHit]:
     """Fuse ranked lists with score = sum(1 / (k + rank))."""
     if k <= 0:
         raise ValueError("k must be greater than zero")
     if limit <= 0:
         return []
+    if source_weights is not None and any(weight < 0 for weight in source_weights.values()):
+        raise ValueError("source weights must be non-negative")
 
     accumulators: dict[str, _Accumulator] = {}
     first_seen_counter = 0
 
     for source, results in rankings.items():
         seen_in_source: set[str] = set()
+        weight = (
+            source_weights.get(source, 1.0)
+            if source_weights is not None
+            else (1.05 if source == "dev2" else 1.0)
+        )
+        if weight == 0:
+            continue
         for rank, result in enumerate(results, start=1):
             if result.frame_id in seen_in_source:
                 continue
@@ -45,10 +55,6 @@ def reciprocal_rank_fusion(
                     first_seen=first_seen_counter,
                 )
                 first_seen_counter += 1
-
-            # Give a slight weight boost to semantic pipeline (dev2) to break ties
-            # where an image matches perfectly in text but not in visual.
-            weight = 1.05 if source == "dev2" else 1.0
 
             item = accumulators[result.frame_id]
             item.rrf_score += (1.0 / (k + rank)) * weight

@@ -11,6 +11,29 @@ from backend.utils.rrf import reciprocal_rank_fusion
 from backend.services.llm_reranker import GeminiReRanker
 
 
+def _filter_upstream_results(results: list[Any], batch_ids: list[str], video_ids: list[str]) -> list[Any]:
+    """Enforce scope locally even if an upstream service ignores the filter."""
+    if not batch_ids and not video_ids:
+        return results
+    batches = {item.upper() for item in batch_ids}
+    videos = {item.upper() for item in video_ids}
+
+    def matches(item: Any) -> bool:
+        frame_id = getattr(item, "frame_id", "").upper()
+        video_name = frame_id.rsplit("_F", 1)[0] if "_F" in frame_id else ""
+        batch = video_name.split("_", 1)[0]
+        if batches and batch not in batches:
+            return False
+        if videos and not any(
+            video_name == video or video_name.endswith(f"_{video}")
+            for video in videos
+        ):
+            return False
+        return True
+
+    return [item for item in results if matches(item)]
+
+
 class QueryParser(Protocol):
     async def parse(self, query: str) -> ParsedQuery: ...
 
@@ -39,32 +62,69 @@ class SearchService:
         top_k: int,
         *,
         use_rerank: bool = True,
+        text_weight: float = 0.5,
+        visual_weight: float = 0.5,
+        batch_ids: list[str] | None = None,
+        video_ids: list[str] | None = None,
     ) -> TextSearchResponse:
+        batch_ids = batch_ids or []
+        video_ids = video_ids or []
         try:
             parsed = await self.parser.parse(query)
             visual_prompt = parsed.visual_prompt
             semantic_keywords = parsed.semantic_keywords + [query]
+            object_queries = [item.model_dump(mode="json") for item in parsed.object_queries]
+            ocr_queries = parsed.ocr_queries
+            program_queries = parsed.program_queries
         except Exception:
             visual_prompt = query
             semantic_keywords = [query]
+            object_queries = []
+            ocr_queries = []
+            program_queries = []
 
         try:
-            dev1_task = self.dev1.search_text({"visual_prompt": visual_prompt, "top_k": top_k * 2})
-            dev2_task = self.dev2.search_text({"keywords": semantic_keywords, "top_k": top_k * 2})
+            dev1_task = self.dev1.search_text(
+                {
+                    "visual_prompt": visual_prompt,
+                    "batch_ids": batch_ids,
+                    "video_ids": video_ids,
+                    "top_k": top_k * 2,
+                }
+            )
+            dev2_task = self.dev2.search_text(
+                {
+                    "keywords": semantic_keywords,
+                    "object_queries": object_queries,
+                    "ocr_queries": ocr_queries,
+                    "program_queries": program_queries,
+                    "batch_ids": batch_ids,
+                    "video_ids": video_ids,
+                    "top_k": top_k * 2,
+                }
+            )
             
             dev1_res, dev2_res = await asyncio.gather(dev1_task, dev2_task, return_exceptions=True)
             
             rankings = {}
             if not isinstance(dev1_res, Exception):
-                rankings["dev1"] = normalize_upstream_results(dev1_res, source="dev1")
+                rankings["dev1"] = _filter_upstream_results(
+                    normalize_upstream_results(dev1_res, source="dev1"), batch_ids, video_ids
+                )
             
             if not isinstance(dev2_res, Exception):
-                rankings["dev2"] = normalize_upstream_results(dev2_res, source="dev2")
+                rankings["dev2"] = _filter_upstream_results(
+                    normalize_upstream_results(dev2_res, source="dev2"), batch_ids, video_ids
+                )
                 
             merged_hits = reciprocal_rank_fusion(
                 rankings,
                 limit=top_k,
                 thumbnail_base_url=self.settings.thumbnail_base_url,
+                source_weights={
+                    "dev1": visual_weight,
+                    "dev2": text_weight,
+                },
             )
         except Exception as e:
             raise UpstreamError(f"Failed to fetch from upstream pipelines: {e}")
@@ -116,7 +176,7 @@ class SearchService:
     ) -> TextSearchResponse:
         results = []
         from backend.utils.thumbnail import build_thumbnail_url
-        for i in range(1, min(top_k + 1, 51)):
+        for i in range(1, min(top_k + 1, 101)):
             frame_id = f"L21_V001_f{i:04d}"
             results.append(
                 SearchHit(

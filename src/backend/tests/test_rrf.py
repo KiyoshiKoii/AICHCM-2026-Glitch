@@ -66,3 +66,35 @@ def test_rrf_duplicate_frame():
     assert len(results) == 1
     # RRF score should be 1 / (60 + 1)
     assert results[0].score == 1.0 / 61
+
+
+def test_rrf_respects_explicit_visual_text_weights():
+    rankings = {
+        "dev1": [UpstreamResult(frame_id="visual", score=0.9)],
+        "dev2": [UpstreamResult(frame_id="text", score=0.9)],
+    }
+
+    results = reciprocal_rank_fusion(
+        rankings,
+        limit=2,
+        thumbnail_base_url="/media/thumbnails",
+        source_weights={"dev1": 0.8, "dev2": 0.2},
+    )
+
+    assert [item.frame_id for item in results] == ["visual", "text"]
+
+
+def test_rrf_zero_weight_excludes_a_source():
+    rankings = {
+        "dev1": [UpstreamResult(frame_id="visual", score=0.9)],
+        "dev2": [UpstreamResult(frame_id="text", score=0.9)],
+    }
+
+    results = reciprocal_rank_fusion(
+        rankings,
+        limit=2,
+        thumbnail_base_url="/media/thumbnails",
+        source_weights={"dev1": 0.0, "dev2": 1.0},
+    )
+
+    assert [item.frame_id for item in results] == ["text"]

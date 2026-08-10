@@ -1,7 +1,8 @@
 import pytest
 
 from backend.config import Settings
-from backend.schemas.search import ParsedQuery, TextSearchRequest
+from backend.schemas.search import ParsedQuery, SearchHit, TextSearchRequest
+from backend.services.llm_reranker import GeminiReRanker
 from backend.services.search_orchestrator import SearchService
 
 
@@ -26,6 +27,18 @@ class FakeReranker:
         return hits
 
 
+class RecordingGeminiReranker(GeminiReRanker):
+    """Avoid Gemini/network I/O while exposing hierarchical batch calls."""
+
+    def __init__(self) -> None:
+        self.client = object()
+        self.calls: list[list[str]] = []
+
+    async def _rerank_once(self, query: str, hits: list[SearchHit]) -> list[SearchHit]:
+        self.calls.append([hit.frame_id for hit in hits])
+        return hits
+
+
 def build_service() -> tuple[SearchService, FakeReranker]:
     service = SearchService(
         settings=Settings(),
@@ -39,7 +52,33 @@ def build_service() -> tuple[SearchService, FakeReranker]:
 
 
 def test_text_search_request_disables_rerank_by_default():
-    assert TextSearchRequest(query="a person").use_rerank is False
+    request = TextSearchRequest(query="a person")
+
+    assert request.use_rerank is False
+    assert request.top_k == 100
+    assert request.text_weight == 0.5
+    assert request.visual_weight == 0.5
+
+
+def test_text_search_request_rejects_zero_fusion_weights():
+    with pytest.raises(ValueError, match="cannot both be zero"):
+        TextSearchRequest(query="a person", text_weight=0.0, visual_weight=0.0)
+
+
+def test_text_search_request_normalizes_batch_and_video_filters():
+    request = TextSearchRequest(
+        query="a person",
+        batch_ids="L21, l22",
+        video_ids="v006, L22_V030",
+    )
+
+    assert request.batch_ids == ["L21", "L22"]
+    assert request.video_ids == ["V006", "L22_V030"]
+
+
+def test_text_search_request_rejects_unknown_batch_filter():
+    with pytest.raises(ValueError, match="only L21-L30"):
+        TextSearchRequest(query="a person", batch_ids=["L20"])
 
 
 @pytest.mark.asyncio
@@ -60,3 +99,30 @@ async def test_search_runs_gemini_reranking_when_enabled():
 
     assert reranker.calls == [("a person", ["L21_V001_f0001"])]
     assert response.data.llm_reranked_results is not None
+
+
+@pytest.mark.asyncio
+async def test_gemini_reranker_uses_two_50_image_passes_then_one_shared_final():
+    reranker = RecordingGeminiReranker()
+    hits = [
+        SearchHit(
+            frame_id=f"L21_V001_f{index:04d}",
+            score=1.0,
+            thumbnail_url=f"/media/thumbnails/L21_V001/{index:04d}.jpg",
+        )
+        for index in range(100)
+    ]
+
+    result = await reranker.rerank("a person", hits)
+
+    assert sorted(len(call) for call in reranker.calls) == [50, 50, 50]
+    assert set(reranker.calls[-1]) == {
+        *(f"L21_V001_f{index:04d}" for index in range(25)),
+        *(f"L21_V001_f{index:04d}" for index in range(50, 75)),
+    }
+    assert [hit.frame_id for hit in result] == [
+        *(f"L21_V001_f{index:04d}" for index in range(25)),
+        *(f"L21_V001_f{index:04d}" for index in range(50, 75)),
+        *(f"L21_V001_f{index:04d}" for index in range(25, 50)),
+        *(f"L21_V001_f{index:04d}" for index in range(75, 100)),
+    ]

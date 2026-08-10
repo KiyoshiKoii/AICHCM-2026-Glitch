@@ -23,6 +23,10 @@ async def search_text(
         body.query,
         body.top_k,
         use_rerank=body.use_rerank,
+        text_weight=body.text_weight,
+        visual_weight=body.visual_weight,
+        batch_ids=body.batch_ids,
+        video_ids=body.video_ids,
     )
 
 
@@ -31,7 +35,7 @@ async def search_image(
     request: Request,
     image_file: Annotated[UploadFile, File()],
     service: Annotated[SearchService, Depends(get_search_service)],
-    top_k: int = Form(50),
+    top_k: int = Form(100),
 ) -> TextSearchResponse:
     content_type = image_file.content_type or "application/octet-stream"
     if not (content_type.startswith("image/jpeg") or content_type.startswith("image/png") or content_type.startswith("image/jpg")):

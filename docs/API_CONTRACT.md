@@ -24,10 +24,23 @@ RRF. Đặt `use_rerank: true` khi cần Gemini chấm lại thứ tự; khi đ�
 ```json
 {
   "query": "người đàn ông mặc áo đỏ làm rơi ví",
-  "top_k": 50,
+  "top_k": 100,
+  "text_weight": 0.5,
+  "visual_weight": 0.5,
+  "batch_ids": ["L21", "L22"],
+  "video_ids": ["V006", "L22_V030"],
   "use_rerank": false
 }
 ```
+
+`batch_ids` giới hạn batch video trong `L21`–`L30`; `video_ids` nhận ID đầy đủ
+như `L22_V030` hoặc suffix như `V006`. Các filter này được áp dụng cho cả
+Visual/CLIP và Elasticsearch retrieval.
+
+`text_weight` and `visual_weight` control the RRF fusion between semantic
+text/Elasticsearch and visual/CLIP retrieval. They are non-negative relative
+weights; they cannot both be zero. The UI slider sends complementary values
+whose sum is `1.0`.
 
 - `use_rerank`: mặc định `false` để không tốn Gemini request. Khi bật, backend
   gửi một request Gemini để re-rank các kết quả retrieval.
@@ -37,7 +50,7 @@ RRF. Đặt `use_rerank: true` khi cần Gemini chấm lại thứ tự; khi đ�
   "status": "success",
   "message": "Retrieved successfully from Visual & Semantic Pipelines",
   "data": {
-    "total_results": 50,
+    "total_results": 100,
     "results": [
       {
         "frame_id": "L21_V022_f0012",
@@ -58,7 +71,7 @@ RRF. Đặt `use_rerank: true` khi cần Gemini chấm lại thứ tự; khi đ�
 Tìm keyframe tương tự từ ảnh truy vấn.
 
 - Request: `multipart/form-data`.
-- Fields: `image_file` (`.jpg`, `.jpeg`, `.png`) và `top_k` (mặc định `50`).
+- Fields: `image_file` (`.jpg`, `.jpeg`, `.png`) và `top_k` (mặc định `100`).
 - Response: cùng schema với `POST /search/text`.
 
 ### `POST /vqa`
@@ -162,6 +175,36 @@ trong cùng video theo `temporal_window`.
 ```
 
 ### `POST http://localhost:8002/internal/search/text`
+
+Current request body (the `filters` example below is legacy documentation and
+is not accepted by the service):
+
+```json
+{
+  "keywords": ["person", "red car"],
+  "object_queries": [
+    {
+      "english_phrase": "bald man wearing a light blue shirt",
+      "vietnamese_phrase": "người đàn ông hói mặc áo sơ mi xanh nhạt"
+    }
+  ],
+  "ocr_queries": ["SẠT LỞ"],
+  "program_queries": ["60 Giây Sáng"],
+  "batch_ids": ["L21"],
+  "video_ids": ["V006"],
+  "top_k": 200
+}
+```
+
+`object_queries` keeps every constraint of one object together in paired
+English/Vietnamese phrases, so Elasticsearch matches a single nested detection
+rather than mixing attributes from multiple people. `ocr_queries` is for exact
+visible text in OCR/news tickers; `program_queries` is for explicit program,
+series, broadcaster, channel, or broadcast-slot constraints. All three fields
+are optional and the backend falls back to `keywords` when parsing fails. When
+multiple object queries are present, Elasticsearch adds an object-coverage
+boost for every independently matched object, while still allowing partial
+matches for recall.
 
 ```json
 {
