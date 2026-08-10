@@ -3,13 +3,27 @@
  * Giao tiếp trực tiếp với Backend (Dev 3) thông qua các endpoints của API Contract.
  */
 
-export const searchByText = async (query, topK = 50, useRerank = false) => {
+export const searchByText = async (
+  query,
+  topK = 100,
+  useRerank = false,
+  { textWeight = 0.5, visualWeight = 0.5 } = {},
+  { batchIds = [], videoIds = [] } = {},
+) => {
   const response = await fetch('/api/v1/search/text', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ query, top_k: topK, use_rerank: useRerank }),
+    body: JSON.stringify({
+      query,
+      top_k: topK,
+      use_rerank: useRerank,
+      text_weight: textWeight,
+      visual_weight: visualWeight,
+      batch_ids: batchIds,
+      video_ids: videoIds,
+    }),
   });
   
   if (!response.ok) {
@@ -18,7 +32,7 @@ export const searchByText = async (query, topK = 50, useRerank = false) => {
   return response.json();
 };
 
-export const searchByImage = async (imageFile, topK = 50) => {
+export const searchByImage = async (imageFile, topK = 100) => {
   const formData = new FormData();
   formData.append('image_file', imageFile);
   formData.append('top_k', topK.toString());

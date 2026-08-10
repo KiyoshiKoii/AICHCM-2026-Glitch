@@ -10,8 +10,9 @@ function Sidebar({
   onSearch,
   onImageSearch,
   onVqaSearch,
-  onRepeatSearch,
-  canRepeatSearch,
+  onFiltersChange,
+  filters,
+  filterResetKey,
 }) {
   return (
     <aside className="sidebar">
@@ -38,9 +39,10 @@ function Sidebar({
         onSearch={onSearch}
         onImageSearch={onImageSearch}
         onVqaSearch={onVqaSearch}
+        filters={filters}
       />
 
-      <FilterPanel onSearch={onRepeatSearch} canSearch={canRepeatSearch} />
+      <FilterPanel onFiltersChange={onFiltersChange} resetKey={filterResetKey} />
     </aside>
   );
 }

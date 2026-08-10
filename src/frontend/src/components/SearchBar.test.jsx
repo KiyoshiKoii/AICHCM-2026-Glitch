@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import SearchBar from './SearchBar.jsx';
 
@@ -25,7 +25,12 @@ describe('SearchBar', () => {
     await user.type(getTextInput(), '  người đàn ông làm rơi ví  ');
     await user.click(getSubmitButton());
 
-    expect(onSearch).toHaveBeenCalledWith('người đàn ông làm rơi ví', false);
+    expect(onSearch).toHaveBeenCalledWith(
+      'người đàn ông làm rơi ví',
+      false,
+      { textWeight: 0.5, visualWeight: 0.5 },
+      { batchIds: [], videoIds: [] },
+    );
     expect(onImageSearch).not.toHaveBeenCalled();
   });
 
@@ -38,7 +43,31 @@ describe('SearchBar', () => {
     await user.click(screen.getByRole('checkbox', { name: /gemini re-rank/i }));
     await user.click(getSubmitButton());
 
-    expect(onSearch).toHaveBeenCalledWith('người đàn ông làm rơi ví', true);
+    expect(onSearch).toHaveBeenCalledWith(
+      'người đàn ông làm rơi ví',
+      true,
+      { textWeight: 0.5, visualWeight: 0.5 },
+      { batchIds: [], videoIds: [] },
+    );
+  });
+
+  it('passes the selected visual/text fusion weights', async () => {
+    const user = userEvent.setup();
+    const onSearch = vi.fn();
+    render(<SearchBar onSearch={onSearch} />);
+
+    await user.type(getTextInput(), 'người đàn ông làm rơi ví');
+    fireEvent.change(screen.getByRole('slider', { name: /text search weight/i }), {
+      target: { value: '70' },
+    });
+    await user.click(getSubmitButton());
+
+    expect(onSearch).toHaveBeenCalledWith(
+      'người đàn ông làm rơi ví',
+      false,
+      { textWeight: 0.7, visualWeight: 0.3 },
+      { batchIds: [], videoIds: [] },
+    );
   });
 
   it('does not call onSearch when the query is empty or whitespace-only', async () => {

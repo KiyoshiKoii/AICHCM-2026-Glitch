@@ -21,14 +21,21 @@ function App() {
   const [lastQuery, setLastQuery] = useState(null);
   const [vqaQuestion, setVqaQuestion] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [searchFilters, setSearchFilters] = useState({ batchIds: [], videoIds: [] });
+  const [filterResetKey, setFilterResetKey] = useState(0);
 
-  const runSearch = async (input, useRerank = false) => {
+  const runSearch = async (
+    input,
+    useRerank = false,
+    weights = { textWeight: 0.5, visualWeight: 0.5 },
+    filters = searchFilters,
+  ) => {
     setIsLoading(true);
     setCurrentPage(1);
     setLastQuery(
       input instanceof File
         ? input
-        : { mode: 'text', query: input, useRerank },
+        : { mode: 'text', query: input, useRerank, weights, filters },
     );
     setVqaQuestion(null);
     try {
@@ -36,7 +43,7 @@ function App() {
       if (input instanceof File) {
         response = await searchByImage(input);
       } else {
-        response = await searchByText(input, 50, useRerank);
+        response = await searchByText(input, 100, useRerank, weights, filters);
       }
       setResults(response.data.results || []);
       setLlmResults(response.data.llm_reranked_results || []);
@@ -86,19 +93,8 @@ function App() {
     setCurrentPage(1);
     setLastQuery(null);
     setVqaQuestion(null);
-  };
-
-  const handleRepeatSearch = () => {
-    if (!lastQuery) return;
-    if (typeof lastQuery === 'object' && lastQuery.mode === 'vqa') {
-      runVqaSearch(lastQuery);
-      return;
-    }
-    if (typeof lastQuery === 'object' && lastQuery.mode === 'text') {
-      runSearch(lastQuery.query, lastQuery.useRerank);
-      return;
-    }
-    runSearch(lastQuery);
+    setSearchFilters({ batchIds: [], videoIds: [] });
+    setFilterResetKey((current) => current + 1);
   };
 
   const totalPages = Math.ceil(results.length / PAGE_SIZE) || 1;
@@ -122,8 +118,9 @@ function App() {
           onSearch={runSearch}
           onImageSearch={runSearch}
           onVqaSearch={runVqaSearch}
-          onRepeatSearch={handleRepeatSearch}
-          canRepeatSearch={Boolean(lastQuery)}
+          filters={searchFilters}
+          onFiltersChange={setSearchFilters}
+          filterResetKey={filterResetKey}
         />
         <main className="main-content">
           {isLoading ? (
@@ -134,6 +131,18 @@ function App() {
                 <div className="vqa-results-heading">
                   <h3>🤖 VQA answers from Gemini</h3>
                   <p>{vqaQuestion}</p>
+                </div>
+              )}
+              {results.length > 0 && (
+                <div className="results-toolbar">
+                  <span className="results-count">
+                    {results.length} kết quả · trang {currentPage}/{totalPages}
+                  </span>
+                  <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={setCurrentPage}
+                  />
                 </div>
               )}
               {llmResults.length > 0 && (
@@ -152,11 +161,6 @@ function App() {
                 results={pageResults} 
                 onCardDoubleClick={handleCardDoubleClick} 
                 onCardClick={(url) => setSelectedImage(url)} 
-              />
-              <Pagination
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={setCurrentPage}
               />
             </>
           )}

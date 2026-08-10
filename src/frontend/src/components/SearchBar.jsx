@@ -6,12 +6,13 @@ const TABS = [
   { id: 'image', label: 'Image Search' },
 ];
 
-function SearchBar({ onSearch, onImageSearch, onVqaSearch }) {
+function SearchBar({ onSearch, onImageSearch, onVqaSearch, filters = { batchIds: [], videoIds: [] } }) {
   const [activeTab, setActiveTab] = useState('text');
   const [query, setQuery] = useState('');
   const [question, setQuestion] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [useRerank, setUseRerank] = useState(false);
+  const [textWeightPercent, setTextWeightPercent] = useState(50);
 
   const handleImageChange = (e) => {
     setImageFile(e.target.files?.[0] ?? null);
@@ -32,7 +33,10 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch }) {
       onVqaSearch?.({ query: trimmed, question: trimmedQuestion });
       return;
     }
-    onSearch?.(trimmed, useRerank);
+    onSearch?.(trimmed, useRerank, {
+      textWeight: textWeightPercent / 100,
+      visualWeight: (100 - textWeightPercent) / 100,
+    }, filters);
   };
 
   const handleKeyDown = (e) => {
@@ -96,6 +100,32 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch }) {
             onChange={handleImageChange}
           />
         </label>
+      )}
+
+      {activeTab === 'text' && (
+        <>
+          <div className="fusion-weight-control">
+            <div className="fusion-weight-header">
+              <span>Fusion weight</span>
+              <span>Text {textWeightPercent}% · Visual {100 - textWeightPercent}%</span>
+            </div>
+            <input
+              id="text-weight-slider"
+              className="fusion-weight-slider"
+              type="range"
+              min="0"
+              max="100"
+              step="5"
+              value={textWeightPercent}
+              onChange={(e) => setTextWeightPercent(Number(e.target.value))}
+              aria-label="Text search weight"
+            />
+            <div className="fusion-weight-scale" aria-hidden="true">
+              <span>Visual</span>
+              <span>Text</span>
+            </div>
+          </div>
+        </>
       )}
 
       {activeTab === 'text' && (
