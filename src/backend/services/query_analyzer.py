@@ -1,5 +1,7 @@
 import asyncio
 import json
+import re
+import unicodedata
 from json import JSONDecodeError
 from typing import Any
 
@@ -15,13 +17,56 @@ try:
 except ImportError:
     genai = None
 
-SYSTEM_PROMPT = """You are a query parser for an egocentric video retrieval system.
-Convert a Vietnamese search query into exactly two English fields:
-1. visual_prompt: a concise, natural description containing only visible people,
-   objects, actions, setting, spatial relations, colors, and temporal cues.
-2. semantic_keywords: 5-12 short English keywords or close synonyms useful for
-   lexical/metadata retrieval.
-Do not invent details. Follow the supplied JSON schema exactly."""
+SYSTEM_PROMPT = """You are a query planner for a Vietnamese video retrieval system.
+Convert the user's Vietnamese query into the JSON fields required by the supplied schema.
+
+- visual_prompt: one concise, natural English visual description for CLIP. Keep it below 55
+  English words and include only observable scene evidence requested by the user. Preserve
+  important people, objects, actions, colors, count, and spatial arrangement. Never add a name,
+  occupation, location, event, time of day, relationship, or other fact not explicitly requested
+  or visually verifiable.
+- semantic_keywords: 1-12 short English words or phrases for broad scene/caption retrieval.
+  Prefer discriminative phrases such as "bald man blue shirt" over disconnected generic terms.
+  Treat them as parallel retrieval variants, not one long sentence: preserve the requested scene,
+  subjects, actions, and notable context with short caption-like phrases. You may include a small
+  number of precise visual paraphrases that retain the same meaning, for example "damaged
+  pathway", "broken concrete walkway", and "erosion" for a requested collapsed/eroded path.
+  Every keyword must be directly entailed by the user's query or be such a meaning-preserving
+  visual paraphrase. Never add a guessed setting, occupation, program, event, relationship, or
+  other contextual synonym merely because it is common for the described objects. In particular,
+  never invent the head noun of an ambiguous Vietnamese phrase: a damaged roadside area/path is
+  not a "roadside stall", shop, tent, building, or vehicle unless the user explicitly says so.
+  Do not convert clothing into an occupation: keep "person wearing blue medical scrubs" and never
+  rewrite it as "medical worker" unless the user said so.
+- object_queries: at most five requested objects that have distinguishing visual constraints.
+  Each item must describe exactly ONE object in both English and natural Vietnamese. Keep every
+  attribute, clothing detail, color, and action bound to that same object; never merge traits from
+  multiple people. Include every action explicitly requested for that object. Do not create an
+  object query for a group, count, relationship, relative position, scene, or vague background
+  context: those belong only in semantic_keywords and visual_prompt because an object index entry
+  represents one detected entity. Return [] if no ONE object has a useful distinguishing constraint.
+- ocr_queries: exact text, names, numbers, slogans, or signs the user expects to be visibly
+  readable. Preserve the original spelling; do not translate or invent text.
+- program_queries: explicit program, series, broadcaster, channel, or broadcast-slot constraints.
+  Do not infer them from a visual scene.
+
+Do not add synonyms that change a required constraint. Return JSON only and follow the schema
+exactly.
+
+Example for a scene-level query:
+Input: "một nhóm người đàn ông đứng cạnh lối đi ven đường bị sụp"
+Good semantic_keywords: ["group of people", "several men", "damaged pathway",
+"broken concrete walkway", "erosion"]
+Good object_queries: []
+Never produce "collapsed roadside stall" unless the input explicitly mentions a stall, kiosk, or
+shop. For a requested group of men or women, include the gender-neutral retrieval variant
+"group of people" as well as a separate gender-specific variant such as "several men"; captions
+often describe the same visible group with the generic word "people". Do NOT use the weaker,
+overlapping keyword "group of men" for this case. For a damaged or collapsed walkway/path, use
+the full variants "damaged pathway", "broken concrete walkway", and "erosion" when they preserve
+the request. Do NOT replace them with the vague alternatives "collapsed roadside", "broken
+ground", or "damaged path", and do not replace them with a guessed roadside object. The people as
+a group and the damaged path are scene evidence, not a single object."""
 
 # Gemini's response-schema endpoint accepts a constrained Schema subset.  Do
 # not pass Pydantic's generated schema here: ``extra='forbid'`` becomes
@@ -34,8 +79,33 @@ GEMINI_QUERY_RESPONSE_SCHEMA = {
             "type": "ARRAY",
             "items": {"type": "STRING"},
         },
+        "object_queries": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "english_phrase": {"type": "STRING"},
+                    "vietnamese_phrase": {"type": "STRING"},
+                },
+                "required": ["english_phrase", "vietnamese_phrase"],
+            },
+        },
+        "ocr_queries": {
+            "type": "ARRAY",
+            "items": {"type": "STRING"},
+        },
+        "program_queries": {
+            "type": "ARRAY",
+            "items": {"type": "STRING"},
+        },
     },
-    "required": ["visual_prompt", "semantic_keywords"],
+    "required": [
+        "visual_prompt",
+        "semantic_keywords",
+        "object_queries",
+        "ocr_queries",
+        "program_queries",
+    ],
 }
 
 
@@ -101,6 +171,90 @@ def parse_llm_json(raw_content: str) -> ParsedQuery:
     raise LLMParserError("LLM response does not contain a valid JSON object")
 
 
+def _fold_vietnamese(value: str) -> str:
+    """Lowercase Vietnamese text without accents for narrow query-plan guards."""
+
+    decomposed = unicodedata.normalize("NFD", value.casefold())
+    without_accents = "".join(
+        character for character in decomposed if unicodedata.category(character) != "Mn"
+    )
+    return re.sub(r"\s+", " ", without_accents.replace("đ", "d")).strip()
+
+
+def normalise_scene_keywords(query: str, parsed: ParsedQuery) -> ParsedQuery:
+    """Add high-recall variants where Gemini commonly over-specialises a scene.
+
+    Captions describe a visible group as "people" much more consistently than
+    "group of men". Likewise, reports of a collapsed road are captioned as a
+    damaged/eroded pathway. These are scene concepts, not a property of one
+    detection; keeping the guard here prevents a weak parser response from
+    eliminating a relevant frame before it reaches later ranking stages.
+    """
+
+    folded = _fold_vietnamese(query)
+    is_group = "nhom" in folded and "nguoi" in folded
+    is_men = "dan ong" in folded
+    is_women = "phu nu" in folded
+    is_path = any(phrase in folded for phrase in ("duong", "loi di"))
+    is_damage = any(phrase in folded for phrase in ("sup", "sat lo", "hu hong", "vo"))
+
+    keywords = list(parsed.semantic_keywords)
+    if is_group:
+        # A group is scene-level evidence. "group of men" is overly specific
+        # for our captions and gives unrelated male crowds too much BM25 score.
+        keywords = [
+            item
+            for item in keywords
+            if item.casefold() not in {"group of men", "group of women"}
+        ]
+        keywords.append("group of people")
+        if is_men:
+            keywords.append("several men")
+        elif is_women:
+            keywords.append("several women")
+
+    if is_path and is_damage:
+        # Do not retain generic alternatives that drown out the discriminative
+        # caption terms below.
+        keywords = [
+            item
+            for item in keywords
+            if item.casefold()
+            not in {
+                "collapsed roadside",
+                "broken ground",
+                "broken path",
+                "damaged path",
+                "damaged embankment",
+            }
+        ]
+        keywords.extend(
+            ["damaged pathway", "eroded pathway", "broken walkway", "erosion"]
+        )
+
+    unique_keywords: list[str] = []
+    seen_keywords: set[str] = set()
+    for keyword in keywords:
+        normalized = " ".join(keyword.split()).strip(" ,;")
+        key = normalized.casefold()
+        if normalized and key not in seen_keywords:
+            seen_keywords.add(key)
+            unique_keywords.append(normalized)
+
+    object_queries = parsed.object_queries
+    if is_group:
+        object_queries = [
+            item for item in object_queries if "group of" not in item.english_phrase.casefold()
+        ]
+
+    return parsed.model_copy(
+        update={
+            "semantic_keywords": unique_keywords[:12],
+            "object_queries": object_queries,
+        }
+    )
+
+
 class OllamaQueryParser:
     def __init__(self, client: httpx.AsyncClient, base_url: str, model: str) -> None:
         self._client = client
@@ -132,7 +286,7 @@ class OllamaQueryParser:
             response.raise_for_status()
             body = response.json()
             content = body["message"]["content"]
-            return parse_llm_json(content)
+            return normalise_scene_keywords(query, parse_llm_json(content))
         except Exception as exc:
             # Fallback on any error (network, parse, validation)
             print(f"[Warning] QueryParser fallback used due to: {exc}")
@@ -166,12 +320,12 @@ class GeminiQueryParser:
                         response_mime_type="application/json",
                         response_schema=GEMINI_QUERY_RESPONSE_SCHEMA,
                         temperature=0.0,
-                        max_output_tokens=512,
+                        max_output_tokens=768,
                     ),
                 )
                 response_text = extract_model_text(response)
                 if response_text:
-                    return parse_llm_json(response_text)
+                    return normalise_scene_keywords(query, parse_llm_json(response_text))
                 if attempt == 0:
                     # Empty text is often a transient candidate-generation
                     # issue. Retry once, but do not create an unbounded request

@@ -1,6 +1,67 @@
+import re
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+
+
+_BATCH_ID_PATTERN = re.compile(r"^L(?:2[1-9]|30)$", re.IGNORECASE)
+_VIDEO_ID_PATTERN = re.compile(r"^L(?:2[1-9]|30)_V\d{3}$", re.IGNORECASE)
+_VIDEO_SUFFIX_PATTERN = re.compile(r"^V\d{3}$", re.IGNORECASE)
+_VIDEO_NUMBER_PATTERN = re.compile(r"^\d{1,3}$")
+
+
+def _normalize_filter_values(value: Any) -> list[str]:
+    if isinstance(value, str):
+        value = re.split(r"[,;\s]+", value)
+    if not isinstance(value, list):
+        return value
+    result: list[str] = []
+    seen: set[str] = set()
+    for item in value:
+        if not isinstance(item, str):
+            continue
+        normalized = item.strip().upper()
+        if normalized and normalized not in seen:
+            seen.add(normalized)
+            result.append(normalized)
+    return result
+
+
+def _normalize_batch_ids(value: Any) -> list[str]:
+    values = _normalize_filter_values(value)
+    invalid = [item for item in values if not _BATCH_ID_PATTERN.fullmatch(item)]
+    if invalid:
+        raise ValueError(f"batch_ids must contain only L21-L30; invalid={invalid}")
+    return values
+
+
+def _normalize_video_ids(value: Any) -> list[str]:
+    values = _normalize_filter_values(value)
+    result: list[str] = []
+    for item in values:
+        if _VIDEO_NUMBER_PATTERN.fullmatch(item):
+            item = f"V{int(item):03d}"
+        if not (_VIDEO_ID_PATTERN.fullmatch(item) or _VIDEO_SUFFIX_PATTERN.fullmatch(item)):
+            raise ValueError(f"invalid video id: {item}")
+        result.append(item)
+    return result
+
+
+class ObjectQuery(BaseModel):
+    """One object constraint whose terms must refer to the same object."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    english_phrase: str = Field(min_length=1, max_length=300)
+    vietnamese_phrase: str = Field(min_length=1, max_length=300)
+
+    @field_validator("english_phrase", "vietnamese_phrase")
+    @classmethod
+    def normalize_phrase(cls, value: str) -> str:
+        normalized = " ".join(value.split())
+        if not normalized:
+            raise ValueError("object query phrase must not be blank")
+        return normalized
 
 
 class ParsedQuery(BaseModel):
@@ -15,6 +76,21 @@ class ParsedQuery(BaseModel):
         min_length=1,
         max_length=20,
         description="English semantic keywords and close synonyms.",
+    )
+    object_queries: list[ObjectQuery] = Field(
+        default_factory=list,
+        max_length=5,
+        description="Object-specific phrases, preserving attributes bound to one object.",
+    )
+    ocr_queries: list[str] = Field(
+        default_factory=list,
+        max_length=8,
+        description="Exact text expected to be visible in the frame.",
+    )
+    program_queries: list[str] = Field(
+        default_factory=list,
+        max_length=5,
+        description="Program, series, broadcaster, or broadcast-slot constraints.",
     )
 
     @field_validator("visual_prompt")
@@ -47,10 +123,44 @@ class ParsedQuery(BaseModel):
             raise ValueError("semantic_keywords must contain a non-blank keyword")
         return result
 
+    @field_validator("ocr_queries", "program_queries", mode="before")
+    @classmethod
+    def accept_query_phrase_strings(cls, value: Any) -> Any:
+        return [value] if isinstance(value, str) else value
+
+    @field_validator("ocr_queries", "program_queries")
+    @classmethod
+    def normalize_query_phrases(cls, values: list[str]) -> list[str]:
+        result: list[str] = []
+        seen: set[str] = set()
+        for value in values:
+            if not isinstance(value, str):
+                continue
+            normalized = " ".join(value.split()).strip(" ,;")
+            key = normalized.casefold()
+            if normalized and key not in seen:
+                seen.add(key)
+                result.append(normalized)
+        return result
+
 
 class TextSearchRequest(BaseModel):
     query: str = Field(min_length=2, max_length=2000)
-    top_k: int = Field(default=50, ge=1, le=100)
+    top_k: int = Field(default=100, ge=1, le=100)
+    batch_ids: list[str] = Field(default_factory=list, max_length=10)
+    video_ids: list[str] = Field(default_factory=list, max_length=100)
+    text_weight: float = Field(
+        default=0.5,
+        ge=0.0,
+        le=1.0,
+        description="Relative weight of semantic text/Elasticsearch retrieval.",
+    )
+    visual_weight: float = Field(
+        default=0.5,
+        ge=0.0,
+        le=1.0,
+        description="Relative weight of visual/CLIP retrieval.",
+    )
     use_rerank: bool = Field(
         default=False,
         description="Call Gemini to re-rank the retrieved results.",
@@ -60,6 +170,22 @@ class TextSearchRequest(BaseModel):
     @classmethod
     def normalize_query(cls, value: str) -> str:
         return " ".join(value.split())
+
+    @field_validator("batch_ids", mode="before")
+    @classmethod
+    def normalize_batch_filters(cls, value: Any) -> list[str]:
+        return _normalize_batch_ids(value)
+
+    @field_validator("video_ids", mode="before")
+    @classmethod
+    def normalize_video_filters(cls, value: Any) -> list[str]:
+        return _normalize_video_ids(value)
+
+    @model_validator(mode="after")
+    def validate_fusion_weights(self) -> "TextSearchRequest":
+        if self.text_weight + self.visual_weight <= 0:
+            raise ValueError("text_weight and visual_weight cannot both be zero")
+        return self
 
 
 class UpstreamResult(BaseModel):
