@@ -55,6 +55,16 @@ LLM calls receive compact time windows containing caption/object/OCR evidence
 and ASR segments. Every story reference is validated against the supplied
 evidence before it can reach the fixed pilot output.
 
+The Gemini response is constrained with separate JSON schemas for window events
+and the final bilingual summary. Window titles/summaries are Vietnamese;
+`summary_vi` and `summary_en` are generated as distinct language fields. The
+pipeline also merges duplicate cards emitted by overlapping windows and removes
+the generic broadcast opener (for example, “Chương trình tin tức 60 giây”).
+
+Free-tier request limits are handled with a default 4.2-second interval between
+requests and bounded retry backoff for HTTP 429 responses. Override the interval
+when needed with `GEMINI_REQUEST_INTERVAL_SECONDS`.
+
 ## Tests
 
 ```powershell

@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import json
 import re
+import time
 from collections import Counter
 from typing import Any, Iterable
 
 from .models import ASRSegment, MicroScene, RuntimeFrame, StoryCandidate
+from .llm_schemas import VIDEO_SUMMARY_SCHEMA, WINDOW_SUMMARY_SCHEMA
 
 try:  # Optional at import time so offline validation remains lightweight.
     from google import genai
@@ -35,6 +37,10 @@ STOPWORDS = {
 }
 TRANSITION_RE = re.compile(
     r"\b(tiếp theo|sau đó|chuyển sang|trong một diễn biến khác|bản tin tiếp theo)\b",
+    re.IGNORECASE,
+)
+PROGRAM_INTRO_RE = re.compile(
+    r"\b(chương trình tin tức|bản tin .*?giới thiệu các nội dung|tin tức 60 giây)\b",
     re.IGNORECASE,
 )
 WORD_RE = re.compile(r"[^\W_]+", re.UNICODE)
@@ -149,6 +155,8 @@ class NewsSummarizer:
         self.model = "none"
         self.prompt_version = "news-summary-v1-fallback"
         self.client = None
+        self._last_request_at = 0.0
+        self._request_interval_seconds = 4.2
         self._use_llm = use_llm
         self._require_llm = require_llm
         if not use_llm:
@@ -158,6 +166,14 @@ class NewsSummarizer:
                 raise RuntimeError("google-genai is not installed but --require-llm was requested")
             return
         from semantic_pipeline.core.environment import get_env_value
+
+        try:
+            self._request_interval_seconds = max(
+                0.0,
+                float(get_env_value("GEMINI_REQUEST_INTERVAL_SECONDS") or "4.2"),
+            )
+        except ValueError:
+            self._request_interval_seconds = 4.2
 
         api_key = get_env_value("GEMINI_API_KEY")
         if not api_key:
@@ -169,26 +185,52 @@ class NewsSummarizer:
             "GEMINI_VISUAL_MODEL"
         ) or "gemini-2.5-flash"
         self.mode = "gemini"
-        self.prompt_version = "news-summary-v1"
+        self.prompt_version = "news-summary-v2"
 
-    def _generate_json(self, prompt: str) -> dict[str, Any]:
+    def _generate_json(
+        self,
+        prompt: str,
+        *,
+        schema: dict[str, Any],
+        response_kind: str,
+    ) -> dict[str, Any]:
         if self.client is None or types is None:
             raise RuntimeError("LLM client is not available")
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.1,
-                response_mime_type="application/json",
-            ),
+        elapsed = time.monotonic() - self._last_request_at
+        if elapsed < self._request_interval_seconds:
+            time.sleep(self._request_interval_seconds - elapsed)
+        config = types.GenerateContentConfig(
+            temperature=0.1,
+            response_mime_type="application/json",
+            response_json_schema=schema,
         )
+        response = None
+        for attempt, delay in enumerate((0.0, 5.0, 15.0, 30.0, 60.0)):
+            if delay:
+                time.sleep(delay)
+            self._last_request_at = time.monotonic()
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model,
+                    contents=prompt,
+                    config=config,
+                )
+                break
+            except Exception as exc:
+                message = str(exc)
+                quota_error = "429" in message or "RESOURCE_EXHAUSTED" in message
+                if not quota_error or attempt == 4:
+                    raise
+        if response is None:  # pragma: no cover - defensive for unusual clients.
+            raise RuntimeError(f"Gemini {response_kind} request returned no response")
         text = getattr(response, "text", None)
         if not text:
-            raise ValueError("Gemini summary response was empty")
-        payload = json.loads(text)
-        if not isinstance(payload, dict):
-            raise ValueError("Gemini summary response must be an object")
-        return payload
+            raise ValueError(f"Gemini {response_kind} response was empty")
+        try:
+            payload = json.loads(text)
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"Gemini {response_kind} response was not valid JSON") from exc
+        return _normalize_payload(payload, response_kind)
 
     def summarize_windows(
         self,
@@ -206,7 +248,11 @@ class NewsSummarizer:
         for window in windows:
             prompt = self._window_prompt(window)
             try:
-                payload = self._generate_json(prompt)
+                payload = self._generate_json(
+                    prompt,
+                    schema=WINDOW_SUMMARY_SCHEMA,
+                    response_kind="window",
+                )
             except Exception:
                 if require_llm:
                     raise
@@ -219,6 +265,10 @@ class NewsSummarizer:
             allowed_asr = {item["index"] for item in window.get("asr_segments", [])}
             for raw in raw_events:
                 if not isinstance(raw, dict):
+                    continue
+                title = str(raw.get("title", "")).strip()
+                raw_summary = str(raw.get("summary", "")).strip()
+                if _is_program_intro(title, raw_summary):
                     continue
                 refs = [str(item) for item in raw.get("scene_refs", []) if str(item) in allowed_scenes]
                 asr_refs: list[int] = []
@@ -233,8 +283,8 @@ class NewsSummarizer:
                     continue
                 candidates.append(
                     StoryCandidate(
-                        title=str(raw.get("title", "")).strip() or "Unlabelled news event",
-                        summary=str(raw.get("summary", "")).strip(),
+                        title=title or "Unlabelled news event",
+                        summary=raw_summary,
                         topics=_clean_strings(raw.get("topics")),
                         entities=_clean_strings(raw.get("entities")),
                         locations=_clean_strings(raw.get("locations")),
@@ -253,9 +303,10 @@ class NewsSummarizer:
     @staticmethod
     def _window_prompt(window: dict[str, Any]) -> str:
         return (
-            "You are extracting evidence-grounded news events from a video window. "
+            "You are extracting evidence-grounded events from a Vietnamese news video window. "
             "Use only the supplied caption, objects, OCR and ASR. Do not invent facts, "
-            "timestamps, or references. Return JSON with an events array; each event has "
+            "timestamps, or references. Write every event title and summary in natural Vietnamese. "
+            "Return a JSON object with an events array; each event has "
             "title, summary, topics, entities, locations, scene_refs, asr_segment_refs, "
             "uncertain. Keep anchor and B-roll together when they discuss the same story. "
             "Split when the ASR explicitly changes topic.\n\n"
@@ -273,15 +324,23 @@ class NewsSummarizer:
             try:
                 payload = self._generate_json(
                     "Create a concise bilingual video summary from these ordered, evidence-grounded "
-                    "news stories. Return JSON with summary_vi, summary_en, main_topics, "
-                    "main_entities, main_locations. Do not add facts.\n\n"
-                    + json.dumps([candidate.__dict__ for candidate in candidates], ensure_ascii=False)
+                    "Vietnamese news stories. Return a JSON object with summary_vi, summary_en, "
+                    "main_topics, main_entities, main_locations. summary_vi must be natural Vietnamese; "
+                    "summary_en must be natural English and must not be a copy of summary_vi. "
+                    "Do not add facts.\n\n"
+                    + json.dumps([candidate.__dict__ for candidate in candidates], ensure_ascii=False),
+                    schema=VIDEO_SUMMARY_SCHEMA,
+                    response_kind="video summary",
                 )
+                summary_vi = str(payload.get("summary_vi", "")).strip()
+                summary_en = str(payload.get("summary_en", "")).strip()
+                if self._require_llm and summary_vi.casefold() == summary_en.casefold():
+                    raise ValueError("Gemini bilingual summaries must not be identical")
                 return {
                     "video_id": video_id,
                     "duration_ms": duration_ms,
-                    "summary_vi": str(payload.get("summary_vi", "")).strip(),
-                    "summary_en": str(payload.get("summary_en", "")).strip(),
+                    "summary_vi": summary_vi,
+                    "summary_en": summary_en,
                     "main_topics": _clean_strings(payload.get("main_topics")),
                     "main_entities": _clean_strings(payload.get("main_entities")),
                     "main_locations": _clean_strings(payload.get("main_locations")),
@@ -312,6 +371,28 @@ def _clean_strings(value: Any) -> list[str]:
     if not isinstance(value, list):
         return []
     return _unique(str(item).strip() for item in value if str(item).strip())
+
+
+def _is_program_intro(title: str, summary: str) -> bool:
+    """Exclude a broadcast opener that describes the show rather than a story."""
+
+    combined = f"{title} {summary}"
+    return bool(PROGRAM_INTRO_RE.search(combined)) and not any(
+        marker in combined.casefold()
+        for marker in ("khởi công", "tai nạn", "cháy", "lũ", "cứu hộ", "đấu giá")
+    )
+
+
+def _normalize_payload(payload: Any, response_kind: str) -> dict[str, Any]:
+    """Normalize provider JSON while preserving the expected top-level contract."""
+
+    if response_kind == "window" and isinstance(payload, list):
+        # Compatibility with providers/models that honor JSON but ignore the
+        # requested top-level object shape.
+        payload = {"events": payload}
+    if not isinstance(payload, dict):
+        raise ValueError(f"Gemini {response_kind} response must be an object")
+    return payload
 
 
 def _unique(values: Iterable[str]) -> list[str]:

@@ -371,3 +371,26 @@ python -m pytest src/semantic_pipeline/tests/test_ocr_accuracy.py -v
 # Chạy test với output chi tiết (hiện kết quả đo performance)
 python -m pytest src/semantic_pipeline/tests -v -s
 ```
+
+### Video-understanding pilot (L22_V001)
+
+Pilot hướng tin tức được triển khai riêng tại
+[`VIDEO_UNDERSTANDING_PILOT.md`](VIDEO_UNDERSTANDING_PILOT.md). Pipeline chỉ đọc
+caption Gemini, ASR và `map-keyframes`; output cố định gồm đúng ba file
+`timeline.json`, `video_summary.json` và `validation_report.json`.
+
+Gemini dùng structured JSON schema cho từng evidence window và cho summary cuối
+video. Story title/summary được yêu cầu bằng tiếng Việt; `summary_vi` và
+`summary_en` là hai trường khác ngôn ngữ. Các card trùng do window overlap được
+merge trước khi publish, còn đoạn mở đầu chương trình không được coi là story.
+
+Model hiện dùng cho summary là `gemini-3.1-flash-lite`. Free-tier được giới hạn
+tự động bằng `GEMINI_REQUEST_INTERVAL_SECONDS` (mặc định `4.2`) và retry bounded
+khi gặp HTTP 429. Chạy pilot thật:
+
+```powershell
+python src/semantic_pipeline/video_understanding/cli.py `
+  --video-id L22_V001 `
+  --llm `
+  --require-llm
+```

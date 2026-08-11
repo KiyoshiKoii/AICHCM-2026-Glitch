@@ -71,3 +71,10 @@ data/models/
 
 # Video-understanding generated pilot and ephemeral staging artifacts
 data/processed/video_understanding/
+
+# Large/generated BTC and Gemini artifacts; keep compact fixtures or manifests
+# tracked instead of per-video caption, ASR and raw-data dumps.
+data/metadata/caption/
+data/metadata/metadata_asr/
+data/external/
+data/raw/

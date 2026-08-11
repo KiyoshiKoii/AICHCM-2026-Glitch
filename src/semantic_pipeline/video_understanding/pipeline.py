@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -98,7 +99,7 @@ def _merge_duplicate_candidates(candidates: list[Any]) -> list[Any]:
         for existing in result:
             shared_scene = len(current_refs & set(existing.scene_ids))
             shared_asr = len(current_asr & set(existing.asr_segment_indices))
-            if shared_scene or shared_asr:
+            if shared_scene or shared_asr or _same_news_story(existing, candidate):
                 duplicate = existing
                 break
         if duplicate is None:
@@ -112,6 +113,29 @@ def _merge_duplicate_candidates(candidates: list[Any]) -> list[Any]:
         duplicate.entities = list(dict.fromkeys(duplicate.entities + candidate.entities))[:20]
         duplicate.locations = list(dict.fromkeys(duplicate.locations + candidate.locations))[:20]
     return sorted(result, key=lambda item: min(item.scene_ids) if item.scene_ids else "")
+
+
+def _story_tokens(value: str) -> set[str]:
+    return {
+        token.casefold()
+        for token in re.findall(r"[^\W_]+", value or "", flags=re.UNICODE)
+        if len(token) > 2
+    }
+
+
+def _same_news_story(left: Any, right: Any) -> bool:
+    """Detect duplicate cards emitted by adjacent/overlapping LLM windows."""
+
+    left_text = _story_tokens(f"{left.title} {left.summary}")
+    right_text = _story_tokens(f"{right.title} {right.summary}")
+    union = left_text | right_text
+    similarity = len(left_text & right_text) / len(union) if union else 0.0
+    left_title = _story_tokens(left.title)
+    right_title = _story_tokens(right.title)
+    title_union = left_title | right_title
+    title_similarity = len(left_title & right_title) / len(title_union) if title_union else 0.0
+    anchors = set(left.entities + left.locations) & set(right.entities + right.locations)
+    return bool(anchors) and (similarity >= 0.30 or title_similarity >= 0.45)
 
 
 def build_video(
@@ -200,15 +224,7 @@ def build_video(
         "content_type": "news",
         **summary,
         "segment_refs": [item["segment_id"] for item in timeline_segments],
-        "search_text": " ".join(
-            [
-                summary.get("summary_vi", ""),
-                summary.get("summary_en", ""),
-                " ".join(summary.get("main_topics", [])),
-                " ".join(summary.get("main_entities", [])),
-                " ".join(item["title"] for item in timeline_segments),
-            ]
-        ).strip(),
+        "search_text": _build_search_text(summary, timeline_segments),
     }
     pilot_dir = output_root / "L22" / video_id / "pilot"
     published = publish_fixed_pilot(
@@ -230,3 +246,24 @@ def build_video(
         "frames": len(frames),
         "asr_segments": len(asr_segments),
     }
+
+
+def _build_search_text(summary: dict[str, Any], timeline_segments: list[dict[str, Any]]) -> str:
+    """Build bilingual retrieval text without exact duplicate fragments."""
+
+    fragments = [
+        str(summary.get("summary_vi", "")).strip(),
+        *[str(item.get("title", "")).strip() for item in timeline_segments],
+        *[str(item).strip() for item in summary.get("main_topics", [])],
+        *[str(item).strip() for item in summary.get("main_entities", [])],
+        *[str(item).strip() for item in summary.get("main_locations", [])],
+        str(summary.get("summary_en", "")).strip(),
+    ]
+    seen: set[str] = set()
+    unique: list[str] = []
+    for fragment in fragments:
+        normalized = " ".join(fragment.casefold().split())
+        if fragment and normalized not in seen:
+            seen.add(normalized)
+            unique.append(fragment)
+    return " ".join(unique)
