@@ -59,6 +59,12 @@ class CompactSpatialRelation(CompactModel):
 
 class CompactVisualRecord(CompactModel):
     frame_id: NonEmptyString
+    # A representative frame may provide the visual description for a nearby
+    # duplicate, while OCR is always sourced from the frame being persisted.
+    # Empty defaults keep older checkpoints readable during migration.
+    visual_source_frame_id: str = ""
+    ocr_source_frame_id: str = ""
+    quality_flags: list[str] = Field(default_factory=list, max_length=12)
     caption: NonEmptyString
     # Kept separate from the short retrieval caption so a caller can display or
     # index richer visual context without making the primary caption noisy.
@@ -76,6 +82,14 @@ class CompactVisualRecord(CompactModel):
     @model_validator(mode="after")
     def validate_references(self) -> "CompactVisualRecord":
         parse_frame_id(self.frame_id)
+        for source_name, source_frame_id in (
+            ("visual_source_frame_id", self.visual_source_frame_id),
+            ("ocr_source_frame_id", self.ocr_source_frame_id),
+        ):
+            if source_frame_id:
+                parse_frame_id(source_frame_id)
+                if parse_frame_id(source_frame_id).video_name != parse_frame_id(self.frame_id).video_name:
+                    raise ValueError(f"{source_name} must belong to the same video as frame_id")
         known_ids = {item.object_id for item in self.detections}
         if len(known_ids) != len(self.detections):
             raise ValueError("detection object_id values must be unique within a frame")

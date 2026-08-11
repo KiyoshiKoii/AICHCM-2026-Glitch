@@ -14,8 +14,11 @@ from semantic_pipeline.core.frame_id import frame_id_from_path, parse_frame_id
 from semantic_pipeline.gemini.extractor import (
     GeminiDetection,
     GeminiFrameResult,
+    GeminiOCRFrameResult,
     GeminiVisualExtractor,
+    DEFAULT_BATCH_SIZE,
     build_visual_prompt,
+    build_ocr_prompt,
     canonicalize_response_frame_ids,
     compact_record_from_gemini,
     load_gemini_api_key,
@@ -163,9 +166,9 @@ def test_keeps_boxes_but_enriches_at_most_five_objects(tmp_path):
 
     record = compact_record_from_gemini(result, path)
 
-    assert len(record.detections) == 6
+    assert len(record.detections) == 5
     assert sum(bool(item.description) for item in record.detections) == 5
-    assert next(item for item in record.detections if item.label == "object 5").description == ""
+    assert all(item.label != "object 5" for item in record.detections)
 
 
 def test_drops_editorial_overlay_detection_labels(tmp_path):
@@ -266,6 +269,75 @@ def test_valid_slots_override_swapped_gemini_frame_ids(tmp_path):
         "L21_V001_f0002",
     ]
     assert frames[0].caption == "First image caption."
+
+
+def test_ocr_batch_uses_slots_and_temperature_zero(tmp_path):
+    first_path = make_image(tmp_path, "001.jpg")
+    second_path = first_path.parent / "002.jpg"
+    Image.new("RGB", (200, 100), "white").save(second_path)
+    captured = {}
+
+    class FakeModels:
+        def generate_content(self, **kwargs):
+            captured.update(kwargs)
+            return SimpleNamespace(
+                text=json.dumps(
+                    {
+                        "frames": [
+                            {
+                                "slot": 2,
+                                "frame_id": "L21_V001_f0001",
+                                "ocr_text": "second text",
+                                "news_ticker_text": "second ticker",
+                            },
+                            {
+                                "slot": 1,
+                                "frame_id": "L21_V001_f0002",
+                                "ocr_text": "first text",
+                                "news_ticker_text": "first ticker",
+                            },
+                        ]
+                    }
+                )
+            )
+
+    extractor = object.__new__(GeminiVisualExtractor)
+    extractor.client = SimpleNamespace(models=FakeModels())
+    extractor.model_name = "test-model"
+    extractor.context_resolver = VisualContextResolver()
+    extractor.use_video_context = False
+    extractor.max_output_tokens = 65_536
+
+    records = extractor.extract_ocr_batch([first_path, second_path])
+
+    assert [record.frame_id for record in records] == [
+        "L21_V001_f0001",
+        "L21_V001_f0002",
+    ]
+    assert [record.ocr_text for record in records] == ["first text", "second text"]
+    assert captured["config"].temperature == 0.0
+    assert "OCR-only" in captured["contents"][0]
+
+
+def test_visual_guard_removes_inferred_demographics(tmp_path):
+    record = compact_record_from_gemini(
+        GeminiFrameResult(
+            frame_id="L21_V001_f0001",
+            caption="A middle-aged Asian man stands indoors.",
+            detailed_caption="An Asian man is speaking.",
+        ),
+        make_image(tmp_path),
+    )
+
+    text = f"{record.caption} {record.detailed_caption}".casefold()
+    assert "middle-aged" not in text
+    assert "asian" not in text
+    assert "removed_inferred_demographic" in record.quality_flags
+
+
+def test_default_batch_size_and_ocr_prompt_contract():
+    assert DEFAULT_BATCH_SIZE == 20
+    assert "ticker" in build_ocr_prompt().casefold()
 
 
 def test_retries_only_the_frame_omitted_from_a_batch(tmp_path):
@@ -382,6 +454,9 @@ def test_compact_schema_omits_derived_fields(tmp_path):
     dumped = record.model_dump(mode="json")
     assert set(dumped) == {
         "frame_id",
+        "visual_source_frame_id",
+        "ocr_source_frame_id",
+        "quality_flags",
         "caption",
         "detailed_caption",
         "caption_vi",
@@ -516,6 +591,7 @@ def test_global_filter_sends_only_representative_and_copies_its_metadata(
         encoding="utf-8",
     )
     requested_frame_ids = []
+    requested_ocr_frame_ids = []
 
     class FakeExtractor:
         def __init__(self, **_kwargs):
@@ -523,7 +599,7 @@ def test_global_filter_sends_only_representative_and_copies_its_metadata(
 
         @staticmethod
         def batch_paths(image_paths, **_kwargs):
-            return [list(image_paths)]
+            return [list(image_paths)] if image_paths else []
 
         def extract_batch(self, image_paths, **_kwargs):
             requested_frame_ids.extend(frame_id_from_path(path) for path in image_paths)
@@ -532,6 +608,17 @@ def test_global_filter_sends_only_representative_and_copies_its_metadata(
                     frame_id=frame_id_from_path(path),
                     caption="Representative frame.",
                     detailed_caption="Metadata produced once for the representative.",
+                )
+                for path in image_paths
+            ]
+
+        def extract_ocr_batch(self, image_paths, **_kwargs):
+            requested_ocr_frame_ids.extend(frame_id_from_path(path) for path in image_paths)
+            return [
+                GeminiOCRFrameResult(
+                    frame_id=frame_id_from_path(path),
+                    ocr_text="frame-local text",
+                    news_ticker_text="frame-local ticker",
                 )
                 for path in image_paths
             ]
@@ -548,11 +635,12 @@ def test_global_filter_sends_only_representative_and_copies_its_metadata(
     )
 
     assert requested_frame_ids == ["L99_V001_f0001"]
+    assert requested_ocr_frame_ids == ["L99_V001_f0002"]
     assert summary == {
-        "processed": 2,
-        "api_frames": 1,
+        "processed": 3,
+        "api_frames": 2,
         "total": 2,
-        "batches": 1,
+        "batches": 2,
         "daily_limit_reached": False,
         "daily_quota_reported": False,
     }
@@ -562,6 +650,26 @@ def test_global_filter_sends_only_representative_and_copies_its_metadata(
         "L99_V001_f0002",
     ]
     assert records[0]["caption"] == records[1]["caption"] == "Representative frame."
+    assert records[0]["visual_source_frame_id"] == "L99_V001_f0001"
+    assert records[0]["ocr_source_frame_id"] == "L99_V001_f0001"
+    assert records[1]["visual_source_frame_id"] == "L99_V001_f0001"
+    assert records[1]["ocr_source_frame_id"] == "L99_V001_f0002"
+    assert records[1]["news_ticker_text"] == "frame-local ticker"
+
+    requested_frame_ids.clear()
+    requested_ocr_frame_ids.clear()
+    resumed = run_extraction(
+        input_dir.parent,
+        output_dir,
+        api_key="test-key",
+        resume=True,
+        global_filter_results_path=global_filter,
+        request_budget_state_path=tmp_path / "request_budget.json",
+    )
+    assert requested_frame_ids == []
+    assert requested_ocr_frame_ids == []
+    assert resumed["processed"] == 0
+    assert resumed["api_frames"] == 0
 
 
 def test_daily_request_arguments_do_not_stop_local_extraction(

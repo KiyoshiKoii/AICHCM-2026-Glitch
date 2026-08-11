@@ -11,6 +11,7 @@ import argparse
 import json
 import mimetypes
 import os
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -49,7 +50,7 @@ from ..core.visual_profiles import DEFAULT_YOUTUBE_METADATA_PATH, VisualContextR
 
 
 DEFAULT_MODEL = "gemini-3.1-flash-lite"
-DEFAULT_BATCH_SIZE = 25
+DEFAULT_BATCH_SIZE = 20
 MAX_BATCH_SIZE = 100
 DEFAULT_MAX_INLINE_BYTES = 14 * 1024 * 1024
 DEFAULT_MAX_OUTPUT_TOKENS = 65_536
@@ -58,6 +59,16 @@ DEFAULT_DAILY_REQUEST_LIMIT = 500
 MAX_TRANSIENT_RETRIES = 5
 MAX_RATE_LIMIT_RETRIES = 5
 MAX_ENRICHED_DETECTIONS = 5
+MAX_DETECTIONS = 5
+FORBIDDEN_VISUAL_TERMS = (
+    "middle-aged",
+    "elderly",
+    "young man",
+    "young woman",
+    "old man",
+    "old woman",
+    "asian",
+)
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 EDITORIAL_OVERLAY_LABELS = frozenset(
     {
@@ -139,6 +150,30 @@ class GeminiVisualBatch(GeminiModel):
     frames: list[GeminiFrameResult]
 
 
+class GeminiOCRFrameResult(GeminiModel):
+    slot: int = 0
+    frame_id: str
+    ocr_text: str = ""
+    news_ticker_text: str = ""
+
+    @field_validator("frame_id")
+    @classmethod
+    def require_frame_id(cls, value: str) -> str:
+        value = value.strip()
+        if not value:
+            raise ValueError("frame_id must not be blank")
+        return value
+
+    @field_validator("ocr_text", "news_ticker_text", mode="before")
+    @classmethod
+    def normalise_text(cls, value: Any) -> str:
+        return value if isinstance(value, str) else ""
+
+
+class GeminiOCRBatch(GeminiModel):
+    frames: list[GeminiOCRFrameResult]
+
+
 # Gemini's response-schema endpoint accepts an OpenAPI-schema subset.  Passing
 # the Pydantic model itself serialises ``additionalProperties`` under this SDK,
 # which Gemini 3.1 Flash Lite rejects.  Keep the transport schema deliberately
@@ -199,6 +234,27 @@ GEMINI_RESPONSE_SCHEMA = {
 }
 
 
+GEMINI_OCR_RESPONSE_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "frames": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "slot": {"type": "INTEGER"},
+                    "frame_id": {"type": "STRING"},
+                    "ocr_text": {"type": "STRING"},
+                    "news_ticker_text": {"type": "STRING"},
+                },
+                "required": ["slot", "frame_id", "ocr_text", "news_ticker_text"],
+            },
+        },
+    },
+    "required": ["frames"],
+}
+
+
 def sanitise_gemini_payload(response_text: str) -> tuple[Any, list[str]]:
     """Remove malformed detections without discarding valid frame metadata.
 
@@ -252,7 +308,8 @@ image a caption belongs to.
 - detailed_caption: two to four factual English sentences. First state the shot type and number of
   dominant foreground subjects when clear. Then describe those subjects from left to right using
   visible attributes, clothing, pose, and actions. Describe secondary people and background context
-  separately. For scenes without dominant people, apply the same foreground-to-background ordering
+  separately. Do not mention broadcaster graphics, watermarks, clocks, lower-thirds, or ticker text
+  in captions; put visible text in the OCR fields. For scenes without dominant people, apply the same foreground-to-background ordering
   to important visible structures and objects. State only what is visible; do not infer names,
   roles, relationships, causes, or events.
 - caption_vi: one short, retrieval-focused Vietnamese sentence generated directly from visual
@@ -292,7 +349,8 @@ image a caption belongs to.
   do not leave the matching object enrichment empty.
   For an ordinary, background, partly hidden, or non-distinctive object, omit these fields or
   return empty values. Never infer identity, occupation, age, ethnicity, relationships, intent,
-  or an action that is not visually evident. Keep returning useful boxes even when their semantic
+  or an action that is not visually evident. Do not describe apparent age or ethnicity; use a
+  neutral label such as "person" when those properties are not directly evidenced. Keep returning useful boxes even when their semantic
   detail fields are empty.
   Do not output a confidence score. Do not output a box for the whole image unless the whole
   image is itself a physical object such as a document or screen.
@@ -310,6 +368,23 @@ NEWS_TICKER_INSTRUCTION = """For this news broadcast, `news_ticker_text` is requ
 - Return an empty string only when no ticker segment is visible or legible."""
 
 
+OCR_ONLY_PROMPT = """OCR-only extraction: you receive labelled keyframe images. Process every image independently.
+
+Return exactly one item for every supplied image. `slot` is the authoritative identity: copy the
+integer Input Slot exactly and return the matching frame_id. Never combine evidence between images.
+
+- `ocr_text`: transcribe only clearly legible scene text, signs, documents, screens, or charts in
+  the original language. Do not translate, infer missing characters, or include the image label,
+  broadcaster watermark, clock, logo, lower-third, or scrolling ticker. Return an empty string when
+  no scene text is legible.
+- `news_ticker_text`: only the currently visible scrolling ticker segment along the bottom edge of
+  the frame. Preserve the source-language text exactly and never infer off-screen continuation. Do
+  not include a watermark, clock, logo, or lower-third. Return an empty string when no ticker is
+  visible or legible.
+
+Return JSON only. Do not return captions, detections, explanations, or confidence scores."""
+
+
 def build_visual_prompt(context=None) -> str:
     """Compose the shared extraction contract with an optional video profile."""
     if context is None:
@@ -322,12 +397,38 @@ def build_visual_prompt(context=None) -> str:
     return f"{BASE_VISUAL_PROMPT}{ticker_instruction}\n\n{context.prompt_context()}"
 
 
+def build_ocr_prompt(context=None) -> str:
+    """Compose the small OCR-only contract used for deduplicated frames."""
+
+    if context is None:
+        return OCR_ONLY_PROMPT
+    ticker_instruction = (
+        f"\n\n{NEWS_TICKER_INSTRUCTION}"
+        if context.profile.collection_code in {"L21", "L22"}
+        else ""
+    )
+    return f"{OCR_ONLY_PROMPT}{ticker_instruction}"
+
+
 # Kept as a named constant for callers/tests that need the generic prompt.
 VISUAL_PROMPT = BASE_VISUAL_PROMPT
 
 
 def _clean_text(value: str) -> str:
     return " ".join(value.strip().split())
+
+
+def _strip_forbidden_visual_terms(value: str) -> tuple[str, set[str]]:
+    """Remove demographic guesses that are prohibited by the visual contract."""
+
+    text = value if isinstance(value, str) else ""
+    flags: set[str] = set()
+    terms = (*FORBIDDEN_VISUAL_TERMS, "trung niên", "cao tuổi", "người trẻ", "châu á")
+    for term in terms:
+        if re.search(rf"(?<!\w){re.escape(term)}(?!\w)", text, flags=re.IGNORECASE):
+            text = re.sub(rf"(?<!\w){re.escape(term)}(?!\w)", "", text, flags=re.IGNORECASE)
+            flags.add("removed_inferred_demographic")
+    return _clean_text(text), flags
 
 
 def load_gemini_api_key() -> str | None:
@@ -405,6 +506,7 @@ def compact_record_from_gemini(
         )
     width, height = _image_size(image_path)
     raw_detections: list[RawDetection] = []
+    quality_flags: set[str] = set()
     enriched_by_detection: dict[
         tuple[str, tuple[float, float, float, float]], GeminiDetection
     ] = {}
@@ -433,14 +535,47 @@ def compact_record_from_gemini(
                 _detection_key(raw.label, normalized_bbox), detection
             )
             enriched_count += 1
-    detections = normalise_detections(raw_detections, width, height)
+    detections = normalise_detections(
+        raw_detections,
+        width,
+        height,
+        max_detections=MAX_DETECTIONS,
+    )
     relations = infer_spatial_relations(detections) if with_spatial else []
+    caption, caption_flags = _strip_forbidden_visual_terms(result.caption)
+    detailed_caption, detailed_flags = _strip_forbidden_visual_terms(result.detailed_caption)
+    caption_vi, caption_vi_flags = _strip_forbidden_visual_terms(result.caption_vi)
+    detailed_caption_vi, detailed_vi_flags = _strip_forbidden_visual_terms(
+        result.detailed_caption_vi
+    )
+    caption = caption or "A visible scene is shown."
+    detailed_caption = detailed_caption or "A visible scene is shown."
+    quality_flags.update(caption_flags | detailed_flags | caption_vi_flags | detailed_vi_flags)
+
+    def clean_detection_text(value: str) -> str:
+        cleaned, flags = _strip_forbidden_visual_terms(value)
+        quality_flags.update(flags)
+        return cleaned
+
+    def clean_detection_attributes(values: list[str]) -> list[str]:
+        cleaned: list[str] = []
+        for value in values:
+            item = clean_detection_text(value).casefold()
+            if item and item not in cleaned:
+                cleaned.append(item)
+            if len(cleaned) == 6:
+                break
+        return cleaned
+
     return CompactVisualRecord(
         frame_id=expected_frame_id,
-        caption=_clean_text(result.caption),
-        detailed_caption=_clean_text(result.detailed_caption),
-        caption_vi=_clean_text(result.caption_vi),
-        detailed_caption_vi=_clean_text(result.detailed_caption_vi),
+        visual_source_frame_id=expected_frame_id,
+        ocr_source_frame_id=expected_frame_id,
+        quality_flags=sorted(quality_flags),
+        caption=caption,
+        detailed_caption=detailed_caption,
+        caption_vi=caption_vi,
+        detailed_caption_vi=detailed_caption_vi,
         ocr_text=_clean_text(result.ocr_text),
         news_ticker_text=_clean_text(result.news_ticker_text),
         detections=[
@@ -449,15 +584,17 @@ def compact_record_from_gemini(
                 label=item.label,
                 bbox=item.bbox,
                 description=(
-                    _clean_text(detail.description) if detail is not None else ""
+                    clean_detection_text(detail.description) if detail is not None else ""
                 ),
                 description_vi=(
-                    _clean_text(detail.description_vi) if detail is not None else ""
+                    clean_detection_text(detail.description_vi) if detail is not None else ""
                 ),
                 attributes=(
-                    _clean_attributes(detail.attributes) if detail is not None else []
+                    clean_detection_attributes(detail.attributes) if detail is not None else []
                 ),
-                action=_clean_text(detail.action).casefold() if detail is not None else "",
+                action=(
+                    clean_detection_text(detail.action).casefold() if detail is not None else ""
+                ),
             )
             for item in detections
             for detail in [enriched_by_detection.get(_detection_key(item.label, item.bbox))]
@@ -529,6 +666,50 @@ def map_response_slots_to_frame_ids(
         frame.model_copy(update={"frame_id": expected_by_slot[frame.slot]})
         for frame in frames
     ]
+
+
+def map_ocr_response_slots_to_frame_ids(
+    frames: list[GeminiOCRFrameResult],
+    image_paths: list[Path],
+) -> list[GeminiOCRFrameResult]:
+    """Bind OCR-only results to images using request-local slots."""
+
+    expected_slots = set(range(1, len(image_paths) + 1))
+    returned_slots = [frame.slot for frame in frames]
+    if len(returned_slots) != len(set(returned_slots)) or set(returned_slots) != expected_slots:
+        return frames
+    expected_by_slot = {
+        slot: frame_id_from_path(path) for slot, path in enumerate(image_paths, start=1)
+    }
+    return [
+        frame.model_copy(update={"frame_id": expected_by_slot[frame.slot]})
+        for frame in frames
+    ]
+
+
+def canonicalize_ocr_response_frame_ids(
+    frames: list[GeminiOCRFrameResult],
+    supplied_frame_ids: set[str],
+) -> list[GeminiOCRFrameResult]:
+    """Accept harmless zero-padding differences in OCR-only responses."""
+
+    supplied_by_identity = {
+        (reference.video_name, reference.frame_index): frame_id
+        for frame_id in supplied_frame_ids
+        if (reference := parse_frame_id(frame_id))
+    }
+    canonicalized: list[GeminiOCRFrameResult] = []
+    for frame in frames:
+        try:
+            reference = parse_frame_id(frame.frame_id)
+        except ValueError:
+            canonicalized.append(frame)
+            continue
+        canonical_id = supplied_by_identity.get(
+            (reference.video_name, reference.frame_index), frame.frame_id
+        )
+        canonicalized.append(frame.model_copy(update={"frame_id": canonical_id}))
+    return canonicalized
 
 
 class GeminiVisualExtractor:
@@ -626,6 +807,7 @@ class GeminiVisualExtractor:
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=GEMINI_RESPONSE_SCHEMA,
+                temperature=0.0,
                 max_output_tokens=self.max_output_tokens,
             ),
         )
@@ -690,6 +872,78 @@ class GeminiVisualExtractor:
             for frame_id in sorted(supplied)
         ]
 
+    def extract_ocr_batch(
+        self,
+        image_paths: list[Path],
+        retry_missing_once: bool = True,
+    ) -> list[GeminiOCRFrameResult]:
+        """Extract only frame-local OCR and ticker text for deduplicated frames."""
+
+        if not image_paths:
+            return []
+        supplied = {frame_id_from_path(path) for path in image_paths}
+        if len(supplied) != len(image_paths):
+            raise ValueError("Batch contains duplicate frame_id values")
+
+        prompt = OCR_ONLY_PROMPT
+        if self.use_video_context:
+            prompt = build_ocr_prompt(self.context_resolver.for_paths(image_paths))
+        contents: list[object] = [prompt]
+        for slot, path in enumerate(image_paths, start=1):
+            mime_type = mimetypes.guess_type(path.name)[0] or "image/jpeg"
+            contents.extend(
+                [
+                    f"Input Slot: {slot}. Frame ID: {frame_id_from_path(path)}. "
+                    f"Return slot={slot} for this image.",
+                    types.Part.from_bytes(data=path.read_bytes(), mime_type=mime_type),
+                ]
+            )
+
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=contents,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=GEMINI_OCR_RESPONSE_SCHEMA,
+                temperature=0.0,
+                max_output_tokens=min(self.max_output_tokens, 8_192),
+            ),
+        )
+        response_text = getattr(response, "text", None)
+        if not isinstance(response_text, str) or not response_text.strip():
+            raise RuntimeError("Gemini returned empty OCR response text; the batch can be retried")
+        result = GeminiOCRBatch.model_validate(json.loads(response_text))
+        frames = map_ocr_response_slots_to_frame_ids(result.frames, image_paths)
+        frames = canonicalize_ocr_response_frame_ids(frames, supplied)
+        if len(supplied) == 1 and len(frames) == 1 and frames[0].frame_id not in supplied:
+            frames = [frames[0].model_copy(update={"frame_id": next(iter(supplied))})]
+
+        returned = [item.frame_id for item in frames]
+        if len(returned) != len(set(returned)):
+            raise ValueError("Gemini returned duplicate OCR frame_id values")
+        missing = sorted(supplied - set(returned))
+        unknown = sorted(set(returned) - supplied)
+        if unknown:
+            frames = [frame for frame in frames if frame.frame_id in supplied]
+            returned = [item.frame_id for item in frames]
+            missing = sorted(supplied - set(returned))
+        if missing:
+            if not retry_missing_once:
+                raise ValueError(f"Gemini omitted OCR frame_id values after retry: {missing}")
+            paths_by_id = {frame_id_from_path(path): path for path in image_paths}
+            retry_records = [
+                record
+                for frame_id in missing
+                for record in self.extract_ocr_batch(
+                    [paths_by_id[frame_id]], retry_missing_once=False
+                )
+            ]
+            retry_by_id = {record.frame_id: record for record in retry_records}
+            by_id = {item.frame_id: item for item in frames}
+            return [by_id[frame_id] if frame_id in by_id else retry_by_id[frame_id] for frame_id in sorted(supplied)]
+        by_id = {item.frame_id: item for item in frames}
+        return [by_id[frame_id] for frame_id in sorted(supplied)]
+
 
 def _load_existing(output_path: Path, resume: bool) -> dict[str, CompactVisualRecord]:
     if not output_path.exists():
@@ -712,9 +966,27 @@ def caption_output_path(output_dir: str | Path, video_id: str) -> Path:
 
 
 def _copy_record_to_frame(
-    record: CompactVisualRecord, frame_id: str
+    record: CompactVisualRecord,
+    frame_id: str,
+    *,
+    ocr_source_frame_id: str | None = None,
 ) -> CompactVisualRecord:
-    return record.model_copy(update={"frame_id": frame_id})
+    is_duplicate = frame_id != record.frame_id
+    flags = list(record.quality_flags)
+    if is_duplicate and "visual_metadata_copied" not in flags:
+        flags.append("visual_metadata_copied")
+    return record.model_copy(
+        update={
+            "frame_id": frame_id,
+            "visual_source_frame_id": record.frame_id,
+            "ocr_source_frame_id": (
+                ocr_source_frame_id
+                if ocr_source_frame_id is not None
+                else (frame_id if not is_duplicate else "")
+            ),
+            "quality_flags": sorted(set(flags)),
+        }
+    )
 
 
 def _write_video_records(
@@ -812,6 +1084,7 @@ def run_extraction(
 
     existing_by_video: dict[str, dict[str, CompactVisualRecord]] = {}
     pending_by_video: dict[str, dict[str, tuple[Path, list[str]]]] = {}
+    pending_ocr_by_video: dict[str, list[Path]] = {}
     copied = 0
     for video_id, video_paths in paths_by_video.items():
         output_path = caption_output_path(output_dir, video_id)
@@ -836,35 +1109,58 @@ def run_extraction(
             frame_ids_by_representative.setdefault(representative_id, []).append(frame_id)
 
         pending_groups: dict[str, tuple[Path, list[str]]] = {}
+        pending_ocr_paths: list[Path] = []
         for representative_id, member_ids in frame_ids_by_representative.items():
             source_record = existing.get(representative_id)
-            if source_record is None:
-                source_record = next(
-                    (existing[frame_id] for frame_id in member_ids if frame_id in existing),
-                    None,
-                )
             if source_record is not None:
                 for frame_id in member_ids:
+                    previous_record = existing.get(frame_id)
                     copied_record = _copy_record_to_frame(source_record, frame_id)
+                    if (
+                        frame_id != representative_id
+                        and previous_record is not None
+                        and previous_record.ocr_source_frame_id == frame_id
+                    ):
+                        # A completed OCR-only result is frame-local and must survive
+                        # a resume pass that refreshes the representative visual copy.
+                        copied_record = copied_record.model_copy(
+                            update={
+                                "ocr_text": previous_record.ocr_text,
+                                "news_ticker_text": previous_record.news_ticker_text,
+                                "ocr_source_frame_id": frame_id,
+                                "quality_flags": sorted(
+                                    set(copied_record.quality_flags)
+                                    | set(previous_record.quality_flags)
+                                ),
+                            }
+                        )
                     if existing.get(frame_id) != copied_record:
                         existing[frame_id] = copied_record
                         copied += 1
-                continue
+            else:
+                representative_path = paths_by_frame.get(representative_id)
+                if representative_path is None:
+                    representative_path = all_paths_by_frame.get(representative_id)
+                if representative_path is None:
+                    # The representative lies outside the selected input folder.
+                    # Analyze a selected member rather than silently omitting it.
+                    representative_path = paths_by_frame[member_ids[0]]
+                pending_groups[frame_id_from_path(representative_path)] = (
+                    representative_path,
+                    member_ids,
+                )
 
-            representative_path = paths_by_frame.get(representative_id)
-            if representative_path is None:
-                representative_path = all_paths_by_frame.get(representative_id)
-            if representative_path is None:
-                # The representative lies outside the selected input folder.
-                # Analyze a selected member rather than silently omitting it.
-                representative_path = paths_by_frame[member_ids[0]]
-            pending_groups[frame_id_from_path(representative_path)] = (
-                representative_path,
-                member_ids,
-            )
+            for frame_id in member_ids:
+                if frame_id == representative_id:
+                    continue
+                existing_record = existing.get(frame_id)
+                if existing_record is not None and existing_record.ocr_source_frame_id == frame_id:
+                    continue
+                duplicate_path = paths_by_frame.get(frame_id) or all_paths_by_frame.get(frame_id)
+                if duplicate_path is not None:
+                    pending_ocr_paths.append(duplicate_path)
         pending_by_video[video_id] = pending_groups
-        if any(frame_id not in existing for frame_id in paths_by_frame):
-            continue
+        pending_ocr_by_video[video_id] = pending_ocr_paths
         _write_video_records(output_dir, video_id, existing)
 
     pending_paths = [
@@ -872,7 +1168,8 @@ def run_extraction(
         for groups in pending_by_video.values()
         for request_path, _ in groups.values()
     ]
-    if not pending_paths:
+    pending_ocr_paths = [path for paths in pending_ocr_by_video.values() for path in paths]
+    if not pending_paths and not pending_ocr_paths:
         return {
             "processed": copied,
             "api_frames": 0,
@@ -889,13 +1186,25 @@ def run_extraction(
         use_video_context=use_video_context,
         max_output_tokens=max_output_tokens,
     )
-    batches: list[tuple[str, list[Path]]] = []
+    visual_batches: list[tuple[str, list[Path]]] = []
     for video_id in sorted(pending_by_video):
         request_paths = [request_path for request_path, _ in pending_by_video[video_id].values()]
-        batches.extend(
+        visual_batches.extend(
             (video_id, batch)
             for batch in extractor.batch_paths(
                 request_paths,
+                batch_size=batch_size,
+                max_inline_bytes=max_inline_bytes,
+            )
+        )
+    ocr_batches: list[tuple[str, list[Path]]] = []
+    for video_id in sorted(pending_ocr_by_video):
+        if not pending_ocr_by_video[video_id]:
+            continue
+        ocr_batches.extend(
+            (video_id, batch)
+            for batch in extractor.batch_paths(
+                pending_ocr_by_video[video_id],
                 batch_size=batch_size,
                 max_inline_bytes=max_inline_bytes,
             )
@@ -906,112 +1215,136 @@ def run_extraction(
     completed_batches = 0
     daily_limit_reached = False
     daily_quota_reported = False
-    next_batch_index = 0
     previous_window_started: float | None = None
-    transient_retry_counts: dict[tuple[str, tuple[str, ...]], int] = {}
-    rate_retry_counts: dict[tuple[str, tuple[str, ...]], int] = {}
+    def run_batches(
+        batches: list[tuple[str, list[Path]]],
+        *,
+        mode: str,
+    ) -> None:
+        nonlocal processed, api_frames, completed_batches
+        next_batch_index = 0
+        nonlocal previous_window_started
+        transient_retry_counts: dict[tuple[str, str, tuple[str, ...]], int] = {}
+        rate_retry_counts: dict[tuple[str, str, tuple[str, ...]], int] = {}
 
-    with ThreadPoolExecutor(max_workers=max_concurrent_requests) as executor:
-        while next_batch_index < len(batches):
-            if previous_window_started is not None:
-                wait_seconds = 60 - (time.monotonic() - previous_window_started)
-                if wait_seconds > 0:
-                    print(f"RPM window complete; waiting {wait_seconds:.1f}s before the next window.")
-                    time.sleep(wait_seconds)
-
-            window_size = min(
-                requests_per_minute,
-                len(batches) - next_batch_index,
-            )
-            window = batches[next_batch_index : next_batch_index + window_size]
-            previous_window_started = time.monotonic()
-            futures = {
-                executor.submit(
-                    extractor.extract_batch,
-                    batch,
-                    with_spatial=with_spatial,
-                ): (video_id, batch)
-                for video_id, batch in window
-            }
-            next_batch_index += len(window)
-            unexpected_error: Exception | None = None
-            retry_batches: list[tuple[str, list[Path]]] = []
-
-            for future in as_completed(futures):
-                video_id, batch = futures[future]
-                if future.cancelled():
-                    continue
-                try:
-                    records = future.result()
-                except Exception as error:
-                    if is_rate_limit_error(error):
-                        retry_key = (
-                            video_id,
-                            tuple(frame_id_from_path(path) for path in batch),
+        with ThreadPoolExecutor(max_workers=max_concurrent_requests) as executor:
+            while next_batch_index < len(batches):
+                if previous_window_started is not None:
+                    wait_seconds = 60 - (time.monotonic() - previous_window_started)
+                    if wait_seconds > 0:
+                        print(
+                            f"RPM window complete; waiting {wait_seconds:.1f}s before the next window."
                         )
-                        attempt = rate_retry_counts.get(retry_key, 0) + 1
-                        if attempt <= MAX_RATE_LIMIT_RETRIES:
-                            rate_retry_counts[retry_key] = attempt
-                            retry_batches.append((video_id, batch))
-                            print(
-                                f"RPM quota reached for {video_id}; "
-                                f"retry {attempt}/{MAX_RATE_LIMIT_RETRIES} in the next window."
-                            )
-                        else:
-                            unexpected_error = RuntimeError(
-                                f"RPM quota remained unavailable after {MAX_RATE_LIMIT_RETRIES} "
-                                f"retries for {video_id}"
-                            )
-                        continue
-                    if is_transient_service_error(error):
-                        retry_key = (
-                            video_id,
-                            tuple(frame_id_from_path(path) for path in batch),
-                        )
-                        attempt = transient_retry_counts.get(retry_key, 0) + 1
-                        if attempt <= MAX_TRANSIENT_RETRIES:
-                            transient_retry_counts[retry_key] = attempt
-                            retry_batches.append((video_id, batch))
-                            print(
-                                f"Gemini service unavailable for {video_id}; "
-                                f"retry {attempt}/{MAX_TRANSIENT_RETRIES} in the next "
-                                "60-second window."
-                            )
-                        else:
-                            unexpected_error = RuntimeError(
-                                f"Gemini remained unavailable after {MAX_TRANSIENT_RETRIES} "
-                                f"retries for {video_id}"
-                            )
-                        continue
-                    unexpected_error = error
-                    continue
+                        time.sleep(wait_seconds)
 
-                existing = existing_by_video[video_id]
-                for record in records:
-                    _, member_ids = pending_by_video[video_id][record.frame_id]
-                    for frame_id in member_ids:
-                        if frame_id not in existing:
-                            existing[frame_id] = _copy_record_to_frame(record, frame_id)
-                            processed += 1
-                api_frames += len(records)
-                completed_batches += 1
-                _write_video_records(output_dir, video_id, existing)
-                retry_key = (
-                    video_id,
-                    tuple(frame_id_from_path(path) for path in batch),
-                )
-                transient_retry_counts.pop(retry_key, None)
-                rate_retry_counts.pop(retry_key, None)
-                print(
-                    f"batch={completed_batches}/{len(batches)} video={video_id} "
-                    f"api_frames={api_frames} processed={processed} "
-                    f"video_total={len(existing)}"
-                )
+                window_size = min(requests_per_minute, len(batches) - next_batch_index)
+                window = batches[next_batch_index : next_batch_index + window_size]
+                previous_window_started = time.monotonic()
+                if mode == "visual":
+                    futures = {
+                        executor.submit(
+                            extractor.extract_batch,
+                            batch,
+                            with_spatial=with_spatial,
+                        ): (video_id, batch)
+                        for video_id, batch in window
+                    }
+                else:
+                    futures = {
+                        executor.submit(extractor.extract_ocr_batch, batch): (video_id, batch)
+                        for video_id, batch in window
+                    }
+                next_batch_index += len(window)
+                unexpected_error: Exception | None = None
+                retry_batches: list[tuple[str, list[Path]]] = []
 
-            if unexpected_error is not None:
-                raise unexpected_error
-            if retry_batches:
-                batches.extend(retry_batches)
+                for future in as_completed(futures):
+                    video_id, batch = futures[future]
+                    if future.cancelled():
+                        continue
+                    retry_key = (mode, video_id, tuple(frame_id_from_path(path) for path in batch))
+                    try:
+                        records = future.result()
+                    except Exception as error:
+                        if is_rate_limit_error(error):
+                            attempt = rate_retry_counts.get(retry_key, 0) + 1
+                            if attempt <= MAX_RATE_LIMIT_RETRIES:
+                                rate_retry_counts[retry_key] = attempt
+                                retry_batches.append((video_id, batch))
+                                print(
+                                    f"RPM quota reached for {video_id} ({mode}); "
+                                    f"retry {attempt}/{MAX_RATE_LIMIT_RETRIES} in the next window."
+                                )
+                            else:
+                                unexpected_error = RuntimeError(
+                                    f"RPM quota remained unavailable after {MAX_RATE_LIMIT_RETRIES} "
+                                    f"retries for {video_id} ({mode})"
+                                )
+                            continue
+                        if is_transient_service_error(error):
+                            attempt = transient_retry_counts.get(retry_key, 0) + 1
+                            if attempt <= MAX_TRANSIENT_RETRIES:
+                                transient_retry_counts[retry_key] = attempt
+                                retry_batches.append((video_id, batch))
+                                print(
+                                    f"Gemini service unavailable for {video_id} ({mode}); "
+                                    f"retry {attempt}/{MAX_TRANSIENT_RETRIES} in the next window."
+                                )
+                            else:
+                                unexpected_error = RuntimeError(
+                                    f"Gemini remained unavailable after {MAX_TRANSIENT_RETRIES} "
+                                    f"retries for {video_id} ({mode})"
+                                )
+                            continue
+                        unexpected_error = error
+                        continue
+
+                    existing = existing_by_video[video_id]
+                    if mode == "visual":
+                        for record in records:
+                            _, member_ids = pending_by_video[video_id][record.frame_id]
+                            for frame_id in member_ids:
+                                updated = _copy_record_to_frame(record, frame_id)
+                                if existing.get(frame_id) != updated:
+                                    existing[frame_id] = updated
+                                    processed += 1
+                    else:
+                        for record in records:
+                            current = existing.get(record.frame_id)
+                            if current is None:
+                                raise ValueError(
+                                    f"OCR result has no visual record for {record.frame_id}"
+                                )
+                            updated = current.model_copy(
+                                update={
+                                    "ocr_text": _clean_text(record.ocr_text),
+                                    "news_ticker_text": _clean_text(record.news_ticker_text),
+                                    "ocr_source_frame_id": record.frame_id,
+                                }
+                            )
+                            if current != updated:
+                                existing[record.frame_id] = updated
+                                processed += 1
+                    api_frames += len(records)
+                    completed_batches += 1
+                    _write_video_records(output_dir, video_id, existing)
+                    transient_retry_counts.pop(retry_key, None)
+                    rate_retry_counts.pop(retry_key, None)
+                    print(
+                        f"batch={completed_batches} mode={mode} video={video_id} "
+                        f"api_frames={api_frames} processed={processed} "
+                        f"video_total={len(existing)}"
+                    )
+
+                if unexpected_error is not None:
+                    raise unexpected_error
+                if retry_batches:
+                    batches.extend(retry_batches)
+
+    # Complete visual representatives first so OCR-only jobs can merge into
+    # already materialized duplicate records deterministically.
+    run_batches(visual_batches, mode="visual")
+    run_batches(ocr_batches, mode="ocr")
 
     return {
         "processed": processed,
