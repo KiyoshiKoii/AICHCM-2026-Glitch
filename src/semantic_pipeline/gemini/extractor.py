@@ -1210,6 +1210,12 @@ def run_extraction(
             )
         )
 
+    total_batches = len(visual_batches) + len(ocr_batches)
+    print(
+        f"Starting extraction: total_batches={total_batches} "
+        f"visual_batches={len(visual_batches)} ocr_batches={len(ocr_batches)}"
+    )
+
     processed = copied
     api_frames = 0
     completed_batches = 0
@@ -1331,7 +1337,7 @@ def run_extraction(
                     transient_retry_counts.pop(retry_key, None)
                     rate_retry_counts.pop(retry_key, None)
                     print(
-                        f"batch={completed_batches} mode={mode} video={video_id} "
+                        f"batch={completed_batches}/{total_batches} mode={mode} video={video_id} "
                         f"api_frames={api_frames} processed={processed} "
                         f"video_total={len(existing)}"
                     )

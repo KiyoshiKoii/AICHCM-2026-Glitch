@@ -523,7 +523,7 @@ def test_classifies_temporary_model_overload_as_retryable():
     )
 
 
-def test_writes_a_separate_caption_artifact_for_each_video(tmp_path, monkeypatch):
+def test_writes_a_separate_caption_artifact_for_each_video(tmp_path, monkeypatch, capsys):
     input_dir = tmp_path / "keyframes"
     first_path = input_dir / "L21_V001" / "001.jpg"
     second_path = input_dir / "L22_V002" / "001.jpg"
@@ -561,6 +561,10 @@ def test_writes_a_separate_caption_artifact_for_each_video(tmp_path, monkeypatch
         global_filter_results_path=None,
         request_budget_state_path=tmp_path / "request_budget.json",
     )
+    output = capsys.readouterr().out
+    assert "Starting extraction: total_batches=2 visual_batches=2 ocr_batches=0" in output
+    assert "batch=1/2" in output
+    assert "batch=2/2" in output
 
     assert summary == {
         "processed": 2,
