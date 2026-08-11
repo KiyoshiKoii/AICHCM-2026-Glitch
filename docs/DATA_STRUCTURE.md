@@ -38,7 +38,7 @@ data/
 
 `src/semantic_pipeline/gemini/extractor.py` creates the compact visual
 artifact with the model configured by `GEMINI_VISUAL_MODEL` in `.env`. It
-processes 25 keyframes per request by default (maximum 100, and additionally
+processes 20 keyframes per request by default (maximum 100, and additionally
 constrained by a 14 MiB raw-image budget).
 The persisted JSON array intentionally contains only data that cannot be
 derived from the primary key:
@@ -46,6 +46,9 @@ derived from the primary key:
 ```json
 {
   "frame_id": "L21_V001_f0017",
+  "visual_source_frame_id": "L21_V001_f0017",
+  "ocr_source_frame_id": "L21_V001_f0017",
+  "quality_flags": [],
   "caption": "A warning sign beside a flooded road.",
   "detailed_caption": "A warning sign stands beside a wet road bordered by vegetation. Floodwater covers part of the road.",
   "caption_vi": "Một biển cảnh báo nằm cạnh con đường ngập nước.",
@@ -100,10 +103,13 @@ other collections and when the ticker is not legible; `ocr_text` remains for
 all other scene text.
 
 `data/global_filter_results.csv` maps each keyframe to a visually unique
-representative in the same video. The extractor sends only representative
-frames to Gemini, then copies the resulting metadata to the mapped frames while
-replacing only `frame_id`. This is enabled by default and can be disabled with
-`--without-global-filter` for controlled comparisons.
+representative in the same video. The extractor sends representatives through
+the full visual prompt, copies their visual metadata to mapped duplicate frames,
+and sends those duplicates through an OCR-only prompt to preserve frame-specific
+`ocr_text` and `news_ticker_text`. `visual_source_frame_id`,
+`ocr_source_frame_id`, and `quality_flags` make that provenance explicit. This
+is enabled by default and can be disabled with `--without-global-filter` for
+controlled comparisons.
 
 The Gemini scheduler starts at most 15 parallel requests in each 60-second
 window. RPM and temporary service-overload responses are retried in later
@@ -114,9 +120,9 @@ Smoke test one batch before a full run:
 
 ```powershell
 $env:PYTHONPATH = "src"
-python -m semantic_pipeline.gemini.extractor --input-dir data/keyframes/L21_V001 --output-dir data/metadata/caption --limit 25 --batch-size 25
+python -m semantic_pipeline.gemini.extractor --input-dir data/keyframes/L21_V001 --output-dir data/metadata/caption --limit 20 --batch-size 20
 ```
 
-After reviewing that artifact, replace `--limit 25` with no limit. The full
+After reviewing that artifact, replace `--limit 20` with no limit. The full
 result remains split by video, for example
 `data/metadata/caption/L21/L21_V001.json`.

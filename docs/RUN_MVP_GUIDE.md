@@ -45,11 +45,26 @@ python server.py
 *Server nội bộ sẽ lắng nghe ở: http://localhost:8001*
 
 ### Terminal 2: Chạy Semantic Pipeline (Dev 2)
-Chịu trách nhiệm load BM25 (chạy trên RAM) để tìm kiếm văn bản tốc độ cao.
+Chịu trách nhiệm chạy Elasticsearch-backed semantic retrieval và cung cấp API nội bộ ở port 8002.
 ```bash
+# Chạy các lệnh này từ repository root.
 conda activate aichcm2026
-cd src/semantic_pipeline
-python server.py
+docker compose -f src/semantic_pipeline/retrieval/docker-compose.elasticsearch.yml up -d
+
+# Nạp metadata visual hiện tại vào index pilot; không đổi production alias.
+export PYTHONPATH=src
+python -m semantic_pipeline.retrieval.cli \
+  --index-name semantic_frames_l21_v001_pilot \
+  ingest \
+  --caption-dir data/metadata/caption \
+  --require-provenance
+
+# Cho API semantic đọc index pilot trên port 8002.
+export ELASTICSEARCH_INDEX=semantic_frames_l21_v001_pilot
+uvicorn semantic_pipeline.retrieval.api:app \
+  --app-dir src \
+  --host 127.0.0.1 \
+  --port 8002
 ```
 *Server nội bộ sẽ lắng nghe ở: http://localhost:8002*
 
@@ -66,7 +81,6 @@ uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
 Giao diện người dùng chính thức phục vụ Giám khảo / Thí sinh.
 ```bash
 cd src/frontend
-npm install
 npm run dev
 ```
 *Truy cập đường dẫn localhost hiển thị trên Terminal để sử dụng Web UI.*

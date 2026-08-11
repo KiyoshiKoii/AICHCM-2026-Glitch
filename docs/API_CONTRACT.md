@@ -192,17 +192,43 @@ is not accepted by the service):
   "program_queries": ["60 Giây Sáng"],
   "batch_ids": ["L21"],
   "video_ids": ["V006"],
+  "spatial_queries": [
+    {
+      "subject_english_phrase": "person",
+      "subject_vietnamese_phrase": "nguoi",
+      "predicate": "left_of",
+      "object_english_phrase": "car",
+      "object_vietnamese_phrase": "o to"
+    }
+  ],
+  "interaction_queries": [
+    {
+      "subject_english_phrase": "person wearing a blue shirt",
+      "subject_vietnamese_phrase": "người mặc áo xanh",
+      "action_english_phrase": "riding",
+      "action_vietnamese_phrase": "đang chạy xe",
+      "object_english_phrase": "blue motorcycle",
+      "object_vietnamese_phrase": "xe máy màu xanh"
+    }
+  ],
   "top_k": 200
 }
 ```
 
+`spatial_queries` keeps subject, predicate, and object inside one nested relation
+and supports `left_of`, `right_of`, `above`, `below`, and `overlapping`.
 `object_queries` keeps every constraint of one object together in paired
 English/Vietnamese phrases, so Elasticsearch matches a single nested detection
 rather than mixing attributes from multiple people. `ocr_queries` is for exact
 visible text in OCR/news tickers; `program_queries` is for explicit program,
-series, broadcaster, channel, or broadcast-slot constraints. All three fields
-are optional and the backend falls back to `keywords` when parsing fails. When
-multiple object queries are present, Elasticsearch adds an object-coverage
+series, broadcaster, channel, or broadcast-slot constraints. All query fields
+are optional and the backend falls back to `keywords` when parsing fails. The
+pilot can request visual duplicate collapsing with `collapse_visual_duplicates`.
+`interaction_queries` binds a subject, action, and object to one denormalized
+spatial-relation row, so a person riding a motorcycle is not confused with a
+person standing beside a parked motorcycle. The action is semantic; it does
+not require the user to state a geometric predicate.
+When multiple object queries are present, Elasticsearch adds an object-coverage
 boost for every independently matched object, while still allowing partial
 matches for recall.
 
