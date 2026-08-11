@@ -129,7 +129,11 @@ def load_video_contexts(path: str | Path = DEFAULT_YOUTUBE_METADATA) -> dict[str
     return contexts
 
 
-def iter_caption_records(caption_dir: str | Path = DEFAULT_CAPTION_DIR) -> Iterator[CompactVisualRecord]:
+def iter_caption_records(
+    caption_dir: str | Path = DEFAULT_CAPTION_DIR,
+    *,
+    require_provenance: bool = False,
+) -> Iterator[CompactVisualRecord]:
     """Yield validated records from all per-video Gemini checkpoints."""
 
     root = Path(caption_dir)
@@ -152,10 +156,56 @@ def iter_caption_records(caption_dir: str | Path = DEFAULT_CAPTION_DIR) -> Itera
                 record = CompactVisualRecord.model_validate(raw_record)
             except Exception as exc:
                 raise ValueError(f"Invalid caption record {path}[{position}]") from exc
+            if require_provenance:
+                missing = [
+                    name
+                    for name, value in (
+                        ("visual_source_frame_id", record.visual_source_frame_id),
+                        ("ocr_source_frame_id", record.ocr_source_frame_id),
+                    )
+                    if not value
+                ]
+                if missing:
+                    raise ValueError(
+                        f"Caption record {path}[{position}] is missing provenance: {missing}"
+                    )
+                if record.ocr_source_frame_id != record.frame_id:
+                    raise ValueError(
+                        f"Caption record {path}[{position}] must source OCR from itself; "
+                        f"got {record.ocr_source_frame_id!r} for {record.frame_id!r}"
+                    )
             if record.frame_id in seen_frame_ids:
                 raise ValueError(f"Duplicate frame_id across caption artifacts: {record.frame_id}")
             seen_frame_ids.add(record.frame_id)
             yield record
+
+
+def _relation_document(record: CompactVisualRecord, relation: Any) -> dict[str, Any]:
+    detections = {item.object_id: item for item in record.detections}
+    subject = detections.get(relation.subject_id)
+    object_ = detections.get(relation.object_id)
+    if subject is None or object_ is None:
+        raise ValueError(
+            f"Spatial relation in {record.frame_id} references an unknown detection: "
+            f"{relation.subject_id!r}, {relation.object_id!r}"
+        )
+
+    def text_fields(prefix: str, detection: Any) -> dict[str, Any]:
+        return {
+            f"{prefix}_label": detection.label,
+            f"{prefix}_description": detection.description,
+            f"{prefix}_description_vi": detection.description_vi,
+            f"{prefix}_attributes": list(detection.attributes),
+            f"{prefix}_action": detection.action,
+        }
+
+    return {
+        "subject_id": relation.subject_id,
+        "predicate": relation.predicate,
+        "object_id": relation.object_id,
+        **text_fields("subject", subject),
+        **text_fields("object", object_),
+    }
 
 
 def build_frame_document(record: CompactVisualRecord, context: VideoContext | None = None) -> dict[str, Any]:
@@ -163,11 +213,17 @@ def build_frame_document(record: CompactVisualRecord, context: VideoContext | No
 
     ref = parse_frame_id(record.frame_id)
     video = context or VideoContext()
+    visual_source_frame_id = record.visual_source_frame_id or record.frame_id
+    ocr_source_frame_id = record.ocr_source_frame_id or record.frame_id
     return {
         "frame_id": ref.frame_id,
         "video_id": ref.video_name,
         "program_code": ref.video_name.split("_", 1)[0],
         "frame_number": ref.frame_index,
+        "visual_source_frame_id": visual_source_frame_id,
+        "ocr_source_frame_id": ocr_source_frame_id,
+        "quality_flags": list(record.quality_flags),
+        "is_visual_representative": visual_source_frame_id == record.frame_id,
         "caption": record.caption,
         "detailed_caption": record.detailed_caption,
         "caption_vi": record.caption_vi,
@@ -175,6 +231,9 @@ def build_frame_document(record: CompactVisualRecord, context: VideoContext | No
         "ocr_text": record.ocr_text,
         "news_ticker_text": record.news_ticker_text,
         "detections": [item.model_dump(mode="json") for item in record.detections],
+        "spatial_relations": [
+            _relation_document(record, relation) for relation in record.spatial_relations
+        ],
         "video_title": video.title,
         "video_description": video.description,
         "video_keywords": " ".join(video.keywords),
@@ -190,11 +249,12 @@ def iter_bulk_actions(
     caption_dir: str | Path = DEFAULT_CAPTION_DIR,
     youtube_metadata: str | Path = DEFAULT_YOUTUBE_METADATA,
     index_name: str = DEFAULT_INDEX_NAME,
+    require_provenance: bool = False,
 ) -> Iterator[dict[str, Any]]:
     """Build idempotent bulk actions, using ``frame_id`` as ``_id``."""
 
     contexts = load_video_contexts(youtube_metadata)
-    for record in iter_caption_records(caption_dir):
+    for record in iter_caption_records(caption_dir, require_provenance=require_provenance):
         source = build_frame_document(record, contexts.get(parse_frame_id(record.frame_id).video_name))
         yield {
             "_op_type": "index",
@@ -257,6 +317,7 @@ def bulk_ingest(
     youtube_metadata: str | Path = DEFAULT_YOUTUBE_METADATA,
     index_name: str = DEFAULT_INDEX_NAME,
     chunk_size: int = 500,
+    require_provenance: bool = False,
     streaming_bulk_fn: Any | None = None,
 ) -> dict[str, int]:
     """Index every current caption checkpoint and refresh the physical index."""
@@ -270,7 +331,12 @@ def bulk_ingest(
 
     indexed = 0
     failures: list[dict[str, Any]] = []
-    actions = iter_bulk_actions(caption_dir, youtube_metadata, index_name)
+    actions = iter_bulk_actions(
+        caption_dir,
+        youtube_metadata,
+        index_name,
+        require_provenance=require_provenance,
+    )
     for succeeded, item in helper(
         client,
         actions,
@@ -337,6 +403,9 @@ def _clean_scope_ids(values: Sequence[str] | None) -> list[str]:
 
 
 OBJECT_COVERAGE_BOOST = 2.0
+SPATIAL_PREDICATES = frozenset({"left_of", "right_of", "above", "below", "overlapping"})
+INTERACTION_BOOST = 20.0
+INTERACTION_COVERAGE_BOOST = 30.0
 
 
 def _object_nested_clause(english_phrase: str, vietnamese_phrase: str) -> dict[str, Any]:
@@ -376,6 +445,207 @@ def _object_nested_clause(english_phrase: str, vietnamese_phrase: str) -> dict[s
     }
 
 
+def _clean_spatial_queries(
+    spatial_queries: Sequence[Mapping[str, Any]] | None,
+) -> list[tuple[str, str, str, str, str]]:
+    """Normalize bilingual subject/predicate/object constraints for one relation."""
+
+    result: list[tuple[str, str, str, str, str]] = []
+    seen: set[tuple[str, str, str, str, str]] = set()
+    for item in spatial_queries or ():
+        if not isinstance(item, Mapping):
+            continue
+        subject_en = _text(item.get("subject_english_phrase") or item.get("subject_phrase"))
+        subject_vi = _text(item.get("subject_vietnamese_phrase"))
+        predicate = _text(item.get("predicate")).casefold()
+        object_en = _text(item.get("object_english_phrase") or item.get("object_phrase"))
+        object_vi = _text(item.get("object_vietnamese_phrase"))
+        if not subject_en or not object_en or predicate not in SPATIAL_PREDICATES:
+            continue
+        key = (subject_en.casefold(), subject_vi.casefold(), predicate, object_en.casefold(), object_vi.casefold())
+        if key not in seen:
+            seen.add(key)
+            result.append((subject_en, subject_vi, predicate, object_en, object_vi))
+    return result[:5]
+
+
+def _clean_interaction_queries(
+    interaction_queries: Sequence[Mapping[str, Any]] | None,
+) -> list[tuple[str, str, str, str, str, str]]:
+    """Normalize subject-action-object constraints for one relation row."""
+
+    result: list[tuple[str, str, str, str, str, str]] = []
+    seen: set[tuple[str, str, str, str, str, str]] = set()
+    for item in interaction_queries or ():
+        if not isinstance(item, Mapping):
+            continue
+        subject_en = _text(item.get("subject_english_phrase"))
+        subject_vi = _text(item.get("subject_vietnamese_phrase"))
+        action_en = _text(item.get("action_english_phrase"))
+        action_vi = _text(item.get("action_vietnamese_phrase"))
+        object_en = _text(item.get("object_english_phrase"))
+        object_vi = _text(item.get("object_vietnamese_phrase"))
+        if not subject_en or not action_en or not object_en:
+            continue
+        key = (
+            subject_en.casefold(), subject_vi.casefold(), action_en.casefold(),
+            action_vi.casefold(), object_en.casefold(), object_vi.casefold(),
+        )
+        if key not in seen:
+            seen.add(key)
+            result.append((subject_en, subject_vi, action_en, action_vi, object_en, object_vi))
+    return result[:5]
+
+
+def _relation_entity_clause(
+    english_phrase: str,
+    vietnamese_phrase: str,
+    fields: Sequence[str],
+    vietnamese_fields: Sequence[str],
+) -> dict[str, Any]:
+    clauses: list[dict[str, Any]] = [
+        {
+            "combined_fields": {
+                "query": english_phrase,
+                "fields": list(fields),
+                "operator": "and",
+            }
+        }
+    ]
+    if vietnamese_phrase:
+        clauses.append(
+            {
+                "multi_match": {
+                    "query": vietnamese_phrase,
+                    "fields": list(vietnamese_fields),
+                    "operator": "and",
+                }
+            }
+        )
+    return {"bool": {"should": clauses, "minimum_should_match": 1}}
+
+
+def _relation_action_clause(action_en: str, action_vi: str, prefix: str) -> dict[str, Any]:
+    clauses: list[dict[str, Any]] = [
+        {
+            "combined_fields": {
+                "query": action_en,
+                "fields": [
+                    f"spatial_relations.{prefix}_action",
+                    f"spatial_relations.{prefix}_description",
+                    f"spatial_relations.{prefix}_attributes",
+                ],
+                "operator": "and",
+            }
+        }
+    ]
+    if action_vi:
+        clauses.append(
+            {
+                "match": {
+                    f"spatial_relations.{prefix}_description_vi": {
+                        "query": action_vi,
+                        "operator": "and",
+                    }
+                }
+            }
+        )
+    return {"bool": {"should": clauses, "minimum_should_match": 1}}
+
+
+def _interaction_nested_clause(
+    subject_en: str,
+    subject_vi: str,
+    action_en: str,
+    action_vi: str,
+    object_en: str,
+    object_vi: str,
+) -> dict[str, Any]:
+    """Match subject, action, and object inside one denormalized relation row."""
+
+    return {
+        "nested": {
+            "path": "spatial_relations",
+            "score_mode": "max",
+            "boost": INTERACTION_BOOST,
+            "query": {
+                "bool": {
+                    "must": [
+                        _relation_entity_clause(
+                            subject_en,
+                            subject_vi,
+                            [
+                                "spatial_relations.subject_label",
+                                "spatial_relations.subject_description",
+                                "spatial_relations.subject_attributes",
+                                "spatial_relations.subject_action",
+                            ],
+                            ["spatial_relations.subject_description_vi"],
+                        ),
+                        _relation_action_clause(action_en, action_vi, "subject"),
+                        _relation_entity_clause(
+                            object_en,
+                            object_vi,
+                            [
+                                "spatial_relations.object_label",
+                                "spatial_relations.object_description",
+                                "spatial_relations.object_attributes",
+                                "spatial_relations.object_action",
+                            ],
+                            ["spatial_relations.object_description_vi"],
+                        ),
+                    ]
+                }
+            },
+        }
+    }
+
+
+def _spatial_nested_clause(
+    subject_en: str,
+    subject_vi: str,
+    predicate: str,
+    object_en: str,
+    object_vi: str,
+) -> dict[str, Any]:
+    return {
+        "nested": {
+            "path": "spatial_relations",
+            "score_mode": "max",
+            "boost": 4.0,
+            "query": {
+                "bool": {
+                    "must": [
+                        {"term": {"spatial_relations.predicate": predicate}},
+                        _relation_entity_clause(
+                            subject_en,
+                            subject_vi,
+                            [
+                                "spatial_relations.subject_label",
+                                "spatial_relations.subject_description",
+                                "spatial_relations.subject_attributes",
+                                "spatial_relations.subject_action",
+                            ],
+                            ["spatial_relations.subject_description_vi"],
+                        ),
+                        _relation_entity_clause(
+                            object_en,
+                            object_vi,
+                            [
+                                "spatial_relations.object_label",
+                                "spatial_relations.object_description",
+                                "spatial_relations.object_attributes",
+                                "spatial_relations.object_action",
+                            ],
+                            ["spatial_relations.object_description_vi"],
+                        ),
+                    ]
+                }
+            },
+        }
+    }
+
+
 def build_lexical_query(
     keywords: Sequence[str],
     *,
@@ -384,6 +654,9 @@ def build_lexical_query(
     program_queries: Sequence[str] | None = None,
     batch_ids: Sequence[str] | None = None,
     video_ids: Sequence[str] | None = None,
+    spatial_queries: Sequence[Mapping[str, Any]] | None = None,
+    interaction_queries: Sequence[Mapping[str, Any]] | None = None,
+    exclude_quality_flags: Sequence[str] | None = None,
 ) -> dict[str, Any]:
     """Build a weighted, field-aware BM25 query from parsed query keywords.
 
@@ -402,7 +675,9 @@ def build_lexical_query(
     program_terms = _clean_keywords(program_queries or ())
     batches = _clean_scope_ids(batch_ids)
     videos = _clean_scope_ids(video_ids)
-    if not (terms or objects or ocr_terms or program_terms or batches or videos):
+    spatial = _clean_spatial_queries(spatial_queries)
+    interactions = _clean_interaction_queries(interaction_queries)
+    if not (terms or objects or ocr_terms or program_terms or batches or videos or spatial or interactions):
         return {"match_none": {}}
 
     should: list[dict[str, Any]] = []
@@ -539,6 +814,10 @@ def build_lexical_query(
                 }
             }
         )
+    for spatial_query in spatial:
+        should.append(_spatial_nested_clause(*spatial_query))
+    for interaction_query in interactions:
+        should.append(_interaction_nested_clause(*interaction_query))
     filters: list[dict[str, Any]] = []
     if batches:
         filters.append({"terms": {"program_code": [batch.lower() for batch in batches]}})
@@ -557,11 +836,14 @@ def build_lexical_query(
             if len(video_should) == 1
             else {"bool": {"should": video_should, "minimum_should_match": 1}}
         )
+    excluded_flags = [_text(value) for value in (exclude_quality_flags or ()) if _text(value)]
+    if excluded_flags:
+        filters.append({"bool": {"must_not": [{"terms": {"quality_flags": excluded_flags}}]}})
 
     base_query = {"bool": {"should": should, "minimum_should_match": 1}}
     if filters:
         base_query["bool"]["filter"] = filters
-    if not objects:
+    if not objects and not interactions:
         return base_query
 
     # Keep partial matches for recall, but explicitly reward object coverage:
@@ -574,6 +856,13 @@ def build_lexical_query(
         }
         for english_phrase, vietnamese_phrase in objects
     ]
+    coverage_functions.extend(
+        {
+            "filter": _interaction_nested_clause(*interaction_query),
+            "weight": INTERACTION_COVERAGE_BOOST,
+        }
+        for interaction_query in interactions
+    )
     return {
         "function_score": {
             "query": base_query,
@@ -606,6 +895,10 @@ class ElasticsearchTextSearch:
         program_queries: Sequence[str] | None = None,
         batch_ids: Sequence[str] | None = None,
         video_ids: Sequence[str] | None = None,
+        spatial_queries: Sequence[Mapping[str, Any]] | None = None,
+        interaction_queries: Sequence[Mapping[str, Any]] | None = None,
+        exclude_quality_flags: Sequence[str] | None = None,
+        collapse_visual_duplicates: bool = False,
         top_k: int = 200,
     ) -> list[dict[str, Any]]:
         if not 1 <= top_k <= 1000:
@@ -617,6 +910,9 @@ class ElasticsearchTextSearch:
             program_queries=program_queries,
             batch_ids=batch_ids,
             video_ids=video_ids,
+            spatial_queries=spatial_queries,
+            interaction_queries=interaction_queries,
+            exclude_quality_flags=exclude_quality_flags,
         )
         if "match_none" in query:
             return []
@@ -624,10 +920,19 @@ class ElasticsearchTextSearch:
             index=self.index,
             size=top_k,
             query=query,
+            **(
+                {"collapse": {"field": "visual_source_frame_id"}}
+                if collapse_visual_duplicates
+                else {}
+            ),
             source=[
                 "frame_id",
                 "video_id",
                 "frame_number",
+                "visual_source_frame_id",
+                "ocr_source_frame_id",
+                "quality_flags",
+                "is_visual_representative",
                 "caption",
                 "detailed_caption",
                 "caption_vi",
@@ -658,6 +963,16 @@ class ElasticsearchTextSearch:
                     "video_name": source["video_id"],
                     "frame_index": int(source["frame_number"]),
                     "metadata": {
+                        "visual_source_frame_id": source.get(
+                            "visual_source_frame_id", source["frame_id"]
+                        ),
+                        "ocr_source_frame_id": source.get(
+                            "ocr_source_frame_id", source["frame_id"]
+                        ),
+                        "quality_flags": source.get("quality_flags", []),
+                        "is_visual_representative": source.get(
+                            "is_visual_representative", True
+                        ),
                         "caption": source.get("caption", ""),
                         "detailed_caption": source.get("detailed_caption", ""),
                         "caption_vi": source.get("caption_vi", ""),

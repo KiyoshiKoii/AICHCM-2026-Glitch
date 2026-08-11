@@ -1,11 +1,18 @@
 import json
 from pathlib import Path
 
+from semantic_pipeline.core.compact_metadata import (
+    CompactDetection,
+    CompactSpatialRelation,
+    CompactVisualRecord,
+)
 from semantic_pipeline.retrieval.elasticsearch_backend import (
     ElasticsearchTextSearch,
+    build_frame_document,
     build_lexical_query,
     iter_bulk_actions,
 )
+from semantic_pipeline.retrieval.index_definition import index_definition
 
 
 def _write_caption_artifact(root: Path) -> Path:
@@ -75,6 +82,10 @@ def test_bulk_actions_join_video_context_and_derive_frame_fields(tmp_path: Path)
         "video_id": "L21_V001",
         "program_code": "L21",
         "frame_number": 1,
+        "visual_source_frame_id": "L21_V001_f0001",
+        "ocr_source_frame_id": "L21_V001_f0001",
+        "quality_flags": [],
+        "is_visual_representative": True,
         "caption": "A woman holds a red umbrella.",
         "detailed_caption": "A woman is standing outside with a red umbrella.",
         "caption_vi": "Một phụ nữ cầm ô màu đỏ.",
@@ -92,6 +103,7 @@ def test_bulk_actions_join_video_context_and_derive_frame_fields(tmp_path: Path)
                 "action": "holding an umbrella",
             }
         ],
+        "spatial_relations": [],
         "video_title": "60 Giay Sang",
         "video_description": "Ban tin buoi sang",
         "video_keywords": "HTV News tin tuc",
@@ -172,6 +184,105 @@ def test_lexical_query_prioritises_detailed_visual_evidence() -> None:
     )
 
 
+def test_v4_mapping_covers_provenance_and_spatial_relations() -> None:
+    properties = index_definition()["mappings"]["properties"]
+
+    assert properties["visual_source_frame_id"] == {"type": "keyword"}
+    assert properties["ocr_source_frame_id"] == {"type": "keyword"}
+    assert properties["quality_flags"] == {"type": "keyword"}
+    assert properties["is_visual_representative"] == {"type": "boolean"}
+    assert properties["spatial_relations"]["type"] == "nested"
+    assert "subject_label" in properties["spatial_relations"]["properties"]
+    assert "object_description_vi" in properties["spatial_relations"]["properties"]
+
+
+def test_spatial_query_keeps_subject_predicate_object_in_one_nested_relation() -> None:
+    query = build_lexical_query(
+        [],
+        spatial_queries=[
+            {
+                "subject_english_phrase": "person",
+                "subject_vietnamese_phrase": "người",
+                "predicate": "left_of",
+                "object_english_phrase": "car",
+                "object_vietnamese_phrase": "ô tô",
+            }
+        ],
+    )
+
+    relation = query["bool"]["should"][0]["nested"]
+    assert relation["path"] == "spatial_relations"
+    must = relation["query"]["bool"]["must"]
+    assert {"term": {"spatial_relations.predicate": "left_of"}} in must
+    assert must[1]["bool"]["minimum_should_match"] == 1
+    assert must[2]["bool"]["minimum_should_match"] == 1
+
+
+def test_interaction_query_binds_subject_action_object_in_one_nested_relation() -> None:
+    query = build_lexical_query(
+        ["man riding blue motorcycle"],
+        interaction_queries=[
+            {
+                "subject_english_phrase": "person wearing blue shirt",
+                "subject_vietnamese_phrase": "người mặc áo xanh",
+                "action_english_phrase": "riding",
+                "action_vietnamese_phrase": "đang chạy xe",
+                "object_english_phrase": "blue motorcycle",
+                "object_vietnamese_phrase": "xe máy màu xanh",
+            }
+        ],
+    )
+
+    assert query["function_score"]["functions"][-1]["weight"] == 30.0
+    clauses = query["function_score"]["query"]["bool"]["should"]
+    interaction = next(
+        clause["nested"]
+        for clause in clauses
+        if clause.get("nested", {}).get("path") == "spatial_relations"
+        and clause["nested"].get("boost") == 20.0
+    )
+    must = interaction["query"]["bool"]["must"]
+    assert must[0]["bool"]["minimum_should_match"] == 1
+    assert must[1]["bool"]["minimum_should_match"] == 1
+    assert must[1]["bool"]["should"][0]["combined_fields"]["query"] == "riding"
+    assert must[2]["bool"]["minimum_should_match"] == 1
+
+
+def test_document_builder_denormalizes_spatial_relation_entities() -> None:
+    record = CompactVisualRecord(
+        frame_id="L21_V001_f0001",
+        visual_source_frame_id="L21_V001_f0001",
+        ocr_source_frame_id="L21_V001_f0001",
+        caption="A person stands beside a car.",
+        detections=[
+            CompactDetection(
+                object_id="person_0",
+                label="person",
+                bbox=(0.1, 0.1, 0.3, 0.4),
+                description="a person",
+            ),
+            CompactDetection(
+                object_id="car_0",
+                label="car",
+                bbox=(0.5, 0.1, 0.8, 0.4),
+                description="a red car",
+            ),
+        ],
+        spatial_relations=[
+            CompactSpatialRelation(
+                subject_id="person_0",
+                predicate="left_of",
+                object_id="car_0",
+            )
+        ],
+    )
+
+    relation = build_frame_document(record)["spatial_relations"][0]
+    assert relation["predicate"] == "left_of"
+    assert relation["subject_label"] == "person"
+    assert relation["object_description"] == "a red car"
+
+
 class _FakeClient:
     def __init__(self) -> None:
         self.request: dict | None = None
@@ -205,18 +316,25 @@ def test_search_returns_existing_internal_api_shape() -> None:
     client = _FakeClient()
     backend = ElasticsearchTextSearch(client, index="semantic_frames")
 
-    results = backend.search(["red umbrella"], top_k=5)
+    results = backend.search(
+        ["red umbrella"], top_k=5, collapse_visual_duplicates=True
+    )
 
     assert client.request is not None
     assert client.request["index"] == "semantic_frames"
+    assert client.request["collapse"] == {"field": "visual_source_frame_id"}
     assert results == [
         {
             "frame_id": "L21_V001_f0001",
             "score": 12.5,
             "video_name": "L21_V001",
             "frame_index": 1,
-            "metadata": {
-                "caption": "A woman holds a red umbrella.",
+                "metadata": {
+                    "visual_source_frame_id": "L21_V001_f0001",
+                    "ocr_source_frame_id": "L21_V001_f0001",
+                    "quality_flags": [],
+                    "is_visual_representative": True,
+                    "caption": "A woman holds a red umbrella.",
                 "detailed_caption": "",
                 "caption_vi": "Một phụ nữ cầm ô màu đỏ.",
                 "detailed_caption_vi": "",

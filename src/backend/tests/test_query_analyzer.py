@@ -9,6 +9,8 @@ from backend.services.query_analyzer import (
     OllamaQueryParser,
     SYSTEM_PROMPT,
     extract_model_text,
+    enrich_explicit_interactions,
+    fallback_parse_query,
     normalise_scene_keywords,
     parse_llm_json,
 )
@@ -105,6 +107,48 @@ def test_gemini_response_schema_uses_only_supported_minimal_fields():
                     "required": ["english_phrase", "vietnamese_phrase"],
                 },
             },
+                "spatial_queries": {
+                "type": "ARRAY",
+                "items": {
+                    "type": "OBJECT",
+                    "properties": {
+                        "subject_english_phrase": {"type": "STRING"},
+                        "subject_vietnamese_phrase": {"type": "STRING"},
+                        "predicate": {"type": "STRING"},
+                        "object_english_phrase": {"type": "STRING"},
+                        "object_vietnamese_phrase": {"type": "STRING"},
+                    },
+                    "required": [
+                        "subject_english_phrase",
+                        "subject_vietnamese_phrase",
+                        "predicate",
+                        "object_english_phrase",
+                        "object_vietnamese_phrase",
+                    ],
+                    },
+                },
+                "interaction_queries": {
+                    "type": "ARRAY",
+                    "items": {
+                        "type": "OBJECT",
+                        "properties": {
+                            "subject_english_phrase": {"type": "STRING"},
+                            "subject_vietnamese_phrase": {"type": "STRING"},
+                            "action_english_phrase": {"type": "STRING"},
+                            "action_vietnamese_phrase": {"type": "STRING"},
+                            "object_english_phrase": {"type": "STRING"},
+                            "object_vietnamese_phrase": {"type": "STRING"},
+                        },
+                        "required": [
+                            "subject_english_phrase",
+                            "subject_vietnamese_phrase",
+                            "action_english_phrase",
+                            "action_vietnamese_phrase",
+                            "object_english_phrase",
+                            "object_vietnamese_phrase",
+                        ],
+                    },
+                },
             "ocr_queries": {
                 "type": "ARRAY",
                 "items": {"type": "STRING"},
@@ -118,7 +162,9 @@ def test_gemini_response_schema_uses_only_supported_minimal_fields():
             "visual_prompt",
             "semantic_keywords",
             "object_queries",
-            "ocr_queries",
+                "spatial_queries",
+                "interaction_queries",
+                "ocr_queries",
             "program_queries",
         ],
     }
@@ -133,6 +179,89 @@ def test_query_planner_prompt_forbids_guessed_context_and_keeps_object_actions()
     assert "Never produce \"collapsed roadside stall\"" in SYSTEM_PROMPT
     assert 'include the gender-neutral retrieval variant\n"group of people"' in SYSTEM_PROMPT
     assert 'Do NOT use the weaker,\noverlapping keyword "group of men"' in SYSTEM_PROMPT
+    assert "interaction_queries" in SYSTEM_PROMPT
+    assert "subject-action-object interactions" in SYSTEM_PROMPT
+    assert "standing beside a blue motorcycle" in SYSTEM_PROMPT
+
+
+def test_parse_llm_json_keeps_subject_action_object_bound():
+    parsed = parse_llm_json(
+        json.dumps(
+            {
+                "visual_prompt": "a man wearing a blue shirt riding a blue motorcycle",
+                "semantic_keywords": ["man riding motorcycle", "blue motorcycle"],
+                "object_queries": [],
+                "spatial_queries": [],
+                "interaction_queries": [
+                    {
+                        "subject_english_phrase": "person wearing a blue shirt",
+                        "subject_vietnamese_phrase": "người mặc áo xanh",
+                        "action_english_phrase": "riding",
+                        "action_vietnamese_phrase": "đang chạy xe",
+                        "object_english_phrase": "blue motorcycle",
+                        "object_vietnamese_phrase": "xe máy màu xanh",
+                    }
+                ],
+                "ocr_queries": [],
+                "program_queries": [],
+            },
+            ensure_ascii=False,
+        )
+    )
+    interaction = parsed.interaction_queries[0]
+    assert interaction.action_english_phrase == "riding"
+    assert interaction.subject_english_phrase == "person wearing a blue shirt"
+    assert interaction.object_english_phrase == "blue motorcycle"
+
+
+def test_fallback_parser_extracts_explicit_vietnamese_interaction():
+    parsed = fallback_parse_query("Người đàn ông mặc áo xanh chạy xe máy màu xanh")
+
+    assert parsed.interaction_queries[0].action_english_phrase == "riding"
+    assert parsed.interaction_queries[0].subject_english_phrase == "blue shirt person"
+    assert parsed.interaction_queries[0].object_english_phrase == "blue motorcycle"
+    assert "riding" in parsed.semantic_keywords
+
+
+def test_interaction_enrichment_repairs_valid_plan_that_omits_interaction():
+    parsed = ParsedQuery(
+        visual_prompt="a person near a motorcycle",
+        semantic_keywords=["person", "motorcycle"],
+    )
+
+    enriched = enrich_explicit_interactions(
+        "Người đàn ông mặc áo xanh chạy xe máy màu xanh",
+        parsed,
+    )
+
+    assert enriched.interaction_queries[0].action_english_phrase == "riding"
+    assert "blue motorcycle" in enriched.semantic_keywords
+
+
+def test_interaction_enrichment_replaces_wrong_provider_predicate():
+    parsed = ParsedQuery(
+        visual_prompt="a person standing beside a motorcycle",
+        semantic_keywords=["person", "standing", "motorcycle"],
+        interaction_queries=[
+            {
+                "subject_english_phrase": "person",
+                "subject_vietnamese_phrase": "nguoi dan ong",
+                "action_english_phrase": "standing",
+                "action_vietnamese_phrase": "",
+                "object_english_phrase": "motorcycle",
+                "object_vietnamese_phrase": "xe may",
+            }
+        ],
+    )
+
+    enriched = enrich_explicit_interactions(
+        "Ng\u01b0\u1eddi \u0111\u00e0n \u00f4ng m\u1eb7c \u00e1o xanh ch\u1ea1y xe m\u00e1y m\u00e0u xanh",
+        parsed,
+    )
+
+    assert enriched.interaction_queries[0].action_english_phrase == "riding"
+    assert "standing" in enriched.semantic_keywords
+    assert "riding" in enriched.semantic_keywords
 
 
 def test_scene_keyword_normaliser_keeps_group_and_damaged_path_retrievable():

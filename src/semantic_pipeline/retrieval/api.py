@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from typing import Literal
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -22,6 +23,52 @@ class ObjectQuery(BaseModel):
             raise ValueError("object query phrase must not be blank")
         return normalized
 
+
+class SpatialQuery(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    subject_english_phrase: str = Field(min_length=1, max_length=300)
+    subject_vietnamese_phrase: str = Field(default="", max_length=300)
+    predicate: Literal["left_of", "right_of", "above", "below", "overlapping"]
+    object_english_phrase: str = Field(min_length=1, max_length=300)
+    object_vietnamese_phrase: str = Field(default="", max_length=300)
+
+    @field_validator(
+        "subject_english_phrase",
+        "subject_vietnamese_phrase",
+        "object_english_phrase",
+        "object_vietnamese_phrase",
+    )
+    @classmethod
+    def normalize_phrase(cls, value: str) -> str:
+        return " ".join(value.split())
+
+
+class InteractionQuery(BaseModel):
+    """One subject-action-object interaction bound to a shared relation row."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    subject_english_phrase: str = Field(min_length=1, max_length=300)
+    subject_vietnamese_phrase: str = Field(default="", max_length=300)
+    action_english_phrase: str = Field(min_length=1, max_length=200)
+    action_vietnamese_phrase: str = Field(default="", max_length=200)
+    object_english_phrase: str = Field(min_length=1, max_length=300)
+    object_vietnamese_phrase: str = Field(default="", max_length=300)
+
+    @field_validator(
+        "subject_english_phrase",
+        "subject_vietnamese_phrase",
+        "action_english_phrase",
+        "action_vietnamese_phrase",
+        "object_english_phrase",
+        "object_vietnamese_phrase",
+    )
+    @classmethod
+    def normalize_phrase(cls, value: str) -> str:
+        return " ".join(value.split())
+
+
 from semantic_pipeline.retrieval.elasticsearch_backend import ElasticsearchTextSearch
 
 
@@ -30,10 +77,14 @@ class TextSearchRequest(BaseModel):
 
     keywords: list[str] = Field(min_length=1, max_length=20)
     object_queries: list[ObjectQuery] = Field(default_factory=list, max_length=5)
+    spatial_queries: list[SpatialQuery] = Field(default_factory=list, max_length=5)
+    interaction_queries: list[InteractionQuery] = Field(default_factory=list, max_length=5)
     ocr_queries: list[str] = Field(default_factory=list, max_length=8)
     program_queries: list[str] = Field(default_factory=list, max_length=5)
     batch_ids: list[str] = Field(default_factory=list, max_length=10)
     video_ids: list[str] = Field(default_factory=list, max_length=100)
+    exclude_quality_flags: list[str] = Field(default_factory=list, max_length=12)
+    collapse_visual_duplicates: bool = False
     top_k: int = Field(default=200, ge=1, le=1000)
 
     @field_validator("keywords")
@@ -99,10 +150,14 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
                 "data": active_backend.search(
                     body.keywords,
                     object_queries=[item.model_dump(mode="json") for item in body.object_queries],
+                    spatial_queries=[item.model_dump(mode="json") for item in body.spatial_queries],
+                    interaction_queries=[item.model_dump(mode="json") for item in body.interaction_queries],
                     ocr_queries=body.ocr_queries,
                     program_queries=body.program_queries,
                     batch_ids=body.batch_ids,
                     video_ids=body.video_ids,
+                    exclude_quality_flags=body.exclude_quality_flags,
+                    collapse_visual_duplicates=body.collapse_visual_duplicates,
                     top_k=body.top_k,
                 ),
             }

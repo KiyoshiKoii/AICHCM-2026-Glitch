@@ -35,10 +35,20 @@ def build_parser() -> argparse.ArgumentParser:
         command.add_argument("--caption-dir", type=Path, default=DEFAULT_CAPTION_DIR)
         command.add_argument("--youtube-metadata", type=Path, default=DEFAULT_YOUTUBE_METADATA)
         command.add_argument("--chunk-size", type=int, default=500)
+        command.add_argument(
+            "--require-provenance",
+            action="store_true",
+            help="Reject legacy caption records missing visual/OCR source IDs.",
+        )
 
     search = subparsers.add_parser("search", help="Run one lexical search through the alias.")
     search.add_argument("keywords", nargs="+")
     search.add_argument("--top-k", type=int, default=10)
+    search.add_argument(
+        "--collapse-visual-duplicates",
+        action="store_true",
+        help="Collapse v4 results by visual_source_frame_id.",
+    )
     return parser
 
 
@@ -66,13 +76,24 @@ def main() -> None:
                 youtube_metadata=args.youtube_metadata,
                 index_name=args.index_name,
                 chunk_size=args.chunk_size,
+                require_provenance=args.require_provenance,
             )
             if args.command == "bootstrap":
                 activate_alias(client, index_name=args.index_name, alias_name=args.alias)
             print(json.dumps({"created": created, "alias": args.alias if args.command == "bootstrap" else None, **result}, indent=2))
         elif args.command == "search":
             backend = ElasticsearchTextSearch(client, index=args.alias)
-            print(json.dumps(backend.search(args.keywords, top_k=args.top_k), ensure_ascii=False, indent=2))
+            print(
+                json.dumps(
+                    backend.search(
+                        args.keywords,
+                        top_k=args.top_k,
+                        collapse_visual_duplicates=args.collapse_visual_duplicates,
+                    ),
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
     except Exception as exc:
         parser.exit(status=1, message=f"Elasticsearch command failed: {exc}\n")
 

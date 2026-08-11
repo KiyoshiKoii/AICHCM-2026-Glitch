@@ -45,6 +45,18 @@ Convert the user's Vietnamese query into the JSON fields required by the supplie
   object query for a group, count, relationship, relative position, scene, or vague background
   context: those belong only in semantic_keywords and visual_prompt because an object index entry
   represents one detected entity. Return [] if no ONE object has a useful distinguishing constraint.
+- spatial_queries: at most five explicit subject-predicate-object relations. Use only
+  left_of, right_of, above, below, or overlapping. Keep subject and object phrases separate;
+  do not invent a relation that the user did not request. Return [] when no spatial relation
+  is explicitly present.
+- interaction_queries: at most five subject-action-object interactions. Use this when the
+  query says that one entity performs an action involving another entity, such as riding a
+  motorcycle, holding an umbrella, carrying a box, escorting a person, operating a screen,
+  or feeding an animal. Keep attributes bound to the correct subject/object and keep the
+  action separate. Do not emit an interaction when entities are merely nearby or both occur
+  in the scene. For example, "a person riding a blue motorcycle" becomes one interaction;
+  "a person standing beside a blue motorcycle" belongs in spatial_queries instead. The
+  interaction is semantic and does not require inventing a spatial predicate.
 - ocr_queries: exact text, names, numbers, slogans, or signs the user expects to be visibly
   readable. Preserve the original spelling; do not translate or invent text.
 - program_queries: explicit program, series, broadcaster, channel, or broadcast-slot constraints.
@@ -90,6 +102,48 @@ GEMINI_QUERY_RESPONSE_SCHEMA = {
                 "required": ["english_phrase", "vietnamese_phrase"],
             },
         },
+        "spatial_queries": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "subject_english_phrase": {"type": "STRING"},
+                    "subject_vietnamese_phrase": {"type": "STRING"},
+                    "predicate": {"type": "STRING"},
+                    "object_english_phrase": {"type": "STRING"},
+                    "object_vietnamese_phrase": {"type": "STRING"},
+                },
+                "required": [
+                    "subject_english_phrase",
+                    "subject_vietnamese_phrase",
+                    "predicate",
+                    "object_english_phrase",
+                    "object_vietnamese_phrase",
+                ],
+            },
+        },
+        "interaction_queries": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "subject_english_phrase": {"type": "STRING"},
+                    "subject_vietnamese_phrase": {"type": "STRING"},
+                    "action_english_phrase": {"type": "STRING"},
+                    "action_vietnamese_phrase": {"type": "STRING"},
+                    "object_english_phrase": {"type": "STRING"},
+                    "object_vietnamese_phrase": {"type": "STRING"},
+                },
+                "required": [
+                    "subject_english_phrase",
+                    "subject_vietnamese_phrase",
+                    "action_english_phrase",
+                    "action_vietnamese_phrase",
+                    "object_english_phrase",
+                    "object_vietnamese_phrase",
+                ],
+            },
+        },
         "ocr_queries": {
             "type": "ARRAY",
             "items": {"type": "STRING"},
@@ -103,6 +157,8 @@ GEMINI_QUERY_RESPONSE_SCHEMA = {
         "visual_prompt",
         "semantic_keywords",
         "object_queries",
+        "spatial_queries",
+        "interaction_queries",
         "ocr_queries",
         "program_queries",
     ],
@@ -255,6 +311,120 @@ def normalise_scene_keywords(query: str, parsed: ParsedQuery) -> ParsedQuery:
     )
 
 
+_FALLBACK_ENTITY_TRANSLATIONS = {
+    "xe may": "motorcycle",
+    "mo to": "motorcycle",
+    "o to": "car",
+    "xe hoi": "car",
+    "xe tai": "truck",
+    "xe dap": "bicycle",
+    "cai o": "umbrella",
+    "o": "umbrella",
+    "cai thung": "box",
+    "thung": "box",
+    "con cho": "dog",
+    "con meo": "cat",
+    "man hinh": "screen",
+    "dien thoai": "phone",
+}
+_FALLBACK_COLOR_TRANSLATIONS = {
+    "xanh": "blue",
+    "do": "red",
+    "vang": "yellow",
+    "den": "black",
+    "trang": "white",
+    "xam": "gray",
+}
+_FALLBACK_ACTION_PATTERNS = (
+    ("riding", re.compile(r"\b(?:chay|lai|di|cuoi)\s+(?P<object>.+)$")),
+    ("holding", re.compile(r"\b(?:cam|nam|om)\s+(?P<object>.+)$")),
+    ("carrying", re.compile(r"\b(?:mang|khieng|xach|be)\s+(?P<object>.+)$")),
+    ("operating", re.compile(r"\b(?:dieu khien|van hanh)\s+(?P<object>.+)$")),
+    ("escorting", re.compile(r"\b(?:ap giai|dan giai)\s+(?P<object>.+)$")),
+    ("petting", re.compile(r"\b(?:vuot ve)\s+(?P<object>.+)$")),
+    ("feeding", re.compile(r"\b(?:cho an)\s+(?P<object>.+)$")),
+    ("towing", re.compile(r"\bkeo\s+(?P<object>.+)$")),
+)
+
+
+def _fallback_entity_phrase(phrase: str) -> tuple[str, list[str]]:
+    """Map common Vietnamese entity words to generic English retrieval terms."""
+
+    folded = _fold_vietnamese(phrase)
+    entity = "object"
+    for vietnamese, english in sorted(_FALLBACK_ENTITY_TRANSLATIONS.items(), key=lambda item: -len(item[0])):
+        if vietnamese in folded:
+            entity = english
+            break
+    attributes: list[str] = []
+    for vietnamese, english in _FALLBACK_COLOR_TRANSLATIONS.items():
+        if vietnamese in folded:
+            attributes.append(english)
+    if "ao" in folded:
+        attributes.append("shirt")
+    if "dan ong" in folded or "nam" in folded:
+        entity = "person"
+    elif "phu nu" in folded or "nu" in folded:
+        entity = "person"
+    elif "nguoi" in folded and entity == "object":
+        entity = "person"
+    return entity, list(dict.fromkeys(attributes))
+
+
+def fallback_parse_query(query: str) -> ParsedQuery:
+    """Keep retrieval useful when the remote LLM parser is unavailable."""
+
+    folded = _fold_vietnamese(query)
+    for action, pattern in _FALLBACK_ACTION_PATTERNS:
+        match = pattern.search(folded)
+        if not match:
+            continue
+        subject_vi = folded[: match.start()].strip(" ,;:.-")
+        object_vi = match.group("object").strip(" ,;:.-")
+        subject_type, subject_attributes = _fallback_entity_phrase(subject_vi)
+        object_type, object_attributes = _fallback_entity_phrase(object_vi)
+        subject_en = " ".join([*subject_attributes, subject_type]).strip()
+        object_en = " ".join([*object_attributes, object_type]).strip()
+        keywords = list(dict.fromkeys([subject_en, action, object_en, *subject_attributes, *object_attributes]))
+        interaction = {
+            "subject_english_phrase": subject_en,
+            "subject_vietnamese_phrase": subject_vi,
+            "action_english_phrase": action,
+            "action_vietnamese_phrase": folded[match.start() : match.end()].strip(),
+            "object_english_phrase": object_en,
+            "object_vietnamese_phrase": object_vi,
+        }
+        return ParsedQuery(
+            visual_prompt=f"{subject_en} {action} {object_en}",
+            semantic_keywords=keywords,
+            interaction_queries=[interaction],
+        )
+    return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
+
+
+def enrich_explicit_interactions(query: str, parsed: ParsedQuery) -> ParsedQuery:
+    """Repair an LLM plan when Vietnamese explicitly states an interaction.
+
+    The deterministic Vietnamese action/entity guard is deliberately applied
+    even when the provider returned a non-empty interaction list: a provider
+    can produce a syntactically valid but semantically wrong predicate (for
+    example ``standing`` for ``chạy xe máy``).  For explicit local-language
+    cues, the normalized fallback is the safer binding for lexical retrieval;
+    the rest of the provider plan is retained.
+    """
+
+    fallback = fallback_parse_query(query)
+    if not fallback.interaction_queries:
+        return parsed
+    keywords = list(dict.fromkeys([*parsed.semantic_keywords, *fallback.semantic_keywords]))
+    return parsed.model_copy(
+        update={
+            "semantic_keywords": keywords[:20],
+            "interaction_queries": fallback.interaction_queries,
+        }
+    )
+
+
 class OllamaQueryParser:
     def __init__(self, client: httpx.AsyncClient, base_url: str, model: str) -> None:
         self._client = client
@@ -286,11 +456,14 @@ class OllamaQueryParser:
             response.raise_for_status()
             body = response.json()
             content = body["message"]["content"]
-            return normalise_scene_keywords(query, parse_llm_json(content))
+            return enrich_explicit_interactions(
+                query,
+                normalise_scene_keywords(query, parse_llm_json(content)),
+            )
         except Exception as exc:
             # Fallback on any error (network, parse, validation)
             print(f"[Warning] QueryParser fallback used due to: {exc}")
-            return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
+            return fallback_parse_query(query)
 
 
 class GeminiQueryParser:
@@ -302,7 +475,7 @@ class GeminiQueryParser:
     async def parse(self, query: str) -> ParsedQuery:
         if not self.client:
             print("[Warning] GeminiQueryParser: No API key or genai lib found. Using fallback.")
-            return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
+            return fallback_parse_query(query)
 
         schema = ParsedQuery.model_json_schema()
         prompt = (
@@ -325,7 +498,10 @@ class GeminiQueryParser:
                 )
                 response_text = extract_model_text(response)
                 if response_text:
-                    return normalise_scene_keywords(query, parse_llm_json(response_text))
+                    return enrich_explicit_interactions(
+                        query,
+                        normalise_scene_keywords(query, parse_llm_json(response_text)),
+                    )
                 if attempt == 0:
                     # Empty text is often a transient candidate-generation
                     # issue. Retry once, but do not create an unbounded request
@@ -335,5 +511,5 @@ class GeminiQueryParser:
             raise LLMParserError("Gemini returned no text for query parsing")
         except Exception as exc:
             print(f"[Warning] GeminiQueryParser fallback used due to: {exc}")
-            return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
+            return fallback_parse_query(query)
 

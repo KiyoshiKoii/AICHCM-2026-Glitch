@@ -9,6 +9,7 @@ from backend.utils.rrf import reciprocal_rank_fusion
 
 
 from backend.services.llm_reranker import GeminiReRanker
+from backend.services.query_analyzer import enrich_explicit_interactions
 
 
 def _filter_upstream_results(results: list[Any], batch_ids: list[str], video_ids: list[str]) -> list[Any]:
@@ -70,16 +71,26 @@ class SearchService:
         batch_ids = batch_ids or []
         video_ids = video_ids or []
         try:
-            parsed = await self.parser.parse(query)
+            # Keep the public orchestration boundary defensive: parser
+            # implementations can be swapped (Gemini/Ollama), and an older
+            # worker or a provider response may still omit the explicit
+            # subject-action-object plan.  Repair it here before constructing
+            # the Dev2 payload so semantic retrieval never silently falls
+            # back to broad keyword-only ranking for an explicit interaction.
+            parsed = enrich_explicit_interactions(query, await self.parser.parse(query))
             visual_prompt = parsed.visual_prompt
             semantic_keywords = parsed.semantic_keywords + [query]
             object_queries = [item.model_dump(mode="json") for item in parsed.object_queries]
+            spatial_queries = [item.model_dump(mode="json") for item in parsed.spatial_queries]
+            interaction_queries = [item.model_dump(mode="json") for item in parsed.interaction_queries]
             ocr_queries = parsed.ocr_queries
             program_queries = parsed.program_queries
         except Exception:
             visual_prompt = query
             semantic_keywords = [query]
             object_queries = []
+            spatial_queries = []
+            interaction_queries = []
             ocr_queries = []
             program_queries = []
 
@@ -96,6 +107,8 @@ class SearchService:
                 {
                     "keywords": semantic_keywords,
                     "object_queries": object_queries,
+                    "spatial_queries": spatial_queries,
+                    "interaction_queries": interaction_queries,
                     "ocr_queries": ocr_queries,
                     "program_queries": program_queries,
                     "batch_ids": batch_ids,

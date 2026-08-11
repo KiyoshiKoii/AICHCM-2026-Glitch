@@ -11,7 +11,7 @@ from __future__ import annotations
 from copy import deepcopy
 
 
-DEFAULT_INDEX_NAME = "semantic_frames_v3"
+DEFAULT_INDEX_NAME = "semantic_frames_v4"
 DEFAULT_ALIAS_NAME = "semantic_frames"
 
 
@@ -58,6 +58,10 @@ _DEFINITION = {
             "video_id": {"type": "keyword"},
             "program_code": {"type": "keyword", "normalizer": "lowercase_folded"},
             "frame_number": {"type": "integer"},
+            "visual_source_frame_id": {"type": "keyword"},
+            "ocr_source_frame_id": {"type": "keyword"},
+            "quality_flags": {"type": "keyword"},
+            "is_visual_representative": {"type": "boolean"},
             "caption": {"type": "text", "analyzer": "english_visual"},
             "detailed_caption": {"type": "text", "analyzer": "english_visual"},
             "caption_vi": {"type": "text", "analyzer": "folded_text"},
@@ -68,12 +72,42 @@ _DEFINITION = {
                 "type": "nested",
                 "properties": {
                     "object_id": {"type": "keyword"},
-                    "label": {"type": "text", "analyzer": "english_visual"},
+                    "label": {
+                        "type": "text",
+                        "analyzer": "english_visual",
+                        "fields": {"raw": {"type": "keyword", "normalizer": "lowercase_folded"}},
+                    },
                     "bbox": {"type": "float"},
                     "description": {"type": "text", "analyzer": "english_visual"},
                     "description_vi": {"type": "text", "analyzer": "folded_text"},
-                    "attributes": {"type": "text", "analyzer": "english_visual"},
-                    "action": {"type": "text", "analyzer": "english_visual"},
+                    "attributes": {
+                        "type": "text",
+                        "analyzer": "english_visual",
+                        "fields": {"raw": {"type": "keyword", "normalizer": "lowercase_folded"}},
+                    },
+                    "action": {
+                        "type": "text",
+                        "analyzer": "english_visual",
+                        "fields": {"raw": {"type": "keyword", "normalizer": "lowercase_folded"}},
+                    },
+                },
+            },
+            "spatial_relations": {
+                "type": "nested",
+                "properties": {
+                    "subject_id": {"type": "keyword"},
+                    "predicate": {"type": "keyword"},
+                    "object_id": {"type": "keyword"},
+                    "subject_label": {"type": "text", "analyzer": "english_visual"},
+                    "subject_description": {"type": "text", "analyzer": "english_visual"},
+                    "subject_description_vi": {"type": "text", "analyzer": "folded_text"},
+                    "subject_attributes": {"type": "text", "analyzer": "english_visual"},
+                    "subject_action": {"type": "text", "analyzer": "english_visual"},
+                    "object_label": {"type": "text", "analyzer": "english_visual"},
+                    "object_description": {"type": "text", "analyzer": "english_visual"},
+                    "object_description_vi": {"type": "text", "analyzer": "folded_text"},
+                    "object_attributes": {"type": "text", "analyzer": "english_visual"},
+                    "object_action": {"type": "text", "analyzer": "english_visual"},
                 },
             },
             "video_title": {"type": "text", "analyzer": "folded_text"},

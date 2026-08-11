@@ -1,5 +1,5 @@
 import re
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
@@ -64,6 +64,53 @@ class ObjectQuery(BaseModel):
         return normalized
 
 
+class SpatialQuery(BaseModel):
+    """One subject-predicate-object relation constraint."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    subject_english_phrase: str = Field(min_length=1, max_length=300)
+    subject_vietnamese_phrase: str = Field(default="", max_length=300)
+    predicate: Literal["left_of", "right_of", "above", "below", "overlapping"]
+    object_english_phrase: str = Field(min_length=1, max_length=300)
+    object_vietnamese_phrase: str = Field(default="", max_length=300)
+
+    @field_validator(
+        "subject_english_phrase",
+        "subject_vietnamese_phrase",
+        "object_english_phrase",
+        "object_vietnamese_phrase",
+    )
+    @classmethod
+    def normalize_phrase(cls, value: str) -> str:
+        return " ".join(value.split())
+
+
+class InteractionQuery(BaseModel):
+    """One subject-action-object interaction bound to a shared relation row."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    subject_english_phrase: str = Field(min_length=1, max_length=300)
+    subject_vietnamese_phrase: str = Field(default="", max_length=300)
+    action_english_phrase: str = Field(min_length=1, max_length=200)
+    action_vietnamese_phrase: str = Field(default="", max_length=200)
+    object_english_phrase: str = Field(min_length=1, max_length=300)
+    object_vietnamese_phrase: str = Field(default="", max_length=300)
+
+    @field_validator(
+        "subject_english_phrase",
+        "subject_vietnamese_phrase",
+        "action_english_phrase",
+        "action_vietnamese_phrase",
+        "object_english_phrase",
+        "object_vietnamese_phrase",
+    )
+    @classmethod
+    def normalize_phrase(cls, value: str) -> str:
+        return " ".join(value.split())
+
+
 class ParsedQuery(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -81,6 +128,16 @@ class ParsedQuery(BaseModel):
         default_factory=list,
         max_length=5,
         description="Object-specific phrases, preserving attributes bound to one object.",
+    )
+    spatial_queries: list[SpatialQuery] = Field(
+        default_factory=list,
+        max_length=5,
+        description="Explicit subject-predicate-object spatial relations.",
+    )
+    interaction_queries: list[InteractionQuery] = Field(
+        default_factory=list,
+        max_length=5,
+        description="Subject-action-object interactions bound to one relation row.",
     )
     ocr_queries: list[str] = Field(
         default_factory=list,
