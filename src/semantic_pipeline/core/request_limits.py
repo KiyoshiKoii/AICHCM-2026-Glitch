@@ -119,4 +119,5 @@ def is_transient_service_error(error: Exception) -> bool:
         or "temporarily_unavailable" in message
         or "internal_server_error" in message
         or "empty_response" in message
+        or "empty_ocr_response" in message
     )

@@ -521,6 +521,9 @@ def test_classifies_temporary_model_overload_as_retryable():
     assert is_transient_service_error(
         RuntimeError("Gemini returned empty response text; the batch can be retried")
     )
+    assert is_transient_service_error(
+        RuntimeError("Gemini returned empty OCR response text; the batch can be retried")
+    )
 
 
 def test_writes_a_separate_caption_artifact_for_each_video(tmp_path, monkeypatch, capsys):
