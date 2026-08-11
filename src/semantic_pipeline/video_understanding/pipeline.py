@@ -29,6 +29,26 @@ DEFAULT_MAP_DIR = Path("data/map-keyframes")
 DEFAULT_KEYFRAME_DIR = Path("data/keyframes")
 DEFAULT_OUTPUT_ROOT = Path("data/processed/video_understanding")
 PILOT_VIDEO_ID = "L22_V001"
+EVIDENCE_STOPWORDS = {
+    "anh",
+    "cac",
+    "cho",
+    "cua",
+    "dang",
+    "duoc",
+    "kien",
+    "mot",
+    "nhung",
+    "nguoi",
+    "su",
+    "tai",
+    "thanh",
+    "thoi",
+    "tin",
+    "trong",
+    "va",
+    "viec",
+}
 
 
 def _story_timeline(
@@ -99,7 +119,12 @@ def _merge_duplicate_candidates(candidates: list[Any]) -> list[Any]:
         for existing in result:
             shared_scene = len(current_refs & set(existing.scene_ids))
             shared_asr = len(current_asr & set(existing.asr_segment_indices))
-            if shared_scene or shared_asr or _same_news_story(existing, candidate):
+            if _same_news_story(existing, candidate) or _shared_evidence_duplicate(
+                existing,
+                candidate,
+                shared_scene=shared_scene,
+                shared_asr=shared_asr,
+            ):
                 duplicate = existing
                 break
         if duplicate is None:
@@ -136,6 +161,105 @@ def _same_news_story(left: Any, right: Any) -> bool:
     title_similarity = len(left_title & right_title) / len(title_union) if title_union else 0.0
     anchors = set(left.entities + left.locations) & set(right.entities + right.locations)
     return bool(anchors) and (similarity >= 0.30 or title_similarity >= 0.45)
+
+
+def _prune_candidate_evidence(
+    candidates: list[Any],
+    scenes: list[Any],
+    frames: list[Any],
+    segments: dict[int, Any],
+) -> list[Any]:
+    """Discard LLM scene references with no lexical support for their event."""
+
+    scene_by_id = {scene.scene_id: scene for scene in scenes}
+    frame_by_n = {frame.keyframe_n: frame for frame in frames}
+    result: list[Any] = []
+    for candidate in candidates:
+        anchors = _evidence_tokens(
+            " ".join(
+                [candidate.title, *candidate.topics, *candidate.entities, *candidate.locations]
+            )
+        )
+        if not anchors:
+            result.append(candidate)
+            continue
+        retained: list[str] = []
+        for scene_id in candidate.scene_ids:
+            scene = scene_by_id.get(scene_id)
+            if scene is None:
+                continue
+            evidence = " ".join(
+                [
+                    *[
+                        _frame_evidence_text(frame_by_n[keyframe])
+                        for keyframe in scene.frame_indices
+                        if keyframe in frame_by_n
+                    ],
+                    *[
+                        str(segments[index].text)
+                        for index in scene.asr_segment_indices
+                        if index in segments
+                    ],
+                ]
+            )
+            if anchors & _evidence_tokens(evidence):
+                retained.append(scene_id)
+        if retained:
+            candidate.scene_ids = retained
+            candidate.asr_segment_indices = sorted(
+                {
+                    index
+                    for scene_id in retained
+                    for index in scene_by_id[scene_id].asr_segment_indices
+                }
+            )
+        result.append(candidate)
+    return result
+
+
+def _frame_evidence_text(frame: Any) -> str:
+    raw = frame.raw_metadata
+    values = [
+        str(raw.get(field, ""))
+        for field in (
+            "caption",
+            "detailed_caption",
+            "caption_vi",
+            "detailed_caption_vi",
+            "ocr_text",
+            "news_ticker_text",
+        )
+    ]
+    for detection in raw.get("detections", []):
+        if isinstance(detection, dict):
+            values.extend(
+                str(detection.get(field, ""))
+                for field in ("label", "description", "description_vi", "action")
+            )
+    return " ".join(values)
+
+
+def _evidence_tokens(value: str) -> set[str]:
+    return {token for token in _story_tokens(value) if token not in EVIDENCE_STOPWORDS}
+
+
+def _shared_evidence_duplicate(
+    left: Any,
+    right: Any,
+    *,
+    shared_scene: int,
+    shared_asr: int,
+) -> bool:
+    """Avoid merging unrelated cards that happen to share an anchor scene."""
+
+    if not (shared_scene or shared_asr):
+        return False
+    left_title = _story_tokens(left.title)
+    right_title = _story_tokens(right.title)
+    union = left_title | right_title
+    title_similarity = len(left_title & right_title) / len(union) if union else 0.0
+    shared_anchors = set(left.entities + left.locations) & set(right.entities + right.locations)
+    return title_similarity >= 0.30 or bool(shared_anchors)
 
 
 def build_video(
@@ -175,6 +299,7 @@ def build_video(
         segments,
         require_llm=require_llm,
     )
+    candidates = _prune_candidate_evidence(candidates, scenes, frames, segments)
     candidates = _merge_duplicate_candidates(candidates)
     summary = summarizer.summarize_video(
         candidates,
@@ -182,9 +307,11 @@ def build_video(
         duration_ms=frames[-1].timestamp_ms,
     )
     timeline_segments = _story_timeline(candidates, scenes, frames, segments)
+    search_text = _build_search_text(summary, timeline_segments)
     generation_id = f"{video_id}-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')}"
     source_hashes = {str(path): sha256_file(path) for path in source_paths}
     validation = validate_artifacts(frames, segments, scenes, candidates)
+    validation["retrieval_coverage"] = _retrieval_coverage(timeline_segments, search_text)
     validation.update(
         {
             "generation_id": generation_id,
@@ -224,7 +351,7 @@ def build_video(
         "content_type": "news",
         **summary,
         "segment_refs": [item["segment_id"] for item in timeline_segments],
-        "search_text": _build_search_text(summary, timeline_segments),
+        "search_text": search_text,
     }
     pilot_dir = output_root / "L22" / video_id / "pilot"
     published = publish_fixed_pilot(
@@ -253,7 +380,17 @@ def _build_search_text(summary: dict[str, Any], timeline_segments: list[dict[str
 
     fragments = [
         str(summary.get("summary_vi", "")).strip(),
-        *[str(item.get("title", "")).strip() for item in timeline_segments],
+        *[
+            fragment
+            for item in timeline_segments
+            for fragment in (
+                str(item.get("title", "")).strip(),
+                str(item.get("summary", "")).strip(),
+                *[str(value).strip() for value in item.get("topics", [])],
+                *[str(value).strip() for value in item.get("entities", [])],
+                *[str(value).strip() for value in item.get("locations", [])],
+            )
+        ],
         *[str(item).strip() for item in summary.get("main_topics", [])],
         *[str(item).strip() for item in summary.get("main_entities", [])],
         *[str(item).strip() for item in summary.get("main_locations", [])],
@@ -267,3 +404,27 @@ def _build_search_text(summary: dict[str, Any], timeline_segments: list[dict[str
             seen.add(normalized)
             unique.append(fragment)
     return " ".join(unique)
+
+
+def _retrieval_coverage(timeline_segments: list[dict[str, Any]], search_text: str) -> dict[str, Any]:
+    """Verify each persisted news segment remains discoverable at video level."""
+
+    searchable = " ".join(search_text.casefold().split())
+    missing_titles = [
+        str(item.get("segment_id", ""))
+        for item in timeline_segments
+        if str(item.get("title", "")).strip()
+        and " ".join(str(item["title"]).casefold().split()) not in searchable
+    ]
+    missing_summaries = [
+        str(item.get("segment_id", ""))
+        for item in timeline_segments
+        if str(item.get("summary", "")).strip()
+        and " ".join(str(item["summary"]).casefold().split()) not in searchable
+    ]
+    return {
+        "timeline_segments": len(timeline_segments),
+        "segments_in_search_text": len(timeline_segments) - len(set(missing_titles) | set(missing_summaries)),
+        "missing_segment_titles": missing_titles,
+        "missing_segment_summaries": missing_summaries,
+    }

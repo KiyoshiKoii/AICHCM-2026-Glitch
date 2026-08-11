@@ -46,3 +46,20 @@ def test_different_events_with_only_shared_location_are_kept() -> None:
         ]
     )
     assert len(result) == 2
+
+
+def test_shared_scene_does_not_merge_unrelated_news_cards() -> None:
+    left = _story(
+        "Nhiệt độ tại Barcelona đạt mức kỷ lục",
+        "Nhiệt độ cao nhất trong 110 năm.",
+        "Barcelona",
+    )
+    right = _story(
+        "Đấu giá thư tay của Công nương Diana",
+        "Một bức thư được bán đấu giá tại Anh.",
+        "Anh",
+    )
+    left.scene_ids = ["shared-scene"]
+    right.scene_ids = ["shared-scene"]
+
+    assert len(_merge_duplicate_candidates([left, right])) == 2

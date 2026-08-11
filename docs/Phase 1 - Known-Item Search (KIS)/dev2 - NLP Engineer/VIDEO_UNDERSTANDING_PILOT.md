@@ -65,10 +65,42 @@ Free-tier request limits are handled with a default 4.2-second interval between
 requests and bounded retry backoff for HTTP 429 responses. Override the interval
 when needed with `GEMINI_REQUEST_INTERVAL_SECONDS`.
 
+## Hierarchical retrieval
+
+`summary_vi` and `summary_en` are display-level summaries, not the only search
+surface. `video_summary.search_text` contains every timeline title and story
+summary. The retrieval layer builds three in-memory/Elasticsearch-ready document
+types directly from the fixed pilot plus source metadata:
+
+```text
+video → candidate video
+segment → candidate news story and its time range
+frame → keyframe_n and BTC native_frame_idx
+```
+
+No additional JSON artifact is persisted. The document builder can emit bulk
+actions for `semantic_videos_v1`, `semantic_segments_v1`, and
+`semantic_frames_v5`; all can be rebuilt from the three pilot files and source
+caption/ASR/map data.
+
+Run a reproducible local query:
+
+```powershell
+python src/semantic_pipeline/retrieval/video_cli.py `
+  "nhiệt độ Barcelona cao nhất trong 110 năm" `
+  --top-segments 1 `
+  --top-frames 1
+```
+
+The result includes the selected segment, `keyframe_n`, `native_frame_idx`, and
+timestamp. Queries containing “đầu tiên” choose the earliest frame whose score
+is close enough to the best evidence match.
+
 ## Tests
 
 ```powershell
 python -m pytest -q src/semantic_pipeline/tests/test_video_understanding_l22.py
+python -m pytest -q src/semantic_pipeline/tests/test_hierarchical_video_search.py
 ```
 
 The real-data integration test processes only `L22_V001`, checks all 298 frame

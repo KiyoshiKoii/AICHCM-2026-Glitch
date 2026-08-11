@@ -52,6 +52,9 @@ def test_l22_v001_offline_pipeline_publishes_three_fixed_outputs(tmp_path: Path)
     assert report["validation"]["all_frame_refs_valid"] is True
     assert report["validation"]["all_asr_refs_valid"] is True
     assert report["validation"]["all_primary_asr_segments_assigned"] is True
+    assert report["retrieval_coverage"]["segments_in_search_text"] == report["retrieval_coverage"]["timeline_segments"]
+    assert not report["retrieval_coverage"]["missing_segment_titles"]
+    assert not report["retrieval_coverage"]["missing_segment_summaries"]
     assert all(_sha256(path) == before[str(path)] for path in source_paths)
 
 

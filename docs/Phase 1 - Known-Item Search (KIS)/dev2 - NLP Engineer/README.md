@@ -394,3 +394,11 @@ python src/semantic_pipeline/video_understanding/cli.py `
   --llm `
   --require-llm
 ```
+
+Video retrieval theo ba tầng `video → segment → frame`. `search_text` của video
+gồm cả title và summary của mọi segment, còn keyframe cuối được xếp hạng bằng
+caption/object/OCR/ASR trong segment đã chọn. Chạy kiểm tra cục bộ:
+
+```powershell
+python src/semantic_pipeline/retrieval/video_cli.py "nhiệt độ Barcelona cao nhất trong 110 năm"
+```

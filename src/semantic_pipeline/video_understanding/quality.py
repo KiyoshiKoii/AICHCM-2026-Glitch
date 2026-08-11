@@ -105,7 +105,7 @@ def _story_start(story: StoryCandidate, scenes: list[MicroScene]) -> int:
 
 def hard_gates_pass(report: dict[str, Any]) -> bool:
     validation = report["validation"]
-    return all(
+    base_gates = all(
         (
             validation["all_frame_refs_valid"],
             validation["all_story_scene_refs_valid"],
@@ -113,5 +113,15 @@ def hard_gates_pass(report: dict[str, Any]) -> bool:
             validation["all_primary_asr_segments_assigned"],
             validation["scene_order_errors"] == 0,
             validation["story_order_errors"] == 0,
+        )
+    )
+    coverage = report.get("retrieval_coverage")
+    if coverage is None:
+        return base_gates
+    return base_gates and all(
+        (
+            coverage.get("segments_in_search_text") == coverage.get("timeline_segments"),
+            not coverage.get("missing_segment_titles"),
+            not coverage.get("missing_segment_summaries"),
         )
     )
