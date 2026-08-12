@@ -1,4 +1,4 @@
-"""Fixed pilot publisher with staging and generation consistency checks."""
+"""Per-video publisher with staging and generation consistency checks."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ def read_existing_score(pilot_dir: Path) -> float | None:
         return None
 
 
-def publish_fixed_pilot(
+def publish_pilot(
     *,
     timeline: dict[str, Any],
     video_summary: dict[str, Any],

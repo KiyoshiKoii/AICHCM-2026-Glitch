@@ -372,12 +372,15 @@ python -m pytest src/semantic_pipeline/tests/test_ocr_accuracy.py -v
 python -m pytest src/semantic_pipeline/tests -v -s
 ```
 
-### Video-understanding pilot (L22_V001)
+### Video-understanding cho mọi video BTC
 
-Pilot hướng tin tức được triển khai riêng tại
+Pipeline hướng tin tức được triển khai riêng tại
 [`VIDEO_UNDERSTANDING_PILOT.md`](VIDEO_UNDERSTANDING_PILOT.md). Pipeline chỉ đọc
 caption Gemini, ASR và `map-keyframes`; output cố định gồm đúng ba file
 `timeline.json`, `video_summary.json` và `validation_report.json`.
+
+`--video-id` nhận mọi ID đúng dạng `Lxx_Vyyy` và tự suy ra batch `Lxx` cho
+caption/output. Không còn đường dẫn hay segment ID khóa cứng theo `L22_V001`.
 
 Gemini dùng structured JSON schema cho từng evidence window và cho summary cuối
 video. Story title/summary được yêu cầu bằng tiếng Việt; `summary_vi` và
@@ -391,6 +394,15 @@ khi gặp HTTP 429. Chạy pilot thật:
 ```powershell
 python src/semantic_pipeline/video_understanding/cli.py `
   --video-id L22_V001 `
+  --llm `
+  --require-llm
+```
+
+Chạy tuần tự tất cả video caption đã có trong một batch (ví dụ `L22`):
+
+```powershell
+python src/semantic_pipeline/video_understanding/cli.py `
+  --batch-id L22 `
   --llm `
   --require-llm
 ```

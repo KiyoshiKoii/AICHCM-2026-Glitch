@@ -1,4 +1,4 @@
-"""Orchestration for the fixed L22_V001 video-understanding pilot."""
+"""Orchestration for evidence-grounded per-video understanding artifacts."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from .loaders import (
     load_keyframe_map,
     sha256_file,
 )
-from .publisher import publish_fixed_pilot
+from .publisher import publish_pilot
 from .quality import hard_gates_pass, validate_artifacts
 from .summarizer import NewsSummarizer
 from .timeline_builder import build_evidence_windows, build_micro_scenes
@@ -28,7 +28,7 @@ DEFAULT_ASR_DIR = Path("data/metadata/metadata_asr")
 DEFAULT_MAP_DIR = Path("data/map-keyframes")
 DEFAULT_KEYFRAME_DIR = Path("data/keyframes")
 DEFAULT_OUTPUT_ROOT = Path("data/processed/video_understanding")
-PILOT_VIDEO_ID = "L22_V001"
+VIDEO_ID_RE = re.compile(r"^(?P<batch>L\d{2})_V\d{3}$")
 EVIDENCE_STOPWORDS = {
     "anh",
     "cac",
@@ -51,12 +51,24 @@ EVIDENCE_STOPWORDS = {
 }
 
 
+def batch_id_from_video_id(video_id: str) -> str:
+    """Validate a BTC video ID and return its batch component."""
+
+    match = VIDEO_ID_RE.fullmatch(video_id)
+    if match is None:
+        raise ValueError("video_id must use the BTC format Lxx_Vyyy, for example L22_V001")
+    return match.group("batch")
+
+
 def _story_timeline(
     candidates: list[Any],
     scenes: list[Any],
     frames: list[Any],
     segments: dict[int, Any],
 ) -> list[dict[str, Any]]:
+    if not frames:
+        return []
+    video_id = frames[0].video_id
     frame_by_n = {frame.keyframe_n: frame for frame in frames}
     scene_by_id = {scene.scene_id: scene for scene in scenes}
     output: list[dict[str, Any]] = []
@@ -85,7 +97,7 @@ def _story_timeline(
             )
         output.append(
             {
-                "segment_id": f"L22_V001_story_{index:04d}",
+                "segment_id": f"{video_id}_story_{index:04d}",
                 "segment_type": "news_story",
                 "title": candidate.title,
                 "summary": candidate.summary,
@@ -264,7 +276,7 @@ def _shared_evidence_duplicate(
 
 def build_video(
     *,
-    video_id: str = PILOT_VIDEO_ID,
+    video_id: str,
     caption_dir: Path = DEFAULT_CAPTION_DIR,
     asr_dir: Path = DEFAULT_ASR_DIR,
     map_dir: Path = DEFAULT_MAP_DIR,
@@ -274,9 +286,8 @@ def build_video(
     require_llm: bool = False,
     force_publish: bool = False,
 ) -> dict[str, Any]:
-    if video_id != PILOT_VIDEO_ID:
-        raise ValueError(f"Pilot is intentionally restricted to {PILOT_VIDEO_ID}")
-    caption_path = caption_dir / "L22" / f"{video_id}.json"
+    batch_id = batch_id_from_video_id(video_id)
+    caption_path = caption_dir / batch_id / f"{video_id}.json"
     asr_path = asr_dir / f"{video_id}.json"
     map_path = map_dir / f"{video_id}.csv"
     image_dir = keyframe_dir / video_id
@@ -353,8 +364,8 @@ def build_video(
         "segment_refs": [item["segment_id"] for item in timeline_segments],
         "search_text": search_text,
     }
-    pilot_dir = output_root / "L22" / video_id / "pilot"
-    published = publish_fixed_pilot(
+    pilot_dir = output_root / batch_id / video_id / "pilot"
+    published = publish_pilot(
         timeline=timeline,
         video_summary=video_summary,
         validation_report=validation,

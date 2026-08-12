@@ -1,11 +1,11 @@
-# Video-understanding pilot
+# Video-understanding pipeline
 
-The pilot is intentionally restricted to `L22_V001`, using Gemini keyframe
-metadata, timestamped ASR, and the BTC keyframe map. Source artifacts are
-read-only. The generated pilot is fixed at:
+The pipeline accepts any BTC video ID in `Lxx_Vyyy` format, using Gemini
+keyframe metadata, timestamped ASR, and the BTC keyframe map. Source artifacts
+are read-only. Each video owns one fixed pilot directory:
 
 ```text
-data/processed/video_understanding/L22/L22_V001/pilot/
+data/processed/video_understanding/<batch_id>/<video_id>/pilot/
 ├── timeline.json
 ├── video_summary.json
 └── validation_report.json
@@ -19,13 +19,13 @@ after the run.
 ## Sources
 
 ```text
-data/metadata/caption/L22/L22_V001.json
-data/metadata/metadata_asr/L22_V001.json
-data/map-keyframes/L22_V001.csv
-data/keyframes/L22_V001/
+data/metadata/caption/<batch_id>/<video_id>.json
+data/metadata/metadata_asr/<video_id>.json
+data/map-keyframes/<video_id>.csv
+data/keyframes/<video_id>/
 ```
 
-`data/map-keyframes/L22_V001.csv` is the identity bridge. `n` joins Gemini's
+`data/map-keyframes/<video_id>.csv` is the identity bridge. `n` joins Gemini's
 ordinal keyframe ID, `pts_time` is used for temporal alignment, and
 `frame_idx` is the native BTC frame index.
 
@@ -37,6 +37,12 @@ python src/semantic_pipeline/video_understanding/cli.py --video-id L22_V001
 
 The offline mode creates evidence-linked deterministic fallback summaries.
 The output never copies the source caption records or full ASR transcript.
+
+Run every video discovered from caption artifacts in one batch:
+
+```powershell
+python src/semantic_pipeline/video_understanding/cli.py --batch-id L22
+```
 
 ## Run with Gemini summarization
 
@@ -103,6 +109,6 @@ python -m pytest -q src/semantic_pipeline/tests/test_video_understanding_l22.py
 python -m pytest -q src/semantic_pipeline/tests/test_hierarchical_video_search.py
 ```
 
-The real-data integration test processes only `L22_V001`, checks all 298 frame
-map links and all 290 ASR segments, verifies the fixed three-file publish, and
-checks that source hashes remain unchanged.
+The real-data integration tests process `L22_V001` and `L21_V001`, verify that
+batch/output/segment IDs are derived from each video ID, check the fixed
+three-file publish, and confirm source hashes remain unchanged.
