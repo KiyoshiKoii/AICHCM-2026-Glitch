@@ -1,38 +1,228 @@
+import json
 import os
 import re
 import sys
 from collections import defaultdict
 
+import numpy as np
 import torch
 import uvicorn
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from transformers import CLIPProcessor, CLIPModel
 from qdrant_client import QdrantClient
 from qdrant_client.models import FieldCondition, Filter, MatchAny
 
 try:
-    from config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME, KEYFRAME_DIR
+    from sentence_transformers import SentenceTransformer
+except ImportError as error:
+    raise RuntimeError(
+        "Qwen visual embedding cần sentence-transformers bản mới, "
+        "transformers>=4.57.0 và qwen-vl-utils>=0.0.14."
+    ) from error
+
+try:
+    from config import (
+        COLLECTION_NAME,
+        INDEX_METADATA_PATH,
+        KEYFRAME_DIR,
+        QDRANT_DB_PATH,
+        QUERY_INSTRUCTION,
+        VECTOR_SIZE,
+        VISUAL_ARTIFACT_ID,
+        VISUAL_ATTN_IMPLEMENTATION,
+        VISUAL_DTYPE,
+        VISUAL_MODEL_ID,
+        VISUAL_MODEL_REVISION,
+    )
 except ImportError:
-    from .config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME, KEYFRAME_DIR
+    from .config import (
+        COLLECTION_NAME,
+        INDEX_METADATA_PATH,
+        KEYFRAME_DIR,
+        QDRANT_DB_PATH,
+        QUERY_INSTRUCTION,
+        VECTOR_SIZE,
+        VISUAL_ARTIFACT_ID,
+        VISUAL_ATTN_IMPLEMENTATION,
+        VISUAL_DTYPE,
+        VISUAL_MODEL_ID,
+        VISUAL_MODEL_REVISION,
+    )
 
 # Fix encoding issue for Vietnamese characters in Windows Terminal
-if sys.stdout.encoding != 'utf-8':
-    sys.stdout.reconfigure(encoding='utf-8')
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 app = FastAPI(title="CV Internal API", description="API for Text-to-Video Search")
 
-print(f"Đang khởi tạo CLIP Model ({CLIP_MODEL_ID})...")
-model = CLIPModel.from_pretrained(CLIP_MODEL_ID)
-processor = CLIPProcessor.from_pretrained(CLIP_MODEL_ID)
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
-model.to(device)
-print(f"Model CLIP đã sẵn sàng trên {device.upper()}.")
+def _expected_metadata() -> dict[str, object]:
+    return {
+        "model_id": VISUAL_MODEL_ID,
+        "model_revision": VISUAL_MODEL_REVISION,
+        "artifact_id": VISUAL_ARTIFACT_ID,
+        "vector_size": VECTOR_SIZE,
+        "query_instruction": QUERY_INSTRUCTION,
+    }
+
+
+def _resolve_torch_dtype(device: str) -> torch.dtype:
+    """Resolve the same precision policy used by extractor.py."""
+    if VISUAL_DTYPE == "auto":
+        if device == "cuda":
+            supports_bf16 = getattr(torch.cuda, "is_bf16_supported", lambda: False)()
+            return torch.bfloat16 if supports_bf16 else torch.float16
+        return torch.float32
+
+    requested = {
+        "bfloat16": torch.bfloat16,
+        "float16": torch.float16,
+        "float32": torch.float32,
+    }[VISUAL_DTYPE]
+    if device == "cpu" and requested != torch.float32:
+        raise RuntimeError(
+            "VISUAL_DTYPE phải là float32 khi chạy CPU; "
+            "hãy dùng GPU CUDA cho bfloat16/float16."
+        )
+    if requested == torch.bfloat16 and device == "cuda":
+        supports_bf16 = getattr(torch.cuda, "is_bf16_supported", lambda: False)()
+        if not supports_bf16:
+            raise RuntimeError("GPU hiện tại không hỗ trợ bfloat16; hãy dùng VISUAL_DTYPE=float16.")
+    return requested
+
+
+def _resolved_model_revision(embedder: SentenceTransformer) -> str:
+    """Return the resolved HF commit when it is exposed by Sentence Transformers."""
+    try:
+        first_module = embedder._first_module()
+        config = getattr(getattr(first_module, "auto_model", None), "config", None)
+        return getattr(config, "_commit_hash", None) or VISUAL_MODEL_REVISION
+    except (AttributeError, IndexError, TypeError):
+        return VISUAL_MODEL_REVISION
+
+
+def _read_index_metadata() -> dict[str, object]:
+    try:
+        with open(INDEX_METADATA_PATH, "r", encoding="utf-8") as metadata_file:
+            value = json.load(metadata_file)
+    except (OSError, json.JSONDecodeError) as error:
+        raise RuntimeError(
+            "Không đọc được metadata index Qwen. Hãy chạy database.py hoàn tất trước khi chạy server."
+        ) from error
+    if not isinstance(value, dict):
+        raise RuntimeError("Metadata index Qwen không hợp lệ.")
+    return value
+
+
+def _collection_vector_size(collection_info) -> int | None:
+    vectors_config = collection_info.config.params.vectors
+    size = getattr(vectors_config, "size", None)
+    if isinstance(size, int):
+        return size
+    if isinstance(vectors_config, dict):
+        # Pipeline này dùng unnamed dense vector. Nhánh này chỉ giúp báo lỗi rõ
+        # hơn nếu Qdrant/client trả config dưới dạng mapping.
+        default_vector = vectors_config.get("")
+        return getattr(default_vector, "size", None)
+    return None
+
+
+def _validate_qwen_index(qdrant_client: QdrantClient) -> dict[str, object]:
+    if not qdrant_client.collection_exists(collection_name=COLLECTION_NAME):
+        raise RuntimeError(
+            f"Không tìm thấy Qwen collection '{COLLECTION_NAME}'. Hãy chạy database.py trước."
+        )
+
+    metadata = _read_index_metadata()
+    if metadata.get("status") != "complete":
+        raise RuntimeError("Qwen index chưa hoàn tất build; server không thể query collection này.")
+    if metadata.get("collection_name") != COLLECTION_NAME:
+        raise RuntimeError("Metadata index không thuộc collection Qwen hiện tại.")
+
+    mismatched_keys = [
+        key
+        for key, expected_value in _expected_metadata().items()
+        if metadata.get(key) != expected_value
+    ]
+    if mismatched_keys:
+        raise RuntimeError(
+            "Metadata index không khớp config hiện tại ở: " + ", ".join(mismatched_keys)
+        )
+
+    collection_info = qdrant_client.get_collection(collection_name=COLLECTION_NAME)
+    actual_size = _collection_vector_size(collection_info)
+    if actual_size != VECTOR_SIZE:
+        raise RuntimeError(
+            f"Collection Qdrant có dimension {actual_size}, cần {VECTOR_SIZE}. "
+            "Hãy rebuild bằng database.py."
+        )
+    return metadata
+
+
+def _encode_text_queries(prompts: list[str]) -> np.ndarray:
+    """Encode text queries in the same Qwen vector space as extractor.py images."""
+    with torch.inference_mode():
+        embeddings = model.encode(
+            prompts,
+            batch_size=len(prompts),
+            show_progress_bar=False,
+            convert_to_numpy=True,
+            normalize_embeddings=False,
+            prompt=QUERY_INSTRUCTION,
+            truncate_dim=VECTOR_SIZE,
+        )
+
+    text_features = np.asarray(embeddings, dtype=np.float32)
+    if text_features.ndim == 1:
+        text_features = text_features.reshape(1, -1)
+    expected_shape = (len(prompts), VECTOR_SIZE)
+    if tuple(text_features.shape) != expected_shape:
+        raise RuntimeError(
+            f"Qwen trả text vector shape {tuple(text_features.shape)}, cần {expected_shape}. "
+            "Kiểm tra sentence-transformers có hỗ trợ truncate_dim/MRL hay không."
+        )
+    if not np.isfinite(text_features).all():
+        raise RuntimeError("Qwen trả text vector chứa NaN hoặc Inf.")
+
+    norms = np.linalg.norm(text_features, axis=1, keepdims=True)
+    if np.any(norms == 0):
+        raise RuntimeError("Qwen trả text vector có norm bằng 0.")
+    return text_features / norms
+
 
 print(f"Đang kết nối Qdrant DB tại: {QDRANT_DB_PATH}")
 client = QdrantClient(path=QDRANT_DB_PATH)
+index_metadata = _validate_qwen_index(client)
 print("Qdrant Client đã sẵn sàng.")
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+MODEL_DTYPE = _resolve_torch_dtype(device)
+model_kwargs: dict[str, object] = {"torch_dtype": MODEL_DTYPE}
+if VISUAL_ATTN_IMPLEMENTATION:
+    model_kwargs["attn_implementation"] = VISUAL_ATTN_IMPLEMENTATION
+
+print(
+    f"Đang khởi tạo Qwen visual embedding ({VISUAL_MODEL_ID}, "
+    f"revision={VISUAL_MODEL_REVISION}) trên {device.upper()} "
+    f"với {str(MODEL_DTYPE).replace('torch.', '')}..."
+)
+model = SentenceTransformer(
+    VISUAL_MODEL_ID,
+    revision=VISUAL_MODEL_REVISION,
+    device=device,
+    model_kwargs=model_kwargs,
+)
+model.eval()
+
+indexed_revision = index_metadata.get("resolved_model_revision")
+loaded_revision = _resolved_model_revision(model)
+if indexed_revision and indexed_revision != loaded_revision:
+    raise RuntimeError(
+        "Checkpoint Qwen của server không khớp checkpoint lúc extraction/index "
+        f"({loaded_revision} != {indexed_revision}). Hãy pin VISUAL_MODEL_REVISION hoặc re-index."
+    )
+print("Qwen visual embedding đã sẵn sàng.")
+
 
 class SearchRequest(BaseModel):
     visual_prompt: str
@@ -131,6 +321,7 @@ def temporal_deduplicate(points, top_k: int, temporal_window: int):
 
     return selected
 
+
 @app.post("/internal/search/visual")
 async def search_visual(req: SearchRequest):
     try:
@@ -144,31 +335,15 @@ async def search_visual(req: SearchRequest):
         if not prompts:
             raise ValueError("visual_prompt không được để trống")
 
-        inputs = processor(text=prompts, return_tensors="pt", padding=True).to(device)
-
-        with torch.no_grad():
-            # get_text_features() symmetric với get_image_features() trong extractor.py
-            text_features = model.get_text_features(**inputs)
-
-        # Một số phiên bản transformers trả về BaseModelOutputWithPooling
-        # thay vì tensor trực tiếp — cần extract đúng trường
-        if hasattr(text_features, "text_embeds"):
-            text_features = text_features.text_embeds
-        elif hasattr(text_features, "pooler_output"):
-            text_features = text_features.pooler_output
-
-        # Normalize từng embedding, lấy trung bình, rồi normalize ensemble.
-        text_features = text_features / text_features.norm(p=2, dim=-1, keepdim=True)
-        ensemble_features = text_features.mean(dim=0, keepdim=True)
-        ensemble_features = ensemble_features / ensemble_features.norm(
-            p=2,
-            dim=-1,
-            keepdim=True,
-        )
-        query_vector = [
-            float(x)
-            for x in ensemble_features.cpu().numpy()[0]
-        ]
+        # Qwen thay CLIP ở đúng bước embedding; normalize từng prompt, average
+        # prompt variants rồi normalize lại vẫn giữ nguyên logic cũ.
+        text_features = _encode_text_queries(prompts)
+        ensemble_features = text_features.mean(axis=0, keepdims=True)
+        ensemble_norm = np.linalg.norm(ensemble_features, axis=1, keepdims=True)
+        if np.any(ensemble_norm == 0):
+            raise RuntimeError("Ensemble text embedding có norm bằng 0.")
+        ensemble_features = ensemble_features / ensemble_norm
+        query_vector = ensemble_features[0].astype(np.float32).tolist()
 
         # 2. Lấy ít nhất 50 candidate rồi loại frame gần nhau trong cùng video.
         scope_requested = bool(req.batch_ids or req.video_ids)
@@ -221,13 +396,13 @@ async def search_visual(req: SearchRequest):
         for hit in points:
             raw_score = float(hit.score)
             normalized_score = (raw_score + 1.0) / 2.0
-            
+
             payload = hit.payload
             video_name = payload.get("video_id", "unknown")
             frame_name = payload.get("frame_id", "unknown")
-            
+
             frame_index = get_frame_index(payload)
-                
+
             formatted_frame_id = f"{video_name}_f{frame_index:04d}" if video_name != "unknown" else frame_name
 
             results.append({
@@ -235,16 +410,17 @@ async def search_visual(req: SearchRequest):
                 "score": float(raw_score),
                 "normalized_score": float(normalized_score),
                 "video_name": video_name,
-                "frame_index": frame_index
+                "frame_index": frame_index,
             })
 
         return {
             "status": "success",
-            "data": results
+            "data": results,
         }
-    except Exception as e:
-        print(f"Error during search: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    except Exception as error:
+        print(f"Error during search: {error}")
+        raise HTTPException(status_code=500, detail=str(error))
+
 
 if __name__ == "__main__":
     print("Đang khởi động Server API Nội bộ trên port 8001...")
