@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 
 from semantic_pipeline.retrieval.temporal_event_search import (
+    TemporalCorpus,
     TemporalEventSearch,
     discover_temporal_corpus,
 )
@@ -25,6 +26,61 @@ def test_parser_keeps_duplicate_source_labels_in_order() -> None:
     assert [event.source_label for event in parsed.events] == ["E1", "E2", "E2"]
     assert parsed.events[0].required_anchor == "action_start"
     assert parsed.events[1].required_anchor == "last_complete"
+
+
+def test_summary_only_query_is_kept_as_video_context() -> None:
+    parsed = parse_temporal_query("Bản tin về thời tiết nóng tại Barcelona")
+
+    assert parsed.shared_context == "Bản tin về thời tiết nóng tại Barcelona"
+    assert len(parsed.events) == 1
+
+
+def _temporal_corpus(video_id: str, location: str, event_text: str, frame_number: int) -> TemporalCorpus:
+    frame = {
+        "frame_id": f"{video_id}_f{frame_number:04d}",
+        "keyframe_n": frame_number,
+        "native_frame_idx": frame_number * 100,
+        "timestamp_ms": frame_number * 1_000,
+        "visual_text": event_text,
+        "asr_text": "",
+        "ocr_text": "",
+    }
+    return TemporalCorpus(
+        video={
+            "video_id": video_id,
+            "summary_vi": f"Bản tin về thời tiết nóng tại {location}",
+            "summary_en": "",
+            "search_text": f"Bản tin thời tiết nóng {location}",
+            "main_locations": [location],
+            "main_entities": [],
+        },
+        events=[
+            {
+                "event_id": f"{video_id}_event_1",
+                "description_vi": event_text,
+                "search_text": event_text,
+                "start_ms": frame["timestamp_ms"],
+                "temporal_anchors": [],
+                "_frames": [frame],
+            }
+        ],
+        frames=[frame],
+    )
+
+
+def test_video_context_exact_location_outranks_generic_hot_weather() -> None:
+    search = TemporalEventSearch(
+        [
+            _temporal_corpus("L22_V001", "Barcelona", "Nắng nóng kỷ lục tại Barcelona", 91),
+            _temporal_corpus("L22_V025", "Tây Ban Nha", "Trượt tuyết tránh nóng tại Tây Ban Nha", 20),
+        ]
+    )
+
+    result = search.search("Bản tin về thời tiết nóng tại Barcelona", top_k_videos=2)
+
+    assert result["selected_video"]["video_id"] == "L22_V001"
+    assert result["selected_video"]["matched_context_entities"] == ["Barcelona"]
+    assert result["events"][0]["frame_id"] == "L22_V001_f0091"
 
 
 def test_real_l22_temporal_search_returns_one_video_for_all_events() -> None:

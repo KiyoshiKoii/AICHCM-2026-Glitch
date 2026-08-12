@@ -129,6 +129,27 @@ def _score(query: set[str], text: str) -> float:
     return len(matched) / len(useful) if useful else 0.0
 
 
+def _exact_metadata_matches(video: dict[str, Any], context_tokens: set[str]) -> list[str]:
+    """Find named entities/locations stated completely in the video context.
+
+    Generic words such as ``weather`` and ``hot`` occur in many news videos.
+    A full generated location/entity such as ``Barcelona`` is much stronger
+    evidence that the user is identifying this particular video.
+    """
+
+    matches: list[str] = []
+    for field in ("main_locations", "main_entities"):
+        values = video.get(field, [])
+        if not isinstance(values, list):
+            continue
+        for value in values:
+            candidate = " ".join(str(value).split())
+            candidate_tokens = query_tokens(candidate)
+            if candidate_tokens and candidate_tokens <= context_tokens:
+                matches.append(candidate)
+    return list(dict.fromkeys(matches))
+
+
 def _anchor_for(event: dict[str, Any], query: TemporalEventQuery) -> dict[str, Any] | None:
     anchors = [item for item in event.get("temporal_anchors", []) if isinstance(item, dict)]
     preferred = {
@@ -206,6 +227,34 @@ class TemporalEventSearch:
         frame_score = max(frame_scores, default=0.0)
         return 0.55 * title_score + 0.25 * event_score + 0.20 * frame_score
 
+    def _rank_video_context(
+        self,
+        corpus: TemporalCorpus,
+        context_tokens: set[str],
+    ) -> tuple[float, list[str]]:
+        """Rank a video from its summary/story corpus before event matching."""
+
+        if not context_tokens:
+            return 0.0, []
+        video = corpus.video
+        summary_score = _score(
+            context_tokens,
+            " ".join((str(video.get("summary_vi", "")), str(video.get("summary_en", "")))),
+        )
+        search_score = _score(context_tokens, str(video.get("search_text", "")))
+        best_story_score = max(
+            (_score(context_tokens, event.get("search_text", "")) for event in corpus.events),
+            default=0.0,
+        )
+        base_score = 0.35 * summary_score + 0.35 * search_score + 0.30 * best_story_score
+        exact_matches = _exact_metadata_matches(video, context_tokens)
+        if exact_matches:
+            # A complete location/entity match must outweigh overlap on broad
+            # news words.  It is derived only from each video's own summary;
+            # no video ID is hard-coded.
+            return min(1.0, 0.65 + 0.35 * base_score), exact_matches
+        return base_score, []
+
     def search(
         self,
         query: str | ParsedTemporalQuery,
@@ -214,18 +263,9 @@ class TemporalEventSearch:
     ) -> dict[str, Any]:
         parsed = parse_temporal_query(query) if isinstance(query, str) else query
         context_tokens = query_tokens(parsed.shared_context)
-        ranked_videos: list[tuple[float, TemporalCorpus, list[dict[str, Any]]]] = []
+        ranked_videos: list[tuple[float, TemporalCorpus, list[dict[str, Any]], list[str]]] = []
         for corpus in self.corpora:
-            video = corpus.video
-            video_text = " ".join(
-                [
-                    str(video.get("summary_vi", "")),
-                    str(video.get("summary_en", "")),
-                    str(video.get("search_text", "")),
-                    *[event.get("search_text", "") for event in corpus.events],
-                ]
-            )
-            context_score = _score(context_tokens, video_text) if context_tokens else 0.0
+            context_score, context_matches = self._rank_video_context(corpus, context_tokens)
             selected_events: list[dict[str, Any]] = []
             event_scores: list[float] = []
             used_event_ids: set[str] = set()
@@ -287,14 +327,23 @@ class TemporalEventSearch:
             timestamps = [item["timestamp_ms"] for item in selected_events]
             if timestamps and timestamps == sorted(timestamps):
                 ordering_bonus = 0.1
-            total = 0.3 * context_score + 0.5 * coverage + 0.2 * (sum(event_scores) / max(1, len(event_scores))) + ordering_bonus
+            # The context is the video selector; events are resolved only
+            # after that candidate video is identified.  This keeps a named
+            # location in the summary from being outweighed by generic event
+            # overlap in an unrelated news video.
+            total = (
+                0.65 * context_score
+                + 0.20 * coverage
+                + 0.10 * (sum(event_scores) / max(1, len(event_scores)))
+                + 0.05 * ordering_bonus
+            )
             total = min(1.0, max(0.0, total))
-            ranked_videos.append((total, corpus, selected_events))
+            ranked_videos.append((total, corpus, selected_events, context_matches))
         ranked_videos.sort(key=lambda item: (-item[0], str(item[1].video.get("video_id", ""))))
         selected = ranked_videos[: max(1, top_k_videos)]
         if not selected:
             return {"query": parsed.shared_context, "selected_video": None, "videos": [], "events": []}
-        best_score, best_corpus, best_events = selected[0]
+        best_score, best_corpus, best_events, best_context_matches = selected[0]
         best_events.sort(key=lambda item: item["event_index"])
         return {
             "query": query if isinstance(query, str) else parsed.shared_context,
@@ -305,6 +354,7 @@ class TemporalEventSearch:
                 "matched_events": len(best_events),
                 "total_events": len(parsed.events),
                 "event_coverage": round(len(best_events) / max(1, len(parsed.events)), 6),
+                "matched_context_entities": best_context_matches,
             },
             "events": best_events,
             "videos": [
@@ -314,6 +364,6 @@ class TemporalEventSearch:
                     "matched_events": len(events),
                     "total_events": len(parsed.events),
                 }
-                for score, corpus, events in selected
+                for score, corpus, events, context_matches in selected
             ],
         }

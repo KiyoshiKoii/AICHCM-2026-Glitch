@@ -67,7 +67,10 @@ def parse_temporal_query(query: str) -> ParsedTemporalQuery:
     if not matches:
         operator, anchor = _anchor_for(normalized)
         return ParsedTemporalQuery(
-            shared_context="",
+            # A summary-only request is still a video-level query.  Preserve
+            # it as shared context so the retriever can select the video from
+            # its summary before choosing an evidence frame.
+            shared_context=normalized,
             events=(TemporalEventQuery(1, "E1", normalized, operator, anchor, frozenset(query_tokens(normalized))),),
         )
     shared_context = " ".join(query[: matches[0].start()].split()).strip(" :;,-")
