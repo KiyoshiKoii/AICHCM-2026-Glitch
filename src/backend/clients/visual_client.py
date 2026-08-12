@@ -49,11 +49,17 @@ class InternalPipelineClient:
         base_url: str,
         text_path: str,
         image_path: str | None = None,
+        temporal_path: str | None = None,
     ) -> None:
         self.source = source
         self._client = client
         self._text_url = f"{base_url.rstrip('/')}/{text_path.lstrip('/')}"
         self._image_url = f"{base_url.rstrip('/')}/{image_path.lstrip('/')}" if image_path else None
+        self._temporal_url = (
+            f"{base_url.rstrip('/')}/{temporal_path.lstrip('/')}"
+            if temporal_path
+            else self._text_url.rsplit("/search/text", 1)[0] + "/search/temporal-events"
+        )
 
     async def search_text(self, payload: dict[str, Any]) -> Any:
         try:
@@ -62,6 +68,14 @@ class InternalPipelineClient:
             return response.json()
         except (httpx.HTTPError, ValueError) as exc:
             raise UpstreamError(f"{self.source} text API failed: {exc}") from exc
+
+    async def search_temporal_events(self, payload: dict[str, Any]) -> Any:
+        try:
+            response = await self._client.post(self._temporal_url, json=payload)
+            response.raise_for_status()
+            return response.json()
+        except (httpx.HTTPError, ValueError) as exc:
+            raise UpstreamError(f"{self.source} temporal API failed: {exc}") from exc
 
     async def search_image(
         self,

@@ -21,6 +21,7 @@ from .publisher import publish_pilot
 from .quality import hard_gates_pass, validate_artifacts
 from .summarizer import NewsSummarizer
 from .timeline_builder import build_evidence_windows, build_micro_scenes
+from .temporal_events import build_temporal_events, classify_content_profile, event_search_text
 
 
 DEFAULT_CAPTION_DIR = Path("data/metadata/caption")
@@ -318,16 +319,31 @@ def build_video(
         duration_ms=frames[-1].timestamp_ms,
     )
     timeline_segments = _story_timeline(candidates, scenes, frames, segments)
+    content_profile, profile_confidence = classify_content_profile(frames, asr_segments)
+    temporal_events = build_temporal_events(
+        timeline_segments,
+        frames,
+        content_profile=content_profile,
+    )
     search_text = _build_search_text(summary, timeline_segments)
+    search_text = " ".join(
+        dict.fromkeys(
+            [
+                search_text,
+                content_profile,
+                *[event_search_text(event) for event in temporal_events],
+            ]
+        )
+    )
     generation_id = f"{video_id}-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')}"
     source_hashes = {str(path): sha256_file(path) for path in source_paths}
-    validation = validate_artifacts(frames, segments, scenes, candidates)
+    validation = validate_artifacts(frames, segments, scenes, candidates, temporal_events)
     validation["retrieval_coverage"] = _retrieval_coverage(timeline_segments, search_text)
     validation.update(
         {
             "generation_id": generation_id,
             "video_id": video_id,
-            "profile": "news-v1",
+            "profile": f"{content_profile}-v1",
             "summarization_mode": summarizer.mode,
             "model": summarizer.model,
             "prompt_version": summarizer.prompt_version,
@@ -347,21 +363,27 @@ def build_video(
         raise ValueError(json.dumps(validation, ensure_ascii=False, indent=2))
 
     timeline = {
-        "schema_version": "video-timeline-v1",
+        "schema_version": "video-timeline-v2",
         "generation_id": generation_id,
         "video_id": video_id,
-        "content_type": "news",
+        "content_type": content_profile,
+        "content_profile": content_profile,
+        "profile_confidence": profile_confidence,
         "duration_ms": frames[-1].timestamp_ms,
         "fps": frames[0].fps,
         "segments": timeline_segments,
+        "events": temporal_events,
     }
     video_summary = {
-        "schema_version": "video-summary-v1",
+        "schema_version": "video-summary-v2",
         "generation_id": generation_id,
         "video_id": video_id,
-        "content_type": "news",
+        "content_type": content_profile,
+        "content_profile": content_profile,
+        "profile_confidence": profile_confidence,
         **summary,
         "segment_refs": [item["segment_id"] for item in timeline_segments],
+        "event_refs": [item["event_id"] for item in temporal_events],
         "search_text": search_text,
     }
     pilot_dir = output_root / batch_id / video_id / "pilot"

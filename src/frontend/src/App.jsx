@@ -5,7 +5,7 @@ import ResultGrid from './components/ResultGrid.jsx';
 import Pagination from './components/Pagination.jsx';
 import TimelineViewer from './components/TimelineViewer.jsx';
 import LoadingSpinner from './components/LoadingSpinner.jsx';
-import { answerVqa, searchByText, searchByImage, getFrameContext } from './api/apiClient.js';
+import { answerVqa, searchByText, searchByImage, searchTemporalEvents, getFrameContext } from './api/apiClient.js';
 import './App.css';
 
 const PAGE_SIZE = 12;
@@ -73,6 +73,37 @@ function App() {
     }
   };
 
+  const runTemporalSearch = async (query, filters = searchFilters) => {
+    setIsLoading(true);
+    setCurrentPage(1);
+    setLastQuery({ mode: 'temporal', query, filters });
+    setVqaQuestion(null);
+    setLlmResults([]);
+    setResults([]);
+    try {
+      const response = await searchTemporalEvents(query, filters);
+      const data = response.data || {};
+      const events = (data.events || []).map((event) => ({
+        ...event,
+        video_name: data.selected_video?.video_id || event.video_id,
+        frame_index: event.native_frame_idx,
+        thumbnail_url: event.thumbnail_url || `/media/thumbnails/${event.frame_id}.jpg`,
+        metadata: {
+          timestamp_ms: event.timestamp_ms,
+          anchor_type: event.anchor_type,
+          confidence: event.confidence,
+          reason_vi: event.reason_vi,
+        },
+      }));
+      setResults(events);
+    } catch (err) {
+      console.error(err);
+      alert('Temporal event search failed. Check the console for details.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleCardDoubleClick = async (frameId) => {
     setIsContextLoading(true);
     try {
@@ -118,6 +149,7 @@ function App() {
           onSearch={runSearch}
           onImageSearch={runSearch}
           onVqaSearch={runVqaSearch}
+          onTemporalSearch={runTemporalSearch}
           filters={searchFilters}
           onFiltersChange={setSearchFilters}
           filterResetKey={filterResetKey}

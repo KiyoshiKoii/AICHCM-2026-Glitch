@@ -29,6 +29,7 @@ def validate_artifacts(
     segments: dict[int, ASRSegment],
     scenes: list[MicroScene],
     stories: list[StoryCandidate],
+    temporal_events: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     invalid_scene, invalid_asr = _valid_refs(stories, scenes, frames, segments)
     frame_numbers = {frame.keyframe_n for frame in frames}
@@ -60,12 +61,36 @@ def validate_artifacts(
     coverage = len({n for scene in scenes for n in scene.frame_indices}) / len(frames) if frames else 0.0
     deduplication = 1.0 if len({scene.scene_id for scene in scenes}) == len(scenes) else 0.0
     references = 1.0 if all_scene_refs_valid and all_asr_refs_valid and missing_primary_asr == 0 else 0.0
+    temporal_events = temporal_events or []
+    frame_by_n = {frame.keyframe_n: frame for frame in frames}
+    event_ids = [str(event.get("event_id", "")) for event in temporal_events]
+    event_refs_valid = all(
+        event_id
+        and len(event.get("keyframe_refs", [])) > 0
+        and all(int(keyframe) in frame_by_n for keyframe in event.get("keyframe_refs", []))
+        for event_id, event in zip(event_ids, temporal_events)
+    ) and len(event_ids) == len(set(event_ids))
+    anchor_refs_valid = all(
+        isinstance(anchor, dict)
+        and str(anchor.get("frame_id", "")).startswith(f"{frames[0].video_id}_f")
+        and int(anchor.get("keyframe_n", 0)) in frame_by_n
+        and 0 <= int(anchor.get("timestamp_ms", 0)) <= frames[-1].timestamp_ms
+        for event in temporal_events
+        for anchor in event.get("temporal_anchors", [])
+    ) if frames else not temporal_events
+    event_order_errors = sum(
+        1
+        for current, following in zip(temporal_events, temporal_events[1:])
+        if int(current.get("start_ms", 0)) > int(following.get("start_ms", 0))
+    )
+    temporal_validity = 1.0 if event_refs_valid and anchor_refs_valid and event_order_errors == 0 else 0.0
     overall = (
         0.30 * groundedness
         + 0.25 * coverage
         + 0.20 * boundary_quality
         + 0.15 * deduplication
-        + 0.10 * references
+        + 0.08 * references
+        + 0.02 * temporal_validity
     )
     return {
         "statistics": {
@@ -74,6 +99,8 @@ def validate_artifacts(
             "micro_scenes": len(scenes),
             "stories": len(stories),
             "primary_asr_segments": len(primary_asr),
+            "temporal_events": len(temporal_events),
+            "temporal_anchors": sum(len(event.get("temporal_anchors", [])) for event in temporal_events),
         },
         "quality": {
             "groundedness": round(groundedness, 4),
@@ -94,6 +121,9 @@ def validate_artifacts(
             "invalid_story_scene_refs": invalid_scene,
             "invalid_story_asr_refs": invalid_asr,
             "unsupported_events": 0,
+            "all_temporal_event_refs_valid": event_refs_valid,
+            "all_temporal_anchor_refs_valid": anchor_refs_valid,
+            "temporal_event_order_errors": event_order_errors,
         },
     }
 
@@ -113,6 +143,9 @@ def hard_gates_pass(report: dict[str, Any]) -> bool:
             validation["all_primary_asr_segments_assigned"],
             validation["scene_order_errors"] == 0,
             validation["story_order_errors"] == 0,
+            validation.get("all_temporal_event_refs_valid", True),
+            validation.get("all_temporal_anchor_refs_valid", True),
+            validation.get("temporal_event_order_errors", 0) == 0,
         )
     )
     coverage = report.get("retrieval_coverage")

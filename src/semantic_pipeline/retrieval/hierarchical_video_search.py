@@ -22,6 +22,7 @@ from semantic_pipeline.video_understanding.loaders import (
     load_caption_records,
     load_keyframe_map,
 )
+from semantic_pipeline.video_understanding.temporal_events import event_search_text
 
 
 TOKEN_RE = re.compile(r"[^\W_]+", re.UNICODE)
@@ -33,6 +34,7 @@ class HierarchicalDocuments:
     video: dict[str, Any]
     segments: list[dict[str, Any]]
     frames: list[dict[str, Any]]
+    events: list[dict[str, Any]] | None = None
 
 
 def _read_object(path: Path) -> dict[str, Any]:
@@ -160,6 +162,35 @@ def build_hierarchical_documents(
             segment_by_keyframe.setdefault(keyframe, []).append(segment_id)
 
     frame_documents: list[dict[str, Any]] = []
+    event_documents: list[dict[str, Any]] = []
+    event_by_keyframe: dict[int, list[str]] = {}
+    raw_events = timeline.get("events", [])
+    if isinstance(raw_events, list):
+        for raw_event in raw_events:
+            if not isinstance(raw_event, dict):
+                continue
+            event_id = str(raw_event.get("event_id", "")).strip()
+            if not event_id:
+                continue
+            keyframe_refs = [
+                int(item)
+                for item in raw_event.get("keyframe_refs", [])
+                if isinstance(item, int) or (isinstance(item, str) and item.isdigit())
+            ]
+            event_document = dict(raw_event)
+            event_document.update(
+                {
+                    "document_type": "event",
+                    "event_id": event_id,
+                    "video_id": video_id,
+                    "keyframe_refs": sorted(set(keyframe_refs)),
+                    "search_text": event_search_text(raw_event),
+                }
+            )
+            event_documents.append(event_document)
+            for keyframe in keyframe_refs:
+                event_by_keyframe.setdefault(keyframe, []).append(event_id)
+
     for frame in frames:
         raw = frame.raw_metadata
         detection_text: list[str] = []
@@ -192,6 +223,7 @@ def build_hierarchical_documents(
                 "native_frame_idx": frame.native_frame_idx,
                 "timestamp_ms": frame.timestamp_ms,
                 "segment_ids": segment_ids,
+                "event_ids": event_by_keyframe.get(frame.keyframe_n, []),
                 "is_segment_representative": any(
                     frame.keyframe_n in representatives_by_segment.get(segment_id, set())
                     for segment_id in segment_ids
@@ -201,7 +233,8 @@ def build_hierarchical_documents(
                 "ocr_text": str(raw.get("ocr_text", "")),
             }
         )
-    return HierarchicalDocuments(video_document, segment_documents, frame_documents)
+    video_document["event_count"] = len(event_documents)
+    return HierarchicalDocuments(video_document, segment_documents, frame_documents, event_documents)
 
 
 def iter_elasticsearch_actions(
@@ -210,12 +243,16 @@ def iter_elasticsearch_actions(
     video_index: str,
     segment_index: str,
     frame_index: str,
+    event_index: str | None = None,
 ) -> Iterable[dict[str, Any]]:
     """Yield idempotent bulk actions for separate video, story and frame indexes."""
 
     yield {"_op_type": "index", "_index": video_index, "_id": documents.video["video_id"], "_source": documents.video}
     for segment in documents.segments:
         yield {"_op_type": "index", "_index": segment_index, "_id": segment["segment_id"], "_source": segment}
+    if event_index:
+        for event in documents.events or []:
+            yield {"_op_type": "index", "_index": event_index, "_id": event["event_id"], "_source": event}
     for frame in documents.frames:
         yield {"_op_type": "index", "_index": frame_index, "_id": frame["frame_id"], "_source": frame}
 

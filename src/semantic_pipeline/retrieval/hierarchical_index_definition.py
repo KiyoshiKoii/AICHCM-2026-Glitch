@@ -1,4 +1,4 @@
-"""Strict Elasticsearch mappings for video and story retrieval layers."""
+"""Strict Elasticsearch mappings for video, event and frame retrieval layers."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ from typing import Any
 VIDEO_INDEX_NAME = "semantic_videos_v1"
 SEGMENT_INDEX_NAME = "semantic_segments_v1"
 FRAME_INDEX_NAME = "semantic_frames_v5"
+EVENT_INDEX_NAME = "semantic_events_v1"
 
 
 def _settings() -> dict[str, Any]:
@@ -43,6 +44,54 @@ _VIDEO_DEFINITION = {
             "main_locations": {"type": "text", "analyzer": "folded_text"},
             "search_text": {"type": "text", "analyzer": "folded_text"},
             "segment_count": {"type": "integer"},
+            "event_count": {"type": "integer"},
+            "content_profile": {"type": "keyword"},
+            "profile_confidence": {"type": "float"},
+        },
+    },
+}
+
+_EVENT_DEFINITION = {
+    "settings": _settings(),
+    "mappings": {
+        "dynamic": "strict",
+        "properties": {
+            "document_type": {"type": "keyword"},
+            "event_id": {"type": "keyword"},
+            "video_id": {"type": "keyword"},
+            "parent_segment_id": {"type": "keyword"},
+            "content_profile": {"type": "keyword"},
+            "event_type": {"type": "keyword"},
+            "order": {"type": "integer"},
+            "subject": {"type": "text", "analyzer": "folded_text"},
+            "action": {"type": "text", "analyzer": "folded_text"},
+            "object": {"type": "text", "analyzer": "folded_text"},
+            "target": {"type": "text", "analyzer": "folded_text"},
+            "attributes": {"type": "text", "analyzer": "folded_text"},
+            "description_vi": {"type": "text", "analyzer": "folded_text"},
+            "pre_state": {"type": "text", "analyzer": "folded_text"},
+            "transition_state": {"type": "text", "analyzer": "folded_text"},
+            "post_state": {"type": "text", "analyzer": "folded_text"},
+            "start_ms": {"type": "integer"},
+            "end_ms": {"type": "integer"},
+            "keyframe_refs": {"type": "integer"},
+            "asr_segment_refs": {"type": "integer"},
+            "search_aliases": {"type": "text", "analyzer": "folded_text"},
+            "search_text": {"type": "text", "analyzer": "folded_text"},
+            "confidence": {"type": "float"},
+            "uncertain": {"type": "boolean"},
+            "temporal_anchors": {
+                "type": "object",
+                "dynamic": "strict",
+                "properties": {
+                    "anchor_type": {"type": "keyword"},
+                    "frame_id": {"type": "keyword"},
+                    "keyframe_n": {"type": "integer"},
+                    "timestamp_ms": {"type": "integer"},
+                    "native_frame_idx": {"type": "integer"},
+                    "confidence": {"type": "float"},
+                },
+            },
         },
     },
 }
@@ -83,6 +132,7 @@ _FRAME_DEFINITION = {
             "native_frame_idx": {"type": "integer"},
             "timestamp_ms": {"type": "integer"},
             "segment_ids": {"type": "keyword"},
+            "event_ids": {"type": "keyword"},
             "is_segment_representative": {"type": "boolean"},
             "visual_text": {"type": "text", "analyzer": "folded_text"},
             "asr_text": {"type": "text", "analyzer": "folded_text"},
@@ -102,3 +152,7 @@ def segment_index_definition() -> dict[str, Any]:
 
 def frame_index_definition() -> dict[str, Any]:
     return deepcopy(_FRAME_DEFINITION)
+
+
+def event_index_definition() -> dict[str, Any]:
+    return deepcopy(_EVENT_DEFINITION)

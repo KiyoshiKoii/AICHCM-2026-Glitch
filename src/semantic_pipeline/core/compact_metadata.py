@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_serializer, model_validator
 
 from .frame_id import parse_frame_id
 
@@ -78,6 +78,38 @@ class CompactVisualRecord(CompactModel):
     news_ticker_text: str = ""
     detections: list[CompactDetection] = Field(default_factory=list)
     spatial_relations: list[CompactSpatialRelation] = Field(default_factory=list)
+    # Optional multimodal merge fields.  They are absent from Gemini source
+    # checkpoints but become available after timestamped ASR/map enrichment.
+    keyframe_n: int | None = Field(default=None, ge=1)
+    timestamp_ms: int | None = Field(default=None, ge=0)
+    native_frame_index: int | None = Field(default=None, ge=0)
+    asr_available: bool = False
+    has_asr: bool = False
+    asr_text: str = ""
+    asr_segment_indices: list[int] = Field(default_factory=list)
+    asr_start_ms: int | None = Field(default=None, ge=0)
+    asr_end_ms: int | None = Field(default=None, ge=0)
+    asr_quality_flags: list[str] = Field(default_factory=list, max_length=12)
+
+    @model_serializer(mode="wrap")
+    def serialize_compact(self, handler):
+        """Keep derived merge fields readable but out of compact Gemini dumps."""
+
+        payload = handler(self)
+        for field in (
+            "keyframe_n",
+            "timestamp_ms",
+            "native_frame_index",
+            "asr_available",
+            "has_asr",
+            "asr_text",
+            "asr_segment_indices",
+            "asr_start_ms",
+            "asr_end_ms",
+            "asr_quality_flags",
+        ):
+            payload.pop(field, None)
+        return payload
 
     @model_validator(mode="after")
     def validate_references(self) -> "CompactVisualRecord":

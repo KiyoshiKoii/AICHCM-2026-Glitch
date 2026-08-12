@@ -199,13 +199,14 @@ def _relation_document(record: CompactVisualRecord, relation: Any) -> dict[str, 
             f"{prefix}_action": detection.action,
         }
 
-    return {
+    document = {
         "subject_id": relation.subject_id,
         "predicate": relation.predicate,
         "object_id": relation.object_id,
         **text_fields("subject", subject),
         **text_fields("object", object_),
     }
+    return document
 
 
 def build_frame_document(record: CompactVisualRecord, context: VideoContext | None = None) -> dict[str, Any]:
@@ -215,11 +216,15 @@ def build_frame_document(record: CompactVisualRecord, context: VideoContext | No
     video = context or VideoContext()
     visual_source_frame_id = record.visual_source_frame_id or record.frame_id
     ocr_source_frame_id = record.ocr_source_frame_id or record.frame_id
-    return {
+    document = {
         "frame_id": ref.frame_id,
         "video_id": ref.video_name,
         "program_code": ref.video_name.split("_", 1)[0],
-        "frame_number": ref.frame_index,
+        "frame_number": (
+            record.native_frame_index
+            if record.native_frame_index is not None
+            else ref.frame_index
+        ),
         "visual_source_frame_id": visual_source_frame_id,
         "ocr_source_frame_id": ocr_source_frame_id,
         "quality_flags": list(record.quality_flags),
@@ -243,6 +248,21 @@ def build_frame_document(record: CompactVisualRecord, context: VideoContext | No
         "source_network": video.source_network,
         "episode_date": video.episode_date,
     }
+    if record.keyframe_n is not None:
+        document["keyframe_number"] = record.keyframe_n
+    if record.asr_available or record.has_asr or record.asr_text:
+        document.update(
+            {
+                "asr_available": record.asr_available,
+                "has_asr": record.has_asr,
+                "asr_text": record.asr_text,
+                "asr_segment_indices": list(record.asr_segment_indices),
+                "asr_start_ms": record.asr_start_ms,
+                "asr_end_ms": record.asr_end_ms,
+                "asr_quality_flags": list(record.asr_quality_flags),
+            }
+        )
+    return document
 
 
 def iter_bulk_actions(

@@ -4,9 +4,10 @@ const TABS = [
   { id: 'text', label: 'Text Search' },
   { id: 'vqa', label: 'VQA' },
   { id: 'image', label: 'Image Search' },
+  { id: 'temporal', label: 'Temporal Events' },
 ];
 
-function SearchBar({ onSearch, onImageSearch, onVqaSearch, filters = { batchIds: [], videoIds: [] } }) {
+function SearchBar({ onSearch, onImageSearch, onVqaSearch, onTemporalSearch, filters = { batchIds: [], videoIds: [] } }) {
   const [activeTab, setActiveTab] = useState('text');
   const [query, setQuery] = useState('');
   const [question, setQuestion] = useState('');
@@ -31,6 +32,10 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch, filters = { batchIds:
       const trimmedQuestion = question.trim();
       if (!trimmedQuestion) return;
       onVqaSearch?.({ query: trimmed, question: trimmedQuestion });
+      return;
+    }
+    if (activeTab === 'temporal') {
+      onTemporalSearch?.(trimmed, filters);
       return;
     }
     onSearch?.(trimmed, useRerank, {
@@ -68,7 +73,7 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch, filters = { batchIds:
           <span>{activeTab === 'vqa' ? 'Event description' : 'Search query'}</span>
           <textarea
             className="search-textarea"
-            rows={activeTab === 'vqa' ? 3 : 4}
+            rows={activeTab === 'temporal' ? 8 : activeTab === 'vqa' ? 3 : 4}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
