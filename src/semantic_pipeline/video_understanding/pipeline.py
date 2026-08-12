@@ -230,6 +230,166 @@ def _prune_candidate_evidence(
     return result
 
 
+def _interval_gap_ms(left_start: int, left_end: int, right_start: int, right_end: int) -> int:
+    """Return zero for overlapping intervals, otherwise their distance."""
+
+    if left_end < right_start:
+        return right_start - left_end
+    if right_end < left_start:
+        return left_start - right_end
+    return 0
+
+
+def _map_asr_refs_to_scenes(
+    asr_indices: list[int],
+    scenes: list[Any],
+    segments: dict[int, Any],
+    *,
+    max_gap_ms: int,
+) -> list[str]:
+    """Map ASR-only evidence to the smallest set of nearby visual scenes.
+
+    The normal alignment path puts an ASR index directly on the scene that
+    contains its midpoint.  The interval fallback covers sparse keyframes or
+    a Gemini response whose ASR reference came from a neighbouring window.
+    """
+
+    scene_refs: set[str] = set()
+    ordered_scenes = sorted(scenes, key=lambda scene: (scene.start_ms, scene.end_ms))
+    for index in asr_indices:
+        segment = segments.get(index)
+        if segment is None:
+            continue
+        direct = [scene for scene in ordered_scenes if index in scene.asr_segment_indices]
+        if direct:
+            scene_refs.update(scene.scene_id for scene in direct)
+            continue
+
+        overlapping = [
+            scene
+            for scene in ordered_scenes
+            if _interval_gap_ms(
+                segment.start_ms,
+                segment.end_ms,
+                scene.start_ms,
+                scene.end_ms,
+            )
+            == 0
+        ]
+        if overlapping:
+            scene_refs.update(scene.scene_id for scene in overlapping)
+            continue
+
+        nearest = min(
+            ordered_scenes,
+            key=lambda scene: (
+                _interval_gap_ms(
+                    segment.start_ms,
+                    segment.end_ms,
+                    scene.start_ms,
+                    scene.end_ms,
+                ),
+                scene.start_ms,
+            ),
+            default=None,
+        )
+        if nearest is not None and _interval_gap_ms(
+            segment.start_ms,
+            segment.end_ms,
+            nearest.start_ms,
+            nearest.end_ms,
+        ) <= max_gap_ms:
+            scene_refs.add(nearest.scene_id)
+
+    return [
+        scene.scene_id
+        for scene in ordered_scenes
+        if scene.scene_id in scene_refs
+    ]
+
+
+def _normalize_story_evidence(
+    candidates: list[Any],
+    scenes: list[Any],
+    segments: dict[int, Any],
+    *,
+    max_asr_scene_gap_ms: int = 10_000,
+) -> tuple[list[Any], dict[str, int]]:
+    """Ensure every retained story has valid visual and temporal evidence."""
+
+    scene_by_id = {scene.scene_id: scene for scene in scenes}
+    stats = {
+        "stories_received": len(candidates),
+        "asr_only_stories_received": 0,
+        "asr_only_stories_mapped": 0,
+        "asr_only_stories_dropped": 0,
+        "stories_dropped_without_evidence": 0,
+    }
+    normalized: list[Any] = []
+    for candidate in candidates:
+        valid_scene_ids = list(dict.fromkeys(
+            scene_id for scene_id in candidate.scene_ids if scene_id in scene_by_id
+        ))
+        valid_asr_indices = list(dict.fromkeys(
+            index for index in candidate.asr_segment_indices if index in segments
+        ))
+        had_no_valid_scenes = not valid_scene_ids
+        if had_no_valid_scenes and valid_asr_indices:
+            stats["asr_only_stories_received"] += 1
+            valid_scene_ids = _map_asr_refs_to_scenes(
+                valid_asr_indices,
+                scenes,
+                segments,
+                max_gap_ms=max_asr_scene_gap_ms,
+            )
+            if valid_scene_ids:
+                stats["asr_only_stories_mapped"] += 1
+            else:
+                stats["asr_only_stories_dropped"] += 1
+
+        if not valid_scene_ids:
+            stats["stories_dropped_without_evidence"] += 1
+            continue
+
+        candidate.scene_ids = valid_scene_ids
+        candidate.asr_segment_indices = valid_asr_indices
+        normalized.append(candidate)
+
+    return normalized, stats
+
+
+def _story_start_ms(
+    candidate: Any,
+    scenes: list[Any],
+    segments: dict[int, Any],
+) -> int:
+    scene_by_id = {scene.scene_id: scene for scene in scenes}
+    scene_starts = [
+        scene_by_id[scene_id].start_ms
+        for scene_id in candidate.scene_ids
+        if scene_id in scene_by_id
+    ]
+    if scene_starts:
+        return min(scene_starts)
+    asr_starts = [segments[index].start_ms for index in candidate.asr_segment_indices if index in segments]
+    return min(asr_starts, default=2**63 - 1)
+
+
+def _sort_story_candidates(
+    candidates: list[Any],
+    scenes: list[Any],
+    segments: dict[int, Any],
+) -> list[Any]:
+    return sorted(
+        candidates,
+        key=lambda candidate: (
+            _story_start_ms(candidate, scenes, segments),
+            candidate.source_window_id or "",
+            candidate.title.casefold(),
+        ),
+    )
+
+
 def _frame_evidence_text(frame: Any) -> str:
     raw = frame.raw_metadata
     values = [
@@ -312,7 +472,13 @@ def build_video(
         require_llm=require_llm,
     )
     candidates = _prune_candidate_evidence(candidates, scenes, frames, segments)
+    candidates, evidence_normalization = _normalize_story_evidence(
+        candidates,
+        scenes,
+        segments,
+    )
     candidates = _merge_duplicate_candidates(candidates)
+    candidates = _sort_story_candidates(candidates, scenes, segments)
     summary = summarizer.summarize_video(
         candidates,
         video_id=video_id,
@@ -338,6 +504,7 @@ def build_video(
     generation_id = f"{video_id}-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')}"
     source_hashes = {str(path): sha256_file(path) for path in source_paths}
     validation = validate_artifacts(frames, segments, scenes, candidates, temporal_events)
+    validation["evidence_normalization"] = evidence_normalization
     validation["retrieval_coverage"] = _retrieval_coverage(timeline_segments, search_text)
     validation.update(
         {
