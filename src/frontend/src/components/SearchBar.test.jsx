@@ -111,6 +111,25 @@ describe('SearchBar', () => {
     expect(onVqaSearch).toHaveBeenCalledWith({
       query: 'lễ trao giải có nhiều người trên sân khấu',
       question: 'Có bao nhiêu người?',
+      useRerank: false,
+    });
+  });
+
+  it('passes the VQA re-rank toggle to the submit handler', async () => {
+    const user = userEvent.setup();
+    const onVqaSearch = vi.fn();
+    render(<SearchBar onVqaSearch={onVqaSearch} />);
+
+    await user.click(screen.getByRole('tab', { name: 'VQA' }));
+    await user.type(getTextInput(), 'người đứng cạnh xe máy');
+    await user.type(screen.getByPlaceholderText(/câu hỏi cần trả lời/i), 'Màu gì?');
+    await user.click(screen.getByRole('checkbox', { name: /gemini re-rank/i }));
+    await user.click(screen.getByRole('button', { name: /trả lời/i }));
+
+    expect(onVqaSearch).toHaveBeenCalledWith({
+      query: 'người đứng cạnh xe máy',
+      question: 'Màu gì?',
+      useRerank: true,
     });
   });
 });
