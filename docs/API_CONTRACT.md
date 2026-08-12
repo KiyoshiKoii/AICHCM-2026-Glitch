@@ -84,24 +84,44 @@ trong **một** request Gemini, và model trả một answer độc lập cho t�
 {
   "query": "cảnh lễ trao giải có nhiều người đứng trên sân khấu",
   "question": "Có bao nhiêu người trên sân khấu?",
+  "use_rerank": false,
   "retrieval_top_k": 50,
   "answer_top_k": 10
 }
 ```
 
-- `retrieval_top_k`: số hit đưa vào retrieval/rerank, từ `1` đến `100`.
-- `answer_top_k`: số hit rerank đầu gọi Gemini, từ `1` đến `20`, không lớn hơn
+- `use_rerank`: bật/tắt Gemini re-rank cho riêng request VQA; mặc định `false`.
+- `retrieval_top_k`: số hit đưa vào retrieval, từ `1` đến `100`.
+- `answer_top_k`: số hit đầu trong thứ tự đã chọn (RRF hoặc rerank) gọi Gemini,
+  từ `1` đến `20`, không lớn hơn
   `retrieval_top_k`.
-- Mỗi truy vấn VQA gọi Gemini đúng một lần, giúp phù hợp hạn mức RPM thấp.
-- Nếu không có `llm_reranked_results`, API dùng kết quả RRF làm fallback.
+- Khi `use_rerank=true`, Gemini re-rank được chạy trước và các candidate được
+  trả theo thứ tự đó; khi tắt, VQA dùng nguyên thứ tự RRF.
+- `data.results` là danh sách RRF đầy đủ; `data.llm_reranked_results` là danh
+  sách sau re-rank khi có bật và re-rank khả dụng; `data.candidates` là các hit
+  (tối đa `answer_top_k`) đã được Gemini trả lời.
+- Mỗi truy vấn VQA gọi Gemini answerer đúng một lần; re-rank là một request
+  riêng chỉ khi `use_rerank=true`.
 - Cần cấu hình `GEMINI_API_KEY`; nếu chưa có, API trả `503 VQA_UNAVAILABLE`.
 
 ```json
 {
   "status": "success",
-  "message": "Answered from LLM re-ranked frames",
+  "message": "Answered from selected VQA candidates",
   "data": {
-    "total_candidates": 2,
+    "total_candidates": 1,
+    "use_rerank": false,
+    "results": [
+      {
+        "frame_id": "L21_V022_f0012",
+        "video_name": "L21_V022",
+        "frame_index": 1024,
+        "score": 0.98,
+        "thumbnail_url": "/media/thumbnails/L21_V022_f0012.jpg",
+        "metadata": {}
+      }
+    ],
+    "llm_reranked_results": null,
     "candidates": [
       {
         "frame_id": "L21_V022_f0012",
