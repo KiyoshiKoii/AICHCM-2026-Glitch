@@ -8,6 +8,10 @@ class VQARequest(BaseModel):
 
     query: str = Field(min_length=2, max_length=2000)
     question: str = Field(min_length=2, max_length=1000)
+    use_rerank: bool = Field(
+        default=False,
+        description="Run the optional Gemini listwise re-ranker before answering.",
+    )
     retrieval_top_k: int = Field(default=50, ge=1, le=100)
     answer_top_k: int = Field(default=10, ge=1, le=20)
 
@@ -54,9 +58,18 @@ class VQACandidate(SearchHit):
 class VQAData(BaseModel):
     total_candidates: int
     candidates: list[VQACandidate]
+    # The full RRF list is kept so the client can show the retrieval baseline
+    # below the answered/reranked candidates when reranking is enabled.
+    results: list[SearchHit] = Field(default_factory=list)
+    # ``None`` means reranking was disabled or unavailable.  When present this
+    # preserves the ordering returned by the Gemini re-ranker; answers remain
+    # in ``candidates`` because only the configured answer_top_k frames are
+    # sent to the VQA model.
+    llm_reranked_results: list[SearchHit] | None = None
+    use_rerank: bool = False
 
 
 class VQAResponse(BaseModel):
     status: str = "success"
-    message: str = "Answered from LLM re-ranked frames"
+    message: str = "Answered from selected VQA candidates"
     data: VQAData

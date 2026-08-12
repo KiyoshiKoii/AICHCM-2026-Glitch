@@ -1,5 +1,4 @@
 from backend.core.errors import VQAUnavailableError
-from backend.schemas.search import SearchHit
 from backend.schemas.vqa import VQACandidate, VQAData, VQARequest, VQAResponse
 from backend.services.vqa_answerer import VQAAnswerer
 
@@ -18,11 +17,15 @@ class VQAService:
         search_response = await self.search_service.search_text(
             request.query,
             request.retrieval_top_k,
+            use_rerank=request.use_rerank,
         )
-        hits = (
+        rrf_hits = search_response.data.results
+        reranked_hits = (
             search_response.data.llm_reranked_results
-            or search_response.data.results
-        )[: request.answer_top_k]
+            if request.use_rerank
+            else None
+        )
+        hits = (reranked_hits or rrf_hits)[: request.answer_top_k]
 
         answers = await self.answerer.answer_batch(request.question, hits)
         candidates: list[VQACandidate] = []
@@ -40,5 +43,8 @@ class VQAService:
             data=VQAData(
                 total_candidates=len(candidates),
                 candidates=candidates,
+                results=rrf_hits,
+                llm_reranked_results=reranked_hits,
+                use_rerank=request.use_rerank,
             )
         )
