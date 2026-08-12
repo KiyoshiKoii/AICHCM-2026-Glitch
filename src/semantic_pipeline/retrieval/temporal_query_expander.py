@@ -61,7 +61,10 @@ required constraint. Do not replace a specific requested object with a broader t
 For each concept, return source_terms copied from the supplied query and aliases that preserve the
 same meaning. You may add a well-known proper-name alias when it is unambiguous (for example,
 the Paris 2024 mascot may include Phryge), but never invent a location, event, or object.
-Keep generic news phrasing out of concepts. Return JSON only."""
+An alias must preserve the complete concept. For example, "con phố" and "đèn lồng" are not
+complete aliases for "phố lồng đèn" because each drops a required part. Split source terms into
+separate required concepts when each part has its own aliases. Keep generic news phrasing out of
+concepts. Return JSON only."""
 
 
 def _clean_strings(values: Any, *, limit: int) -> list[str]:
@@ -84,7 +87,12 @@ def _apply_concepts(
     """Merge Gemini aliases while retaining every source-token fallback."""
 
     source_tokens = query_tokens(source_text)
-    remaining = {group[0] for group in fallback_groups if group}
+    remaining = {
+        folded: group[0]
+        for group in fallback_groups
+        if group
+        for folded in query_tokens(group[0])
+    }
     groups: list[tuple[str, ...]] = []
     if isinstance(concepts, list):
         for raw in concepts[:12]:
@@ -95,14 +103,22 @@ def _apply_concepts(
             # An expansion is valid only when it refers to actual user terms.
             if not term_tokens or not term_tokens <= source_tokens:
                 continue
-            aliases = _clean_strings(raw.get("aliases"), limit=8)
+            aliases = [
+                alias
+                for alias in _clean_strings(raw.get("aliases"), limit=8)
+                # A strict subset is only a partial mention, not an alias of
+                # the complete concept. Zero-overlap translations and proper
+                # names remain valid (for example linh vat -> mascot).
+                if not ((query_tokens(alias) - {"con", "cai", "chiec"}) < term_tokens)
+            ]
             values = list(dict.fromkeys([" ".join(source_terms), *aliases]))
             values = [value for value in values if query_tokens(value)]
             if not values:
                 continue
             groups.append(tuple(values))
-            remaining -= term_tokens
-    groups.extend((token,) for token in sorted(remaining))
+            for token in term_tokens:
+                remaining.pop(token, None)
+    groups.extend((surface,) for surface in remaining.values())
     return tuple(groups) if groups else fallback_groups
 
 

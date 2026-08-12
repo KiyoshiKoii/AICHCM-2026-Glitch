@@ -32,3 +32,19 @@ def test_invalid_expansion_keeps_each_source_term_as_a_requirement() -> None:
     )
 
     assert groups == fallback_concept_groups(text)
+
+
+def test_partial_alias_cannot_replace_a_complete_compound_concept() -> None:
+    text = "phố lồng đèn"
+    groups = _apply_concepts(
+        text,
+        fallback_concept_groups(text),
+        [
+            {
+                "source_terms": ["phố", "lồng", "đèn"],
+                "aliases": ["con phố", "đèn lồng", "lantern street"],
+            }
+        ],
+    )
+
+    assert groups == (("phố lồng đèn", "lantern street"),)

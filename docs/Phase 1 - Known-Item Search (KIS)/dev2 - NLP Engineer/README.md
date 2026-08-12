@@ -411,6 +411,14 @@ Video retrieval theo ba tầng `video → segment → frame`. `search_text` củ
 gồm cả title và summary của mọi segment, còn keyframe cuối được xếp hạng bằng
 caption/object/OCR/ASR trong segment đã chọn. Chạy kiểm tra cục bộ:
 
+Temporal summary-only retrieval giữ nguyên dấu tiếng Việt cho các constraint
+(`đèn` khác `đen`, `lồng` khác `lông`), chỉ gom bằng chứng trong cùng một cửa sổ
+ngữ nghĩa và không ghép token rải rác giữa các field/story. Alias Gemini bị loại
+nếu chỉ giữ một phần của compound concept. `top_k_videos` là số kết quả tối đa:
+video thiếu một constraint bắt buộc sẽ không được thêm vào `candidates` chỉ để
+lấp đủ top K. Regression trên toàn bộ L22 với query `phố lồng đèn` trả đúng
+`L22_V010_f0086`, `L22_V014_f0062` và loại `L22_V001`.
+
 ```powershell
 python src/semantic_pipeline/retrieval/video_cli.py "nhiệt độ Barcelona cao nhất trong 110 năm"
 ```

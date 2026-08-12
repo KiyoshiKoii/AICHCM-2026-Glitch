@@ -3,14 +3,19 @@
 from __future__ import annotations
 
 import json
+import re
+import unicodedata
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
 from semantic_pipeline.retrieval.hierarchical_video_search import build_hierarchical_documents
 from semantic_pipeline.retrieval.temporal_query_parser import (
+    CONCEPT_STOPWORDS,
     ParsedTemporalQuery,
     TemporalEventQuery,
+    fold_text,
     parse_temporal_query,
     query_tokens,
 )
@@ -129,28 +134,103 @@ def _score(query: set[str], text: str) -> float:
     return len(matched) / len(useful) if useful else 0.0
 
 
+def _content_tokens(value: str, *, fold_accents: bool = False) -> list[str]:
+    """Keep searchable terms in order while removing query boilerplate."""
+
+    normalized = fold_text(value) if fold_accents else unicodedata.normalize("NFC", value.casefold())
+    result: list[str] = []
+    for token in re.findall(r"[^\W_]+", normalized):
+        folded_token = fold_text(token)
+        if (
+            len(token) > 1
+            and folded_token not in CONCEPT_STOPWORDS
+            and folded_token not in TEMPORAL_STOPWORDS
+        ):
+            result.append(token)
+    return result
+
+
+def _tokens_fit(required: list[str], available: list[str]) -> bool:
+    required_counts = Counter(required)
+    available_counts = Counter(available)
+    return all(available_counts[token] >= count for token, count in required_counts.items())
+
+
 def _matches_concept_groups(
     concept_groups: tuple[tuple[str, ...], ...],
     text: str,
 ) -> tuple[float, list[str]]:
-    """Return AND-style concept coverage and the supported aliases."""
+    """Return locally coherent concept coverage and supported aliases.
+
+    Alternatives may be paraphrased and reordered, but their evidence must
+    occur inside one compact window. This prevents unrelated mentions such as
+    ``thanh pho``, ``Long Binh`` and ``den tho`` from collectively matching
+    ``pho long den``.
+    """
 
     if not concept_groups:
         return 0.0, []
-    text_tokens = query_tokens(text)
-    matches: list[str] = []
+    strict_text_sequence = _content_tokens(text)
+    folded_text_sequence = _content_tokens(text, fold_accents=True)
+    if not strict_text_sequence:
+        return 0.0, []
+    prepared_groups: list[list[tuple[str, list[str], bool]]] = []
     for alternatives in concept_groups:
-        matched = next(
-            (
-                alternative
-                for alternative in alternatives
-                if (tokens := query_tokens(alternative)) and tokens <= text_tokens
-            ),
-            None,
-        )
-        if matched:
-            matches.append(matched)
-    return len(matches) / len(concept_groups), matches
+        prepared_alternatives: list[tuple[str, list[str], bool]] = []
+        for alternative in alternatives:
+            normalized_alternative = unicodedata.normalize("NFC", alternative.casefold())
+            fold_accents = fold_text(alternative) == normalized_alternative
+            tokens = _content_tokens(alternative, fold_accents=fold_accents)
+            if tokens:
+                prepared_alternatives.append((alternative, tokens, fold_accents))
+        if prepared_alternatives:
+            prepared_groups.append(prepared_alternatives)
+    if not prepared_groups:
+        return 0.0, []
+    minimum_required_terms = sum(
+        min((len(tokens) for _, tokens, _ in alternatives), default=1)
+        for alternatives in prepared_groups
+    )
+    # Allow natural modifiers and word-order changes without letting evidence
+    # drift across unrelated facts in a long story.
+    window_size = min(36, max(12, minimum_required_terms * 3))
+    best_matches: list[str] = []
+    for start in range(len(strict_text_sequence)):
+        strict_window = strict_text_sequence[start : start + window_size]
+        folded_window = folded_text_sequence[start : start + window_size]
+        matches: list[str] = []
+        for alternatives in prepared_groups:
+            matched = next(
+                (
+                    alternative
+                    for alternative, tokens, fold_accents in alternatives
+                    if _tokens_fit(tokens, folded_window if fold_accents else strict_window)
+                ),
+                None,
+            )
+            if matched:
+                matches.append(matched)
+        if len(matches) > len(best_matches):
+            best_matches = matches
+        if len(best_matches) == len(prepared_groups):
+            break
+    return len(best_matches) / len(prepared_groups), best_matches
+
+
+def _best_concept_match(
+    concept_groups: tuple[tuple[str, ...], ...],
+    evidence_units: Iterable[str],
+) -> tuple[float, list[str]]:
+    """Do not let concepts match across unrelated fields or events."""
+
+    best: tuple[float, list[str]] = (0.0, [])
+    for unit in evidence_units:
+        candidate = _matches_concept_groups(concept_groups, unit)
+        if candidate[0] > best[0]:
+            best = candidate
+        if best[0] >= 1.0:
+            break
+    return best
 
 
 def _metadata_context_matches(
@@ -236,6 +316,23 @@ class TemporalEventSearch:
         self.corpora = tuple(corpora)
         self.query_parser = query_parser
 
+    @staticmethod
+    def _event_evidence_units(event: dict[str, Any]) -> list[str]:
+        return [
+            str(event.get("description_vi", "")),
+            str(event.get("search_text", "")),
+            *[
+                " ".join(str(frame.get(field, "")) for field in ("visual_text", "asr_text", "ocr_text"))
+                for frame in event.get("_frames", [])
+            ],
+        ]
+
+    def _event_concept_coverage(self, event: dict[str, Any], query: TemporalEventQuery) -> float:
+        return _best_concept_match(
+            query.required_concept_groups,
+            self._event_evidence_units(event),
+        )[0]
+
     def _rank_event(self, event: dict[str, Any], query: TemporalEventQuery) -> float:
         query_set = set(query.tokens)
         title_score = _score(query_set, str(event.get("description_vi", "")))
@@ -249,17 +346,7 @@ class TemporalEventSearch:
         ]
         frame_score = max(frame_scores, default=0.0)
         lexical_score = 0.55 * title_score + 0.25 * event_score + 0.20 * frame_score
-        evidence = " ".join(
-            [
-                str(event.get("description_vi", "")),
-                str(event.get("search_text", "")),
-                *[
-                    " ".join(str(frame.get(field, "")) for field in ("visual_text", "asr_text", "ocr_text"))
-                    for frame in event.get("_frames", [])
-                ],
-            ]
-        )
-        concept_score, _ = _matches_concept_groups(query.required_concept_groups, evidence)
+        concept_score = self._event_concept_coverage(event, query)
         if query.required_concept_groups:
             return 0.25 * lexical_score + 0.75 * concept_score
         return lexical_score
@@ -285,15 +372,14 @@ class TemporalEventSearch:
             default=0.0,
         )
         base_score = 0.35 * summary_score + 0.35 * search_score + 0.30 * best_story_score
-        evidence = " ".join(
-            [
+        video_concepts, _ = _best_concept_match(
+            context_groups,
+            (
                 str(video.get("summary_vi", "")),
                 str(video.get("summary_en", "")),
                 str(video.get("search_text", "")),
-                *[event.get("search_text", "") for event in corpus.events],
-            ]
+            ),
         )
-        video_concepts, _ = _matches_concept_groups(context_groups, evidence)
         best_event_concepts = max(
             (_matches_concept_groups(context_groups, event.get("search_text", ""))[0] for event in corpus.events),
             default=0.0,
@@ -303,6 +389,22 @@ class TemporalEventSearch:
         if context_groups:
             return 0.35 * base_score + 0.65 * concept_score, metadata_matches
         return base_score, metadata_matches
+
+    @staticmethod
+    def _context_concept_coverage(
+        corpus: TemporalCorpus,
+        context_groups: tuple[tuple[str, ...], ...],
+    ) -> float:
+        video = corpus.video
+        return _best_concept_match(
+            context_groups,
+            (
+                str(video.get("summary_vi", "")),
+                str(video.get("summary_en", "")),
+                str(video.get("search_text", "")),
+                *(str(event.get("search_text", "")) for event in corpus.events),
+            ),
+        )[0]
 
     def _best_review_candidate(
         self,
@@ -431,20 +533,46 @@ class TemporalEventSearch:
             total = min(1.0, max(0.0, total))
             ranked_videos.append((total, corpus, selected_events, context_matches))
         ranked_videos.sort(key=lambda item: (-item[0], str(item[1].video.get("video_id", ""))))
-        selected = ranked_videos[: max(1, top_k_videos)]
+        summary_only = (
+            len(parsed.events) == 1
+            and parsed.events[0].text == parsed.shared_context
+        )
+        review_candidates: dict[str, dict[str, Any]] = {}
+        if summary_only:
+            eligible_videos = []
+            for ranked_item in ranked_videos:
+                corpus = ranked_item[1]
+                if (
+                    parsed.context_concept_groups
+                    and self._context_concept_coverage(corpus, parsed.context_concept_groups) < 1.0
+                ):
+                    continue
+                review_candidate = self._best_review_candidate(
+                    corpus,
+                    parsed.events[0],
+                )
+                if review_candidate is None:
+                    continue
+                review_candidates[str(corpus.video["video_id"])] = review_candidate
+                eligible_videos.append(ranked_item)
+            selected = eligible_videos[: max(1, top_k_videos)]
+        else:
+            selected = ranked_videos[: max(1, top_k_videos)]
         if not selected:
             return {"query": parsed.shared_context, "selected_video": None, "videos": [], "events": []}
         best_score, best_corpus, best_events, best_context_matches = selected[0]
         best_events.sort(key=lambda item: item["event_index"])
         candidates: list[dict[str, Any]] = []
-        for rank, (video_score, corpus, events, context_matches) in enumerate(selected, start=1):
-            best_event = self._best_review_candidate(corpus, parsed.events[0])
+        for video_score, corpus, events, context_matches in selected:
+            best_event = review_candidates.get(str(corpus.video["video_id"]))
+            if best_event is None:
+                best_event = self._best_review_candidate(corpus, parsed.events[0])
             if best_event is None:
                 continue
             candidates.append(
                 {
                     **best_event,
-                    "rank": rank,
+                    "rank": len(candidates) + 1,
                     "video_id": corpus.video["video_id"],
                     "video_score": round(video_score, 6),
                     "matched_context_entities": context_matches,

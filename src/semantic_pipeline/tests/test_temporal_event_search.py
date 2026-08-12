@@ -8,6 +8,7 @@ import pytest
 from semantic_pipeline.retrieval.temporal_event_search import (
     TemporalCorpus,
     TemporalEventSearch,
+    _matches_concept_groups,
     discover_temporal_corpus,
 )
 from semantic_pipeline.retrieval.temporal_query_parser import parse_temporal_query
@@ -81,8 +82,8 @@ def test_video_context_exact_location_outranks_generic_hot_weather() -> None:
     assert result["selected_video"]["video_id"] == "L22_V001"
     assert result["selected_video"]["matched_context_entities"] == ["Barcelona"]
     assert result["events"][0]["frame_id"] == "L22_V001_f0091"
-    assert [item["video_id"] for item in result["candidates"]] == ["L22_V001", "L22_V025"]
-    assert [item["rank"] for item in result["candidates"]] == [1, 2]
+    assert [item["video_id"] for item in result["candidates"]] == ["L22_V001"]
+    assert [item["rank"] for item in result["candidates"]] == [1]
 
 
 def test_all_explicit_concepts_outrank_an_olympic_paris_only_story() -> None:
@@ -108,6 +109,49 @@ def test_all_explicit_concepts_outrank_an_olympic_paris_only_story() -> None:
     assert result["selected_video"]["video_id"] == "L22_V001"
     assert result["events"][0]["frame_id"] == "L22_V001_f0160"
     assert result["candidates"][0]["frame_id"] == "L22_V001_f0160"
+
+
+def test_concept_match_accepts_paraphrase_but_rejects_scattered_terms() -> None:
+    groups = (("phố lồng đèn", "khu phố với đèn lồng"),)
+
+    supported, _ = _matches_concept_groups(
+        groups,
+        "Khu phố được trang hoàng bằng hàng trăm chiếc đèn lồng dịp Trung thu.",
+    )
+    scattered, _ = _matches_concept_groups(
+        groups,
+        "Dự án cải tạo đền thờ được triển khai. Thành phố đầu tư ngân sách "
+        "cho nhiều công trình văn hóa ở khu vực phường Long Bình.",
+    )
+
+    assert supported == 1.0
+    assert scattered == 0.0
+
+
+def test_local_concept_coherence_outranks_scattered_story_terms() -> None:
+    search = TemporalEventSearch(
+        [
+            _temporal_corpus(
+                "L22_V010",
+                "TP.HCM",
+                "Khu phố được trang hoàng bằng hàng trăm chiếc đèn lồng dịp Trung thu",
+                86,
+            ),
+            _temporal_corpus(
+                "L22_V001",
+                "Long Bình",
+                "Dự án cải tạo đền thờ được triển khai bằng ngân sách. Thành phố "
+                "đầu tư nhiều công trình văn hóa ở khu vực phường Long Bình",
+                21,
+            ),
+        ]
+    )
+
+    result = search.search("phố lồng đèn", top_k_videos=2)
+
+    assert result["selected_video"]["video_id"] == "L22_V010"
+    assert result["candidates"][0]["frame_id"] == "L22_V010_f0086"
+    assert [item["video_id"] for item in result["candidates"]] == ["L22_V010"]
 
 
 def test_real_l22_temporal_search_returns_one_video_for_all_events() -> None:

@@ -40,13 +40,21 @@ def fallback_concept_groups(value: str) -> tuple[tuple[str, ...], ...]:
     """Preserve each meaningful user term as an AND-style requirement.
 
     Gemini can later add aliases to these groups, but cannot silently remove
-    an explicit constraint from the user's query.
+    an explicit constraint from the user's query. Surface accents are kept so
+    Vietnamese concepts such as ``đèn``/``đen`` and ``lồng``/``lông`` do not
+    collapse into the same retrieval constraint.
     """
 
-    return tuple(
-        (token,)
-        for token in sorted(query_tokens(value) - CONCEPT_STOPWORDS)
-    )
+    groups: list[tuple[str, ...]] = []
+    seen: set[str] = set()
+    normalized = unicodedata.normalize("NFC", value.casefold())
+    for token in re.findall(r"[^\W_]+", normalized):
+        folded = fold_text(token)
+        if len(token) <= 1 or folded in CONCEPT_STOPWORDS or folded in seen:
+            continue
+        seen.add(folded)
+        groups.append((token,))
+    return tuple(groups)
 
 
 @dataclass(frozen=True)
