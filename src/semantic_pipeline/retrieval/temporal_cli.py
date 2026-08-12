@@ -15,6 +15,7 @@ from semantic_pipeline.retrieval.temporal_event_search import (  # noqa: E402
     TemporalEventSearch,
     discover_temporal_corpus,
 )
+from semantic_pipeline.retrieval.temporal_query_expander import GeminiTemporalQueryParser  # noqa: E402
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -28,6 +29,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--batch-id", action="append", default=[])
     parser.add_argument("--video-id", action="append", default=[])
     parser.add_argument("--top-k-videos", type=int, default=10)
+    parser.add_argument(
+        "--without-gemini-query-parser",
+        action="store_true",
+        help="Use only explicit query terms; useful for deterministic retrieval debugging",
+    )
     return parser
 
 
@@ -43,7 +49,11 @@ def main(argv: Sequence[str] | None = None) -> int:
             batch_ids=args.batch_id,
             video_ids=args.video_id,
         )
-        result = TemporalEventSearch(corpora).search(args.query, top_k_videos=args.top_k_videos)
+        query_parser = None if args.without_gemini_query_parser else GeminiTemporalQueryParser()
+        result = TemporalEventSearch(corpora, query_parser=query_parser).search(
+            args.query,
+            top_k_videos=args.top_k_videos,
+        )
     except Exception as exc:
         print(f"temporal retrieval failed: {exc}")
         return 2

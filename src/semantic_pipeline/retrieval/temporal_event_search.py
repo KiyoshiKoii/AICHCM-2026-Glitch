@@ -129,13 +129,35 @@ def _score(query: set[str], text: str) -> float:
     return len(matched) / len(useful) if useful else 0.0
 
 
-def _exact_metadata_matches(video: dict[str, Any], context_tokens: set[str]) -> list[str]:
-    """Find named entities/locations stated completely in the video context.
+def _matches_concept_groups(
+    concept_groups: tuple[tuple[str, ...], ...],
+    text: str,
+) -> tuple[float, list[str]]:
+    """Return AND-style concept coverage and the supported aliases."""
 
-    Generic words such as ``weather`` and ``hot`` occur in many news videos.
-    A full generated location/entity such as ``Barcelona`` is much stronger
-    evidence that the user is identifying this particular video.
-    """
+    if not concept_groups:
+        return 0.0, []
+    text_tokens = query_tokens(text)
+    matches: list[str] = []
+    for alternatives in concept_groups:
+        matched = next(
+            (
+                alternative
+                for alternative in alternatives
+                if (tokens := query_tokens(alternative)) and tokens <= text_tokens
+            ),
+            None,
+        )
+        if matched:
+            matches.append(matched)
+    return len(matches) / len(concept_groups), matches
+
+
+def _metadata_context_matches(
+    video: dict[str, Any],
+    context_groups: tuple[tuple[str, ...], ...],
+) -> list[str]:
+    """Expose metadata that supports context without boosting a lone token."""
 
     matches: list[str] = []
     for field in ("main_locations", "main_entities"):
@@ -144,8 +166,8 @@ def _exact_metadata_matches(video: dict[str, Any], context_tokens: set[str]) -> 
             continue
         for value in values:
             candidate = " ".join(str(value).split())
-            candidate_tokens = query_tokens(candidate)
-            if candidate_tokens and candidate_tokens <= context_tokens:
+            coverage, _ = _matches_concept_groups(context_groups, candidate)
+            if coverage > 0:
                 matches.append(candidate)
     return list(dict.fromkeys(matches))
 
@@ -210,8 +232,9 @@ def _anchor_for(event: dict[str, Any], query: TemporalEventQuery) -> dict[str, A
 
 
 class TemporalEventSearch:
-    def __init__(self, corpora: Iterable[TemporalCorpus]) -> None:
+    def __init__(self, corpora: Iterable[TemporalCorpus], *, query_parser: Any | None = None) -> None:
         self.corpora = tuple(corpora)
+        self.query_parser = query_parser
 
     def _rank_event(self, event: dict[str, Any], query: TemporalEventQuery) -> float:
         query_set = set(query.tokens)
@@ -225,12 +248,27 @@ class TemporalEventSearch:
             for frame in event.get("_frames", [])
         ]
         frame_score = max(frame_scores, default=0.0)
-        return 0.55 * title_score + 0.25 * event_score + 0.20 * frame_score
+        lexical_score = 0.55 * title_score + 0.25 * event_score + 0.20 * frame_score
+        evidence = " ".join(
+            [
+                str(event.get("description_vi", "")),
+                str(event.get("search_text", "")),
+                *[
+                    " ".join(str(frame.get(field, "")) for field in ("visual_text", "asr_text", "ocr_text"))
+                    for frame in event.get("_frames", [])
+                ],
+            ]
+        )
+        concept_score, _ = _matches_concept_groups(query.required_concept_groups, evidence)
+        if query.required_concept_groups:
+            return 0.25 * lexical_score + 0.75 * concept_score
+        return lexical_score
 
     def _rank_video_context(
         self,
         corpus: TemporalCorpus,
         context_tokens: set[str],
+        context_groups: tuple[tuple[str, ...], ...],
     ) -> tuple[float, list[str]]:
         """Rank a video from its summary/story corpus before event matching."""
 
@@ -247,13 +285,24 @@ class TemporalEventSearch:
             default=0.0,
         )
         base_score = 0.35 * summary_score + 0.35 * search_score + 0.30 * best_story_score
-        exact_matches = _exact_metadata_matches(video, context_tokens)
-        if exact_matches:
-            # A complete location/entity match must outweigh overlap on broad
-            # news words.  It is derived only from each video's own summary;
-            # no video ID is hard-coded.
-            return min(1.0, 0.65 + 0.35 * base_score), exact_matches
-        return base_score, []
+        evidence = " ".join(
+            [
+                str(video.get("summary_vi", "")),
+                str(video.get("summary_en", "")),
+                str(video.get("search_text", "")),
+                *[event.get("search_text", "") for event in corpus.events],
+            ]
+        )
+        video_concepts, _ = _matches_concept_groups(context_groups, evidence)
+        best_event_concepts = max(
+            (_matches_concept_groups(context_groups, event.get("search_text", ""))[0] for event in corpus.events),
+            default=0.0,
+        )
+        concept_score = 0.35 * video_concepts + 0.65 * best_event_concepts
+        metadata_matches = _metadata_context_matches(video, context_groups)
+        if context_groups:
+            return 0.35 * base_score + 0.65 * concept_score, metadata_matches
+        return base_score, metadata_matches
 
     def search(
         self,
@@ -262,10 +311,16 @@ class TemporalEventSearch:
         top_k_videos: int = 10,
     ) -> dict[str, Any]:
         parsed = parse_temporal_query(query) if isinstance(query, str) else query
+        if self.query_parser is not None:
+            parsed = self.query_parser.parse(parsed)
         context_tokens = query_tokens(parsed.shared_context)
         ranked_videos: list[tuple[float, TemporalCorpus, list[dict[str, Any]], list[str]]] = []
         for corpus in self.corpora:
-            context_score, context_matches = self._rank_video_context(corpus, context_tokens)
+            context_score, context_matches = self._rank_video_context(
+                corpus,
+                context_tokens,
+                parsed.context_concept_groups,
+            )
             selected_events: list[dict[str, Any]] = []
             event_scores: list[float] = []
             used_event_ids: set[str] = set()
@@ -348,6 +403,10 @@ class TemporalEventSearch:
         return {
             "query": query if isinstance(query, str) else parsed.shared_context,
             "mode": "temporal_event_search",
+            "query_parsing": {
+                "mode": getattr(self.query_parser, "mode", "deterministic"),
+                "model": getattr(self.query_parser, "model", None),
+            },
             "selected_video": {
                 "video_id": best_corpus.video["video_id"],
                 "score": round(best_score, 6),

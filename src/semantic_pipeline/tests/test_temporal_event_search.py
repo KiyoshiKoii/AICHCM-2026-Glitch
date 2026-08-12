@@ -83,6 +83,30 @@ def test_video_context_exact_location_outranks_generic_hot_weather() -> None:
     assert result["events"][0]["frame_id"] == "L22_V001_f0091"
 
 
+def test_all_explicit_concepts_outrank_an_olympic_paris_only_story() -> None:
+    search = TemporalEventSearch(
+        [
+            _temporal_corpus(
+                "L22_V001",
+                "Pháp",
+                "Linh vật Olympic Paris 2024 bán chạy",
+                160,
+            ),
+            _temporal_corpus(
+                "L22_V002",
+                "Paris",
+                "Hoạt động văn hóa tại Olympic Paris",
+                140,
+            ),
+        ]
+    )
+
+    result = search.search("linh vật Olympic Paris", top_k_videos=2)
+
+    assert result["selected_video"]["video_id"] == "L22_V001"
+    assert result["events"][0]["frame_id"] == "L22_V001_f0160"
+
+
 def test_real_l22_temporal_search_returns_one_video_for_all_events() -> None:
     pilot = ROOT / "data/processed/video_understanding/L22/L22_V001/pilot"
     if not (pilot / "timeline.json").is_file():

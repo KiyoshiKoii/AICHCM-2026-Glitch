@@ -75,6 +75,7 @@ from semantic_pipeline.retrieval.temporal_event_search import (
     TemporalEventSearch,
     discover_temporal_corpus,
 )
+from semantic_pipeline.retrieval.temporal_query_expander import GeminiTemporalQueryParser
 
 
 class TextSearchRequest(BaseModel):
@@ -152,6 +153,7 @@ class TemporalEventRequest(BaseModel):
 def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI:
     app = FastAPI(title="AIC semantic retrieval", version="1.0")
     app.state.search_backend = search_backend
+    app.state.temporal_query_parser = GeminiTemporalQueryParser()
 
     def get_backend() -> ElasticsearchTextSearch:
         backend = app.state.search_backend
@@ -209,7 +211,10 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
             )
             return {
                 "status": "success",
-                "data": TemporalEventSearch(corpora).search(
+                "data": TemporalEventSearch(
+                    corpora,
+                    query_parser=app.state.temporal_query_parser,
+                ).search(
                     body.query,
                     top_k_videos=body.top_k_videos,
                 ),
