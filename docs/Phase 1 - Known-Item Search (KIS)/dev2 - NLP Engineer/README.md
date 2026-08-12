@@ -379,6 +379,12 @@ Pipeline hướng tin tức được triển khai riêng tại
 caption Gemini, ASR và `map-keyframes`; output cố định gồm đúng ba file
 `timeline.json`, `video_summary.json` và `validation_report.json`.
 
+Cấu trúc local được quy định tại `data/processed/README.md`. Semantic search chỉ
+đọc `data/processed/video_understanding`; object index BTC, multimodal merge thử
+nghiệm và các benchmark report cũ không phải runtime input. Artifact sinh lại
+được dưới `data/processed/` được Git ignore, còn quality report của từng video
+được đặt cạnh timeline trong chính thư mục `pilot/`.
+
 `--video-id` nhận mọi ID đúng dạng `Lxx_Vyyy` và tự suy ra batch `Lxx` cho
 caption/output. Không còn đường dẫn hay segment ID khóa cứng theo `L22_V001`.
 
