@@ -55,16 +55,26 @@ function App() {
     }
   };
 
-  const runVqaSearch = async ({ query, question }) => {
+  const runVqaSearch = async ({ query, question, useRerank = false }) => {
     setIsLoading(true);
     setCurrentPage(1);
-    setLastQuery({ mode: 'vqa', query, question });
+    setLastQuery({ mode: 'vqa', query, question, useRerank });
     setVqaQuestion(question);
     setLlmResults([]);
     setResults([]);
     try {
-      const response = await answerVqa(query, question);
-      setResults(response.data.candidates || []);
+      const response = await answerVqa(query, question, 50, 10, useRerank);
+      const data = response.data || {};
+      const answeredCandidates = data.candidates || [];
+      const hasRerankedResults = Boolean(
+        useRerank && data.llm_reranked_results?.length,
+      );
+
+      // When reranking is enabled, keep the answered candidates in the upper
+      // Gemini section and show the complete RRF baseline underneath.  With
+      // reranking disabled, the answered RRF candidates are the only section.
+      setLlmResults(hasRerankedResults ? answeredCandidates : []);
+      setResults(hasRerankedResults ? (data.results || []) : answeredCandidates);
     } catch (err) {
       console.error(err);
       alert('Lỗi trong quá trình trả lời VQA! Xem console để biết thêm chi tiết.');
@@ -145,7 +155,7 @@ function App() {
                   />
                 </div>
               )}
-              {llmResults.length > 0 && (
+              {llmResults.length > 0 && pageLlmResults.length > 0 && (
                 <div className="results-section">
                   <h3 style={{ marginLeft: '1rem', marginTop: '1rem', color: '#888' }}>✨ Kết quả LLM Re-ranking (Gemini)</h3>
                   <ResultGrid 

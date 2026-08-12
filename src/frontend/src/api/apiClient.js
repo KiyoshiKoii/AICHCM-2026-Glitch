@@ -53,6 +53,7 @@ export const answerVqa = async (
   question,
   retrievalTopK = 50,
   answerTopK = 10,
+  useRerank = false,
 ) => {
   const response = await fetch('/api/v1/vqa', {
     method: 'POST',
@@ -62,6 +63,7 @@ export const answerVqa = async (
     body: JSON.stringify({
       query,
       question,
+      use_rerank: useRerank,
       retrieval_top_k: retrievalTopK,
       answer_top_k: answerTopK,
     }),

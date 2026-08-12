@@ -30,7 +30,7 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch, filters = { batchIds:
     if (activeTab === 'vqa') {
       const trimmedQuestion = question.trim();
       if (!trimmedQuestion) return;
-      onVqaSearch?.({ query: trimmed, question: trimmedQuestion });
+      onVqaSearch?.({ query: trimmed, question: trimmedQuestion, useRerank });
       return;
     }
     onSearch?.(trimmed, useRerank, {
@@ -121,14 +121,14 @@ function SearchBar({ onSearch, onImageSearch, onVqaSearch, filters = { batchIds:
               aria-label="Text search weight"
             />
             <div className="fusion-weight-scale" aria-hidden="true">
-              <span>Visual</span>
               <span>Text</span>
+              <span>Visual</span>
             </div>
           </div>
         </>
       )}
 
-      {activeTab === 'text' && (
+      {activeTab !== 'image' && (
         <label className="search-rerank-toggle">
           <input
             type="checkbox"
