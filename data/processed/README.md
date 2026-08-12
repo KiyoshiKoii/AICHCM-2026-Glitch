@@ -1,7 +1,8 @@
 # Processed data
 
-Thư mục này chỉ chứa artifact được sinh lại từ dữ liệu nguồn. Git chỉ lưu file
-quy ước này; toàn bộ output bên dưới được ignore để tránh commit dữ liệu lớn.
+Thư mục này chỉ chứa artifact được sinh lại từ dữ liệu nguồn. Git lưu file quy
+ước này và `video_summary.json` cuối của mỗi video để chia sẻ corpus tìm kiếm;
+timeline, validation report và output trung gian vẫn được ignore.
 
 ## Cấu trúc runtime hiện tại
 
@@ -11,9 +12,9 @@ data/processed/
     └── <batch_id>/
         └── <video_id>/
             └── pilot/
-                ├── timeline.json
-                ├── video_summary.json
-                └── validation_report.json
+                ├── timeline.json              # local
+                ├── video_summary.json         # tracked
+                └── validation_report.json      # local
 ```
 
 Mỗi video luôn có đúng ba file cuối. Chạy lại pipeline sẽ cập nhật bộ output cố
@@ -32,6 +33,7 @@ thư mục chuẩn dưới `data/`.
 ## Quy tắc output
 
 1. Artifact trung gian phải dùng thư mục tạm và được xóa sau khi publish.
-2. Báo cáo gắn với một video phải nằm trong `pilot/validation_report.json`.
-3. Benchmark dùng trong lúc phát triển không được ghi vào `data/processed/`.
-4. Chỉ thêm một loại output mới khi đã có consumer trong code và tài liệu schema.
+2. Chỉ `pilot/video_summary.json` được commit; hai file pilot còn lại là local.
+3. Báo cáo gắn với một video phải nằm trong `pilot/validation_report.json`.
+4. Benchmark dùng trong lúc phát triển không được ghi vào `data/processed/`.
+5. Chỉ thêm một loại output mới khi đã có consumer trong code và tài liệu schema.
