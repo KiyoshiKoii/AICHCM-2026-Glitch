@@ -304,11 +304,47 @@ class TemporalEventSearch:
             return 0.35 * base_score + 0.65 * concept_score, metadata_matches
         return base_score, metadata_matches
 
+    def _best_review_candidate(
+        self,
+        corpus: TemporalCorpus,
+        event_query: TemporalEventQuery,
+    ) -> dict[str, Any] | None:
+        """Return a video's best evidence frame without the answer threshold."""
+
+        ranked = sorted(
+            ((self._rank_event(event, event_query), event) for event in corpus.events),
+            key=lambda item: (
+                -item[0],
+                int(item[1].get("start_ms", 0)),
+                str(item[1].get("event_id", "")),
+            ),
+        )
+        for score, event in ranked:
+            anchor = _anchor_for(event, event_query)
+            if anchor is None:
+                continue
+            return {
+                "event_index": event_query.event_index,
+                "source_label": event_query.source_label,
+                "event_id": event["event_id"],
+                "event_text": event.get("description_vi", ""),
+                "anchor_type": anchor["anchor_type"],
+                "frame_id": anchor["frame_id"],
+                "keyframe_n": anchor["keyframe_n"],
+                "native_frame_idx": anchor["native_frame_idx"],
+                "timestamp_ms": anchor["timestamp_ms"],
+                "score": round(score, 6),
+                "confidence": anchor.get("confidence", event.get("confidence", 0.0)),
+                "uncertain": bool(event.get("uncertain", True)),
+                "reason_vi": event.get("description_vi", ""),
+            }
+        return None
+
     def search(
         self,
         query: str | ParsedTemporalQuery,
         *,
-        top_k_videos: int = 10,
+        top_k_videos: int = 20,
     ) -> dict[str, Any]:
         parsed = parse_temporal_query(query) if isinstance(query, str) else query
         if self.query_parser is not None:
@@ -400,6 +436,20 @@ class TemporalEventSearch:
             return {"query": parsed.shared_context, "selected_video": None, "videos": [], "events": []}
         best_score, best_corpus, best_events, best_context_matches = selected[0]
         best_events.sort(key=lambda item: item["event_index"])
+        candidates: list[dict[str, Any]] = []
+        for rank, (video_score, corpus, events, context_matches) in enumerate(selected, start=1):
+            best_event = self._best_review_candidate(corpus, parsed.events[0])
+            if best_event is None:
+                continue
+            candidates.append(
+                {
+                    **best_event,
+                    "rank": rank,
+                    "video_id": corpus.video["video_id"],
+                    "video_score": round(video_score, 6),
+                    "matched_context_entities": context_matches,
+                }
+            )
         return {
             "query": query if isinstance(query, str) else parsed.shared_context,
             "mode": "temporal_event_search",
@@ -416,6 +466,10 @@ class TemporalEventSearch:
                 "matched_context_entities": best_context_matches,
             },
             "events": best_events,
+            # One best evidence frame per ranked video. This is the review
+            # surface for summary-only searches; the selected video's E1..En
+            # answers remain available separately in ``events``.
+            "candidates": candidates,
             "videos": [
                 {
                     "video_id": corpus.video["video_id"],

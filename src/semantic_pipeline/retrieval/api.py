@@ -132,7 +132,7 @@ class TemporalEventRequest(BaseModel):
     query: str = Field(min_length=2, max_length=5000)
     batch_ids: list[str] = Field(default_factory=list, max_length=10)
     video_ids: list[str] = Field(default_factory=list, max_length=100)
-    top_k_videos: int = Field(default=10, ge=1, le=100)
+    top_k_videos: int = Field(default=20, ge=1, le=100)
 
     @field_validator("query")
     @classmethod

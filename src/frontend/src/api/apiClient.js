@@ -89,7 +89,7 @@ export const getFrameContext = async (frameId, window = 5) => {
 
 export const searchTemporalEvents = async (
   query,
-  { batchIds = [], videoIds = [], topKVideos = 10 } = {},
+  { batchIds = [], videoIds = [], topKVideos = 20 } = {},
 ) => {
   const response = await fetch('/api/v1/search/temporal-events', {
     method: 'POST',

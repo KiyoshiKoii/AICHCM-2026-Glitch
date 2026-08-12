@@ -215,7 +215,7 @@ class SearchService:
         *,
         batch_ids: list[str] | None = None,
         video_ids: list[str] | None = None,
-        top_k_videos: int = 10,
+        top_k_videos: int = 20,
     ) -> dict[str, Any]:
         """Run the same-video ordered event mode through Dev2."""
 
@@ -244,5 +244,13 @@ class SearchService:
                 event.setdefault("frame_index", event.get("native_frame_idx"))
                 event["thumbnail_url"] = build_thumbnail_url(
                     str(event["frame_id"]), self.settings.thumbnail_base_url
+                )
+            for candidate in data.get("candidates", []):
+                if not isinstance(candidate, dict) or not candidate.get("frame_id"):
+                    continue
+                candidate.setdefault("video_name", candidate.get("video_id"))
+                candidate.setdefault("frame_index", candidate.get("native_frame_idx"))
+                candidate["thumbnail_url"] = build_thumbnail_url(
+                    str(candidate["frame_id"]), self.settings.thumbnail_base_url
                 )
         return payload

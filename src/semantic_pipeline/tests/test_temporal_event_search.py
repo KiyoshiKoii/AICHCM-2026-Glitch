@@ -81,6 +81,8 @@ def test_video_context_exact_location_outranks_generic_hot_weather() -> None:
     assert result["selected_video"]["video_id"] == "L22_V001"
     assert result["selected_video"]["matched_context_entities"] == ["Barcelona"]
     assert result["events"][0]["frame_id"] == "L22_V001_f0091"
+    assert [item["video_id"] for item in result["candidates"]] == ["L22_V001", "L22_V025"]
+    assert [item["rank"] for item in result["candidates"]] == [1, 2]
 
 
 def test_all_explicit_concepts_outrank_an_olympic_paris_only_story() -> None:
@@ -105,6 +107,7 @@ def test_all_explicit_concepts_outrank_an_olympic_paris_only_story() -> None:
 
     assert result["selected_video"]["video_id"] == "L22_V001"
     assert result["events"][0]["frame_id"] == "L22_V001_f0160"
+    assert result["candidates"][0]["frame_id"] == "L22_V001_f0160"
 
 
 def test_real_l22_temporal_search_returns_one_video_for_all_events() -> None:

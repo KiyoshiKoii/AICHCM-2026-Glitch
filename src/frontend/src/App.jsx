@@ -83,19 +83,25 @@ function App() {
     try {
       const response = await searchTemporalEvents(query, filters);
       const data = response.data || {};
-      const events = (data.events || []).map((event) => ({
-        ...event,
-        video_name: data.selected_video?.video_id || event.video_id,
-        frame_index: event.native_frame_idx,
-        thumbnail_url: event.thumbnail_url || `/media/thumbnails/${event.frame_id}.jpg`,
+      const hasExplicitEvents = /(^|\n)E\d+\s*:/i.test(query);
+      const rawResults = hasExplicitEvents ? (data.events || []) : (data.candidates || data.events || []);
+      const temporalResults = rawResults.map((item) => ({
+        ...item,
+        video_name: item.video_id || data.selected_video?.video_id,
+        frame_index: item.native_frame_idx,
+        score: item.video_score ?? item.score,
+        thumbnail_url: item.thumbnail_url || `/media/thumbnails/${item.frame_id}.jpg`,
         metadata: {
-          timestamp_ms: event.timestamp_ms,
-          anchor_type: event.anchor_type,
-          confidence: event.confidence,
-          reason_vi: event.reason_vi,
+          rank: item.rank,
+          timestamp_ms: item.timestamp_ms,
+          anchor_type: item.anchor_type,
+          confidence: item.confidence,
+          event_score: item.score,
+          reason_vi: item.reason_vi,
+          matched_context_entities: item.matched_context_entities,
         },
       }));
-      setResults(events);
+      setResults(temporalResults);
     } catch (err) {
       console.error(err);
       alert('Temporal event search failed. Check the console for details.');

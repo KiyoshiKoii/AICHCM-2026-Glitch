@@ -9,6 +9,13 @@ descriptions, then retrieves every event from that same video in temporal
 order. It returns `frame_id`, `keyframe_n`, `native_frame_idx`, `timestamp_ms`
 and `thumbnail_url`.
 
+A summary-only search returns `candidates`: the best evidence keyframe from
+each of the Top-20 ranked videos by default. Each item includes `rank`,
+`video_score`, `event_text`, and the BTC `native_frame_idx`. The strict Top-1
+answer remains in `selected_video` and `events`. For an explicit `E1..En`
+query, the UI displays the ordered event answers from Top-1; for a context-only
+query, it displays all Top-20 review candidates.
+
 Before retrieval, the service uses one Gemini query-parser call configured by
 `GEMINI_TEMPORAL_QUERY_MODEL` (default: `gemini-3.5-flash-lite`). It converts
 explicit query constraints into required concept groups while preserving every
