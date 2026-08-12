@@ -69,8 +69,10 @@ data/videos/
 data/audio_cache/
 data/models/
 
-# Video-understanding generated pilot and ephemeral staging artifacts
-data/processed/video_understanding/
+# Generated processed outputs are local and reproducible. Keep only the
+# directory contract in version control.
+data/processed/*
+!data/processed/README.md
 
 # Large/generated BTC and Gemini artifacts; keep compact fixtures or manifests
 # tracked instead of per-video caption, ASR and raw-data dumps.
