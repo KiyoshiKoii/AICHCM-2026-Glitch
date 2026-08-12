@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 
 from semantic_pipeline.video_understanding.cli import discover_batch_video_ids
+from semantic_pipeline.video_understanding.publisher import pilot_is_resumable
 from semantic_pipeline.video_understanding.pipeline import build_video
 
 
@@ -125,6 +126,35 @@ def test_batch_discovery_is_dynamic_and_sorted(tmp_path: Path) -> None:
         "L30_V002",
         "L30_V010",
     ]
+
+
+def test_resume_requires_ready_pilot_and_unchanged_inputs(tmp_path: Path) -> None:
+    source_paths = (
+        tmp_path / "caption.json",
+        tmp_path / "asr.json",
+        tmp_path / "map.csv",
+    )
+    for path in source_paths:
+        path.write_text(path.name, encoding="utf-8")
+    pilot = tmp_path / "pilot"
+    pilot.mkdir()
+    hashes = {str(path): _sha256(path) for path in source_paths}
+    for name in ("timeline.json", "video_summary.json"):
+        (pilot / name).write_text("{}", encoding="utf-8")
+    (pilot / "validation_report.json").write_text(
+        json.dumps(
+            {
+                "status": "ready",
+                "inputs_unchanged": True,
+                "input_hashes": hashes,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    assert pilot_is_resumable(pilot_dir=pilot, source_paths=source_paths)
+    source_paths[0].write_text("changed", encoding="utf-8")
+    assert not pilot_is_resumable(pilot_dir=pilot, source_paths=source_paths)
 
 
 @pytest.mark.parametrize("batch_id", ["L3", "30", "../L30"])

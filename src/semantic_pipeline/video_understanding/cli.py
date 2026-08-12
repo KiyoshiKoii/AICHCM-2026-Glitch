@@ -11,9 +11,11 @@ from typing import Sequence
 
 if __package__ in {None, ""}:  # Support ``python src/semantic_pipeline/.../cli.py``.
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-    from semantic_pipeline.video_understanding.pipeline import build_video
+    from semantic_pipeline.video_understanding.pipeline import batch_id_from_video_id, build_video
+    from semantic_pipeline.video_understanding.publisher import pilot_is_resumable
 else:
-    from .pipeline import build_video
+    from .pipeline import batch_id_from_video_id, build_video
+    from .publisher import pilot_is_resumable
 
 
 BATCH_ID_RE = re.compile(r"^L\d{2}$")
@@ -56,6 +58,11 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Publish a passing candidate even when its score is lower than the current pilot",
     )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Skip videos whose ready pilot still matches caption, ASR, and keyframe-map inputs",
+    )
     return parser
 
 
@@ -85,6 +92,29 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         results = []
         for video_id in video_ids:
+            batch_id = batch_id_from_video_id(video_id)
+            pilot_dir = args.output_root / batch_id / video_id / "pilot"
+            source_paths = (
+                args.caption_dir / batch_id / f"{video_id}.json",
+                args.asr_dir / f"{video_id}.json",
+                args.map_dir / f"{video_id}.csv",
+            )
+            if args.resume and pilot_is_resumable(
+                pilot_dir=pilot_dir,
+                source_paths=source_paths,
+            ):
+                if len(video_ids) > 1:
+                    print(f"Skipping {video_id}: pilot is ready and inputs are unchanged", file=sys.stderr)
+                results.append(
+                    {
+                        "video_id": video_id,
+                        "published": False,
+                        "skipped": True,
+                        "skip_reason": "pilot_ready_inputs_unchanged",
+                        "pilot_dir": str(pilot_dir),
+                    }
+                )
+                continue
             if len(video_ids) > 1:
                 print(f"Building {video_id}...", file=sys.stderr)
             results.append(

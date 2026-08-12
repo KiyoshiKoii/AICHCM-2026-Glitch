@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import shutil
 import uuid
 from pathlib import Path
@@ -20,6 +21,47 @@ def read_existing_score(pilot_dir: Path) -> float | None:
     report_path = pilot_dir / "validation_report.json"
     if not report_path.is_file():
         return None
+
+
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _normalise_hash_map(values: dict[str, Any]) -> dict[str, str]:
+    return {
+        str(Path(path).resolve()).casefold(): str(digest)
+        for path, digest in values.items()
+    }
+
+
+def pilot_is_resumable(*, pilot_dir: Path, source_paths: tuple[Path, ...]) -> bool:
+    """Return whether a pilot can safely be skipped by ``--resume``.
+
+    A ready report alone is insufficient: all three published artifacts must
+    exist and the source hashes must still match the generation that produced
+    the pilot.  This prevents resume from silently serving stale metadata.
+    """
+
+    if any(not (pilot_dir / name).is_file() for name in OUTPUT_NAMES):
+        return False
+    try:
+        report = json.loads((pilot_dir / "validation_report.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        return False
+    if report.get("status") != "ready" or report.get("inputs_unchanged") is not True:
+        return False
+    expected = report.get("input_hashes")
+    if not isinstance(expected, dict) or not source_paths or any(not path.is_file() for path in source_paths):
+        return False
+    try:
+        actual = {str(path.resolve()): _sha256_file(path) for path in source_paths}
+    except OSError:
+        return False
+    return _normalise_hash_map(expected) == _normalise_hash_map(actual)
     try:
         payload = json.loads(report_path.read_text(encoding="utf-8"))
         if payload.get("status") != "ready":
