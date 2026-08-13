@@ -1,4 +1,4 @@
-"""News-aware micro-scene segmentation and temporary evidence packets."""
+"""Domain-agnostic micro-scene segmentation and evidence packets."""
 
 from __future__ import annotations
 
@@ -44,7 +44,39 @@ def _text_signature(frame: RuntimeFrame) -> set[str]:
         attributes = detection.get("attributes", [])
         if isinstance(attributes, list):
             parts.extend(str(item) for item in attributes)
+    for relation in _resolved_spatial_relations(raw):
+        parts.extend(
+            str(relation.get(key, ""))
+            for key in ("subject_label", "predicate", "object_label")
+        )
     return _tokens(" ".join(parts))
+
+
+def _resolved_spatial_relations(raw: dict[str, Any]) -> list[dict[str, str]]:
+    labels = {
+        str(item.get("object_id", "")): str(item.get("label", ""))
+        for item in raw.get("detections", [])
+        if isinstance(item, dict) and item.get("object_id")
+    }
+    result: list[dict[str, str]] = []
+    for relation in raw.get("spatial_relations", []):
+        if not isinstance(relation, dict):
+            continue
+        subject_id = str(relation.get("subject_id", "")).strip()
+        predicate = str(relation.get("predicate", "")).strip()
+        object_id = str(relation.get("object_id", "")).strip()
+        if not subject_id or not predicate or not object_id:
+            continue
+        result.append(
+            {
+                "subject_id": subject_id,
+                "subject_label": labels.get(subject_id, subject_id),
+                "predicate": predicate,
+                "object_id": object_id,
+                "object_label": labels.get(object_id, object_id),
+            }
+        )
+    return result
 
 
 def _object_signature(frame: RuntimeFrame) -> set[str]:
@@ -73,15 +105,47 @@ def _scene_type(frame: RuntimeFrame) -> str:
         str(frame.raw_metadata.get(key, ""))
         for key in ("caption", "detailed_caption", "caption_vi", "detailed_caption_vi")
     ).casefold()
-    if any(term in text for term in ("news desk", "news studio", "trường quay", "phát thanh viên")):
-        return "anchor_studio"
+    action_text = " ".join(
+        str(item.get("action", ""))
+        for item in frame.raw_metadata.get("detections", [])
+        if isinstance(item, dict)
+    ).casefold()
+    if any(
+        term in text
+        for term in ("kitchen", "ingredient", "knife", "pan", "stove", "chảo", "dao", "nấu")
+    ):
+        return "food_preparation"
+    if any(
+        term in text
+        for term in (
+            "lion dance",
+            "dragon dance",
+            "múa lân",
+            "múa rồng",
+            "performer",
+            "stage performance",
+        )
+    ):
+        return "performance"
+    if any(
+        term in text
+        for term in ("cyclist", "bicycle race", "peloton", "vận động viên", "cuộc đua")
+    ):
+        return "sport_activity"
+    if any(
+        term in text
+        for term in ("news desk", "news studio", "trường quay", "phát thanh viên", "presenter")
+    ):
+        return "presenter_or_studio"
     if any(term in text for term in ("map", "bản đồ", "graphic", "đồ họa", "screen displays")):
         return "graphic_or_map"
     if any(term in text for term in ("interview", "phỏng vấn", "microphone", "micrô")):
-        return "interview"
+        return "interview_or_dialogue"
     if any(term in text for term in ("logo", "opening", "intro", "sunset cityscape")):
-        return "program_intro"
-    return "broll_or_other"
+        return "title_or_intro"
+    if action_text:
+        return "observable_activity"
+    return "visual_scene"
 
 
 def adaptive_continuity_guard(frames: list[RuntimeFrame]) -> float:
@@ -119,7 +183,7 @@ def build_micro_scenes(
         representative = max(
             current,
             key=lambda item: (
-                bool(item.raw_metadata.get("quality_flags")),
+                not bool(item.raw_metadata.get("quality_flags")),
                 len(_object_signature(item)),
                 len(_text_signature(item)),
             ),
@@ -182,6 +246,7 @@ def _compact_frame(frame: RuntimeFrame) -> dict[str, Any]:
             continue
         detections.append(
             {
+                "object_id": detection.get("object_id", ""),
                 "label": detection.get("label", ""),
                 "description": detection.get("description", ""),
                 "description_vi": detection.get("description_vi", ""),
@@ -200,6 +265,7 @@ def _compact_frame(frame: RuntimeFrame) -> dict[str, Any]:
         "ocr_text": CLOCK_RE.sub("", str(raw.get("ocr_text", ""))),
         "news_ticker_text": raw.get("news_ticker_text", ""),
         "detections": detections,
+        "spatial_relations": _resolved_spatial_relations(raw),
         "quality_flags": raw.get("quality_flags", []),
     }
 
