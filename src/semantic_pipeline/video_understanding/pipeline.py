@@ -9,6 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from semantic_pipeline.core.visual_profiles import profile_for_video_id
+
 from .asr_alignment import align_asr, quality_flags_for_segments
 from .loaders import (
     build_runtime_frames,
@@ -19,7 +21,7 @@ from .loaders import (
 )
 from .publisher import publish_pilot
 from .quality import hard_gates_pass, validate_artifacts
-from .summarizer import NewsSummarizer
+from .summarizer import VideoSummarizer
 from .timeline_builder import build_evidence_windows, build_micro_scenes
 from .temporal_events import build_temporal_events, classify_content_profile, event_search_text
 
@@ -99,12 +101,15 @@ def _story_timeline(
         output.append(
             {
                 "segment_id": f"{video_id}_story_{index:04d}",
-                "segment_type": "news_story",
+                "segment_type": "semantic_episode",
                 "title": candidate.title,
                 "summary": candidate.summary,
                 "topics": candidate.topics,
                 "entities": candidate.entities,
                 "locations": candidate.locations,
+                "actions": candidate.actions,
+                "objects": candidate.objects,
+                "visual_states": candidate.visual_states,
                 "uncertain": candidate.uncertain,
                 "start_ms": selected[0].start_ms,
                 "end_ms": selected[-1].end_ms,
@@ -150,6 +155,11 @@ def _merge_duplicate_candidates(candidates: list[Any]) -> list[Any]:
         duplicate.topics = list(dict.fromkeys(duplicate.topics + candidate.topics))[:20]
         duplicate.entities = list(dict.fromkeys(duplicate.entities + candidate.entities))[:20]
         duplicate.locations = list(dict.fromkeys(duplicate.locations + candidate.locations))[:20]
+        duplicate.actions = list(dict.fromkeys(duplicate.actions + candidate.actions))[:30]
+        duplicate.objects = list(dict.fromkeys(duplicate.objects + candidate.objects))[:40]
+        duplicate.visual_states = list(
+            dict.fromkeys(duplicate.visual_states + candidate.visual_states)
+        )[:30]
     return sorted(result, key=lambda item: min(item.scene_ids) if item.scene_ids else "")
 
 
@@ -162,7 +172,7 @@ def _story_tokens(value: str) -> set[str]:
 
 
 def _same_news_story(left: Any, right: Any) -> bool:
-    """Detect duplicate cards emitted by adjacent/overlapping LLM windows."""
+    """Detect duplicate semantic cards emitted by overlapping windows."""
 
     left_text = _story_tokens(f"{left.title} {left.summary}")
     right_text = _story_tokens(f"{right.title} {right.summary}")
@@ -173,6 +183,8 @@ def _same_news_story(left: Any, right: Any) -> bool:
     title_union = left_title | right_title
     title_similarity = len(left_title & right_title) / len(title_union) if title_union else 0.0
     anchors = set(left.entities + left.locations) & set(right.entities + right.locations)
+    if similarity >= 0.65 or title_similarity >= 0.70:
+        return True
     return bool(anchors) and (similarity >= 0.30 or title_similarity >= 0.45)
 
 
@@ -190,7 +202,15 @@ def _prune_candidate_evidence(
     for candidate in candidates:
         anchors = _evidence_tokens(
             " ".join(
-                [candidate.title, *candidate.topics, *candidate.entities, *candidate.locations]
+                [
+                    candidate.title,
+                    *candidate.topics,
+                    *candidate.entities,
+                    *candidate.locations,
+                    *candidate.actions,
+                    *candidate.objects,
+                    *candidate.visual_states,
+                ]
             )
         )
         if not anchors:
@@ -409,6 +429,12 @@ def _frame_evidence_text(frame: Any) -> str:
                 str(detection.get(field, ""))
                 for field in ("label", "description", "description_vi", "action")
             )
+    for relation in raw.get("spatial_relations", []):
+        if isinstance(relation, dict):
+            values.extend(
+                str(relation.get(field, ""))
+                for field in ("subject_id", "predicate", "object_id")
+            )
     return " ".join(values)
 
 
@@ -461,9 +487,15 @@ def build_video(
     asr_segments, asr_available = load_asr_segments(asr_path, video_id)
     frames = build_runtime_frames(captions, keyframe_map, video_id, image_dir)
     segments = align_asr(frames, asr_segments)
+    content_profile, profile_confidence = classify_content_profile(frames, asr_segments)
     scenes = build_micro_scenes(frames, segments)
     windows = build_evidence_windows(frames, scenes, segments)
-    summarizer = NewsSummarizer(use_llm=use_llm, require_llm=require_llm)
+    domain_hint = profile_for_video_id(video_id).content_domain
+    summarizer = VideoSummarizer(
+        use_llm=use_llm,
+        require_llm=require_llm,
+        domain_hint=domain_hint,
+    )
     candidates = summarizer.summarize_windows(
         windows,
         scenes,
@@ -485,7 +517,6 @@ def build_video(
         duration_ms=frames[-1].timestamp_ms,
     )
     timeline_segments = _story_timeline(candidates, scenes, frames, segments)
-    content_profile, profile_confidence = classify_content_profile(frames, asr_segments)
     temporal_events = build_temporal_events(
         timeline_segments,
         frames,
@@ -530,7 +561,7 @@ def build_video(
         raise ValueError(json.dumps(validation, ensure_ascii=False, indent=2))
 
     timeline = {
-        "schema_version": "video-timeline-v2",
+        "schema_version": "video-timeline-v3",
         "generation_id": generation_id,
         "video_id": video_id,
         "content_type": content_profile,
@@ -542,7 +573,7 @@ def build_video(
         "events": temporal_events,
     }
     video_summary = {
-        "schema_version": "video-summary-v2",
+        "schema_version": "video-summary-v3",
         "generation_id": generation_id,
         "video_id": video_id,
         "content_type": content_profile,
@@ -589,11 +620,18 @@ def _build_search_text(summary: dict[str, Any], timeline_segments: list[dict[str
                 *[str(value).strip() for value in item.get("topics", [])],
                 *[str(value).strip() for value in item.get("entities", [])],
                 *[str(value).strip() for value in item.get("locations", [])],
+                *[str(value).strip() for value in item.get("actions", [])],
+                *[str(value).strip() for value in item.get("objects", [])],
+                *[str(value).strip() for value in item.get("visual_states", [])],
             )
         ],
         *[str(item).strip() for item in summary.get("main_topics", [])],
         *[str(item).strip() for item in summary.get("main_entities", [])],
         *[str(item).strip() for item in summary.get("main_locations", [])],
+        *[str(item).strip() for item in summary.get("main_actions", [])],
+        *[str(item).strip() for item in summary.get("main_objects", [])],
+        *[str(item).strip() for item in summary.get("main_visual_states", [])],
+        *[str(item).strip() for item in summary.get("chronological_outline", [])],
         str(summary.get("summary_en", "")).strip(),
     ]
     seen: set[str] = set()
@@ -607,7 +645,7 @@ def _build_search_text(summary: dict[str, Any], timeline_segments: list[dict[str
 
 
 def _retrieval_coverage(timeline_segments: list[dict[str, Any]], search_text: str) -> dict[str, Any]:
-    """Verify each persisted news segment remains discoverable at video level."""
+    """Verify each persisted semantic segment remains discoverable at video level."""
 
     searchable = " ".join(search_text.casefold().split())
     missing_titles = [

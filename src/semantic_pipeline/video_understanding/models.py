@@ -76,6 +76,9 @@ class StoryCandidate:
     asr_segment_indices: list[int]
     source_window_id: str | None = None
     uncertain: bool = False
+    actions: list[str] = field(default_factory=list)
+    objects: list[str] = field(default_factory=list)
+    visual_states: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)

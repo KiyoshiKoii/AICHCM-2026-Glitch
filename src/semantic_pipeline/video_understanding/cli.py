@@ -46,7 +46,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--llm",
         action="store_true",
-        help="Use Gemini for evidence-grounded story and video summaries",
+        help="Use Gemini for evidence-grounded semantic episode and video summaries",
     )
     parser.add_argument(
         "--require-llm",

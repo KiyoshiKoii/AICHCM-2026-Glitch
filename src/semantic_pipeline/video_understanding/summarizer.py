@@ -1,4 +1,4 @@
-"""Evidence-grounded news summarization with a deterministic fallback."""
+"""Domain-agnostic, evidence-grounded video summarization."""
 
 from __future__ import annotations
 
@@ -46,12 +46,16 @@ PROGRAM_INTRO_RE = re.compile(
 WORD_RE = re.compile(r"[^\W_]+", re.UNICODE)
 
 
-def _words(text: str) -> set[str]:
-    return {
+def _terms(text: str) -> list[str]:
+    return [
         item.casefold()
         for item in WORD_RE.findall(text or "")
         if len(item) > 2 and item.casefold() not in STOPWORDS
-    }
+    ]
+
+
+def _words(text: str) -> set[str]:
+    return set(_terms(text))
 
 
 def _jaccard(left: set[str], right: set[str]) -> float:
@@ -78,7 +82,66 @@ def _frame_text(frame: RuntimeFrame) -> str:
             attributes = detection.get("attributes", [])
             if isinstance(attributes, list):
                 parts.extend(str(item) for item in attributes)
+    parts.extend(_spatial_phrases(raw))
     return " ".join(parts)
+
+
+def _spatial_phrases(raw: dict[str, Any]) -> list[str]:
+    """Resolve object-id relations into compact, searchable phrases."""
+
+    labels = {
+        str(item.get("object_id", "")): str(item.get("label", ""))
+        for item in raw.get("detections", [])
+        if isinstance(item, dict) and item.get("object_id")
+    }
+    phrases: list[str] = []
+    for relation in raw.get("spatial_relations", []):
+        if not isinstance(relation, dict):
+            continue
+        subject_id = str(relation.get("subject_id", "")).strip()
+        predicate = str(relation.get("predicate", "")).strip().replace("_", " ")
+        object_id = str(relation.get("object_id", "")).strip()
+        if not subject_id or not predicate or not object_id:
+            continue
+        phrases.append(
+            f"{labels.get(subject_id, subject_id)} {predicate} {labels.get(object_id, object_id)}"
+        )
+    return phrases
+
+
+def _unique_text(values: Iterable[str]) -> list[str]:
+    result: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        compact = " ".join(str(value).split())
+        normalized = compact.casefold()
+        if compact and normalized not in seen:
+            seen.add(normalized)
+            result.append(compact)
+    return result
+
+
+def _observable_facets(frames: Iterable[RuntimeFrame]) -> tuple[list[str], list[str], list[str]]:
+    actions: list[str] = []
+    objects: list[str] = []
+    visual_states: list[str] = []
+    for frame in frames:
+        raw = frame.raw_metadata
+        for detection in raw.get("detections", []):
+            if not isinstance(detection, dict):
+                continue
+            label = str(detection.get("label", "")).strip()
+            action = str(detection.get("action", "")).strip()
+            if label:
+                objects.append(label)
+            if action:
+                actions.append(f"{label}: {action}" if label else action)
+        visual_states.extend(_spatial_phrases(raw))
+    return (
+        _unique_text(actions),
+        _unique_text(objects),
+        _unique_text(visual_states),
+    )
 
 
 def _scene_profile(scene: MicroScene, frame_by_n: dict[int, RuntimeFrame]) -> set[str]:
@@ -105,23 +168,37 @@ def _fallback_candidates(
         scene_ids = [scene.scene_id for scene in current_scenes]
         frame_numbers = [n for scene in current_scenes for n in scene.frame_indices]
         asr_indices = sorted({i for scene in current_scenes for i in scene.asr_segment_indices})
-        text = " ".join(
-            _frame_text(frame_by_n[n]) for n in frame_numbers[: min(len(frame_numbers), 8)]
+        selected_frames = [frame_by_n[n] for n in frame_numbers if n in frame_by_n]
+        descriptions = _unique_text(
+            str(frame.raw_metadata.get("detailed_caption_vi", ""))
+            or str(frame.raw_metadata.get("caption_vi", ""))
+            or str(frame.raw_metadata.get("detailed_caption", ""))
+            or str(frame.raw_metadata.get("caption", ""))
+            for frame in selected_frames
         )
+        text = " ".join(_frame_text(frame) for frame in selected_frames)
         speech = " ".join(segments[index].text for index in asr_indices)
-        words = Counter(_words(f"{text} {speech}"))
+        words = Counter(_terms(f"{text} {speech}"))
         topics = [item for item, _ in words.most_common(8)]
-        title = f"News story {len(candidates) + 1}"
+        actions, objects, visual_states = _observable_facets(selected_frames)
+        title = next(
+            (description[:160] for description in descriptions if description),
+            f"Video segment {len(candidates) + 1}",
+        )
+        summary_parts = _unique_text([speech, *descriptions[:8]])
         candidates.append(
             StoryCandidate(
                 title=title,
-                summary=" ".join((speech or text).split())[:600],
+                summary=" ".join(summary_parts)[:1200],
                 topics=topics,
                 entities=[],
                 locations=[],
                 scene_ids=scene_ids,
                 asr_segment_indices=asr_indices,
                 uncertain=True,
+                actions=actions[:20],
+                objects=objects[:30],
+                visual_states=visual_states[:30],
             )
         )
         current_scenes = []
@@ -147,13 +224,20 @@ def _fallback_candidates(
     return candidates
 
 
-class NewsSummarizer:
-    """Use Gemini when explicitly enabled; otherwise remain deterministic/offline."""
+class VideoSummarizer:
+    """Use Gemini when enabled; otherwise build a metadata-only summary."""
 
-    def __init__(self, *, use_llm: bool, require_llm: bool = False) -> None:
+    def __init__(
+        self,
+        *,
+        use_llm: bool,
+        require_llm: bool = False,
+        domain_hint: str = "general visual content",
+    ) -> None:
         self.mode = "deterministic_fallback"
         self.model = "none"
-        self.prompt_version = "news-summary-v1-fallback"
+        self.prompt_version = "general-video-summary-v3-fallback"
+        self.domain_hint = " ".join(domain_hint.split()) or "general visual content"
         self.client = None
         self._last_request_at = 0.0
         self._request_interval_seconds = 4.2
@@ -185,7 +269,7 @@ class NewsSummarizer:
             "GEMINI_VISUAL_MODEL"
         ) or "gemini-2.5-flash"
         self.mode = "gemini"
-        self.prompt_version = "news-summary-v2"
+        self.prompt_version = "general-video-summary-v3"
 
     def _generate_json(
         self,
@@ -246,7 +330,7 @@ class NewsSummarizer:
         scene_ids = {scene.scene_id for scene in scenes}
         candidates: list[StoryCandidate] = []
         for window in windows:
-            prompt = self._window_prompt(window)
+            prompt = self._window_prompt(window, domain_hint=self.domain_hint)
             try:
                 payload = self._generate_json(
                     prompt,
@@ -283,7 +367,7 @@ class NewsSummarizer:
                     continue
                 candidates.append(
                     StoryCandidate(
-                        title=title or "Unlabelled news event",
+                        title=title or "Unlabelled semantic episode",
                         summary=raw_summary,
                         topics=_clean_strings(raw.get("topics")),
                         entities=_clean_strings(raw.get("entities")),
@@ -292,6 +376,9 @@ class NewsSummarizer:
                         asr_segment_indices=asr_refs,
                         source_window_id=window.get("window_id"),
                         uncertain=bool(raw.get("uncertain", False)),
+                        actions=_clean_strings(raw.get("actions")),
+                        objects=_clean_strings(raw.get("objects")),
+                        visual_states=_clean_strings(raw.get("visual_states")),
                     )
                 )
         if not candidates:
@@ -301,15 +388,25 @@ class NewsSummarizer:
         return candidates
 
     @staticmethod
-    def _window_prompt(window: dict[str, Any]) -> str:
+    def _window_prompt(
+        window: dict[str, Any],
+        *,
+        domain_hint: str = "general visual content",
+    ) -> str:
         return (
-            "You are extracting evidence-grounded events from a Vietnamese news video window. "
-            "Use only the supplied caption, objects, OCR and ASR. Do not invent facts, "
-            "timestamps, or references. Write every event title and summary in natural Vietnamese. "
-            "Return a JSON object with an events array; each event has "
-            "title, summary, topics, entities, locations, scene_refs, asr_segment_refs, "
-            "uncertain. Keep anchor and B-roll together when they discuss the same story. "
-            "Split when the ASR explicitly changes topic.\n\n"
+            "You are extracting ordered, evidence-grounded semantic episodes from a video window. "
+            f"The weak domain hint is {domain_hint!r}; visible metadata is authoritative. "
+            "Use only the supplied frame captions, detections, object actions, spatial relations, "
+            "OCR and ASR. Do not invent identities, motion, causality, timestamps, or references. "
+            "A semantic episode is a coherent activity, situation, demonstration step, discussion, "
+            "performance passage or scene—not an individual static frame. Use visual evidence even "
+            "when ASR is absent. Merge adjacent frames that show the same episode; split on a real "
+            "change of activity, subject, setting or topic. Describe observable actions and state/"
+            "relation changes conservatively; do not claim an exact action boundary from sparse frames. "
+            "Write every title and summary in natural Vietnamese. Return a JSON object with an events "
+            "array; each event has title, summary, topics, entities, locations, actions, objects, "
+            "visual_states, scene_refs, asr_segment_refs and uncertain. visual_states contains concise "
+            "observable relations or conditions, not speculation.\n\n"
             + json.dumps(window, ensure_ascii=False)
         )
 
@@ -323,11 +420,15 @@ class NewsSummarizer:
         if self.client is not None and candidates:
             try:
                 payload = self._generate_json(
-                    "Create a concise bilingual video summary from these ordered, evidence-grounded "
-                    "Vietnamese news stories. Return a JSON object with summary_vi, summary_en, "
-                    "main_topics, main_entities, main_locations. summary_vi must be natural Vietnamese; "
-                    "summary_en must be natural English and must not be a copy of summary_vi. "
-                    "Do not add facts.\n\n"
+                    "Create a concise bilingual retrieval-oriented video summary from these ordered, "
+                    "evidence-grounded semantic episodes. Cover the video's identity-defining subjects, "
+                    "setting, objects, activities and coarse chronological progression. Do not turn "
+                    "single-frame observations into unsupported temporal claims and do not add facts. "
+                    "Return summary_vi, summary_en, main_topics, main_entities, main_locations, "
+                    "main_actions, main_objects, main_visual_states and chronological_outline. "
+                    "summary_vi must be natural Vietnamese; summary_en must be natural English and "
+                    "must not copy summary_vi. chronological_outline must be short Vietnamese phrases "
+                    "in observed order.\n\n"
                     + json.dumps([candidate.__dict__ for candidate in candidates], ensure_ascii=False),
                     schema=VIDEO_SUMMARY_SCHEMA,
                     response_kind="video summary",
@@ -344,6 +445,10 @@ class NewsSummarizer:
                     "main_topics": _clean_strings(payload.get("main_topics")),
                     "main_entities": _clean_strings(payload.get("main_entities")),
                     "main_locations": _clean_strings(payload.get("main_locations")),
+                    "main_actions": _clean_strings(payload.get("main_actions")),
+                    "main_objects": _clean_strings(payload.get("main_objects")),
+                    "main_visual_states": _clean_strings(payload.get("main_visual_states")),
+                    "chronological_outline": _clean_strings(payload.get("chronological_outline")),
                 }
             except Exception:
                 if self._require_llm:
@@ -355,6 +460,9 @@ class NewsSummarizer:
         topics = _unique(item for candidate in candidates for item in candidate.topics)
         entities = _unique(item for candidate in candidates for item in candidate.entities)
         locations = _unique(item for candidate in candidates for item in candidate.locations)
+        actions = _unique(item for candidate in candidates for item in candidate.actions)
+        objects = _unique(item for candidate in candidates for item in candidate.objects)
+        visual_states = _unique(item for candidate in candidates for item in candidate.visual_states)
         summary = " ".join(candidate.summary for candidate in candidates[:12]).strip()
         return {
             "video_id": video_id,
@@ -364,6 +472,12 @@ class NewsSummarizer:
             "main_topics": topics[:20],
             "main_entities": entities[:20],
             "main_locations": locations[:20],
+            "main_actions": actions[:30],
+            "main_objects": objects[:40],
+            "main_visual_states": visual_states[:30],
+            "chronological_outline": [
+                candidate.title for candidate in candidates[:20] if candidate.title
+            ],
         }
 
 
@@ -404,3 +518,8 @@ def _unique(values: Iterable[str]) -> list[str]:
             seen.add(normalized)
             result.append(value)
     return result
+
+
+# Compatibility for existing imports while the rest of the pipeline migrates
+# away from the original news-only naming.
+NewsSummarizer = VideoSummarizer

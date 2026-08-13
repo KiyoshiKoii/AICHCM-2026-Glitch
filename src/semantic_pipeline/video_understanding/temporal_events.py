@@ -117,13 +117,18 @@ def build_temporal_events(
         segment_id = str(segment.get("segment_id", ""))
         segment_title = str(segment.get("title", "")).strip()
         segment_summary = str(segment.get("summary", "")).strip()
-        generic_title = not segment_title or segment_title.casefold().startswith("news story ")
+        generic_title = not segment_title or segment_title.casefold().startswith(
+            ("news story ", "video segment ")
+        )
         segment_terms = [
             segment_title,
             *([] if generic_title else [segment_summary]),
             *([] if generic_title else [str(item) for item in segment.get("topics", [])]),
             *([] if generic_title else [str(item) for item in segment.get("entities", [])]),
             *([] if generic_title else [str(item) for item in segment.get("locations", [])]),
+            *[str(item) for item in segment.get("actions", [])],
+            *[str(item) for item in segment.get("objects", [])],
+            *[str(item) for item in segment.get("visual_states", [])],
         ]
         scenes = segment.get("scenes", [])
         if not isinstance(scenes, list):
