@@ -39,6 +39,9 @@ def test_video_search_text_contains_every_story_summary() -> None:
             "topics": [],
             "entities": [],
             "locations": ["Bình Định"],
+            "actions": ["đầu bếp cắt nấm"],
+            "objects": ["nấm", "dao"],
+            "visual_states": ["nấm nằm trong tô"],
         },
     ]
     search_text = _build_search_text(summary, stories)
@@ -46,6 +49,8 @@ def test_video_search_text_contains_every_story_summary() -> None:
 
     assert "Nhiệt độ cao nhất trong 110 năm." in search_text
     assert "Cháy xưởng sản xuất ván gỗ." in search_text
+    assert "đầu bếp cắt nấm" in search_text
+    assert "nấm nằm trong tô" in search_text
     assert coverage["segments_in_search_text"] == 2
     assert not coverage["missing_segment_titles"]
     assert not coverage["missing_segment_summaries"]

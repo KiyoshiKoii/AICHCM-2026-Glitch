@@ -6,11 +6,14 @@ from semantic_pipeline.video_understanding.llm_schemas import (
     VIDEO_SUMMARY_SCHEMA,
     WINDOW_SUMMARY_SCHEMA,
 )
+from semantic_pipeline.video_understanding.models import MicroScene, RuntimeFrame
 from semantic_pipeline.video_understanding.summarizer import (
     NewsSummarizer,
+    _fallback_candidates,
     _is_program_intro,
     _normalize_payload,
 )
+from semantic_pipeline.video_understanding.timeline_builder import _compact_frame
 
 
 def test_window_schema_requires_object_with_events() -> None:
@@ -26,6 +29,10 @@ def test_video_schema_has_distinct_bilingual_fields() -> None:
         "main_topics",
         "main_entities",
         "main_locations",
+        "main_actions",
+        "main_objects",
+        "main_visual_states",
+        "chronological_outline",
     ]
 
 
@@ -45,9 +52,76 @@ def test_non_object_window_payload_is_rejected() -> None:
 
 
 def test_window_prompt_requires_vietnamese() -> None:
-    prompt = NewsSummarizer._window_prompt({"window_id": "w1"})
+    prompt = NewsSummarizer._window_prompt(
+        {"window_id": "w1"},
+        domain_hint="food and cooking",
+    )
     assert "natural Vietnamese" in prompt
     assert "JSON object with an events array" in prompt
+    assert "food and cooking" in prompt
+    assert "spatial relations" in prompt
+    assert "Vietnamese news video" not in prompt
+
+
+def _cooking_frame() -> RuntimeFrame:
+    return RuntimeFrame(
+        video_id="L26_V001",
+        keyframe_n=1,
+        frame_id="L26_V001_f0001",
+        timestamp_ms=1_000,
+        fps=25.0,
+        native_frame_idx=25,
+        raw_metadata={
+            "caption": "A cook cuts a mushroom over a bowl.",
+            "detailed_caption_vi": "Đầu bếp dùng dao cắt nấm phía trên một chiếc tô.",
+            "detections": [
+                {"object_id": "cook_0", "label": "cook", "action": "cutting"},
+                {"object_id": "mushroom_0", "label": "mushroom", "action": ""},
+                {"object_id": "bowl_0", "label": "bowl", "action": ""},
+            ],
+            "spatial_relations": [
+                {
+                    "subject_id": "mushroom_0",
+                    "predicate": "above",
+                    "object_id": "bowl_0",
+                }
+            ],
+        },
+    )
+
+
+def test_compact_frame_preserves_resolved_spatial_relations() -> None:
+    compact = _compact_frame(_cooking_frame())
+
+    assert compact["spatial_relations"] == [
+        {
+            "subject_id": "mushroom_0",
+            "subject_label": "mushroom",
+            "predicate": "above",
+            "object_id": "bowl_0",
+            "object_label": "bowl",
+        }
+    ]
+
+
+def test_metadata_fallback_keeps_generic_actions_objects_and_states() -> None:
+    frame = _cooking_frame()
+    scene = MicroScene(
+        scene_id="L26_V001_scene_0001",
+        scene_type="food_preparation",
+        frame_indices=[1],
+        start_ms=1_000,
+        end_ms=1_000,
+        representative_keyframe_n=1,
+        asr_segment_indices=[],
+    )
+
+    candidate = _fallback_candidates([scene], [frame], {})[0]
+
+    assert candidate.actions == ["cook: cutting"]
+    assert {"cook", "mushroom", "bowl"}.issubset(candidate.objects)
+    assert candidate.visual_states == ["mushroom above bowl"]
+    assert not candidate.title.startswith("News story")
 
 
 def test_program_intro_is_not_a_news_event() -> None:
