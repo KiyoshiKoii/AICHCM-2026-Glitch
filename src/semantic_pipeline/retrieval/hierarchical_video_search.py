@@ -135,9 +135,24 @@ def build_hierarchical_documents(
         topics = _strings(raw.get("topics"))
         entities = _strings(raw.get("entities"))
         locations = _strings(raw.get("locations"))
+        actions = _strings(raw.get("actions"))
+        objects = _strings(raw.get("objects"))
+        visual_states = _strings(raw.get("visual_states"))
         title = str(raw.get("title", "")).strip()
         description = str(raw.get("summary", "")).strip()
-        search_text = " ".join([title, description, *topics, *entities, *locations, asr_text]).strip()
+        search_text = " ".join(
+            [
+                title,
+                description,
+                *topics,
+                *entities,
+                *locations,
+                *actions,
+                *objects,
+                *visual_states,
+                asr_text,
+            ]
+        ).strip()
         segment_documents.append(
             {
                 "document_type": "segment",
