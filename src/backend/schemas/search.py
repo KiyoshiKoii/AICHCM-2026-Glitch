@@ -245,6 +245,26 @@ class TextSearchRequest(BaseModel):
         return self
 
 
+class TemporalEventSearchRequest(BaseModel):
+    query: str = Field(min_length=2, max_length=5000)
+    batch_ids: list[str] = Field(default_factory=list, max_length=10)
+    video_ids: list[str] = Field(default_factory=list, max_length=100)
+    top_k_videos: int = Field(default=20, ge=1, le=100)
+
+    @field_validator("query")
+    @classmethod
+    def normalize_temporal_query(cls, value: str) -> str:
+        normalized = "\n".join(" ".join(line.split()) for line in value.splitlines()).strip()
+        if not normalized:
+            raise ValueError("query must not be blank")
+        return normalized
+
+    @field_validator("batch_ids", "video_ids", mode="before")
+    @classmethod
+    def normalize_temporal_ids(cls, value: Any) -> Any:
+        return _normalize_filter_values(value)
+
+
 class UpstreamResult(BaseModel):
     frame_id: str = Field(min_length=1)
     score: float | None = None

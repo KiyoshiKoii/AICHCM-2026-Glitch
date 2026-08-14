@@ -371,3 +371,60 @@ python -m pytest src/semantic_pipeline/tests/test_ocr_accuracy.py -v
 # Chạy test với output chi tiết (hiện kết quả đo performance)
 python -m pytest src/semantic_pipeline/tests -v -s
 ```
+
+### Video-understanding cho mọi video BTC
+
+Pipeline hướng tin tức được triển khai riêng tại
+[`VIDEO_UNDERSTANDING_PILOT.md`](VIDEO_UNDERSTANDING_PILOT.md). Pipeline chỉ đọc
+caption Gemini, ASR và `map-keyframes`; output cố định gồm đúng ba file
+`timeline.json`, `video_summary.json` và `validation_report.json`.
+
+Cấu trúc local được quy định tại `data/processed/README.md`. Semantic search chỉ
+đọc `data/processed/video_understanding`; object index BTC, multimodal merge thử
+nghiệm và các benchmark report cũ không phải runtime input. Artifact sinh lại
+được dưới `data/processed/` được Git ignore, còn quality report của từng video
+được đặt cạnh timeline trong chính thư mục `pilot/`.
+
+`--video-id` nhận mọi ID đúng dạng `Lxx_Vyyy` và tự suy ra batch `Lxx` cho
+caption/output. Không còn đường dẫn hay segment ID khóa cứng theo `L22_V001`.
+
+Gemini dùng structured JSON schema cho từng evidence window và cho summary cuối
+video. Story title/summary được yêu cầu bằng tiếng Việt; `summary_vi` và
+`summary_en` là hai trường khác ngôn ngữ. Các card trùng do window overlap được
+merge trước khi publish, còn đoạn mở đầu chương trình không được coi là story.
+
+Model hiện dùng cho summary là `gemini-3.1-flash-lite`. Free-tier được giới hạn
+tự động bằng `GEMINI_REQUEST_INTERVAL_SECONDS` (mặc định `4.2`) và retry bounded
+khi gặp HTTP 429. Chạy pilot thật:
+
+```powershell
+python src/semantic_pipeline/video_understanding/cli.py `
+  --video-id L22_V001 `
+  --llm `
+  --require-llm
+```
+
+Chạy tuần tự tất cả video caption đã có trong một batch (ví dụ `L22`):
+
+```powershell
+python src/semantic_pipeline/video_understanding/cli.py `
+  --batch-id L22 `
+  --llm `
+  --require-llm
+```
+
+Video retrieval theo ba tầng `video → segment → frame`. `search_text` của video
+gồm cả title và summary của mọi segment, còn keyframe cuối được xếp hạng bằng
+caption/object/OCR/ASR trong segment đã chọn. Chạy kiểm tra cục bộ:
+
+Temporal summary-only retrieval giữ nguyên dấu tiếng Việt cho các constraint
+(`đèn` khác `đen`, `lồng` khác `lông`), chỉ gom bằng chứng trong cùng một cửa sổ
+ngữ nghĩa và không ghép token rải rác giữa các field/story. Alias Gemini bị loại
+nếu chỉ giữ một phần của compound concept. `top_k_videos` là số kết quả tối đa:
+video thiếu một constraint bắt buộc sẽ không được thêm vào `candidates` chỉ để
+lấp đủ top K. Regression trên toàn bộ L22 với query `phố lồng đèn` trả đúng
+`L22_V010_f0086`, `L22_V014_f0062` và loại `L22_V001`.
+
+```powershell
+python src/semantic_pipeline/retrieval/video_cli.py "nhiệt độ Barcelona cao nhất trong 110 năm"
+```

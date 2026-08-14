@@ -10,6 +10,7 @@ function Sidebar({
   onSearch,
   onImageSearch,
   onVqaSearch,
+  onTemporalSearch,
   onFiltersChange,
   filters,
   filterResetKey,
@@ -39,6 +40,7 @@ function Sidebar({
         onSearch={onSearch}
         onImageSearch={onImageSearch}
         onVqaSearch={onVqaSearch}
+        onTemporalSearch={onTemporalSearch}
         filters={filters}
       />
 

@@ -7,7 +7,7 @@ from backend.core.errors import (
     ImageValidationError,
     UnsupportedImageTypeError,
 )
-from backend.schemas.search import TextSearchRequest, TextSearchResponse
+from backend.schemas.search import TemporalEventSearchRequest, TextSearchRequest, TextSearchResponse
 from backend.routers.dependencies import get_search_service
 from backend.services.search_orchestrator import SearchService
 
@@ -53,4 +53,17 @@ async def search_image(
         content=content,
         content_type=content_type,
         top_k=top_k
+    )
+
+
+@router.post("/temporal-events")
+async def search_temporal_events(
+    body: TemporalEventSearchRequest,
+    service: Annotated[SearchService, Depends(get_search_service)],
+) -> dict:
+    return await service.search_temporal_events(
+        body.query,
+        batch_ids=body.batch_ids,
+        video_ids=body.video_ids,
+        top_k_videos=body.top_k_videos,
     )

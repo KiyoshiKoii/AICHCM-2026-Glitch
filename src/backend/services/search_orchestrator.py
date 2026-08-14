@@ -208,3 +208,49 @@ class SearchService:
                 results=results,
             )
         )
+
+    async def search_temporal_events(
+        self,
+        query: str,
+        *,
+        batch_ids: list[str] | None = None,
+        video_ids: list[str] | None = None,
+        top_k_videos: int = 20,
+    ) -> dict[str, Any]:
+        """Run the same-video ordered event mode through Dev2."""
+
+        try:
+            payload = await self.dev2.search_temporal_events(
+                {
+                    "query": query,
+                    "batch_ids": batch_ids or [],
+                    "video_ids": video_ids or [],
+                    "top_k_videos": top_k_videos,
+                }
+            )
+        except Exception as exc:
+            raise UpstreamError(f"Failed to fetch temporal events from Dev2: {exc}") from exc
+        if not isinstance(payload, dict):
+            raise UpstreamError("Dev2 temporal response must be an object")
+        data = payload.get("data")
+        if isinstance(data, dict):
+            from backend.utils.thumbnail import build_thumbnail_url
+
+            selected_video = data.get("selected_video") or {}
+            for event in data.get("events", []):
+                if not isinstance(event, dict) or not event.get("frame_id"):
+                    continue
+                event.setdefault("video_name", selected_video.get("video_id"))
+                event.setdefault("frame_index", event.get("native_frame_idx"))
+                event["thumbnail_url"] = build_thumbnail_url(
+                    str(event["frame_id"]), self.settings.thumbnail_base_url
+                )
+            for candidate in data.get("candidates", []):
+                if not isinstance(candidate, dict) or not candidate.get("frame_id"):
+                    continue
+                candidate.setdefault("video_name", candidate.get("video_id"))
+                candidate.setdefault("frame_index", candidate.get("native_frame_idx"))
+                candidate["thumbnail_url"] = build_thumbnail_url(
+                    str(candidate["frame_id"]), self.settings.thumbnail_base_url
+                )
+        return payload

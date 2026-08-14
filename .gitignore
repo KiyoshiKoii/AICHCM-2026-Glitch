@@ -68,3 +68,24 @@ data/videos/
 # Dev 4 (Audio Pipeline) - WAV tạm sinh ra khi chạy ASR + model đã convert (~3GB)
 data/audio_cache/
 data/models/
+
+# Generated processed outputs are local and reproducible. Keep only the
+# directory contract and final video summaries in version control.
+data/processed/*
+!data/processed/README.md
+!data/processed/video_understanding/
+data/processed/video_understanding/*
+!data/processed/video_understanding/L*/
+data/processed/video_understanding/L*/*
+!data/processed/video_understanding/L*/L*_V*/
+data/processed/video_understanding/L*/L*_V*/*
+!data/processed/video_understanding/L*/L*_V*/pilot/
+data/processed/video_understanding/L*/L*_V*/pilot/*
+!data/processed/video_understanding/L*/L*_V*/pilot/video_summary.json
+
+# Large/generated BTC and Gemini artifacts; keep compact fixtures or manifests
+# tracked instead of per-video caption, ASR and raw-data dumps.
+data/metadata/caption/
+data/metadata/metadata_asr/
+data/external/
+data/raw/

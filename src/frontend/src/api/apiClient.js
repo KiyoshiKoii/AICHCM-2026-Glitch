@@ -88,3 +88,23 @@ export const getFrameContext = async (frameId, window = 5) => {
   }
   return response.json();
 };
+
+export const searchTemporalEvents = async (
+  query,
+  { batchIds = [], videoIds = [], topKVideos = 20 } = {},
+) => {
+  const response = await fetch('/api/v1/search/temporal-events', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query,
+      batch_ids: batchIds,
+      video_ids: videoIds,
+      top_k_videos: topKVideos,
+    }),
+  });
+  if (!response.ok) {
+    throw new Error(`Temporal event search failed with status ${response.status}`);
+  }
+  return response.json();
+};

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException
@@ -70,6 +71,11 @@ class InteractionQuery(BaseModel):
 
 
 from semantic_pipeline.retrieval.elasticsearch_backend import ElasticsearchTextSearch
+from semantic_pipeline.retrieval.temporal_event_search import (
+    TemporalEventSearch,
+    discover_temporal_corpus,
+)
+from semantic_pipeline.retrieval.temporal_query_expander import GeminiTemporalQueryParser
 
 
 class TextSearchRequest(BaseModel):
@@ -120,9 +126,34 @@ class TextSearchRequest(BaseModel):
         return result
 
 
+class TemporalEventRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    query: str = Field(min_length=2, max_length=5000)
+    batch_ids: list[str] = Field(default_factory=list, max_length=10)
+    video_ids: list[str] = Field(default_factory=list, max_length=100)
+    top_k_videos: int = Field(default=20, ge=1, le=100)
+
+    @field_validator("query")
+    @classmethod
+    def normalize_query(cls, value: str) -> str:
+        normalized = "\n".join(" ".join(line.split()) for line in value.splitlines()).strip()
+        if not normalized:
+            raise ValueError("query must not be blank")
+        return normalized
+
+    @field_validator("batch_ids", "video_ids", mode="before")
+    @classmethod
+    def normalize_ids(cls, values):
+        if isinstance(values, str):
+            values = re.split(r"[,;\s]+", values)
+        return [str(value).strip().upper() for value in values or [] if str(value).strip()]
+
+
 def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI:
     app = FastAPI(title="AIC semantic retrieval", version="1.0")
     app.state.search_backend = search_backend
+    app.state.temporal_query_parser = GeminiTemporalQueryParser()
 
     def get_backend() -> ElasticsearchTextSearch:
         backend = app.state.search_backend
@@ -165,6 +196,33 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
             raise HTTPException(status_code=422, detail=str(exc)) from exc
         except Exception as exc:
             raise HTTPException(status_code=503, detail=f"Elasticsearch search failed: {exc}") from exc
+
+    @app.post("/internal/search/temporal-events")
+    def search_temporal_events(body: TemporalEventRequest) -> dict:
+        try:
+            corpora = discover_temporal_corpus(
+                output_root=Path("data/processed/video_understanding"),
+                caption_dir=Path("data/metadata/caption"),
+                asr_dir=Path("data/metadata/metadata_asr"),
+                map_dir=Path("data/map-keyframes"),
+                keyframe_dir=Path("data/keyframes"),
+                batch_ids=body.batch_ids,
+                video_ids=body.video_ids,
+            )
+            return {
+                "status": "success",
+                "data": TemporalEventSearch(
+                    corpora,
+                    query_parser=app.state.temporal_query_parser,
+                ).search(
+                    body.query,
+                    top_k_videos=body.top_k_videos,
+                ),
+            }
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        except Exception as exc:
+            raise HTTPException(status_code=503, detail=f"Temporal search failed: {exc}") from exc
 
     return app
 

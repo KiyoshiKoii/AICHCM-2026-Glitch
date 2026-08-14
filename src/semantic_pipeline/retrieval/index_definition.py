@@ -58,6 +58,7 @@ _DEFINITION = {
             "video_id": {"type": "keyword"},
             "program_code": {"type": "keyword", "normalizer": "lowercase_folded"},
             "frame_number": {"type": "integer"},
+            "keyframe_number": {"type": "integer"},
             "visual_source_frame_id": {"type": "keyword"},
             "ocr_source_frame_id": {"type": "keyword"},
             "quality_flags": {"type": "keyword"},
