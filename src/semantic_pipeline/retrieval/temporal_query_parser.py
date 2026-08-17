@@ -9,10 +9,18 @@ from dataclasses import dataclass
 
 EVENT_LINE_RE = re.compile(r"(?im)^\s*(E\d+)\s*[:：]\s*(.+?)\s*$")
 FIRST_RE = re.compile(r"\b(dau tien|lan dau|first|earliest|begins?|start(?:s|ed)?|bat dau)\b")
+START_RE = re.compile(r"\b(bat dau|begins?|start(?:s|ed)?)\b")
 LAST_RE = re.compile(r"\b(cuoi cung|last|latest|end(?:s|ed)?|final|hoan tat|hoan toan)\b")
-CONTACT_RE = re.compile(r"\b(tiep xuc|cham|contact|touch|first contact)\b")
+CONTACT_RE = re.compile(r"\b(tiep xuc|cham|contact|touch(?:es|ed|ing)?|first contact)\b")
 COMPLETE_RE = re.compile(r"\b(hoan toan|completely|fully|complete|completed|roi khoi|rời khỏi)\b")
-VISIBLE_RE = re.compile(r"\b(thay|thay thay|visible|shown|see|seen|appear|appears|first visible)\b")
+VISIBLE_RE = re.compile(r"\b(thay|thay thay|visible|shown|see|seen|appear(?:s|ed|ance)?|first visible)\b")
+ACTION_COMPLETION_RE = re.compile(r"\b(hoan tat|het|complete|completed|roi khoi|poured out)\b")
+FULL_STATE_RE = re.compile(r"\b(hoan toan|completely|fully)\b")
+ACTION_HINT_RE = re.compile(
+    r"\b(cut(?:s|ting)?|slic(?:e|es|ed|ing)|chop(?:s|ped|ping)?|cat|thai|"
+    r"pour(?:s|ed|ing)?|stir(?:s|red|ring)?|khuay|fold(?:s|ed|ing)?|gap|"
+    r"rotat(?:e|es|ed|ing)|quay)\b"
+)
 CONCEPT_STOPWORDS = frozenset(
     {
         "ban", "tin", "ve", "cua", "cho", "trong", "tai", "voi", "va",
@@ -66,6 +74,12 @@ class TemporalEventQuery:
     required_anchor: str
     tokens: frozenset[str]
     required_concept_groups: tuple[tuple[str, ...], ...] = ()
+    event_type: str = "action_event"
+    selection_rule: str = "representative"
+    retrieval_prompts: tuple[str, ...] = ()
+    target_predicates: tuple[str, ...] = ()
+    context_predicates: tuple[str, ...] = ()
+    transition_required: bool = False
 
 
 @dataclass(frozen=True)
@@ -75,19 +89,23 @@ class ParsedTemporalQuery:
     context_concept_groups: tuple[tuple[str, ...], ...] = ()
 
 
-def _anchor_for(text: str) -> tuple[str, str]:
+def _semantics_for(text: str) -> tuple[str, str, str, str, bool]:
     folded = fold_text(text)
-    if LAST_RE.search(folded):
-        return "last_complete", "last_complete"
     if CONTACT_RE.search(folded):
-        return "first_contact", "first_contact"
-    if VISIBLE_RE.search(folded):
-        return "first_visible", "first_visible"
-    if COMPLETE_RE.search(folded):
-        return "complete", "state_complete"
+        return "first_contact", "first_contact", "first_contact", "earliest_true", True
+    if START_RE.search(folded):
+        return "first", "action_start", "action_start", "earliest_true", True
+    if ACTION_COMPLETION_RE.search(folded):
+        return "last_complete", "last_complete", "action_completion", "latest_true", True
+    if FULL_STATE_RE.search(folded):
+        return "complete", "state_complete", "state_attainment", "earliest_true", True
+    if VISIBLE_RE.search(folded) and not ACTION_HINT_RE.search(folded):
+        return "first_visible", "first_visible", "first_appearance", "earliest_true", True
+    if LAST_RE.search(folded):
+        return "last", "last_complete", "last_occurrence", "latest_true", True
     if FIRST_RE.search(folded):
-        return "first", "action_start"
-    return "representative", "representative"
+        return "first", "action_start", "action_start", "earliest_true", True
+    return "representative", "representative", "action_event", "representative", False
 
 
 def parse_temporal_query(query: str) -> ParsedTemporalQuery:
@@ -96,7 +114,7 @@ def parse_temporal_query(query: str) -> ParsedTemporalQuery:
         raise ValueError("temporal query must not be blank")
     matches = list(EVENT_LINE_RE.finditer(query))
     if not matches:
-        operator, anchor = _anchor_for(normalized)
+        operator, anchor, event_type, selection_rule, transition_required = _semantics_for(normalized)
         return ParsedTemporalQuery(
             # A summary-only request is still a video-level query.  Preserve
             # it as shared context so the retriever can select the video from
@@ -111,6 +129,12 @@ def parse_temporal_query(query: str) -> ParsedTemporalQuery:
                     anchor,
                     frozenset(query_tokens(normalized)),
                     fallback_concept_groups(normalized),
+                    event_type,
+                    selection_rule,
+                    (normalized,),
+                    (normalized,),
+                    (),
+                    transition_required,
                 ),
             ),
             context_concept_groups=fallback_concept_groups(normalized),
@@ -119,7 +143,7 @@ def parse_temporal_query(query: str) -> ParsedTemporalQuery:
     events: list[TemporalEventQuery] = []
     for position, match in enumerate(matches, start=1):
         label, text = match.group(1).upper(), " ".join(match.group(2).split())
-        operator, anchor = _anchor_for(text)
+        operator, anchor, event_type, selection_rule, transition_required = _semantics_for(text)
         events.append(
             TemporalEventQuery(
                 position,
@@ -129,6 +153,12 @@ def parse_temporal_query(query: str) -> ParsedTemporalQuery:
                 anchor,
                 frozenset(query_tokens(text)),
                 fallback_concept_groups(text),
+                event_type,
+                selection_rule,
+                (text,),
+                (text,),
+                (),
+                transition_required,
             )
         )
     return ParsedTemporalQuery(
