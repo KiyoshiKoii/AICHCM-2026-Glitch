@@ -8,6 +8,7 @@ must ask Gemini about the actual image and leave every unflagged record intact.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import time
 from collections import defaultdict
@@ -42,6 +43,7 @@ from .extractor import (
 
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+DEFAULT_REPAIR_RESUME_STATE_NAME = ".repair_resume.json"
 
 
 @dataclass(frozen=True)
@@ -191,6 +193,96 @@ def _build_batches(
     return batches
 
 
+def default_repair_resume_state_path(output_dir: str | Path) -> Path:
+    """Keep the repair checkpoint beside the caption artifacts it protects."""
+    return Path(output_dir) / DEFAULT_REPAIR_RESUME_STATE_NAME
+
+
+def _resume_settings(
+    *,
+    model_name: str,
+    max_output_tokens: int,
+    youtube_metadata_path: str | Path,
+    use_video_context: bool,
+    with_spatial: bool,
+) -> dict[str, Any]:
+    return {
+        "model_name": model_name,
+        "max_output_tokens": max_output_tokens,
+        "youtube_metadata_path": str(Path(youtube_metadata_path).resolve()),
+        "use_video_context": use_video_context,
+        "with_spatial": with_spatial,
+    }
+
+
+def _resume_run_key(settings: dict[str, Any]) -> str:
+    encoded = json.dumps(settings, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def _load_resume_document(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {"runs": {}}
+    if not path.is_file():
+        raise ValueError(f"Repair resume state is not a file: {path}")
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        raise ValueError(f"Repair resume state is invalid JSON: {path}") from error
+    if not isinstance(raw, dict) or not isinstance(raw.get("runs"), dict):
+        raise ValueError(f"Repair resume state has an invalid format: {path}")
+    return raw
+
+
+def _completed_frame_ids_from_state(
+    document: dict[str, Any], run_key: str
+) -> set[str]:
+    entry = document["runs"].get(run_key)
+    if entry is None:
+        return set()
+    if not isinstance(entry, dict):
+        raise ValueError("Repair resume state contains an invalid run entry")
+    frame_ids = entry.get("completed_frame_ids", [])
+    if not isinstance(frame_ids, list) or not all(isinstance(item, str) for item in frame_ids):
+        raise ValueError("Repair resume state contains invalid completed_frame_ids")
+    for frame_id in frame_ids:
+        parse_frame_id(frame_id)
+    return set(frame_ids)
+
+
+def _completed_frame_ids_with_artifacts(
+    output_dir: Path, frame_ids: set[str]
+) -> set[str]:
+    """Only skip a checkpointed frame when its repaired artifact still exists."""
+    frame_ids_by_video: dict[str, set[str]] = defaultdict(set)
+    for frame_id in frame_ids:
+        frame_ids_by_video[parse_frame_id(frame_id).video_name].add(frame_id)
+
+    completed: set[str] = set()
+    for video_id, requested_ids in frame_ids_by_video.items():
+        path = caption_output_path(output_dir, video_id)
+        if not path.is_file():
+            continue
+        existing = _load_video_records(output_dir, video_id)
+        completed.update(requested_ids.intersection(existing))
+    return completed
+
+
+def _write_resume_document(
+    *,
+    path: Path,
+    document: dict[str, Any],
+    run_key: str,
+    settings: dict[str, Any],
+    completed_frame_ids: set[str],
+) -> None:
+    document["runs"][run_key] = {
+        "settings": settings,
+        "completed_frame_ids": sorted(completed_frame_ids),
+    }
+    write_json_atomically(path, document, overwrite=True)
+
+
 def run_repair(
     *,
     report_paths: Iterable[str | Path],
@@ -214,9 +306,11 @@ def run_repair(
     only_copied_frames: bool = False,
     global_filter_results_path: str | Path = DEFAULT_GLOBAL_FILTER_RESULTS_PATH,
     limit: int | None = None,
+    resume: bool = False,
+    resume_state_path: str | Path | None = None,
     dry_run: bool = False,
 ) -> dict[str, Any]:
-    """Repair flagged metadata without reading or applying deduplication data."""
+    """Repair flagged metadata, optionally resuming after completed batches."""
     if not 1 <= batch_size <= 100:
         raise ValueError("batch_size must be between 1 and 100")
     if not 1 <= requests_per_minute or not 1 <= max_concurrent_requests <= requests_per_minute:
@@ -239,10 +333,39 @@ def run_repair(
         if limit < 1:
             raise ValueError("limit must be at least 1")
         candidates = candidates[:limit]
-    paths_by_frame = resolve_candidate_paths(candidates, keyframe_dir)
+
+    output_root = Path(output_dir)
+    state_path = (
+        Path(resume_state_path)
+        if resume_state_path is not None
+        else default_repair_resume_state_path(output_root)
+    )
+    settings = _resume_settings(
+        model_name=model_name,
+        max_output_tokens=max_output_tokens,
+        youtube_metadata_path=youtube_metadata_path,
+        use_video_context=use_video_context,
+        with_spatial=with_spatial,
+    )
+    run_key = _resume_run_key(settings)
+    state_document = _load_resume_document(state_path)
+    checkpointed_frame_ids = (
+        _completed_frame_ids_from_state(state_document, run_key) if resume else set()
+    )
+    candidate_frame_ids = {candidate.frame_id for candidate in candidates}
+    completed_frame_ids = _completed_frame_ids_with_artifacts(
+        output_root, checkpointed_frame_ids.intersection(candidate_frame_ids)
+    )
+    pending_candidates = [
+        candidate for candidate in candidates if candidate.frame_id not in completed_frame_ids
+    ]
+
+    paths_by_frame = resolve_candidate_paths(pending_candidates, keyframe_dir)
     batches = _build_batches(paths_by_frame, batch_size, max_inline_bytes)
     summary: dict[str, Any] = {
         "candidates": len(candidates),
+        "pending_candidates": len(pending_candidates),
+        "resumed_frames": len(completed_frame_ids),
         "videos": len({candidate.video_id for candidate in candidates}),
         "batches": len(batches),
         "repaired": 0,
@@ -251,11 +374,17 @@ def run_repair(
         "daily_quota_reported": False,
         "dry_run": dry_run,
         "only_copied_frames": only_copied_frames,
+        "resume": resume,
+        "resume_state_path": str(state_path),
     }
+    if resume:
+        print(
+            f"Repair resume: skipped={len(completed_frame_ids)} "
+            f"pending={len(pending_candidates)} state={state_path}"
+        )
     if dry_run or not batches:
         return summary
 
-    output_root = Path(output_dir)
     existing_by_video = {
         video_id: _load_video_records(output_root, video_id)
         for video_id, _ in batches
@@ -347,6 +476,14 @@ def run_repair(
                 existing = existing_by_video[video_id]
                 existing.update({record.frame_id: record for record in records})
                 _write_video_records(output_root, video_id, existing)
+                completed_frame_ids.update(expected_ids)
+                _write_resume_document(
+                    path=state_path,
+                    document=state_document,
+                    run_key=run_key,
+                    settings=settings,
+                    completed_frame_ids=completed_frame_ids,
+                )
                 summary["repaired"] += len(records)
                 summary["api_frames"] += len(records)
                 completed_batches += 1
@@ -413,6 +550,16 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-claimed-score", type=float)
     parser.add_argument("--min-alternate-gap", type=float)
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="skip frames recorded as successfully repaired by the same repair settings",
+    )
+    parser.add_argument(
+        "--resume-state",
+        type=Path,
+        help="repair checkpoint path (default: <output-dir>/.repair_resume.json)",
+    )
     parser.add_argument("--dry-run", action="store_true")
     return parser
 
@@ -441,6 +588,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         max_claimed_score=args.max_claimed_score,
         min_alternate_gap=args.min_alternate_gap,
         limit=args.limit,
+        resume=args.resume,
+        resume_state_path=args.resume_state,
         dry_run=args.dry_run,
     )
     print(json.dumps(summary, ensure_ascii=False))

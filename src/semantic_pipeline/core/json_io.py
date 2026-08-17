@@ -7,9 +7,10 @@ import os
 import threading
 import time
 from pathlib import Path
+from typing import Any
 
 
-def write_json_atomically(path: str | Path, data: list[dict], overwrite: bool = False) -> None:
+def write_json_atomically(path: str | Path, data: Any, overwrite: bool = False) -> None:
     output_path = Path(path).resolve()
     if output_path.exists() and not overwrite:
         raise FileExistsError(
