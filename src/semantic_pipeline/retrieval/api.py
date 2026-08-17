@@ -76,6 +76,8 @@ from semantic_pipeline.retrieval.temporal_event_search import (
     discover_temporal_corpus,
 )
 from semantic_pipeline.retrieval.temporal_query_expander import GeminiTemporalQueryParser
+from semantic_pipeline.retrieval.qwen_video_verifier import QwenTemporalVerifier
+from semantic_pipeline.retrieval.dense_motion_verifier import DenseMotionTemporalVerifier
 
 
 class TextSearchRequest(BaseModel):
@@ -133,6 +135,9 @@ class TemporalEventRequest(BaseModel):
     batch_ids: list[str] = Field(default_factory=list, max_length=10)
     video_ids: list[str] = Field(default_factory=list, max_length=100)
     top_k_videos: int = Field(default=20, ge=1, le=100)
+    verify_with_qwen: bool = False
+    verify_with_dense: bool = False
+    qwen_candidate_events: int = Field(default=3, ge=1, le=5)
 
     @field_validator("query")
     @classmethod
@@ -200,6 +205,15 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
     @app.post("/internal/search/temporal-events")
     def search_temporal_events(body: TemporalEventRequest) -> dict:
         try:
+            if body.verify_with_qwen and body.verify_with_dense:
+                raise ValueError("choose only one temporal verifier: Qwen or dense")
+            temporal_verifier = (
+                QwenTemporalVerifier()
+                if body.verify_with_qwen
+                else DenseMotionTemporalVerifier()
+                if body.verify_with_dense
+                else None
+            )
             corpora = discover_temporal_corpus(
                 output_root=Path("data/processed/video_understanding"),
                 caption_dir=Path("data/metadata/caption"),
@@ -214,6 +228,9 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
                 "data": TemporalEventSearch(
                     corpora,
                     query_parser=app.state.temporal_query_parser,
+                    temporal_verifier=temporal_verifier,
+                    video_dir=Path("data/videos") if temporal_verifier else None,
+                    verifier_candidates=body.qwen_candidate_events,
                 ).search(
                     body.query,
                     top_k_videos=body.top_k_videos,

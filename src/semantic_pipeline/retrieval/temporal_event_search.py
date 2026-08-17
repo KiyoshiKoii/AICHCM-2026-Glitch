@@ -7,7 +7,9 @@ import re
 import unicodedata
 from collections import Counter
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
+from statistics import median
 from typing import Any, Iterable
 
 from semantic_pipeline.retrieval.hierarchical_video_search import build_hierarchical_documents
@@ -18,6 +20,11 @@ from semantic_pipeline.retrieval.temporal_query_parser import (
     fold_text,
     parse_temporal_query,
     query_tokens,
+)
+from semantic_pipeline.retrieval.qwen_video_verifier import (
+    TemporalEventVerifier,
+    TemporalVerificationRequest,
+    TemporalVerificationResult,
 )
 from semantic_pipeline.video_understanding.temporal_events import build_temporal_events, event_search_text
 
@@ -130,11 +137,17 @@ def _score(query: set[str], text: str) -> float:
     useful = query - TEMPORAL_STOPWORDS
     if not useful:
         useful = query
-    matched = useful & query_tokens(text)
+    matched = useful & set(_cached_query_tokens(text))
     return len(matched) / len(useful) if useful else 0.0
 
 
-def _content_tokens(value: str, *, fold_accents: bool = False) -> list[str]:
+@lru_cache(maxsize=32_768)
+def _cached_query_tokens(value: str) -> frozenset[str]:
+    return frozenset(query_tokens(value))
+
+
+@lru_cache(maxsize=32_768)
+def _cached_content_tokens(value: str, fold_accents: bool) -> tuple[str, ...]:
     """Keep searchable terms in order while removing query boilerplate."""
 
     normalized = fold_text(value) if fold_accents else unicodedata.normalize("NFC", value.casefold())
@@ -147,13 +160,33 @@ def _content_tokens(value: str, *, fold_accents: bool = False) -> list[str]:
             and folded_token not in TEMPORAL_STOPWORDS
         ):
             result.append(token)
-    return result
+    return tuple(result)
 
 
-def _tokens_fit(required: list[str], available: list[str]) -> bool:
-    required_counts = Counter(required)
-    available_counts = Counter(available)
-    return all(available_counts[token] >= count for token, count in required_counts.items())
+def _content_tokens(value: str, *, fold_accents: bool = False) -> tuple[str, ...]:
+    return _cached_content_tokens(value, fold_accents)
+
+
+@lru_cache(maxsize=2_048)
+def _prepare_concept_groups(
+    concept_groups: tuple[tuple[str, ...], ...],
+) -> tuple[tuple[tuple[str, Counter[str], bool, int], ...], ...]:
+    prepared_groups: list[tuple[tuple[str, Counter[str], bool, int], ...]] = []
+    for alternatives in concept_groups:
+        prepared_alternatives: list[tuple[str, Counter[str], bool, int]] = []
+        for alternative in alternatives:
+            normalized_alternative = unicodedata.normalize("NFC", alternative.casefold())
+            fold_accents = fold_text(alternative) == normalized_alternative
+            tokens = _content_tokens(alternative, fold_accents=fold_accents)
+            if tokens:
+                prepared_alternatives.append((alternative, Counter(tokens), fold_accents, len(tokens)))
+        if prepared_alternatives:
+            prepared_groups.append(tuple(prepared_alternatives))
+    return tuple(prepared_groups)
+
+
+def _token_counts_fit(required: Counter[str], available: Counter[str]) -> bool:
+    return all(available[token] >= count for token, count in required.items())
 
 
 def _matches_concept_groups(
@@ -174,46 +207,70 @@ def _matches_concept_groups(
     folded_text_sequence = _content_tokens(text, fold_accents=True)
     if not strict_text_sequence:
         return 0.0, []
-    prepared_groups: list[list[tuple[str, list[str], bool]]] = []
-    for alternatives in concept_groups:
-        prepared_alternatives: list[tuple[str, list[str], bool]] = []
-        for alternative in alternatives:
-            normalized_alternative = unicodedata.normalize("NFC", alternative.casefold())
-            fold_accents = fold_text(alternative) == normalized_alternative
-            tokens = _content_tokens(alternative, fold_accents=fold_accents)
-            if tokens:
-                prepared_alternatives.append((alternative, tokens, fold_accents))
-        if prepared_alternatives:
-            prepared_groups.append(prepared_alternatives)
+    prepared_groups = _prepare_concept_groups(concept_groups)
     if not prepared_groups:
         return 0.0, []
     minimum_required_terms = sum(
-        min((len(tokens) for _, tokens, _ in alternatives), default=1)
+        min((token_count for _, _, _, token_count in alternatives), default=1)
         for alternatives in prepared_groups
     )
     # Allow natural modifiers and word-order changes without letting evidence
     # drift across unrelated facts in a long story.
     window_size = min(36, max(12, minimum_required_terms * 3))
     best_matches: list[str] = []
+    strict_window = Counter(strict_text_sequence[:window_size])
+    folded_window = Counter(folded_text_sequence[:window_size])
+    relevant_strict = {
+        token
+        for alternatives in prepared_groups
+        for _, required, fold_accents, _ in alternatives
+        if not fold_accents
+        for token in required
+    }
+    relevant_folded = {
+        token
+        for alternatives in prepared_groups
+        for _, required, fold_accents, _ in alternatives
+        if fold_accents
+        for token in required
+    }
+    evaluate_window = True
     for start in range(len(strict_text_sequence)):
-        strict_window = strict_text_sequence[start : start + window_size]
-        folded_window = folded_text_sequence[start : start + window_size]
-        matches: list[str] = []
-        for alternatives in prepared_groups:
-            matched = next(
-                (
-                    alternative
-                    for alternative, tokens, fold_accents in alternatives
-                    if _tokens_fit(tokens, folded_window if fold_accents else strict_window)
-                ),
-                None,
-            )
-            if matched:
-                matches.append(matched)
-        if len(matches) > len(best_matches):
-            best_matches = matches
-        if len(best_matches) == len(prepared_groups):
-            break
+        if evaluate_window:
+            matches: list[str] = []
+            for alternatives in prepared_groups:
+                matched = next(
+                    (
+                        alternative
+                        for alternative, required, fold_accents, _ in alternatives
+                        if _token_counts_fit(required, folded_window if fold_accents else strict_window)
+                    ),
+                    None,
+                )
+                if matched:
+                    matches.append(matched)
+            if len(matches) > len(best_matches):
+                best_matches = matches
+            if len(best_matches) == len(prepared_groups):
+                break
+        leaving_strict = strict_text_sequence[start]
+        leaving_folded = folded_text_sequence[start]
+        strict_window[leaving_strict] -= 1
+        folded_window[leaving_folded] -= 1
+        entering = start + window_size
+        entering_strict = None
+        entering_folded = None
+        if entering < len(strict_text_sequence):
+            entering_strict = strict_text_sequence[entering]
+            entering_folded = folded_text_sequence[entering]
+            strict_window[entering_strict] += 1
+            folded_window[entering_folded] += 1
+        evaluate_window = (
+            leaving_strict in relevant_strict
+            or leaving_folded in relevant_folded
+            or entering_strict in relevant_strict
+            or entering_folded in relevant_folded
+        )
     return len(best_matches) / len(prepared_groups), best_matches
 
 
@@ -252,6 +309,34 @@ def _metadata_context_matches(
     return list(dict.fromkeys(matches))
 
 
+def _frame_query_score(frame: dict[str, Any], query: TemporalEventQuery) -> float:
+    text = " ".join(
+        str(frame.get(field, ""))
+        for field in ("visual_text", "asr_text", "ocr_text")
+    )
+    concept_score, _ = _best_concept_match(query.required_concept_groups, (text,))
+    lexical_score = _score(set(query.tokens), text)
+    return max(concept_score, lexical_score)
+
+
+def _event_frame_evidence_score(event: dict[str, Any], query: TemporalEventQuery) -> float:
+    return max(
+        (_frame_query_score(frame, query) for frame in event.get("_frames", [])),
+        default=0.0,
+    )
+
+
+def _frame_anchor(anchor_type: str, frame: dict[str, Any], confidence: float) -> dict[str, Any]:
+    return {
+        "anchor_type": anchor_type,
+        "frame_id": frame["frame_id"],
+        "keyframe_n": frame["keyframe_n"],
+        "timestamp_ms": frame["timestamp_ms"],
+        "native_frame_idx": frame["native_frame_idx"],
+        "confidence": round(max(0.55, confidence), 6),
+    }
+
+
 def _anchor_for(event: dict[str, Any], query: TemporalEventQuery) -> dict[str, Any] | None:
     anchors = [item for item in event.get("temporal_anchors", []) if isinstance(item, dict)]
     preferred = {
@@ -263,37 +348,21 @@ def _anchor_for(event: dict[str, Any], query: TemporalEventQuery) -> dict[str, A
         "representative": {"representative"},
         "first_visible": {"first_visible", "action_start", "representative"},
     }.get(query.required_anchor, {"representative"})
-    if query.required_anchor == "first_visible":
+    if query.required_anchor in {"action_start", "first_contact", "first_visible"}:
         frames = sorted(
             event.get("_frames", []),
             key=lambda item: (item["timestamp_ms"], item["keyframe_n"]),
         )
         best_score = max(
-            (
-                _score(
-                    set(query.tokens),
-                    " ".join(str(frame.get(field, "")) for field in ("visual_text", "asr_text", "ocr_text")),
-                )
-                for frame in frames
-            ),
+            (_frame_query_score(frame, query) for frame in frames),
             default=0.0,
         )
-        if best_score > 0:
-            threshold = best_score * 0.7
+        if best_score >= 0.30:
+            threshold = max(0.30, best_score * 0.7)
             for frame in frames:
-                score = _score(
-                    set(query.tokens),
-                    " ".join(str(frame.get(field, "")) for field in ("visual_text", "asr_text", "ocr_text")),
-                )
+                score = _frame_query_score(frame, query)
                 if score >= threshold:
-                    return {
-                        "anchor_type": "first_visible",
-                        "frame_id": frame["frame_id"],
-                        "keyframe_n": frame["keyframe_n"],
-                        "timestamp_ms": frame["timestamp_ms"],
-                        "native_frame_idx": frame["native_frame_idx"],
-                        "confidence": round(max(0.55, score), 6),
-                    }
+                    return _frame_anchor(query.required_anchor, frame, score)
     for anchor in anchors:
         if anchor.get("anchor_type") in preferred:
             return anchor
@@ -301,20 +370,228 @@ def _anchor_for(event: dict[str, Any], query: TemporalEventQuery) -> dict[str, A
     if not frames:
         return None
     selected = frames[-1] if query.required_anchor in {"last_complete", "action_end"} else frames[0]
-    return {
-        "anchor_type": query.required_anchor,
-        "frame_id": selected["frame_id"],
-        "keyframe_n": selected["keyframe_n"],
-        "timestamp_ms": selected["timestamp_ms"],
-        "native_frame_idx": selected["native_frame_idx"],
-        "confidence": 0.55,
-    }
+    return _frame_anchor(query.required_anchor, selected, 0.55)
 
 
 class TemporalEventSearch:
-    def __init__(self, corpora: Iterable[TemporalCorpus], *, query_parser: Any | None = None) -> None:
+    def __init__(
+        self,
+        corpora: Iterable[TemporalCorpus],
+        *,
+        query_parser: Any | None = None,
+        temporal_verifier: TemporalEventVerifier | None = None,
+        video_dir: Path | None = None,
+        verifier_candidates: int = 3,
+    ) -> None:
         self.corpora = tuple(corpora)
         self.query_parser = query_parser
+        self.temporal_verifier = temporal_verifier
+        self.video_dir = video_dir
+        self.verifier_candidates = max(1, min(5, verifier_candidates))
+
+    def _rank_event_candidates(
+        self,
+        corpus: TemporalCorpus,
+        event_query: TemporalEventQuery,
+        used_event_ids: set[str] | None = None,
+    ) -> list[tuple[float, dict[str, Any]]]:
+        used = used_event_ids or set()
+        return sorted(
+            (
+                (
+                    self._rank_event(event, event_query)
+                    - (0.15 if event.get("event_id") in used else 0.0),
+                    event,
+                )
+                for event in corpus.events
+            ),
+            key=lambda item: (-item[0], int(item[1].get("start_ms", 0)), str(item[1].get("event_id", ""))),
+        )
+
+    @staticmethod
+    def _native_fps(corpus: TemporalCorpus) -> float:
+        estimates = [
+            1_000 * float(frame["native_frame_idx"]) / float(frame["timestamp_ms"])
+            for frame in corpus.frames
+            if frame.get("timestamp_ms", 0) and frame.get("native_frame_idx", 0) >= 0
+        ]
+        return float(median(estimates)) if estimates else 25.0
+
+    @staticmethod
+    def _nearest_frame(corpus: TemporalCorpus, timestamp_ms: int) -> dict[str, Any] | None:
+        return min(
+            corpus.frames,
+            key=lambda frame: (
+                abs(int(frame.get("timestamp_ms", 0)) - timestamp_ms),
+                int(frame.get("keyframe_n", 0)),
+            ),
+            default=None,
+        )
+
+    def _verified_event_answer(
+        self,
+        *,
+        corpus: TemporalCorpus,
+        event_query: TemporalEventQuery,
+        event: dict[str, Any],
+        result: TemporalVerificationResult,
+        lexical_score: float,
+    ) -> dict[str, Any]:
+        assert result.timestamp_ms is not None
+        nearest = self._nearest_frame(corpus, result.timestamp_ms)
+        native_frame_idx = round(result.timestamp_ms * self._native_fps(corpus) / 1_000)
+        return {
+            "event_index": event_query.event_index,
+            "source_label": event_query.source_label,
+            "event_id": event["event_id"],
+            "event_text": event.get("description_vi", ""),
+            "anchor_type": event_query.required_anchor,
+            "frame_id": nearest.get("frame_id") if nearest else None,
+            "keyframe_n": nearest.get("keyframe_n") if nearest else None,
+            "native_frame_idx": native_frame_idx,
+            "timestamp_ms": result.timestamp_ms,
+            "score": round(lexical_score, 6),
+            "confidence": round(result.confidence, 6),
+            "uncertain": result.confidence < 0.70,
+            "reason_vi": result.reason or event.get("description_vi", ""),
+            "verification": {
+                "verifier": result.verifier,
+                "selected_state": result.selected_state,
+                "coarse_window_ms": list(result.coarse_window_ms),
+                "refined_window_ms": list(result.refined_window_ms) if result.refined_window_ms else None,
+            },
+        }
+
+    def _verify_selected_events(
+        self,
+        corpus: TemporalCorpus,
+        parsed: ParsedTemporalQuery,
+        selected_events: list[dict[str, Any]],
+    ) -> list[dict[str, Any]]:
+        if self.temporal_verifier is None or self.video_dir is None:
+            return selected_events
+        video_path = self.video_dir / f"{corpus.video['video_id']}.mp4"
+        if not video_path.is_file():
+            return selected_events
+        verified_events: list[dict[str, Any]] = []
+        max_anchor_shift_ms = getattr(self.temporal_verifier, "max_anchor_shift_ms", 5_000)
+        for selected in selected_events:
+            event_index = int(selected["event_index"])
+            event_query = parsed.events[event_index - 1]
+            ranked = self._rank_event_candidates(corpus, event_query)
+            baseline_id = str(selected.get("event_id", ""))
+            candidates = ranked[: self.verifier_candidates]
+            if baseline_id and baseline_id not in {str(event.get("event_id", "")) for _, event in candidates}:
+                baseline = next(
+                    ((score, event) for score, event in ranked if str(event.get("event_id", "")) == baseline_id),
+                    None,
+                )
+                if baseline is not None:
+                    candidates.append(baseline)
+            verified: list[tuple[float, dict[str, Any]]] = []
+            for lexical_score, event in candidates:
+                try:
+                    result = self.temporal_verifier.verify(
+                        TemporalVerificationRequest(
+                            video_id=str(corpus.video["video_id"]),
+                            event_id=str(event["event_id"]),
+                            event_text=event_query.text,
+                            required_anchor=event_query.required_anchor,
+                            video_path=video_path,
+                            start_ms=int(event.get("start_ms", 0)),
+                            end_ms=int(event.get("end_ms", event.get("start_ms", 0))),
+                        )
+                    )
+                except Exception as exc:
+                    fallback = dict(selected)
+                    fallback["verification"] = {
+                        "verifier": type(self.temporal_verifier).__name__,
+                        "status": "fallback",
+                        "error": str(exc)[:240],
+                    }
+                    verified_events.append(fallback)
+                    verified = []
+                    break
+                if not result.supported or result.timestamp_ms is None:
+                    continue
+                answer = self._verified_event_answer(
+                    corpus=corpus,
+                    event_query=event_query,
+                    event=event,
+                    result=result,
+                    lexical_score=lexical_score,
+                )
+                combined_score = 0.75 * result.confidence + 0.25 * max(0.0, lexical_score)
+                verified.append((combined_score, answer))
+            if verified:
+                if event_query.required_anchor in {"action_start", "first_contact", "first_visible"}:
+                    # Qwen decides whether the evidence exists and pinpoints
+                    # the dense native frame.  It must not let a confident
+                    # later candidate replace a verified *first* event.
+                    nearby = [
+                        item
+                        for item in verified
+                        if max_anchor_shift_ms is None
+                        or int(item[1]["timestamp_ms"]) <= int(selected["timestamp_ms"]) + max_anchor_shift_ms
+                    ]
+                    if nearby:
+                        _, answer = min(
+                            nearby,
+                            key=lambda item: (
+                                int(item[1]["timestamp_ms"]),
+                                -item[0],
+                                str(item[1]["event_id"]),
+                            ),
+                        )
+                        verified_events.append(answer)
+                    else:
+                        fallback = dict(selected)
+                        fallback["verification"] = {
+                            "verifier": type(self.temporal_verifier).__name__,
+                            "status": "fallback",
+                            "error": "no Qwen-supported first-event candidate near the retrieval anchor",
+                        }
+                        verified_events.append(fallback)
+                    continue
+                elif event_query.required_anchor in {"last_complete", "action_end"}:
+                    nearby = [
+                        item
+                        for item in verified
+                        if max_anchor_shift_ms is None
+                        or int(item[1]["timestamp_ms"]) >= int(selected["timestamp_ms"]) - max_anchor_shift_ms
+                    ]
+                    if nearby:
+                        _, answer = max(
+                            nearby,
+                            key=lambda item: (
+                                int(item[1]["timestamp_ms"]),
+                                item[0],
+                                str(item[1]["event_id"]),
+                            ),
+                        )
+                        verified_events.append(answer)
+                    else:
+                        fallback = dict(selected)
+                        fallback["verification"] = {
+                            "verifier": type(self.temporal_verifier).__name__,
+                            "status": "fallback",
+                            "error": "no Qwen-supported last-event candidate near the retrieval anchor",
+                        }
+                        verified_events.append(fallback)
+                    continue
+                else:
+                    _, answer = max(
+                        verified,
+                        key=lambda item: (
+                            item[0],
+                            -int(item[1]["timestamp_ms"]),
+                            str(item[1]["event_id"]),
+                        ),
+                    )
+                verified_events.append(answer)
+            elif not verified_events or verified_events[-1].get("event_index") != selected.get("event_index"):
+                verified_events.append(selected)
+        return verified_events
 
     @staticmethod
     def _event_evidence_units(event: dict[str, Any]) -> list[str]:
@@ -463,21 +740,38 @@ class TemporalEventSearch:
             event_scores: list[float] = []
             used_event_ids: set[str] = set()
             for event_query in parsed.events:
-                ranked = sorted(
-                    (
-                        (
-                            self._rank_event(event, event_query)
-                            - (0.15 if event.get("event_id") in used_event_ids else 0.0),
-                            event,
-                        )
-                        for event in corpus.events
-                    ),
-                    key=lambda item: (-item[0], int(item[1].get("start_ms", 0)), str(item[1].get("event_id", ""))),
-                )
+                ranked = self._rank_event_candidates(corpus, event_query, used_event_ids)
                 score, event = ranked[0] if ranked else (0.0, None)
                 if ranked and event_query.required_anchor in {"action_start", "first_contact", "first_visible"}:
-                    close_matches = [
-                        item for item in ranked
+                    fully_supported = [
+                        item
+                        for item in ranked
+                        if self._event_concept_coverage(item[1], event_query) >= 0.999
+                    ]
+                    frame_scores = [
+                        (_event_frame_evidence_score(item[1], event_query), item)
+                        for item in ranked
+                    ]
+                    fully_frame_grounded = [
+                        item
+                        for frame_score, item in frame_scores
+                        if frame_score >= 0.999
+                    ]
+                    best_frame_score = max((score for score, _ in frame_scores), default=0.0)
+                    frame_grounded = [
+                        item
+                        for frame_score, item in frame_scores
+                        if frame_score >= max(0.50, best_frame_score * 0.80)
+                    ]
+                    # "First" is resolved from raw frame evidence whenever
+                    # possible. This prevents an LLM story title from moving
+                    # an event onto an earlier or later scene whose captions
+                    # do not support the requested action/object. A fully
+                    # supported frame wins; otherwise keep the earliest strong
+                    # visual match, then fall back to story-level evidence.
+                    close_matches = fully_frame_grounded or frame_grounded or fully_supported or [
+                        item
+                        for item in ranked
                         if item[0] >= max(0.30, score * 0.80)
                     ]
                     if close_matches:
@@ -561,6 +855,8 @@ class TemporalEventSearch:
         if not selected:
             return {"query": parsed.shared_context, "selected_video": None, "videos": [], "events": []}
         best_score, best_corpus, best_events, best_context_matches = selected[0]
+        best_events.sort(key=lambda item: item["event_index"])
+        best_events = self._verify_selected_events(best_corpus, parsed, best_events)
         best_events.sort(key=lambda item: item["event_index"])
         candidates: list[dict[str, Any]] = []
         for video_score, corpus, events, context_matches in selected:

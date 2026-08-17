@@ -12,6 +12,7 @@ from semantic_pipeline.retrieval.temporal_event_search import (
     discover_temporal_corpus,
 )
 from semantic_pipeline.retrieval.temporal_query_parser import parse_temporal_query
+from semantic_pipeline.retrieval.qwen_video_verifier import TemporalVerificationResult
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -34,6 +35,31 @@ def test_summary_only_query_is_kept_as_video_context() -> None:
 
     assert parsed.shared_context == "Bản tin về thời tiết nóng tại Barcelona"
     assert len(parsed.events) == 1
+
+
+def test_parser_routes_boundary_types_without_treating_fully_as_last() -> None:
+    parsed = parse_temporal_query(
+        "Factory scene\n"
+        "E1: first moment the frame touches the car\n"
+        "E2: the handle starts rotating\n"
+        "E3: first moment the worker is fully bent down\n"
+        "E4: first appearance of the landmark"
+    )
+
+    assert [event.event_type for event in parsed.events] == [
+        "first_contact",
+        "action_start",
+        "state_attainment",
+        "first_appearance",
+    ]
+    assert [event.selection_rule for event in parsed.events] == ["earliest_true"] * 4
+    assert all(event.transition_required for event in parsed.events)
+
+
+def test_first_visible_action_is_not_misrouted_as_landmark_appearance() -> None:
+    parsed = parse_temporal_query("E1: first visible moment a chef cuts mushrooms")
+
+    assert parsed.events[0].event_type == "action_start"
 
 
 def _temporal_corpus(video_id: str, location: str, event_text: str, frame_number: int) -> TemporalCorpus:
@@ -128,6 +154,120 @@ def test_concept_match_accepts_paraphrase_but_rejects_scattered_terms() -> None:
     assert scattered == 0.0
 
 
+def test_first_event_requires_all_explicit_concepts_before_earliest_anchor() -> None:
+    def event(event_id: str, text: str, timestamp_ms: int) -> dict[str, object]:
+        frame = {
+            "frame_id": f"L23_V001_f{timestamp_ms // 1_000:04d}",
+            "keyframe_n": timestamp_ms // 1_000,
+            "native_frame_idx": timestamp_ms // 40,
+            "timestamp_ms": timestamp_ms,
+            "visual_text": text,
+            "asr_text": "",
+            "ocr_text": "",
+        }
+        return {
+            "event_id": event_id,
+            "description_vi": text,
+            "search_text": text,
+            "start_ms": timestamp_ms,
+            "temporal_anchors": [
+                {
+                    "anchor_type": "action_start",
+                    "frame_id": frame["frame_id"],
+                    "keyframe_n": frame["keyframe_n"],
+                    "native_frame_idx": frame["native_frame_idx"],
+                    "timestamp_ms": timestamp_ms,
+                }
+            ],
+            "_frames": [frame],
+        }
+
+    corpus = TemporalCorpus(
+        video={
+            "video_id": "L23_V001",
+            "summary_vi": "Video đua xe đạp trên phố.",
+            "summary_en": "",
+            "search_text": "Đua xe đạp trên phố.",
+            "main_locations": ["phố"],
+            "main_entities": ["vận động viên xe đạp"],
+        },
+        events=[
+            event(
+                "L23_V001_event_early_generic",
+                "Xe mô tô dẫn đường di chuyển trên phố rộng.",
+                1_000,
+            ),
+            event(
+                "L23_V001_event_later_exact",
+                "Xe mô tô màu vàng dẫn đường di chuyển trên phố rộng.",
+                5_000,
+            ),
+        ],
+        frames=[],
+    )
+
+    result = TemporalEventSearch([corpus]).search(
+        "Video đua xe đạp trên phố\n"
+        "E1: Khoảnh khắc đầu tiên xe mô tô dẫn đường màu vàng di chuyển trên phố rộng."
+    )
+
+    assert result["events"][0]["event_id"] == "L23_V001_event_later_exact"
+    assert result["events"][0]["timestamp_ms"] == 5_000
+
+
+def test_first_event_anchor_requires_matching_frame_evidence() -> None:
+    def frame(number: int, text: str) -> dict[str, object]:
+        return {
+            "frame_id": f"L23_V001_f{number:04d}",
+            "keyframe_n": number,
+            "native_frame_idx": number * 100,
+            "timestamp_ms": number * 1_000,
+            "visual_text": text,
+            "asr_text": "",
+            "ocr_text": "",
+        }
+
+    unrelated = frame(1, "Linh vật và khán giả đứng ven đường.")
+    cyclists = frame(2, "Đoàn vận động viên xe đạp đang di chuyển trên đường nhựa.")
+    corpus = TemporalCorpus(
+        video={
+            "video_id": "L23_V001",
+            "summary_vi": "Video đua xe đạp trên phố.",
+            "summary_en": "",
+            "search_text": "Đua xe đạp trên phố.",
+            "main_locations": ["phố"],
+            "main_entities": ["vận động viên xe đạp"],
+        },
+        events=[
+            {
+                "event_id": "L23_V001_story_title_only",
+                "description_vi": "Đoàn vận động viên xe đạp di chuyển qua khán giả.",
+                "search_text": "Đoàn vận động viên xe đạp di chuyển qua khán giả.",
+                "start_ms": 1_000,
+                "temporal_anchors": [],
+                "_frames": [unrelated],
+            },
+            {
+                "event_id": "L23_V001_first_cyclists",
+                "description_vi": "Đoàn vận động viên xe đạp di chuyển trên đường nhựa.",
+                "search_text": "Đoàn vận động viên xe đạp di chuyển trên đường nhựa.",
+                "start_ms": 2_000,
+                "temporal_anchors": [],
+                "_frames": [cyclists],
+            },
+        ],
+        frames=[unrelated, cyclists],
+    )
+
+    result = TemporalEventSearch([corpus]).search(
+        "Video đua xe đạp trên phố\n"
+        "E1: Khoảnh khắc đầu tiên thấy đoàn vận động viên xe đạp."
+    )
+
+    assert result["events"][0]["event_id"] == "L23_V001_first_cyclists"
+    assert result["events"][0]["frame_id"] == "L23_V001_f0002"
+
+
 def test_local_concept_coherence_outranks_scattered_story_terms() -> None:
     search = TemporalEventSearch(
         [
@@ -188,3 +328,129 @@ def test_timeline_v2_contains_only_temporal_fields_inside_existing_pilot() -> No
     assert payload["schema_version"] == "video-timeline-v2"
     assert isinstance(payload.get("events"), list)
     assert all("temporal_anchors" in event for event in payload["events"])
+
+
+def test_qwen_verifier_refines_selected_event_without_changing_video_retrieval(tmp_path: Path) -> None:
+    class FakeVerifier:
+        def __init__(self) -> None:
+            self.requests = []
+
+        def verify(self, request):
+            self.requests.append(request)
+            return TemporalVerificationResult(
+                supported=True,
+                timestamp_ms=1_250,
+                confidence=0.92,
+                selected_state="transition",
+                verifier="fake-qwen",
+                coarse_window_ms=(0, 4_000),
+                refined_window_ms=(1_000, 1_500),
+                reason="cyclists first enter the view",
+            )
+
+    frame = {
+        "frame_id": "L23_V001_f0002",
+        "keyframe_n": 2,
+        "native_frame_idx": 50,
+        "timestamp_ms": 2_000,
+        "visual_text": "cyclists are visible on the city road",
+        "asr_text": "",
+        "ocr_text": "",
+    }
+    corpus = TemporalCorpus(
+        video={
+            "video_id": "L23_V001",
+            "summary_vi": "bike race on a city road",
+            "summary_en": "",
+            "search_text": "bike race on a city road",
+            "main_locations": [],
+            "main_entities": ["cyclists"],
+        },
+        events=[
+            {
+                "event_id": "L23_V001_cyclists",
+                "description_vi": "cyclists are visible on the city road",
+                "search_text": "cyclists are visible on the city road",
+                "start_ms": 2_000,
+                "end_ms": 3_000,
+                "temporal_anchors": [],
+                "_frames": [frame],
+            }
+        ],
+        frames=[frame],
+    )
+    (tmp_path / "L23_V001.mp4").touch()
+    verifier = FakeVerifier()
+
+    result = TemporalEventSearch(
+        [corpus],
+        temporal_verifier=verifier,
+        video_dir=tmp_path,
+    ).search("bike race on a city road\nE1: first cyclists visible")
+
+    assert result["selected_video"]["video_id"] == "L23_V001"
+    assert result["events"][0]["timestamp_ms"] == 1_250
+    assert result["events"][0]["native_frame_idx"] == 31
+    assert result["events"][0]["verification"]["verifier"] == "fake-qwen"
+    assert len(verifier.requests) == 1
+
+
+def test_qwen_cannot_replace_a_verified_first_event_with_a_later_confident_candidate(tmp_path: Path) -> None:
+    class FakeVerifier:
+        def verify(self, request):
+            is_late = request.event_id.endswith("late")
+            return TemporalVerificationResult(
+                supported=True,
+                timestamp_ms=5_000 if is_late else 1_250,
+                confidence=0.99 if is_late else 0.72,
+                selected_state="transition",
+                verifier="fake-qwen",
+                coarse_window_ms=(0, 6_000),
+                reason="visible cyclists",
+            )
+
+    def event(event_id: str, timestamp_ms: int) -> dict[str, object]:
+        frame = {
+            "frame_id": f"L23_V001_f{timestamp_ms // 1_000:04d}",
+            "keyframe_n": timestamp_ms // 1_000,
+            "native_frame_idx": timestamp_ms // 40,
+            "timestamp_ms": timestamp_ms,
+            "visual_text": "cyclists are visible on the city road",
+            "asr_text": "",
+            "ocr_text": "",
+        }
+        return {
+            "event_id": event_id,
+            "description_vi": "cyclists are visible on the city road",
+            "search_text": "cyclists are visible on the city road",
+            "start_ms": timestamp_ms,
+            "end_ms": timestamp_ms + 1_000,
+            "temporal_anchors": [],
+            "_frames": [frame],
+        }
+
+    early = event("L23_V001_early", 2_000)
+    late = event("L23_V001_late", 5_000)
+    corpus = TemporalCorpus(
+        video={
+            "video_id": "L23_V001",
+            "summary_vi": "bike race on a city road",
+            "summary_en": "",
+            "search_text": "bike race on a city road",
+            "main_locations": [],
+            "main_entities": ["cyclists"],
+        },
+        events=[early, late],
+        frames=[early["_frames"][0], late["_frames"][0]],
+    )
+    (tmp_path / "L23_V001.mp4").touch()
+
+    result = TemporalEventSearch(
+        [corpus],
+        temporal_verifier=FakeVerifier(),
+        video_dir=tmp_path,
+        verifier_candidates=2,
+    ).search("bike race on a city road\nE1: first cyclists visible")
+
+    assert result["events"][0]["event_id"] == "L23_V001_early"
+    assert result["events"][0]["timestamp_ms"] == 1_250
