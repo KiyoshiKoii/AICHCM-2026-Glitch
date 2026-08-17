@@ -21,6 +21,16 @@ TRANSITION_TERMS = {
 }
 
 
+def _contains_term(text: str, term: str) -> bool:
+    """Match a scene cue as a whole word or phrase, not a substring.
+
+    A cue such as ``pan`` must not classify captions containing unrelated words
+    like ``accompanied``, ``pants``, or ``span`` as cooking footage.
+    """
+
+    return re.search(rf"(?<!\w){re.escape(term)}(?!\w)", text) is not None
+
+
 def _tokens(value: Any) -> set[str]:
     if not isinstance(value, str):
         return set()
@@ -111,12 +121,12 @@ def _scene_type(frame: RuntimeFrame) -> str:
         if isinstance(item, dict)
     ).casefold()
     if any(
-        term in text
+        _contains_term(text, term)
         for term in ("kitchen", "ingredient", "knife", "pan", "stove", "chảo", "dao", "nấu")
     ):
         return "food_preparation"
     if any(
-        term in text
+        _contains_term(text, term)
         for term in (
             "lion dance",
             "dragon dance",
@@ -128,20 +138,32 @@ def _scene_type(frame: RuntimeFrame) -> str:
     ):
         return "performance"
     if any(
-        term in text
-        for term in ("cyclist", "bicycle race", "peloton", "vận động viên", "cuộc đua")
+        _contains_term(text, term)
+        for term in (
+            "cyclist",
+            "cyclists",
+            "bicycle",
+            "bicycles",
+            "bicycle race",
+            "peloton",
+            "athlete",
+            "athletes",
+            "vận động viên",
+            "cuộc đua",
+            "đua xe đạp",
+        )
     ):
         return "sport_activity"
     if any(
-        term in text
+        _contains_term(text, term)
         for term in ("news desk", "news studio", "trường quay", "phát thanh viên", "presenter")
     ):
         return "presenter_or_studio"
-    if any(term in text for term in ("map", "bản đồ", "graphic", "đồ họa", "screen displays")):
+    if any(_contains_term(text, term) for term in ("map", "bản đồ", "graphic", "đồ họa", "screen displays")):
         return "graphic_or_map"
-    if any(term in text for term in ("interview", "phỏng vấn", "microphone", "micrô")):
+    if any(_contains_term(text, term) for term in ("interview", "phỏng vấn", "microphone", "micrô")):
         return "interview_or_dialogue"
-    if any(term in text for term in ("logo", "opening", "intro", "sunset cityscape")):
+    if any(_contains_term(text, term) for term in ("logo", "opening", "intro", "sunset cityscape")):
         return "title_or_intro"
     if action_text:
         return "observable_activity"

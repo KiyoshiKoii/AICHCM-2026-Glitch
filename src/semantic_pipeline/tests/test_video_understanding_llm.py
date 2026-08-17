@@ -13,7 +13,7 @@ from semantic_pipeline.video_understanding.summarizer import (
     _is_program_intro,
     _normalize_payload,
 )
-from semantic_pipeline.video_understanding.timeline_builder import _compact_frame
+from semantic_pipeline.video_understanding.timeline_builder import _compact_frame, _scene_type
 
 
 def test_window_schema_requires_object_with_events() -> None:
@@ -34,6 +34,42 @@ def test_video_schema_has_distinct_bilingual_fields() -> None:
         "main_visual_states",
         "chronological_outline",
     ]
+
+
+@pytest.mark.parametrize(
+    "caption",
+    [
+        "Cyclists race past a mascot accompanied by spectators.",
+        "A race official in dark pants watches cyclists approach.",
+        "Cyclists ride beneath decorative structures that span the street.",
+    ],
+)
+def test_scene_type_does_not_match_pan_inside_unrelated_words(caption: str) -> None:
+    frame = RuntimeFrame(
+        video_id="L23_V001",
+        keyframe_n=1,
+        frame_id="L23_V001_f0001",
+        timestamp_ms=1_000,
+        fps=25.0,
+        native_frame_idx=25,
+        raw_metadata={"caption": caption, "detections": []},
+    )
+
+    assert _scene_type(frame) == "sport_activity"
+
+
+def test_scene_type_keeps_pan_as_cooking_cue_when_it_is_a_word() -> None:
+    frame = RuntimeFrame(
+        video_id="L26_V001",
+        keyframe_n=1,
+        frame_id="L26_V001_f0001",
+        timestamp_ms=1_000,
+        fps=25.0,
+        native_frame_idx=25,
+        raw_metadata={"caption": "A chef places a frying pan on the stove.", "detections": []},
+    )
+
+    assert _scene_type(frame) == "food_preparation"
 
 
 def test_top_level_window_array_is_compatibility_wrapped() -> None:
