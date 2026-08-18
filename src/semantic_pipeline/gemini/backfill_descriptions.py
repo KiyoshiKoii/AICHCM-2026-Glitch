@@ -17,7 +17,7 @@ from typing import Any, Sequence
 from pydantic import BaseModel, Field, field_validator
 
 from ..core.json_io import write_json_atomically
-from .extractor import DEFAULT_MODEL, load_gemini_api_key, load_gemini_visual_model
+from .extractor import load_gemini_api_key, load_gemini_visual_model
 
 try:
     from google import genai
@@ -195,7 +195,7 @@ def run_backfill(
     *,
     metadata_path: str | Path,
     api_key: str | None,
-    model_name: str = DEFAULT_MODEL,
+    model_name: str | None = None,
     batch_size: int = 25,
     frame_ids: set[str] | None = None,
     dry_run: bool = False,
@@ -216,6 +216,7 @@ def run_backfill(
     if not api_key or genai is None or types is None:
         raise RuntimeError("Gemini SDK/API key is unavailable")
 
+    model_name = model_name or load_gemini_visual_model()
     client = genai.Client(api_key=api_key)
     for offset in range(0, len(candidates), batch_size):
         batch = candidates[offset : offset + batch_size]
@@ -241,7 +242,6 @@ def run_backfill(
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--metadata", type=Path, required=True)
-    parser.add_argument("--model", default=load_gemini_visual_model())
     parser.add_argument("--batch-size", type=int, default=25)
     parser.add_argument("--frame-id", action="append", dest="frame_ids")
     parser.add_argument("--dry-run", action="store_true")
@@ -249,7 +249,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     summary = run_backfill(
         metadata_path=args.metadata,
         api_key=load_gemini_api_key(),
-        model_name=args.model,
         batch_size=args.batch_size,
         frame_ids=set(args.frame_ids) if args.frame_ids else None,
         dry_run=args.dry_run,

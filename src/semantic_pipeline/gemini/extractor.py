@@ -49,7 +49,6 @@ from ..core.spatial_reasoning import (
 from ..core.visual_profiles import DEFAULT_YOUTUBE_METADATA_PATH, VisualContextResolver
 
 
-DEFAULT_MODEL = "gemini-3.1-flash-lite"
 DEFAULT_BATCH_SIZE = 20
 MAX_BATCH_SIZE = 100
 DEFAULT_MAX_INLINE_BYTES = 14 * 1024 * 1024
@@ -438,7 +437,10 @@ def load_gemini_api_key() -> str | None:
 
 def load_gemini_visual_model() -> str:
     """Load the extraction/repair model selected in `.env`."""
-    return get_env_value("GEMINI_VISUAL_MODEL") or DEFAULT_MODEL
+    model_name = get_env_value("GEMINI_VISUAL_MODEL")
+    if not model_name:
+        raise ValueError("GEMINI_VISUAL_MODEL must be set in .env")
+    return model_name
 
 
 def _image_size(path: Path) -> tuple[int, int]:
@@ -716,7 +718,7 @@ class GeminiVisualExtractor:
     def __init__(
         self,
         api_key: str | None,
-        model_name: str = DEFAULT_MODEL,
+        model_name: str | None = None,
         context_resolver: VisualContextResolver | None = None,
         youtube_metadata_path: str | Path = DEFAULT_YOUTUBE_METADATA_PATH,
         use_video_context: bool = True,
@@ -727,7 +729,7 @@ class GeminiVisualExtractor:
         if genai is None or types is None:
             raise RuntimeError("google-genai is not installed")
         self.client = genai.Client(api_key=api_key)
-        self.model_name = model_name
+        self.model_name = model_name or load_gemini_visual_model()
         self.use_video_context = use_video_context
         if max_output_tokens < 1:
             raise ValueError("max_output_tokens must be positive")
@@ -975,17 +977,23 @@ def _copy_record_to_frame(
     flags = list(record.quality_flags)
     if is_duplicate and "visual_metadata_copied" not in flags:
         flags.append("visual_metadata_copied")
+    updates: dict[str, Any] = {
+        "frame_id": frame_id,
+        "visual_source_frame_id": record.frame_id,
+        "ocr_source_frame_id": (
+            ocr_source_frame_id
+            if ocr_source_frame_id is not None
+            else (frame_id if not is_duplicate else "")
+        ),
+        "quality_flags": sorted(set(flags)),
+    }
+    if is_duplicate and ocr_source_frame_id is None:
+        # Visual metadata can be shared by a dedup cluster, but OCR is tied to
+        # the exact frame.  Leave it empty until an OCR-only pass supplies
+        # frame-local text; this also keeps --skip-duplicate-ocr truthful.
+        updates.update({"ocr_text": "", "news_ticker_text": ""})
     return record.model_copy(
-        update={
-            "frame_id": frame_id,
-            "visual_source_frame_id": record.frame_id,
-            "ocr_source_frame_id": (
-                ocr_source_frame_id
-                if ocr_source_frame_id is not None
-                else (frame_id if not is_duplicate else "")
-            ),
-            "quality_flags": sorted(set(flags)),
-        }
+        update=updates
     )
 
 
@@ -1017,7 +1025,7 @@ def run_extraction(
     input_dir: str | Path,
     output_dir: str | Path,
     api_key: str | None,
-    model_name: str = DEFAULT_MODEL,
+    model_name: str | None = None,
     batch_size: int = DEFAULT_BATCH_SIZE,
     limit: int | None = None,
     max_inline_bytes: int = DEFAULT_MAX_INLINE_BYTES,
@@ -1034,6 +1042,7 @@ def run_extraction(
     daily_requests_already_used: int = 0,
     request_budget_state_path: str | Path | None = None,
     video_prefix: str | None = None,
+    with_duplicate_ocr: bool = True,
 ) -> dict[str, int]:
     input_dir = Path(input_dir)
     output_dir = Path(output_dir)
@@ -1151,6 +1160,8 @@ def run_extraction(
                 )
 
             for frame_id in member_ids:
+                if not with_duplicate_ocr:
+                    continue
                 if frame_id == representative_id:
                     continue
                 existing_record = existing.get(frame_id)
@@ -1377,7 +1388,6 @@ def build_parser() -> argparse.ArgumentParser:
         default=Path("data/metadata/caption"),
         help="Per-video JSON output root; files are written as LXX/LXX_VYYY.json",
     )
-    parser.add_argument("--model", default=load_gemini_visual_model())
     parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
     parser.add_argument(
         "--requests-per-minute",
@@ -1430,6 +1440,11 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Send every selected frame to Gemini instead of copying representative metadata",
     )
+    parser.add_argument(
+        "--skip-duplicate-ocr",
+        action="store_true",
+        help="Do not run frame-local OCR requests for deduplicated frames",
+    )
     parser.add_argument("--without-spatial", action="store_true")
     parser.add_argument(
         "--generic-prompt",
@@ -1446,7 +1461,6 @@ def main() -> None:
             input_dir=args.input_dir,
             output_dir=args.output_dir,
             api_key=load_gemini_api_key(),
-            model_name=args.model,
             batch_size=args.batch_size,
             limit=args.limit,
             max_inline_bytes=args.max_inline_bytes,
@@ -1465,6 +1479,7 @@ def main() -> None:
             daily_requests_already_used=args.daily_requests_already_used,
             request_budget_state_path=args.request_budget_state,
             video_prefix=args.video_prefix,
+            with_duplicate_ocr=not args.skip_duplicate_ocr,
         )
     except Exception as exc:
         raise SystemExit(f"Gemini visual extraction failed: {exc}") from exc

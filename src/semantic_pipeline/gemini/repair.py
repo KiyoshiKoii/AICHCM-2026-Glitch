@@ -31,7 +31,6 @@ from .extractor import (
     DEFAULT_DAILY_REQUEST_LIMIT,
     DEFAULT_MAX_INLINE_BYTES,
     DEFAULT_MAX_OUTPUT_TOKENS,
-    DEFAULT_MODEL,
     DEFAULT_REQUESTS_PER_MINUTE,
     MAX_RATE_LIMIT_RETRIES,
     MAX_TRANSIENT_RETRIES,
@@ -289,7 +288,7 @@ def run_repair(
     keyframe_dir: str | Path,
     output_dir: str | Path,
     api_key: str | None,
-    model_name: str = DEFAULT_MODEL,
+    model_name: str | None = None,
     batch_size: int = DEFAULT_BATCH_SIZE,
     max_inline_bytes: int = DEFAULT_MAX_INLINE_BYTES,
     max_output_tokens: int = DEFAULT_MAX_OUTPUT_TOKENS,
@@ -315,6 +314,7 @@ def run_repair(
         raise ValueError("batch_size must be between 1 and 100")
     if not 1 <= requests_per_minute or not 1 <= max_concurrent_requests <= requests_per_minute:
         raise ValueError("invalid RPM/concurrency configuration")
+    model_name = model_name or load_gemini_visual_model()
     copied_frame_ids: set[str] | None = None
     if only_copied_frames:
         deduplication = load_global_frame_deduplication(global_filter_results_path)
@@ -510,7 +510,6 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--report", action="append", required=True, type=Path)
     parser.add_argument("--keyframe-dir", type=Path, default=Path("data/keyframes"))
     parser.add_argument("--output-dir", type=Path, default=Path("data/metadata/caption"))
-    parser.add_argument("--model", default=load_gemini_visual_model())
     parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE)
     parser.add_argument("--max-inline-bytes", type=int, default=DEFAULT_MAX_INLINE_BYTES)
     parser.add_argument("--max-output-tokens", type=int, default=DEFAULT_MAX_OUTPUT_TOKENS)
@@ -571,7 +570,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         keyframe_dir=args.keyframe_dir,
         output_dir=args.output_dir,
         api_key=load_gemini_api_key(),
-        model_name=args.model,
         batch_size=args.batch_size,
         max_inline_bytes=args.max_inline_bytes,
         max_output_tokens=args.max_output_tokens,

@@ -68,6 +68,26 @@ uvicorn semantic_pipeline.retrieval.api:app \
 ```
 *Server nội bộ sẽ lắng nghe ở: http://localhost:8002*
 
+### Resume repair metadata bị CLIP flag
+
+Chạy từ repository root. Lệnh luôn ghi checkpoint sau mỗi batch repair đã ghi
+caption thành công. Nếu bị dừng giữa chừng, chạy lại **đúng lệnh đó** với
+`--resume`; các frame đã checkpoint sẽ không gọi lại Gemini.
+
+```bash
+export PYTHONPATH=src
+python -m semantic_pipeline.gemini.repair \
+  --report data/metadata/verification/clip_L25_full_report.json \
+  --keyframe-dir data/keyframes \
+  --output-dir data/metadata/caption \
+  --batch-size 20 \
+  --resume
+```
+
+Checkpoint mặc định là `data/metadata/caption/.repair_resume.json`. Có thể tách
+checkpoint cho một job bằng `--resume-state <duong-dan-checkpoint.json>`. Bỏ
+`--resume` khi muốn chủ động repair lại toàn bộ frame đang bị flag.
+
 ### Terminal 3: Chạy Backend Tổng (Dev 3)
 Chịu trách nhiệm làm cầu nối (Gateway), gọi LLM để phân tích câu hỏi ra prompt tiếng Anh, sau đó gộp kết quả RRF.
 ```bash

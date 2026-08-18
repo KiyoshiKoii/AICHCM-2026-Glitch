@@ -497,6 +497,12 @@ def test_load_visual_model_prefers_environment(monkeypatch):
     assert load_gemini_visual_model() == "model-from-environment"
 
 
+def test_load_visual_model_requires_environment(monkeypatch):
+    monkeypatch.setattr(gemini_visual_extractor, "get_env_value", lambda _name: None)
+    with pytest.raises(ValueError, match="GEMINI_VISUAL_MODEL must be set"):
+        load_gemini_visual_model()
+
+
 def test_distinguishes_daily_quota_errors_from_rpm_errors():
     assert is_daily_quota_error(
         RuntimeError("429 quota_exceeded GenerateRequestsPerDayPerProject")
@@ -677,6 +683,65 @@ def test_global_filter_sends_only_representative_and_copies_its_metadata(
     assert requested_ocr_frame_ids == []
     assert resumed["processed"] == 0
     assert resumed["api_frames"] == 0
+
+
+def test_skip_duplicate_ocr_leaves_copied_ocr_empty(tmp_path, monkeypatch):
+    input_dir = tmp_path / "keyframes" / "L99_V001"
+    input_dir.mkdir(parents=True)
+    for frame_name in ("001.jpg", "002.jpg"):
+        Image.new("RGB", (200, 100), "white").save(input_dir / frame_name)
+
+    global_filter = tmp_path / "global_filter_results.csv"
+    global_filter.write_text(
+        "video_name,frame_name,is_representative,representative_frame,similarity\n"
+        "L99_V001,001.jpg,True,001.jpg,1.0\n"
+        "L99_V001,002.jpg,False,001.jpg,0.99\n",
+        encoding="utf-8",
+    )
+    requested_ocr_frame_ids = []
+
+    class FakeExtractor:
+        def __init__(self, **_kwargs):
+            pass
+
+        @staticmethod
+        def batch_paths(image_paths, **_kwargs):
+            return [list(image_paths)] if image_paths else []
+
+        def extract_batch(self, image_paths, **_kwargs):
+            return [
+                CompactVisualRecord(
+                    frame_id=frame_id_from_path(path),
+                    caption="Representative frame.",
+                    detailed_caption="Metadata produced for the representative.",
+                    ocr_text="representative-only text",
+                )
+                for path in image_paths
+            ]
+
+        def extract_ocr_batch(self, image_paths, **_kwargs):
+            requested_ocr_frame_ids.extend(frame_id_from_path(path) for path in image_paths)
+            return []
+
+    monkeypatch.setattr(gemini_visual_extractor, "GeminiVisualExtractor", FakeExtractor)
+    output_dir = tmp_path / "metadata" / "caption"
+
+    summary = run_extraction(
+        input_dir.parent,
+        output_dir,
+        api_key="test-key",
+        global_filter_results_path=global_filter,
+        with_duplicate_ocr=False,
+    )
+
+    records = json.loads((output_dir / "L99" / "L99_V001.json").read_text())
+    assert requested_ocr_frame_ids == []
+    assert summary["api_frames"] == 1
+    assert summary["batches"] == 1
+    assert records[0]["ocr_text"] == "representative-only text"
+    assert records[1]["ocr_text"] == ""
+    assert records[1]["news_ticker_text"] == ""
+    assert records[1]["ocr_source_frame_id"] == ""
 
 
 def test_daily_request_arguments_do_not_stop_local_extraction(
