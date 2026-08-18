@@ -43,10 +43,16 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=Path("data/processed/video_understanding"),
     )
-    parser.add_argument(
+    llm_mode = parser.add_mutually_exclusive_group()
+    llm_mode.add_argument(
         "--llm",
         action="store_true",
         help="Use Gemini for evidence-grounded semantic episode and video summaries",
+    )
+    llm_mode.add_argument(
+        "--llm-final-only",
+        action="store_true",
+        help="For L26 only, build episodes locally and call Gemini only for the final summary",
     )
     parser.add_argument(
         "--require-llm",
@@ -85,6 +91,9 @@ def discover_batch_video_ids(caption_dir: Path, batch_id: str) -> list[str]:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        selected_batch = args.batch_id or batch_id_from_video_id(args.video_id)
+        if args.llm_final_only and selected_batch != "L26":
+            raise ValueError("llm final-only summarization is currently limited to batch L26")
         video_ids = (
             [args.video_id]
             if args.video_id
@@ -125,8 +134,9 @@ def main(argv: Sequence[str] | None = None) -> int:
                     map_dir=args.map_dir,
                     keyframe_dir=args.keyframe_dir,
                     output_root=args.output_root,
-                    use_llm=args.llm,
+                    use_llm=args.llm or args.llm_final_only,
                     require_llm=args.require_llm,
+                    llm_final_only=args.llm_final_only,
                     force_publish=args.force_publish,
                 )
             )

@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from semantic_pipeline.video_understanding.cli import discover_batch_video_ids
+from semantic_pipeline.video_understanding.cli import discover_batch_video_ids, main
 from semantic_pipeline.video_understanding.publisher import pilot_is_resumable
 from semantic_pipeline.video_understanding.pipeline import build_video
 
@@ -114,6 +114,18 @@ def test_pipeline_rejects_invalid_video_id_before_resolving_sources(
 ) -> None:
     with pytest.raises(ValueError, match="Lxx_Vyyy"):
         build_video(video_id=video_id, output_root=tmp_path)
+
+
+def test_final_only_summarization_is_limited_to_l26(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="limited to batch L26"):
+        build_video(
+            video_id="L24_V002",
+            output_root=tmp_path,
+            use_llm=True,
+            llm_final_only=True,
+        )
+
+    assert main(["--video-id", "L24_V002", "--llm-final-only", "--resume"]) == 2
 
 
 def test_batch_discovery_is_dynamic_and_sorted(tmp_path: Path) -> None:

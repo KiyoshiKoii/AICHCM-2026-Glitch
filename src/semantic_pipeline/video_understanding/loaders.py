@@ -50,7 +50,6 @@ def load_keyframe_map(path: Path) -> list[KeyframeMapRow]:
         raise FileNotFoundError(f"Map-keyframes file does not exist: {path}")
     rows: list[KeyframeMapRow] = []
     seen_n: set[int] = set()
-    seen_frame_idx: set[int] = set()
     last_time = -1.0
     last_frame_idx = -1
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
@@ -70,13 +69,13 @@ def load_keyframe_map(path: Path) -> list[KeyframeMapRow]:
                 raise ValueError(f"{path}:{line_number}: invalid map values")
             if n in seen_n:
                 raise ValueError(f"{path}:{line_number}: duplicate n={n}")
-            if frame_idx in seen_frame_idx:
-                raise ValueError(f"{path}:{line_number}: duplicate frame_idx={frame_idx}")
+            # BTC map generation can round two distinct PTS values to the same
+            # native frame index.  ``pts_time`` remains the authoritative temporal
+            # coordinate, so accept equal frame indices while rejecting a reversal.
             if pts_time <= last_time or frame_idx < last_frame_idx:
                 raise ValueError(f"{path}:{line_number}: map must be chronological")
             rows.append(KeyframeMapRow(n, pts_time, fps, frame_idx))
             seen_n.add(n)
-            seen_frame_idx.add(frame_idx)
             last_time = pts_time
             last_frame_idx = frame_idx
     if not rows:

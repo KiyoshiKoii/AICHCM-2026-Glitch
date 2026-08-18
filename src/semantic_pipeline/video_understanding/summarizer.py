@@ -8,6 +8,8 @@ import time
 from collections import Counter
 from typing import Any, Iterable
 
+from semantic_pipeline.core.environment import get_env_value
+
 from .models import ASRSegment, MicroScene, RuntimeFrame, StoryCandidate
 from .llm_schemas import VIDEO_SUMMARY_SCHEMA, WINDOW_SUMMARY_SCHEMA
 
@@ -44,6 +46,19 @@ PROGRAM_INTRO_RE = re.compile(
     re.IGNORECASE,
 )
 WORD_RE = re.compile(r"[^\W_]+", re.UNICODE)
+
+
+def load_video_summary_model() -> str:
+    """Load the summary model from repository environment configuration only."""
+
+    model_name = get_env_value("GEMINI_VIDEO_SUMMARY_MODEL") or get_env_value(
+        "GEMINI_VISUAL_MODEL"
+    )
+    if not model_name:
+        raise RuntimeError(
+            "GEMINI_VIDEO_SUMMARY_MODEL or GEMINI_VISUAL_MODEL must be set in .env"
+        )
+    return model_name
 
 
 def _terms(text: str) -> list[str]:
@@ -233,6 +248,7 @@ class VideoSummarizer:
         use_llm: bool,
         require_llm: bool = False,
         domain_hint: str = "general visual content",
+        use_window_llm: bool = True,
     ) -> None:
         self.mode = "deterministic_fallback"
         self.model = "none"
@@ -243,14 +259,14 @@ class VideoSummarizer:
         self._request_interval_seconds = 4.2
         self._use_llm = use_llm
         self._require_llm = require_llm
+        self._use_window_llm = use_window_llm
+        self.request_count = 0
         if not use_llm:
             return
         if genai is None or types is None:
             if require_llm:
                 raise RuntimeError("google-genai is not installed but --require-llm was requested")
             return
-        from semantic_pipeline.core.environment import get_env_value
-
         try:
             self._request_interval_seconds = max(
                 0.0,
@@ -265,11 +281,13 @@ class VideoSummarizer:
                 raise RuntimeError("GEMINI_API_KEY is not configured")
             return
         self.client = genai.Client(api_key=api_key)
-        self.model = get_env_value("GEMINI_VIDEO_SUMMARY_MODEL") or get_env_value(
-            "GEMINI_VISUAL_MODEL"
-        ) or "gemini-2.5-flash"
-        self.mode = "gemini"
-        self.prompt_version = "general-video-summary-v3"
+        self.model = load_video_summary_model()
+        self.mode = "gemini" if use_window_llm else "gemini_final_only"
+        self.prompt_version = (
+            "general-video-summary-v3"
+            if use_window_llm
+            else "general-video-summary-v3-final-only"
+        )
 
     def _generate_json(
         self,
@@ -294,6 +312,7 @@ class VideoSummarizer:
                 time.sleep(delay)
             self._last_request_at = time.monotonic()
             try:
+                self.request_count += 1
                 response = self.client.models.generate_content(
                     model=self.model,
                     contents=prompt,
@@ -325,7 +344,7 @@ class VideoSummarizer:
         *,
         require_llm: bool = False,
     ) -> list[StoryCandidate]:
-        if self.client is None:
+        if self.client is None or not self._use_window_llm:
             return _fallback_candidates(scenes, frames, segments)
         scene_ids = {scene.scene_id for scene in scenes}
         candidates: list[StoryCandidate] = []

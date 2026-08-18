@@ -9,9 +9,11 @@ from semantic_pipeline.video_understanding.llm_schemas import (
 from semantic_pipeline.video_understanding.models import MicroScene, RuntimeFrame
 from semantic_pipeline.video_understanding.summarizer import (
     NewsSummarizer,
+    VideoSummarizer,
     _fallback_candidates,
     _is_program_intro,
     _normalize_payload,
+    load_video_summary_model,
 )
 from semantic_pipeline.video_understanding.timeline_builder import _compact_frame, _scene_type
 
@@ -34,6 +36,22 @@ def test_video_schema_has_distinct_bilingual_fields() -> None:
         "main_visual_states",
         "chronological_outline",
     ]
+
+
+def test_video_summary_model_comes_from_environment(monkeypatch) -> None:
+    monkeypatch.setenv("GEMINI_VIDEO_SUMMARY_MODEL", "summary-model-from-env")
+
+    assert load_video_summary_model() == "summary-model-from-env"
+
+
+def test_video_summary_model_has_no_hardcoded_fallback(monkeypatch) -> None:
+    monkeypatch.setattr(
+        "semantic_pipeline.video_understanding.summarizer.get_env_value",
+        lambda _name: None,
+    )
+
+    with pytest.raises(RuntimeError, match="must be set in .env"):
+        load_video_summary_model()
 
 
 @pytest.mark.parametrize(
@@ -158,6 +176,33 @@ def test_metadata_fallback_keeps_generic_actions_objects_and_states() -> None:
     assert {"cook", "mushroom", "bowl"}.issubset(candidate.objects)
     assert candidate.visual_states == ["mushroom above bowl"]
     assert not candidate.title.startswith("News story")
+
+
+def test_final_only_mode_builds_window_candidates_without_llm() -> None:
+    frame = _cooking_frame()
+    scene = MicroScene(
+        scene_id="L26_V001_scene_0001",
+        scene_type="food_preparation",
+        frame_indices=[1],
+        start_ms=1_000,
+        end_ms=1_000,
+        representative_keyframe_n=1,
+        asr_segment_indices=[],
+    )
+    summarizer = object.__new__(VideoSummarizer)
+    summarizer.client = object()
+    summarizer._use_window_llm = False
+
+    candidates = summarizer.summarize_windows(
+        [{"window_id": "window_0001"}],
+        [scene],
+        [frame],
+        {},
+        require_llm=True,
+    )
+
+    assert len(candidates) == 1
+    assert candidates[0].objects == ["cook", "mushroom", "bowl"]
 
 
 def test_program_intro_is_not_a_news_event() -> None:

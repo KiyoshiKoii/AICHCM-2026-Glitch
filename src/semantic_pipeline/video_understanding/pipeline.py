@@ -471,9 +471,12 @@ def build_video(
     output_root: Path = DEFAULT_OUTPUT_ROOT,
     use_llm: bool = False,
     require_llm: bool = False,
+    llm_final_only: bool = False,
     force_publish: bool = False,
 ) -> dict[str, Any]:
     batch_id = batch_id_from_video_id(video_id)
+    if llm_final_only and batch_id != "L26":
+        raise ValueError("llm final-only summarization is currently limited to batch L26")
     caption_path = caption_dir / batch_id / f"{video_id}.json"
     asr_path = asr_dir / f"{video_id}.json"
     map_path = map_dir / f"{video_id}.csv"
@@ -495,6 +498,7 @@ def build_video(
         use_llm=use_llm,
         require_llm=require_llm,
         domain_hint=domain_hint,
+        use_window_llm=not llm_final_only,
     )
     candidates = summarizer.summarize_windows(
         windows,
@@ -545,6 +549,7 @@ def build_video(
             "summarization_mode": summarizer.mode,
             "model": summarizer.model,
             "prompt_version": summarizer.prompt_version,
+            "llm_request_count": summarizer.request_count,
             "input_hashes": source_hashes,
             "asr_available": asr_available,
             "asr_quality_flags": {
@@ -598,6 +603,7 @@ def build_video(
         "published": published,
         "pilot_dir": str(pilot_dir),
         "summarization_mode": summarizer.mode,
+        "llm_request_count": summarizer.request_count,
         "quality_score": validation["quality"]["overall_score"],
         "stories": len(timeline_segments),
         "scenes": len(scenes),
