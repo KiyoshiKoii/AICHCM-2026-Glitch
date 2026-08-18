@@ -76,6 +76,8 @@ from semantic_pipeline.retrieval.temporal_event_search import (
     discover_temporal_corpus,
 )
 from semantic_pipeline.retrieval.temporal_query_expander import GeminiTemporalQueryParser
+from semantic_pipeline.retrieval.temporal_query_parser import parse_temporal_query
+from semantic_pipeline.retrieval.temporal_video_selector import ElasticsearchVideoSelector
 from semantic_pipeline.retrieval.qwen_video_verifier import QwenTemporalVerifier
 from semantic_pipeline.retrieval.dense_motion_verifier import DenseMotionTemporalVerifier
 
@@ -214,6 +216,35 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
                 if body.verify_with_dense
                 else None
             )
+            parsed = app.state.temporal_query_parser.parse(parse_temporal_query(body.query))
+            selected_video_ids = list(body.video_ids)
+            video_selection: dict
+            if selected_video_ids:
+                video_selection = {
+                    "mode": "explicit_video_ids",
+                    "selected_video_id": selected_video_ids[0],
+                    "candidates": [{"video_id": item} for item in selected_video_ids],
+                }
+            else:
+                video_selection = ElasticsearchVideoSelector(get_backend().client).select(
+                    parsed,
+                    batch_ids=body.batch_ids,
+                    top_k=body.top_k_videos,
+                )
+                selected_video_id = video_selection.get("selected_video_id")
+                if not selected_video_id:
+                    return {
+                        "status": "success",
+                        "data": {
+                            "query": body.query,
+                            "mode": "temporal_event_search",
+                            "video_selection": video_selection,
+                            "selected_video": None,
+                            "videos": [],
+                            "events": [],
+                        },
+                    }
+                selected_video_ids = [str(selected_video_id)]
             corpora = discover_temporal_corpus(
                 output_root=Path("data/processed/video_understanding"),
                 caption_dir=Path("data/metadata/caption"),
@@ -221,20 +252,29 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
                 map_dir=Path("data/map-keyframes"),
                 keyframe_dir=Path("data/keyframes"),
                 batch_ids=body.batch_ids,
-                video_ids=body.video_ids,
+                video_ids=selected_video_ids,
             )
+            result = TemporalEventSearch(
+                corpora,
+                # The query was parsed once before video selection. Avoid a
+                # second Gemini request in the selected-video event phase.
+                query_parser=None,
+                temporal_verifier=temporal_verifier,
+                video_dir=Path("data/videos") if temporal_verifier else None,
+                verifier_candidates=body.qwen_candidate_events,
+            ).search(
+                parsed,
+                top_k_videos=body.top_k_videos,
+            )
+            result["query"] = body.query
+            result["query_parsing"] = {
+                "mode": app.state.temporal_query_parser.mode,
+                "model": app.state.temporal_query_parser.model,
+            }
+            result["video_selection"] = video_selection
             return {
                 "status": "success",
-                "data": TemporalEventSearch(
-                    corpora,
-                    query_parser=app.state.temporal_query_parser,
-                    temporal_verifier=temporal_verifier,
-                    video_dir=Path("data/videos") if temporal_verifier else None,
-                    verifier_candidates=body.qwen_candidate_events,
-                ).search(
-                    body.query,
-                    top_k_videos=body.top_k_videos,
-                ),
+                "data": result,
             }
         except ValueError as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
