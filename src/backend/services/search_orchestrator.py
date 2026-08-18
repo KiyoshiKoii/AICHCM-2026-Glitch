@@ -254,3 +254,32 @@ class SearchService:
                     str(candidate["frame_id"]), self.settings.thumbnail_base_url
                 )
         return payload
+
+    async def search_temporal_videos(
+        self,
+        query: str,
+        *,
+        batch_ids: list[str] | None = None,
+        video_ids: list[str] | None = None,
+        top_k_videos: int = 20,
+        summary_weight: float = 0.75,
+        event_weight: float = 0.25,
+    ) -> dict[str, Any]:
+        """Rank candidate videos without resolving temporal event anchors."""
+
+        try:
+            payload = await self.dev2.search_temporal_videos(
+                {
+                    "query": query,
+                    "batch_ids": batch_ids or [],
+                    "video_ids": video_ids or [],
+                    "top_k_videos": top_k_videos,
+                    "summary_weight": summary_weight,
+                    "event_weight": event_weight,
+                }
+            )
+        except Exception as exc:
+            raise UpstreamError(f"Failed to select temporal videos from Dev2: {exc}") from exc
+        if not isinstance(payload, dict):
+            raise UpstreamError("Dev2 temporal video response must be an object")
+        return payload

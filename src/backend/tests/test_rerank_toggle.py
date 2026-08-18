@@ -1,7 +1,12 @@
 import pytest
 
 from backend.config import Settings
-from backend.schemas.search import ParsedQuery, SearchHit, TextSearchRequest
+from backend.schemas.search import (
+    ParsedQuery,
+    SearchHit,
+    TemporalVideoSearchRequest,
+    TextSearchRequest,
+)
 from backend.services.llm_reranker import GeminiReRanker
 from backend.services.search_orchestrator import SearchService
 
@@ -79,6 +84,26 @@ def test_text_search_request_normalizes_batch_and_video_filters():
 def test_text_search_request_rejects_unknown_batch_filter():
     with pytest.raises(ValueError, match="only L21-L30"):
         TextSearchRequest(query="a person", batch_ids=["L20"])
+
+
+def test_temporal_video_request_exposes_summary_event_weights():
+    request = TemporalVideoSearchRequest(
+        query="A cycling race",
+        summary_weight=0.6,
+        event_weight=0.4,
+    )
+
+    assert request.summary_weight == 0.6
+    assert request.event_weight == 0.4
+
+
+def test_temporal_video_request_rejects_zero_fusion_weights():
+    with pytest.raises(ValueError, match="cannot both be zero"):
+        TemporalVideoSearchRequest(
+            query="A cycling race",
+            summary_weight=0.0,
+            event_weight=0.0,
+        )
 
 
 @pytest.mark.asyncio

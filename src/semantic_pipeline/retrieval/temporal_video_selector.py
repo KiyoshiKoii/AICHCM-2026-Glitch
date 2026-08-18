@@ -345,9 +345,18 @@ class ElasticsearchVideoSelector:
         video_ids: Sequence[str] = (),
         top_k: int = 5,
         per_index_k: int = 100,
+        summary_weight: float = 0.95,
+        event_weight: float = 0.05,
     ) -> dict[str, Any]:
         if top_k < 1:
             raise ValueError("top_k must be at least 1")
+        if summary_weight < 0 or event_weight < 0:
+            raise ValueError("video selection weights must be non-negative")
+        weight_total = summary_weight + event_weight
+        if weight_total <= 0:
+            raise ValueError("summary_weight and event_weight cannot both be zero")
+        normalized_summary_weight = summary_weight / weight_total
+        normalized_event_weight = event_weight / weight_total
         size = max(top_k, per_index_k)
         video_response = self.client.search(
             index=self.video_index,
@@ -415,8 +424,10 @@ class ElasticsearchVideoSelector:
         candidate_ids = set(video_scores) | set(segment_scores)
         scores = {
             video_id: (
-                0.95 * video_scores.get(video_id, 0.0) / max_video_score
-                + 0.05 * max(segment_scores.get(video_id, [0.0])) / max_segment_score
+                normalized_summary_weight * video_scores.get(video_id, 0.0) / max_video_score
+                + normalized_event_weight
+                * max(segment_scores.get(video_id, [0.0]))
+                / max_segment_score
             )
             for video_id in candidate_ids
         }
@@ -427,6 +438,11 @@ class ElasticsearchVideoSelector:
                 "score": round(scores[video_id], 8),
                 "video_score": round(video_scores.get(video_id, 0.0), 6),
                 "best_segment_score": round(max(segment_scores.get(video_id, [0.0])), 6),
+                "summary_score": round(video_scores.get(video_id, 0.0) / max_video_score, 8),
+                "event_score": round(
+                    max(segment_scores.get(video_id, [0.0])) / max_segment_score,
+                    8,
+                ),
                 "video_rank": video_ranks.get(video_id),
                 "summary_vi": video_sources.get(video_id, {}).get("summary_vi", ""),
                 "content_profile": video_sources.get(video_id, {}).get("content_profile", ""),
@@ -438,6 +454,10 @@ class ElasticsearchVideoSelector:
             "mode": "elasticsearch_video_then_events",
             "selected_video_id": ranked_ids[0] if ranked_ids else None,
             "candidates": candidates,
+            "weights": {
+                "summary": round(normalized_summary_weight, 8),
+                "event": round(normalized_event_weight, 8),
+            },
             "video_hits": len(video_hits),
             "segment_hits": len(segment_hits),
         }

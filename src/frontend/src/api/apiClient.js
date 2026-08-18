@@ -108,3 +108,26 @@ export const searchTemporalEvents = async (
   }
   return response.json();
 };
+
+export const searchTemporalVideos = async (
+  query,
+  { summaryWeight = 0.75, eventWeight = 0.25 } = {},
+  { batchIds = [], videoIds = [], topKVideos = 20 } = {},
+) => {
+  const response = await fetch('/api/v1/search/temporal-videos', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query,
+      batch_ids: batchIds,
+      video_ids: videoIds,
+      top_k_videos: topKVideos,
+      summary_weight: summaryWeight,
+      event_weight: eventWeight,
+    }),
+  });
+  if (!response.ok) {
+    throw new Error(`Temporal video search failed with status ${response.status}`);
+  }
+  return response.json();
+};

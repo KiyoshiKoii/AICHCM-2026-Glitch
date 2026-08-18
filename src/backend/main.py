@@ -119,6 +119,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(status_code=404, detail="Image not found")
         return FileResponse(path)
 
+    @app.get("/media/videos/{video_id}.mp4")
+    async def get_video(video_id: str):
+        if not re.fullmatch(r"L\d+_V\d+", video_id, flags=re.IGNORECASE):
+            raise HTTPException(status_code=404, detail="Invalid video ID format")
+        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        path = os.path.join(base_dir, "data", "videos", f"{video_id.upper()}.mp4")
+        if not os.path.exists(path):
+            raise HTTPException(status_code=404, detail="Video not found")
+        return FileResponse(path, media_type="video/mp4")
+
     @app.exception_handler(ServiceError)
     async def handle_service_error(_: Request, exc: ServiceError) -> JSONResponse:
         return JSONResponse(

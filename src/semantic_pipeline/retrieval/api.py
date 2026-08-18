@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 class ObjectQuery(BaseModel):
@@ -157,6 +157,38 @@ class TemporalEventRequest(BaseModel):
         return [str(value).strip().upper() for value in values or [] if str(value).strip()]
 
 
+class TemporalVideoRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    query: str = Field(min_length=2, max_length=5000)
+    batch_ids: list[str] = Field(default_factory=list, max_length=10)
+    video_ids: list[str] = Field(default_factory=list, max_length=100)
+    top_k_videos: int = Field(default=20, ge=1, le=100)
+    summary_weight: float = Field(default=0.75, ge=0.0, le=1.0)
+    event_weight: float = Field(default=0.25, ge=0.0, le=1.0)
+
+    @field_validator("query")
+    @classmethod
+    def normalize_query(cls, value: str) -> str:
+        normalized = "\n".join(" ".join(line.split()) for line in value.splitlines()).strip()
+        if not normalized:
+            raise ValueError("query must not be blank")
+        return normalized
+
+    @field_validator("batch_ids", "video_ids", mode="before")
+    @classmethod
+    def normalize_ids(cls, values):
+        if isinstance(values, str):
+            values = re.split(r"[,;\s]+", values)
+        return [str(value).strip().upper() for value in values or [] if str(value).strip()]
+
+    @model_validator(mode="after")
+    def validate_weights(self) -> "TemporalVideoRequest":
+        if self.summary_weight + self.event_weight <= 0:
+            raise ValueError("summary_weight and event_weight cannot both be zero")
+        return self
+
+
 def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI:
     app = FastAPI(title="AIC semantic retrieval", version="1.0")
     app.state.search_backend = search_backend
@@ -280,6 +312,37 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
             raise HTTPException(status_code=422, detail=str(exc)) from exc
         except Exception as exc:
             raise HTTPException(status_code=503, detail=f"Temporal search failed: {exc}") from exc
+
+    @app.post("/internal/search/temporal-videos")
+    def search_temporal_videos(body: TemporalVideoRequest) -> dict:
+        try:
+            parsed = app.state.temporal_query_parser.parse(parse_temporal_query(body.query))
+            selection = ElasticsearchVideoSelector(get_backend().client).select(
+                parsed,
+                batch_ids=body.batch_ids,
+                video_ids=body.video_ids,
+                top_k=body.top_k_videos,
+                summary_weight=body.summary_weight,
+                event_weight=body.event_weight,
+            )
+            return {
+                "status": "success",
+                "data": {
+                    "query": body.query,
+                    "mode": "temporal_video_selection",
+                    "query_parsing": {
+                        "mode": app.state.temporal_query_parser.mode,
+                        "model": app.state.temporal_query_parser.model,
+                    },
+                    "selected_video_id": selection.get("selected_video_id"),
+                    "candidates": selection.get("candidates", []),
+                    "video_selection": selection,
+                },
+            }
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        except Exception as exc:
+            raise HTTPException(status_code=503, detail=f"Temporal video search failed: {exc}") from exc
 
     return app
 

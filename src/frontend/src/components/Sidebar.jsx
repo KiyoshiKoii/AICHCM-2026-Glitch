@@ -10,7 +10,10 @@ function Sidebar({
   onSearch,
   onImageSearch,
   onVqaSearch,
-  onTemporalSearch,
+  onTemporalVideoSearch,
+  onTemporalEventSearch,
+  selectedTemporalVideo,
+  onClearTemporalVideo,
   onFiltersChange,
   filters,
   filterResetKey,
@@ -40,7 +43,10 @@ function Sidebar({
         onSearch={onSearch}
         onImageSearch={onImageSearch}
         onVqaSearch={onVqaSearch}
-        onTemporalSearch={onTemporalSearch}
+        onTemporalVideoSearch={onTemporalVideoSearch}
+        onTemporalEventSearch={onTemporalEventSearch}
+        selectedTemporalVideo={selectedTemporalVideo}
+        onClearTemporalVideo={onClearTemporalVideo}
         filters={filters}
       />
 
