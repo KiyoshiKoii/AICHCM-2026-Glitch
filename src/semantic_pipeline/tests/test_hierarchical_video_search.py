@@ -58,7 +58,7 @@ def test_video_search_text_contains_every_story_summary() -> None:
 
 def _actual_l22_documents():
     pilot = ROOT / "data/processed/video_understanding/L22/L22_V001/pilot"
-    if not (pilot / "video_summary.json").is_file():
+    if not all((pilot / name).is_file() for name in ("video_summary.json", "timeline.json")):
         pytest.skip("requires the locally generated L22_V001 pilot")
     return build_hierarchical_documents(
         pilot_dir=pilot,
