@@ -31,5 +31,9 @@ vietocr             # Nhận diện chữ tiếng Việt
 setuptools          # Fix lỗi thiếu pkg_resources của thư viện gdown cũ
 google-genai        # Client Gemini cho reranking và VQA
 
+# --- Optional local VLM verifier for TRAKE ---
+accelerate
+bitsandbytes
+
 # --- ASR (Dev 4, Phase 2 Task) ---
 faster-whisper      # Trích xuất transcript (Việt/Anh) từ audio track của video
