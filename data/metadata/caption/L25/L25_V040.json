@@ -255,32 +255,30 @@
   },
   {
     "frame_id": "L25_V040_f0007",
-    "visual_source_frame_id": "L25_V040_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A person in a white shirt and glasses sits behind a laptop in a blue studio.",
-    "detailed_caption": "A medium shot shows one person wearing a white long-sleeve shirt and glasses, seated behind a silver laptop on a white desk. A blue background with digital graphic elements is behind the desk, and a digital interface overlay is visible on the right side.",
-    "caption_vi": "Một người mặc áo trắng và đeo kính ngồi sau máy tính xách tay trong phòng thu màu xanh.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một người mặc áo sơ mi dài tay màu trắng và đeo kính, ngồi sau máy tính xách tay màu bạc trên bàn làm việc màu trắng. Phía sau bàn là phông nền màu xanh lam có các yếu tố đồ họa kỹ thuật số.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0007",
+    "ocr_source_frame_id": "L25_V040_f0007",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white button-down shirt sits behind a laptop in a studio with a blue background.",
+    "detailed_caption": "A medium shot shows one man sitting behind a silver laptop in a studio setting. The man has short black hair, wears clear-framed glasses and a long-sleeved white button-down shirt, and faces forward. The background is a blue patterned wall with a large rectangular inset screen on the right.",
+    "caption_vi": "Một nam giáo viên đeo kính và mặc áo sơ mi trắng ngồi phía sau máy tính xách tay trong phòng thu với phông nền màu xanh.",
+    "detailed_caption_vi": "Cận cảnh trung bình cho thấy một người đàn ông ngồi sau máy tính xách tay màu bạc trong một phòng thu. Người đàn ông có tóc đen ngắn, đeo kính gọng trong và mặc áo sơ mi trắng dài tay, hướng về phía trước. Phông nền là một bức tường màu xanh có màn hình lồng vào ở bên phải.",
+    "ocr_text": "THANH NIÊN THs. HUỲNH KIỀU VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11399999999999999,
-          0.725,
-          0.44000000000000006,
-          0.9930000000000001
+          0.11299999999999999,
+          0.7220000000000001,
+          0.438,
+          0.9939999999999999
         ],
-        "description": "silver laptop on white desk",
-        "description_vi": "máy tính xách tay màu bạc trên bàn trắng",
+        "description": "silver laptop with asus logo",
+        "description_vi": "máy tính xách tay màu bạc có logo asus",
         "attributes": [
           "silver",
-          "portable"
+          "laptop"
         ],
         "action": ""
       },
@@ -288,36 +286,20 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.10600000000000001,
+          0.1,
           0.171,
           0.487,
-          0.995
+          0.992
         ],
-        "description": "person in white long-sleeve shirt and glasses",
-        "description_vi": "người mặc áo sơ mi dài tay màu trắng và đeo kính",
+        "description": "man wearing glasses and a white button-down shirt",
+        "description_vi": "nam giới đeo kính và mặc áo sơ mi trắng",
         "attributes": [
-          "white",
+          "man",
           "glasses",
-          "long-sleeve"
+          "white shirt",
+          "short hair"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.528
-        ],
-        "description": "digital display window on blue background",
-        "description_vi": "cửa sổ hiển thị kỹ thuật số trên nền xanh",
-        "attributes": [
-          "blue",
-          "digital"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
@@ -418,26 +400,27 @@
     "visual_source_frame_id": "L25_V040_f0009",
     "ocr_source_frame_id": "L25_V040_f0009",
     "quality_flags": [],
-    "caption": "A person in a white shirt sits at a desk with a laptop next to a digital screen showing educational headers.",
-    "detailed_caption": "A medium shot shows one person wearing a white long-sleeve shirt and glasses seated at a white desk with a silver laptop. A blank digital white screen is positioned to the right, topped with a yellow header banner containing text and icons.",
-    "caption_vi": "Một người mặc áo trắng ngồi ở bàn làm việc có máy tính xách tay bên cạnh màn hình kỹ thuật số hiển thị tiêu đề giáo dục.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một người mặc áo sơ mi dài tay màu trắng và đeo kính ngồi tại bàn làm việc màu trắng với máy tính xách tay màu bạc. Màn hình kỹ thuật số màu trắng trống được đặt ở bên phải, phía trên là biểu ngữ màu vàng chứa văn bản và biểu tượng.",
-    "ocr_text": "THANH NIÊN ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN - SỰ TRUYỀN TẢI ĐIỆN",
+    "caption": "A man wearing glasses and a white button-down shirt sits behind a laptop next to a white display board.",
+    "detailed_caption": "A medium shot displays a man seated at a desk with a laptop in front of him against a blue studio background. The man wears glasses and a white shirt. To his right is a large blank white display board with a yellow banner across the top.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng ngồi sau máy tính xách tay cạnh một bảng hiển thị màu trắng.",
+    "detailed_caption_vi": "Khung hình trung bình cho thấy một người đàn ông ngồi bên bàn làm việc có máy tính xách tay trước mặt trên phông nền phòng thu màu xanh. Người đàn ông đeo kính và mặc áo sơ mi trắng. Bên phải anh ta là một bảng hiển thị màu trắng lớn có banner màu vàng ở phía trên.",
+    "ocr_text": "THANH NIÊN + - x ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN - SỰ TRUYỀN TẢI ĐIỆN",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11399999999999999,
+          0.11299999999999999,
           0.723,
-          0.44000000000000006,
-          0.9930000000000001
+          0.43899999999999995,
+          0.995
         ],
-        "description": "silver laptop on white desk",
-        "description_vi": "máy tính xách tay màu bạc trên bàn trắng",
+        "description": "silver laptop",
+        "description_vi": "máy tính xách tay màu bạc",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -446,34 +429,18 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.171,
-          0.487,
-          0.9930000000000001
+          0.16699999999999998,
+          0.488,
+          0.991
         ],
-        "description": "person in white shirt and glasses",
-        "description_vi": "người mặc áo sơ mi trắng và đeo kính",
+        "description": "man with glasses and white shirt",
+        "description_vi": "nam giới đeo kính và mặc áo sơ mi trắng",
         "attributes": [
-          "white",
-          "glasses"
+          "man",
+          "glasses",
+          "white shirt"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.528
-        ],
-        "description": "large white digital screen with yellow header bar",
-        "description_vi": "màn hình kỹ thuật số màu trắng lớn với thanh tiêu đề màu vàng",
-        "attributes": [
-          "white",
-          "yellow"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
@@ -914,62 +881,30 @@
     "frame_id": "L25_V040_f0020",
     "visual_source_frame_id": "L25_V040_f0020",
     "ocr_source_frame_id": "L25_V040_f0020",
-    "quality_flags": [],
-    "caption": "A person in a light blue shirt stands behind a desk reading an open book in a library.",
-    "detailed_caption": "A medium shot shows one person wearing a light blue long-sleeve shirt, standing behind a table and reading an open book. Stacks of books rest on the table. Tall bookshelves filled with books line the library interior in the background.",
-    "caption_vi": "Một người mặc áo sơ mi xanh nhạt đứng sau bàn đọc sách mở trong thư viện.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một người mặc áo sơ mi dài tay màu xanh nhạt, đang đứng sau bàn và đọc một cuốn sách mở. Các chồng sách nằm trên bàn. Các kệ sách cao đầy sách xếp hàng bên trong thư viện ở phía sau.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A man in a light blue shirt stands in a library with rows of bookshelves.",
+    "detailed_caption": "A medium shot shows a standing in a bright library setting, surrounded by tall white bookshelves filled with books. The man wears a light blue button-down shirt and is looking down while handling books on a counter.",
+    "caption_vi": "Một nam thanh niên mặc áo sơ mi xanh nhạt đứng trong thư viện với các dãy kệ sách.",
+    "detailed_caption_vi": "Khung hình trung bình ghi lại hình ảnh một nam thanh niên đứng trong không gian thư viện sáng sủa, xung quanh là các kệ sách trắng cao xếp đầy sách. Người đàn ông mặc áo sơ mi xanh nhạt cài nút và đang cúi nhìn thao tác với sách trên quầy.",
     "ocr_text": "Culture-Tourism",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "book_0",
-        "label": "book",
-        "bbox": [
-          0.273,
-          0.7859999999999999,
-          0.571,
-          0.986
-        ],
-        "description": "stacked books on the table",
-        "description_vi": "những cuốn sách xếp chồng lên nhau trên bàn",
-        "attributes": [
-          "stacked",
-          "closed"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "book_1",
-        "label": "book",
-        "bbox": [
-          0.55,
-          0.7180000000000001,
-          0.853,
-          0.863
-        ],
-        "description": "open book on a table",
-        "description_vi": "cuốn sách mở trên bàn",
-        "attributes": [
-          "open",
-          "paper"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "bookshelf_0",
         "label": "bookshelf",
         "bbox": [
-          0.128,
+          0.127,
           0.132,
-          0.475,
-          0.995
+          0.877,
+          0.9939999999999999
         ],
-        "description": "metal bookshelf filled with books",
-        "description_vi": "kệ sách kim loại chứa đầy sách",
+        "description": "tall white bookshelves filled with books",
+        "description_vi": "kệ sách màu trắng cao xếp đầy sách",
         "attributes": [
-          "metal",
-          "white"
+          "white",
+          "bookshelf"
         ],
         "action": ""
       },
@@ -980,47 +915,28 @@
           0.442,
           0.177,
           0.688,
-          0.7939999999999999
+          0.793
         ],
-        "description": "person in light blue shirt reading a book",
-        "description_vi": "người mặc áo sơ mi xanh nhạt đang đọc sách",
+        "description": "in light blue shirt",
+        "description_vi": "nam thanh niên mặc áo sơ mi xanh nhạt",
         "attributes": [
-          "light blue",
-          "long-sleeve"
+          "man",
+          "light blue shirt",
+          "short hair"
         ],
-        "action": "reading"
+        "action": "standing"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "book_0",
-        "predicate": "overlapping",
-        "object_id": "bookshelf_0"
-      },
-      {
         "subject_id": "bookshelf_0",
-        "predicate": "overlapping",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "left_of",
-        "object_id": "book_1"
-      },
-      {
-        "subject_id": "book_1",
-        "predicate": "right_of",
-        "object_id": "bookshelf_0"
-      },
-      {
-        "subject_id": "book_1",
         "predicate": "overlapping",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
         "predicate": "overlapping",
-        "object_id": "book_1"
+        "object_id": "bookshelf_0"
       }
     ]
   },
@@ -1093,10 +1009,10 @@
     "visual_source_frame_id": "L25_V040_f0023",
     "ocr_source_frame_id": "L25_V040_f0023",
     "quality_flags": [],
-    "caption": "An extremely washed-out, overexposed library scene.",
-    "detailed_caption": "The frame is almost entirely white due to heavy overexposure, with faint outlines of a library interior and a person standing near a desk.",
-    "caption_vi": "Cảnh thư viện cực kỳ nhạt màu và bị phơi sáng quá mức.",
-    "detailed_caption_vi": "Khung hình gần như hoàn toàn có màu trắng do bị phơi sáng quá mức, với các đường viền mờ của nội thất thư viện và một người đang đứng gần bàn.",
+    "caption": "A heavily overexposed, washed-out view of a man in a light shirt standing in a library.",
+    "detailed_caption": "A very bright, washed-out shot shows the faint outline of a person in a library setting with bookshelves in the background. The entire image is dominated by a glaring white, overexposed filter.",
+    "caption_vi": "Một khung hình bị lóa sáng nặng, mờ nhạt của một người đàn ông mặc áo sáng màu đứng trong thư viện.",
+    "detailed_caption_vi": "Bức ảnh rất sáng và mờ nhạt cho thấy hình bóng mờ ảo của một người trong không gian thư viện với các giá sách phía sau. Toàn bộ hình ảnh bị lấn át bởi bộ lọc trắng lóa mắt.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -1104,16 +1020,16 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.442,
+          0.46799999999999997,
           0.177,
-          0.688,
-          0.7939999999999999
+          0.6799999999999999,
+          0.768
         ],
-        "description": "faint outline of a person in an overexposed scene",
-        "description_vi": "đường viền mờ của một người trong khung cảnh bị phơi sáng quá mức",
+        "description": "faintly visible person in library",
+        "description_vi": "người mờ nhạt trong thư viện",
         "attributes": [
-          "overexposed",
-          "faded"
+          "faint",
+          "person"
         ],
         "action": "standing"
       }
@@ -1221,10 +1137,10 @@
     "visual_source_frame_id": "L25_V040_f0027",
     "ocr_source_frame_id": "L25_V040_f0027",
     "quality_flags": [],
-    "caption": "A blurred exterior view of a multi-story building under a blue sky.",
-    "detailed_caption": "A blurred medium shot captures the facade of a multi-story building with a light-colored exterior and large windows under a bright blue sky. Motion blur sweeps horizontally across the frame, obscuring fine architectural details.",
-    "caption_vi": "Cảnh ngoại thất mờ ảo của một tòa nhà nhiều tầng dưới bầu trời xanh.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh mờ ảo ghi lại mặt tiền của một tòa nhà nhiều tầng với ngoại thất sáng màu và các cửa sổ lớn dưới bầu trời xanh sáng. Hiệu ứng nhòe chuyển động quét ngang khung hình, che khuất các chi tiết kiến trúc tinh tế.",
+    "caption": "A motion-blurred, wide-angle exterior view of a modern white building under a blue sky.",
+    "detailed_caption": "A radial motion blur effect distorts an outdoor shot of a multi-story white building with large windows. The sky above is blue, and the lower portion shows foliage and structural details.",
+    "caption_vi": "Cảnh ngoại thất góc rộng bị mờ chuyển động của một tòa nhà màu trắng hiện đại dưới bầu trời xanh.",
+    "detailed_caption_vi": "Hiệu ứng mờ chuyển động xuyên tâm làm biến dạng bức ảnh chụp ngoài trời của một tòa nhà màu trắng nhiều tầng với các cửa sổ lớn. Bầu trời phía trên màu xanh, phần dưới hiển thị cây xanh và chi tiết cấu trúc.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -1232,14 +1148,18 @@
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.335,
-          0.183,
-          0.9630000000000001,
-          0.715
+          0.356,
+          0.21600000000000003,
+          1.0,
+          0.997
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "modern multi-story white building",
+        "description_vi": "tòa nhà màu trắng hiện đại nhiều tầng",
+        "attributes": [
+          "white",
+          "building",
+          "modern"
+        ],
         "action": ""
       }
     ],
@@ -1865,33 +1785,60 @@
     "visual_source_frame_id": "L25_V040_f0034",
     "ocr_source_frame_id": "L25_V040_f0034",
     "quality_flags": [],
-    "caption": "A multi-exposure shot shows a female speaker in the foreground and a filled lecture hall in the background.",
-    "detailed_caption": "A wide multi-exposure view features a woman in a black blazer in the left foreground holding a remote control, overlaid onto a lecture hall filled with students sitting in rows of red tiered seats.",
-    "caption_vi": "Cảnh phơi sáng kép cho thấy một nữ diễn giả ở tiền cảnh và một giảng đường đông đúc ở hậu cảnh.",
-    "detailed_caption_vi": "Cảnh quay rộng phơi sáng kép có hình ảnh một phụ nữ mặc áo blazer đen ở tiền cảnh bên trái đang cầm điều khiển từ xa, được chồng lên khung cảnh giảng đường đầy học sinh ngồi trên các hàng ghế màu đỏ xếp tầng.",
+    "caption": "A double-exposed classroom scene shows a seated audience of students facing a speaker.",
+    "detailed_caption": "A multi-exposure shot displays a large group of students seated in red chairs inside an auditorium or lecture hall. In the foreground overlay, a woman stands speaking, while the background shows rows of attentive students in school uniforms.",
+    "caption_vi": "Cảnh lớp học phơi sáng kép cho thấy khán giả học sinh ngồi hướng về phía người nói.",
+    "detailed_caption_vi": "Khung hình phơi sáng nhiều lần hiển thị một nhóm lớn học sinh ngồi trên ghế đỏ trong một phòng hội thảo hoặc giảng đường. Ở lớp phủ phía trước, một người phụ nữ đang đứng nói chuyện, trong khi phía sau là các hàng học sinh mặc đồng phục đang ngồi lắng nghe.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "speaker_0",
-        "label": "speaker",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.074,
+          0.059,
           0.089,
-          0.489,
-          1.0
+          0.492,
+          0.997
         ],
-        "description": "a woman in a black blazer holding a remote control",
-        "description_vi": "một phụ nữ mặc áo blazer đen đang cầm thiết bị điều khiển từ xa",
+        "description": "woman standing in foreground",
+        "description_vi": "phụ nữ đứng ở tiền cảnh",
         "attributes": [
           "woman",
-          "black blazer",
-          "holding remote"
+          "dark clothes"
         ],
-        "action": "speaking"
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.6559999999999999,
+          0.48400000000000004,
+          0.7929999999999999,
+          0.872
+        ],
+        "description": "student seated in lecture hall",
+        "description_vi": "học sinh ngồi trong giảng đường",
+        "attributes": [
+          "student",
+          "uniform"
+        ],
+        "action": "sitting"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0035",
@@ -1961,61 +1908,98 @@
     "visual_source_frame_id": "L25_V040_f0036",
     "ocr_source_frame_id": "L25_V040_f0036",
     "quality_flags": [],
-    "caption": "Several students sit at desks in a classroom, with one student resting their chin on their hand.",
-    "detailed_caption": "A close-up shot of a row of students in white uniforms sitting at desks in a classroom. A student on the right wears glasses and rests their chin on their hand while looking forward.",
-    "caption_vi": "Một số học sinh ngồi tại bàn trong lớp học, với một học sinh chống cằm lên tay.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh một hàng học sinh mặc đồng phục trắng ngồi tại bàn trong phòng học. Học sinh ở bên phải đeo kính và chống cằm lên tay khi nhìn về phía trước.",
+    "caption": "Several students in white school shirts sit in a row at desks in a classroom.",
+    "detailed_caption": "A medium close-up shot shows a row of students sitting at desks in a classroom. From left to right, several students wearing white shirts with school emblems are seated and looking forward, with one male student wearing glasses in the foreground.",
+    "caption_vi": "Nhiều học sinh mặc áo sơ mi trắng ngồi thành hàng tại các bàn trong lớp học.",
+    "detailed_caption_vi": "Cận cảnh trung bình cho thấy một hàng học sinh đang ngồi học tại bàn trong lớp học. Từ trái sang phải, một số học sinh mặc áo sơ mi trắng có phù hiệu trường đang ngồi hướng về phía trước, với một nam sinh đeo kính ở tiền cảnh.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "student_0",
-        "label": "student",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.43899999999999995,
-          0.08600000000000001,
-          0.692,
-          0.995
+          0.277,
+          0.201,
+          0.47800000000000004,
+          0.768
         ],
-        "description": "a female student with dark hair smiling and wearing a white shirt",
-        "description_vi": "một nữ sinh tóc đen đang mỉm cười và mặc áo sơ mi trắng",
+        "description": "female student with short dark hair in white shirt",
+        "description_vi": "nữ sinh tóc ngắn sẫm màu mặc áo sơ mi trắng",
         "attributes": [
           "student",
-          "white shirt",
-          "smiling"
+          "female",
+          "white shirt"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "student_1",
-        "label": "student",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
-          0.616,
-          0.014,
-          0.999,
-          1.0
+          0.43099999999999994,
+          0.08299999999999999,
+          0.688,
+          0.966
         ],
-        "description": "a student with glasses wearing a white shirt resting chin on hand",
-        "description_vi": "một học sinh đeo kính mặc áo sơ mi trắng đang chống cằm lên tay",
+        "description": "female student with dark hair in white shirt",
+        "description_vi": "nữ sinh tóc đen mặc áo sơ mi trắng",
+        "attributes": [
+          "student",
+          "female",
+          "white shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.61,
+          0.011,
+          0.9960000000000001,
+          0.9930000000000001
+        ],
+        "description": "male student wearing glasses and white shirt",
+        "description_vi": "nam sinh đeo kính và mặc áo sơ mi trắng",
         "attributes": [
           "student",
           "glasses",
-          "white shirt",
-          "seated"
+          "white shirt"
         ],
-        "action": "resting chin on hand"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "student_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
-        "object_id": "student_1"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "student_1",
+        "subject_id": "person_1",
         "predicate": "overlapping",
-        "object_id": "student_0"
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
       }
     ]
   },
@@ -3598,24 +3582,24 @@
     "visual_source_frame_id": "L25_V040_f0059",
     "ocr_source_frame_id": "L25_V040_f0059",
     "quality_flags": [],
-    "caption": "A man wearing glasses and a white shirt sitting at a desk with a laptop.",
-    "detailed_caption": "A medium shot shows a man wearing glasses and a white long-sleeved shirt seated at a desk with a silver laptop. He is looking forward while operating the laptop mouse with his right hand. The background features a blue digital circuit board pattern and an upper information banner.",
-    "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi bên bàn làm việc với máy tính xách tay.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng đang ngồi bên bàn với chiếc máy tính xách tay màu bạc. Anh ấy đang nhìn về phía trước trong khi tay phải sử dụng chuột máy tính. Phía sau là họa tiết bảng mạch kỹ thuật số màu xanh và biểu ngữ thông tin phía trên.",
-    "ocr_text": "THANH NIÊN ÔN THI THPT VẬT LÍ NĂM 2024 CD6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM",
+    "caption": "A man wearing glasses and a white button-down shirt sits behind a laptop next to a white display board.",
+    "detailed_caption": "A medium shot displays a man seated at a desk with a laptop in front of him against a blue studio background. The man wears glasses and a white shirt. To his right is a large blank white display board with a yellow banner across the top.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng ngồi sau máy tính xách tay cạnh một bảng hiển thị màu trắng.",
+    "detailed_caption_vi": "Khung hình trung bình cho thấy một người đàn ông ngồi bên bàn làm việc có máy tính xách tay trước mặt trên phông nền phòng thu màu xanh. Người đàn ông đeo kính và mặc áo sơ mi trắng. Bên phải anh ta là một bảng hiển thị màu trắng lớn có banner màu vàng ở phía trên.",
+    "ocr_text": "THANH NIÊN + - x ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN - SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.724,
+          0.11299999999999999,
+          0.723,
           0.438,
           0.995
         ],
-        "description": "silver laptop on the desk in front of the man",
-        "description_vi": "máy tính xách tay màu bạc trên bàn trước mặt người đàn ông",
+        "description": "silver laptop",
+        "description_vi": "máy tính xách tay màu bạc",
         "attributes": [
           "silver",
           "laptop"
@@ -3626,20 +3610,19 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.002,
+          0.0,
           0.171,
           0.487,
           0.9930000000000001
         ],
-        "description": "man wearing glasses, a white shirt, and a wristwatch sitting at a desk",
-        "description_vi": "người đàn ông đeo kính, mặc áo sơ mi trắng và đeo đồng hồ ngồi bàn làm việc",
+        "description": "man with glasses and white shirt",
+        "description_vi": "nam giới đeo kính và mặc áo sơ mi trắng",
         "attributes": [
+          "man",
           "glasses",
-          "white shirt",
-          "wristwatch",
-          "sitting"
+          "white shirt"
         ],
-        "action": "using computer"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
@@ -4546,28 +4529,44 @@
     "visual_source_frame_id": "L25_V040_f0084",
     "ocr_source_frame_id": "L25_V040_f0084",
     "quality_flags": [],
-    "caption": "An educational split slide featuring generator formulas and transformer equations.",
-    "detailed_caption": "A wide shot displays a split educational slide with a red vertical divider. The left section shows alternating current generator formulas and diagrams, while the right section adds transformer formulas in a highlighted yellow box next to the transformer diagram.",
-    "caption_vi": "Một slide giáo dục chia đôi bao gồm các công thức máy phát điện và phương trình máy biến áp.",
-    "detailed_caption_vi": "Cảnh toàn hiển thị một slide giáo dục chia đôi với vạch phân chia màu dọc đỏ. Phần bên trái cho thấy các công thức và sơ đồ máy phát điện xoay chiều, trong khi phần bên phải bổ sung các công thức máy biến áp trong một hộp màu vàng được đánh dấu bên cạnh sơ đồ máy biến áp.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I2 / I1",
+    "caption": "A physics educational slide titled 'Máy phát điện xoay chiều' and 'Máy biến áp' with formulas and diagrams.",
+    "detailed_caption": "An educational slide divided into two sections by a red vertical line. The left side presents formulas and definitions related to alternating current generators, while the right side displays a transformer diagram with relevant equations.",
+    "caption_vi": "Một slide giáo dục vật lý có tiêu đề 'Máy phát điện xoay chiều' và 'Máy biến áp' kèm theo các công thức và sơ đồ.",
+    "detailed_caption_vi": "Một slide giáo dục được chia làm hai phần bởi đường kẻ dọc màu đỏ. Phía bên trái trình bày các công thức và định nghĩa liên quan đến máy phát điện xoay chiều, trong khi phía bên phải hiển thị sơ đồ máy biến áp cùng các phương trình tương ứng.",
+    "ocr_text": "+ - x ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN - SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều Máy biến áp - Sự truyền tải điện ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p. n(v/giây) = p. n(v/phút) / 60 Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I1 / I2 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3)",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "diagram_0",
+        "label": "diagram",
         "bbox": [
-          0.0,
-          0.011,
-          1.0,
-          0.991
+          0.24500000000000002,
+          0.7649999999999999,
+          0.36,
+          0.9770000000000001
         ],
-        "description": "split educational slide with generator formulas and transformer ratio equations",
-        "description_vi": "slide giáo dục chia đôi với công thức máy phát điện và phương trình tỉ số máy biến áp",
+        "description": "three-phase generator coil diagram",
+        "description_vi": "sơ đồ cuộn dây máy phát điện ba pha",
         "attributes": [
-          "split slide",
-          "equations",
-          "diagram"
+          "diagram",
+          "circular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "diagram_1",
+        "label": "diagram",
+        "bbox": [
+          0.6769999999999999,
+          0.254,
+          0.898,
+          0.448
+        ],
+        "description": "transformer diagram with coils and core",
+        "description_vi": "sơ đồ máy biến áp với các cuộn dây và lõi",
+        "attributes": [
+          "diagram",
+          "transformer"
         ],
         "action": ""
       }
@@ -5574,25 +5573,26 @@
     "visual_source_frame_id": "L25_V040_f0104",
     "ocr_source_frame_id": "L25_V040_f0104",
     "quality_flags": [],
-    "caption": "An educational slide displays a physics multiple choice question about a transformer.",
-    "detailed_caption": "An educational presentation slide fills the frame, displaying a physics question about an ideal transformer in Vietnamese at the top. The rest of the slide is mostly blank with navigation icons at the bottom.",
-    "caption_vi": "Một slide giáo dục hiển thị câu hỏi trắc nghiệm vật lý về máy biến áp.",
-    "detailed_caption_vi": "Một slide thuyết trình giáo dục chiếm toàn bộ khung hình, hiển thị câu hỏi vật lý về máy biến áp lý tưởng bằng tiếng Việt ở phía trên. Phần còn lại của slide chủ yếu để trống với các biểu tượng điều hướng ở phía dưới.",
-    "ocr_text": "Câu 1: Một máy biến áp lí tưởng có số vòng dây của cuộn sơ cấp và số vòng dây của cuộn thứ cấp lần lượt là N1 vòng và N2 = 120 vòng. Đặt điện áp xoay chiều có giá trị hiệu dụng 220V vào hai đầu cuộn sơ cấp thì điện áp hiệu dụng giữa hai đầu cuộn thứ cấp để hở là 6V. Giá trị của N1 là (TN THPT 2023)",
+    "caption": "A physics exam question slide about transformers with Vietnamese text.",
+    "detailed_caption": "A white educational slide displays a physics multiple-choice question labeled 'Câu 1' concerning an ideal transformer with primary and secondary coil turns. A yellow banner with option placeholders sits below the main text.",
+    "caption_vi": "Slide câu hỏi kiểm tra vật lý về máy biến áp với văn bản tiếng Việt.",
+    "detailed_caption_vi": "Một slide giáo dục màu trắng hiển thị câu hỏi trắc nghiệm vật lý được dán nhãn 'Câu 1' liên quan đến máy biến áp lý tưởng có số vòng dây cuộn sơ cấp và thứ cấp. Một băng rôn màu vàng có chỗ trống cho các lựa chọn nằm bên dưới văn bản chính.",
+    "ocr_text": "Câu 1: Một máy biến áp lí tưởng có số vòng dây của cuộn sơ cấp và số vòng dây của cuộn thứ cấp lần lượt là N1 vòng và N2 = 120 vòng. Đặt điện áp xoay chiều có giá trị hiệu dụng 220V vào hai đầu cuộn sơ cấp thì điện áp hiệu dụng giữa hai đầu cuộn thứ cấp để hở là 6V. Giá trị của N1 là (TN THPT 2023) A",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.001,
-          0.001,
-          0.9960000000000001,
-          0.996
+          0.002,
+          0.023,
+          0.9949999999999999,
+          0.23399999999999999
         ],
-        "description": "educational slide with physics question text",
-        "description_vi": "slide giáo dục với nội dung câu hỏi vật lý",
+        "description": "white educational slide with text",
+        "description_vi": "slide giáo dục màu trắng có chữ",
         "attributes": [
+          "screen",
           "white",
           "text"
         ],
@@ -6281,32 +6281,62 @@
     "visual_source_frame_id": "L25_V040_f0127",
     "ocr_source_frame_id": "L25_V040_f0127",
     "quality_flags": [],
-    "caption": "A close-up of a boy wearing a maroon school cap.",
-    "detailed_caption": "A close-up shot focuses on the head and shoulders of a young boy wearing a maroon school cap with a circular emblem. He looks downward with a slight smile. Another child is visible in the blurred background.",
-    "caption_vi": "Cảnh cận cảnh một nam sinh đội mũ học sinh màu đỏ đậm.",
-    "detailed_caption_vi": "Cảnh cận cảnh tập trung vào phần đầu và vai của một nam sinh trẻ tuổi đội chiếc mũ học sinh màu đỏ đậm có huy hiệu hình tròn. Cậu ấy đang nhìn xuống với nụ cười nhẹ. Một đứa trẻ khác xuất hiện ở hậu cảnh mờ.",
-    "ocr_text": "",
+    "caption": "A young boy wearing a maroon school hat and white uniform stands in the foreground, with another student visible in the background.",
+    "detailed_caption": "A close-up shot focuses on a young boy wearing a maroon uniform cap with white trim and a white polo shirt, carrying a backpack. In the blurred background, another student holds an open book.",
+    "caption_vi": "Một nam sinh đội mũ học sinh màu nâu sẫm và mặc đồng phục trắng ở tiền cảnh, với học sinh khác mờ phía sau.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào một cậu bé đội mũ đồng phục màu nâu sẫm viền trắng và mặc áo thun polo trắng, đeo ba lô trên lưng. Ở phía sau làm mờ, một học sinh khác đang cầm cuốn sách mở.",
+    "ocr_text": "THE ASIAN INTERNATIONAL SCHOOL 1999",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.298,
-          0.386,
-          0.739,
+          0.033,
+          0.643,
+          0.187,
           1.0
         ],
-        "description": "boy wearing a maroon school cap and white shirt",
-        "description_vi": "nam sinh đội mũ học sinh đỏ đậm và mặc áo trắng",
+        "description": "student holding a book in the background",
+        "description_vi": "học sinh cầm sách ở phía sau",
+        "attributes": [
+          "student",
+          "white shirt"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29500000000000004,
+          0.37399999999999994,
+          0.727,
+          1.0
+        ],
+        "description": "young boy wearing maroon cap and white shirt",
+        "description_vi": "cậu bé đội mũ nâu sẫm và mặc áo trắng",
         "attributes": [
           "boy",
-          "cap"
+          "maroon hat",
+          "white shirt",
+          "backpack"
         ],
-        "action": "smiling"
+        "action": "standing"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0128",
@@ -6345,33 +6375,61 @@
     "visual_source_frame_id": "L25_V040_f0129",
     "ocr_source_frame_id": "L25_V040_f0129",
     "quality_flags": [],
-    "caption": "A boy in a white polo and maroon cap smiles slightly.",
-    "detailed_caption": "A close-up shot shows a boy wearing a white polo shirt, a maroon cap with a circular logo, and a blue backpack. He looks slightly down and to the side with a gentle smile. Another child is blurred in the background.",
-    "caption_vi": "Một nam sinh mặc áo polo trắng và đội mũ đỏ đậm đang mỉm cười nhẹ.",
-    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một nam sinh mặc áo polo trắng, đội mũ đỏ đậm có logo tròn và đeo balo màu xanh. Cậu ấy nhìn hơi cúi xuống và sang một bên với nụ cười nhẹ nhàng. Một đứa trẻ khác bị mờ ở hậu cảnh.",
-    "ocr_text": "",
+    "caption": "A young boy wearing a maroon school hat and white uniform polo shirt smiles slightly.",
+    "detailed_caption": "A medium close-up shot shows a young boy in a white collared uniform shirt and a maroon cap with white lettering, smiling slightly. Another student holding a book is visible in the blurry background on the left.",
+    "caption_vi": "Một cậu bé đội mũ học sinh màu nâu sẫm và mặc áo thun đồng phục trắng đang mỉm cười nhẹ.",
+    "detailed_caption_vi": "Cận cảnh trung bình cho thấy một cậu bé mặc áo sơ mi đồng phục có cổ màu trắng và đội mũ màu nâu sẫm có chữ trắng, đang mỉm cười nhẹ. Một học sinh khác đang cầm sách xuất hiện ở hậu cảnh mờ bên trái.",
+    "ocr_text": "SCHOOL",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.36,
-          0.0,
-          0.9720000000000001,
+          0.036,
+          0.643,
+          0.181,
           1.0
         ],
-        "description": "boy wearing a white polo shirt, maroon cap, and backpack",
-        "description_vi": "nam sinh mặc áo polo trắng, đội mũ đỏ đậm và đeo balo",
+        "description": "student holding a book",
+        "description_vi": "học sinh cầm sách",
+        "attributes": [
+          "student",
+          "white shirt"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.36,
+          0.0,
+          0.977,
+          1.0
+        ],
+        "description": "boy wearing maroon cap and white shirt",
+        "description_vi": "cậu bé đội mũ nâu sẫm và mặc áo trắng",
         "attributes": [
           "boy",
-          "cap",
-          "backpack"
+          "maroon hat",
+          "white shirt"
         ],
         "action": "smiling"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0130",
@@ -6504,32 +6562,88 @@
     "visual_source_frame_id": "L25_V040_f0133",
     "ocr_source_frame_id": "L25_V040_f0133",
     "quality_flags": [],
-    "caption": "A collection of sharpened colored pencils rests in a transparent tray.",
-    "detailed_caption": "A close-up shot displays rows of neatly organized, sharpened colored pencils in a clear plastic tray. The pencils feature various bright colors including yellow, green, pink, and blue.",
-    "caption_vi": "Một bộ bút chì màu được gọt nhọn nằm trong khay trong suốt.",
-    "detailed_caption_vi": "Cảnh cận cảnh trưng bày các hàng bút chì màu được sắp xếp gọn gàng, gọt nhọn trong khay nhựa trong suốt. Các cây bút chì có nhiều màu sắc tươi sáng khác nhau bao gồm vàng, xanh lá cây, hồng và xanh dương.",
+    "caption": "A close-up shot shows an arrangement of colored pencils lined up diagonally.",
+    "detailed_caption": "A close-up view displays a set of colored pencils arranged neatly in a row on a transparent surface. The pencils feature various bright colors including yellow, green, pink, and blue, with sharpened tips pointing towards the left.",
+    "caption_vi": "Cận cảnh các bút chì màu được xếp thành hàng chéo.",
+    "detailed_caption_vi": "Cận cảnh hiển thị một bộ bút chì màu được sắp xếp gọn gàng thành hàng trên bề mặt trong suốt. Các cây bút có nhiều màu sắc tươi sáng bao gồm vàng, xanh lá, hồng và xanh dương, với các ngòi bút được gọt nhọn hướng về phía bên trái.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "pencils_0",
-        "label": "pencils",
+        "object_id": "pencil_0",
+        "label": "pencil",
         "bbox": [
-          0.0,
-          0.004,
-          1.0,
-          0.9979999999999999
+          0.304,
+          0.098,
+          0.986,
+          0.5559999999999999
         ],
-        "description": "sharpened colored pencils arranged in a transparent tray",
-        "description_vi": "bút chì màu được gọt nhọn xếp trong khay trong suốt",
+        "description": "yellow colored pencil with sharpened tip",
+        "description_vi": "bút chì màu vàng có ngòi được gọt nhọn",
         "attributes": [
-          "colorful",
-          "sorted"
+          "yellow",
+          "pencil",
+          "sharpened"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pencil_1",
+        "label": "pencil",
+        "bbox": [
+          0.53,
+          0.275,
+          1.0,
+          0.682
+        ],
+        "description": "green colored pencil",
+        "description_vi": "bút chì màu xanh lá",
+        "attributes": [
+          "green",
+          "pencil"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pencil_2",
+        "label": "pencil",
+        "bbox": [
+          0.67,
+          0.528,
+          0.999,
+          0.721
+        ],
+        "description": "pink colored pencil",
+        "description_vi": "bút chì màu hồng",
+        "attributes": [
+          "pink",
+          "pencil"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "pencil_0",
+        "predicate": "overlapping",
+        "object_id": "pencil_1"
+      },
+      {
+        "subject_id": "pencil_1",
+        "predicate": "overlapping",
+        "object_id": "pencil_0"
+      },
+      {
+        "subject_id": "pencil_1",
+        "predicate": "overlapping",
+        "object_id": "pencil_2"
+      },
+      {
+        "subject_id": "pencil_2",
+        "predicate": "overlapping",
+        "object_id": "pencil_1"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0134",
@@ -8156,59 +8270,58 @@
     "visual_source_frame_id": "L25_V040_f0166",
     "ocr_source_frame_id": "L25_V040_f0166",
     "quality_flags": [],
-    "caption": "A gloved hand lights an alcohol burner with a match in a laboratory.",
-    "detailed_caption": "A close-up shot shows a gloved hand holding a burning match to ignite the wick of a yellow-based alcohol burner. In the background, laboratory equipment and students are softly out of focus.",
-    "caption_vi": "Một bàn tay đeo găng tay đang châm lửa đèn cồn bằng một que diêm trong phòng thí nghiệm.",
-    "detailed_caption_vi": "Cận cảnh bàn tay đeo găng cầm que diêm đang cháy để châm bấc cho chiếc đèn cồn đế vàng. Phía sau là trang thiết bị thí nghiệm và học sinh mờ ảo.",
+    "caption": "A double-exposed classroom and laboratory scene shows students working at desks.",
+    "detailed_caption": "A multi-exposure composite image shows students in school uniforms working at laboratory desks inside a bright classroom. Wooden cabinets line the back wall, and scientific equipment is visible on the countertops.",
+    "caption_vi": "Cảnh lớp học và phòng thí nghiệm phơi sáng kép cho thấy học sinh đang làm việc tại các bàn.",
+    "detailed_caption_vi": "Hình ảnh tổng hợp phơi sáng nhiều lần cho thấy các học sinh mặc đồng phục đang làm việc tại các bàn phòng thí nghiệm bên trong một lớp học sáng sủa. Các tủ gỗ xếp dọc bức tường phía sau và thiết bị khoa học có thể nhìn thấy trên mặt bàn.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "alcohol_burner_0",
-        "label": "alcohol burner",
+        "object_id": "desk_0",
+        "label": "desk",
         "bbox": [
-          0.312,
-          0.354,
-          0.8539999999999999,
-          1.0
+          0.648,
+          0.655,
+          0.9289999999999999,
+          0.9939999999999999
         ],
-        "description": "a yellow-based glass alcohol burner with a lit wick",
-        "description_vi": "đèn cồn bằng thủy tinh đế màu vàng có bấc đang cháy",
+        "description": "laboratory desk with equipment",
+        "description_vi": "bàn phòng thí nghiệm có thiết bị",
         "attributes": [
-          "yellow",
-          "glass",
-          "lit"
+          "desk",
+          "laboratory"
         ],
-        "action": "burning"
+        "action": ""
       },
       {
-        "object_id": "gloved_hand_0",
-        "label": "gloved hand",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.583,
-          0.0,
-          0.833,
-          0.5
+          0.8029999999999999,
+          0.427,
+          0.9550000000000001,
+          0.8770000000000001
         ],
-        "description": "a white gloved hand holding a match",
-        "description_vi": "bàn tay đeo găng trắng cầm diêm",
+        "description": "student seated at desk",
+        "description_vi": "học sinh ngồi tại bàn",
         "attributes": [
-          "white",
-          "gloved"
+          "student",
+          "uniform"
         ],
-        "action": "holding"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "alcohol_burner_0",
+        "subject_id": "desk_0",
         "predicate": "overlapping",
-        "object_id": "gloved_hand_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "gloved_hand_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
-        "object_id": "alcohol_burner_0"
+        "object_id": "desk_0"
       }
     ]
   },
@@ -8726,32 +8839,30 @@
   },
   {
     "frame_id": "L25_V040_f0175",
-    "visual_source_frame_id": "L25_V040_f0174",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a desk with a laptop in front of a blue background.",
-    "detailed_caption": "A medium shot shows a male teacher wearing glasses and a white collared shirt seated behind an open silver laptop on a white desk. A blank white slide area appears on the right against a blue patterned backdrop, with the text 'THANH NIÊN' in the top-left corner.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay trước phông nền xanh.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính và mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu bạc trên bàn trắng. Khu vực bảng trắng trống hiển thị bên phải trên nền xanh, cùng dòng chữ 'THANH NIÊN' ở góc trên bên trái.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0175",
+    "ocr_source_frame_id": "L25_V040_f0175",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white button-down shirt sits behind a laptop next to an educational display board.",
+    "detailed_caption": "A medium shot shows a man seated at a desk with a silver laptop in front of him against a blue background. The man wears glasses and a white button-down shirt. To his right is a white display board featuring physics text in Vietnamese.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng ngồi sau máy tính xách tay cạnh bảng hiển thị giáo dục.",
+    "detailed_caption_vi": "Khung hình trung bình cho thấy một người đàn ông ngồi bên bàn làm việc với máy tính xách tay màu bạc trước mặt trên phông nền màu xanh. Người đàn ông đeo kính và mặc áo sơ mi trắng. Bên phải anh ta là một bảng hiển thị màu trắng có nội dung văn bản vật lý bằng tiếng Việt.",
+    "ocr_text": "THANH NIÊN Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) Ths. HUỲNH KIẾN VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
-          0.992
+          0.11299999999999999,
+          0.723,
+          0.438,
+          0.995
         ],
-        "description": "a silver laptop with an ASUS logo on the lid",
-        "description_vi": "máy tính xách tay màu bạc có logo ASUS trên nắp",
+        "description": "silver laptop",
+        "description_vi": "máy tính xách tay màu bạc",
         "attributes": [
           "silver",
-          "open"
+          "laptop"
         ],
         "action": ""
       },
@@ -8760,34 +8871,18 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.175,
+          0.487,
+          0.9930000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "man wearing glasses and white shirt",
+        "description_vi": "nam giới đeo kính và mặc áo sơ mi trắng",
         "attributes": [
+          "man",
           "glasses",
           "white shirt"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
-        ],
-        "description": "a white presentation screen showing instructional content area",
-        "description_vi": "màn hình trình bày màu trắng hiển thị vùng nội dung hướng dẫn",
-        "attributes": [
-          "white",
-          "rectangular"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
@@ -9249,32 +9344,48 @@
   },
   {
     "frame_id": "L25_V040_f0184",
-    "visual_source_frame_id": "L25_V040_f0182",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
-    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "visual_source_frame_id": "L25_V040_f0184",
+    "ocr_source_frame_id": "L25_V040_f0184",
+    "quality_flags": [],
+    "caption": "A physics slide displays a formula and a formula proportion box on a light blue background.",
+    "detailed_caption": "A physics slide displayed on a light blue background features the formula f equals p times n at the center and a formula proportion box below with an arrow pointing to it. The top of the frame shows a multiple-choice question and options A, B, C, and D in yellow and green boxes. At the bottom left, a small box contains text labeled Bài giải.",
+    "caption_vi": "Một slide vật lý hiển thị công thức và hộp tỉ lệ công thức trên nền xanh nhạt.",
+    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có công thức f bằng p nhân n ở giữa và hộp tỉ lệ công thức ở phía dưới với mũi tên trỏ vào. Phía trên khung hình hiển thị câu hỏi trắc nghiệm và các lựa chọn A, B, C, D trong các ô màu vàng và xanh lá. Ở góc dưới bên trái, một hộp nhỏ chứa văn bản có nhãn Bài giải.",
+    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "formula_box_0",
+        "label": "formula box",
+        "bbox": [
+          0.22999999999999998,
+          0.57,
+          0.381,
+          0.775
+        ],
+        "description": "a yellow box with a ratio formula displayed inside",
+        "description_vi": "một hộp màu vàng có công thức tỉ lệ hiển thị bên trong",
+        "attributes": [
+          "yellow",
+          "formula"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
-          0.006,
-          0.998,
-          0.9939999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing a physics problem and a formula solution",
-        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
+        "description": "a light blue educational slide showing physics formulas and multiple-choice options",
+        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và các lựa chọn trắc nghiệm",
         "attributes": [
-          "blue",
-          "text"
+          "light blue",
+          "educational",
+          "formula"
         ],
         "action": ""
       }
@@ -9283,32 +9394,48 @@
   },
   {
     "frame_id": "L25_V040_f0185",
-    "visual_source_frame_id": "L25_V040_f0182",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
-    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "visual_source_frame_id": "L25_V040_f0185",
+    "ocr_source_frame_id": "L25_V040_f0185",
+    "quality_flags": [],
+    "caption": "A physics slide displays a formula and a formula proportion box on a light blue background.",
+    "detailed_caption": "A physics slide displayed on a light blue background features the formula f equals p times n at the center and a formula proportion box below with an arrow pointing to it. The top of the frame shows a multiple-choice question and options A, B, C, and D in yellow and green boxes. At the bottom left, a small box contains text labeled Bài giải.",
+    "caption_vi": "Một slide vật lý hiển thị công thức và hộp tỉ lệ công thức trên nền xanh nhạt.",
+    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có công thức f bằng p nhân n ở giữa và hộp tỉ lệ công thức ở phía dưới với mũi tên trỏ vào. Phía trên khung hình hiển thị câu hỏi trắc nghiệm và các lựa chọn A, B, C, D trong các ô màu vàng và xanh lá. Ở góc dưới bên trái, một hộp nhỏ chứa văn bản có nhãn Bài giải.",
+    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "formula_box_0",
+        "label": "formula box",
+        "bbox": [
+          0.22999999999999998,
+          0.57,
+          0.381,
+          0.775
+        ],
+        "description": "a yellow box with a ratio formula displayed inside",
+        "description_vi": "một hộp màu vàng có công thức tỉ lệ hiển thị bên trong",
+        "attributes": [
+          "yellow",
+          "formula"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
-          0.006,
-          0.998,
-          0.9939999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing a physics problem and a formula solution",
-        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
+        "description": "a light blue educational slide showing physics formulas and multiple-choice options",
+        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và các lựa chọn trắc nghiệm",
         "attributes": [
-          "blue",
-          "text"
+          "light blue",
+          "educational",
+          "formula"
         ],
         "action": ""
       }
@@ -9317,183 +9444,405 @@
   },
   {
     "frame_id": "L25_V040_f0186",
-    "visual_source_frame_id": "L25_V040_f0182",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
-    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "visual_source_frame_id": "L25_V040_f0186",
+    "ocr_source_frame_id": "L25_V040_f0186",
+    "quality_flags": [],
+    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
+    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
+    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
+    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "formula_box_0",
+        "label": "formula box",
+        "bbox": [
+          0.22999999999999998,
+          0.57,
+          0.381,
+          0.775
+        ],
+        "description": "a yellow box with a ratio formula",
+        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
+        "attributes": [
+          "yellow",
+          "formula"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "result_box_0",
+        "label": "result box",
+        "bbox": [
+          0.501,
+          0.623,
+          0.666,
+          0.7220000000000001
+        ],
+        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
+        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
+        "attributes": [
+          "yellow",
+          "result"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
-          0.006,
-          0.998,
-          0.9939999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing a physics problem and a formula solution",
-        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
+        "description": "a light blue educational slide showing physics formulas and a solution result",
+        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
         "attributes": [
-          "blue",
-          "text"
+          "light blue",
+          "educational",
+          "formula"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "formula_box_0",
+        "predicate": "left_of",
+        "object_id": "result_box_0"
+      },
+      {
+        "subject_id": "result_box_0",
+        "predicate": "right_of",
+        "object_id": "formula_box_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0187",
-    "visual_source_frame_id": "L25_V040_f0182",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
-    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "visual_source_frame_id": "L25_V040_f0187",
+    "ocr_source_frame_id": "L25_V040_f0187",
+    "quality_flags": [],
+    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
+    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
+    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
+    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "formula_box_0",
+        "label": "formula box",
+        "bbox": [
+          0.22999999999999998,
+          0.57,
+          0.381,
+          0.775
+        ],
+        "description": "a yellow box with a ratio formula",
+        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
+        "attributes": [
+          "yellow",
+          "formula"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "result_box_0",
+        "label": "result box",
+        "bbox": [
+          0.501,
+          0.623,
+          0.666,
+          0.7220000000000001
+        ],
+        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
+        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
+        "attributes": [
+          "yellow",
+          "result"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
-          0.006,
-          0.998,
-          0.9939999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing a physics problem and a formula solution",
-        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
+        "description": "a light blue educational slide showing physics formulas and a solution result",
+        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
         "attributes": [
-          "blue",
-          "text"
+          "light blue",
+          "educational",
+          "formula"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "formula_box_0",
+        "predicate": "left_of",
+        "object_id": "result_box_0"
+      },
+      {
+        "subject_id": "result_box_0",
+        "predicate": "right_of",
+        "object_id": "formula_box_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0188",
-    "visual_source_frame_id": "L25_V040_f0182",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
-    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "visual_source_frame_id": "L25_V040_f0188",
+    "ocr_source_frame_id": "L25_V040_f0188",
+    "quality_flags": [],
+    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
+    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
+    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
+    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "formula_box_0",
+        "label": "formula box",
+        "bbox": [
+          0.22999999999999998,
+          0.57,
+          0.381,
+          0.775
+        ],
+        "description": "a yellow box with a ratio formula",
+        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
+        "attributes": [
+          "yellow",
+          "formula"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "result_box_0",
+        "label": "result box",
+        "bbox": [
+          0.501,
+          0.623,
+          0.666,
+          0.7220000000000001
+        ],
+        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
+        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
+        "attributes": [
+          "yellow",
+          "result"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
-          0.006,
-          0.998,
-          0.9939999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing a physics problem and a formula solution",
-        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
+        "description": "a light blue educational slide showing physics formulas and a solution result",
+        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
         "attributes": [
-          "blue",
-          "text"
+          "light blue",
+          "educational",
+          "formula"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "formula_box_0",
+        "predicate": "left_of",
+        "object_id": "result_box_0"
+      },
+      {
+        "subject_id": "result_box_0",
+        "predicate": "right_of",
+        "object_id": "formula_box_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0189",
-    "visual_source_frame_id": "L25_V040_f0182",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
-    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "visual_source_frame_id": "L25_V040_f0189",
+    "ocr_source_frame_id": "L25_V040_f0189",
+    "quality_flags": [],
+    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
+    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
+    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
+    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "formula_box_0",
+        "label": "formula box",
+        "bbox": [
+          0.22999999999999998,
+          0.57,
+          0.381,
+          0.775
+        ],
+        "description": "a yellow box with a ratio formula",
+        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
+        "attributes": [
+          "yellow",
+          "formula"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "result_box_0",
+        "label": "result box",
+        "bbox": [
+          0.501,
+          0.623,
+          0.666,
+          0.7220000000000001
+        ],
+        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
+        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
+        "attributes": [
+          "yellow",
+          "result"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
-          0.006,
-          0.998,
-          0.9939999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing a physics problem and a formula solution",
-        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
+        "description": "a light blue educational slide showing physics formulas and a solution result",
+        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
         "attributes": [
-          "blue",
-          "text"
+          "light blue",
+          "educational",
+          "formula"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "formula_box_0",
+        "predicate": "left_of",
+        "object_id": "result_box_0"
+      },
+      {
+        "subject_id": "result_box_0",
+        "predicate": "right_of",
+        "object_id": "formula_box_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0190",
-    "visual_source_frame_id": "L25_V040_f0182",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
-    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "visual_source_frame_id": "L25_V040_f0190",
+    "ocr_source_frame_id": "L25_V040_f0190",
+    "quality_flags": [],
+    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
+    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
+    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
+    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "formula_box_0",
+        "label": "formula box",
+        "bbox": [
+          0.22999999999999998,
+          0.57,
+          0.381,
+          0.775
+        ],
+        "description": "a yellow box with a ratio formula",
+        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
+        "attributes": [
+          "yellow",
+          "formula"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "result_box_0",
+        "label": "result box",
+        "bbox": [
+          0.501,
+          0.623,
+          0.666,
+          0.7220000000000001
+        ],
+        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
+        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
+        "attributes": [
+          "yellow",
+          "result"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
-          0.006,
-          0.998,
-          0.9939999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing a physics problem and a formula solution",
-        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
+        "description": "a light blue educational slide showing physics formulas and a solution result",
+        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
         "attributes": [
-          "blue",
-          "text"
+          "light blue",
+          "educational",
+          "formula"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "formula_box_0",
+        "predicate": "left_of",
+        "object_id": "result_box_0"
+      },
+      {
+        "subject_id": "result_box_0",
+        "predicate": "right_of",
+        "object_id": "formula_box_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V040_f0191",
     "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0191",
-    "quality_flags": [],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
@@ -9501,16 +9850,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
           "silver",
-          "open"
+          "laptop"
         ],
         "action": ""
       },
@@ -9518,13 +9867,13 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
-          0.181,
-          0.479,
-          0.992
+          0.11000000000000001,
+          0.183,
+          0.44699999999999995,
+          0.878
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
@@ -9535,16 +9884,16 @@
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "yellow border"
+          "projector screen"
         ],
         "action": ""
       }
@@ -9559,37 +9908,44 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0192",
-    "visual_source_frame_id": "L25_V040_f0191",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0192",
+    "ocr_source_frame_id": "L25_V040_f0192",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer",
+        "description_vi": "một chiếc máy tính xách tay màu bạc",
         "attributes": [
-          "silver",
-          "open"
+          "silver"
         ],
         "action": ""
       },
@@ -9598,32 +9954,32 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.183,
+          0.45199999999999996,
+          0.9890000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
         ],
-        "action": "sitting"
+        "action": "using mouse"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying physics problem text",
+        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
         "attributes": [
           "white",
-          "yellow border"
+          "text"
         ],
         "action": ""
       }
@@ -9638,37 +9994,44 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0193",
-    "visual_source_frame_id": "L25_V040_f0191",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0193",
+    "ocr_source_frame_id": "L25_V040_f0193",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer",
+        "description_vi": "một chiếc máy tính xách tay màu bạc",
         "attributes": [
-          "silver",
-          "open"
+          "silver"
         ],
         "action": ""
       },
@@ -9677,32 +10040,32 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.183,
+          0.45199999999999996,
+          0.9890000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
         ],
-        "action": "sitting"
+        "action": "using mouse"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying physics problem text",
+        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
         "attributes": [
           "white",
-          "yellow border"
+          "text"
         ],
         "action": ""
       }
@@ -9717,37 +10080,44 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0194",
-    "visual_source_frame_id": "L25_V040_f0191",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0194",
+    "ocr_source_frame_id": "L25_V040_f0194",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer",
+        "description_vi": "một chiếc máy tính xách tay màu bạc",
         "attributes": [
-          "silver",
-          "open"
+          "silver"
         ],
         "action": ""
       },
@@ -9756,32 +10126,32 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.183,
+          0.45199999999999996,
+          0.9890000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
         ],
-        "action": "sitting"
+        "action": "using mouse"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying physics problem text",
+        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
         "attributes": [
           "white",
-          "yellow border"
+          "text"
         ],
         "action": ""
       }
@@ -9796,37 +10166,44 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0195",
-    "visual_source_frame_id": "L25_V040_f0191",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0195",
+    "ocr_source_frame_id": "L25_V040_f0195",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer",
+        "description_vi": "một chiếc máy tính xách tay màu bạc",
         "attributes": [
-          "silver",
-          "open"
+          "silver"
         ],
         "action": ""
       },
@@ -9835,32 +10212,32 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.183,
+          0.45199999999999996,
+          0.9890000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
         ],
-        "action": "sitting"
+        "action": "using mouse"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying physics problem text",
+        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
         "attributes": [
           "white",
-          "yellow border"
+          "text"
         ],
         "action": ""
       }
@@ -9875,37 +10252,44 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0196",
-    "visual_source_frame_id": "L25_V040_f0191",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0196",
+    "ocr_source_frame_id": "L25_V040_f0196",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer",
+        "description_vi": "một chiếc máy tính xách tay màu bạc",
         "attributes": [
-          "silver",
-          "open"
+          "silver"
         ],
         "action": ""
       },
@@ -9914,32 +10298,32 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.183,
+          0.45199999999999996,
+          0.9890000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
         ],
-        "action": "sitting"
+        "action": "using mouse"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying physics problem text",
+        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
         "attributes": [
           "white",
-          "yellow border"
+          "text"
         ],
         "action": ""
       }
@@ -9954,37 +10338,44 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0197",
-    "visual_source_frame_id": "L25_V040_f0191",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0197",
+    "ocr_source_frame_id": "L25_V040_f0197",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer",
+        "description_vi": "một chiếc máy tính xách tay màu bạc",
         "attributes": [
-          "silver",
-          "open"
+          "silver"
         ],
         "action": ""
       },
@@ -9993,32 +10384,32 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.183,
+          0.45199999999999996,
+          0.9890000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
         ],
-        "action": "sitting"
+        "action": "using mouse"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying physics problem text",
+        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
         "attributes": [
           "white",
-          "yellow border"
+          "text"
         ],
         "action": ""
       }
@@ -10033,37 +10424,44 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0198",
-    "visual_source_frame_id": "L25_V040_f0191",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher wearing glasses sits at a white desk with a laptop next to a blank white screen area.",
-    "detailed_caption": "A medium shot captures a male teacher wearing glasses and a white shirt seated in front of an open silver laptop. To his right is a white presentation board with a yellow box outline against a blue background.",
-    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh khu vực bảng trắng trống.",
-    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trình bày màu trắng có viền hộp màu vàng trên nền xanh.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V040_f0198",
+    "ocr_source_frame_id": "L25_V040_f0198",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11499999999999999,
-          0.719,
-          0.44000000000000006,
+          0.11399999999999999,
+          0.7220000000000001,
+          0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop placed on the white desk",
-        "description_vi": "máy tính xách tay màu bạc đặt trên bàn trắng",
+        "description": "a silver laptop computer",
+        "description_vi": "một chiếc máy tính xách tay màu bạc",
         "attributes": [
-          "silver",
-          "open"
+          "silver"
         ],
         "action": ""
       },
@@ -10072,32 +10470,32 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.181,
-          0.479,
-          0.992
+          0.183,
+          0.45199999999999996,
+          0.9890000000000001
         ],
-        "description": "a male teacher wearing glasses and a white shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
+        "description": "a man wearing glasses and a white long-sleeve shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
         "attributes": [
           "glasses",
           "white shirt"
         ],
-        "action": "sitting"
+        "action": "using mouse"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.475,
-          0.008,
-          0.9960000000000001,
-          0.527
+          0.47400000000000003,
+          0.007,
+          0.998,
+          0.529
         ],
-        "description": "a white board with a yellow box outline",
-        "description_vi": "bảng trắng có viền khung hộp màu vàng",
+        "description": "a white projection screen displaying physics problem text",
+        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
         "attributes": [
           "white",
-          "yellow border"
+          "text"
         ],
         "action": ""
       }
@@ -10112,6 +10510,16 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
@@ -10382,27 +10790,28 @@
     "visual_source_frame_id": "L25_V040_f0207",
     "ocr_source_frame_id": "L25_V040_f0207",
     "quality_flags": [],
-    "caption": "An educational slide displays a physics formula calculation step on a light green background.",
-    "detailed_caption": "A full-screen view shows an educational slide with a physics question and multiple-choice options at the top. Below, a light green working area displays the formula calculation equation 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
-    "caption_vi": "Một trang chiếu giáo dục hiển thị phương trình tính toán công thức vật lý trên nền xanh lá nhạt.",
-    "detailed_caption_vi": "Toàn cảnh trang chiếu hiển thị câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, vùng làm việc màu xanh lá nhạt trình bày phương trình tính toán công thức 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
-    "ocr_text": "Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10⁻²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017) A e = 119,9cos100πt (V) B e =169,6cos(100πt - π/2)(V C e = 169,6cos 100πt (V) D e = 119,9cos(100πt - π/2)(V Bài giải E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴",
+    "caption": "A physics slide displays a multiple choice problem with text and equations on a light green background.",
+    "detailed_caption": "This medium shot presents a physics problem slide on a light green background. The top section contains a multiple-choice question labeled Câu 4 with options A, B, C, and D displayed in yellow rectangular boxes on the right. Below the question text, a green box titled Bài giải shows the beginning of a physics formula calculation.",
+    "caption_vi": "Một slide bài tập vật lý hiển thị câu hỏi trắc nghiệm kèm theo công thức trên nền màu xanh nhạt.",
+    "detailed_caption_vi": "Khung hình trung trung hiển thị slide bài toán vật lý trên nền xanh nhạt. Phần trên là đề bài trắc nghiệm với các lựa chọn A, B, C, D ở bên phải. Phía dưới tiêu đề Bài giải hiển thị các bước tính toán công thức vật lý.",
+    "ocr_text": "Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-2T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017) A e = 119,9cos100nt (V) B e = 169,6cos(100nt-π/2) (V) C e = 169,6cos 100nt (V) D e = 119,9cos(100nt - π/2)(V) Bài giải E0 = ωNBS = 2π.50.200.4,5.10-2.600.10-4",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
-          0.008,
-          0.998,
-          0.9979999999999999
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "an educational slide showing physics calculation formula",
-        "description_vi": "slide giáo dục hiển thị công thức tính toán vật lý",
+        "description": "a physics problem slide with multiple choice questions and formulas",
+        "description_vi": "một slide bài tập vật lý chứa câu hỏi trắc nghiệm và công thức",
         "attributes": [
-          "green background",
-          "text"
+          "green",
+          "text",
+          "educational"
         ],
         "action": ""
       }
@@ -10934,10 +11343,10 @@
     "visual_source_frame_id": "L25_V040_f0274",
     "ocr_source_frame_id": "L25_V040_f0274",
     "quality_flags": [],
-    "caption": "Two men standing behind a large wooden table holding a folder and document, flanked by flags.",
-    "detailed_caption": "A wide shot shows two men standing behind a polished wooden table, holding a dark folder and a red certificate document respectively. They are flanked by multiple national flags and stand before a large decorative wall panel. Several other individuals stand in the background.",
-    "caption_vi": "Hai người đàn ông đứng sau một chiếc bàn gỗ lớn cầm bìa hồ sơ và tài liệu, được bao quanh bởi các lá cờ.",
-    "detailed_caption_vi": "Cảnh quay toàn cảnh cho thấy hai người đàn ông đứng phía sau một chiếc bàn gỗ bóng, lần lượt cầm một bìa hồ sơ màu tối và một tài liệu chứng nhận màu đỏ. Họ được vây quanh bởi nhiều lá cờ quốc gia và đứng trước một tấm ốp tường trang trí lớn. Một số cá nhân khác đứng ở phía sau.",
+    "caption": "Several people stand in a formal room in front of flags and a large map.",
+    "detailed_caption": "This wide shot shows four people standing behind a long wooden table in a formal hall. Two individuals in the center hold open folders, flanked by flags and wood-paneled walls with a large map hanging in the background. A flower arrangement sits on the polished table surface.",
+    "caption_vi": "Nhiều người đứng trong một căn phòng trang trọng trước các lá cờ và tấm bản đồ lớn.",
+    "detailed_caption_vi": "Khung hình toàn cảnh ghi lại bốn người đứng phía sau một chiếc bàn gỗ dài trong một hội trường trang trọng. Hai người ở giữa đang cầm các tập hồ sơ mở, xung quanh có cờ và tường ốp gỗ cùng bản đồ lớn phía sau.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -10946,46 +11355,81 @@
         "label": "flag",
         "bbox": [
           0.128,
-          0.067,
-          0.21400000000000002,
+          0.057999999999999996,
+          0.215,
           0.715
         ],
-        "description": "yellow and red national flag on left",
-        "description_vi": "quốc kỳ màu vàng và đỏ ở bên trái",
+        "description": "a tall flag with blue, yellow, and red vertical stripes",
+        "description_vi": "lá cờ cao với các sọc dọc màu xanh, vàng và đỏ",
         "attributes": [
-          "yellow",
-          "red"
+          "vertical stripes",
+          "colorful"
         ],
         "action": ""
       },
       {
-        "object_id": "flag_1",
-        "label": "flag",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.252,
-          0.089,
-          0.33799999999999997,
-          0.693
+          0.178,
+          0.362,
+          0.27999999999999997,
+          0.8310000000000001
         ],
-        "description": "red flag with yellow star in center",
-        "description_vi": "cờ đỏ sao vàng ở trung tâm",
+        "description": "a person in a dark suit standing at the left",
+        "description_vi": "một người mặc âu phục sẫm màu đứng bên trái",
         "attributes": [
-          "red",
-          "yellow star"
+          "suit",
+          "standing"
         ],
-        "action": ""
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.43200000000000005,
+          0.314,
+          0.5589999999999999,
+          0.9420000000000001
+        ],
+        "description": "a man in a dark suit and red tie holding a folder in the center",
+        "description_vi": "một nam giới mặc âu phục sẫm màu và cà vạt đỏ cầm tập hồ sơ ở giữa",
+        "attributes": [
+          "suit",
+          "red tie",
+          "standing"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5599999999999999,
+          0.287,
+          0.688,
+          0.9359999999999999
+        ],
+        "description": "a man in a blue suit holding a red folder",
+        "description_vi": "một nam giới mặc âu phục xanh dương cầm tập hồ sơ đỏ",
+        "attributes": [
+          "blue suit",
+          "standing"
+        ],
+        "action": "holding"
       },
       {
         "object_id": "table_0",
         "label": "table",
         "bbox": [
-          0.175,
-          0.669,
+          0.173,
+          0.673,
           1.0,
           1.0
         ],
-        "description": "long polished wooden conference table with floral arrangement",
-        "description_vi": "bàn hội nghị bằng gỗ dài được đánh bóng có cắm hoa",
+        "description": "a long polished wooden conference table with a floral centerpiece",
+        "description_vi": "một chiếc bàn hội nghị bằng gỗ dài được đánh bóng với lẵng hoa ở giữa",
         "attributes": [
           "wooden",
           "polished"
@@ -10996,13 +11440,83 @@
     "spatial_relations": [
       {
         "subject_id": "flag_0",
-        "predicate": "left_of",
-        "object_id": "flag_1"
+        "predicate": "overlapping",
+        "object_id": "person_0"
       },
       {
-        "subject_id": "flag_1",
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
         "predicate": "right_of",
         "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
       }
     ]
   },
@@ -11526,93 +12040,172 @@
     "visual_source_frame_id": "L25_V040_f0281",
     "ocr_source_frame_id": "L25_V040_f0281",
     "quality_flags": [],
-    "caption": "A person standing with their back turned in a mock courtroom with participants seated at desks.",
-    "detailed_caption": "A medium shot shows a person in a black shirt standing with their back to the camera in the center of a room configured like a courtroom. A speaker stands at a podium on the left, and two individuals in judicial attire are seated at a table on the right before a national emblem projection.",
-    "caption_vi": "Một người đang đứng quay lưng lại trong phòng xử án giả định với những người tham gia ngồi ở bàn.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người mặc áo đen đang đứng quay lưng về phía máy ảnh ở giữa căn phòng được bố trí giống phòng xử án. Một người phát biểu đứng ở bục bên trái, và hai cá nhân mặc trang phục tư pháp ngồi ở bàn bên phía phải trước hình chiếu quốc huy.",
-    "ocr_text": "SIU Saigon International University du.vn THU KÝ THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
+    "caption": "A person stands facing away in a hall with people seated at desks and flags in the background.",
+    "detailed_caption": "This medium shot shows a person in a black polo shirt standing with their back to the camera in the center of a hall. To the left, a person stands behind a desk with an SIU banner, while two seated individuals are positioned to the right behind desks under a national emblem projection.",
+    "caption_vi": "Một người đứng quay lưng trong hội trường với mọi người ngồi ở bàn và cờ ở phía sau.",
+    "detailed_caption_vi": "Khung hình trung ghi lại một người mặc áo polo đen đứng quay lưng về phía máy ảnh ở giữa hội trường. Bên trái, một người đứng sau bàn có biểu ngữ SIU, trong khi hai người khác ngồi bên phải dưới màn chiếu quốc huy.",
+    "ocr_text": "THU KÝ THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THÂM NHÂN DÂN SIU Saigon International University du.vn",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.396,
-          0.296,
-          0.588,
-          1.0
+          0.126,
+          0.319,
+          0.22999999999999998,
+          0.642
         ],
-        "description": "person in black shirt standing with back turned",
-        "description_vi": "người mặc áo đen đứng quay lưng về phía trước",
+        "description": "a woman in a black suit standing behind a desk",
+        "description_vi": "một phụ nữ mặc âu phục đen đứng sau bàn làm việc",
         "attributes": [
-          "black shirt"
+          "black suit",
+          "glasses",
+          "standing"
         ],
         "action": "standing"
       },
       {
-        "object_id": "woman_0",
-        "label": "woman",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
-          0.654,
-          0.41300000000000003,
-          0.788,
-          0.663
+          0.396,
+          0.3,
+          0.584,
+          0.992
         ],
-        "description": "woman in judicial robes seated at desk",
-        "description_vi": "phụ nữ mặc áo choàng tư pháp ngồi tại bàn",
+        "description": "a person in a black polo shirt standing with back turned",
+        "description_vi": "một người mặc áo polo đen đứng quay lưng",
         "attributes": [
-          "judicial robes"
+          "black polo shirt",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.658,
+          0.414,
+          0.7849999999999999,
+          0.6639999999999999
+        ],
+        "description": "a woman in a dark suit with red trim sitting at a desk",
+        "description_vi": "một phụ nữ mặc âu phục sẫm màu viền đỏ ngồi bên bàn làm việc",
+        "attributes": [
+          "dark suit",
+          "red trim",
+          "seated"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "woman_1",
-        "label": "woman",
+        "object_id": "person_3",
+        "label": "person",
         "bbox": [
-          0.865,
-          0.41700000000000004,
+          0.866,
+          0.418,
           0.999,
-          0.6699999999999999
+          0.6719999999999999
         ],
-        "description": "woman in suit jacket seated at right desk",
-        "description_vi": "phụ nữ mặc áo vest ngồi ở bàn bên phải",
+        "description": "a woman in a dark suit and tie sitting at the right desk",
+        "description_vi": "một phụ nữ mặc âu phục sẫm màu và cà vạt ngồi ở bàn bên phải",
         "attributes": [
-          "suit jacket",
-          "glasses"
+          "dark suit",
+          "tie",
+          "seated"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.0,
+          0.638,
+          0.33199999999999996,
+          0.966
+        ],
+        "description": "a table covered with a red cloth and SIU logo",
+        "description_vi": "một chiếc bàn được phủ khăn đỏ và có logo SIU",
+        "attributes": [
+          "red cloth",
+          "branded"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "woman_0"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "woman_0",
+        "subject_id": "person_1",
         "predicate": "right_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "woman_1"
+        "object_id": "person_2"
       },
       {
-        "subject_id": "woman_1",
+        "subject_id": "person_2",
         "predicate": "right_of",
         "object_id": "person_0"
       },
       {
-        "subject_id": "woman_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "woman_1"
+        "object_id": "person_3"
       },
       {
-        "subject_id": "woman_1",
+        "subject_id": "person_3",
         "predicate": "right_of",
-        "object_id": "woman_0"
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_2"
       }
     ]
   },
@@ -12439,28 +13032,46 @@
     "visual_source_frame_id": "L25_V040_f0292",
     "ocr_source_frame_id": "L25_V040_f0292",
     "quality_flags": [],
-    "caption": "A large choir of students in blue and black uniforms stands on a stage holding a flag.",
-    "detailed_caption": "A wide shot shows a large group of students wearing matching blue and black uniforms arranged on a stage. A person in a black suit holds a long yellow and red flag in the center. A projection screen with text is visible in the background behind the choir.",
-    "caption_vi": "Một dàn hợp xướng lớn gồm các học sinh mặc đồng phục xanh và đen đứng trên sân khấu cầm cờ.",
-    "detailed_caption_vi": "Cảnh rộng cho thấy một nhóm lớn học sinh mặc đồng phục xanh và đen đồng bộ sắp xếp trên sân khấu. Một người mặc vest đen cầm lá cờ dài màu vàng đỏ ở trung tâm. Màn hình chiếu có chữ hiển thị phía sau dàn hợp xướng.",
-    "ocr_text": "LỄ CÔNG BỐ",
+    "caption": "A large group of students in blue shirts stand on a stage holding a flag during an event.",
+    "detailed_caption": "This wide shot shows a large group of students wearing matching blue polo shirts and dark skirts or trousers arranged across a stage. A person holds a yellow and red flag in the center. A large projection screen and red curtains form the background.",
+    "caption_vi": "Một nhóm đông học sinh mặc áo xanh đứng trên sân khấu cầm cờ trong một sự kiện.",
+    "detailed_caption_vi": "Khung hình toàn cảnh hiển thị một nhóm đông học sinh mặc áo polo xanh đồng bộ và váy hoặc quần tối màu xếp hàng trên sân khấu. Một người đang giữ lá cờ vàng đỏ ở giữa. Màn hình chiếu lớn và rèm đỏ làm phông nền phía sau.",
+    "ocr_text": "The Saigon International University LÊ CÔNG BỐ Journey Scholarship",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.42800000000000005,
+          0.267,
+          0.461,
+          0.8310000000000001
+        ],
+        "description": "a vertical yellow and red flag held on stage",
+        "description_vi": "lá cờ dọc màu vàng và đỏ được giữ trên sân khấu",
+        "attributes": [
+          "yellow",
+          "red",
+          "vertical"
+        ],
+        "action": "held"
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.017,
-          0.438,
-          0.075,
-          0.77
+          0.016,
+          0.44,
+          0.074,
+          0.7689999999999999
         ],
-        "description": "female student in blue shirt and black skirt",
-        "description_vi": "nữ sinh mặc áo xanh chân váy đen",
+        "description": "a student in a blue polo shirt standing on the left side of the stage",
+        "description_vi": "một học sinh mặc áo polo xanh đứng bên trái sân khấu",
         "attributes": [
-          "female",
-          "student",
-          "blue shirt"
+          "blue polo shirt",
+          "skirt",
+          "standing"
         ],
         "action": "standing"
       },
@@ -12468,59 +13079,88 @@
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.11499999999999999,
           0.44699999999999995,
-          0.184,
-          0.77
+          0.422,
+          0.499,
+          0.755
         ],
-        "description": "female student in blue polo and black skirt",
-        "description_vi": "nữ sinh mặc áo polo xanh chân váy đen",
+        "description": "a student in a blue shirt standing near the center",
+        "description_vi": "một học sinh mặc áo xanh đứng gần trung tâm",
         "attributes": [
-          "female",
-          "student"
+          "blue shirt",
+          "standing"
         ],
         "action": "standing"
       },
       {
-        "object_id": "person_2",
-        "label": "person",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.377,
-          0.435,
-          0.437,
-          0.781
+          0.24500000000000002,
+          0.044,
+          0.75,
+          0.52
         ],
-        "description": "person holding large yellow and red flag",
-        "description_vi": "người cầm lá cờ lớn màu vàng và đỏ",
+        "description": "a large projection screen displaying event titles",
+        "description_vi": "màn hình chiếu lớn hiển thị tiêu đề sự kiện",
         "attributes": [
-          "suit",
-          "black"
+          "projector screen",
+          "text display"
         ],
-        "action": "holding flag"
+        "action": ""
       },
       {
-        "object_id": "person_3",
-        "label": "person",
+        "object_id": "stage_0",
+        "label": "stage",
         "bbox": [
-          0.44400000000000006,
-          0.421,
-          0.502,
-          0.7569999999999999
+          0.0,
+          0.7090000000000001,
+          1.0,
+          0.8180000000000001
         ],
-        "description": "male student holding flag staff",
-        "description_vi": "nam sinh cầm cán cờ",
+        "description": "a wooden stage floor with speakers and equipment",
+        "description_vi": "sàn sân khấu gỗ có loa và thiết bị",
         "attributes": [
-          "male",
-          "student",
-          "blue shirt"
+          "wooden",
+          "stage"
         ],
-        "action": "holding flag"
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "person_0",
         "predicate": "left_of",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
         "object_id": "person_1"
       },
       {
@@ -12531,42 +13171,32 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "person_2",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_3"
-      },
-      {
-        "subject_id": "person_3",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_2"
+        "predicate": "overlapping",
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "person_2",
-        "predicate": "right_of",
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
         "object_id": "person_1"
       },
       {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_3"
+        "subject_id": "screen_0",
+        "predicate": "above",
+        "object_id": "stage_0"
       },
       {
-        "subject_id": "person_3",
-        "predicate": "right_of",
-        "object_id": "person_1"
+        "subject_id": "stage_0",
+        "predicate": "below",
+        "object_id": "screen_0"
       }
     ]
   },
@@ -12832,48 +13462,65 @@
     "visual_source_frame_id": "L25_V040_f0296",
     "ocr_source_frame_id": "L25_V040_f0296",
     "quality_flags": [],
-    "caption": "Two female students in uniforms open tall wooden doors revealing a brightly lit stage.",
-    "detailed_caption": "A medium shot captures two female students in white shirts and black skirts opening tall wooden doors. The doors are parting to reveal a brightly lit stage inside an auditorium. Wall panels and an intercom unit are visible on the right wall.",
-    "caption_vi": "Hai nữ sinh mặc đồng phục mở cửa gỗ cao lộ ra sân khấu sáng rực.",
-    "detailed_caption_vi": "Cảnh trung ghi lại hai nữ sinh mặc áo sơ mi trắng và chân váy đen đang mở cánh cửa gỗ cao. Cánh cửa đang hé mở để lộ một sân khấu sáng rực bên trong hội trường. Các tấm ốp tường và thiết bị liên lạc nội bộ hiển thị ở bức tường bên phải.",
+    "caption": "Two women pull open tall wooden double doors in a hallway.",
+    "detailed_caption": "This medium shot shows two women seen from behind, each wearing a white long-sleeved shirt and dark skirt, pulling open tall wooden double doors. The doors are being opened to reveal a brightly lit interior space behind them. A wall-mounted intercom phone is visible on the right wall.",
+    "caption_vi": "Hai phụ nữ đang kéo mở cánh cửa đôi bằng gỗ cao trong hành lang.",
+    "detailed_caption_vi": "Khung hình trung ghi lại hai người phụ nữ nhìn từ phía sau, đều mặc áo sơ mi trắng dài tay và chân váy tối màu, đang kéo mở cánh cửa đôi bằng gỗ lớn. Cánh cửa mở hé lộ không gian sáng rực bên trong. Một chiếc điện thoại liên lạc treo tường ở bên phải.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "door_0",
+        "label": "door",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "tall wooden double doors with metal handles being opened",
+        "description_vi": "cánh cửa đôi bằng gỗ cao có tay nắm kim loại đang được mở",
+        "attributes": [
+          "wooden",
+          "double doors"
+        ],
+        "action": "opening"
+      },
+      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.123,
-          0.263,
-          0.398,
-          1.0
+          0.126,
+          0.26199999999999996,
+          0.399,
+          0.9939999999999999
         ],
-        "description": "female student in white shirt and black skirt opening door",
-        "description_vi": "nữ sinh mặc áo trắng và chân váy đen mở cửa",
+        "description": "a woman in a white shirt and dark skirt pulling the left door handle",
+        "description_vi": "một phụ nữ mặc áo sơ mi trắng và chân váy tối màu đang kéo tay nắm cửa bên trái",
         "attributes": [
-          "female",
-          "student",
-          "white shirt"
+          "white shirt",
+          "dark skirt",
+          "pulling"
         ],
-        "action": "opening door"
+        "action": "pulling"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
           0.492,
-          0.248,
+          0.247,
           0.843,
-          1.0
+          0.991
         ],
-        "description": "female student with long dark hair pulling door handle",
-        "description_vi": "nữ sinh tóc đen dài kéo tay nắm cửa",
+        "description": "a woman with dark hair in a white shirt pulling the right door handle",
+        "description_vi": "một phụ nữ tóc đen mặc áo sơ mi trắng đang kéo tay nắm cửa bên phải",
         "attributes": [
-          "female",
-          "student",
-          "long hair"
+          "white shirt",
+          "dark hair",
+          "pulling"
         ],
-        "action": "pulling door handle"
+        "action": "pulling"
       }
     ],
     "spatial_relations": [
@@ -15991,29 +16638,27 @@
   },
   {
     "frame_id": "L25_V040_f0329",
-    "visual_source_frame_id": "L25_V040_f0327",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A pale green educational slide displays a physics multiple-choice question with answer options on the right.",
-    "detailed_caption": "A wide shot displays an educational presentation slide with a pale green background containing a physics word problem at the top. On the right side, multiple-choice options labeled A, B, C, D with corresponding numerical values are listed in yellow boxes. A grey heading box labeled 'Bài giải' appears on the left.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị một câu hỏi trắc nghiệm vật lý cùng các đáp án ở bên phải.",
-    "detailed_caption_vi": "Khung hình rộng hiển thị slide bài giảng có nền xanh nhạt chứa đề bài toán vật lý ở phần trên. Phía bên phải là các lựa chọn đáp án A, B, C, D với các giá trị số đặt trong hộp màu vàng. Hộp tiêu đề xám ghi 'Bài giải' nằm ở góc trái.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy... Bài giải A 5 B 6 C 4 D 7",
+    "visual_source_frame_id": "L25_V040_f0329",
+    "ocr_source_frame_id": "L25_V040_f0329",
+    "quality_flags": [],
+    "caption": "A physics slide displays a power transmission word problem and formulas on a light green background.",
+    "detailed_caption": "This medium shot displays an educational slide about electrical power transmission on a light green background. The top section presents a multiple-choice question labeled Câu 6 with options A, B, C, and D on the right. Below, a green box titled Bài giải shows mathematical equations regarding transmission efficiency.",
+    "caption_vi": "Một slide vật lý hiển thị bài toán truyền tải điện năng và công thức trên nền màu xanh nhạt.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục về truyền tải điện năng trên nền xanh nhạt. Phần trên là câu hỏi trắc nghiệm Câu 6 cùng các lựa chọn A, B, C, D ở bên phải. Phía dưới tiêu đề Bài giải là các phương trình toán học về hiệu suất truyền tải.",
+    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy đến nơi tiêu thụ bằng đường dây tải điện một pha. Giờ cao điểm cần cả 8 tổ máy hoạt động, hiệu suất truyền tải đạt 70%. Coi điện áp hiệu dụng ở nhà máy không đổi, hệ số công suất của mạch bằng 1, công suất phát điện của các tổ máy khi hoạt động là không đổi và như nhau. Khi công suất tiêu thụ điện ở nơi tiêu thụ giảm còn 83% so với giờ cao điểm thì cần bao nhiêu tổ máy phát động? (THPTQG 2018) A 5 B 6 C 4 D 7 Bài giải H1 = 70% nên Php1 = 0,3P1 = RP12 / U2 R / U2 = 0,3 / P1",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with physics problem and multiple choice options",
-        "description_vi": "slide bài giảng chứa đề bài vật lý và các đáp án trắc nghiệm",
+        "description": "an educational slide showing a physics problem and equations",
+        "description_vi": "một slide giáo dục hiển thị bài toán vật lý và các phương trình",
         "attributes": [
           "green",
           "text",
@@ -16026,29 +16671,27 @@
   },
   {
     "frame_id": "L25_V040_f0330",
-    "visual_source_frame_id": "L25_V040_f0327",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A pale green educational slide displays a physics multiple-choice question with answer options on the right.",
-    "detailed_caption": "A wide shot displays an educational presentation slide with a pale green background containing a physics word problem at the top. On the right side, multiple-choice options labeled A, B, C, D with corresponding numerical values are listed in yellow boxes. A grey heading box labeled 'Bài giải' appears on the left.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị một câu hỏi trắc nghiệm vật lý cùng các đáp án ở bên phải.",
-    "detailed_caption_vi": "Khung hình rộng hiển thị slide bài giảng có nền xanh nhạt chứa đề bài toán vật lý ở phần trên. Phía bên phải là các lựa chọn đáp án A, B, C, D với các giá trị số đặt trong hộp màu vàng. Hộp tiêu đề xám ghi 'Bài giải' nằm ở góc trái.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy... Bài giải A 5 B 6 C 4 D 7",
+    "visual_source_frame_id": "L25_V040_f0330",
+    "ocr_source_frame_id": "L25_V040_f0330",
+    "quality_flags": [],
+    "caption": "A physics slide displays a power transmission word problem and formulas on a light green background.",
+    "detailed_caption": "This medium shot displays an educational slide about electrical power transmission on a light green background. The top section presents a multiple-choice question labeled Câu 6 with options A, B, C, and D on the right. Below, a green box titled Bài giải shows mathematical equations regarding transmission efficiency.",
+    "caption_vi": "Một slide vật lý hiển thị bài toán truyền tải điện năng và công thức trên nền màu xanh nhạt.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục về truyền tải điện năng trên nền xanh nhạt. Phần trên là câu hỏi trắc nghiệm Câu 6 cùng các lựa chọn A, B, C, D ở bên phải. Phía dưới tiêu đề Bài giải là các phương trình toán học về hiệu suất truyền tải.",
+    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy đến nơi tiêu thụ bằng đường dây tải điện một pha. Giờ cao điểm cần cả 8 tổ máy hoạt động, hiệu suất truyền tải đạt 70%. Coi điện áp hiệu dụng ở nhà máy không đổi, hệ số công suất của mạch bằng 1, công suất phát điện của các tổ máy khi hoạt động là không đổi và như nhau. Khi công suất tiêu thụ điện ở nơi tiêu thụ giảm còn 83% so với giờ cao điểm thì cần bao nhiêu tổ máy phát động? (THPTQG 2018) A 5 B 6 C 4 D 7 Bài giải H1 = 70% nên Php1 = 0,3P1 = RP12 / U2 R / U2 = 0,3 / P1",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with physics problem and multiple choice options",
-        "description_vi": "slide bài giảng chứa đề bài vật lý và các đáp án trắc nghiệm",
+        "description": "an educational slide showing a physics problem and equations",
+        "description_vi": "một slide giáo dục hiển thị bài toán vật lý và các phương trình",
         "attributes": [
           "green",
           "text",
@@ -16408,28 +17051,28 @@
     "visual_source_frame_id": "L25_V040_f0341",
     "ocr_source_frame_id": "L25_V040_f0341",
     "quality_flags": [],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy đến nơi tiêu thụ bằng đường dây tải điện một pha. Giờ cao điểm cần cả 8 tổ máy hoạt động, hiệu suất truyền tải đạt 70%. Coi điện áp hiệu dụng ở nhà máy không đổi, hệ số công suất của mạch bằng 1, công suất phát điện của các tổ máy khi hoạt động là không đổi và như nhau. Khi công suất tiêu thụ điện ở nơi tiêu thụ giảm còn 83% so với giờ cao điểm thì cần bao nhiêu tổ máy phát động? (THPTQG 2018) A 5 B 6 C 4 D 7 Bài giải H1 = 70% nên Php1 = 0,3P1 = RP12 / U2 R / U2 = 0,3 / P1 Php2 = R P22 / U2 = 0,30 P22 / P1 Ptt2 = 0,83 Ptt1 = 0,83.0,70 P1 = 581 / 1000 P1",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -16438,33 +17081,31 @@
   },
   {
     "frame_id": "L25_V040_f0342",
-    "visual_source_frame_id": "L25_V040_f0341",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "visual_source_frame_id": "L25_V040_f0342",
+    "ocr_source_frame_id": "L25_V040_f0342",
+    "quality_flags": [],
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy đến nơi tiêu thụ bằng đường dây tải điện một pha. Giờ cao điểm cần cả 8 tổ máy hoạt động, hiệu suất truyền tải đạt 70%. Coi điện áp hiệu dụng ở nhà máy không đổi, hệ số công suất của mạch bằng 1, công suất phát điện của các tổ máy khi hoạt động là không đổi và như nhau. Khi công suất tiêu thụ điện ở nơi tiêu thụ giảm còn 83% so với giờ cao điểm thì cần bao nhiêu tổ máy phát động? (THPTQG 2018) A 5 B 6 C 4 D 7 Bài giải H1 = 70% nên Php1 = 0,3P1 = RP12 / U2 R / U2 = 0,3 / P1 Php2 = R P22 / U2 = 0,30 P22 / P1 Ptt2 = 0,83 Ptt1 = 0,83.0,70 P1 = 581 / 1000 P1",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17806,16 +18447,14 @@
   },
   {
     "frame_id": "L25_V040_f0370",
-    "visual_source_frame_id": "L25_V040_f0363",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher sits at a laptop alongside a final physics calculation slide showing the solution.",
-    "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
-    "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "visual_source_frame_id": "L25_V040_f0370",
+    "ocr_source_frame_id": "L25_V040_f0370",
+    "quality_flags": [],
+    "caption": "A male teacher wearing glasses and a white shirt sits behind a laptop in a studio with a blue background.",
+    "detailed_caption": "This medium shot shows a male teacher wearing glasses and a white button-down shirt, seated at a desk with an Asus laptop in front of him. A blue digital screen is positioned to his right against a blue background with a Thanh Nien logo in the upper left corner.",
+    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi trắng ngồi sau máy tính xách tay trong phòng thu có phông nền xanh.",
+    "detailed_caption_vi": "Khung hình trung ghi lại nam giáo viên đeo kính và mặc áo sơ mi trắng dài tay, đang ngồi bên bàn làm việc với chiếc máy tính xách tay Asus đặt trước mặt. Màn hình kỹ thuật số màu xanh đặt bên phải với logo Thanh Niên ở góc trên bên trái.",
+    "ocr_text": "THANH NIÊN ASUS",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17823,90 +18462,87 @@
         "label": "laptop",
         "bbox": [
           0.11399999999999999,
-          0.719,
+          0.7220000000000001,
           0.43899999999999995,
           0.9939999999999999
         ],
-        "description": "white laptop computer on desk",
-        "description_vi": "máy tính xách tay màu trắng trên bàn",
+        "description": "a silver Asus laptop on the desk",
+        "description_vi": "một chiếc máy tính xách tay Asus màu bạc đặt trên bàn",
         "attributes": [
-          "white",
+          "silver",
           "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "slide_0",
-        "label": "slide",
-        "bbox": [
-          0.475,
-          0.005,
-          0.999,
-          0.529
-        ],
-        "description": "educational slide showing final physics calculation result",
-        "description_vi": "slide giáo dục hiển thị kết quả tính toán vật lý cuối cùng",
-        "attributes": [
-          "green",
-          "equations",
-          "text"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
           0.0,
-          0.184,
-          0.44000000000000006,
-          0.995
+          0.197,
+          0.442,
+          0.991
         ],
-        "description": "male teacher with glasses and white shirt",
-        "description_vi": "thầy giáo đeo kính mặc áo sơ mi trắng",
+        "description": "a male teacher with glasses and a white shirt sitting at a laptop",
+        "description_vi": "một nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay",
         "attributes": [
-          "male",
           "glasses",
-          "white shirt"
+          "white shirt",
+          "seated"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.47400000000000003,
+          0.006,
+          0.9960000000000001,
+          0.528
+        ],
+        "description": "a blue digital display screen on the right",
+        "description_vi": "màn hình hiển thị kỹ thuật số màu xanh ở bên phải",
+        "attributes": [
+          "blue",
+          "digital"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "slide_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "slide_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0371",
-    "visual_source_frame_id": "L25_V040_f0363",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher sits at a laptop alongside a final physics calculation slide showing the solution.",
-    "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
-    "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "visual_source_frame_id": "L25_V040_f0371",
+    "ocr_source_frame_id": "L25_V040_f0371",
+    "quality_flags": [],
+    "caption": "A male teacher wearing glasses and a white shirt sits behind a laptop in a studio with a presentation slide on screen.",
+    "detailed_caption": "This medium shot shows a male teacher with glasses and a white button-down shirt seated at a desk operating a laptop. A presentation slide with Vietnamese text is displayed on the screen to his right, against a blue studio background with the Thanh Nien logo at the top left.",
+    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay với slide bài giảng trên màn hình.",
+    "detailed_caption_vi": "Khung hình trung hiển thị nam giáo viên đeo kính mặc áo sơ mi trắng đang ngồi thao tác trên máy tính xách tay tại bàn làm việc. Slide trình bày với văn bản tiếng Việt xuất hiện trên màn hình bên phải, trên nền phòng thu màu xanh.",
+    "ocr_text": "THANH NIÊN CHÚC CÁC EM HỌC TỐT Hẹn gặp lại các em trong chuyên đề sau",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17914,75 +18550,74 @@
         "label": "laptop",
         "bbox": [
           0.11399999999999999,
-          0.719,
+          0.7220000000000001,
           0.43899999999999995,
           0.9939999999999999
         ],
-        "description": "white laptop computer on desk",
-        "description_vi": "máy tính xách tay màu trắng trên bàn",
+        "description": "a silver Asus laptop on the desk",
+        "description_vi": "một chiếc máy tính xách tay Asus màu bạc đặt trên bàn",
         "attributes": [
-          "white",
+          "silver",
           "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "slide_0",
-        "label": "slide",
-        "bbox": [
-          0.475,
-          0.005,
-          0.999,
-          0.529
-        ],
-        "description": "educational slide showing final physics calculation result",
-        "description_vi": "slide giáo dục hiển thị kết quả tính toán vật lý cuối cùng",
-        "attributes": [
-          "green",
-          "equations",
-          "text"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
           0.0,
-          0.184,
-          0.44000000000000006,
-          0.995
+          0.197,
+          0.442,
+          0.991
         ],
-        "description": "male teacher with glasses and white shirt",
-        "description_vi": "thầy giáo đeo kính mặc áo sơ mi trắng",
+        "description": "a male teacher with glasses and a white shirt sitting at a desk",
+        "description_vi": "một nam giáo viên đeo kính mặc áo sơ mi trắng ngồi tại bàn làm việc",
         "attributes": [
-          "male",
           "glasses",
-          "white shirt"
+          "white shirt",
+          "seated"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.47400000000000003,
+          0.006,
+          0.9960000000000001,
+          0.528
+        ],
+        "description": "a digital presentation screen displaying a closing message",
+        "description_vi": "màn hình trình chiếu kỹ thuật số hiển thị thông điệp kết thúc",
+        "attributes": [
+          "blue",
+          "text display"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "slide_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "slide_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },

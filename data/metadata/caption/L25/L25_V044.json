@@ -4,10 +4,10 @@
     "visual_source_frame_id": "L25_V044_f0001",
     "ocr_source_frame_id": "L25_V044_f0001",
     "quality_flags": [],
-    "caption": "A light gray background with blue text reading THANH NIÊN.",
-    "detailed_caption": "A minimalist scene features a solid light gray background with a soft gradient. Centered in the middle is the blue text reading THANH NIÊN. There are no other visible objects.",
-    "caption_vi": "Phông nền xám nhạt với dòng chữ màu xanh dương THANH NIÊN ở giữa.",
-    "detailed_caption_vi": "Khung cảnh tối giản có phông nền xám nhạt đồng màu với hiệu ứng chuyển màu nhẹ. Ở chính giữa là dòng chữ màu xanh dương ghi THANH NIÊN. Không có đối tượng nào khác hiển thị.",
+    "caption": "A title card displaying cyan letters on a light gray background.",
+    "detailed_caption": "This is a studio title card showing the word Thanh Nien in cyan capital letters centered horizontally against a light gray gradient backdrop.",
+    "caption_vi": "Man hinh tieu de chu mau xanh tren nen xam nhat.",
+    "detailed_caption_vi": "Day la man hinh tieu de phong thu voi dong chu mau xanh cyan nam o trung tam tren nen xam nhat.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
@@ -16,14 +16,14 @@
         "label": "text",
         "bbox": [
           0.335,
-          0.438,
-          0.666,
-          0.5579999999999999
+          0.427,
+          0.667,
+          0.577
         ],
-        "description": "blue text reading THANH NIÊN",
-        "description_vi": "chữ màu xanh dương đọc là THANH NIÊN",
+        "description": "cyan text reading thanh nien",
+        "description_vi": "chu mau xanh cyan doc la thanh nien",
         "attributes": [
-          "blue",
+          "cyan",
           "text"
         ],
         "action": ""
@@ -36,11 +36,11 @@
     "visual_source_frame_id": "L25_V044_f0002",
     "ocr_source_frame_id": "L25_V044_f0002",
     "quality_flags": [],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "caption": "A female teacher in a black top is seated in front of a whiteboard displaying educational text.",
+    "detailed_caption": "A medium shot shows a female teacher in a black long-sleeve top seated at a desk with a blue laptop. A white screen behind her displays large purple and red text headers. A clock and alphabet chart hang on the wall to her left.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc bang trang co chu.",
+    "detailed_caption_vi": "Cang quay trung canh cho thay mot nu giao vien mac ao dai tay mau den dang ngoi truoc ban co may tinh xach tay mau xanh. Phia sau la bang trang co cac dong chu de mau tim va do.",
+    "ocr_text": "CHƯƠNG TRÌNH GDCD 12 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
       {
@@ -50,12 +50,12 @@
           0.056999999999999995,
           0.7270000000000001,
           0.21200000000000002,
-          0.85
+          0.8510000000000001
         ],
         "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
+        "description_vi": "may tinh xach tay mau xanh nhat tren ban go",
         "attributes": [
-          "light blue",
+          "blue",
           "laptop"
         ],
         "action": ""
@@ -64,36 +64,18 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.024,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher wearing a black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
@@ -111,1072 +93,481 @@
   },
   {
     "frame_id": "L25_V044_f0003",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0003",
+    "ocr_source_frame_id": "L25_V044_f0003",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated at a desk with a laptop.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top sitting in front of a large whiteboard with educational titles. A blue laptop sits on the wooden desk in front of her.",
+    "caption_vi": "Nu giao vien mac ao den dang ngoi ben ban co may tinh xach tay.",
+    "detailed_caption_vi": "Mot nu giao vien mac ao den ngoi truoc bang trang co chu. Phia truoc co la mot chiec may tinh xach tay tren ban go.",
+    "ocr_text": "CHƯƠNG TRÌNH GDCD 12 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
-          0.233,
-          0.848
+          0.027000000000000003,
+          0.356,
+          0.231,
+          0.84
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0004",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0004",
+    "ocr_source_frame_id": "L25_V044_f0004",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated in front of a presentation board.",
+    "detailed_caption": "A medium shot shows a female teacher in a black long-sleeve top seated at a desk. Behind her is a white board displaying lesson titles in purple and red text.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc bang trinh chieu.",
+    "detailed_caption_vi": "Cang quay trung canh cho thay nu giao vien mac ao den dang ngoi truoc bang trang ghi tieu de bai hoc.",
+    "ocr_text": "CHƯƠNG TRÌNH GDCD 12 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.025,
+          0.35700000000000004,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0005",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0005",
+    "ocr_source_frame_id": "L25_V044_f0005",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated at a desk in front of a whiteboard.",
+    "detailed_caption": "A medium shot displays a female teacher wearing a black top seated at a wooden desk with a blue laptop. A presentation slide with educational text is visible behind her.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc bang trang.",
+    "detailed_caption_vi": "Mot nu giao vien mac ao den dang ngoi truoc ban co may tinh xach tay. Phia sau la slide trinh chieu co cac tieu de bai hoc.",
+    "ocr_text": "CHƯƠNG TRÌNH GDCD 12 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.024,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0006",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0006",
+    "ocr_source_frame_id": "L25_V044_f0006",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated in a classroom setting.",
+    "detailed_caption": "A medium shot shows a female teacher in a black long-sleeve top seated behind a desk with a blue laptop, positioned next to a large whiteboard featuring lesson text.",
+    "caption_vi": "Nu giao vien mac ao den ngoi trong phong hoc.",
+    "detailed_caption_vi": "Hinh anh trung canh cho thay mot nu giao vien mac ao den dang ngoi phia sau ban hoc co may tinh xach tay, ben canh la bang trang.",
+    "ocr_text": "CHƯƠNG TRÌNH GDCD 12 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.025,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0007",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0007",
+    "ocr_source_frame_id": "L25_V044_f0007",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated at a desk with a blue laptop.",
+    "detailed_caption": "A medium shot shows a female teacher wearing a black long-sleeve top seated at a wooden desk with a blue laptop. A large whiteboard displays a lesson header behind her.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc ban lam viec.",
+    "detailed_caption_vi": "Mot nu giao vien mac ao den ngoi truoc ban co may tinh xach tay mau xanh. Phia sau co la bang trang co chu de bai hoc.",
+    "ocr_text": "CHƯƠNG TRÌNH GDCD 12 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.025,
+          0.356,
           0.233,
-          0.848
+          0.8390000000000001
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0008",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0008",
+    "ocr_source_frame_id": "L25_V044_f0008",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated in front of a whiteboard with numbered lesson points.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top seated at a desk with a blue laptop. Behind her, a white presentation board lists three numbered educational headings in yellow, purple, and green boxes.",
+    "caption_vi": "Nu giao vien ngoi truoc bang trang co cac muc bai hoc duoc danh so.",
+    "detailed_caption_vi": "Mot nu giao vien mac ao den ngoi truoc ban co may tinh xach tay. Phia sau la bang trang hien thi ba muc bai hoc duoc danh so trong cac khung mau vang, tim va xanh la.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0009",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0009",
+    "ocr_source_frame_id": "L25_V044_f0009",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated in front of a whiteboard with lesson outlines and a brace symbol.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top seated at a desk with a blue laptop. A white presentation board behind her features numbered lesson points and a purple brace symbol next to the first heading.",
+    "caption_vi": "Nu giao vien ngoi truoc bang trang co so do bai hoc va dau moc nhon.",
+    "detailed_caption_vi": "Hinh anh trung canh cho thay nu giao vien mac ao den ngoi truoc ban co may tinh. Phia sau la bang trang co cac muc bai hoc va mot dau moc mau tim ben canh.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0010",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0010",
+    "ocr_source_frame_id": "L25_V044_f0010",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top speaks in front of a whiteboard displaying lesson details.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top seated at a desk with a blue laptop, speaking while gesturing. Behind her, a white presentation board lists four bullet points under the first heading.",
+    "caption_vi": "Nu giao vien mac ao den dang noi truoc bang trang co danh sach cac y chinh.",
+    "detailed_caption_vi": "Mot nu giao vien mac ao den dang ngoi noi va cu chi truoc ban co may tinh xach tay. Phia sau la bang trang hien thi bon y gach dau dong duoi muc dau tien.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT - Sử dụng - Thi hành - Tuân thủ - Áp dụng DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "speaking"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0011",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0011",
+    "ocr_source_frame_id": "L25_V044_f0011",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated in front of a whiteboard with lesson content.",
+    "detailed_caption": "A medium shot displays a female teacher in a black top seated at a wooden desk with a blue laptop. A presentation board behind her shows lesson headings and four bullet points.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc bang noi dung bai hoc.",
+    "detailed_caption_vi": "Hinh anh trung canh cho thay nu giao vien mac ao den ngoi truoc ban co may tinh. Phia sau la bang trang trinh bay noi dung bai hoc kem cac y chi tiet.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT - Sử dụng - Thi hành - Tuân thủ - Áp dụng DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0012",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0012",
+    "ocr_source_frame_id": "L25_V044_f0012",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated at a desk in front of a whiteboard with a highlighted icon.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top seated at a desk with a blue laptop. Behind her, a white presentation board highlights the third lesson heading inside a star-like pink outline.",
+    "caption_vi": "Nu giao vien ngoi truoc bang trang co bieu tuong noi bat.",
+    "detailed_caption_vi": "Mot nu giao vien mac ao den ngoi truoc ban co may tinh xach tay. Phia sau la bang trang noi bat muc thu ba trong khung vien mau hong.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT - Sử dụng - Thi hành - Tuân thủ - Áp dụng DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT 3 VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0013",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0013",
+    "ocr_source_frame_id": "L25_V044_f0013",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated in front of a whiteboard displaying lesson outlines.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top seated at a desk with a blue laptop. A white presentation board behind her displays lesson points with a purple brace next to the third heading.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc bang trang co so do va dau ngoac.",
+    "detailed_caption_vi": "Hinh anh trung canh ghi lai nu giao vien mac ao den ngoi truoc ban co may tinh. Phia sau la bang trang hien thi cac noi dung bai hoc kem dau ngoac mau tim o muc thu ba.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT - Sử dụng - Thi hành - Tuân thủ - Áp dụng DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT 3 VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0014",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0014",
+    "ocr_source_frame_id": "L25_V044_f0014",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated in front of a whiteboard with detailed lesson subpoints.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top seated at a desk with a blue laptop. A white presentation board behind her lists subcategories under the third lesson heading next to a purple brace.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc bang trang co cac y chi tiet cua bai hoc.",
+    "detailed_caption_vi": "Mot nu giao vien mac ao den ngoi truoc ban co may tinh xach tay. Phia sau la bang trang liet ke cac y con duoi muc thu ba kem theo dau ngoac mau tim.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT - Sử dụng - Thi hành - Tuân thủ - Áp dụng DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT 3 VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ - Hình sự - Dân sự - Hành chính - Kỷ luật THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0015",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0015",
+    "ocr_source_frame_id": "L25_V044_f0015",
+    "quality_flags": [],
+    "caption": "A female teacher in a black top is seated at a desk in front of an educational whiteboard.",
+    "detailed_caption": "A medium shot shows a female teacher in a black top seated at a wooden desk with a blue laptop. A white presentation board behind her displays structured lesson notes with bullet points and purple braces.",
+    "caption_vi": "Nu giao vien mac ao den ngoi truoc bang trang co ghi chu bai hoc.",
+    "detailed_caption_vi": "Hinh anh trung canh cho thay mot nu giao vien mac ao den dang ngoi truoc ban co may tinh xach tay. Phia sau la bang trang hien thi chi tiet noi dung bai hoc va cac dau ngoac phan loai.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT - Sử dụng - Thi hành - Tuân thủ - Áp dụng DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT 3 VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ - Hình sự - Dân sự - Hành chính - Kỷ luật THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
-        ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
-        "attributes": [
-          "light blue",
-          "laptop"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.026000000000000002,
+          0.356,
           0.233,
-          0.848
+          0.838
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "female teacher in black top",
+        "description_vi": "nu giao vien mac ao den",
         "attributes": [
-          "woman",
-          "black",
-          "long-sleeve"
+          "female",
+          "black top"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V044_f0016",
-    "visual_source_frame_id": "L25_V044_f0002",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher stands beside a presentation screen and a laptop on a desk in a classroom setting.",
-    "detailed_caption": "A medium shot shows a woman wearing a black long-sleeve top standing at a wooden desk with a light blue laptop. Behind her is a presentation screen displaying educational headings in Vietnamese. A wall clock and alphabetical chart decorate the background wall.",
-    "caption_vi": "Một nữ giáo viên đứng cạnh màn hình thuyết trình và máy tính xách tay trên bàn học trong lớp học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo dài tay màu đen đang đứng tại bàn gỗ có đặt một máy tính xách tay màu xanh nhạt. Phía sau cô là màn hình thuyết trình hiển thị tiêu đề giáo dục bằng tiếng Việt. Đồng hồ treo tường và bảng chữ cái trang trí tường phía sau.",
-    "ocr_text": "A B C D E G H I J K L M O P Q R S T U V W X Y Z CHƯƠNG TRÌNH GDCD 12 2024 CHUYÊN ĐỀ 5 MỘT SỐ VẤN ĐỀ CƠ BẢN CỦA PHÁP LUẬT THỰC HIỆN PHÁP LUẬT CÔ VÕ HẬU Trường THPT Marie Curie-TP.HCM THANH NIÊN",
+    "visual_source_frame_id": "L25_V044_f0016",
+    "ocr_source_frame_id": "L25_V044_f0016",
+    "quality_flags": [],
+    "caption": "A woman wearing a black long-sleeve top and necklace sits behind a desk with a blue laptop in front of a presentation board.",
+    "detailed_caption": "A medium shot shows a woman with dark hair wearing a black long-sleeve top and a necklace sitting at a desk with a light blue laptop. Behind her is a white board displaying lesson slides with text and diagrams about law, set in a classroom or studio environment.",
+    "caption_vi": "Một phụ nữ mặc áo dài tay màu đen và đeo vòng cổ ngồi bên bàn làm việc với một máy tính xách tay màu xanh trước bảng trình chiếu.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại hình ảnh một người phụ nữ tóc đen mặc áo dài tay màu đen và đeo vòng cổ đang ngồi cạnh một chiếc máy tính xách tay màu xanh trên bàn. Phía sau cô là bảng trắng hiển thị các slide bài học có chữ và sơ đồ về pháp luật trong không gian lớp học.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT CÁC HÌNH THỨC THỰC HIỆN PHÁP LUẬT DẤU HIỆU NHẬN BIẾT HÀNH VI VI PHẠM PHÁP LUẬT VI PHẠM PHÁP LUẬT VÀ TRÁCH NHIỆM PHÁP LÝ",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "board_0",
+        "label": "board",
+        "bbox": [
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
+        ],
+        "description": "A large white presentation board displaying legal lesson content.",
+        "description_vi": "Một bảng trình chiếu màu lớn hiển thị nội dung bài học pháp luật.",
+        "attributes": [
+          "white",
+          "text",
+          "diagrams"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.001,
+          0.8390000000000001,
+          0.351,
+          0.999
+        ],
+        "description": "A wooden desk holding books and a laptop.",
+        "description_vi": "Một chiếc bàn gỗ đựng sách và máy tính xách tay.",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.056999999999999995,
-          0.7270000000000001,
-          0.21200000000000002,
-          0.85
+          0.057999999999999996,
+          0.728,
+          0.209,
+          0.8510000000000001
         ],
-        "description": "light blue laptop on wooden desk",
-        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
+        "description": "A blue laptop placed on the desk in front of the woman.",
+        "description_vi": "Một máy tính xách tay màu xanh đặt trên bàn trước mặt người phụ nữ.",
         "attributes": [
-          "light blue",
-          "laptop"
+          "blue",
+          "portable computer"
         ],
         "action": ""
       },
@@ -1184,39 +575,33 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.031,
-          0.36,
+          0.024,
+          0.36300000000000004,
           0.233,
-          0.848
+          0.8510000000000001
         ],
-        "description": "woman in black long-sleeve top",
-        "description_vi": "phụ nữ mặc áo dài tay màu đen",
+        "description": "A woman wearing a black long-sleeve top and necklace sitting at a desk.",
+        "description_vi": "Một phụ nữ mặc áo dài tay màu đen và đeo vòng cổ đang ngồi tại bàn.",
         "attributes": [
           "woman",
-          "black",
-          "long-sleeve"
+          "black top",
+          "necklace",
+          "dark hair"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.21600000000000003,
-          0.112,
-          0.9730000000000001,
-          0.7180000000000001
-        ],
-        "description": "projection screen with Vietnamese educational headings",
-        "description_vi": "màn hình chiếu với tiêu đề giáo dục tiếng Việt",
-        "attributes": [
-          "white",
-          "screen"
-        ],
-        "action": ""
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
+      {
+        "subject_id": "board_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "board_0"
+      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -1605,75 +990,77 @@
     "visual_source_frame_id": "L25_V044_f0024",
     "ocr_source_frame_id": "L25_V044_f0024",
     "quality_flags": [],
-    "caption": "A man speaks at a podium on a stage with a projection screen in a large auditorium.",
-    "detailed_caption": "A wide shot in an auditorium shows a man standing at a white podium on the right, gesturing with one hand toward a large presentation screen. The screen displays the title 'Learning towards Creative Society' and 'EHUD BARAK'. In the foreground, the backs of seated audience members are visible.",
-    "caption_vi": "Một người đàn ông phát biểu tại bục trên sân khấu với màn hình chiếu trong hội trường lớn.",
-    "detailed_caption_vi": "Cảnh quay rộng trong hội trường cho thấy một người đàn ông đứng tại bục màu trắng ở bên phải, đang cử động một tay về phía màn hình thuyết trình lớn. Màn hình hiển thị tiêu đề 'Learning towards Creative Society' và 'EHUD BARAK'. Ở tiền cảnh, lưng của những khán giả ngồi được nhìn thấy.",
-    "ocr_text": "SIU University IACBE Learning towards Creative Society Presented by Former Prime Minister of Israel EHUD BARAK August 05, 2022",
+    "caption": "A man wearing a suit stands behind a lectern gesturing while speaking in an auditorium with seated audience members visible in the foreground.",
+    "detailed_caption": "A medium shot shows a man in a dark suit standing behind a white lectern adorned with flowers, gesturing with his hand as he speaks. In the foreground, the back of the heads and shoulders of seated audience members are visible. A large projection screen behind the speaker displays presentation text.",
+    "caption_vi": "Một người đàn ông mặc vest đứng sau bục phát biểu có hoa, đang cử chỉ khi nói chuyện trong hội trường với khán giả ngồi phía trước.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một người đàn ông mặc vest tối màu đứng sau bục phát biểu màu trắng được trang trí bằng hoa, đang giơ tay cử chỉ khi thuyết trình. Ở phía trước, bóng lưng và vai của những khán giả ngồi nghe được nhìn thấy rõ ràng. Phía sau diễn giả là màn hình chiếu lớn có chữ trình bày.",
+    "ocr_text": "Learning towards Creative Society Presented by Former Prime Minister of Israel EHUD BARAK August 05, 2022",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "lectern_0",
+        "label": "lectern",
+        "bbox": [
+          0.6990000000000001,
+          0.519,
+          0.8800000000000001,
+          0.9369999999999999
+        ],
+        "description": "A white lectern adorned with flowers holding a microphone.",
+        "description_vi": "Một bục phát biểu màu trắng được trang trí bằng hoa có gắn micro.",
+        "attributes": [
+          "white",
+          "podium",
+          "floral arrangement"
+        ],
+        "action": ""
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.725,
-          0.33599999999999997,
+          0.724,
+          0.33499999999999996,
           0.868,
-          0.529
+          0.528
         ],
-        "description": "man standing at podium",
-        "description_vi": "người đàn ông đứng tại bục phát biểu",
+        "description": "A man in a dark suit standing at a lectern and gesturing.",
+        "description_vi": "Một người đàn ông mặc vest tối màu đứng ở bục phát biểu và đang cử chỉ.",
         "attributes": [
           "man",
-          "suit"
+          "suit",
+          "glasses"
         ],
         "action": "speaking"
-      },
-      {
-        "object_id": "podium_0",
-        "label": "podium",
-        "bbox": [
-          0.7,
-          0.465,
-          0.881,
-          0.9380000000000001
-        ],
-        "description": "white podium with flowers on top",
-        "description_vi": "bục màu trắng có hoa ở trên",
-        "attributes": [
-          "white",
-          "podium"
-        ],
-        "action": ""
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.233,
+          0.242,
           0.0,
-          0.9279999999999999,
-          0.686
+          0.9289999999999999,
+          0.6829999999999999
         ],
-        "description": "large projection screen displaying presentation text",
-        "description_vi": "màn hình chiếu lớn hiển thị văn bản thuyết trình",
+        "description": "A large projection screen displaying presentation text.",
+        "description_vi": "Một màn hình chiếu lớn hiển thị văn bản thuyết trình.",
         "attributes": [
-          "white",
-          "screen"
+          "projection screen",
+          "text"
         ],
         "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
+        "subject_id": "lectern_0",
         "predicate": "overlapping",
-        "object_id": "podium_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "podium_0",
+        "subject_id": "screen_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "lectern_0"
       },
       {
         "subject_id": "person_0",
@@ -1684,16 +1071,6 @@
         "subject_id": "screen_0",
         "predicate": "overlapping",
         "object_id": "person_0"
-      },
-      {
-        "subject_id": "podium_0",
-        "predicate": "overlapping",
-        "object_id": "screen_0"
-      },
-      {
-        "subject_id": "screen_0",
-        "predicate": "overlapping",
-        "object_id": "podium_0"
       }
     ]
   },
@@ -1702,11 +1079,11 @@
     "visual_source_frame_id": "L25_V044_f0025",
     "ocr_source_frame_id": "L25_V044_f0025",
     "quality_flags": [],
-    "caption": "A close-up portrait of a woman with braided hair wearing an animal print top.",
-    "detailed_caption": "A close-up shot shows a woman with neatly braided black hair, wearing a tan and black animal print top, speaking with an open mouth. A semi-transparent background shows a stage scene with a presentation.",
-    "caption_vi": "Ảnh cận cảnh chân dung một phụ nữ tóc bện mặc áo họa tiết da động vật.",
-    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một phụ nữ tóc đen được bện gọn gàng, mặc áo họa tiết da động vật màu nâu nhạt và đen, đang nói chuyện với miệng mở. Phông nền bán trong suốt hiển thị cảnh sân khấu có bài thuyết trình.",
-    "ocr_text": "Creative Society Presented by Former Prime Ministe HU",
+    "caption": "A woman with braided hair wearing a patterned top looks toward the right side in a room.",
+    "detailed_caption": "A close-up shot shows a woman with dark braided hair wearing a brown and black patterned top, looking towards the right side with an attentive expression. The background shows an indoor setting with blurred office or auditorium elements.",
+    "caption_vi": "Một người phụ nữ có mái tóc bện mặc áo họa tiết đang nhìn về phía bên phải trong phòng.",
+    "detailed_caption_vi": "Cận cảnh khuôn mặt một phụ nữ có mái tóc đen bện sam mặc chiếc áo họa tiết màu nâu đen, đang hướng ánh nhìn sang phía bên phải với biểu cảm tập trung. Bối cảnh phía sau là không gian nội thất với các chi tiết văn phòng hoặc hội trường bị mờ.",
+    "ocr_text": "Presented by Former Prime Minister of Israel EHUD BARAK",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1714,18 +1091,18 @@
         "label": "person",
         "bbox": [
           0.16299999999999998,
-          0.051,
+          0.05,
           0.884,
           1.0
         ],
-        "description": "woman with braided hair wearing animal print top",
-        "description_vi": "phụ nữ tóc bện mặc áo họa tiết động vật",
+        "description": "A woman with braided hair wearing a patterned top.",
+        "description_vi": "Một người phụ nữ tết tóc mặc áo họa tiết.",
         "attributes": [
           "woman",
           "braided hair",
-          "animal print"
+          "patterned top"
         ],
-        "action": "speaking"
+        "action": "looking"
       }
     ],
     "spatial_relations": []
@@ -2237,74 +1614,199 @@
     "frame_id": "L25_V044_f0036",
     "visual_source_frame_id": "L25_V044_f0036",
     "ocr_source_frame_id": "L25_V044_f0036",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A man in a dark suit and green patterned tie speaks in a room with framed portraits.",
-    "detailed_caption": "A medium shot shows a man with short blond hair and a goatee, wearing a dark suit, white shirt, and a green patterned tie, gesturing with his hands while speaking. Two framed historical portraits hang on the white wall behind him.",
-    "caption_vi": "Một người đàn ông mặc vest tối màu và cà vạt họa tiết xanh lá phát biểu trong phòng có các bức chân dung đóng khung.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông tóc ngắn vàng và có râu dê, mặc bộ vest tối màu, áo sơ mi trắng và cà vạt họa tiết xanh lá, đang cử động tay khi phát biểu. Hai bức chân dung lịch sử đóng khung treo trên bức tường trắng phía sau anh.",
+    "quality_flags": [],
+    "caption": "A man wearing a dark suit and a green patterned tie stands in a room with framed portraits on the wall.",
+    "detailed_caption": "A medium shot shows a man with graying hair and a goatee wearing a dark suit, white shirt, and a green patterned tie, standing in a brightly lit room and gesturing with his hands. On the wall behind him hang framed portraits.",
+    "caption_vi": "Một người đàn ông mặc suit tối màu và cà vạt họa tiết xanh lá đứng trong phòng có treo tranh chân dung trên tường.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một người đàn ông tóc điểm bạc có râu cằm, mặc bộ vest tối màu, áo sơ mi trắng và cà vạt họa tiết xanh lá, đang đứng trong căn phòng sáng sủa và dùng tay cử chỉ. Trên tường phía sau treo các khung tranh chân dung.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "painting_0",
+        "label": "painting",
+        "bbox": [
+          0.223,
+          0.0,
+          0.462,
+          0.54
+        ],
+        "description": "A framed portrait hanging on the wall behind the man.",
+        "description_vi": "Một bức chân dung có khung treo trên tường phía sau người đàn ông.",
+        "attributes": [
+          "framed",
+          "portrait"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "painting_1",
+        "label": "painting",
+        "bbox": [
+          0.865,
+          0.0,
+          1.0,
+          0.5239999999999999
+        ],
+        "description": "Another framed portrait hanging on the right wall.",
+        "description_vi": "Một bức chân dung có khung khác treo ở tường bên phải.",
+        "attributes": [
+          "framed",
+          "portrait"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.252,
-          0.066,
-          0.649,
+          0.254,
+          0.071,
+          0.647,
           1.0
         ],
-        "description": "man wearing dark suit and green patterned tie",
-        "description_vi": "người đàn ông mặc vest tối màu và cà vạt họa tiết xanh lá",
+        "description": "A man wearing a dark suit, white shirt, and green patterned tie.",
+        "description_vi": "Một người đàn ông mặc vest tối màu, áo sơ mi trắng và cà vạt hoa văn xanh lá.",
         "attributes": [
           "man",
-          "dark suit",
-          "green tie",
+          "suit",
+          "tie",
           "goatee"
         ],
-        "action": "speaking"
+        "action": "gesturing"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "painting_0",
+        "predicate": "left_of",
+        "object_id": "painting_1"
+      },
+      {
+        "subject_id": "painting_1",
+        "predicate": "right_of",
+        "object_id": "painting_0"
+      },
+      {
+        "subject_id": "painting_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "painting_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "painting_1"
+      },
+      {
+        "subject_id": "painting_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V044_f0037",
-    "visual_source_frame_id": "L25_V044_f0036",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "removed_inferred_demographic",
-      "visual_metadata_copied"
-    ],
-    "caption": "A man in a dark suit and green patterned tie speaks in a room with framed portraits.",
-    "detailed_caption": "A medium shot shows a man with short blond hair and a goatee, wearing a dark suit, white shirt, and a green patterned tie, gesturing with his hands while speaking. Two framed historical portraits hang on the white wall behind him.",
-    "caption_vi": "Một người đàn ông mặc vest tối màu và cà vạt họa tiết xanh lá phát biểu trong phòng có các bức chân dung đóng khung.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông tóc ngắn vàng và có râu dê, mặc bộ vest tối màu, áo sơ mi trắng và cà vạt họa tiết xanh lá, đang cử động tay khi phát biểu. Hai bức chân dung lịch sử đóng khung treo trên bức tường trắng phía sau anh.",
+    "visual_source_frame_id": "L25_V044_f0037",
+    "ocr_source_frame_id": "L25_V044_f0037",
+    "quality_flags": [],
+    "caption": "A man wearing a dark suit and green tie stands and gestures with his hands in an office setting.",
+    "detailed_caption": "A medium shot shows a man with short graying hair wearing a dark suit, white shirt, and a green patterned tie standing in an office room. He is holding his hands open and gesturing as he speaks. Framed portraits hang on the white wall behind him.",
+    "caption_vi": "Một người đàn ông mặc vest tối màu và cà vạt xanh lá đứng cử chỉ bằng tay trong không gian văn phòng.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một người đàn ông tóc ngắn điểm bạc mặc bộ vest tối màu, áo sơ mi trắng và cà vạt họa tiết xanh lá đang đứng trong phòng làm việc. Hai bàn tay ông đang mở rộng cử chỉ khi nói chuyện. Trên bức tường trắng phía sau treo những khung tranh chân dung.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "painting_0",
+        "label": "painting",
+        "bbox": [
+          0.22799999999999998,
+          0.0,
+          0.465,
+          0.54
+        ],
+        "description": "A framed portrait on the wall to the left.",
+        "description_vi": "Bức tranh chân dung đóng khung trên tường bên trái.",
+        "attributes": [
+          "framed",
+          "portrait"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "painting_1",
+        "label": "painting",
+        "bbox": [
+          0.8720000000000001,
+          0.0,
+          1.0,
+          0.5239999999999999
+        ],
+        "description": "A framed portrait on the wall to the right.",
+        "description_vi": "Bức tranh chân dung đóng khung trên tường bên phải.",
+        "attributes": [
+          "framed",
+          "portrait"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.252,
-          0.066,
-          0.649,
+          0.26,
+          0.071,
+          0.688,
           1.0
         ],
-        "description": "man wearing dark suit and green patterned tie",
-        "description_vi": "người đàn ông mặc vest tối màu và cà vạt họa tiết xanh lá",
+        "description": "A man wearing a dark suit, white shirt, and green tie.",
+        "description_vi": "Một người đàn ông mặc vest tối màu, áo sơ mi trắng và cà vạt xanh lá.",
         "attributes": [
           "man",
-          "dark suit",
+          "suit",
           "green tie",
           "goatee"
         ],
-        "action": "speaking"
+        "action": "gesturing"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "painting_0",
+        "predicate": "left_of",
+        "object_id": "painting_1"
+      },
+      {
+        "subject_id": "painting_1",
+        "predicate": "right_of",
+        "object_id": "painting_0"
+      },
+      {
+        "subject_id": "painting_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "painting_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "painting_1"
+      },
+      {
+        "subject_id": "painting_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V044_f0038",
@@ -2815,10 +2317,10 @@
     "visual_source_frame_id": "L25_V044_f0042",
     "ocr_source_frame_id": "L25_V044_f0042",
     "quality_flags": [],
-    "caption": "Two men stand behind a conference table on a stage with flags and a map backdrop.",
-    "detailed_caption": "A medium shot captures two men standing centrally behind a long conference table on a stage. The man on the left wears a dark suit and red tie, holding a dark folder. The man on the right wears a blue suit and red tie, holding an open red folder. Several flags stand on both sides of the stage in front of a large patterned wall backdrop.",
-    "caption_vi": "Hai người đàn ông đứng sau bàn họp trên sân khấu với cờ và phông nền bản đồ.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hai người đàn ông đứng ở trung tâm phía sau bàn họp dài trên sân khấu. Người đàn ông bên trái mặc vest tối màu và cà vạt đỏ, cầm một tập tài liệu tối màu. Người đàn ông bên phải mặc vest xanh và cà vạt đỏ, đang cầm một tập tài liệu màu đỏ mở. Một số lá cờ dựng ở hai bên sân khấu trước phông nền tường có hoa văn lớn.",
+    "caption": "Four men in suits stand behind a long wooden table with national flags behind them.",
+    "detailed_caption": "A wide shot shows four men dressed in formal suits standing behind a long wooden conference table. The man in the middle holds a dark document folder, and another man to his right holds a red folder. Behind them stand national flags and a large decorative wall map.",
+    "caption_vi": "Bốn người đàn ông mặc vest đứng sau bàn gỗ dài với các lá cờ quốc gia phía sau họ.",
+    "detailed_caption_vi": "Cận cảnh rộng ghi lại bốn người đàn ông mặc vest trang trọng đang đứng phía sau một chiếc bàn họp bằng gỗ dài. Người đàn ông ở giữa đang cầm một tập tài liệu màu sẫm, trong khi người bên phải cầm một tập tài liệu màu đỏ. Phía sau họ là các lá cờ quốc gia và một tấm bản đồ trang trí lớn trên tường.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -2826,33 +2328,16 @@
         "object_id": "flag_0",
         "label": "flag",
         "bbox": [
-          0.128,
-          0.060000000000000005,
-          0.21200000000000002,
-          0.721
+          0.127,
+          0.064,
+          0.21400000000000002,
+          0.72
         ],
-        "description": "blue yellow and red flag on the left",
-        "description_vi": "cờ xanh vàng đỏ bên trái",
+        "description": "A national flag with blue, yellow, and red vertical stripes.",
+        "description_vi": "Lá cờ quốc gia với các sọc dọc xanh dương, vàng và đỏ.",
         "attributes": [
           "flag",
-          "tall"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "flag_1",
-        "label": "flag",
-        "bbox": [
-          0.25,
-          0.089,
-          0.339,
-          0.675
-        ],
-        "description": "vietnam flag on the left",
-        "description_vi": "cờ việt nam bên trái",
-        "attributes": [
-          "red",
-          "star"
+          "vertical stripes"
         ],
         "action": ""
       },
@@ -2860,52 +2345,71 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.43200000000000005,
-          0.313,
-          0.5589999999999999,
-          0.9390000000000001
+          0.176,
+          0.356,
+          0.281,
+          0.832
         ],
-        "description": "man in dark suit and red tie holding folder",
-        "description_vi": "nam giới mặc vest tối màu và cà vạt đỏ cầm tập tài liệu",
+        "description": "A man in a dark suit standing on the left.",
+        "description_vi": "Một người đàn ông mặc vest tối màu đứng bên trái.",
         "attributes": [
           "man",
           "suit",
-          "red tie"
+          "glasses"
         ],
-        "action": "holding folder"
+        "action": "standing"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.558,
-          0.287,
-          0.688,
+          0.43099999999999994,
+          0.312,
+          0.5559999999999999,
           0.9390000000000001
         ],
-        "description": "man in blue suit and red tie holding red folder",
-        "description_vi": "nam giới mặc vest xanh và cà vạt đỏ cầm tập tài liệu đỏ",
+        "description": "A man in a dark suit holding a dark folder in the center.",
+        "description_vi": "Một người đàn ông mặc vest tối màu cầm tập tài liệu tối ở trung tâm.",
+        "attributes": [
+          "man",
+          "suit",
+          "red tie"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5559999999999999,
+          0.287,
+          0.688,
+          0.9369999999999999
+        ],
+        "description": "A man in a blue suit holding a red folder.",
+        "description_vi": "Một người đàn ông mặc vest xanh dương cầm tập tài liệu màu đỏ.",
         "attributes": [
           "man",
           "blue suit",
-          "red tie"
+          "red folder"
         ],
-        "action": "holding folder"
+        "action": "holding"
       },
       {
         "object_id": "table_0",
         "label": "table",
         "bbox": [
-          0.16699999999999998,
+          0.17099999999999999,
           0.6699999999999999,
-          1.0,
+          0.9949999999999999,
           1.0
         ],
-        "description": "long wooden conference table on stage",
-        "description_vi": "bàn họp gỗ dài trên sân khấu",
+        "description": "A long polished wooden conference table with a floral centerpiece.",
+        "description_vi": "Một chiếc bàn họp gỗ đánh bóng dài có cắm hoa ở giữa.",
         "attributes": [
           "wooden",
-          "conference table"
+          "long",
+          "polished"
         ],
         "action": ""
       }
@@ -2913,22 +2417,12 @@
     "spatial_relations": [
       {
         "subject_id": "flag_0",
-        "predicate": "left_of",
-        "object_id": "flag_1"
-      },
-      {
-        "subject_id": "flag_1",
-        "predicate": "right_of",
-        "object_id": "flag_0"
-      },
-      {
-        "subject_id": "flag_0",
-        "predicate": "left_of",
+        "predicate": "overlapping",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
-        "predicate": "right_of",
+        "predicate": "overlapping",
         "object_id": "flag_0"
       },
       {
@@ -2942,24 +2436,34 @@
         "object_id": "flag_0"
       },
       {
-        "subject_id": "flag_1",
+        "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "person_0"
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "flag_0"
       },
       {
         "subject_id": "person_0",
-        "predicate": "right_of",
-        "object_id": "flag_1"
-      },
-      {
-        "subject_id": "flag_1",
         "predicate": "left_of",
         "object_id": "person_1"
       },
       {
         "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "flag_1"
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
@@ -2980,6 +2484,16 @@
         "subject_id": "table_0",
         "predicate": "overlapping",
         "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
       }
     ]
   },
@@ -3582,131 +3096,86 @@
     "visual_source_frame_id": "L25_V044_f0047",
     "ocr_source_frame_id": "L25_V044_f0047",
     "quality_flags": [],
-    "caption": "A double-exposed scene showing people holding folders behind a conference table with university branding.",
-    "detailed_caption": "A double exposure shows several individuals holding open folders behind a long conference table covered with red cloths featuring university logos. The background displays standing people and event text. The table has flower arrangements and signage in front of each person.",
-    "caption_vi": "Cảnh phơi sáng kép cho thấy mọi người cầm tập tài liệu phía sau bàn họp có thương hiệu trường đại học.",
-    "detailed_caption_vi": "Cảnh phơi sáng kép cho thấy một số cá nhân cầm tập tài liệu mở phía sau bàn họp dài phủ khăn đỏ có logo trường đại học. Phía sau hiển thị những người đang đứng và văn bản sự kiện. Bàn có cắm hoa và biển hiệu trước mặt mỗi người.",
-    "ocr_text": "MERIDIEN SÔ RON N 22 REEMEN COOP GNIN EREM 023 CHANG GUNG UNIVERSITY Marriott INTERNATIONAL SIU Saigon International NIVERSITY SIU Saigon International SIU CHANG GUNG UNIVERSITY HSING WU UNIVERSITY",
+    "caption": "Several people in formal attire stand behind a red-covered table holding document folders in a conference room.",
+    "detailed_caption": "A medium shot captures several individuals in suits standing behind a long conference table draped in red cloth with gold logos. Each person holds an open document folder. Behind them, a banner with text and photographic graphics is displayed on the wall.",
+    "caption_vi": "Nhiều người mặc trang phục trang trọng đứng sau bàn phủ khăn đỏ cầm các tập tài liệu trong phòng họp.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại nhiều người mặc vest đang đứng sau chiếc bàn hội nghị dài phủ khăn đỏ có in logo màu vàng. Mỗi người đều đang cầm một tập tài liệu mở. Phía sau họ là một biểu ngữ có chữ và hình ảnh đồ họa được treo trên tường.",
+    "ocr_text": "MERIDIEN Fairfield WESTIN SÔI RỌN HAIN AGREEMENT COOPER ERER 2023 SIU Saigon International UNIVERSITY CHANG GUNG UNIVERSITY HONG WO UNIVER",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "flower_arrangement_0",
-        "label": "flower arrangement",
-        "bbox": [
-          0.517,
-          0.6880000000000001,
-          0.67,
-          0.8029999999999999
-        ],
-        "description": "yellow floral arrangement on the table",
-        "description_vi": "bình hoa vàng trên bàn",
-        "attributes": [
-          "yellow",
-          "floral"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.040999999999999995,
-          0.35,
-          0.191,
+          0.041999999999999996,
+          0.354,
+          0.189,
           0.759
         ],
-        "description": "man holding red folder on the left",
-        "description_vi": "nam giới cầm tập tài liệu đỏ bên trái",
+        "description": "A person in a dark suit holding a folder on the left.",
+        "description_vi": "Một người mặc vest tối màu cầm tập tài liệu ở bên trái.",
         "attributes": [
-          "man",
-          "suit"
+          "person",
+          "suit",
+          "glasses"
         ],
-        "action": "holding folder"
+        "action": "holding"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.391,
-          0.35900000000000004,
-          0.5389999999999999,
-          0.733
+          0.21400000000000002,
+          0.352,
+          0.331,
+          0.73
         ],
-        "description": "woman holding red folder in the center",
-        "description_vi": "phụ nữ cầm tập tài liệu đỏ ở trung tâm",
+        "description": "A person in a suit holding a folder next to a flower arrangement.",
+        "description_vi": "Một người mặc vest cầm tập tài liệu cạnh lẵng hoa.",
         "attributes": [
-          "woman",
-          "suit jacket"
+          "person",
+          "suit",
+          "tie"
         ],
-        "action": "holding folder"
+        "action": "holding"
       },
       {
         "object_id": "person_2",
         "label": "person",
         "bbox": [
-          0.836,
-          0.275,
-          1.0,
-          0.759
+          0.393,
+          0.35900000000000004,
+          0.5429999999999999,
+          0.7569999999999999
         ],
-        "description": "man holding red folder on the right",
-        "description_vi": "nam giới cầm tập tài liệu đỏ bên phải",
+        "description": "A person in a suit holding a red folder in the center.",
+        "description_vi": "Một người mặc vest cầm tập tài liệu màu đỏ ở giữa.",
         "attributes": [
-          "man",
-          "glasses",
-          "blue shirt"
+          "person",
+          "suit"
         ],
-        "action": "holding folder"
+        "action": "holding"
       },
       {
         "object_id": "table_0",
         "label": "table",
         "bbox": [
           0.0,
-          0.738,
+          0.759,
           1.0,
           1.0
         ],
-        "description": "conference table with red covers and logos",
-        "description_vi": "bàn họp phủ khăn đỏ và logo",
+        "description": "A long conference table draped with red fabric and university logos.",
+        "description_vi": "Một chiếc bàn hội nghị dài phủ vải đỏ và có logo trường đại học.",
         "attributes": [
-          "red",
-          "table"
+          "red cloth",
+          "table",
+          "logos"
         ],
         "action": ""
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "flower_arrangement_0"
-      },
-      {
-        "subject_id": "flower_arrangement_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "flower_arrangement_0",
-        "predicate": "left_of",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "right_of",
-        "object_id": "flower_arrangement_0"
-      },
-      {
-        "subject_id": "flower_arrangement_0",
-        "predicate": "overlapping",
-        "object_id": "table_0"
-      },
-      {
-        "subject_id": "table_0",
-        "predicate": "overlapping",
-        "object_id": "flower_arrangement_0"
-      },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
@@ -3735,6 +3204,16 @@
       {
         "subject_id": "person_2",
         "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "above",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "below",
         "object_id": "person_1"
       }
     ]
@@ -9079,26 +8558,27 @@
     "visual_source_frame_id": "L25_V044_f0096",
     "ocr_source_frame_id": "L25_V044_f0096",
     "quality_flags": [],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "caption": "A woman sits at a desk with a laptop before a presentation board showing a cartoon question mark and text.",
+    "detailed_caption": "A medium shot shows a woman sitting at a desk with a light blue laptop, positioned on the left side of the frame. In the center, a white presentation board displays a thought bubble with text and a cartoon yellow character scratching its head with a question mark. Text notes appear on the right side.",
+    "caption_vi": "Một người phụ nữ ngồi bên bàn làm việc có máy tính xách tay trước bảng trình chiếu hiển thị dấu hỏi hoạt hình và chữ.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ ngồi bên bàn làm việc với máy tính xách tay màu xanh nhạt đặt ở bên trái khung hình. Ở giữa, bảng trình chiếu màu trắng hiển thị một bong bóng suy nghĩ có chữ và hình vẽ nhân vật hoạt hình màu vàng đang gãi đầu kèm dấu hỏi. Các ghi chú văn bản xuất hiện ở bên phải.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 Thực hiện pháp luật là gì? - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white presentation board displaying lesson content and a cartoon image.",
+        "description_vi": "Bảng trình chiếu màu trắng hiển thị nội dung bài học và hình ảnh hoạt hình.",
         "attributes": [
-          "yellow",
+          "white",
+          "diagram",
           "cartoon"
         ],
         "action": ""
@@ -9107,15 +8587,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A blue laptop on the desk.",
+        "description_vi": "Một máy tính xách tay màu xanh trên bàn.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -9123,30 +8604,22 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman wearing a black top and necklace sitting at a desk.",
+        "description_vi": "Một người phụ nữ mặc áo đen và đeo vòng cổ ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top",
+          "necklace"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -9161,32 +8634,31 @@
   },
   {
     "frame_id": "L25_V044_f0097",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0097",
+    "ocr_source_frame_id": "L25_V044_f0097",
+    "quality_flags": [],
+    "caption": "A woman sits at a desk with a laptop next to a presentation board featuring lesson notes and a cartoon illustration.",
+    "detailed_caption": "A medium shot displays a woman seated behind a desk with a light blue laptop on the left. Beside her, a white presentation board shows a thought bubble with a question and a cartoon yellow character alongside bulleted text points about law.",
+    "caption_vi": "Một phụ nữ ngồi bên bàn làm việc với máy tính xách tay cạnh bảng trình chiếu có ghi chú bài học và hình minh họa hoạt hình.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ ngồi sau bàn làm việc có máy tính xách tay màu xanh nhạt ở phía bên trái. Bên cạnh cô, bảng trình chiếu trắng hiển thị bong bóng suy nghĩ có câu hỏi và hình vẽ nhân vật hoạt hình vàng cùng các ý chính về pháp luật.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 Thực hiện pháp luật là gì? - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white board showing lesson text and a cartoon graphic.",
+        "description_vi": "Bảng trắng hiển thị văn bản bài học và hình đồ họa hoạt hình.",
         "attributes": [
-          "yellow",
-          "cartoon"
+          "white",
+          "text",
+          "graphic"
         ],
         "action": ""
       },
@@ -9194,15 +8666,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A light blue laptop on the desk.",
+        "description_vi": "Một máy tính xách tay màu xanh nhạt trên bàn.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -9210,30 +8683,21 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman sitting at a desk in a black top.",
+        "description_vi": "Một phụ nữ mặc áo đen ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -9509,32 +8973,30 @@
   },
   {
     "frame_id": "L25_V044_f0101",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0101",
+    "ocr_source_frame_id": "L25_V044_f0101",
+    "quality_flags": [],
+    "caption": "A woman sits at a desk with a laptop before a presentation board displaying legal concepts and definitions.",
+    "detailed_caption": "A medium shot captures a woman sitting at a desk with a blue laptop on the left. To her right, a white presentation board displays structured notes about legal forms with highlighted text terms.",
+    "caption_vi": "Một phụ nữ ngồi bên bàn làm việc với máy tính xách tay trước bảng trình chiếu hiển thị các khái niệm và định nghĩa pháp lý.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ ngồi cạnh bàn làm việc có máy tính xách tay màu xanh ở phía bên trái. Phía bên phải cô, bảng trình chiếu màu trắng hiển thị các ghi chú có cấu trúc về hình thức pháp luật với các từ khóa được tô sáng.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 HÌNH THỨC Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white presentation board displaying lesson notes on law.",
+        "description_vi": "Bảng trình chiếu màu trắng hiển thị ghi chú bài học về pháp luật.",
         "attributes": [
-          "yellow",
-          "cartoon"
+          "white",
+          "text"
         ],
         "action": ""
       },
@@ -9542,15 +9004,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A blue laptop on the desk.",
+        "description_vi": "Một máy tính xách tay màu xanh trên bàn.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -9558,30 +9021,21 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman wearing a black top sitting at a desk.",
+        "description_vi": "Một phụ nữ mặc áo đen ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -9857,32 +9311,30 @@
   },
   {
     "frame_id": "L25_V044_f0105",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0105",
+    "ocr_source_frame_id": "L25_V044_f0105",
+    "quality_flags": [],
+    "caption": "A woman sits at a desk with a laptop next to a white presentation board showing text notes.",
+    "detailed_caption": "A medium shot shows a woman in a black top sitting behind a desk with a blue laptop on the left. Beside her, a white presentation board displays educational text regarding legal forms.",
+    "caption_vi": "Một phụ nữ ngồi bên bàn làm việc với máy tính xách tay cạnh bảng trình chiếu màu trắng hiển thị ghi chú văn bản.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ mặc áo đen ngồi sau bàn làm việc có máy tính xách tay màu xanh ở bên trái. Bên cạnh cô là bảng trình chiếu màu trắng hiển thị văn bản giáo dục về các hình thức pháp luật.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 HÌNH THỨC Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white presentation board showing lesson text.",
+        "description_vi": "Bảng trình chiếu màu trắng hiển thị văn bản bài học.",
         "attributes": [
-          "yellow",
-          "cartoon"
+          "white",
+          "text"
         ],
         "action": ""
       },
@@ -9890,15 +9342,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A blue laptop on the wooden desk.",
+        "description_vi": "Một máy tính xách tay màu xanh trên bàn gỗ.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -9906,30 +9359,21 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman sitting at a desk wearing a black top.",
+        "description_vi": "Một phụ nữ mặc áo đen ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -9944,32 +9388,30 @@
   },
   {
     "frame_id": "L25_V044_f0106",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0106",
+    "ocr_source_frame_id": "L25_V044_f0106",
+    "quality_flags": [],
+    "caption": "A woman sits at a desk with a laptop next to a presentation board displaying different forms of law.",
+    "detailed_caption": "A medium shot captures a woman sitting at a desk with a blue laptop on the left. To her right, a white presentation board displays structured bullet points detailing legal forms, including highlighted headings.",
+    "caption_vi": "Một phụ nữ ngồi bên bàn làm việc với máy tính xách tay cạnh bảng trình chiếu hiển thị các hình thức pháp luật khác nhau.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ ngồi cạnh bàn làm việc có máy tính xách tay màu xanh ở phía bên trái. Phía bên phải cô, bảng trình chiếu màu trắng hiển thị các ý chính có cấu trúc chi tiết về các hình thức pháp luật, bao gồm các tiêu đề được làm nổi bật.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 HÌNH THỨC Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm. Hình thức 2: Thi hành pháp luật (nghĩa vụ - phải làm)",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white presentation board showing lesson text on legal forms.",
+        "description_vi": "Bảng trình chiếu màu trắng hiển thị văn bản bài học về các hình thức pháp luật.",
         "attributes": [
-          "yellow",
-          "cartoon"
+          "white",
+          "text"
         ],
         "action": ""
       },
@@ -9977,15 +9419,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A blue laptop on the desk.",
+        "description_vi": "Một máy tính xách tay màu xanh trên bàn.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -9993,30 +9436,21 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman sitting at a desk wearing a black top.",
+        "description_vi": "Một phụ nữ mặc áo đen ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -10031,32 +9465,30 @@
   },
   {
     "frame_id": "L25_V044_f0107",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0107",
+    "ocr_source_frame_id": "L25_V044_f0107",
+    "quality_flags": [],
+    "caption": "A woman sits at a desk with a laptop before a white presentation board showing educational lesson content.",
+    "detailed_caption": "A medium shot shows a woman in a black top sitting behind a desk with a light blue laptop on the left. Beside her, a white presentation board displays text outlining legal forms and definitions.",
+    "caption_vi": "Một phụ nữ ngồi bên bàn làm việc với máy tính xách tay trước bảng trình chiếu màu trắng hiển thị nội dung bài học giáo dục.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ mặc áo đen ngồi sau bàn làm việc có máy tính xách tay màu xanh nhạt ở bên trái. Bên cạnh cô, bảng trình chiếu màu trắng hiển thị văn bản phác thảo các hình thức và định nghĩa pháp lý.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 HÌNH THỨC Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm. Hình thức 2: Thi hành pháp luật (nghĩa vụ - phải làm)",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white presentation board displaying lesson content.",
+        "description_vi": "Bảng trình chiếu màu trắng hiển thị nội dung bài học.",
         "attributes": [
-          "yellow",
-          "cartoon"
+          "white",
+          "text"
         ],
         "action": ""
       },
@@ -10064,15 +9496,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A blue laptop on the desk.",
+        "description_vi": "Một máy tính xách tay màu xanh trên bàn.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -10080,30 +9513,21 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman sitting at a desk wearing a black top.",
+        "description_vi": "Một phụ nữ mặc áo đen ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -10118,32 +9542,30 @@
   },
   {
     "frame_id": "L25_V044_f0108",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0108",
+    "ocr_source_frame_id": "L25_V044_f0108",
+    "quality_flags": [],
+    "caption": "A woman sits at a desk with a laptop next to a presentation board displaying text about legal enforcement.",
+    "detailed_caption": "A medium shot captures a woman sitting at a desk with a blue laptop on the left. To her right, a white presentation board shows structured notes detailing legal forms and questions regarding implementation.",
+    "caption_vi": "Một phụ nữ ngồi bên bàn làm việc với máy tính xách tay cạnh bảng trình chiếu hiển thị văn bản về thực hiện pháp luật.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ ngồi cạnh bàn làm việc có máy tính xách tay màu xanh ở phía bên trái. Phía bên phải cô, bảng trình chiếu màu trắng hiển thị các ghi chú có cấu trúc chi tiết về các hình thức pháp luật và câu hỏi liên quan đến việc thi hành.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 HÌNH THỨC Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm. Hình thức 2: Thi hành pháp luật (nghĩa vụ - phải làm) - Ai thi hành? Các cá nhân, tổ chức.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white presentation board with text points on legal concepts.",
+        "description_vi": "Bảng trình chiếu màu trắng có các ý chính bằng văn bản về các khái niệm pháp lý.",
         "attributes": [
-          "yellow",
-          "cartoon"
+          "white",
+          "text"
         ],
         "action": ""
       },
@@ -10151,15 +9573,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A blue laptop on the desk.",
+        "description_vi": "Một máy tính xách tay màu xanh trên bàn.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -10167,30 +9590,21 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman wearing a black top sitting at a desk.",
+        "description_vi": "Một phụ nữ mặc áo đen ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -10205,32 +9619,30 @@
   },
   {
     "frame_id": "L25_V044_f0109",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0109",
+    "ocr_source_frame_id": "L25_V044_f0109",
+    "quality_flags": [],
+    "caption": "A woman sits at a desk with a laptop before a presentation board showing detailed notes on legal forms.",
+    "detailed_caption": "A medium shot shows a woman sitting at a desk with a blue laptop on the left side. Beside her, a white presentation board displays expanded bullet points and text regarding legal enforcement and obligations.",
+    "caption_vi": "Một phụ nữ ngồi bên bàn làm việc với máy tính xách tay trước bảng trình chiếu hiển thị ghi chú chi tiết về các hình thức pháp luật.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một phụ nữ ngồi bên bàn làm việc với máy tính xách tay màu xanh ở phía bên trái. Bên cạnh cô, bảng trình chiếu màu trắng hiển thị các ý chính và văn bản mở rộng liên quan đến việc thi hành pháp luật và nghĩa vụ.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT 2024 HÌNH THỨC Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm. Hình thức 2: Thi hành pháp luật (nghĩa vụ - phải làm) - Ai thi hành? Các cá nhân, tổ chức. - Thi hành như thế nào? Thực hiện đầy đủ những nghĩa vụ, chủ động làm những gì mà pháp luật quy định phải làm.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "graphic_0",
-        "label": "graphic",
+        "object_id": "board_0",
+        "label": "board",
         "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
+          0.21400000000000002,
+          0.07200000000000001,
+          0.9720000000000001,
+          0.72
         ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
+        "description": "A white presentation board displaying detailed lesson text.",
+        "description_vi": "Bảng trình chiếu màu trắng hiển thị văn bản bài học chi tiết.",
         "attributes": [
-          "yellow",
-          "cartoon"
+          "white",
+          "text"
         ],
         "action": ""
       },
@@ -10238,15 +9650,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "A blue laptop on the desk.",
+        "description_vi": "Một máy tính xách tay màu xanh trên bàn.",
         "attributes": [
-          "blue"
+          "blue",
+          "laptop"
         ],
         "action": ""
       },
@@ -10254,30 +9667,21 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.024,
+          0.36300000000000004,
+          0.233,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "A woman wearing a black top sitting at a desk.",
+        "description_vi": "Một phụ nữ mặc áo đen ngồi tại bàn làm việc.",
         "attributes": [
-          "sitting"
+          "woman",
+          "black top"
         ],
-        "action": "teaching"
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -10292,86 +9696,77 @@
   },
   {
     "frame_id": "L25_V044_f0110",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0110",
+    "ocr_source_frame_id": "L25_V044_f0110",
+    "quality_flags": [],
+    "caption": "A teacher stands beside a presentation screen in a classroom, with a laptop on her desk.",
+    "detailed_caption": "A medium shot shows a female teacher in a dark top standing on the left side of a classroom. She is positioned next to a wooden desk holding a light blue laptop, while a large projector screen behind her displays educational text and diagrams. The classroom walls are decorated with alphabet charts and a clock.",
+    "caption_vi": "Một giáo viên nữ đứng cạnh màn hình chiếu trong lớp học, phía trước là chiếc máy tính xách tay trên bàn.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nữ mặc áo tối màu đang đứng ở bên trái phòng học. Cô đứng cạnh chiếc bàn gỗ có đặt một máy tính xách tay màu xanh nhạt, phía sau là màn hình lớn hiển thị nội dung bài học.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm. Hình thức 2: Thi hành pháp luật (nghĩa vụ - phải làm) - Ai thi hành? Các cá nhân, tổ chức. - Thi hành như thế nào? Thực hiện đầy đủ những nghĩa vụ, chủ động làm những gì mà pháp luật quy định phải làm.",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "graphic_0",
-        "label": "graphic",
-        "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
-        ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
-        "attributes": [
-          "yellow",
-          "cartoon"
-        ],
-        "action": ""
-      },
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "light blue laptop on a wooden desk",
+        "description_vi": "máy tính xách tay màu xanh nhạt trên bàn gỗ",
         "attributes": [
-          "blue"
+          "blue",
+          "electronic"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.22200000000000003,
+          0.171,
+          0.97,
+          0.72
+        ],
+        "description": "large projector screen with lesson text and highlights",
+        "description_vi": "màn hình chiếu lớn hiển thị văn bản bài học có đánh dấu",
+        "attributes": [
+          "white",
+          "text display"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.024,
+          0.36100000000000004,
+          0.22599999999999998,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "female teacher wearing a dark long-sleeve top and beaded necklace",
+        "description_vi": "nữ giáo viên mặc áo dài tay tối màu và đeo vòng cổ",
         "attributes": [
-          "sitting"
+          "female",
+          "dark top",
+          "long hair"
         ],
-        "action": "teaching"
+        "action": "standing"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -10379,86 +9774,75 @@
   },
   {
     "frame_id": "L25_V044_f0111",
-    "visual_source_frame_id": "L25_V044_f0096",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher sits at a desk with a laptop next to a whiteboard showing lesson content and an animated character.",
-    "detailed_caption": "A medium shot displays a female teacher seated behind a wooden desk with a blue laptop. Next to her, a presentation board shows educational text about law alongside a graphic of a yellow cartoon character with a question mark. A lower-third banner displays the teacher's name and school information.",
-    "caption_vi": "Một nữ giáo viên ngồi bàn có máy tính xách tay bên cạnh bảng trình bày nội dung bài học và nhân vật hoạt hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh thể hiện một nữ giáo viên ngồi sau bàn gỗ có máy tính xách tay màu xanh. Bên cạnh cô, bảng trình bày hiển thị văn bản giáo dục về pháp luật cùng hình ảnh nhân vật hoạt hình màu vàng có dấu hỏi. Dải băng dưới cùng hiển thị tên giáo viên và thông tin trường.",
-    "ocr_text": "A B C D E GHIJKLMNOP QRSTUVWXYZ 2024 Thực hiện pháp luật là gì? BÀI 2 - THỰC HIỆN PHÁP LUẬT - là quá trình hoạt động có mục đích; - làm cho những quy định của pháp luật đi vào cuộc sống; - trở thành những hành vi hợp pháp của các cá nhân, tổ chức. THANH NIÊN CÔ VÕ HẬU Trường THPT Marie Curie - TP.HCM",
+    "visual_source_frame_id": "L25_V044_f0111",
+    "ocr_source_frame_id": "L25_V044_f0111",
+    "quality_flags": [],
+    "caption": "A teacher stands in a classroom next to a desk with a laptop and a presentation screen.",
+    "detailed_caption": "A medium shot shows a female teacher in a dark top standing on the left side of a classroom. A wooden desk with a light blue laptop sits in front of her. Behind her, a large presentation screen displays educational content about legal concepts.",
+    "caption_vi": "Một nữ giáo viên đứng trong lớp học cạnh bàn có máy tính và màn hình trình chiếu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một nữ giáo viên mặc áo tối màu đứng bên trái lớp học. Phía trước cô là chiếc bàn gỗ đặt máy tính xách tay. Phía sau là màn hình lớn chiếu nội dung bài học.",
+    "ocr_text": "BÀI 2 - THỰC HIỆN PHÁP LUẬT Hình thức 1: Sử dụng pháp luật (quyền - có thể làm hoặc không làm) - Ai sử dụng? Là các cá nhân, tổ chức. - Sử dụng như thế nào? Sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm. Hình thức 2: Thi hành pháp luật (nghĩa vụ - phải làm) - Ai thi hành? Các cá nhân, tổ chức. - Thi hành như thế nào? Thực hiện đầy đủ những nghĩa vụ, chủ động làm những gì mà pháp luật quy định phải làm.",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "graphic_0",
-        "label": "graphic",
-        "bbox": [
-          0.348,
-          0.45,
-          0.512,
-          0.716
-        ],
-        "description": "yellow cartoon character graphic",
-        "description_vi": "hình đồ họa nhân vật hoạt hình màu vàng",
-        "attributes": [
-          "yellow",
-          "cartoon"
-        ],
-        "action": ""
-      },
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.059,
-          0.725,
+          0.057999999999999996,
+          0.728,
           0.209,
           0.8510000000000001
         ],
-        "description": "blue laptop on desk",
-        "description_vi": "máy tính xách tay màu xanh trên bàn",
+        "description": "light blue laptop",
+        "description_vi": "máy tính xách tay màu xanh nhạt",
         "attributes": [
           "blue"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.023,
-          0.35900000000000004,
-          0.223,
+          0.22200000000000003,
+          0.171,
+          0.97,
+          0.72
+        ],
+        "description": "projection screen showing text",
+        "description_vi": "màn hình chiếu hiển thị văn bản",
+        "attributes": [
+          "white",
+          "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.024,
+          0.36100000000000004,
+          0.22599999999999998,
           0.8510000000000001
         ],
-        "description": "female teacher sitting at desk with laptop",
-        "description_vi": "nữ giáo viên ngồi tại bàn có máy tính xách tay",
+        "description": "female teacher in dark top standing near a desk",
+        "description_vi": "nữ giáo viên mặc áo tối màu đứng cạnh bàn",
         "attributes": [
-          "sitting"
+          "female",
+          "dark top"
         ],
-        "action": "teaching"
+        "action": "standing"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "graphic_0"
-      },
-      {
-        "subject_id": "graphic_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -16020,113 +15404,86 @@
     "visual_source_frame_id": "L25_V044_f0177",
     "ocr_source_frame_id": "L25_V044_f0177",
     "quality_flags": [],
-    "caption": "A teacher stands in front of a projection screen while elementary students sit at desks in a bright classroom.",
-    "detailed_caption": "A wide shot shows a teacher in a white shirt and red tie standing at the front of a brightly lit classroom near a projector screen displaying text. Numerous students in white school uniforms are seated at wooden desks facing the board. Colorful wall decorations and framed artwork decorate the white walls.",
-    "caption_vi": "Giáo viên đứng trước màn hình máy chiếu trong khi học sinh tiểu học ngồi bàn học trong lớp sáng sủa.",
-    "detailed_caption_vi": "Cảnh quay rộng cho thấy một giáo viên mặc áo sơ mi trắng thắt cà vạt đỏ đang đứng ở đầu lớp học đầy đủ ánh sáng gần màn hình máy chiếu hiển thị văn bản. Rất nhiều học sinh mặc đồng phục học sinh màu trắng đang ngồi tại các bàn gỗ hướng về phía bảng. Các trang trí tường đầy màu sắc và tranh khung trang trí trên các bức tường trắng.",
-    "ocr_text": "Rounding To The Nearest Ten and H we are a tear we respect each o WE TAKE RISKS we learn from our mis we try our best We creat we dream big WE CELEBRATE EACH OTHER'S SU",
+    "caption": "A male teacher stands before a group of seated students in a brightly lit classroom.",
+    "detailed_caption": "A medium shot captures a male teacher in a white shirt and red tie standing at the front of a classroom by a screen and chalkboards. Several rows of students wearing white shirts and dark skirts or trousers sit at desks, facing the front and studying.",
+    "caption_vi": "Một thầy giáo đứng trước nhóm học sinh đang ngồi học trong lớp học sáng sủa.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một thầy giáo mặc áo sơ mi trắng và cà vạt đỏ đứng ở bục giảng trước lớp học. Nhiều học sinh mặc đồng phục áo trắng ngồi ở các dãy bàn hướng lên phía trên.",
+    "ocr_text": "Rounding To The Nearest Ten and H",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "student_0",
+        "label": "student",
         "bbox": [
-          0.173,
-          0.53,
+          0.16699999999999998,
+          0.529,
           0.417,
           1.0
         ],
-        "description": "student in foreground sitting at desk",
-        "description_vi": "học sinh ở tiền cảnh đang ngồi tại bàn",
+        "description": "student in foreground seated at desk",
+        "description_vi": "học sinh ở tiền cảnh đang ngồi học",
         "attributes": [
-          "student",
-          "sitting"
+          "uniform",
+          "seated"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "person_1",
-        "label": "person",
-        "bbox": [
-          0.522,
-          0.18900000000000003,
-          0.613,
-          0.648
-        ],
-        "description": "teacher in white shirt and red tie standing at front",
-        "description_vi": "giáo viên mặc áo sơ mi trắng thắt cà vạt đỏ đứng ở phía trước",
-        "attributes": [
-          "white shirt",
-          "red tie",
-          "standing"
-        ],
-        "action": "teaching"
-      },
-      {
-        "object_id": "person_2",
-        "label": "person",
+        "object_id": "student_1",
+        "label": "student",
         "bbox": [
           0.627,
-          0.572,
-          0.877,
+          0.577,
+          0.874,
           1.0
         ],
         "description": "student sitting at desk facing forward",
-        "description_vi": "học sinh ngồi tại bàn hướng về phía trước",
+        "description_vi": "học sinh ngồi học hướng về phía trước",
         "attributes": [
-          "student",
-          "sitting"
+          "uniform",
+          "seated"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "projector_screen_0",
-        "label": "projector screen",
+        "object_id": "teacher_0",
+        "label": "teacher",
         "bbox": [
-          0.40800000000000003,
-          0.009000000000000001,
-          0.645,
-          0.39099999999999996
+          0.523,
+          0.195,
+          0.612,
+          0.651
         ],
-        "description": "pull-down projector screen showing educational text",
-        "description_vi": "màn hình máy chiếu kéo xuống hiển thị văn bản giáo dục",
+        "description": "male teacher in white shirt and red tie standing in front of classroom",
+        "description_vi": "thầy giáo mặc áo sơ mi trắng và cà vạt đỏ đứng trước lớp học",
         "attributes": [
-          "white",
-          "screen"
+          "male",
+          "white shirt",
+          "red tie"
         ],
-        "action": ""
+        "action": "standing"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
+        "subject_id": "student_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "student_1"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "student_1",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "student_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "student_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "teacher_0",
         "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "overlapping",
-        "object_id": "projector_screen_0"
-      },
-      {
-        "subject_id": "projector_screen_0",
-        "predicate": "overlapping",
-        "object_id": "person_1"
+        "object_id": "student_0"
       }
     ]
   },
@@ -17002,48 +16359,48 @@
     "visual_source_frame_id": "L25_V044_f0195",
     "ocr_source_frame_id": "L25_V044_f0195",
     "quality_flags": [],
-    "caption": "A man in a white dress shirt and red tie talks with a female student in a school uniform indoors.",
-    "detailed_caption": "This medium close-up shot shows a man wearing glasses, a white dress shirt, and a red tie, engaged in conversation with a female student. The student, wearing a white uniform shirt with a red tie and embroidered emblem, is visible from the side facing the man.",
-    "caption_vi": "Một người đàn ông mặc áo sơ mi trắng thắt cà vạt đỏ đang trò chuyện với một nữ sinh mặc đồng phục trong nhà.",
-    "detailed_caption_vi": "Cảnh cận trung này ghi lại hình ảnh một người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt đỏ đang trò chuyện với một nữ sinh. Nữ sinh mặc áo sơ mi trắng đồng phục có cà vạt đỏ và thêu huy hiệu, đang hướng mặt về phía người đàn ông.",
+    "caption": "A man in a white shirt and red tie talks with a student wearing a white uniform and red tie.",
+    "detailed_caption": "A close-up shot shows a man wearing glasses, a white shirt, and a red tie speaking with a female student who wears a white collared uniform and a red tie. The background features wooden shelves and reddish wall tiles.",
+    "caption_vi": "Một người đàn ông mặc áo sơ mi trắng và cà vạt đỏ trò chuyện với nữ sinh mặc đồng phục.",
+    "detailed_caption_vi": "Cảnh cận ghi lại hình ảnh một người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt đỏ đang nói chuyện với một nữ sinh mặc áo đồng phục trắng và đeo cà vạt đỏ. Phía sau là kệ gỗ và tường ốp gạch đỏ.",
     "ocr_text": "ASIAN INTERNATIONAL SCHOOL",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
           0.044,
-          0.13099999999999998,
-          0.55,
-          0.988
+          0.13,
+          0.5509999999999999,
+          0.971
         ],
-        "description": "man wearing glasses, a white shirt, and a red tie speaking",
-        "description_vi": "nam giới đeo kính mặc áo sơ mi trắng thắt cà vạt đỏ đang nói chuyện",
+        "description": "man wearing glasses, white shirt, and red tie",
+        "description_vi": "nam giới đeo kính, mặc áo sơ mi trắng và cà vạt đỏ",
         "attributes": [
-          "wearing glasses",
+          "glasses",
           "white shirt",
           "red tie"
         ],
-        "action": "speaking"
+        "action": "talking"
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "student_0",
+        "label": "student",
         "bbox": [
-          0.545,
+          0.5389999999999999,
           0.0,
           1.0,
-          0.995
+          1.0
         ],
-        "description": "female student wearing a white uniform shirt and red tie",
-        "description_vi": "nữ sinh mặc áo sơ mi đồng phục trắng thắt cà vạt đỏ",
+        "description": "female student wearing white uniform and red tie",
+        "description_vi": "nữ sinh mặc đồng phục áo trắng và cà vạt đỏ",
         "attributes": [
-          "school uniform",
-          "long hair",
+          "female",
+          "uniform",
           "red tie"
         ],
-        "action": "conversing"
+        "action": "sitting"
       }
     ],
     "spatial_relations": []
@@ -17103,47 +16460,47 @@
     "visual_source_frame_id": "L25_V044_f0197",
     "ocr_source_frame_id": "L25_V044_f0197",
     "quality_flags": [],
-    "caption": "A man in a white shirt and red tie converses with a female student in a school uniform.",
-    "detailed_caption": "This medium close-up shot features a man with short hair and glasses wearing a white shirt and a red tie, speaking animatedly. Beside him, a female student with dark hair wearing a white uniform shirt and red tie listens and interacts.",
-    "caption_vi": "Một người đàn ông mặc áo sơ mi trắng thắt cà vạt đỏ đang trò chuyện với nữ sinh mặc đồng phục.",
-    "detailed_caption_vi": "Cảnh cận trung này cho thấy một người đàn ông tóc ngắn đeo kính mặc áo sơ mi trắng và cà vạt đỏ đang trò chuyện sôi nổi. Bên cạnh ông, một nữ sinh tóc sẫm mặc áo sơ mi đồng phục trắng thắt cà vạt đỏ đang lắng nghe và tương tác.",
+    "caption": "A man in a white shirt and red tie talks with a student in a white uniform.",
+    "detailed_caption": "A close-up shot shows a man wearing glasses, a white shirt, and a red tie conversing with a female student in a white uniform and red tie. They are indoors with wooden shelving in the background.",
+    "caption_vi": "Một người đàn ông mặc áo sơ mi trắng và cà vạt đỏ trò chuyện cùng nữ sinh mặc đồng phục.",
+    "detailed_caption_vi": "Cảnh cận ghi lại một người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt đỏ đang trò chuyện với một nữ sinh mặc áo đồng phục trắng. Bối cảnh trong nhà với tủ gỗ phía sau.",
     "ocr_text": "ASIAN INTERNATIONAL SCHOOL",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.056999999999999995,
-          0.128,
-          0.5650000000000001,
-          0.988
+          0.057999999999999996,
+          0.13,
+          0.5660000000000001,
+          0.971
         ],
-        "description": "man wearing glasses, white shirt, and red tie speaking",
-        "description_vi": "nam giới đeo kính mặc sơ mi trắng và cà vạt đỏ đang nói",
+        "description": "man wearing glasses, white shirt, and red tie",
+        "description_vi": "nam giới đeo kính, mặc áo sơ mi trắng và cà vạt đỏ",
         "attributes": [
-          "wearing glasses",
+          "glasses",
           "white shirt",
           "red tie"
         ],
-        "action": "speaking"
+        "action": "talking"
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "student_0",
+        "label": "student",
         "bbox": [
-          0.5519999999999999,
+          0.553,
           0.0,
           1.0,
-          0.995
+          1.0
         ],
-        "description": "female student in white uniform shirt and red tie",
-        "description_vi": "nữ sinh mặc áo đồng phục trắng thắt cà vạt đỏ",
+        "description": "female student wearing white uniform and red tie",
+        "description_vi": "nữ sinh mặc đồng phục áo trắng và cà vạt đỏ",
         "attributes": [
-          "school uniform",
-          "long dark hair"
+          "female",
+          "uniform"
         ],
-        "action": "listening"
+        "action": "sitting"
       }
     ],
     "spatial_relations": []
@@ -17434,32 +16791,98 @@
     "visual_source_frame_id": "L25_V044_f0204",
     "ocr_source_frame_id": "L25_V044_f0204",
     "quality_flags": [],
-    "caption": "A staff member in a maroon uniform stands near seated students in a brightly lit cafeteria.",
-    "detailed_caption": "This overexposed medium shot captures a cafeteria with students sitting at wooden tables and a staff member in a maroon dress standing nearby. Large windows in the background reveal green foliage outside.",
-    "caption_vi": "Nhân viên mặc đồng phục màu đỏ đứng cạnh các học sinh đang ngồi trong phòng ăn ngập ánh sáng.",
-    "detailed_caption_vi": "Bức ảnh chụp trung cảnh sáng chói bên trong nhà ăn, nơi học sinh ngồi quanh các bàn ăn bằng gỗ và một nhân viên mặc đồ đỏ đứng bên cạnh.",
+    "caption": "A staff member in a red uniform serves food to students seated at tables in a bright dining area.",
+    "detailed_caption": "A medium shot shows a staff member wearing a red dress, hat, and gloves walking past tables to serve students. Students in school uniforms are seated at wooden tables, eating and interacting in a bright dining hall with large windows.",
+    "caption_vi": "Nhân viên mặc đồng phục màu đỏ phục vụ đồ ăn cho học sinh đang ngồi ở bàn ăn trong phòng ăn sáng sủa.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh nhân viên mặc váy đỏ, đội mũ và đeo găng tay đang di chuyển phục vụ học sinh. Các học sinh mặc đồng phục ngồi quanh bàn gỗ ăn uống trong không gian sáng có cửa sổ lớn.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "staff_member_0",
+        "label": "staff member",
         "bbox": [
-          0.12,
-          0.09400000000000001,
-          0.27599999999999997,
-          0.992
+          0.122,
+          0.091,
+          0.26,
+          1.0
         ],
-        "description": "staff member in maroon uniform",
-        "description_vi": "nhân viên mặc đồng phục đỏ",
+        "description": "staff member in red dress, hat, and gloves",
+        "description_vi": "nhân viên mặc váy đỏ, đội mũ và đeo găng tay",
         "attributes": [
-          "maroon uniform",
-          "red hat"
+          "red dress",
+          "uniform",
+          "gloves"
         ],
-        "action": "standing"
+        "action": "walking"
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.475,
+          0.33299999999999996,
+          0.696,
+          1.0
+        ],
+        "description": "student in white and red uniform sitting at table",
+        "description_vi": "học sinh mặc đồng phục trắng đỏ ngồi tại bàn",
+        "attributes": [
+          "uniform",
+          "seated"
+        ],
+        "action": "eating"
+      },
+      {
+        "object_id": "student_1",
+        "label": "student",
+        "bbox": [
+          0.746,
+          0.268,
+          1.0,
+          1.0
+        ],
+        "description": "student sitting at table in foreground",
+        "description_vi": "học sinh ngồi ở bàn ăn phía trước",
+        "attributes": [
+          "uniform",
+          "seated"
+        ],
+        "action": "eating"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "staff_member_0",
+        "predicate": "left_of",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "right_of",
+        "object_id": "staff_member_0"
+      },
+      {
+        "subject_id": "staff_member_0",
+        "predicate": "left_of",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "right_of",
+        "object_id": "staff_member_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "left_of",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "right_of",
+        "object_id": "student_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V044_f0205",
@@ -18349,28 +17772,29 @@
     "visual_source_frame_id": "L25_V044_f0215",
     "ocr_source_frame_id": "L25_V044_f0215",
     "quality_flags": [],
-    "caption": "A young girl in a school uniform stands in a dimly lit setting with a blurred foreground element.",
-    "detailed_caption": "This medium shot features a young girl with long dark hair wearing a white uniform shirt and a maroon tie. A large blurred motion blur obscures part of the left side of the frame, creating a dark, atmospheric effect.",
-    "caption_vi": "Một bé gái mặc đồng phục đứng trong không gian tối với hiệu ứng mờ ở tiền cảnh.",
-    "detailed_caption_vi": "Khung cảnh trung cảnh ghi lại một bé gái tóc dài mặc áo sơ mi trắng thắt cà vạt đỏ. Một vệt mờ lớn che khuất một phần bên trái khung hình tạo hiệu ứng chuyển động.",
+    "caption": "A female student in a white collared shirt and red tie stands against a dark background.",
+    "detailed_caption": "A medium shot shows a young female student with long dark hair, wearing a white collared shirt and a red tie, standing on the right side. The background is dark and partially blurred with out-of-focus lighting elements.",
+    "caption_vi": "Một nữ sinh mặc áo sơ mi trắng và cà vạt đỏ đứng trước nền tối.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một nữ sinh tóc dài mặc áo sơ mi trắng và cà vạt đỏ đang đứng ở phía bên phải. Bối cảnh tối và có ánh sáng mờ ảo ở phía sau.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "student_0",
+        "label": "student",
         "bbox": [
-          0.791,
-          0.044,
+          0.786,
+          0.045,
           1.0,
-          0.663
+          0.712
         ],
-        "description": "young girl with long dark hair wearing white shirt and maroon tie",
-        "description_vi": "bé gái tóc dài mặc áo trắng thắt cà vạt đỏ",
+        "description": "female student with long dark hair wearing white shirt and red tie",
+        "description_vi": "nữ sinh tóc dài sẫm màu mặc áo sơ mi trắng và cà vạt đỏ",
         "attributes": [
-          "long dark hair",
+          "female",
           "white shirt",
-          "maroon tie"
+          "red tie",
+          "long hair"
         ],
         "action": "standing"
       }
@@ -24651,10 +24075,10 @@
     "visual_source_frame_id": "L25_V044_f0303",
     "ocr_source_frame_id": "L25_V044_f0303",
     "quality_flags": [],
-    "caption": "A man walking along a library aisle flanked by bookshelves.",
-    "detailed_caption": "A medium shot captures a man walking forward in a library aisle. Tall bookshelves filled with books line the left and right sides. The background shows a brightly lit path ahead.",
-    "caption_vi": "Một người đàn ông đang đi dọc theo lối đi thư viện được bao quanh bởi các kệ sách.",
-    "detailed_caption_vi": "Cảnh trung cảnh ghi lại khoảnh khắc một người đàn ông đang tiến về phía trước trong lối đi của thư viện. Các kệ sách cao nằm ở hai bên trái và phải. Phía trước là lối đi được chiếu sáng rực rỡ.",
+    "caption": "A person stands in the center of a brightly lit library aisle lined with bookshelves.",
+    "detailed_caption": "A wide, high-key shot shows a person standing in the middle of a narrow library corridor. Tall bookshelves filled with books line both sides of the bright, whitewashed aisle.",
+    "caption_vi": "Một người đứng ở giữa lối đi trong thư viện sáng sủa có các kệ sách hai bên.",
+    "detailed_caption_vi": "Cảnh toàn với ánh sáng chói hiển thị một người đứng giữa hành lang thư viện hẹp. Các kệ sách cao chứa đầy sách xếp dọc hai bên lối đi sáng rực.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -24663,17 +24087,16 @@
         "label": "person",
         "bbox": [
           0.42300000000000004,
-          0.222,
-          0.5589999999999999,
-          1.0
+          0.218,
+          0.546,
+          0.997
         ],
-        "description": "man walking in a library aisle",
-        "description_vi": "người đàn ông đang đi bộ trong thư viện",
+        "description": "person standing in the center of a library aisle",
+        "description_vi": "người đứng ở giữa lối đi thư viện",
         "attributes": [
-          "man",
-          "walking"
+          "standing"
         ],
-        "action": "walking"
+        "action": "standing"
       }
     ],
     "spatial_relations": []
@@ -25006,59 +24429,86 @@
     "visual_source_frame_id": "L25_V044_f0312",
     "ocr_source_frame_id": "L25_V044_f0312",
     "quality_flags": [],
-    "caption": "Students in a classroom sitting at desks with raised hands while a teacher stands by a whiteboard.",
-    "detailed_caption": "A wide classroom shot shows students seated at blue chairs and wooden desks, with several hands raised. A teacher in a dark suit stands near a whiteboard filled with math diagrams and text at the front of the room. The room is brightly lit with white walls.",
-    "caption_vi": "Học sinh trong lớp học ngồi tại bàn giơ tay phát biểu trong khi giáo viên đứng cạnh bảng trắng.",
-    "detailed_caption_vi": "Cảnh toàn cảnh phòng học cho thấy học sinh ngồi trên ghế xanh tại bàn gỗ, nhiều em đang giơ tay. Một giáo viên mặc vest sẫm màu đứng cạnh bảng trắng có các hình vẽ toán học ở phía trước lớp. Phòng học có tường trắng và được chiếu sáng đầy đủ.",
-    "ocr_text": "SIU THE SAIGON INTERNATIONAL UNIVERSITY",
+    "caption": "Students raise their hands while a teacher stands before a whiteboard with mathematical formulas in a classroom.",
+    "detailed_caption": "A wide shot shows a male teacher in a dark suit standing at the front of a classroom next to a whiteboard covered in mathematical formulas and diagrams. Several students seated at desks raise their hands in the foreground and midground.",
+    "caption_vi": "Học sinh giơ tay phát biểu trong khi thầy giáo đứng trước bảng có các công thức toán học.",
+    "detailed_caption_vi": "Cảnh toàn cho thấy thầy giáo mặc vest tối màu đứng ở bục giảng trước tấm bảng trắng viết đầy công thức toán hình học. Nhiều học sinh ngồi ở các bàn học đang giơ tay.",
+    "ocr_text": "SIU THE SAIGON INTERNATIONAL UNIVERSITY (Ra) = a 16m(7-a) - coox www.siu.edu.vn",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "student_0",
+        "label": "student",
         "bbox": [
-          0.48600000000000004,
-          0.237,
-          0.571,
-          0.587
+          0.354,
+          0.312,
+          0.484,
+          0.816
         ],
-        "description": "teacher in a dark suit standing near a whiteboard",
-        "description_vi": "giáo viên mặc vest sẫm màu đứng gần bảng trắng",
+        "description": "student sitting at desk with hand raised",
+        "description_vi": "học sinh ngồi tại bàn với tay giơ lên",
         "attributes": [
-          "teacher",
-          "suit",
-          "standing"
+          "uniform",
+          "seated"
         ],
-        "action": "teaching"
+        "action": "raising hand"
       },
       {
-        "object_id": "whiteboard_0",
-        "label": "whiteboard",
+        "object_id": "student_1",
+        "label": "student",
         "bbox": [
-          0.312,
-          0.178,
-          0.751,
-          0.475
+          0.646,
+          0.306,
+          0.8390000000000001,
+          0.885
         ],
-        "description": "whiteboard with handwritten math formulas and diagrams",
-        "description_vi": "bảng trắng viết công thức toán học và hình vẽ",
+        "description": "student seated with hand raised",
+        "description_vi": "học sinh ngồi giơ tay",
         "attributes": [
-          "white",
-          "with text"
+          "uniform",
+          "seated"
         ],
-        "action": ""
+        "action": "raising hand"
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.485,
+          0.237,
+          0.571,
+          0.588
+        ],
+        "description": "male teacher in dark suit standing in front of whiteboard",
+        "description_vi": "thầy giáo mặc vest tối màu đứng trước bảng trắng",
+        "attributes": [
+          "male",
+          "suit",
+          "red tie"
+        ],
+        "action": "standing"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "whiteboard_0"
+        "subject_id": "student_0",
+        "predicate": "left_of",
+        "object_id": "student_1"
       },
       {
-        "subject_id": "whiteboard_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
+        "subject_id": "student_1",
+        "predicate": "right_of",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "teacher_0",
+        "predicate": "left_of",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "right_of",
+        "object_id": "teacher_0"
       }
     ]
   },
@@ -26025,172 +25475,88 @@
     "visual_source_frame_id": "L25_V044_f0329",
     "ocr_source_frame_id": "L25_V044_f0329",
     "quality_flags": [],
-    "caption": "Three young men sitting on stools playing acoustic guitars indoors.",
-    "detailed_caption": "A medium shot shows three young men sitting on stools in front of vertical blinds, playing acoustic guitars. Each is wearing a white uniform shirt and dark trousers. The scene has a bright lens flare overlay.",
-    "caption_vi": "Ba thanh niên ngồi trên ghế đẩu chơi đàn ghi-ta acoustic trong nhà.",
-    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh ba nam thanh niên ngồi trên ghế đẩu trước rèm cửa dọc, đang chơi đàn guitar acoustic. Mỗi người mặc áo sơ mi đồng phục trắng và quần tối màu. Khung cảnh có hiệu ứng lóa sáng.",
+    "caption": "Three students in white shirts and dark pants play acoustic guitars indoors.",
+    "detailed_caption": "A medium shot captures three male students wearing white collared shirts and dark trousers, sitting on stools and playing acoustic guitars. The setting features a bright vertical striped background with warm lighting.",
+    "caption_vi": "Ba nam sinh mặc áo sơ mi trắng và quần tối màu đang chơi đàn guitar trong nhà.",
+    "detailed_caption_vi": "Cảnh trung ghi lại ba nam sinh mặc áo sơ mi trắng và quần dài tối màu đang ngồi ghế đẩu chơi đàn guitar acoustic. Bối cảnh có nền sọc dọc sáng với ánh đèn vàng ấm áp.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "guitar_0",
-        "label": "guitar",
+        "object_id": "student_0",
+        "label": "student",
         "bbox": [
           0.0,
-          0.43400000000000005,
-          0.392,
-          0.759
-        ],
-        "description": "acoustic guitar being played by the person on the left",
-        "description_vi": "đàn guitar acoustic đang được chơi bởi người ở bên trái",
-        "attributes": [
-          "light wood",
-          "acoustic"
-        ],
-        "action": "being played"
-      },
-      {
-        "object_id": "guitar_1",
-        "label": "guitar",
-        "bbox": [
-          0.29500000000000004,
-          0.41700000000000004,
-          0.7230000000000001,
-          0.753
-        ],
-        "description": "acoustic guitar being played by the center person",
-        "description_vi": "đàn guitar acoustic đang được chơi bởi người ở giữa",
-        "attributes": [
-          "light wood",
-          "acoustic"
-        ],
-        "action": "being played"
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.0,
-          0.113,
-          0.32599999999999996,
+          0.111,
+          0.322,
           1.0
         ],
-        "description": "wearing glasses and a white shirt playing an acoustic guitar",
-        "description_vi": "nam thanh niên đeo kính mặc áo trắng đang chơi đàn guitar acoustic",
+        "description": "male student in white shirt playing acoustic guitar on the left",
+        "description_vi": "nam sinh mặc áo sơ mi trắng chơi đàn guitar bên trái",
         "attributes": [
-          "glasses",
+          "male",
           "white shirt",
-          "dark trousers"
+          "glasses"
         ],
         "action": "playing guitar"
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "student_1",
+        "label": "student",
         "bbox": [
           0.34700000000000003,
-          0.104,
-          0.642,
+          0.103,
+          0.6990000000000001,
           1.0
         ],
-        "description": "wearing glasses and a white shirt playing an acoustic guitar on a stool",
-        "description_vi": "nam thanh niên đeo kính mặc áo trắng đang chơi đàn guitar trên ghế",
+        "description": "male student in white shirt playing acoustic guitar in the center",
+        "description_vi": "nam sinh mặc áo sơ mi trắng chơi đàn guitar ở giữa",
         "attributes": [
-          "glasses",
+          "male",
           "white shirt",
-          "stool"
+          "glasses"
         ],
         "action": "playing guitar"
       },
       {
-        "object_id": "person_2",
-        "label": "person",
+        "object_id": "student_2",
+        "label": "student",
         "bbox": [
-          0.661,
-          0.079,
-          0.999,
+          0.688,
+          0.078,
+          1.0,
           1.0
         ],
-        "description": "wearing glasses and a white shirt playing an acoustic guitar",
-        "description_vi": "nam thanh niên đeo kính mặc áo trắng đang chơi đàn guitar acoustic",
+        "description": "male student in white shirt playing acoustic guitar on the right",
+        "description_vi": "nam sinh mặc áo sơ mi trắng chơi đàn guitar bên phải",
         "attributes": [
-          "glasses",
+          "male",
           "white shirt",
-          "dark trousers"
+          "glasses"
         ],
         "action": "playing guitar"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "guitar_0",
-        "predicate": "overlapping",
-        "object_id": "guitar_1"
-      },
-      {
-        "subject_id": "guitar_1",
-        "predicate": "overlapping",
-        "object_id": "guitar_0"
-      },
-      {
-        "subject_id": "guitar_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "guitar_0"
-      },
-      {
-        "subject_id": "guitar_0",
+        "subject_id": "student_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "student_1"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "student_1",
         "predicate": "right_of",
-        "object_id": "guitar_0"
+        "object_id": "student_0"
       },
       {
-        "subject_id": "guitar_1",
-        "predicate": "overlapping",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "overlapping",
-        "object_id": "guitar_1"
-      },
-      {
-        "subject_id": "person_0",
+        "subject_id": "student_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "student_2"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "student_2",
         "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "right_of",
-        "object_id": "person_1"
+        "object_id": "student_0"
       }
     ]
   },
@@ -26777,10 +26143,10 @@
     "visual_source_frame_id": "L25_V044_f0338",
     "ocr_source_frame_id": "L25_V044_f0338",
     "quality_flags": [],
-    "caption": "A bright hotel room interior with a large bed in the foreground and people standing.",
-    "detailed_caption": "A wide shot shows a hotel room interior heavily affected by bright overexposure on the right. A large white bed is in the foreground, and figures of people are visible standing near the center background.",
-    "caption_vi": "Nội thất phòng khách sạn sáng sủa với chiếc giường lớn ở tiền cảnh và những người đang đứng.",
-    "detailed_caption_vi": "Góc nhìn rộng của nội thất phòng khách sạn bị ảnh hưởng nhiều bởi hiện tượng phơi sáng quá mức ở phía bên phải. Một chiếc giường trắng lớn ở tiền cảnh, và có thể thấy bóng dáng mọi người đứng ở khu vực trung tâm phía sau.",
+    "caption": "Hotel staff members make a bed in a brightly lit hotel room.",
+    "detailed_caption": "A wide shot shows several hotel staff members in uniforms working around a neatly made bed with white linens in a bright room. A large television is mounted on the left wall, and a bedside table with a lamp sits on the right.",
+    "caption_vi": "Nhân viên khách sạn đang dọn giường trong một căn phòng sáng sủa.",
+    "detailed_caption_vi": "Cảnh toàn ghi lại các nhân viên khách sạn mặc đồng phục đang làm việc quanh chiếc giường ngủ trải ga trắng trong căn phòng sáng rực. Phía bên trái có tivi treo tường và bên phải là tủ đầu giường.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -26788,55 +26154,147 @@
         "object_id": "bed_0",
         "label": "bed",
         "bbox": [
-          0.277,
-          0.5,
+          0.27799999999999997,
+          0.516,
           0.9029999999999999,
-          0.995
+          0.997
         ],
-        "description": "large white bed in a brightly lit hotel room",
-        "description_vi": "giường trắng lớn trong phòng khách sạn sáng sủa",
+        "description": "large bed with white linens in a hotel room",
+        "description_vi": "giường lớn trải ga trắng trong phòng khách sạn",
         "attributes": [
-          "white sheets",
-          "large"
+          "white",
+          "furniture"
         ],
         "action": ""
+      },
+      {
+        "object_id": "staff_member_0",
+        "label": "staff member",
+        "bbox": [
+          0.315,
+          0.33499999999999996,
+          0.383,
+          0.753
+        ],
+        "description": "staff member standing near the bed",
+        "description_vi": "nhân viên đứng cạnh giường",
+        "attributes": [
+          "uniform",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "staff_member_1",
+        "label": "staff member",
+        "bbox": [
+          0.563,
+          0.39899999999999997,
+          0.622,
+          0.583
+        ],
+        "description": "staff member in dark uniform bending over the bed",
+        "description_vi": "nhân viên mặc đồng phục tối màu đang cúi bên giường",
+        "attributes": [
+          "uniform",
+          "dark attire"
+        ],
+        "action": "working"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "bed_0",
+        "predicate": "overlapping",
+        "object_id": "staff_member_0"
+      },
+      {
+        "subject_id": "staff_member_0",
+        "predicate": "overlapping",
+        "object_id": "bed_0"
+      },
+      {
+        "subject_id": "bed_0",
+        "predicate": "overlapping",
+        "object_id": "staff_member_1"
+      },
+      {
+        "subject_id": "staff_member_1",
+        "predicate": "overlapping",
+        "object_id": "bed_0"
+      },
+      {
+        "subject_id": "staff_member_0",
+        "predicate": "left_of",
+        "object_id": "staff_member_1"
+      },
+      {
+        "subject_id": "staff_member_1",
+        "predicate": "right_of",
+        "object_id": "staff_member_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V044_f0339",
-    "visual_source_frame_id": "L25_V044_f0338",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A bright hotel room interior with a large bed in the foreground and people standing.",
-    "detailed_caption": "A wide shot shows a hotel room interior heavily affected by bright overexposure on the right. A large white bed is in the foreground, and figures of people are visible standing near the center background.",
-    "caption_vi": "Nội thất phòng khách sạn sáng sủa với chiếc giường lớn ở tiền cảnh và những người đang đứng.",
-    "detailed_caption_vi": "Góc nhìn rộng của nội thất phòng khách sạn bị ảnh hưởng nhiều bởi hiện tượng phơi sáng quá mức ở phía bên phải. Một chiếc giường trắng lớn ở tiền cảnh, và có thể thấy bóng dáng mọi người đứng ở khu vực trung tâm phía sau.",
+    "visual_source_frame_id": "L25_V044_f0339",
+    "ocr_source_frame_id": "L25_V044_f0339",
+    "quality_flags": [],
+    "caption": "A bartender in a dark shirt shakes a cocktail shaker behind a bar counter.",
+    "detailed_caption": "A medium shot shows a male bartender wearing glasses and a dark button-down shirt shaking a metal cocktail shaker behind a well-stocked bar. Shelves lined with liquor bottles and glassware are mounted on the wall behind him.",
+    "caption_vi": "Một nhân viên pha chế mặc áo tối màu đang lắc bình shaker phía sau quầy bar.",
+    "detailed_caption_vi": "Cảnh trung ghi lại một nam nhân viên pha chế đeo kính, mặc áo sơ mi tối màu đang cầm bình shaker lắc đồ uống phía sau quầy bar. Phía sau là các kệ trưng bày nhiều chai rượu và ly.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "bed_0",
-        "label": "bed",
+        "object_id": "bartender_0",
+        "label": "bartender",
         "bbox": [
-          0.277,
-          0.5,
-          0.9029999999999999,
-          0.995
+          0.156,
+          0.135,
+          0.706,
+          0.9189999999999999
         ],
-        "description": "large white bed in a brightly lit hotel room",
-        "description_vi": "giường trắng lớn trong phòng khách sạn sáng sủa",
+        "description": "male bartender wearing glasses and dark shirt shaking cocktail shaker",
+        "description_vi": "nam nhân viên pha chế đeo kính và mặc áo tối màu đang lắc bình shaker",
         "attributes": [
-          "white sheets",
-          "large"
+          "male",
+          "glasses",
+          "dark shirt"
+        ],
+        "action": "shaking"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.0,
+          0.16699999999999998,
+          1.0,
+          0.661
+        ],
+        "description": "wooden shelf lined with various liquor bottles",
+        "description_vi": "kệ gỗ trưng bày nhiều chai rượu khác nhau",
+        "attributes": [
+          "wooden",
+          "display"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "bartender_0",
+        "predicate": "overlapping",
+        "object_id": "shelf_0"
+      },
+      {
+        "subject_id": "shelf_0",
+        "predicate": "overlapping",
+        "object_id": "bartender_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V044_f0340",
@@ -26995,35 +26453,62 @@
     "frame_id": "L25_V044_f0342",
     "visual_source_frame_id": "L25_V044_f0342",
     "ocr_source_frame_id": "L25_V044_f0342",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A bartender pouring a drink from a shaker into a glass behind a bar.",
-    "detailed_caption": "A medium shot shows a wearing glasses and a black shirt behind a bar filled with liquor bottles. He is pouring liquid from a cocktail shaker into a martini glass on the bar counter. A bright light flare appears on the top right.",
-    "caption_vi": "Nam pha chế đang rót đồ uống từ bình lắc vào ly trên quầy bar.",
-    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh nam thanh niên đeo kính và mặc áo sơ mi đen đứng sau quầy bar có nhiều chai rượu. Anh đang rót chất lỏng từ bình lắc cocktail vào một chiếc ly martini trên mặt quầy. Có hiệu ứng lóa sáng ở góc trên bên phải.",
+    "quality_flags": [],
+    "caption": "A bartender in a dark shirt pours liquid from a shaker into a glass at a bar.",
+    "detailed_caption": "A medium shot shows a male bartender wearing glasses and a dark shirt pouring a drink from a metal shaker into a glass on the bar counter. Shelves filled with liquor bottles are visible in the background.",
+    "caption_vi": "Nhân viên pha chế mặc áo tối màu đang rót đồ uống từ bình shaker vào ly tại quầy bar.",
+    "detailed_caption_vi": "Cảnh trung ghi lại nam nhân viên pha chế đeo kính, mặc áo tối màu đang rót chất lỏng từ bình lắc kim loại vào ly trên quầy bar. Phía sau là các kệ chứa đầy chai rượu.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "bartender_0",
+        "label": "bartender",
         "bbox": [
-          0.223,
-          0.128,
+          0.219,
+          0.13,
           0.75,
-          0.931
+          0.9329999999999999
         ],
-        "description": "wearing glasses and a black shirt pouring a drink",
-        "description_vi": "nam thanh niên đeo kính mặc áo sơ mi đen đang rót đồ uống",
+        "description": "male bartender wearing glasses and dark shirt pouring a drink",
+        "description_vi": "nam nhân viên pha chế đeo kính và mặc áo tối màu đang rót đồ uống",
         "attributes": [
+          "male",
           "glasses",
-          "black shirt"
+          "dark shirt"
         ],
-        "action": "pouring drink"
+        "action": "pouring"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.0,
+          0.179,
+          1.0,
+          0.6659999999999999
+        ],
+        "description": "shelf displaying liquor bottles behind the bar",
+        "description_vi": "kệ trưng bày chai rượu phía sau quầy bar",
+        "attributes": [
+          "wooden",
+          "display"
+        ],
+        "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "bartender_0",
+        "predicate": "overlapping",
+        "object_id": "shelf_0"
+      },
+      {
+        "subject_id": "shelf_0",
+        "predicate": "overlapping",
+        "object_id": "bartender_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V044_f0343",

@@ -4,10 +4,10 @@
     "visual_source_frame_id": "L25_V070_f0001",
     "ocr_source_frame_id": "L25_V070_f0001",
     "quality_flags": [],
-    "caption": "The blue logo appears centrally on a plain light grey background.",
-    "detailed_caption": "A wide shot showing a cyan and blue typographic logo centered horizontally on a gradient grey studio backdrop. The word is rendered in a bold, blocky sans-serif font with a subtle dark shadow underneath. The lighting is bright and even across the minimalist scene.",
-    "caption_vi": "Logo màu xanh dương hiển thị ở chính giữa trên nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay rộng cho thấy một logo chữ màu xanh lơ và xanh dương được đặt ở trung tâm trên phông nền xám tối giản. Chữ được thể hiện bằng phông chữ sans-serif đậm với một bóng đổ nhẹ bên dưới. Ánh sáng sáng và đều trên toàn bộ khung cảnh.",
+    "caption": "A light gray background displays a turquoise logo in the center.",
+    "detailed_caption": "A light gray studio background shows a turquoise logo centered horizontally. The logo features stylized lettering with a subtle shadow underneath. The overall composition is minimalist and clean.",
+    "caption_vi": "Phông nền màu xám nhạt hiển thị logo màu xanh ngọc ở giữa.",
+    "detailed_caption_vi": "Phông nền phòng thu màu xám nhạt thể hiện một logo màu xanh ngọc được căn giữa theo chiều ngang. Logo có các chữ cái cách điệu với bóng mờ tinh tế bên dưới.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
     "detections": [],
@@ -15,15 +15,13 @@
   },
   {
     "frame_id": "L25_V070_f0002",
-    "visual_source_frame_id": "L25_V070_f0001",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "The blue logo appears centrally on a plain light grey background.",
-    "detailed_caption": "A wide shot showing a cyan and blue typographic logo centered horizontally on a gradient grey studio backdrop. The word is rendered in a bold, blocky sans-serif font with a subtle dark shadow underneath. The lighting is bright and even across the minimalist scene.",
-    "caption_vi": "Logo màu xanh dương hiển thị ở chính giữa trên nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay rộng cho thấy một logo chữ màu xanh lơ và xanh dương được đặt ở trung tâm trên phông nền xám tối giản. Chữ được thể hiện bằng phông chữ sans-serif đậm với một bóng đổ nhẹ bên dưới. Ánh sáng sáng và đều trên toàn bộ khung cảnh.",
+    "visual_source_frame_id": "L25_V070_f0002",
+    "ocr_source_frame_id": "L25_V070_f0002",
+    "quality_flags": [],
+    "caption": "A dark gray background displays a dark cyan logo in the center.",
+    "detailed_caption": "A dark gray studio background shows a dark cyan logo centered horizontally. The logo consists of stylized lettering with a soft drop shadow beneath it against a monochromatic gradient setting.",
+    "caption_vi": "Phông nền màu xám đậm hiển thị logo màu xanh lam đậm ở giữa.",
+    "detailed_caption_vi": "Phông nền phòng thu màu xám đậm thể hiện một logo màu xanh lam đậm được căn giữa. Logo bao gồm các chữ cái cách điệu với hiệu ứng bóng đổ nhẹ bên dưới trên khung cảnh chuyển màu đơn sắc.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
     "detections": [],
@@ -34,107 +32,141 @@
     "visual_source_frame_id": "L25_V070_f0003",
     "ocr_source_frame_id": "L25_V070_f0003",
     "quality_flags": [],
-    "caption": "Yellow and dark blue text is displayed over a blue gradient background.",
-    "detailed_caption": "A medium shot showing educational title text in yellow and dark blue against a smooth gradient blue backdrop. The upper line reads the subject review heading in yellow, followed by the topic number. The central lines display the main mathematical topic in dark blue capital letters, with a teacher's name at the bottom in yellow.",
-    "caption_vi": "Văn bản màu vàng và xanh đậm hiển thị trên nền gradient màu xanh dương.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị văn bản tiêu đề giáo dục bằng màu vàng và xanh đậm trên nền phông màu xanh dương chuyển sắc. Dòng trên cùng hiển thị tiêu đề ôn tập môn học bằng màu vàng, tiếp theo là số chuyên đề. Các dòng ở giữa hiển thị chủ đề toán học chính bằng chữ in hoa màu xanh đậm, với tên giáo viên ở phía dưới bằng màu vàng.",
+    "caption": "A blue title card displays yellow and dark blue text outlining a math review session.",
+    "detailed_caption": "A blue gradient background features three lines of centered text. The top line is yellow, followed by dark blue text in the middle, and a smaller yellow line at the bottom indicating the instructor's name.",
+    "caption_vi": "Một thẻ tiêu đề màu xanh lam hiển thị văn bản màu vàng và xanh đậm nêu tổng quan về buổi ôn tập toán.",
+    "detailed_caption_vi": "Phông nền chuyển màu xanh lam có ba dòng văn bản được căn giữa. Dòng trên cùng có màu vàng, tiếp theo là văn bản màu xanh đậm ở giữa và một dòng màu vàng nhỏ hơn ở dưới cùng cho biết tên giảng viên.",
     "ocr_text": "ÔN TẬP MÔN TOÁN CHUYÊN ĐỀ 3 PHƯƠNG TRÌNH, BẤT PHƯƠNG TRÌNH MŨ VÀ LOGARIT Giáo viên hướng dẫn: Thầy LÊ MINH HUY",
     "news_ticker_text": "",
-    "detections": [],
+    "detections": [
+      {
+        "object_id": "text_0",
+        "label": "text",
+        "bbox": [
+          0.057999999999999996,
+          0.11599999999999999,
+          0.942,
+          0.892
+        ],
+        "description": "yellow and dark blue title text on a blue background",
+        "description_vi": "văn bản tiêu đề màu vàng và xanh đậm trên nền xanh",
+        "attributes": [
+          "yellow",
+          "blue",
+          "centered"
+        ],
+        "action": ""
+      }
+    ],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V070_f0004",
-    "visual_source_frame_id": "L25_V070_f0003",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Yellow and dark blue text is displayed over a blue gradient background.",
-    "detailed_caption": "A medium shot showing educational title text in yellow and dark blue against a smooth gradient blue backdrop. The upper line reads the subject review heading in yellow, followed by the topic number. The central lines display the main mathematical topic in dark blue capital letters, with a teacher's name at the bottom in yellow.",
-    "caption_vi": "Văn bản màu vàng và xanh đậm hiển thị trên nền gradient màu xanh dương.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị văn bản tiêu đề giáo dục bằng màu vàng và xanh đậm trên nền phông màu xanh dương chuyển sắc. Dòng trên cùng hiển thị tiêu đề ôn tập môn học bằng màu vàng, tiếp theo là số chuyên đề. Các dòng ở giữa hiển thị chủ đề toán học chính bằng chữ in hoa màu xanh đậm, với tên giáo viên ở phía dưới bằng màu vàng.",
+    "visual_source_frame_id": "L25_V070_f0004",
+    "ocr_source_frame_id": "L25_V070_f0004",
+    "quality_flags": [],
+    "caption": "A blue title card displays yellow and dark blue text detailing an educational math topic.",
+    "detailed_caption": "A blue gradient background presents centered title text. The uppermost text is yellow, the central block is dark blue in a larger font, and the bottom line displays yellow instructional text.",
+    "caption_vi": "Thẻ tiêu đề màu xanh lam hiển thị văn bản màu vàng và xanh đậm chi tiết về chủ đề toán học giáo dục.",
+    "detailed_caption_vi": "Phông nền chuyển màu xanh lam hiển thị văn bản tiêu đề được căn giữa. Văn bản trên cùng có màu vàng, khối trung tâm có màu xanh đậm với phông chữ lớn hơn và dòng dưới cùng hiển thị văn bản hướng dẫn màu vàng.",
     "ocr_text": "ÔN TẬP MÔN TOÁN CHUYÊN ĐỀ 3 PHƯƠNG TRÌNH, BẤT PHƯƠNG TRÌNH MŨ VÀ LOGARIT Giáo viên hướng dẫn: Thầy LÊ MINH HUY",
     "news_ticker_text": "",
-    "detections": [],
+    "detections": [
+      {
+        "object_id": "text_0",
+        "label": "text",
+        "bbox": [
+          0.057999999999999996,
+          0.11599999999999999,
+          0.942,
+          0.892
+        ],
+        "description": "yellow and dark blue title text on blue background",
+        "description_vi": "văn bản tiêu đề màu vàng và xanh đậm trên nền xanh lam",
+        "attributes": [
+          "yellow",
+          "blue",
+          "centered"
+        ],
+        "action": ""
+      }
+    ],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V070_f0005",
     "visual_source_frame_id": "L25_V070_f0005",
     "ocr_source_frame_id": "L25_V070_f0005",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A man wearing glasses and a suit sits at a desk with a laptop next to a digital slide.",
-    "detailed_caption": "A medium shot shows a with short dark hair and glasses wearing a dark suit jacket and white collared shirt sitting behind an open grey laptop. To his right is a large screen displaying presentation slides with text against a light yellow background. The background behind the man is a dark chalkboard covered with white chalk diagrams and mathematical formulas.",
-    "caption_vi": "Một người đàn ông đeo kính mặc vest ngồi tại bàn làm việc với máy tính xách tay bên cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một thanh niên tóc ngắn tối màu và đeo kính, mặc áo khoác vest tối màu và sơ mi trắng cổ bẻ, đang ngồi phía sau một chiếc máy tính xách tay màu xám mở. Phía bên phải anh là một màn hình lớn hiển thị trang chiếu có văn bản trên nền vàng nhạt. Phía sau người đàn ông là một bảng đen tối màu phủ đầy các sơ đồ và công thức toán học bằng phấn trắng.",
+    "quality_flags": [],
+    "caption": "A male teacher wearing glasses and a suit sits behind a laptop, with a presentation board showing text to his right.",
+    "detailed_caption": "A male teacher wearing glasses, a white collared shirt, and a dark blue suit sits at a desk with an ASUS laptop in front of him. To his right is a presentation board displaying typed text on a lined background. The studio has a chalkboard background with geometric drawings.",
+    "caption_vi": "Một thầy giáo đeo kính và mặc vest ngồi sau máy tính xách tay, bên phải là bảng thuyết trình hiển thị văn bản.",
+    "detailed_caption_vi": "Một giáo viên nam đeo kính, mặc áo sơ mi cổ trắng và bộ vest xanh sẫm đang ngồi bên bàn làm việc với một chiếc máy tính xách tay ASUS phía trước. Phía bên phải của ông là một bảng thuyết trình hiển thị văn bản trên nền có dòng kẻ. Phông nền phòng thu là bảng đen có các hình vẽ hình học.",
     "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 3: PHƯƠNG TRÌNH, BẤT PHƯƠNG TRÌNH MŨ VÀ LOGARIT GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "board_0",
+        "label": "board",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.523
+        ],
+        "description": "presentation board displaying text on a lined background",
+        "description_vi": "bảng thuyết trình hiển thị văn bản trên nền có dòng kẻ",
+        "attributes": [
+          "digital",
+          "lined"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16499999999999998,
+          0.16599999999999998,
           0.8,
           0.42699999999999994,
           1.0
         ],
-        "description": "grey laptop with asus logo on the lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "dark gray ASUS laptop on the desk",
+        "description_vi": "máy tính xách tay ASUS màu xám đậm trên bàn",
         "attributes": [
-          "grey",
-          "laptop"
+          "dark gray",
+          "closed"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.11000000000000001,
-          0.18699999999999997,
-          0.47800000000000004,
-          0.966
+          0.11100000000000002,
+          0.191,
+          0.475,
+          0.987
         ],
-        "description": "with glasses wearing a dark suit and white shirt",
-        "description_vi": "thanh niên đeo kính mặc vest tối màu và áo trắng",
+        "description": "male teacher wearing glasses and a dark blue suit",
+        "description_vi": "giáo viên nam đeo kính và mặc vest xanh sẫm",
         "attributes": [
+          "male",
           "glasses",
           "suit",
-          "dark hair"
+          "sitting"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.453,
-          0.011,
-          0.994,
-          0.5
-        ],
-        "description": "digital screen displaying presentation slides",
-        "description_vi": "màn hình kỹ thuật số hiển thị trang chiếu trình bày",
-        "attributes": [
-          "digital",
-          "white",
-          "rectangular"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -142,81 +174,75 @@
   },
   {
     "frame_id": "L25_V070_f0006",
-    "visual_source_frame_id": "L25_V070_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "removed_inferred_demographic",
-      "visual_metadata_copied"
-    ],
-    "caption": "A man wearing glasses and a suit sits at a desk with a laptop next to a digital slide.",
-    "detailed_caption": "A medium shot shows a with short dark hair and glasses wearing a dark suit jacket and white collared shirt sitting behind an open grey laptop. To his right is a large screen displaying presentation slides with text against a light yellow background. The background behind the man is a dark chalkboard covered with white chalk diagrams and mathematical formulas.",
-    "caption_vi": "Một người đàn ông đeo kính mặc vest ngồi tại bàn làm việc với máy tính xách tay bên cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một thanh niên tóc ngắn tối màu và đeo kính, mặc áo khoác vest tối màu và sơ mi trắng cổ bẻ, đang ngồi phía sau một chiếc máy tính xách tay màu xám mở. Phía bên phải anh là một màn hình lớn hiển thị trang chiếu có văn bản trên nền vàng nhạt. Phía sau người đàn ông là một bảng đen tối màu phủ đầy các sơ đồ và công thức toán học bằng phấn trắng.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 3: PHƯƠNG TRÌNH, BẤT PHƯƠNG TRÌNH MŨ VÀ LOGARIT GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024",
+    "visual_source_frame_id": "L25_V070_f0006",
+    "ocr_source_frame_id": "L25_V070_f0006",
+    "quality_flags": [],
+    "caption": "A male teacher wearing glasses and a suit sits behind a laptop, with a lower-third banner displaying his name and school.",
+    "detailed_caption": "A male teacher with glasses, wearing a white shirt and dark suit, sits behind a laptop with his hands resting on the desk. A lower-third banner at the bottom right displays his name and school affiliation. To the right, a presentation board shows lesson details.",
+    "caption_vi": "Một thầy giáo đeo kính và mặc vest ngồi sau máy tính xách tay, có dải thông tin hiển thị tên và trường học ở góc dưới.",
+    "detailed_caption_vi": "Một giáo viên nam đeo kính, mặc áo sơ mi trắng và vest tối màu đang ngồi sau máy tính xách tay với hai tay đặt trên bàn. Bảng thông tin ở góc dưới bên phải hiển thị tên và trường học của ông. Phía bên phải, bảng thuyết trình hiển thị chi tiết bài học.",
+    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 3: PHƯƠNG TRÌNH, BẤT PHƯƠNG TRÌNH MŨ VÀ LOGARIT GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024 Thầy LÊ MINH HUY Giáo viên môn Toán Trường THPT Nguyễn Hiền (Q.11, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "board_0",
+        "label": "board",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.523
+        ],
+        "description": "presentation board showing lesson information",
+        "description_vi": "bảng thuyết trình hiển thị thông tin bài học",
+        "attributes": [
+          "digital"
+        ],
+        "action": ""
+      },
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16499999999999998,
+          0.16599999999999998,
           0.8,
           0.42699999999999994,
           1.0
         ],
-        "description": "grey laptop with asus logo on the lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "dark gray ASUS laptop",
+        "description_vi": "máy tính xách tay ASUS màu xám đậm",
         "attributes": [
-          "grey",
-          "laptop"
+          "dark gray"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.11000000000000001,
-          0.18699999999999997,
-          0.47800000000000004,
-          0.966
+          0.11100000000000002,
+          0.191,
+          0.475,
+          0.987
         ],
-        "description": "with glasses wearing a dark suit and white shirt",
-        "description_vi": "thanh niên đeo kính mặc vest tối màu và áo trắng",
+        "description": "male teacher wearing glasses and a suit",
+        "description_vi": "giáo viên nam đeo kính và mặc vest",
         "attributes": [
+          "male",
           "glasses",
-          "suit",
-          "dark hair"
+          "suit"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.453,
-          0.011,
-          0.994,
-          0.5
-        ],
-        "description": "digital screen displaying presentation slides",
-        "description_vi": "màn hình kỹ thuật số hiển thị trang chiếu trình bày",
-        "attributes": [
-          "digital",
-          "white",
-          "rectangular"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -388,81 +414,75 @@
   },
   {
     "frame_id": "L25_V070_f0009",
-    "visual_source_frame_id": "L25_V070_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "removed_inferred_demographic",
-      "visual_metadata_copied"
-    ],
-    "caption": "A man wearing glasses and a suit sits at a desk with a laptop next to a digital slide.",
-    "detailed_caption": "A medium shot shows a with short dark hair and glasses wearing a dark suit jacket and white collared shirt sitting behind an open grey laptop. To his right is a large screen displaying presentation slides with text against a light yellow background. The background behind the man is a dark chalkboard covered with white chalk diagrams and mathematical formulas.",
-    "caption_vi": "Một người đàn ông đeo kính mặc vest ngồi tại bàn làm việc với máy tính xách tay bên cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một thanh niên tóc ngắn tối màu và đeo kính, mặc áo khoác vest tối màu và sơ mi trắng cổ bẻ, đang ngồi phía sau một chiếc máy tính xách tay màu xám mở. Phía bên phải anh là một màn hình lớn hiển thị trang chiếu có văn bản trên nền vàng nhạt. Phía sau người đàn ông là một bảng đen tối màu phủ đầy các sơ đồ và công thức toán học bằng phấn trắng.",
+    "visual_source_frame_id": "L25_V070_f0009",
+    "ocr_source_frame_id": "L25_V070_f0009",
+    "quality_flags": [],
+    "caption": "A male teacher wearing glasses and a suit sits behind a laptop, beside a presentation board.",
+    "detailed_caption": "A male teacher wearing glasses and a formal suit sits at a desk in front of a chalkboard backdrop with geometric diagrams. An ASUS laptop sits on the desk, and a presentation board is positioned to his right.",
+    "caption_vi": "Một thầy giáo đeo kính và mặc vest ngồi sau máy tính xách tay, bên cạnh bảng thuyết trình.",
+    "detailed_caption_vi": "Một giáo viên nam đeo kính và mặc vest lịch sự đang ngồi làm việc trước phông nền bảng đen có các biểu đồ hình học. Máy tính xách tay ASUS đặt trên bàn và bảng thuyết trình được đặt bên phải ông.",
     "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 3: PHƯƠNG TRÌNH, BẤT PHƯƠNG TRÌNH MŨ VÀ LOGARIT GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "board_0",
+        "label": "board",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.523
+        ],
+        "description": "presentation board with typed text",
+        "description_vi": "bảng thuyết trình có văn bản được đánh máy",
+        "attributes": [
+          "digital"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16499999999999998,
+          0.16599999999999998,
           0.8,
           0.42699999999999994,
           1.0
         ],
-        "description": "grey laptop with asus logo on the lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "dark gray ASUS laptop",
+        "description_vi": "máy tính xách tay ASUS màu xám đậm",
         "attributes": [
-          "grey",
-          "laptop"
+          "dark gray"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.11000000000000001,
-          0.18699999999999997,
-          0.47800000000000004,
-          0.966
+          0.11100000000000002,
+          0.191,
+          0.475,
+          0.987
         ],
-        "description": "with glasses wearing a dark suit and white shirt",
-        "description_vi": "thanh niên đeo kính mặc vest tối màu và áo trắng",
+        "description": "male teacher wearing glasses and a suit",
+        "description_vi": "giáo viên nam đeo kính và mặc vest",
         "attributes": [
+          "male",
           "glasses",
-          "suit",
-          "dark hair"
+          "suit"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.453,
-          0.011,
-          0.994,
-          0.5
-        ],
-        "description": "digital screen displaying presentation slides",
-        "description_vi": "màn hình kỹ thuật số hiển thị trang chiếu trình bày",
-        "attributes": [
-          "digital",
-          "white",
-          "rectangular"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -470,81 +490,75 @@
   },
   {
     "frame_id": "L25_V070_f0010",
-    "visual_source_frame_id": "L25_V070_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "removed_inferred_demographic",
-      "visual_metadata_copied"
-    ],
-    "caption": "A man wearing glasses and a suit sits at a desk with a laptop next to a digital slide.",
-    "detailed_caption": "A medium shot shows a with short dark hair and glasses wearing a dark suit jacket and white collared shirt sitting behind an open grey laptop. To his right is a large screen displaying presentation slides with text against a light yellow background. The background behind the man is a dark chalkboard covered with white chalk diagrams and mathematical formulas.",
-    "caption_vi": "Một người đàn ông đeo kính mặc vest ngồi tại bàn làm việc với máy tính xách tay bên cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một thanh niên tóc ngắn tối màu và đeo kính, mặc áo khoác vest tối màu và sơ mi trắng cổ bẻ, đang ngồi phía sau một chiếc máy tính xách tay màu xám mở. Phía bên phải anh là một màn hình lớn hiển thị trang chiếu có văn bản trên nền vàng nhạt. Phía sau người đàn ông là một bảng đen tối màu phủ đầy các sơ đồ và công thức toán học bằng phấn trắng.",
+    "visual_source_frame_id": "L25_V070_f0010",
+    "ocr_source_frame_id": "L25_V070_f0010",
+    "quality_flags": [],
+    "caption": "A male teacher wearing glasses and a suit sits behind a laptop next to a presentation board.",
+    "detailed_caption": "A male teacher wearing glasses, a white collared shirt, and a dark blue suit sits at a desk with an ASUS laptop. To his right is a presentation board against a chalkboard background.",
+    "caption_vi": "Một thầy giáo đeo kính và mặc vest ngồi sau máy tính xách tay cạnh bảng thuyết trình.",
+    "detailed_caption_vi": "Một giáo viên nam đeo kính, mặc áo sơ mi cổ trắng và bộ vest xanh sẫm đang ngồi tại bàn làm việc có máy tính xách tay ASUS. Phía bên phải ông là bảng thuyết trình đặt trước phông nền bảng đen.",
     "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 3: PHƯƠNG TRÌNH, BẤT PHƯƠNG TRÌNH MŨ VÀ LOGARIT GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "board_0",
+        "label": "board",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.523
+        ],
+        "description": "presentation board displaying lesson text",
+        "description_vi": "bảng thuyết trình hiển thị văn bản bài học",
+        "attributes": [
+          "digital"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16499999999999998,
+          0.16599999999999998,
           0.8,
           0.42699999999999994,
           1.0
         ],
-        "description": "grey laptop with asus logo on the lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "dark gray ASUS laptop",
+        "description_vi": "máy tính xách tay ASUS màu xám đậm",
         "attributes": [
-          "grey",
-          "laptop"
+          "dark gray"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.11000000000000001,
-          0.18699999999999997,
-          0.47800000000000004,
-          0.966
+          0.11100000000000002,
+          0.191,
+          0.475,
+          0.987
         ],
-        "description": "with glasses wearing a dark suit and white shirt",
-        "description_vi": "thanh niên đeo kính mặc vest tối màu và áo trắng",
+        "description": "male teacher wearing glasses and a suit",
+        "description_vi": "giáo viên nam đeo kính và mặc vest",
         "attributes": [
+          "male",
           "glasses",
-          "suit",
-          "dark hair"
+          "suit"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.453,
-          0.011,
-          0.994,
-          0.5
-        ],
-        "description": "digital screen displaying presentation slides",
-        "description_vi": "màn hình kỹ thuật số hiển thị trang chiếu trình bày",
-        "attributes": [
-          "digital",
-          "white",
-          "rectangular"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -690,10 +704,10 @@
     "visual_source_frame_id": "L25_V070_f0014",
     "ocr_source_frame_id": "L25_V070_f0014",
     "quality_flags": [],
-    "caption": "A university building entrance features large glass windows, white columns, and three flagpoles.",
-    "detailed_caption": "An exterior low-angle medium shot captures the front of a modern university building with grid-patterned glass facade sections and red lettering near the roofline. Three tall white flagpoles stand to the left, flying a yellow-and-red flag, a red flag, and an American flag. Green foliage is visible near the ground-level entrance under an overcast sky.",
-    "caption_vi": "Lối vào tòa nhà đại học nổi bật với các ô cửa sổ kính lớn, cột trắng và ba cột cờ.",
-    "detailed_caption_vi": "Cảnh ngoại cảnh trung cảnh góc thấp chụp mặt trước của tòa nhà đại học hiện đại với các phần mặt tiền kính dạng lưới và chữ màu đỏ gần đường viền mái. Ba cột cờ trắng cao đứng bên trái, treo lá cờ vàng đỏ, cờ đỏ và cờ Mỹ. Lá cây xanh xuất hiện gần lối vào tầng trệt dưới bầu trời nhiều mây.",
+    "caption": "A modern building exterior features white architecture and three flags flying in front.",
+    "detailed_caption": "A modern multi-story university building with large windows and white structural framing. Three flagpoles stand in front of the building, flying red and white flags under a cloudy sky.",
+    "caption_vi": "Bên ngoài tòa nhà hiện đại có kiến trúc màu trắng và ba lá cờ đang tung bay phía trước.",
+    "detailed_caption_vi": "Một tòa nhà đại học nhiều tầng hiện đại với cửa sổ lớn và khung kết cấu màu trắng. Ba cột cờ đứng trước tòa nhà, treo cờ đỏ và trắng dưới bầu trời nhiều mây.",
     "ocr_text": "SIU SAIGON INTERNATIONAL UNIVERSITY THE SAIGON INTERNATIONAL UNIVERSITY Lewis Hall",
     "news_ticker_text": "",
     "detections": [
@@ -701,17 +715,17 @@
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.348,
-          0.152,
+          0.335,
+          0.143,
           1.0,
-          1.0
+          0.837
         ],
-        "description": "modern university building with white facade and large windows",
-        "description_vi": "tòa nhà đại học hiện đại với mặt tiền trắng và cửa sổ lớn",
+        "description": "modern white multi-story university building with large windows",
+        "description_vi": "tòa nhà đại học nhiều tầng màu trắng hiện đại với các cửa sổ lớn",
         "attributes": [
           "modern",
           "white",
-          "glass"
+          "multistory"
         ],
         "action": ""
       },
@@ -719,33 +733,21 @@
         "object_id": "flagpole_0",
         "label": "flagpole",
         "bbox": [
-          0.10700000000000001,
-          0.041999999999999996,
+          0.279,
+          0.037,
           0.335,
-          0.858
+          0.844
         ],
-        "description": "three tall flagpoles with flags flying outdoors",
-        "description_vi": "ba cột cờ cao treo cờ ngoài trời",
+        "description": "tall metal flagpole with flags",
+        "description_vi": "cột cờ kim loại cao có treo cờ",
         "attributes": [
           "tall",
-          "metal",
-          "flags"
+          "metal"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "flagpole_0",
-        "predicate": "left_of",
-        "object_id": "building_0"
-      },
-      {
-        "subject_id": "building_0",
-        "predicate": "right_of",
-        "object_id": "flagpole_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V070_f0015",
@@ -2708,28 +2710,28 @@
     "visual_source_frame_id": "L25_V070_f0038",
     "ocr_source_frame_id": "L25_V070_f0038",
     "quality_flags": [],
-    "caption": "A person standing with their back to the camera in front of a mock courtroom setup with judges and officials.",
-    "detailed_caption": "A medium shot shows a person in a black polo shirt standing with their back to the camera, facing a mock courtroom setup. On the left, a woman in a black suit speaks into a microphone behind a red-skirted desk. On the right, two women in academic-style robes and suits are seated behind another red-skirted desk, with a large national emblem displayed on a screen behind them.",
-    "caption_vi": "Một người đứng quay lưng về phía máy ảnh trước mô hình phòng xử án giả định với các thẩm phán và quan chức.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người mặc áo polo đen đứng quay lưng về phía máy ảnh, đối mặt với mô hình phòng xử án giả định. Phía bên trái, một phụ nữ mặc vest đen đang nói vào micrô phía sau chiếc bàn có viền đỏ. Phía bên phải, hai phụ nữ mặc áo choàng và vest kiểu học thuật ngồi phía sau chiếc bàn có viền đỏ khác, với huy hiệu quốc gia lớn được hiển thị trên màn hình phía sau họ.",
-    "ocr_text": "THỤC KÝ THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN SIU Saigon International University du.vn",
+    "caption": "Three people stand at desks in a mock courtroom with a large emblem on the wall.",
+    "detailed_caption": "A mock courtroom setting shows three individuals standing behind desks draped in red banners with university logos. A person wearing a black suit stands facing away in the foreground, while a woman in a black jacket speaks into a microphone on the left, and two individuals sit at a desk on the right. A large national emblem hangs on the wall behind them.",
+    "caption_vi": "Ba người đứng tại bàn trong một phòng xử án mô phỏng có huy hiệu lớn trên tường.",
+    "detailed_caption_vi": "Bối cảnh phòng xử án mô phỏng cho thấy ba người đứng sau các bàn được phủ khăn đỏ có logo trường đại học. Một người mặc vest đen quay lưng về phía trước, trong khi một phụ nữ mặc áo khoác đen đang phát biểu vào micro ở bên trái, và hai người ngồi ở bàn bên phía phải. Một huy hiệu quốc gia lớn treo trên tường phía sau họ.",
+    "ocr_text": "THƯ KÝ SIU Saigon International University edu.vn HỘI THẨM NHÂN DÂN",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.126,
-          0.318,
-          0.233,
-          0.642
+          0.124,
+          0.316,
+          0.22999999999999998,
+          0.64
         ],
-        "description": "a woman in a black suit jacket speaking into a microphone",
-        "description_vi": "một phụ nữ mặc áo khoác vest đen đang nói vào micrô",
+        "description": "woman standing behind a desk speaking into a microphone",
+        "description_vi": "người phụ nữ đứng sau bàn đang nói vào micro",
         "attributes": [
           "woman",
-          "suit",
-          "microphone"
+          "standing",
+          "black suit"
         ],
         "action": "speaking"
       },
@@ -2738,16 +2740,15 @@
         "label": "person",
         "bbox": [
           0.396,
-          0.297,
-          0.584,
-          0.999
+          0.295,
+          0.588,
+          0.995
         ],
-        "description": "a person in a black polo shirt standing with their back turned",
-        "description_vi": "một người mặc áo polo đen đứng quay lưng lại",
+        "description": "person standing facing away from the camera in a black polo shirt",
+        "description_vi": "người đứng quay lưng về phía máy ảnh mặc áo polo đen",
         "attributes": [
-          "person",
-          "black shirt",
-          "back turned"
+          "standing",
+          "black shirt"
         ],
         "action": "standing"
       },
@@ -2756,14 +2757,15 @@
         "label": "person",
         "bbox": [
           0.655,
-          0.41300000000000003,
+          0.412,
           0.786,
           0.663
         ],
-        "description": "a woman in a judicial robe sitting at the desk",
-        "description_vi": "một phụ nữ mặc áo choàng tư pháp ngồi tại bàn",
+        "description": "woman sitting at a desk wearing a robe and scarf",
+        "description_vi": "người phụ nữ ngồi tại bàn mặc áo choàng và khăn quàng cổ",
         "attributes": [
           "woman",
+          "sitting",
           "robe"
         ],
         "action": "sitting"
@@ -2772,16 +2774,17 @@
         "object_id": "person_3",
         "label": "person",
         "bbox": [
-          0.866,
-          0.418,
-          0.999,
-          0.669
+          0.8640000000000001,
+          0.41700000000000004,
+          0.998,
+          0.667
         ],
-        "description": "a woman in a black suit sitting at the right desk",
-        "description_vi": "một phụ nữ mặc vest đen ngồi ở bàn bên phải",
+        "description": "woman sitting at a desk wearing a black suit and glasses",
+        "description_vi": "người phụ nữ ngồi tại bàn mặc vest đen và đeo kính",
         "attributes": [
           "woman",
-          "suit"
+          "sitting",
+          "glasses"
         ],
         "action": "sitting"
       }
@@ -7341,11 +7344,11 @@
     "visual_source_frame_id": "L25_V070_f0105",
     "ocr_source_frame_id": "L25_V070_f0105",
     "quality_flags": [],
-    "caption": "A light yellow math problem slide displaying inequality options A, B, C, and D.",
-    "detailed_caption": "An educational math slide titled 'Ví dụ 2.' displays an inequality problem with set notation options A, B, C, and D laid out horizontally. The slide is styled as pale yellow ruled paper inside a grey border.",
-    "caption_vi": "Slide toán học màu vàng nhạt hiển thị bài toán bất phương trình và các tập nghiệm lựa chọn A, B, C, D.",
-    "detailed_caption_vi": "Slide toán học màu vàng nhạt có tiêu đề 'Ví dụ 2.' hiển thị bài toán bất phương trình và các đáp án A, B, C, D ở phía trên. Nền slide có dạng giấy kẻ ngang màu vàng nhạt.",
-    "ocr_text": "Ví dụ 2. Tập nghiệm S của bất phương trình \\log_3 (2x - 1) < 2 là A S = \\left[ \\frac{1}{2} ; 5 \\right). B S = \\left( \\frac{1}{2} ; 5 \\right). C S = (-\\infty ; 5). D S = (5 ; +\\infty).",
+    "caption": "A math slide displays a quadratic inequality example with multiple-choice options.",
+    "detailed_caption": "A digital presentation slide on a light yellow lined background features a math problem labeled 'Ví dụ 2'. The text states an inequality involving a logarithm and provides four multiple-choice options labeled A, B, C, and D.",
+    "caption_vi": "Slide toán học hiển thị một ví dụ bất phương trình logarit với các lựa chọn trắc nghiệm.",
+    "detailed_caption_vi": "Slide thuyết trình kỹ thuật số trên nền vàng nhạt có dòng kẻ hiển thị một bài toán có tiêu đề 'Ví dụ 2'. Văn bản trình bày một bất phương trình chứa logarit và cung cấp bốn lựa chọn trắc nghiệm được đánh nhãn A, B, C và D.",
+    "ocr_text": "Ví dụ 2. Tập nghiệm S của bất phương trình log3(2x - 1) < 2 là A S = [1/2; 5). B S = (1/2; 5). C S = (-infinity; 5). D S = (5; +infinity).",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7353,16 +7356,16 @@
         "label": "slide",
         "bbox": [
           0.024,
-          0.052,
+          0.051,
           0.978,
           0.9149999999999999
         ],
-        "description": "a pale yellow math problem slide with inequality formulas and multiple choice options",
-        "description_vi": "một slide bài toán bất phương trình màu vàng nhạt với các công thức và lựa chọn",
+        "description": "presentation slide displaying a math equation and options",
+        "description_vi": "slide thuyết trình hiển thị phương trình toán học và các lựa chọn",
         "attributes": [
+          "digital",
           "yellow",
-          "ruled",
-          "educational"
+          "lined"
         ],
         "action": ""
       }
@@ -7371,16 +7374,14 @@
   },
   {
     "frame_id": "L25_V070_f0106",
-    "visual_source_frame_id": "L25_V070_f0105",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A light yellow math problem slide displaying inequality options A, B, C, and D.",
-    "detailed_caption": "An educational math slide titled 'Ví dụ 2.' displays an inequality problem with set notation options A, B, C, and D laid out horizontally. The slide is styled as pale yellow ruled paper inside a grey border.",
-    "caption_vi": "Slide toán học màu vàng nhạt hiển thị bài toán bất phương trình và các tập nghiệm lựa chọn A, B, C, D.",
-    "detailed_caption_vi": "Slide toán học màu vàng nhạt có tiêu đề 'Ví dụ 2.' hiển thị bài toán bất phương trình và các đáp án A, B, C, D ở phía trên. Nền slide có dạng giấy kẻ ngang màu vàng nhạt.",
-    "ocr_text": "Ví dụ 2. Tập nghiệm S của bất phương trình \\log_3 (2x - 1) < 2 là A S = \\left[ \\frac{1}{2} ; 5 \\right). B S = \\left( \\frac{1}{2} ; 5 \\right). C S = (-\\infty ; 5). D S = (5 ; +\\infty).",
+    "visual_source_frame_id": "L25_V070_f0106",
+    "ocr_source_frame_id": "L25_V070_f0106",
+    "quality_flags": [],
+    "caption": "A math slide displays a logarithm inequality problem and four multiple-choice answers.",
+    "detailed_caption": "A presentation slide on a yellow lined background presents a math problem labeled 'Ví dụ 2'. It shows a logarithmic inequality and four distinct options labeled A, B, C, and D.",
+    "caption_vi": "Slide toán học hiển thị bài toán bất phương trình logarit và bốn đáp án trắc nghiệm.",
+    "detailed_caption_vi": "Slide thuyết trình trên nền vàng có dòng kẻ trình bày một bài toán có nhãn 'Ví dụ 2'. Slide hiển thị một bất phương trình logarit và bốn lựa chọn riêng biệt được đánh nhãn A, B, C và D.",
+    "ocr_text": "Ví dụ 2. Tập nghiệm S của bất phương trình log3(2x - 1) < 2 là A S = [1/2; 5). B S = (1/2; 5). C S = (-infinity; 5). D S = (5; +infinity).",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7388,16 +7389,15 @@
         "label": "slide",
         "bbox": [
           0.024,
-          0.052,
+          0.051,
           0.978,
           0.9149999999999999
         ],
-        "description": "a pale yellow math problem slide with inequality formulas and multiple choice options",
-        "description_vi": "một slide bài toán bất phương trình màu vàng nhạt với các công thức và lựa chọn",
+        "description": "presentation slide with math equation and options",
+        "description_vi": "slide thuyết trình có phương trình toán học và các lựa chọn",
         "attributes": [
-          "yellow",
-          "ruled",
-          "educational"
+          "digital",
+          "yellow"
         ],
         "action": ""
       }
@@ -9650,10 +9650,10 @@
     "visual_source_frame_id": "L25_V070_f0161",
     "ocr_source_frame_id": "L25_V070_f0161",
     "quality_flags": [],
-    "caption": "Modern high-rise buildings stand behind a line of dense green trees under a partly cloudy sky.",
-    "detailed_caption": "An outdoor daytime shot featuring several modern multi-story buildings in the background, framed by dense green tree branches and foliage in the foreground and sides under a bright sky with light clouds.",
-    "caption_vi": "Các tòa nhà cao tầng hiện đại phía sau hàng cây xanh rậm rạp dưới bầu trời có mây.",
-    "detailed_caption_vi": "Cảnh quan ngoài trời ban ngày hiển thị một số tòa nhà hiện đại ở hậu cảnh, bị bao quanh bởi những cành cây và tán lá xanh rậm rạp ở hai bên và phía trước dưới bầu trời sáng.",
+    "caption": "Green leafy branches frame a view of tall apartment buildings under a bright sky.",
+    "detailed_caption": "Green foliage and tree branches fill the right and bottom foreground, framing a view of several tall modern apartment buildings in the distance against a bright, partly cloudy sky.",
+    "caption_vi": "Các cành cây lá xanh khung cảnh các tòa nhà chung cư cao tầng dưới bầu trời sáng.",
+    "detailed_caption_vi": "Tán lá xanh và cành cây lấp đầy phần tiền cảnh bên phải và bên dưới, tạo khung nhìn ra một số tòa nhà chung cư hiện đại cao tầng ở phía xa dưới bầu trời sáng có mây rải rác.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -9661,15 +9661,15 @@
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.404,
-          0.517,
-          0.7929999999999999,
-          0.759
+          0.40199999999999997,
+          0.52,
+          0.8029999999999999,
+          0.7569999999999999
         ],
-        "description": "modern multi-story high-rise buildings in the distance",
-        "description_vi": "các tòa nhà cao tầng hiện đại nhiều tầng ở phía xa",
+        "description": "tall modern apartment buildings in the background",
+        "description_vi": "tòa nhà chung cư hiện đại cao tầng ở nền sau",
         "attributes": [
-          "high-rise",
+          "tall",
           "modern"
         ],
         "action": ""
@@ -9680,11 +9680,11 @@
         "bbox": [
           0.5519999999999999,
           0.0,
-          0.998,
-          0.627
+          1.0,
+          1.0
         ],
-        "description": "lush green tree foliage filling the foreground and upper right",
-        "description_vi": "tán lá cây xanh rậm rạp che phủ phía trước và góc trên bên phải",
+        "description": "green leafy tree branches in the foreground",
+        "description_vi": "cành cây lá xanh ở tiền cảnh",
         "attributes": [
           "green",
           "leafy"
@@ -9986,30 +9986,29 @@
     "visual_source_frame_id": "L25_V070_f0167",
     "ocr_source_frame_id": "L25_V070_f0167",
     "quality_flags": [],
-    "caption": "A hand turns the glossy page of a textbook featuring diagrams and illustrations.",
-    "detailed_caption": "A close-up shot shows a hand turning the page of an open textbook. The left page displays colorful diagrams and illustrations with the word CORNERSTONE visible, while the right page shows a small inset photo.",
-    "caption_vi": "Một bàn tay đang lật trang sách giáo khoa có hình minh họa đầy màu sắc.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh một bàn tay đang lật trang sách giáo khoa. Trang bên trái có hình ảnh minh họa khối hình học và các chi tiết nhiều màu sắc với dòng chữ CORNERSTONE, còn trang bên phải có hình ảnh nhỏ.",
-    "ocr_text": "PEA CORNER CORNERSTONE",
+    "caption": "A person's hand turns the pages of an open book with blue illustrations.",
+    "detailed_caption": "A close-up shot shows a person's hand turning a page of an open textbook. The book's pages feature blue graphical illustrations and English text, with a red cover visible on the left edge.",
+    "caption_vi": "Bàn tay của một người đang lật các trang của một cuốn sách mở có hình minh họa màu xanh.",
+    "detailed_caption_vi": "Cận cảnh bàn tay của một người đang lật trang một cuốn sách giáo khoa mở. Các trang sách có hình minh họa đồ họa màu xanh lam và văn bản tiếng Anh, với bìa màu đỏ hiển thị ở mép bên trái.",
+    "ocr_text": "CORNER",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "textbook_0",
-        "label": "textbook",
+        "object_id": "book_0",
+        "label": "book",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "open textbook with colorful diagrams and red spine",
-        "description_vi": "sách giáo khoa mở có hình minh họa màu sắc và gáy đỏ",
+        "description": "open textbook with blue illustrations and a red cover",
+        "description_vi": "sách giáo khoa mở với hình minh họa màu xanh và bìa đỏ",
         "attributes": [
           "open",
-          "colorful",
           "illustrated"
         ],
-        "action": "turning page"
+        "action": "turning pages"
       }
     ],
     "spatial_relations": []
@@ -11545,27 +11544,27 @@
     "visual_source_frame_id": "L25_V070_f0190",
     "ocr_source_frame_id": "L25_V070_f0190",
     "quality_flags": [],
-    "caption": "A science laboratory setting shows chemical glassware and students working at desks in the background.",
-    "detailed_caption": "A medium shot displays a science laboratory with chemical apparatus and glassware in the foreground and background. Students in lab attire are visible working at counters lined with wooden cabinets on the walls.",
-    "caption_vi": "Bối cảnh phòng thí nghiệm khoa học với các dụng cụ thủy tinh và học sinh đang làm việc ở phía sau.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị phòng thí nghiệm khoa học với các dụng cụ và ống nghiệm ở tiền cảnh lẫn hậu cảnh. Các học sinh mặc áo blouse đang làm việc tại các quầy thí nghiệm bên dưới tủ gỗ gắn tường.",
+    "caption": "Multiple students sit at laboratory desks inside a science classroom with wooden cabinets.",
+    "detailed_caption": "A science classroom features several students wearing safety goggles and white shirts seated at laboratory tables. Wooden storage cabinets line the back wall, and scientific equipment and beakers are visible on the counters.",
+    "caption_vi": "Nhiều học sinh ngồi tại bàn thí nghiệm trong phòng học khoa học có tủ gỗ.",
+    "detailed_caption_vi": "Một phòng học khoa học có một số học sinh đeo kính bảo hộ và mặc áo sơ mi trắng ngồi tại các bàn thí nghiệm. Các tủ đựng đồ bằng gỗ nằm dọc theo bức tường phía sau, và các thiết bị khoa học cũng như cốc đong hiển thị trên mặt quầy.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "glassware_0",
-        "label": "glassware",
+        "object_id": "cabinet_0",
+        "label": "cabinet",
         "bbox": [
-          0.354,
-          0.302,
-          0.591,
-          0.929
+          0.08299999999999999,
+          0.111,
+          0.517,
+          0.37199999999999994
         ],
-        "description": "glass container with stopper on laboratory apparatus",
-        "description_vi": "bình thủy tinh thí nghiệm có nút đậy",
+        "description": "wooden storage cabinets lining the back wall",
+        "description_vi": "tủ lưu trữ bằng gỗ dọc theo bức tường phía sau",
         "attributes": [
-          "glass",
-          "laboratory"
+          "wooden",
+          "wall-mounted"
         ],
         "action": ""
       },
@@ -11573,29 +11572,59 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.8130000000000001,
-          0.439,
-          0.966,
-          0.9189999999999999
+          0.10500000000000001,
+          0.24200000000000002,
+          0.22200000000000003,
+          0.643
         ],
-        "description": "student working at lab counter in background",
-        "description_vi": "học sinh đang làm việc tại quầy thí nghiệm ở phía sau",
+        "description": "student wearing safety glasses and a white shirt",
+        "description_vi": "học sinh đeo kính bảo hộ và mặc áo sơ mi trắng",
         "attributes": [
-          "seated"
+          "student",
+          "glasses",
+          "white shirt"
         ],
-        "action": "working"
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.8130000000000001,
+          0.429,
+          0.962,
+          0.7569999999999999
+        ],
+        "description": "student seated at a laboratory desk on the right",
+        "description_vi": "học sinh ngồi tại bàn thí nghiệm bên phải",
+        "attributes": [
+          "student",
+          "glasses",
+          "sitting"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "glassware_0",
-        "predicate": "left_of",
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "glassware_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -13492,32 +13521,31 @@
   },
   {
     "frame_id": "L25_V070_f0231",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0231",
+    "ocr_source_frame_id": "L25_V070_f0231",
+    "quality_flags": [],
+    "caption": "Mathematical inequalities and system derivations displayed on a yellow screen.",
+    "detailed_caption": "This slide titled Ví dụ 4 presents a mathematics problem and its step-by-step solution for case 1. The screen displays algebraic equations involving logarithmic and exponential expressions, including system conversions and solved intervals. The layout features dark purple text against a pale yellow background with grid lines.",
+    "caption_vi": "Các bất phương trình toán học và các bước biến đổi hệ phương trình hiển thị trên nền màn hình màu vàng.",
+    "detailed_caption_vi": "Slide có tiêu đề Ví dụ 4 trình bày một bài toán toán học và lời giải chi tiết cho trường hợp 1. Màn hình hiển thị các biểu thức đại số chứa logarit và số mũ, bao gồm các phép biến đổi hệ và các khoảng nghiệm được giải. Bố cục gồm chữ màu tím đậm trên nền vàng nhạt có kẻ ô.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_2 (2x-4) - 2] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 1: { 3^(x^2-2) - 9^(x+3) >= 0 { log_2 (2x-4) - 2 <= 0 <=> { 3^(x^2-2) >= 3^(2x+6) { log_2 (2x-4) <= 2 <=> { x^2 - 2x - 8 >= 0 { 0 < 2x - 4 <= 4 <=> { [ x >= 4 [ x <= -2 { 2 < x <= 4 <=> { x = 4",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "mathematical slide with equations and text",
+        "description_vi": "slide toán học chứa các phương trình và văn bản",
         "attributes": [
-          "screen",
-          "text"
+          "yellow",
+          "text",
+          "structured"
         ],
         "action": ""
       }
@@ -13526,31 +13554,29 @@
   },
   {
     "frame_id": "L25_V070_f0232",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0232",
+    "ocr_source_frame_id": "L25_V070_f0232",
+    "quality_flags": [],
+    "caption": "Mathematical slide showing case 2 of a logarithmic inequality problem.",
+    "detailed_caption": "The slide continues the solution for Ví dụ 4, focusing on Trường hợp 2. A system of two inequalities involving exponential and logarithmic terms is shown below the heading on the yellow background.",
+    "caption_vi": "Slide toán học hiển thị trường hợp 2 của bài toán bất phương trình logarit.",
+    "detailed_caption_vi": "Slide tiếp tục phần lời giải của Ví dụ 4, tập trung vào Trường hợp 2. Một hệ gồm hai bất phương trình chứa các số hạng mũ và logarit được hiển thị bên dưới tiêu đề trên nền màu vàng.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "mathematical slide with case 2 equations",
+        "description_vi": "slide toán học chứa phương trình trường hợp 2",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13560,31 +13586,29 @@
   },
   {
     "frame_id": "L25_V070_f0233",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0233",
+    "ocr_source_frame_id": "L25_V070_f0233",
+    "quality_flags": [],
+    "caption": "Slide displaying case 2 inequalities for a math problem.",
+    "detailed_caption": "This frame is identical to the previous one, showing the second case of the mathematical problem on the lined yellow screen.",
+    "caption_vi": "Slide hiển thị các bất phương trình trường hợp 2 cho bài toán toán học.",
+    "detailed_caption_vi": "Khung hình này giống hệt khung trước, hiển thị trường hợp thứ hai của bài toán toán học trên màn hình nền vàng có dòng kẻ.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide with math equations",
+        "description_vi": "slide chứa các phương trình toán học",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13594,31 +13618,29 @@
   },
   {
     "frame_id": "L25_V070_f0234",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0234",
+    "ocr_source_frame_id": "L25_V070_f0234",
+    "quality_flags": [],
+    "caption": "Mathematical slide showing equivalence step for case 2.",
+    "detailed_caption": "The slide displays the equivalence transformation for the second case of the inequality problem. The exponential and logarithmic expressions are simplified on the right side.",
+    "caption_vi": "Slide toán học hiển thị bước biến đổi tương đương cho trường hợp 2.",
+    "detailed_caption_vi": "Slide hiển thị phép biến đổi tương đương cho trường hợp thứ hai của bài toán bất phương trình. Các biểu thức mũ và logarit được rút gọn ở vế phải.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide with mathematical equivalence steps",
+        "description_vi": "slide với các bước tương đương toán học",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13628,31 +13650,29 @@
   },
   {
     "frame_id": "L25_V070_f0235",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0235",
+    "ocr_source_frame_id": "L25_V070_f0235",
+    "quality_flags": [],
+    "caption": "Mathematical slide displaying further simplification steps for case 2.",
+    "detailed_caption": "The slide presents more steps of the solution for case 2, converting the inequalities into polynomial and linear inequalities.",
+    "caption_vi": "Slide toán học hiển thị các bước rút gọn tiếp theo cho trường hợp 2.",
+    "detailed_caption_vi": "Slide trình bày các bước giải tiếp theo cho trường hợp 2, chuyển đổi các bất phương trình thành các bất phương trình đa thức và bậc nhất.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2 <=> { x^2 - 2x - 8 <= 0 { 2x - 4 >= 4 <=> { -2 <= x <= 4 { x >= 4",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide with algebraic inequalities",
+        "description_vi": "slide với các bất phương trình đại số",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13662,31 +13682,29 @@
   },
   {
     "frame_id": "L25_V070_f0236",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0236",
+    "ocr_source_frame_id": "L25_V070_f0236",
+    "quality_flags": [],
+    "caption": "Mathematical slide showing case 2 solution steps.",
+    "detailed_caption": "This frame shows the same mathematical derivations for case 2 of Ví dụ 4 on a lined yellow screen.",
+    "caption_vi": "Slide toán học hiển thị các bước giải trường hợp 2.",
+    "detailed_caption_vi": "Khung hình này hiển thị các phép biến đổi toán học tương tự cho trường hợp 2 của Ví dụ 4 trên màn hình nền vàng có dòng kẻ.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2 <=> { x^2 - 2x - 8 <= 0 { 2x - 4 >= 4 <=> { -2 <= x <= 4 { x >= 4",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide displaying math equations",
+        "description_vi": "slide hiển thị các phương trình toán học",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13696,31 +13714,29 @@
   },
   {
     "frame_id": "L25_V070_f0237",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0237",
+    "ocr_source_frame_id": "L25_V070_f0237",
+    "quality_flags": [],
+    "caption": "Mathematical slide displaying inequality solution steps.",
+    "detailed_caption": "The slide displays algebraic inequality steps for solving case 2 of the mathematical problem, shown in purple text on a yellow background.",
+    "caption_vi": "Slide toán học hiển thị các bước giải bất phương trình.",
+    "detailed_caption_vi": "Slide hiển thị các bước bất phương trình đại số để giải trường hợp 2 của bài toán toán học, hiển thị bằng chữ màu tím trên nền vàng.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2 <=> { x^2 - 2x - 8 <= 0 { 2x - 4 >= 4 <=> { -2 <= x <= 4 { x >= 4",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide with mathematical derivations",
+        "description_vi": "slide với các phép biến đổi toán học",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13730,31 +13746,29 @@
   },
   {
     "frame_id": "L25_V070_f0238",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0238",
+    "ocr_source_frame_id": "L25_V070_f0238",
+    "quality_flags": [],
+    "caption": "Mathematical slide showing the final derived value for case 2.",
+    "detailed_caption": "The slide shows the final simplification step for case 2, concluding that x equals 4, displayed on a lined yellow background.",
+    "caption_vi": "Slide toán học hiển thị giá trị cuối cùng được suy ra cho trường hợp 2.",
+    "detailed_caption_vi": "Slide hiển thị bước rút gọn cuối cùng cho trường hợp 2, đi đến kết luận x bằng 4, được trình bày trên nền vàng có dòng kẻ.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2 <=> { x^2 - 2x - 8 <= 0 { 2x - 4 >= 4 <=> { -2 <= x <= 4 { x >= 4 <=> { x = 4",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide showing conclusion for case 2",
+        "description_vi": "slide hiển thị kết luận cho trường hợp 2",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13764,31 +13778,29 @@
   },
   {
     "frame_id": "L25_V070_f0239",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0239",
+    "ocr_source_frame_id": "L25_V070_f0239",
+    "quality_flags": [],
+    "caption": "Mathematical slide displaying the solution conclusion for case 2.",
+    "detailed_caption": "This frame displays the completed derivation for case 2 of Ví dụ 4, showing x equals 4 on a yellow screen.",
+    "caption_vi": "Slide toán học hiển thị kết luận lời giải cho trường hợp 2.",
+    "detailed_caption_vi": "Khung hình này hiển thị phần biến đổi đã hoàn thành cho trường hợp 2 của Ví dụ 4, cho thấy x bằng 4 trên màn hình màu vàng.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2 <=> { x^2 - 2x - 8 <= 0 { 2x - 4 >= 4 <=> { -2 <= x <= 4 { x >= 4 <=> { x = 4",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide with final result for case 2",
+        "description_vi": "slide với kết quả cuối cùng cho trường hợp 2",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13798,31 +13810,29 @@
   },
   {
     "frame_id": "L25_V070_f0240",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0240",
+    "ocr_source_frame_id": "L25_V070_f0240",
+    "quality_flags": [],
+    "caption": "Mathematical slide concluding the total integer solutions from both cases.",
+    "detailed_caption": "The slide concludes the problem by stating that from both cases, there is 1 integer value of x that satisfies the condition. The text is displayed at the bottom of the lined yellow screen.",
+    "caption_vi": "Slide toán học kết luận tổng số nghiệm nguyên từ cả hai trường hợp.",
+    "detailed_caption_vi": "Slide kết luận bài toán bằng cách nêu rõ từ cả hai trường hợp, có 1 giá trị nguyên của x thỏa mãn điều kiện. Văn bản được hiển thị ở cuối màn hình màu vàng có dòng kẻ.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2 <=> { x^2 - 2x - 8 <= 0 { 2x - 4 >= 4 <=> { -2 <= x <= 4 { x >= 4 <=> { x = 4 Từ hai trường hợp, ta thấy có 1 giá trị nguyên x thỏa mãn.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide with final conclusion text",
+        "description_vi": "slide với văn bản kết luận cuối cùng",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -13832,31 +13842,29 @@
   },
   {
     "frame_id": "L25_V070_f0241",
-    "visual_source_frame_id": "L25_V070_f0205",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A computer screen displays a mathematical word problem with multiple-choice options.",
-    "detailed_caption": "A close-up shot shows a computer screen presenting a math question titled 'Ví dụ 4' concerning logarithmic and exponential inequalities, with options A, B, C, and D displayed below.",
-    "caption_vi": "Màn hình máy tính hiển thị bài toán đố toán học với các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị màn hình máy tính trình bày câu hỏi toán học mang tiêu đề 'Ví dụ 4' liên quan đến bất phương trình mũ và logarit, kèm theo các đáp án A, B, C và D bên dưới.",
-    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^x^2-2 - 9^x+3) [log2(2x-4) - 2] <= 0? A Vô số. B 0. C 1. D 3.",
+    "visual_source_frame_id": "L25_V070_f0241",
+    "ocr_source_frame_id": "L25_V070_f0241",
+    "quality_flags": [],
+    "caption": "Mathematical slide displaying the final conclusion of the problem.",
+    "detailed_caption": "This frame is identical to the previous one, showing the summary sentence about integer solutions at the bottom of the yellow slide.",
+    "caption_vi": "Slide toán học hiển thị kết luận cuối cùng của bài toán.",
+    "detailed_caption_vi": "Khung hình này giống hệt khung trước, hiển thị câu tóm tắt về các nghiệm nguyên ở cuối slide màu vàng.",
+    "ocr_text": "Ví dụ 4. Có bao nhiêu số nguyên x thỏa mãn (3^(x^2-2) - 9^(x+3)) [log_5 (2x-4) - 625] <= 0 ? (A) Vô số. (B) 0. (C) 1. (D) 3. Lời giải. Trường hợp 2: { 3^(x^2-2) - 9^(x+3) <= 0 { log_2 (2x-4) - 2 >= 0 <=> { 3^(x^2-2) <= 3^(2x+6) { log_2 (2x-4) >= 2 <=> { x^2 - 2x - 8 <= 0 { 2x - 4 >= 4 <=> { -2 <= x <= 4 { x >= 4 <=> { x = 4 Từ hai trường hợp, ta thấy có 1 giá trị nguyên x thỏa mãn.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.024,
-          0.051,
-          0.976,
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
           0.9149999999999999
         ],
-        "description": "computer screen showing math problem and multiple-choice options",
-        "description_vi": "màn hình máy tính hiển thị bài toán và các đáp án trắc nghiệm",
+        "description": "slide with final conclusion",
+        "description_vi": "slide với kết luận cuối cùng",
         "attributes": [
-          "screen",
+          "yellow",
           "text"
         ],
         "action": ""
@@ -16165,27 +16173,27 @@
     "visual_source_frame_id": "L25_V070_f0299",
     "ocr_source_frame_id": "L25_V070_f0299",
     "quality_flags": [],
-    "caption": "A full-screen slide shows a sign table and mathematical solution for the logarithmic inequality.",
-    "detailed_caption": "A full-screen view shows a math slide containing a sign chart table for the expression VT in the middle. Below the table are concluding statements and inequality derivations to find the number of integer values of y.",
-    "caption_vi": "Toàn cảnh slide hiển thị bảng xét dấu và phần giải pháp toán học cho bất phương trình logarit.",
-    "detailed_caption_vi": "Màn hình hiển thị slide chứa bảng xét dấu biểu thức VT ở giữa. Bên dưới là các kết luận và biến đổi bất phương trình để tìm số giá trị nguyên của y.",
-    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log5 x + x - 1) (log7 x - y) < 0? A 0. B 3. C 2. D 1. Lời giải. Ta có bảng xét dấu VT = (log5 x + x - 1) (log7 x - y) như sau: x 0 1 7^y +inf VT + 0 - 0 + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log7 51 =~ 2,02 Vì y nguyên dương nên y thuộc {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
+    "caption": "Mathematical slide presenting Ví dụ 5 with a sign chart and inequality solution.",
+    "detailed_caption": "The slide titled Ví dụ 5 presents a math problem about positive integer values of y. It includes a sign chart for the expression VT, the solution set S = (1; 7^y), and calculation steps to find that y can be 1 or 2.",
+    "caption_vi": "Slide toán học trình bày Ví dụ 5 với bảng xét dấu và lời giải bất phương trình.",
+    "detailed_caption_vi": "Slide có tiêu đề Ví dụ 5 trình bày một bài toán về các giá trị nguyên dương của y. Slide bao gồm một bảng xét dấu cho biểu thức VT, tập nghiệm S = (1; 7^y) và các bước tính toán để tìm ra y có thể bằng 1 hoặc 2.",
+    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log_5 x + x - 1) (log_7 x - y) < 0 ? (A) 0. (B) 3. (C) 2. (D) 1. Lời giải. Ta có bảng xét dấu VT = (log_5 x + x - 1) (log_7 x - y) như sau: x | 0 | 1 | 7^y | +oo VT | + | 0 | - | 0 | + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log_7 51 = 2,02 Vì y nguyên dương nên y \\in {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.0,
-          0.048,
-          1.0,
-          0.948
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
+          0.9149999999999999
         ],
-        "description": "a full-screen slide with a math sign table and solution",
-        "description_vi": "slide toàn màn hình chứa bảng xét dấu toán học và lời giải",
+        "description": "slide with math problem and sign chart",
+        "description_vi": "slide với bài toán và bảng xét dấu",
         "attributes": [
-          "screen",
-          "slide",
+          "yellow",
+          "text",
           "table"
         ],
         "action": ""
@@ -16198,28 +16206,27 @@
     "visual_source_frame_id": "L25_V070_f0300",
     "ocr_source_frame_id": "L25_V070_f0300",
     "quality_flags": [],
-    "caption": "A full-screen slide shows a sign table and mathematical solution for the logarithmic inequality.",
-    "detailed_caption": "A full-screen view shows a math slide containing a sign chart table for the expression VT in the middle. Below the table are concluding statements and inequality derivations to find the number of integer values of y.",
-    "caption_vi": "Toàn cảnh slide hiển thị bảng xét dấu và phần giải pháp toán học cho bất phương trình logarit.",
-    "detailed_caption_vi": "Màn hình hiển thị slide chứa bảng xét dấu biểu thức VT ở giữa. Bên dưới là các kết luận và biến đổi bất phương trình.",
-    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log5 x + x - 1) (log7 x - y) < 0? A 0. B 3. C 2. D 1. Lời giải. Ta có bảng xét dấu VT = (log5 x + x - 1) (log7 x - y) như sau: x 0 1 7^y +inf VT + 0 - 0 + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log7 51 =~ 2,02 Vì y nguyên dương nên y thuộc {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
+    "caption": "Mathematical slide displaying Ví dụ 5 solution details.",
+    "detailed_caption": "This frame is identical to the previous one, showing the sign chart and derivation steps for Ví dụ 5 on a lined yellow background.",
+    "caption_vi": "Slide toán học hiển thị chi tiết lời giải Ví dụ 5.",
+    "detailed_caption_vi": "Khung hình này giống hệt khung trước, hiển thị bảng xét dấu và các bước biến đổi cho Ví dụ 5 trên nền vàng có dòng kẻ.",
+    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log_5 x + x - 1) (log_7 x - y) < 0 ? (A) 0. (B) 3. (C) 2. (D) 1. Lời giải. Ta có bảng xét dấu VT = (log_5 x + x - 1) (log_7 x - y) như sau: x | 0 | 1 | 7^y | +oo VT | + | 0 | - | 0 | + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log_7 51 = 2,02 Vì y nguyên dương nên y \\in {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.0,
-          0.048,
-          1.0,
-          0.948
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
+          0.9149999999999999
         ],
-        "description": "a full-screen slide with a math sign table and solution",
-        "description_vi": "slide toàn màn hình chứa bảng xét dấu toán học và lời giải",
+        "description": "slide displaying math problem details",
+        "description_vi": "slide hiển thị chi tiết bài toán",
         "attributes": [
-          "screen",
-          "slide",
-          "table"
+          "yellow",
+          "text"
         ],
         "action": ""
       }
@@ -16228,33 +16235,30 @@
   },
   {
     "frame_id": "L25_V070_f0301",
-    "visual_source_frame_id": "L25_V070_f0300",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A full-screen slide shows a sign table and mathematical solution for the logarithmic inequality.",
-    "detailed_caption": "A full-screen view shows a math slide containing a sign chart table for the expression VT in the middle. Below the table are concluding statements and inequality derivations to find the number of integer values of y.",
-    "caption_vi": "Toàn cảnh slide hiển thị bảng xét dấu và phần giải pháp toán học cho bất phương trình logarit.",
-    "detailed_caption_vi": "Màn hình hiển thị slide chứa bảng xét dấu biểu thức VT ở giữa. Bên dưới là các kết luận và biến đổi bất phương trình.",
-    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log5 x + x - 1) (log7 x - y) < 0? A 0. B 3. C 2. D 1. Lời giải. Ta có bảng xét dấu VT = (log5 x + x - 1) (log7 x - y) như sau: x 0 1 7^y +inf VT + 0 - 0 + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log7 51 =~ 2,02 Vì y nguyên dương nên y thuộc {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
+    "visual_source_frame_id": "L25_V070_f0301",
+    "ocr_source_frame_id": "L25_V070_f0301",
+    "quality_flags": [],
+    "caption": "Mathematical slide showing the solution for Ví dụ 5.",
+    "detailed_caption": "The slide presents the complete solution to Ví dụ 5, featuring text, equations, and a sign table against a pale yellow background.",
+    "caption_vi": "Slide toán học hiển thị lời giải cho Ví dụ 5.",
+    "detailed_caption_vi": "Slide trình bày lời giải hoàn chỉnh cho Ví dụ 5, gồm văn bản, phương trình và bảng dấu trên nền màu vàng nhạt.",
+    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log_5 x + x - 1) (log_7 x - y) < 0 ? (A) 0. (B) 3. (C) 2. (D) 1. Lời giải. Ta có bảng xét dấu VT = (log_5 x + x - 1) (log_7 x - y) như sau: x | 0 | 1 | 7^y | +oo VT | + | 0 | - | 0 | + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log_7 51 = 2,02 Vì y nguyên dương nên y \\in {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.0,
-          0.048,
-          1.0,
-          0.948
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
+          0.9149999999999999
         ],
-        "description": "a full-screen slide with a math sign table and solution",
-        "description_vi": "slide toàn màn hình chứa bảng xét dấu toán học và lời giải",
+        "description": "slide with math solution and table",
+        "description_vi": "slide với lời giải toán học và bảng",
         "attributes": [
-          "screen",
-          "slide",
-          "table"
+          "yellow",
+          "text"
         ],
         "action": ""
       }
@@ -16263,33 +16267,30 @@
   },
   {
     "frame_id": "L25_V070_f0302",
-    "visual_source_frame_id": "L25_V070_f0300",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A full-screen slide shows a sign table and mathematical solution for the logarithmic inequality.",
-    "detailed_caption": "A full-screen view shows a math slide containing a sign chart table for the expression VT in the middle. Below the table are concluding statements and inequality derivations to find the number of integer values of y.",
-    "caption_vi": "Toàn cảnh slide hiển thị bảng xét dấu và phần giải pháp toán học cho bất phương trình logarit.",
-    "detailed_caption_vi": "Màn hình hiển thị slide chứa bảng xét dấu biểu thức VT ở giữa. Bên dưới là các kết luận và biến đổi bất phương trình.",
-    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log5 x + x - 1) (log7 x - y) < 0? A 0. B 3. C 2. D 1. Lời giải. Ta có bảng xét dấu VT = (log5 x + x - 1) (log7 x - y) như sau: x 0 1 7^y +inf VT + 0 - 0 + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log7 51 =~ 2,02 Vì y nguyên dương nên y thuộc {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
+    "visual_source_frame_id": "L25_V070_f0302",
+    "ocr_source_frame_id": "L25_V070_f0302",
+    "quality_flags": [],
+    "caption": "Mathematical slide displaying the complete resolution of Ví dụ 5.",
+    "detailed_caption": "This final frame shows the fully detailed steps and conclusion for Ví dụ 5 regarding logarithmic inequalities with parameter y.",
+    "caption_vi": "Slide toán học hiển thị toàn bộ quá trình giải Ví dụ 5.",
+    "detailed_caption_vi": "Khung hình cuối cùng này hiển thị các bước chi tiết đầy đủ và kết luận cho Ví dụ 5 về bất phương trình logarit chứa tham số y.",
+    "ocr_text": "Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log_5 x + x - 1) (log_7 x - y) < 0 ? (A) 0. (B) 3. (C) 2. (D) 1. Lời giải. Ta có bảng xét dấu VT = (log_5 x + x - 1) (log_7 x - y) như sau: x | 0 | 1 | 7^y | +oo VT | + | 0 | - | 0 | + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log_7 51 = 2,02 Vì y nguyên dương nên y \\in {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.0,
-          0.048,
-          1.0,
-          0.948
+          0.014000000000000002,
+          0.079,
+          0.9810000000000001,
+          0.9149999999999999
         ],
-        "description": "a full-screen slide with a math sign table and solution",
-        "description_vi": "slide toàn màn hình chứa bảng xét dấu toán học và lời giải",
+        "description": "slide showing complete math solution",
+        "description_vi": "slide hiển thị lời giải toán học đầy đủ",
         "attributes": [
-          "screen",
-          "slide",
-          "table"
+          "yellow",
+          "text"
         ],
         "action": ""
       }
@@ -16493,30 +16494,13 @@
     "visual_source_frame_id": "L25_V070_f0310",
     "ocr_source_frame_id": "L25_V070_f0310",
     "quality_flags": [],
-    "caption": "A very bright, overexposed view of a library interior.",
-    "detailed_caption": "An extremely overexposed frame showing faint outlines of bookshelves and a person standing in the center of a library.",
-    "caption_vi": "Khung cảnh nội thất thư viện bị chiếu sáng quá mức.",
-    "detailed_caption_vi": "Khung hình bị lóa sáng hiển thị mờ ảo các kệ sách và một người đứng ở trung tâm thư viện.",
+    "caption": "A faded and heavily overexposed abstract image.",
+    "detailed_caption": "This frame is heavily overexposed and washed out with a bright cream and white color scheme. Faint, indistinct vertical structures are barely visible in the background. No distinct foreground subjects or clear objects can be identified.",
+    "caption_vi": "Một hình ảnh trừu tượng bị mờ nhạt và cháy sáng nặng.",
+    "detailed_caption_vi": "Khung hình này bị cháy sáng nặng và nhạt nhòa với tông màu kem và trắng sáng. Các cấu trúc thẳng đứng mờ nhạt chỉ có thể nhìn thấy lờ mờ ở phía sau. Không thể xác định được đối tượng tiền cảnh hay vật thể rõ ràng nào.",
     "ocr_text": "",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.43899999999999995,
-          0.222,
-          0.562,
-          1.0
-        ],
-        "description": "a person standing in a brightly overexposed library",
-        "description_vi": "một người đứng trong thư viện bị lóa sáng",
-        "attributes": [
-          "person"
-        ],
-        "action": "standing"
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -17060,10 +17044,10 @@
     "visual_source_frame_id": "L25_V070_f0322",
     "ocr_source_frame_id": "L25_V070_f0322",
     "quality_flags": [],
-    "caption": "A medium shot of students working on computers in a lab setting.",
-    "detailed_caption": "A medium shot shows several students seated at long wooden desks facing computer monitors. A female student in the foreground wears glasses and a headset while typing on a keyboard. Additional students extend into the background along the computer station row.",
-    "caption_vi": "Cảnh trung cảnh các học sinh làm việc với máy tính trong phòng máy.",
-    "detailed_caption_vi": "Cảnh trung cảnh cho thấy nhiều học sinh ngồi bên bàn gỗ dài đối diện màn hình máy tính. Nữ sinh ở tiền cảnh đeo kính và tai nghe đang gõ bàn phím. Các học sinh khác ngồi kéo dài về phía sau dọc theo dãy máy tính.",
+    "caption": "Several students wearing headsets sitting at computer desks in a brightly lit lab.",
+    "detailed_caption": "This medium shot shows a row of students seated at computers inside a brightly lit laboratory. In the foreground on the right, a smiling student with dark hair and glasses wears a white shirt and headphones while typing on a keyboard. Several other students sit further down the row in similar attire, each facing a computer monitor.",
+    "caption_vi": "Nhiều học sinh đeo tai nghe ngồi bên bàn máy tính trong một phòng thí nghiệm sáng sủa.",
+    "detailed_caption_vi": "Khung hình trung cảnh này cho thấy một hàng học sinh ngồi bên các máy tính bên trong một phòng thí nghiệm sáng sủa. Ở tiền cảnh phía bên phải, một học sinh tóc tối màu đeo kính mặc áo sơ mi trắng và tai nghe đang gõ bàn phím. Một số học sinh khác ngồi xa hơn dọc theo hàng với trang phục tương tự, mỗi người đối diện với một màn hình máy tính.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -17071,53 +17055,69 @@
         "object_id": "computer_monitor_0",
         "label": "computer monitor",
         "bbox": [
-          0.21200000000000002,
-          0.16,
-          0.354,
-          0.9029999999999999
+          0.21000000000000002,
+          0.161,
+          0.339,
+          0.8770000000000001
         ],
-        "description": "black monitor on wooden desk",
-        "description_vi": "màn hình máy tính màu đen trên bàn gỗ",
+        "description": "large black widescreen computer monitor sitting on a light wooden desk",
+        "description_vi": "màn hình máy tính màn hình rộng màu đen lớn đặt trên bàn gỗ sáng màu",
         "attributes": [
           "black",
-          "desktop screen"
+          "widescreen"
         ],
         "action": ""
       },
       {
-        "object_id": "student_0",
-        "label": "student",
+        "object_id": "keyboard_0",
+        "label": "keyboard",
         "bbox": [
-          0.43200000000000005,
-          0.247,
-          0.6950000000000001,
-          0.652
+          0.4,
+          0.656,
+          0.567,
+          0.9430000000000001
         ],
-        "description": "male student in white shirt wearing headset",
-        "description_vi": "nam sinh mặc áo sơ mi trắng đeo tai nghe",
+        "description": "black computer keyboard placed in front of the monitor on the desk",
+        "description_vi": "bàn phím máy tính màu đen đặt trước màn hình trên bàn",
         "attributes": [
-          "male",
-          "wearing headset",
-          "white shirt"
+          "black"
         ],
-        "action": "using computer"
+        "action": "being typed on"
       },
       {
-        "object_id": "student_1",
-        "label": "student",
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.42699999999999994,
+          0.245,
+          0.692,
+          0.647
+        ],
+        "description": "student in a white shirt and headphones seated further down the desk row",
+        "description_vi": "học sinh mặc áo sơ mi trắng và tai nghe ngồi xa hơn dọc theo hàng bàn",
+        "attributes": [
+          "white shirt",
+          "headphones"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
           0.471,
-          0.152,
-          0.976,
-          1.0
+          0.156,
+          0.9720000000000001,
+          0.995
         ],
-        "description": "female student wearing glasses and headset typing on keyboard",
-        "description_vi": "nữ sinh đeo kính và tai nghe đang gõ bàn phím",
+        "description": "smiling student with dark hair, glasses, white shirt, and black headphones typing at a desk",
+        "description_vi": "học sinh cười tóc tối màu, đeo kính, mặc áo sơ mi trắng và tai nghe đen đang gõ phím tại bàn",
         "attributes": [
-          "female",
-          "wearing glasses",
-          "wearing headset",
-          "white shirt"
+          "smiling",
+          "glasses",
+          "white shirt",
+          "headphones",
+          "long hair"
         ],
         "action": "typing"
       }
@@ -17126,32 +17126,52 @@
       {
         "subject_id": "computer_monitor_0",
         "predicate": "left_of",
-        "object_id": "student_0"
+        "object_id": "keyboard_0"
       },
       {
-        "subject_id": "student_0",
+        "subject_id": "keyboard_0",
         "predicate": "right_of",
         "object_id": "computer_monitor_0"
       },
       {
         "subject_id": "computer_monitor_0",
         "predicate": "left_of",
-        "object_id": "student_1"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "student_1",
+        "subject_id": "person_0",
         "predicate": "right_of",
         "object_id": "computer_monitor_0"
       },
       {
-        "subject_id": "student_0",
-        "predicate": "overlapping",
-        "object_id": "student_1"
+        "subject_id": "computer_monitor_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
       },
       {
-        "subject_id": "student_1",
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "computer_monitor_0"
+      },
+      {
+        "subject_id": "keyboard_0",
         "predicate": "overlapping",
-        "object_id": "student_0"
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "keyboard_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
       }
     ]
   },
@@ -17984,10 +18004,10 @@
     "visual_source_frame_id": "L25_V070_f0337",
     "ocr_source_frame_id": "L25_V070_f0337",
     "quality_flags": [],
-    "caption": "An interior shot with bright overexposed lighting obscuring the room details.",
-    "detailed_caption": "An interior shot shows a room with bright, overexposed lighting that heavily washes out the scene. Faint outlines of furniture and a person can be discerned through the intense glare. The composition is mostly dominated by bright white and yellow light artifacts.",
-    "caption_vi": "Cảnh nội thất bị ánh sáng chói lóa làm mờ các chi tiết trong phòng.",
-    "detailed_caption_vi": "Cảnh quay nội thất cho thấy một căn phòng bị chói sáng nặng nề bởi ánh sáng trắng vàng. Chỉ có thể nhận ra mờ nhạt hình bóng đồ đạc và một người qua lớp ánh sáng lóa. Bố cục chủ yếu bị chiếm bởi các hiệu ứng sáng chói.",
+    "caption": "A heavily overexposed and blurred indoor scene with warm golden lighting.",
+    "detailed_caption": "This interior shot is heavily washed out with blinding white and golden light flares across the frame. Faint outlines of furniture and structural elements are visible through the glare. No distinct subjects or clear objects can be discerned.",
+    "caption_vi": "Một cảnh trong nhà bị lóa sáng nặng và mờ với ánh sáng vàng ấm áp.",
+    "detailed_caption_vi": "Cảnh nội thất này bị nhạt nhòa nặng nề với các tia sáng trắng lóa và vàng bao trùm khung hình. Những đường nét mờ nhạt của đồ nội thất và các yếu tố cấu trúc có thể nhìn thấy qua lớp ánh sáng chói. Không thể nhận ra các đối tượng rõ ràng hay vật thể sắc nét nào.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
@@ -18223,75 +18243,32 @@
     "visual_source_frame_id": "L25_V070_f0341",
     "ocr_source_frame_id": "L25_V070_f0341",
     "quality_flags": [],
-    "caption": "A person plays drums in a brightly lit room with vertical blinds.",
-    "detailed_caption": "A close shot shows a person playing a drum set inside a brightly lit room with vertical window blinds. The foreground features parts of the drum kit with a strong glare overexposing portions of the image. The drummer is partially visible wearing a light shirt.",
-    "caption_vi": "Một người đang chơi trống trong căn phòng ngập tràn ánh sáng với rèm dọc.",
-    "detailed_caption_vi": "Cảnh cận cho thấy một người đang chơi dàn trống trong căn phòng sáng sủa có rèm cửa dọc. Phía trước hiển thị các phần của bộ trống với ánh sáng mạnh làm chói một phần hình ảnh. Người đánh trống mặc áo sáng màu.",
+    "caption": "An overexposed indoor scene showing blurred figures near vertical blinds.",
+    "detailed_caption": "This bright, overexposed indoor shot features strong light glare across the left and bottom portions. In the background, vertical window blinds and faint silhouettes of people are visible. A blurred drum set is present in the lower right foreground.",
+    "caption_vi": "Một cảnh trong nhà bị cháy sáng cho thấy các bóng người mờ bên cạnh rèm dọc.",
+    "detailed_caption_vi": "Khung hình trong nhà sáng chói, cháy sáng này có ánh sáng lóa mạnh ở phần bên trái và phía dưới. Ở hậu cảnh, rèm cửa sổ dọc và bóng mờ của mọi người có thể nhìn thấy được. Một bộ trống bị mờ xuất hiện ở tiền cảnh phía dưới bên phải.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "drum_0",
-        "label": "drum",
+        "object_id": "drums_0",
+        "label": "drums",
         "bbox": [
-          0.745,
-          0.5489999999999999,
+          0.746,
+          0.5409999999999999,
           1.0,
-          1.0
+          0.995
         ],
-        "description": "drum with sparkling finish on the right",
-        "description_vi": "trống có bề mặt lấp lánh ở bên phải",
-        "attributes": [
-          "sparkling"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "drum_kit_0",
-        "label": "drum kit",
-        "bbox": [
-          0.001,
-          0.435,
-          0.506,
-          1.0
-        ],
-        "description": "drum set in the foreground",
-        "description_vi": "bộ trống ở phía trước",
+        "description": "partially visible drum set in the lower right foreground with shiny hardware",
+        "description_vi": "bộ trống nhìn thấy một phần ở tiền cảnh phía dưới bên phải với phần cứng lấp lánh",
         "attributes": [
           "shiny",
-          "metallic"
+          "partially visible"
         ],
         "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.477,
-          0.19,
-          0.762,
-          0.963
-        ],
-        "description": "person wearing a white shirt playing drums",
-        "description_vi": "người mặc áo sơ mi trắng đang chơi trống",
-        "attributes": [
-          "white shirt"
-        ],
-        "action": "playing drums"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "drum_kit_0",
-        "predicate": "left_of",
-        "object_id": "drum_0"
-      },
-      {
-        "subject_id": "drum_0",
-        "predicate": "right_of",
-        "object_id": "drum_kit_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V070_f0342",
@@ -18983,77 +18960,76 @@
     "frame_id": "L25_V070_f0351",
     "visual_source_frame_id": "L25_V070_f0351",
     "ocr_source_frame_id": "L25_V070_f0351",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A teacher sits in front of a laptop while a math problem is displayed on screen.",
-    "detailed_caption": "A medium shot shows a wearing glasses and a suit jacket seated in front of an open laptop with an ASUS logo. A screen on the right displays a mathematical problem and a sign chart in Vietnamese. A chalkboard with faded mathematical formulas forms the background.",
-    "caption_vi": "Một thầy giáo ngồi trước máy tính xách tay trong khi bài toán hiển thị trên màn hình.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một thanh niên đeo kính và mặc áo vest ngồi trước một chiếc máy tính xách tay mở có logo ASUS. Màn hình bên phải hiển thị một bài toán và bảng xét dấu bằng tiếng Việt. Bảng đen với các công thức toán học mờ tạo thành phông nền phía sau.",
-    "ocr_text": "THANH NIÊN Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log5 x + x - 1) (log7 x - y) < 0? A 0. B 3. C 2 D 1. Lời giải. Ta có bảng xét dấu VT = (log5 x + x - 1)(log7 x - y) như sau: -inf 0 1 7^y +inf VT + 0 - 0 + Vậy bất phương trình có có tập nghiệm là S = (1; 7^y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7^y <= 51 <=> y <= log7 51 = 2,02 Vì y nguyên dương nên y \\in {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
+    "quality_flags": [],
+    "caption": "A teacher in a suit sitting at a desk with a laptop next to a math slide on screen.",
+    "detailed_caption": "This medium shot features a male teacher wearing a dark blue suit and white shirt, seated behind a desk with an ASUS laptop. To his right, a large screen displays an educational math slide with formulas and multiple-choice questions. The background is a dark chalkboard covered in faint white math diagrams.",
+    "caption_vi": "Một giáo viên mặc vest ngồi bên bàn có máy tính xách tay bên cạnh slide toán học trên màn hình.",
+    "detailed_caption_vi": "Khung hình trung cảnh này có một nam giáo viên mặc bộ vest xanh đậm và áo sơ mi trắng, ngồi sau bàn làm việc với một máy tính xách tay ASUS. Ở phía bên phải của anh ấy, một màn hình lớn hiển thị slide toán học mang tính giáo dục với các công thức và câu hỏi trắc nghiệm. Hậu cảnh là một bảng đen tối màu được phủ các biểu đồ toán học màu trắng mờ.",
+    "ocr_text": "THANH NIÊN Ví dụ 5. Có bao nhiêu số nguyên dương y sao cho với mỗi y có không quá 50 số nguyên x thỏa mãn (log5 x + x - 1)(log7 x - y) < 0? A 0. B 3. C 2 D 1. Lời giải. Ta có bảng xét dấu VT = (log5 x + x - 1)(log7 x - y) như sau: x 0 1 7y +oo VT + 0 - 0 + Vậy bất phương trình có có tập nghiệm là S = (1; 7y). Ta thấy (1, 51) chứa 50 số nguyên. Do đó tập nghiệm của bất phương trình có không quá 50 số nguyên thì 7y <= 51 <=> y <= log7 51 = 2,02 Vì y nguyên dương nên y thuộc {1; 2}. Vậy có 2 giá trị nguyên dương của y thỏa mãn.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16299999999999998,
+          0.16499999999999998,
           0.7979999999999999,
-          0.429,
+          0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop with ASUS logo on the lid",
-        "description_vi": "máy tính xách tay màu xám có logo ASUS trên nắp",
+        "description": "dark grey ASUS laptop placed on the desk in front of the teacher",
+        "description_vi": "máy tính xách tay ASUS màu xám đậm đặt trên bàn trước mặt giáo viên",
         "attributes": [
-          "gray",
-          "electronic"
+          "asus brand",
+          "grey"
         ],
         "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.122,
-          0.207,
-          0.46900000000000003,
-          0.9600000000000001
-        ],
-        "description": "man wearing glasses and a suit jacket seated in front of a laptop",
-        "description_vi": "nam thanh niên đeo kính và mặc áo vest ngồi trước máy tính xách tay",
-        "attributes": [
-          "glasses",
-          "suit jacket",
-          "white shirt"
-        ],
-        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
           0.45099999999999996,
-          0.007,
-          1.0,
-          0.5239999999999999
+          0.011,
+          0.9949999999999999,
+          0.521
         ],
-        "description": "digital display showing a mathematical problem and sign chart",
-        "description_vi": "màn hình hiển thị bài toán và bảng xét dấu",
+        "description": "large monitor displaying math formulas and multiple-choice questions on a light background",
+        "description_vi": "màn hình lớn hiển thị các công thức toán học và câu hỏi trắc nghiệm trên nền sáng",
         "attributes": [
-          "white",
-          "digital"
+          "educational slide",
+          "text-heavy"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.124,
+          0.206,
+          0.471,
+          0.9600000000000001
+        ],
+        "description": "male teacher with short dark hair, glasses, wearing a dark blue suit jacket and white shirt",
+        "description_vi": "nam giáo viên tóc ngắn tối màu, đeo kính, mặc áo khoác vest xanh đậm và áo sơ mi trắng",
+        "attributes": [
+          "glasses",
+          "dark suit",
+          "white shirt",
+          "short hair"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -19063,76 +19039,74 @@
     "frame_id": "L25_V070_f0352",
     "visual_source_frame_id": "L25_V070_f0352",
     "ocr_source_frame_id": "L25_V070_f0352",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A teacher sits in front of a laptop while a math problem is displayed on screen.",
-    "detailed_caption": "A medium shot shows a wearing glasses and a suit jacket seated at a desk with an open laptop. A screen on the right displays a mathematical problem with multiple-choice options in Vietnamese. The background consists of a dark chalkboard with white mathematical drawings.",
-    "caption_vi": "Một thầy giáo ngồi trước máy tính xách tay khi bài toán xuất hiện trên màn hình.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một thanh niên đeo kính và mặc áo vest ngồi tại bàn với máy tính xách tay đang mở. Màn hình bên phải hiển thị một bài toán với các lựa chọn trắc nghiệm bằng tiếng Việt. Phông nền là bảng đen với các hình vẽ toán học màu trắng.",
-    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2} (x - 2)^2 + 4(m - 5) log_{1/2} (1 / x - 2) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +inf). B [7/3; +inf). C [-3; 7/3]. D (-inf; 7/3].",
+    "quality_flags": [],
+    "caption": "A teacher in a suit sitting at a desk with a laptop next to a math slide on screen.",
+    "detailed_caption": "This medium shot shows a male teacher in a dark blue suit jacket and white shirt, seated behind an ASUS laptop. To his right, a monitor displays a math slide titled 'Ví dụ 6.' with algebraic inequalities and multiple-choice options. The background features a dark chalkboard with faint geometric and mathematical drawings.",
+    "caption_vi": "Một giáo viên mặc vest ngồi bên bàn làm việc với máy tính xách tay cạnh slide toán học trên màn hình.",
+    "detailed_caption_vi": "Khung hình trung cảnh này cho thấy một nam giáo viên mặc áo khoác vest xanh đậm và áo sơ mi trắng, ngồi sau máy tính xách tay ASUS. Ở phía bên phải của anh ấy, màn hình hiển thị slide toán học có tiêu đề 'Ví dụ 6.' với các bất phương trình đại số và các lựa chọn trắc nghiệm. Hậu cảnh có bảng đen tối màu với các hình vẽ hình học và toán học mờ.",
+    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2}(x - 2)^2 + 4(m - 5) log_{1/2}(1/(x - 2)) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +oo). B [7/3; +oo). C [-3; 7/3]. D (-oo; 7/3].",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16299999999999998,
+          0.16499999999999998,
           0.7979999999999999,
-          0.42800000000000005,
+          0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop on the desk",
-        "description_vi": "máy tính xách tay màu xám trên bàn",
+        "description": "dark grey ASUS laptop on the white desk",
+        "description_vi": "máy tính xách tay ASUS màu xám đậm trên bàn màu trắng",
         "attributes": [
-          "gray"
+          "grey",
+          "asus brand"
         ],
         "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.11699999999999999,
-          0.206,
-          0.46699999999999997,
-          0.9600000000000001
-        ],
-        "description": "man wearing glasses and a suit jacket seated at a desk",
-        "description_vi": "nam thanh niên đeo kính và mặc áo vest ngồi tại bàn",
-        "attributes": [
-          "glasses",
-          "suit jacket",
-          "white shirt"
-        ],
-        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
           0.45099999999999996,
-          0.008,
-          1.0,
-          0.523
+          0.011,
+          0.9949999999999999,
+          0.521
         ],
-        "description": "digital display showing a math problem with multiple-choice options",
-        "description_vi": "màn hình hiển thị bài toán với các lựa chọn trắc nghiệm",
+        "description": "monitor displaying math equations and multiple-choice options on a light slide",
+        "description_vi": "màn hình hiển thị các phương trình toán học và các tùy chọn trắc nghiệm trên slide sáng màu",
         "attributes": [
-          "white",
-          "digital"
+          "educational slide"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.11699999999999999,
+          0.206,
+          0.46799999999999997,
+          0.9600000000000001
+        ],
+        "description": "male teacher with short dark hair, glasses, dark blue suit, and white shirt sitting at a desk",
+        "description_vi": "nam giáo viên tóc ngắn tối màu, đeo kính, vest xanh đậm và áo sơ mi trắng đang ngồi tại bàn",
+        "attributes": [
+          "glasses",
+          "dark suit",
+          "white shirt"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -19142,75 +19116,73 @@
     "frame_id": "L25_V070_f0353",
     "visual_source_frame_id": "L25_V070_f0353",
     "ocr_source_frame_id": "L25_V070_f0353",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A teacher speaks while seated at a desk with a laptop and a screen showing math formulas.",
-    "detailed_caption": "A medium shot shows a with glasses and a suit jacket speaking while seated at a desk with an open laptop. To his right, a digital screen displays a mathematical inequality problem with multiple-choice options. A dark chalkboard with faint formulas is visible in the background.",
-    "caption_vi": "Một thầy giáo đang nói chuyện khi ngồi bên bàn làm việc với máy tính xách tay và màn hình toán học.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một thanh niên đeo kính và mặc áo vest đang nói chuyện khi ngồi tại bàn làm việc với máy tính xách tay đang mở. Phía bên phải, màn hình kỹ thuật số hiển thị bài toán bất phương trình với các lựa chọn trắc nghiệm. Bảng đen tối màu với các công thức mờ ở phía sau.",
-    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2} (x - 2)^2 + 4(m - 5) log_{1/2} (1 / x - 2) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +inf). B [7/3; +inf). C [-3; 7/3]. D (-inf; 7/3].",
+    "quality_flags": [],
+    "caption": "A teacher in a suit sitting at a desk with a laptop next to a math slide on screen.",
+    "detailed_caption": "This medium shot features a male teacher wearing a dark blue suit and glasses, seated at a desk with an ASUS laptop. To his right, a large monitor shows a math lesson slide with example 6 and algebraic inequalities. The background is a dark chalkboard with faint white drawings.",
+    "caption_vi": "Một giáo viên mặc vest ngồi bên bàn làm việc có máy tính xách tay bên cạnh slide toán học trên màn hình.",
+    "detailed_caption_vi": "Khung hình trung cảnh này có một nam giáo viên mặc vest xanh đậm và đeo kính, ngồi tại bàn làm việc với máy tính xách tay ASUS. Ở bên phải anh ấy, một màn hình lớn hiển thị slide bài học toán với ví dụ 6 và các bất phương trình đại số. Hậu cảnh là một bảng đen tối màu với các hình vẽ màu trắng mờ.",
+    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2}(x - 2)^2 + 4(m - 5) log_{1/2}(1/(x - 2)) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +oo). B [7/3; +oo). C [-3; 7/3]. D (-oo; 7/3].",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16299999999999998,
+          0.16499999999999998,
           0.7979999999999999,
-          0.42800000000000005,
+          0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop on the desk",
-        "description_vi": "máy tính xách tay màu xám trên bàn",
+        "description": "dark laptop with ASUS logo on the desk",
+        "description_vi": "máy tính xách tay màu tối có logo ASUS trên bàn",
         "attributes": [
-          "gray"
+          "asus brand"
         ],
         "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.11699999999999999,
-          0.206,
-          0.46699999999999997,
-          0.9600000000000001
-        ],
-        "description": "man wearing glasses and a suit jacket speaking at a desk",
-        "description_vi": "nam thanh niên đeo kính và mặc áo vest đang nói chuyện tại bàn",
-        "attributes": [
-          "glasses",
-          "suit jacket"
-        ],
-        "action": "speaking"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
           0.45099999999999996,
-          0.008,
-          1.0,
-          0.523
+          0.011,
+          0.9949999999999999,
+          0.521
         ],
-        "description": "digital screen showing a math problem",
-        "description_vi": "màn hình kỹ thuật số hiển thị bài toán",
+        "description": "monitor displaying math lecture content on a bright slide",
+        "description_vi": "màn hình hiển thị nội dung bài giảng toán trên slide sáng",
         "attributes": [
-          "white",
-          "digital"
+          "slide"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.11699999999999999,
+          0.206,
+          0.46799999999999997,
+          0.9600000000000001
+        ],
+        "description": "male teacher with glasses, dark suit, and white shirt seated at a desk",
+        "description_vi": "nam giáo viên đeo kính, vest tối màu và áo sơ mi trắng đang ngồi tại bàn",
+        "attributes": [
+          "glasses",
+          "dark suit",
+          "white shirt"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -19220,75 +19192,72 @@
     "frame_id": "L25_V070_f0354",
     "visual_source_frame_id": "L25_V070_f0354",
     "ocr_source_frame_id": "L25_V070_f0354",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A teacher sits at a desk with a laptop while a math problem is displayed on a screen.",
-    "detailed_caption": "A medium shot shows a wearing glasses and a suit jacket seated at a desk with an open laptop. A digital display screen on the right presents a mathematical problem with multiple-choice answers. A dark chalkboard with faded white diagrams is in the background.",
-    "caption_vi": "Một thầy giáo ngồi tại bàn với máy tính xách tay khi bài toán hiển thị trên màn hình.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một thanh niên đeo kính và mặc áo vest ngồi tại bàn với máy tính xách tay đang mở. Màn hình hiển thị kỹ thuật số bên phải trình bày bài toán với các đáp án trắc nghiệm. Bảng đen tối màu với các hình vẽ mờ ở phía sau.",
-    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2} (x - 2)^2 + 4(m - 5) log_{1/2} (1 / x - 2) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +inf). B [7/3; +inf). C [-3; 7/3]. D (-inf; 7/3].",
+    "quality_flags": [],
+    "caption": "A teacher in a suit sitting at a desk with a laptop next to a math slide on screen.",
+    "detailed_caption": "This medium shot shows a male teacher in a dark blue suit and glasses seated behind a desk with a laptop. To his right, an educational slide on a monitor displays math problem example 6 with multiple-choice options. The background consists of a dark chalkboard with faint white diagrams.",
+    "caption_vi": "Một giáo viên mặc vest ngồi bên bàn làm việc có máy tính xách tay cạnh slide toán học trên màn hình.",
+    "detailed_caption_vi": "Khung hình trung cảnh này cho thấy một nam giáo viên mặc vest xanh đậm và đeo kính ngồi sau bàn làm việc có máy tính xách tay. Ở phía bên phải của anh ấy, một slide giáo dục trên màn hình hiển thị bài toán ví dụ 6 với các tùy chọn trắc nghiệm. Hậu cảnh bao gồm một bảng đen tối màu với các biểu đồ màu trắng mờ.",
+    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2}(x - 2)^2 + 4(m - 5) log_{1/2}(1/(x - 2)) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +oo). B [7/3; +oo). C [-3; 7/3]. D (-oo; 7/3].",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16299999999999998,
+          0.16499999999999998,
           0.7979999999999999,
-          0.42800000000000005,
+          0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop on the desk",
-        "description_vi": "máy tính xách tay màu xám trên bàn",
+        "description": "dark ASUS laptop on the desk",
+        "description_vi": "máy tính xách tay ASUS màu tối trên bàn",
         "attributes": [
-          "gray"
+          "laptop"
         ],
         "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.122,
-          0.206,
-          0.46699999999999997,
-          0.9600000000000001
-        ],
-        "description": "man wearing glasses and a suit jacket seated at a desk",
-        "description_vi": "nam thanh niên đeo kính và mặc áo vest ngồi tại bàn",
-        "attributes": [
-          "glasses",
-          "suit jacket"
-        ],
-        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
           0.45099999999999996,
-          0.008,
-          1.0,
-          0.523
+          0.011,
+          0.9949999999999999,
+          0.521
         ],
-        "description": "digital screen showing a math problem with multiple-choice options",
-        "description_vi": "màn hình kỹ thuật số hiển thị bài toán với các lựa chọn trắc nghiệm",
+        "description": "monitor displaying math lesson slide with text",
+        "description_vi": "màn hình hiển thị slide bài học toán có chữ",
         "attributes": [
-          "white",
-          "digital"
+          "slide"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.11699999999999999,
+          0.206,
+          0.46799999999999997,
+          0.9600000000000001
+        ],
+        "description": "male teacher with glasses and dark suit sitting at a desk",
+        "description_vi": "nam giáo viên đeo kính và vest tối màu đang ngồi tại bàn",
+        "attributes": [
+          "glasses",
+          "dark suit"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -19296,78 +19265,74 @@
   },
   {
     "frame_id": "L25_V070_f0355",
-    "visual_source_frame_id": "L25_V070_f0354",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "removed_inferred_demographic",
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a desk with a laptop while a math problem is displayed on a screen.",
-    "detailed_caption": "A medium shot shows a wearing glasses and a suit jacket seated at a desk with an open laptop. A digital display screen on the right presents a mathematical problem with multiple-choice answers. A dark chalkboard with faded white diagrams is in the background.",
-    "caption_vi": "Một thầy giáo ngồi tại bàn với máy tính xách tay khi bài toán hiển thị trên màn hình.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một thanh niên đeo kính và mặc áo vest ngồi tại bàn với máy tính xách tay đang mở. Màn hình hiển thị kỹ thuật số bên phải trình bày bài toán với các đáp án trắc nghiệm. Bảng đen tối màu với các hình vẽ mờ ở phía sau.",
-    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2} (x - 2)^2 + 4(m - 5) log_{1/2} (1 / x - 2) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +inf). B [7/3; +inf). C [-3; 7/3]. D (-inf; 7/3].",
+    "visual_source_frame_id": "L25_V070_f0355",
+    "ocr_source_frame_id": "L25_V070_f0355",
+    "quality_flags": [],
+    "caption": "A teacher in a suit sitting at a desk with a laptop next to a math slide on screen.",
+    "detailed_caption": "This medium shot features a male teacher wearing a dark blue suit and glasses, seated behind a desk with an ASUS laptop. To his right, a large screen displays a math lecture slide with example 6 and multiple-choice questions. A dark chalkboard with faint white drawings forms the background.",
+    "caption_vi": "Một giáo viên mặc vest ngồi bên bàn làm việc có máy tính xách tay bên cạnh slide toán học trên màn hình.",
+    "detailed_caption_vi": "Khung hình trung cảnh này có một nam giáo viên mặc vest xanh đậm và đeo kính, ngồi sau bàn làm việc với máy tính xách tay ASUS. Ở phía bên phải của anh ấy, một màn hình lớn hiển thị slide bài giảng toán với ví dụ 6 và các câu hỏi trắc nghiệm. Một bảng đen tối màu với các hình vẽ màu trắng mờ tạo nên hậu cảnh.",
+    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2}(x - 2)^2 + 4(m - 5) log_{1/2}(1/(x - 2)) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +oo). B [7/3; +oo). C [-3; 7/3]. D (-oo; 7/3].",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16299999999999998,
+          0.16499999999999998,
           0.7979999999999999,
-          0.42800000000000005,
+          0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop on the desk",
-        "description_vi": "máy tính xách tay màu xám trên bàn",
+        "description": "dark ASUS laptop on the desk",
+        "description_vi": "máy tính xách tay ASUS màu tối trên bàn",
         "attributes": [
-          "gray"
+          "laptop"
         ],
         "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.122,
-          0.206,
-          0.46699999999999997,
-          0.9600000000000001
-        ],
-        "description": "man wearing glasses and a suit jacket seated at a desk",
-        "description_vi": "nam thanh niên đeo kính và mặc áo vest ngồi tại bàn",
-        "attributes": [
-          "glasses",
-          "suit jacket"
-        ],
-        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
           0.45099999999999996,
-          0.008,
-          1.0,
-          0.523
+          0.011,
+          0.9949999999999999,
+          0.521
         ],
-        "description": "digital screen showing a math problem with multiple-choice options",
-        "description_vi": "màn hình kỹ thuật số hiển thị bài toán với các lựa chọn trắc nghiệm",
+        "description": "monitor displaying math equations and options",
+        "description_vi": "màn hình hiển thị các phương trình toán học và các tùy chọn",
         "attributes": [
-          "white",
-          "digital"
+          "slide"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.11699999999999999,
+          0.206,
+          0.46799999999999997,
+          0.9600000000000001
+        ],
+        "description": "male teacher with glasses and dark suit sitting at a desk",
+        "description_vi": "nam giáo viên đeo kính và vest tối màu đang ngồi tại bàn",
+        "attributes": [
+          "glasses",
+          "dark suit"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -19377,75 +19342,72 @@
     "frame_id": "L25_V070_f0356",
     "visual_source_frame_id": "L25_V070_f0356",
     "ocr_source_frame_id": "L25_V070_f0356",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A teacher sits at a desk with a laptop next to a screen showing a math problem.",
-    "detailed_caption": "A medium shot shows a wearing glasses and a suit jacket seated at a desk with an open laptop. A digital screen on the right displays a mathematical problem with four multiple-choice options. A dark chalkboard with white mathematical drawings is visible in the background.",
-    "caption_vi": "Một thầy giáo ngồi tại bàn làm việc cạnh màn hình hiển thị bài toán.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một thanh niên đeo kính và mặc áo vest ngồi tại bàn với máy tính xách tay đang mở. Màn hình kỹ thuật số bên phải hiển thị một bài toán với bốn lựa chọn trắc nghiệm. Bảng đen tối màu với các hình vẽ toán học màu trắng ở phía sau.",
-    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2} (x - 2)^2 + 4(m - 5) log_{1/2} (1 / x - 2) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +inf). B [7/3; +inf). C [-3; 7/3]. D (-inf; 7/3].",
+    "quality_flags": [],
+    "caption": "A teacher in a suit sitting at a desk with a laptop next to a math slide on screen.",
+    "detailed_caption": "This medium shot shows a male teacher in a dark blue suit and glasses seated behind a desk with an ASUS laptop. To his right, an educational monitor displays math slide example 6 with inequality formulas. The background is a dark chalkboard with faint white math diagrams.",
+    "caption_vi": "Một giáo viên mặc vest ngồi bên bàn làm việc có máy tính xách tay cạnh slide toán học trên màn hình.",
+    "detailed_caption_vi": "Khung hình trung cảnh này cho thấy một nam giáo viên mặc vest xanh đậm và đeo kính ngồi sau bàn làm việc với máy tính xách tay ASUS. Ở bên phải anh ấy, một màn hình giáo dục hiển thị slide toán ví dụ 6 với các công thức bất phương trình. Hậu cảnh là một bảng đen tối màu với các biểu đồ toán học màu trắng mờ.",
+    "ocr_text": "THANH NIÊN Ví dụ 6. Cho bất phương trình (m - 1) log^2_{1/2}(x - 2)^2 + 4(m - 5) log_{1/2}(1/(x - 2)) + 4m - 4 >= 0 (m là tham số thực). Tìm tập hợp tất cả các giá trị của m để bất phương trình nghiệm đúng với mọi x thuộc đoạn [5/2; 4]. A [-3; +oo). B [7/3; +oo). C [-3; 7/3]. D (-oo; 7/3].",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.16299999999999998,
+          0.16499999999999998,
           0.7979999999999999,
-          0.42800000000000005,
+          0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop on the desk",
-        "description_vi": "máy tính xách tay màu xám trên bàn",
+        "description": "dark ASUS laptop on the desk",
+        "description_vi": "máy tính xách tay ASUS màu tối trên bàn",
         "attributes": [
-          "gray"
+          "laptop"
         ],
         "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.122,
-          0.206,
-          0.46699999999999997,
-          0.9600000000000001
-        ],
-        "description": "man wearing glasses and a suit jacket seated at a desk",
-        "description_vi": "nam thanh niên đeo kính và mặc áo vest ngồi tại bàn",
-        "attributes": [
-          "glasses",
-          "suit jacket"
-        ],
-        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
           0.45099999999999996,
-          0.008,
-          1.0,
-          0.523
+          0.011,
+          0.9949999999999999,
+          0.521
         ],
-        "description": "digital screen displaying a math problem",
-        "description_vi": "màn hình kỹ thuật số hiển thị bài toán",
+        "description": "monitor displaying math lesson slide",
+        "description_vi": "màn hình hiển thị slide bài học toán",
         "attributes": [
-          "white",
-          "digital"
+          "slide"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.11699999999999999,
+          0.206,
+          0.46799999999999997,
+          0.9600000000000001
+        ],
+        "description": "male teacher with glasses and dark suit sitting at a desk",
+        "description_vi": "nam giáo viên đeo kính và vest tối màu đang ngồi tại bàn",
+        "attributes": [
+          "glasses",
+          "dark suit"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }

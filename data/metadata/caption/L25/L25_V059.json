@@ -3374,61 +3374,36 @@
     "frame_id": "L25_V059_f0048",
     "visual_source_frame_id": "L25_V059_f0048",
     "ocr_source_frame_id": "L25_V059_f0048",
-    "quality_flags": [],
-    "caption": "A man stands in the middle of a brightly lit library aisle between tall bookshelves.",
-    "detailed_caption": "A medium shot captures a man in a light blue button-down shirt and dark pants standing in the center of a narrow library aisle. Rows of grey metal shelving units packed with books line both sides of the corridor.",
-    "caption_vi": "Nam giới đứng giữa lối đi hẹp trong thư viện bao quanh bởi các kệ sách.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nam mặc áo sơ mi xanh nhạt và quần tối đứng ở trung tâm hành lang thư viện. Các dãy kệ sách kim loại xám chứa sách xếp đầy hai bên.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A holding a book walks down a narrow library aisle between tall bookshelves.",
+    "detailed_caption": "A medium shot shows one in the center walking forward along a brightly lit narrow aisle between two tall bookshelves packed with colorful books. He wears a light blue button-down shirt and dark pants, and holds a dark book in his hands while looking ahead.",
+    "caption_vi": "Một thanh niên cầm sách đi dọc theo lối đi hẹp giữa các kệ sách cao trong thư viện.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thanh niên đứng ở giữa, đang bước về phía trước dọc theo lối đi hẹp, sáng sủa giữa hai dãy kệ sách cao đầy ắp sách. Nam thanh niên mặc áo sơ mi xanh nhạt và quần tối màu, tay cầm một cuốn sách sẫm màu và nhìn thẳng về phía trước.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "bookshelf_0",
-        "label": "bookshelf",
-        "bbox": [
-          0.0,
-          0.0,
-          0.421,
-          1.0
-        ],
-        "description": "metal bookshelves filled with books",
-        "description_vi": "kệ sách kim loại xếp đầy sách",
-        "attributes": [
-          "metal",
-          "stacked"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.394,
-          0.23900000000000002,
-          0.523,
-          0.9770000000000001
+          0.392,
+          0.236,
+          0.524,
+          0.9720000000000001
         ],
-        "description": "man wearing light blue shirt and dark trousers",
-        "description_vi": "nam giới mặc áo xanh nhạt và quần tối màu",
+        "description": "wearing a light blue button-down shirt and dark trousers walking in a library",
+        "description_vi": "nam thanh niên mặc áo sơ mi xanh nhạt và quần tây tối màu đang đi trong thư viện",
         "attributes": [
+          "man",
           "standing",
-          "holding notebook"
+          "holding book"
         ],
-        "action": "standing"
+        "action": "walking"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "bookshelf_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V059_f0049",
@@ -3772,11 +3747,11 @@
     "visual_source_frame_id": "L25_V059_f0058",
     "ocr_source_frame_id": "L25_V059_f0058",
     "quality_flags": [],
-    "caption": "A male teacher in a suit and red tie stands in front of a formula-filled whiteboard.",
-    "detailed_caption": "A medium shot captures a male teacher wearing a dark suit, white shirt, and red tie standing in front of a large whiteboard covered in mathematical formulas and geometric diagrams.",
-    "caption_vi": "Nam giáo viên mặc vest và cà vạt đỏ đứng trước bảng trắng đầy công thức.",
-    "detailed_caption_vi": "Cảnh trung cảnh ghi lại nam giáo viên mặc vest tối màu, áo sơ mi trắng và cà vạt đỏ đứng trước bảng trắng lớn chi chít công thức toán học và hình học.",
-    "ocr_text": "THE SAIGON INTERNATIONAL UNI",
+    "caption": "A man wearing a suit stands in front of a white board covered in mathematical formulas and diagrams.",
+    "detailed_caption": "A medium shot shows a man standing centrally in front of a large white board filled with handwritten mathematical equations, graphs, and geometric shapes. He wears a dark blazer, white shirt, and red tie, holding a marker in one hand while speaking.",
+    "caption_vi": "Một người đàn ông mặc vest đứng trước bảng trắng chi chít các công thức và sơ đồ toán học.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị một người đàn ông đứng ở vị trí trung tâm trước bảng trắng lớn chi chít các phương trình toán học, đồ thị và hình vẽ hình học được viết tay. Anh mặc áo vest tối màu, áo sơ mi trắng và cà vạt đỏ, tay cầm bút lông và đang nói chuyện.",
+    "ocr_text": "THE SAIGON INTERNATIONAL UNI Sin (pi/2+alpha) = co log A = (u1+u2) (root(a))^(n) = 0 C A-",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3785,48 +3760,21 @@
         "bbox": [
           0.319,
           0.177,
-          0.5690000000000001,
-          1.0
+          0.5730000000000001,
+          0.997
         ],
-        "description": "male teacher in dark suit and red tie",
-        "description_vi": "nam giáo viên mặc vest tối màu và cà vạt đỏ",
+        "description": "man in a dark blazer and red tie standing in front of a formula-covered whiteboard",
+        "description_vi": "nam giới mặc áo khoác vest tối màu và cà vạt đỏ đứng trước bảng trắng đầy công thức",
         "attributes": [
-          "wearing suit",
+          "man",
+          "suit",
           "red tie",
-          "standing"
+          "glasses"
         ],
-        "action": "teaching"
-      },
-      {
-        "object_id": "whiteboard_0",
-        "label": "whiteboard",
-        "bbox": [
-          0.101,
-          0.17200000000000001,
-          1.0,
-          1.0
-        ],
-        "description": "whiteboard with mathematical formulas",
-        "description_vi": "bảng trắng viết công thức toán học",
-        "attributes": [
-          "white",
-          "handwritten text"
-        ],
-        "action": ""
+        "action": "speaking"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "whiteboard_0"
-      },
-      {
-        "subject_id": "whiteboard_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V059_f0059",
@@ -4314,31 +4262,13 @@
     "visual_source_frame_id": "L25_V059_f0064",
     "ocr_source_frame_id": "L25_V059_f0064",
     "quality_flags": [],
-    "caption": "A bright overexposed view of a classroom with students sitting at desks.",
-    "detailed_caption": "An extremely bright, overexposed medium shot shows several students sitting in a row inside a classroom. The scene is dominated by a strong white and golden glare on the right side, partially obscuring the people and background details. Faint outlines of students in white shirts are visible on the left.",
-    "caption_vi": "Cảnh phòng học bị cháy sáng với các học sinh ngồi bên bàn.",
-    "detailed_caption_vi": "Cảnh trung cực kỳ sáng và bị cháy sáng cho thấy một số học sinh ngồi thành hàng trong lớp học. Khung cảnh bị lóa mạnh bởi ánh sáng trắng và vàng ở phía bên phải, làm che khuất một phần con người và chi tiết nền. Hình dáng mờ ảo của các học sinh mặc áo sơ mi trắng xuất hiện ở bên trái.",
+    "caption": "Several students sit at desks in a classroom, partially washed out by bright light.",
+    "detailed_caption": "A medium close-up shot shows a row of seated students facing left inside a classroom. Bright overexposed light floods the right side of the frame, partially obscuring the scene. The students wear light-colored uniforms and have notebooks and writing instruments on their desks.",
+    "caption_vi": "Nhiều học sinh ngồi bàn trong lớp học bị ánh sáng chói lọi che khuất một phần.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh trung bình ghi lại một hàng học sinh ngồi hướng về bên trái trong lớp học. Ánh sáng mạnh làm lóa phần bên phải của khung hình, che khuất một phần khung cảnh. Các học sinh mặc đồng phục sáng màu, trên bàn có vở và dụng cụ viết.",
     "ocr_text": "",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.42300000000000004,
-          0.223,
-          0.999,
-          0.949
-        ],
-        "description": "a person partially visible through the bright glare",
-        "description_vi": "một người ẩn hiện sau lớp ánh sáng lóa",
-        "attributes": [
-          "bright glare",
-          "partially obscured"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -5570,81 +5500,34 @@
     "frame_id": "L25_V059_f0080",
     "visual_source_frame_id": "L25_V059_f0080",
     "ocr_source_frame_id": "L25_V059_f0080",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "A plays the drums in a room.",
-    "detailed_caption": "A medium shot shows a with purple-tinted hair and glasses, wearing a white shirt and dark trousers, playing the drums. A sparkly drum is in the foreground on the left, and another drum is on the right with a drumstick raised above it.",
-    "caption_vi": "Một thanh niên chơi trống trong phòng.",
-    "detailed_caption_vi": "Cảnh trung cho thấy một thanh niên tóc ánh tím và đeo kính, mặc áo sơ mi trắng và quần tối màu, đang chơi trống. Trống lấp lánh ở tiền cảnh bên trái, và một trống khác ở bên phải với dùi trống giơ lên.",
+    "quality_flags": [],
+    "caption": "A young person plays drums in a room with a poster of people in suits on the wall.",
+    "detailed_caption": "A medium shot shows a young person playing a drum set indoors. The drummer wears a white button-down shirt and glasses, holding drumsticks and striking a drum. In the background, a large wall poster depicts people in suits.",
+    "caption_vi": "Một thanh niên chơi trống trong phòng có poster hình những người mặc vest trên tường.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một thanh niên đang chơi bộ trống trong nhà. Tay trống đeo kính, mặc áo sơ mi trắng, tay cầm dùi trống và đang gõ vào trống. Phía sau là một tấm poster lớn trên tường có hình những người mặc vest.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "drum_0",
-        "label": "drum",
-        "bbox": [
-          0.0,
-          0.4,
-          0.503,
-          1.0
-        ],
-        "description": "a sparkly drum in the foreground on the left",
-        "description_vi": "một chiếc trống lấp lánh ở tiền cảnh bên trái",
-        "attributes": [
-          "sparkly",
-          "transparent"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "drum_1",
-        "label": "drum",
-        "bbox": [
-          0.752,
-          0.5389999999999999,
-          0.998,
-          1.0
-        ],
-        "description": "a drum on the right with a drumstick",
-        "description_vi": "một chiếc trống ở bên phải cùng với dùi trống",
-        "attributes": [
-          "dark",
-          "sparkly"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.46699999999999997,
-          0.20299999999999999,
-          0.791,
-          1.0
+          0.465,
+          0.206,
+          0.7929999999999999,
+          0.997
         ],
-        "description": "a with purple hair and glasses wearing a white shirt playing drums",
-        "description_vi": "một thanh niên tóc tím và đeo kính mặc áo sơ mi trắng đang chơi trống",
+        "description": "young person wearing glasses and a white button-down shirt playing drums",
+        "description_vi": "thanh niên đeo kính mặc áo sơ mi trắng đang chơi trống",
         "attributes": [
-          "purple hair",
-          "wearing glasses",
+          "person",
+          "glasses",
           "white shirt"
         ],
         "action": "playing drums"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "drum_0",
-        "predicate": "left_of",
-        "object_id": "drum_1"
-      },
-      {
-        "subject_id": "drum_1",
-        "predicate": "right_of",
-        "object_id": "drum_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V059_f0081",
@@ -6004,15 +5887,13 @@
   },
   {
     "frame_id": "L25_V059_f0085",
-    "visual_source_frame_id": "L25_V059_f0084",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An overexposed view shows four people in a bright bedroom near a large bed.",
-    "detailed_caption": "This medium shot is heavily overexposed, showing a very bright scene in a bedroom. A woman stands on the left in a white top and dark skirt, while two people stand near the middle. Another person is visible near the large bed with white sheets.",
-    "caption_vi": "Góc nhìn bị lóa sáng nặng cho thấy bốn người trong phòng ngủ sáng sủa gần một chiếc giường lớn.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh này bị lóa sáng nặng, cho thấy khung cảnh rất sáng trong một phòng ngủ. Một phụ nữ đứng bên trái mặc áo trắng và chân váy tối màu, trong khi hai người đứng gần khu vực giữa. Một người khác có thể thấy ở gần chiếc giường lớn với ga trải giường màu trắng.",
+    "visual_source_frame_id": "L25_V059_f0085",
+    "ocr_source_frame_id": "L25_V059_f0085",
+    "quality_flags": [],
+    "caption": "A bartender in a dark shirt shakes a cocktail shaker behind a bar filled with liquor bottles.",
+    "detailed_caption": "A medium shot captures a bartender wearing a dark shirt and glasses standing behind a bar counter, actively shaking a cocktail shaker. Shelves stacked with numerous liquor bottles and glassware are visible in the background against a wooden wall.",
+    "caption_vi": "Một bartender mặc áo tối màu đang lắc bình shaker sau quầy bar trưng bày nhiều chai rượu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một nhân viên pha chế mặc áo tối màu và đeo kính đang đứng sau quầy bar, tay đang lắc bình pha chế cocktail. Phía sau là các kệ trưng bày rất nhiều chai rượu ngoại và ly thủy tinh trên nền tường gỗ.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -6020,49 +5901,23 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.319,
-          0.33599999999999997,
-          0.383,
-          0.755
+          0.159,
+          0.135,
+          0.7030000000000001,
+          0.922
         ],
-        "description": "woman standing on the left in white top and dark skirt",
-        "description_vi": "phụ nữ đứng bên trái mặc áo trắng và chân váy tối màu",
+        "description": "bartender wearing a dark button-down shirt and glasses holding a cocktail shaker",
+        "description_vi": "nhân viên pha chế mặc áo sơ mi tối màu và đeo kính cầm bình lắc cocktail",
         "attributes": [
-          "standing",
-          "overexposed"
+          "man",
+          "glasses",
+          "dark shirt",
+          "bartender"
         ],
-        "action": "standing"
-      },
-      {
-        "object_id": "person_1",
-        "label": "person",
-        "bbox": [
-          0.397,
-          0.304,
-          0.46399999999999997,
-          0.597
-        ],
-        "description": "person standing in the middle",
-        "description_vi": "người đứng ở giữa",
-        "attributes": [
-          "standing",
-          "overexposed"
-        ],
-        "action": "standing"
+        "action": "shaking cocktail shaker"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V059_f0086",
@@ -6216,10 +6071,10 @@
     "visual_source_frame_id": "L25_V059_f0088",
     "ocr_source_frame_id": "L25_V059_f0088",
     "quality_flags": [],
-    "caption": "A man in a dark shirt and glasses stands behind a bar with liquor bottles on shelves.",
-    "detailed_caption": "This medium shot shows a man wearing glasses and a dark shirt standing behind a bar counter, reaching towards the counter surface. Shelves filled with assorted liquor bottles and glassware are mounted on the wall behind him.",
-    "caption_vi": "Một người đàn ông mặc áo sẫm màu và đeo kính đứng sau quầy bar với các chai rượu trên kệ.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh này cho thấy một nam thanh niên đeo kính và mặc áo sơ mi sẫm màu đang đứng phía sau quầy bar, với tay về phía mặt bàn quầy. Các kệ chứa đầy chai rượu các loại và đồ thủy tinh được gắn trên tường phía sau anh ấy.",
+    "caption": "A bartender wearing a dark shirt pours a drink from a cocktail shaker behind a bar.",
+    "detailed_caption": "A medium shot shows the bartender in a dark shirt and glasses pouring liquid from a metal cocktail shaker into a glass on the bar counter. The background features shelves lined with rows of liquor bottles under warm lighting.",
+    "caption_vi": "Một nhân viên pha chế mặc áo tối màu đang rót đồ uống từ bình shaker ra ly.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy nhân viên pha chế mặc áo tối màu và đeo kính đang rót chất lỏng từ bình lắc cocktail bằng kim loại vào một chiếc ly trên quầy bar. Phía sau là các kệ trưng bày các dãy chai rượu dưới ánh đèn ấm áp.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -6227,18 +6082,19 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.21200000000000002,
+          0.21400000000000002,
           0.133,
-          0.752,
-          0.9359999999999999
+          0.751,
+          0.9329999999999999
         ],
-        "description": "man wearing glasses and dark shirt standing behind bar",
-        "description_vi": "nam thanh niên đeo kính và mặc áo sẫm màu đứng sau quầy bar",
+        "description": "bartender wearing a dark shirt and glasses pouring from a shaker",
+        "description_vi": "nhân viên pha chế mặc áo tối màu và đeo kính đang rót từ bình lắc",
         "attributes": [
+          "man",
           "glasses",
           "dark shirt"
         ],
-        "action": "reaching"
+        "action": "pouring drink"
       }
     ],
     "spatial_relations": []
@@ -6248,10 +6104,10 @@
     "visual_source_frame_id": "L25_V059_f0089",
     "ocr_source_frame_id": "L25_V059_f0089",
     "quality_flags": [],
-    "caption": "A man in a dark shirt pours from a shaker into a glass behind a bar.",
-    "detailed_caption": "This medium shot features a man wearing glasses and a dark shirt standing behind a bar counter. He is holding a cocktail shaker and pouring liquid into a glass. Shelves with various liquor bottles line the wall behind him.",
-    "caption_vi": "Một người đàn ông mặc áo sẫm màu rót từ bình lắc vào ly phía sau quầy bar.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh này có sự xuất hiện của một nam thanh niên đeo kính và mặc áo sơ mi sẫm màu đang đứng sau quầy bar. Anh ấy đang cầm bình lắc cocktail và rót chất lỏng vào ly. Các kệ đựng nhiều chai rượu khác nhau nằm dọc bức tường phía sau anh ấy.",
+    "caption": "A bartender in a dark shirt pours from a shaker into a glass on the bar.",
+    "detailed_caption": "A medium shot captures the bartender wearing a dark shirt and glasses as he pours a beverage from a cocktail shaker into a glass on the bar counter. Shelves filled with various liquor bottles are arranged along the wall behind him.",
+    "caption_vi": "Nhân viên pha chế mặc áo tối màu đang rót từ bình lắc vào ly trên quầy bar.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nhân viên pha chế mặc áo tối màu và đeo kính khi anh đang rót đồ uống từ bình lắc cocktail vào một chiếc ly trên mặt quầy. Các kệ tủ chứa nhiều chai rượu được bố trí dọc theo tường phía sau.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -6259,18 +6115,19 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.22599999999999998,
-          0.133,
-          0.747,
-          0.9359999999999999
+          0.229,
+          0.134,
+          0.751,
+          0.9319999999999999
         ],
-        "description": "man wearing glasses and dark shirt pouring from shaker",
-        "description_vi": "nam thanh niên đeo kính và mặc áo sẫm màu đang rót từ bình lắc",
+        "description": "bartender wearing a dark shirt and glasses pouring a drink",
+        "description_vi": "nhân viên pha chế mặc áo tối màu và đeo kính đang rót đồ uống",
         "attributes": [
+          "man",
           "glasses",
           "dark shirt"
         ],
-        "action": "pouring"
+        "action": "pouring drink"
       }
     ],
     "spatial_relations": []
@@ -6280,10 +6137,10 @@
     "visual_source_frame_id": "L25_V059_f0090",
     "ocr_source_frame_id": "L25_V059_f0090",
     "quality_flags": [],
-    "caption": "A man in a dark shirt pours a drink behind a bar with liquor bottles.",
-    "detailed_caption": "This medium shot shows a man wearing glasses and a dark shirt behind a bar counter, holding a shaker and pouring a drink. Shelves filled with liquor bottles are visible in the background.",
-    "caption_vi": "Một người đàn ông mặc áo sẫm màu rót đồ uống phía sau quầy bar có các chai rượu.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh này cho thấy một nam thanh niên đeo kính và mặc áo sẫm màu phía sau quầy bar, đang cầm bình lắc và rót đồ uống. Các kệ chứa đầy chai rượu có thể nhìn thấy ở phía sau.",
+    "caption": "A bartender wearing a dark shirt holds a cocktail shaker over the bar.",
+    "detailed_caption": "A medium shot shows a bartender in a dark shirt and glasses holding a cocktail shaker in his hand over the bar counter. Rows of liquor bottles stand neatly on shelves against the wooden wall in the background.",
+    "caption_vi": "Nhân viên pha chế mặc áo tối màu cầm bình lắc cocktail trên quầy bar.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị nhân viên pha chế mặc áo tối màu và đeo kính đang cầm bình lắc cocktail trên tay phía trên quầy bar. Các hàng chai rượu được xếp ngay ngắn trên các kệ sát bức tường gỗ phía sau.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -6292,17 +6149,18 @@
         "label": "person",
         "bbox": [
           0.20099999999999998,
-          0.133,
-          0.736,
-          0.9359999999999999
+          0.134,
+          0.742,
+          0.9319999999999999
         ],
-        "description": "man wearing glasses and dark shirt pouring drink",
-        "description_vi": "nam thanh niên đeo kính và mặc áo sẫm màu đang rót đồ uống",
+        "description": "bartender wearing a dark shirt and glasses holding a shaker",
+        "description_vi": "nhân viên pha chế mặc áo tối màu và đeo kính cầm bình lắc",
         "attributes": [
+          "man",
           "glasses",
           "dark shirt"
         ],
-        "action": "pouring"
+        "action": "holding shaker"
       }
     ],
     "spatial_relations": []
@@ -6312,10 +6170,10 @@
     "visual_source_frame_id": "L25_V059_f0091",
     "ocr_source_frame_id": "L25_V059_f0091",
     "quality_flags": [],
-    "caption": "A man in a dark shirt works behind a bar counter.",
-    "detailed_caption": "This medium shot features a man wearing glasses and a dark shirt standing behind a bar counter. Shelves with assorted bottles are visible on the wall behind him.",
-    "caption_vi": "Một người đàn ông mặc áo sẫm màu làm việc phía sau quầy bar.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh này có sự xuất hiện của một nam thanh niên đeo kính và mặc áo sơ mi sẫm màu đang đứng phía sau quầy bar. Các kệ đựng nhiều chai rượu khác nhau có thể thấy trên bức tường phía sau anh ấy.",
+    "caption": "A bartender wearing a dark shirt stands behind a bar counter with liquor bottles.",
+    "detailed_caption": "A medium shot shows the bartender wearing a dark shirt and glasses standing behind the bar counter while holding a shaker. The background features illuminated shelves stocked with various liquor bottles.",
+    "caption_vi": "Nhân viên pha chế mặc áo tối màu đứng sau quầy bar có các chai rượu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy nhân viên pha chế mặc áo tối màu và đeo kính đang đứng sau quầy bar tay cầm bình lắc. Phía sau là các kệ tủ được chiếu sáng trưng bày nhiều loại chai rượu khác nhau.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -6324,13 +6182,14 @@
         "label": "person",
         "bbox": [
           0.197,
-          0.136,
-          0.739,
-          0.9359999999999999
+          0.135,
+          0.741,
+          0.9319999999999999
         ],
-        "description": "man wearing glasses and dark shirt behind bar",
-        "description_vi": "nam thanh niên đeo kính và mặc áo sẫm màu phía sau quầy bar",
+        "description": "bartender wearing a dark shirt and glasses standing behind the bar",
+        "description_vi": "nhân viên pha chế mặc áo tối màu và đeo kính đứng sau quầy bar",
         "attributes": [
+          "man",
           "glasses",
           "dark shirt"
         ],
@@ -6410,10 +6269,10 @@
     "visual_source_frame_id": "L25_V059_f0094",
     "ocr_source_frame_id": "L25_V059_f0094",
     "quality_flags": [],
-    "caption": "An aerial view shows a large temple complex with people gathered in the courtyard.",
-    "detailed_caption": "This high-angle aerial shot reveals a large traditional temple with a red roof. A group of people in graduation gowns are gathered and lined up in the courtyard in front of the temple.",
-    "caption_vi": "Góc nhìn trên cao cho thấy một quần thể đền lớn với mọi người tập trung ở sân.",
-    "detailed_caption_vi": "Cảnh quay từ trên cao này hé lộ một ngôi đền truyền thống lớn có mái ngói đỏ. Một nhóm người mặc áo tốt nghiệp tập trung và xếp hàng ở khu vực sân phía trước ngôi đền.",
+    "caption": "An aerial view shows a traditional red-roofed building complex surrounded by dense green trees.",
+    "detailed_caption": "A high-angle aerial shot captures a traditional architectural complex featuring red-tiled roofs, courtyards, and plazas. A group of people is gathered in rows on the plaza. The complex is surrounded by lush green forests, trees, and paths.",
+    "caption_vi": "Góc quay trên cao toàn cảnh khu phức hợp mái ngói đỏ truyền thống được bao quanh bởi rừng cây xanh rậm rạp.",
+    "detailed_caption_vi": "Cảnh quay góc cao từ trên không ghi lại toàn cảnh khu phức hợp kiến trúc truyền thống với mái ngói đỏ, các sân trong và quảng trường lát gạch. Một nhóm người tập trung thành các hàng trên quảng trường. Xung quanh là các khu rừng cây xanh tươi và lối đi quanh co.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -6422,15 +6281,15 @@
         "label": "building",
         "bbox": [
           0.319,
-          0.223,
+          0.219,
           0.577,
-          0.477
+          0.46199999999999997
         ],
-        "description": "traditional temple building with red roof",
-        "description_vi": "tòa nhà đền truyền thống mái ngói đỏ",
+        "description": "traditional red-roofed building with courtyards",
+        "description_vi": "tòa nhà truyền thống mái ngói đỏ có sân trong",
         "attributes": [
           "red roof",
-          "traditional"
+          "traditional architecture"
         ],
         "action": ""
       }
@@ -6441,13 +6300,11 @@
     "frame_id": "L25_V059_f0095",
     "visual_source_frame_id": "L25_V059_f0095",
     "ocr_source_frame_id": "L25_V059_f0095",
-    "quality_flags": [
-      "removed_inferred_demographic"
-    ],
-    "caption": "An aerial view shows a traditional temple with a line of people in robes standing outside.",
-    "detailed_caption": "This high-angle aerial shot shows a traditional temple complex with a red roof. A long line of people wearing graduation gowns stands on the paved courtyard outside the temple.",
-    "caption_vi": "Góc nhìn trên cao cho thấy ngôi đền truyền thống với một hàng người mặc áo dài đứng bên ngoài.",
-    "detailed_caption_vi": "Cảnh quay từ trên cao này cho thấy một quần thể đền thờ truyền thống có mái ngói đỏ. Một hàng dài người mặc áo tốt nghiệp đứng trên sân lát đá bên ngoài ngôi đền.",
+    "quality_flags": [],
+    "caption": "An aerial view shows a traditional red-roofed temple complex amidst a green forest.",
+    "detailed_caption": "A high-angle aerial shot shows a traditional architectural temple complex with red-tiled roofs and paved plazas. A gathering of people forms lined groups in the courtyard. Dense green trees and natural landscape surround the entire area.",
+    "caption_vi": "Góc quay trên cao cho thấy khu đền chùa mái ngói đỏ truyền thống giữa rừng cây xanh.",
+    "detailed_caption_vi": "Cảnh quay góc cao từ trên không hiển thị khu đền thờ kiến trúc truyền thống với mái ngói đỏ và các quảng trường lát đá. Một nhóm người xếp thành các hàng ngay ngắn trong sân. Rừng cây xanh rậm rạp và cảnh quan tự nhiên bao quanh toàn bộ khu vực.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -6456,14 +6313,15 @@
         "label": "building",
         "bbox": [
           0.319,
-          0.223,
+          0.219,
           0.577,
-          0.477
+          0.46199999999999997
         ],
-        "description": "traditional temple building with red roof",
-        "description_vi": "tòa nhà đền truyền thống mái ngói đỏ",
+        "description": "traditional red-roofed temple building complex",
+        "description_vi": "quần thể đền chùa truyền thống mái ngói đỏ",
         "attributes": [
-          "red roof"
+          "red roof",
+          "temple"
         ],
         "action": ""
       }
@@ -7122,49 +6980,30 @@
   },
   {
     "frame_id": "L25_V059_f0106",
-    "visual_source_frame_id": "L25_V059_f0100",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher wearing glasses and a pink shirt sits in front of a green chalkboard.",
-    "detailed_caption": "This medium shot shows a female teacher wearing glasses and a pink traditional Vietnamese dress seated at a desk in front of a green chalkboard. A laptop sits on the desk in front of her, and text is written on a banner above the chalkboard.",
-    "caption_vi": "Một giáo viên đeo kính và mặc áo hồng ngồi trước bảng đen xanh.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh này cho thấy một nữ giáo viên đeo kính và mặc áo dài màu hồng đang ngồi bên bàn làm việc trước chiếc bảng đen màu xanh. Một chiếc máy tính xách tay đặt trên bàn trước mặt cô ấy, và có chữ được viết trên một dải băng phía trên bảng đen.",
-    "ocr_text": "Conditionals with words other than IF THANH NIÊN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V059_f0106",
+    "ocr_source_frame_id": "L25_V059_f0106",
+    "quality_flags": [],
+    "caption": "A female teacher wearing a pink ao dai sits at a desk in front of a green chalkboard with English text.",
+    "detailed_caption": "A medium shot shows a female teacher sitting on the right side in front of a green chalkboard displaying English grammar notes and sentences. She wears a pink ao dai and glasses, looking towards the camera. The foreground includes a desk with a laptop and props, while broadcaster graphics appear at the top right.",
+    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi trước bảng đen có viết nội dung tiếng Anh.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một nữ giáo viên ngồi ở phía bên phải trước bảng đen màu xanh lá có ghi các chú thích và câu tiếng Anh. Cô mặc áo dài hồng và đeo kính, nhìn thẳng về phía trước. Phía trước là bàn làm việc có máy tính xách tay và đạo cụ trang trí.",
+    "ocr_text": "THANH NIÊN Conditionals with words other than IF If only = ...wish... They wish there were something they could do to help. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "chalkboard_0",
         "label": "chalkboard",
         "bbox": [
-          0.061,
-          0.04700000000000001,
+          0.059,
+          0.051,
           0.775,
-          0.729
+          0.7439999999999999
         ],
-        "description": "large green chalkboard mounted on the wall",
-        "description_vi": "bảng đen lớn gắn trên tường",
+        "description": "large green chalkboard with English text about conditionals",
+        "description_vi": "bảng đen màu xanh lớn có chữ tiếng Anh về câu điều kiện",
         "attributes": [
           "green",
-          "chalkboard"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.778,
-          0.706,
-          0.9630000000000001,
-          0.804
-        ],
-        "description": "laptop computer on desk",
-        "description_vi": "máy tính xách tay trên bàn",
-        "attributes": [
-          "silver",
-          "laptop"
+          "text"
         ],
         "action": ""
       },
@@ -7172,16 +7011,17 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.7849999999999999,
-          0.35700000000000004,
+          0.786,
+          0.356,
           0.966,
-          0.793
+          0.712
         ],
-        "description": "female teacher wearing glasses and pink dress sitting at desk",
-        "description_vi": "nữ giáo viên đeo kính và mặc áo dài hồng ngồi ở bàn làm việc",
+        "description": "female teacher wearing a pink ao dai and glasses sitting at a desk",
+        "description_vi": "nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi làm việc tại bàn",
         "attributes": [
+          "woman",
           "glasses",
-          "pink dress",
+          "pink ao dai",
           "teacher"
         ],
         "action": "sitting"
@@ -7189,14 +7029,14 @@
     ],
     "spatial_relations": [
       {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
+        "subject_id": "chalkboard_0",
+        "predicate": "left_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
+        "predicate": "right_of",
+        "object_id": "chalkboard_0"
       }
     ]
   },
@@ -7282,29 +7122,27 @@
   },
   {
     "frame_id": "L25_V059_f0108",
-    "visual_source_frame_id": "L25_V059_f0100",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher wearing glasses and a pink shirt sits in front of a green chalkboard.",
-    "detailed_caption": "This medium shot shows a female teacher wearing glasses and a pink traditional Vietnamese dress seated at a desk in front of a green chalkboard. A laptop sits on the desk in front of her, and text is written on a banner above the chalkboard.",
-    "caption_vi": "Một giáo viên đeo kính và mặc áo hồng ngồi trước bảng đen xanh.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh này cho thấy một nữ giáo viên đeo kính và mặc áo dài màu hồng đang ngồi bên bàn làm việc trước chiếc bảng đen màu xanh. Một chiếc máy tính xách tay đặt trên bàn trước mặt cô ấy, và có chữ được viết trên một dải băng phía trên bảng đen.",
-    "ocr_text": "Conditionals with words other than IF THANH NIÊN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V059_f0108",
+    "ocr_source_frame_id": "L25_V059_f0108",
+    "quality_flags": [],
+    "caption": "A female teacher wearing a pink ao dai sits in front of a green chalkboard with English grammar notes.",
+    "detailed_caption": "A medium shot displays a female teacher seated on the right side in front of a green chalkboard containing English grammar rules. She wears a pink ao dai and glasses, with a laptop on the desk before her. Broadcaster logos and teacher credits are visible on screen.",
+    "caption_vi": "Nữ giáo viên mặc áo dài màu hồng ngồi trước bảng đen ghi các quy tắc ngữ pháp tiếng Anh.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nữ giáo viên ngồi ở bên phải trước bảng đen xanh lá có ghi các quy tắc ngữ pháp tiếng Anh. Cô mặc áo dài hồng và đeo kính, trước mặt có đặt máy tính xách tay trên bàn.",
+    "ocr_text": "THANH NIÊN Conditionals with words other than IF If only = ...wish... They wish there were something they could do to help. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "chalkboard_0",
         "label": "chalkboard",
         "bbox": [
-          0.061,
-          0.04700000000000001,
+          0.059,
+          0.051,
           0.775,
-          0.729
+          0.7439999999999999
         ],
-        "description": "large green chalkboard mounted on the wall",
-        "description_vi": "bảng đen lớn gắn trên tường",
+        "description": "green chalkboard with English text about conditional sentences",
+        "description_vi": "bảng đen màu xanh lá cây có chữ tiếng Anh về câu điều kiện",
         "attributes": [
           "green",
           "chalkboard"
@@ -7312,51 +7150,34 @@
         "action": ""
       },
       {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.778,
-          0.706,
-          0.9630000000000001,
-          0.804
-        ],
-        "description": "laptop computer on desk",
-        "description_vi": "máy tính xách tay trên bàn",
-        "attributes": [
-          "silver",
-          "laptop"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.7849999999999999,
-          0.35700000000000004,
+          0.786,
+          0.356,
           0.966,
-          0.793
+          0.712
         ],
-        "description": "female teacher wearing glasses and pink dress sitting at desk",
-        "description_vi": "nữ giáo viên đeo kính và mặc áo dài hồng ngồi ở bàn làm việc",
+        "description": "female teacher wearing a pink ao dai and glasses seated at a desk",
+        "description_vi": "nữ giáo viên mặc áo dài hồng và đeo kính ngồi tại bàn",
         "attributes": [
+          "woman",
           "glasses",
-          "pink dress",
-          "teacher"
+          "pink ao dai"
         ],
         "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
+        "subject_id": "chalkboard_0",
+        "predicate": "left_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
+        "predicate": "right_of",
+        "object_id": "chalkboard_0"
       }
     ]
   },
@@ -11832,10 +11653,10 @@
     "visual_source_frame_id": "L25_V059_f0194",
     "ocr_source_frame_id": "L25_V059_f0194",
     "quality_flags": [],
-    "caption": "Three people in white uniforms gather around a lab table with electronic equipment.",
-    "detailed_caption": "A medium shot captures three individuals standing in a room with wooden cabinets in the background. On the left, a boy with dark hair and glasses wears a white collared shirt and looks down intently. In the center, a man wearing glasses and a red tie with a white shirt smiles slightly while looking forward. On the right, a person with dark hair wears glasses and a white collared shirt. A blue electronic apparatus sits in the foreground.",
-    "caption_vi": "Ba người mặc đồng phục màu trắng đang đứng quây quần quanh bàn thí nghiệm có thiết bị điện tử.",
-    "detailed_caption_vi": "Khung hình trung cảnh ghi lại ba người đang đứng trong một căn phòng có tủ gỗ ở phía sau. Bên trái, một cậu bé tóc tối màu đeo kính mặc áo sơ mi trắng đang nhìn xuống đầy tập trung. Ở giữa, một người đàn ông đeo kính và cà vạt đỏ với áo sơ mi trắng đang mỉm cười nhẹ. Bên phải, một người tóc tối màu đeo kính mặc áo sơ mi trắng.",
+    "caption": "A young boy on the left, a man in the center, and a girl on the right sit together in a classroom.",
+    "detailed_caption": "A close-up shot shows three people indoors. On the left, a young boy with glasses and dark hair wears a white uniform shirt. In the center, a man with short brown hair, glasses, a white shirt, and a red tie smiles gently. On the right, part of a girl wearing glasses and a white uniform is visible.",
+    "caption_vi": "Một nam sinh ở bên trái, một người đàn ông ở giữa và một nữ sinh ở bên phải ngồi cùng nhau trong lớp.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh hiển thị ba người ở trong nhà. Phía bên trái, một nam sinh đeo kính và tóc tối màu mặc áo sơ mi đồng phục trắng. Ở giữa, một người đàn ông tóc ngắn màu nâu, đeo kính, mặc áo sơ mi trắng và cà vạt đỏ đang mỉm cười nhẹ. Phía bên phải, một phần khuôn mặt và vai của một nữ sinh đeo kính mặc áo trắng xuất hiện.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -11844,35 +11665,35 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.078,
-          0.314,
-          0.94
+          0.079,
+          0.319,
+          0.967
         ],
-        "description": "boy with dark hair and glasses wearing a white collared shirt",
-        "description_vi": "cậu bé tóc tối màu đeo kính mặc áo sơ mi trắng",
+        "description": "young boy wearing glasses and a white uniform shirt on the left",
+        "description_vi": "nam sinh đeo kính và mặc áo sơ mi đồng phục trắng bên trái",
         "attributes": [
-          "dark hair",
+          "boy",
           "glasses",
           "white shirt"
         ],
-        "action": "looking"
+        "action": "sitting"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.388,
-          0.133,
-          0.905,
-          0.9600000000000001
+          0.389,
+          0.132,
+          0.9019999999999999,
+          0.967
         ],
-        "description": "man with short hair, glasses, and a red tie wearing a white shirt",
-        "description_vi": "người đàn ông tóc ngắn, đeo kính và cà vạt đỏ mặc áo sơ mi trắng",
+        "description": "man wearing glasses, a white shirt, and a red tie in the center",
+        "description_vi": "người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt đỏ ở giữa",
         "attributes": [
-          "short hair",
+          "man",
           "glasses",
-          "white shirt",
-          "red tie"
+          "red tie",
+          "white shirt"
         ],
         "action": "smiling"
       },
@@ -11880,19 +11701,19 @@
         "object_id": "person_2",
         "label": "person",
         "bbox": [
-          0.889,
+          0.898,
           0.0,
           1.0,
-          0.917
+          0.9149999999999999
         ],
-        "description": "person with dark hair and glasses wearing a white collared shirt",
-        "description_vi": "người tóc tối màu đeo kính mặc áo sơ mi trắng",
+        "description": "girl wearing glasses and a white uniform on the right",
+        "description_vi": "nữ sinh đeo kính và mặc áo đồng phục trắng bên phải",
         "attributes": [
-          "dark hair",
+          "woman",
           "glasses",
           "white shirt"
         ],
-        "action": ""
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
@@ -12187,10 +12008,10 @@
     "visual_source_frame_id": "L25_V059_f0200",
     "ocr_source_frame_id": "L25_V059_f0200",
     "quality_flags": [],
-    "caption": "Students and a teacher enjoy a meal in a brightly lit dining area.",
-    "detailed_caption": "A medium shot shows a brightly exposed scene where a teacher in a maroon dress stands on the left. Several students sit at wooden tables eating food with bright sunlight streaming through large windows in the background.",
-    "caption_vi": "Học sinh và giáo viên đang thưởng thức bữa ăn trong khu vực ăn uống ngập tràn ánh sáng.",
-    "detailed_caption_vi": "Khung hình trung cảnh cho thấy khung cảnh sáng chói với giáo viên mặc đầm đỏ mận đứng bên trái. Một số học sinh ngồi ở bàn gỗ ăn uống với ánh nắng chói chang chiếu qua các cửa sổ lớn phía sau.",
+    "caption": "A server in a red uniform stands while students sit at tables eating meals in a bright dining area.",
+    "detailed_caption": "A medium shot captures a dining hall with large windows flooding the space with bright light. On the left, a server in a red dress, apron, hair net, and gloves stands next to a small table. Seated students in red and white uniforms are gathered around tables eating food and interacting.",
+    "caption_vi": "Một nhân viên phục vụ mặc đồng phục đỏ đứng trong khi học sinh ngồi ăn uống tại bàn trong phòng ăn sáng sủa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại phòng ăn với các cửa sổ lớn ngập tràn ánh sáng sáng sủa. Phía bên trái, nhân viên phục vụ mặc váy đỏ, tạp dề, đội lưới trùm tóc và đeo găng tay đang đứng cạnh một chiếc bàn nhỏ. Các học sinh mặc đồng phục đỏ trắng ngồi xung quanh các bàn đang ăn uống và tương tác.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -12198,16 +12019,18 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.121,
-          0.095,
-          0.27599999999999997,
-          1.0
+          0.12,
+          0.091,
+          0.272,
+          0.997
         ],
-        "description": "teacher in a maroon dress standing",
-        "description_vi": "giáo viên mặc đầm đỏ mận đang đứng",
+        "description": "female server in a red uniform and gloves standing on the left",
+        "description_vi": "nữ nhân viên phục vụ mặc đồng phục đỏ và đeo găng tay đứng bên trái",
         "attributes": [
-          "maroon dress",
-          "hat"
+          "woman",
+          "red uniform",
+          "apron",
+          "gloves"
         ],
         "action": "standing"
       },
@@ -12215,16 +12038,17 @@
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.483,
-          0.331,
-          0.6980000000000001,
-          0.9939999999999999
+          0.475,
+          0.33,
+          0.706,
+          0.997
         ],
-        "description": "girl sitting at the table eating",
-        "description_vi": "cô bé ngồi ở bàn ăn",
+        "description": "girl seated at a table wearing a white and red uniform",
+        "description_vi": "nữ sinh ngồi ở bàn mặc đồng phục trắng và đỏ",
         "attributes": [
+          "girl",
           "uniform",
-          "white shirt"
+          "sitting"
         ],
         "action": "eating"
       }
@@ -14332,33 +14156,81 @@
   },
   {
     "frame_id": "L25_V059_f0240",
-    "visual_source_frame_id": "L25_V059_f0215",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a laptop in front of a green chalkboard displaying practice questions.",
-    "detailed_caption": "A medium shot shows a teacher seated on the right wearing a pink blouse and glasses, working at a laptop in front of a green chalkboard. The chalkboard is filled with English grammar questions, multiple-choice options, and handwritten underscores.",
-    "caption_vi": "Một giáo viên ngồi trước bảng đen có ghi các câu hỏi bài tập tiếng Anh.",
-    "detailed_caption_vi": "Cận cảnh trung bình cho thấy một nữ giáo viên mặc áo hồng đang ngồi bên phải, làm việc trước một bảng xanh chứa các câu hỏi trắc nghiệm tiếng Anh.",
-    "ocr_text": "PRACTICE 2 Choose the sentence that best combines the pair of sentences: Mike doesn't feel well today. He can't go out with his friends. A. If Mike had felt well today, she couldn't have gone out with his friends. B. Mike wishes he felt well today so that he could go out with his friends. C. If only Mike had felt well today, he couldn't have gone out with his friends. D. Provided that Mike feels well today, he can't go out with his friends. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V059_f0240",
+    "ocr_source_frame_id": "L25_V059_f0240",
+    "quality_flags": [],
+    "caption": "A female teacher wearing a pink long-sleeved shirt sits at a desk with a laptop in front of a green chalkboard showing an English practice slide.",
+    "detailed_caption": "A medium shot shows a female teacher in a pink long-sleeved shirt sitting at a wooden desk with a white laptop in a classroom setting. On the right, she looks towards a green chalkboard displaying English practice questions with highlighted text and multiple-choice options. The bottom right corner features text identifying the teacher and her school.",
+    "caption_vi": "Một nữ giáo viên mặc áo dài tay màu hồng ngồi bên bàn làm việc có máy tính xách tay trước bảng đen ghi nội dung tiếng Anh.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một nữ giáo viên mặc áo hồng đang ngồi tại bàn làm việc với máy tính xách tay trong lớp học. Bên phải là bảng đen lớn hiển thị các câu hỏi luyện tập tiếng Anh kèm theo các lựa chọn đáp án. Góc dưới bên phải có các dòng chữ chú thích thông tin giáo viên.",
+    "ocr_text": "PRACTICE 2 Choose the sentence that best combines the pair of sentences: The English patient made a miraculous recovery from Covid-19. This was thanks to the efforts of the Vietnamese medical staff. A. If the English patient had made a miraculous recovery from Covid-19, the Vietnamese medical staff would have made efforts. B. But for the efforts of the Vietnamese medical staff, the English patient couldn't have made a miraculous recovery from Covid-19. C. Without the efforts of the Vietnamese medical staff, the English patient couldn't make a miraculous recovery from Covid-19. D. Suppose that the English patient made a miraculous recovery from Covid-19, the Vietnamese medical staff would have made efforts. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "chalkboard_0",
-        "label": "chalkboard",
+        "object_id": "blackboard_0",
+        "label": "blackboard",
         "bbox": [
           0.062,
           0.051,
-          0.774,
-          0.725
+          0.775,
+          0.7030000000000001
         ],
-        "description": "a green chalkboard with instructional text",
-        "description_vi": "một bảng đen màu xanh lá cây có chữ hướng dẫn",
+        "description": "a large green chalkboard with English text and multiple-choice questions",
+        "description_vi": "một bảng đen lớn màu xanh lá cây có chữ tiếng Anh và các câu hỏi trắc nghiệm",
         "attributes": [
           "green",
-          "chalkboard",
           "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.0,
+          0.599,
+          0.21400000000000002,
+          1.0
+        ],
+        "description": "a small wooden shelf with books and supplies",
+        "description_vi": "một kệ gỗ nhỏ đựng sách và đồ dùng",
+        "attributes": [
+          "wooden",
+          "colorful"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.589,
+          0.7949999999999999,
+          1.0,
+          1.0
+        ],
+        "description": "a wooden desk in front of the chalkboard",
+        "description_vi": "một chiếc bàn gỗ đặt trước bảng đen",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "laptop_0",
+        "label": "laptop",
+        "bbox": [
+          0.778,
+          0.708,
+          0.962,
+          0.804
+        ],
+        "description": "a white laptop computer on a desk",
+        "description_vi": "một chiếc máy tính xách tay màu trắng đặt trên bàn",
+        "attributes": [
+          "white",
+          "electronic"
         ],
         "action": ""
       },
@@ -14366,22 +14238,73 @@
         "object_id": "teacher_0",
         "label": "teacher",
         "bbox": [
-          0.778,
-          0.36300000000000004,
-          0.9630000000000001,
-          0.715
+          0.7849999999999999,
+          0.368,
+          0.9640000000000001,
+          0.708
         ],
-        "description": "a woman wearing glasses and a pink blouse",
-        "description_vi": "một phụ nữ đeo kính và mặc áo blouse hồng",
+        "description": "a woman wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "một người phụ nữ mặc áo sơ mi dài tay màu hồng và đeo kính",
         "attributes": [
-          "woman",
-          "wearing glasses",
-          "pink blouse"
+          "female",
+          "pink",
+          "glasses"
         ],
         "action": "sitting"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "left_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "right_of",
+        "object_id": "bookshelf_0"
+      },
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "left_of",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "right_of",
+        "object_id": "bookshelf_0"
+      },
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "left_of",
+        "object_id": "teacher_0"
+      },
+      {
+        "subject_id": "teacher_0",
+        "predicate": "right_of",
+        "object_id": "bookshelf_0"
+      },
+      {
+        "subject_id": "teacher_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "teacher_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V059_f0241",
@@ -17285,10 +17208,10 @@
     "visual_source_frame_id": "L25_V059_f0297",
     "ocr_source_frame_id": "L25_V059_f0297",
     "quality_flags": [],
-    "caption": "A modern building exterior features three flags flying in front.",
-    "detailed_caption": "A wide exterior shot shows a modern multi-story building with large windows and a prominent entrance sign. Three flags fly on tall poles against a cloudy sky on the left.",
-    "caption_vi": "Mặt tiền tòa nhà hiện đại với ba lá cờ bay phía trước.",
-    "detailed_caption_vi": "Cảnh ngoài trời hiển thị mặt tiền tòa nhà hiện đại nhiều cửa sổ, có ba lá cờ được treo trên cột cao bên trái dưới bầu trời nhiều mây.",
+    "caption": "A modern multi-story university building with large windows is shown exteriorly under an overcast sky with three flags on poles.",
+    "detailed_caption": "An exterior shot shows a modern multi-story institutional building featuring large white-framed glass windows and prominent red lettering across the top. Three flags on tall poles stand in front of the building against a cloudy grey sky. The entrance canopy is visible at the bottom right.",
+    "caption_vi": "Cận cảnh kiến trúc bên ngoài tòa nhà trường đại học hiện đại nhiều tầng dưới bầu trời nhiều mây với ba lá cột cờ.",
+    "detailed_caption_vi": "Khung hình ngoại thất hiển thị một tòa nhà trường đại học hiện đại với các khung cửa kính lớn và dòng chữ đỏ nổi bật trên mái. Ba lá cờ trên cột cao được dựng phía trước tòa nhà dưới bầu trời xám xịt. Phần mái hiên lối vào xuất hiện ở góc dưới bên phải.",
     "ocr_text": "SIU SAIGON INTERNATIONAL UNIVERSITY THE SAIGON INTERNATIONAL UNIVERSITY",
     "news_ticker_text": "",
     "detections": [
@@ -17296,39 +17219,104 @@
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.33999999999999997,
-          0.164,
-          1.0,
-          1.0
+          0.0,
+          0.706,
+          0.176,
+          0.918
         ],
-        "description": "a modern multi-story building exterior",
-        "description_vi": "mặt tiền tòa nhà nhiều tầng hiện đại",
+        "description": "a smaller white building partially visible on the left",
+        "description_vi": "một tòa nhà trắng nhỏ hơn nhìn thấy một phần bên trái",
         "attributes": [
-          "modern",
-          "multi-story",
-          "white"
+          "white",
+          "distant"
         ],
         "action": ""
       },
       {
-        "object_id": "flagpole_0",
-        "label": "flagpole",
+        "object_id": "building_1",
+        "label": "building",
         "bbox": [
-          0.11000000000000001,
-          0.055,
-          0.348,
-          0.908
+          0.34500000000000003,
+          0.165,
+          1.0,
+          1.0
         ],
-        "description": "three tall flagpoles with flags",
-        "description_vi": "ba cột cờ cao với quốc kỳ",
+        "description": "a modern multi-story building with white facade and large windows",
+        "description_vi": "một tòa nhà hiện đại nhiều tầng với mặt tiền trắng và cửa sổ lớn",
         "attributes": [
-          "tall",
-          "flagpoles"
+          "modern",
+          "white",
+          "multistory"
         ],
         "action": ""
+      },
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.199,
+          0.24200000000000002,
+          0.244,
+          0.534
+        ],
+        "description": "a red flag flying on a tall pole",
+        "description_vi": "một lá cờ đỏ bay trên cột cao",
+        "attributes": [
+          "red",
+          "tall"
+        ],
+        "action": "fluttering"
+      },
+      {
+        "object_id": "flag_1",
+        "label": "flag",
+        "bbox": [
+          0.29500000000000004,
+          0.181,
+          0.346,
+          0.48400000000000004
+        ],
+        "description": "an American flag flying on a pole",
+        "description_vi": "một lá cờ Mỹ bay trên cột",
+        "attributes": [
+          "american",
+          "colorful"
+        ],
+        "action": "fluttering"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "building_0",
+        "predicate": "left_of",
+        "object_id": "building_1"
+      },
+      {
+        "subject_id": "building_1",
+        "predicate": "right_of",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "left_of",
+        "object_id": "building_1"
+      },
+      {
+        "subject_id": "building_1",
+        "predicate": "right_of",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "left_of",
+        "object_id": "flag_1"
+      },
+      {
+        "subject_id": "flag_1",
+        "predicate": "right_of",
+        "object_id": "flag_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V059_f0298",
@@ -17775,47 +17763,49 @@
     "frame_id": "L25_V059_f0305",
     "visual_source_frame_id": "L25_V059_f0305",
     "ocr_source_frame_id": "L25_V059_f0305",
-    "quality_flags": [],
-    "caption": "A darkened interior view shows a woman looking at her phone near a tall robot.",
-    "detailed_caption": "A darkened medium shot displays a woman wearing glasses, a white t-shirt, and jeans standing in a room and looking at her smartphone. A tall orange-and-white humanoid robot stands to her right.",
-    "caption_vi": "Góc nhìn tối trong phòng hiển thị người phụ nữ dùng điện thoại cạnh robot.",
-    "detailed_caption_vi": "Khung hình tối ghi lại người phụ nữ đeo kính mặc áo thun trắng đứng sử dụng điện thoại di động bên cạnh robot hình người màu cam trắng.",
-    "ocr_text": "ROBOTICS NATURAL LANGUAGE PROCESSING INTERNET OF THINGS MACHINE LEARNING BIG DATA",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A dark indoor room features a standing on the left looking at her smartphone while facing a humanoid robot on the right.",
+    "detailed_caption": "A dark indoor scene depicts a standing on the left holding a smartphone, facing a tall white and orange humanoid robot on the right. The background includes modern office partitions, display cabinets with science graphics on the wall, and dark flooring.",
+    "caption_vi": "Không gian trong nhà tối với một phụ nữ trẻ đứng bên trái nhìn điện thoại di động đối diện với một robot hình người.",
+    "detailed_caption_vi": "Cảnh quay tối trong nhà hiển thị một phụ nữ trẻ đứng ở bên trái cầm điện thoại thông minh, đối diện với một con robot hình người màu trắng cam cao lớn ở bên phải. Phía sau là nội thất văn phòng hiện đại với tủ trưng bày và các hình vẽ khoa học trên tường.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.325,
-          0.201,
-          0.421,
-          0.8430000000000001
+          0.32599999999999996,
+          0.199,
+          0.418,
+          0.838
         ],
-        "description": "a woman wearing glasses, a white t-shirt, and jeans",
-        "description_vi": "một phụ nữ đeo kính mặc áo thun trắng và quần jeans",
+        "description": "a with glasses standing and looking at a smartphone",
+        "description_vi": "một phụ nữ trẻ đeo kính đang đứng nhìn điện thoại thông minh",
         "attributes": [
-          "woman",
+          "female",
           "glasses",
-          "white t-shirt",
-          "jeans"
+          "standing"
         ],
-        "action": "holding phone"
+        "action": "holding smartphone"
       },
       {
         "object_id": "robot_0",
         "label": "robot",
         "bbox": [
-          0.48200000000000004,
-          0.08,
-          0.7150000000000001,
-          0.9149999999999999
+          0.47400000000000003,
+          0.08399999999999999,
+          0.713,
+          0.913
         ],
-        "description": "a tall orange and white humanoid robot",
-        "description_vi": "một robot hình người cao màu cam và trắng",
+        "description": "a tall white and orange humanoid robot with wheels",
+        "description_vi": "một con robot hình người màu trắng cam cao có bánh xe",
         "attributes": [
-          "humanoid",
-          "orange and white"
+          "white",
+          "orange",
+          "robotic"
         ],
         "action": "standing"
       }
@@ -17849,15 +17839,13 @@
   },
   {
     "frame_id": "L25_V059_f0307",
-    "visual_source_frame_id": "L25_V059_f0306",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A completely black frame.",
-    "detailed_caption": "The frame is entirely dark and black with no visible objects, people, or lighting.",
-    "caption_vi": "Khung hình hoàn toàn tối đen.",
-    "detailed_caption_vi": "Khung hình tối hoàn toàn không có đối tượng, người hoặc nguồn sáng nào hiển thị.",
+    "visual_source_frame_id": "L25_V059_f0307",
+    "ocr_source_frame_id": "L25_V059_f0307",
+    "quality_flags": [],
+    "caption": "A very dark auditorium or stage is lit with faint overhead lights and low blue stage illumination.",
+    "detailed_caption": "A wide shot displays a very dark auditorium or stage area with dim ceiling lights and faint blue illumination near the floor. Rows of empty dark seats are visible in the foreground under minimal lighting.",
+    "caption_vi": "Một không gian hội trường hoặc sân khấu rất tối được chiếu sáng mờ bởi đèn trần và ánh sáng xanh dưới sàn.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh hiển thị một khu vực hội trường hoặc sân khấu tối đen với đèn trần mờ ảo và ánh sáng màu xanh lam yếu ớt gần sàn nhà. Các hàng ghế tối màu trống được nhìn thấy ở phía trước trong điều kiện ánh sáng tối thiểu.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
@@ -18294,53 +18282,99 @@
     "visual_source_frame_id": "L25_V059_f0315",
     "ocr_source_frame_id": "L25_V059_f0315",
     "quality_flags": [],
-    "caption": "A wide meeting room with multiple individuals seated at a large conference table discussing business.",
-    "detailed_caption": "A wide shot of a large conference room with a long wooden table where several people are seated on both sides. On the right, a man with glasses gestures with his hands while speaking. Other participants sit along the left side, some operating laptops. Two screens on the wall display presentations with text and imagery.",
-    "caption_vi": "Phòng họp rộng với nhiều người ngồi quanh bàn hội nghị lớn thảo luận công việc.",
-    "detailed_caption_vi": "Cảnh rộng của một phòng họp lớn với bàn gỗ dài, nhiều người đang ngồi hai bên thảo luận. Ở phía bên phải, một người đàn ông đeo kính đang dùng tay ra hiệu khi nói. Các đại biểu khác ngồi bên trái, một số đang sử dụng máy tính xách tay. Hai màn hình trên tường hiển thị slide thuyết trình.",
-    "ocr_text": "SIU International College of Advanced Education (ICAE), Australia January 6th, 2022",
+    "caption": "Several people in business attire sit around a long conference table during a meeting, with two screens displaying presentations on the wall.",
+    "detailed_caption": "A medium shot captures a group of people sitting around a polished wooden conference table in a brightly lit meeting room. A man on the right with glasses and a dark blue shirt is speaking with hand gestures, while others listen attentively. Two TV screens mounted on the white wall display presentation slides.",
+    "caption_vi": "Nhiều người mặc trang phục công sở ngồi quanh một bàn họp dài trong một cuộc họp, phía sau có hai màn hình chiếu slide.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại nhóm người ngồi quanh bàn họp bằng gỗ sáng bóng trong phòng họp sáng sủa. Một người đàn ông bên phải đeo kính và mặc áo sơ mi xanh đậm đang nói chuyện với cử chỉ tay, trong khi những người khác lắng nghe. Hai màn hình gắn trên tường trắng hiển thị các slide thuyết trình.",
+    "ocr_text": "SIU University Welcome International College of Advanced Education (ICAE), Australia January 15, 2024 SIU University Welcome International College of Advanced Education (ICAE), Australia January 15, 2024 Cent",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.22999999999999998,
+          0.233,
           0.68,
-          0.383,
-          0.921
+          0.38,
+          0.9239999999999999
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a portable laptop computer open on the conference table",
+        "description_vi": "một máy tính xách tay mở trên bàn họp",
+        "attributes": [
+          "silver",
+          "electronic"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.617,
-          0.33199999999999996,
-          0.792,
-          0.663
+          0.624,
+          0.33,
+          0.7929999999999999,
+          0.662
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "an older man with glasses wearing a dark blue long-sleeved shirt and speaking with hand gestures",
+        "description_vi": "một người đàn ông lớn tuổi đeo kính mặc áo sơ mi dài tay màu xanh đậm đang nói chuyện",
+        "attributes": [
+          "male",
+          "glasses",
+          "blue"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "man_1",
+        "label": "man",
+        "bbox": [
+          0.8310000000000001,
+          0.40599999999999997,
+          0.999,
+          0.7430000000000001
+        ],
+        "description": "a man wearing a plaid shirt sitting on the far right",
+        "description_vi": "một người đàn ông mặc áo sơ mi kẻ sọc ngồi ở góc xa bên phải",
+        "attributes": [
+          "male",
+          "plaid",
+          "glasses"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.396,
+          0.162,
+          0.5980000000000001,
+          0.341
+        ],
+        "description": "a wall-mounted television displaying presentation slides",
+        "description_vi": "một màn hình tivi treo tường hiển thị các slide thuyết trình",
+        "attributes": [
+          "rectangular",
+          "digital"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "table_0",
+        "label": "table",
         "bbox": [
-          0.827,
-          0.40399999999999997,
-          0.9890000000000001,
-          0.747
+          0.205,
+          0.571,
+          1.0,
+          1.0
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a long polished wooden conference table with bottles and floral decoration",
+        "description_vi": "một chiếc bàn họp dài bằng gỗ bóng có chai nước và hoa trang trí",
+        "attributes": [
+          "wooden",
+          "long",
+          "polished"
+        ],
         "action": ""
       }
     ],
@@ -18348,22 +18382,62 @@
       {
         "subject_id": "laptop_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "man_1"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "man_1",
         "predicate": "right_of",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_1"
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "above",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "below",
+        "object_id": "screen_0"
       }
     ]
   },
@@ -18386,156 +18460,345 @@
     "visual_source_frame_id": "L25_V059_f0317",
     "ocr_source_frame_id": "L25_V059_f0317",
     "quality_flags": [],
-    "caption": "Two men standing in front of flags and a floral arrangement on a table, holding folders.",
-    "detailed_caption": "A medium shot of two men standing behind a large wooden table adorned with a floral centerpiece. On the left, a man in a dark suit holds a dark folder. On the right, a man in a blue suit holds a red folder. National flags stand behind them in front of a decorative wall map.",
-    "caption_vi": "Hai người đàn ông đứng trước bàn có cờ và hoa tươi, đang cầm các tập tài liệu.",
-    "detailed_caption_vi": "Cảnh trung hai người đàn ông đứng phía sau chiếc bàn gỗ lớn có trang trí cụm hoa ở giữa. Bên trái, một người đàn ông mặc vest tối màu đang cầm bìa đựng tài liệu màu xanh sẫm. Bên phải, người đàn ông mặc vest xanh dương cầm bìa tài liệu màu đỏ. Phía sau là các lá quốc kỳ và tường trang trí.",
+    "caption": "Two men stand behind a long polished table holding document folders, flanked by flags and officials in a formal hall.",
+    "detailed_caption": "A wide shot shows a formal signing ceremony inside a wood-paneled room. Two men stand in the center holding document folders in front of a long wooden table adorned with flowers. Several officials stand in the background next to national flags and a large decorative wall map.",
+    "caption_vi": "Hai người đàn ông đứng sau chiếc bàn dài cầm cặp tài liệu, xung quanh có cờ và các quan chức trong một căn phòng trang trọng.",
+    "detailed_caption_vi": "Cảnh toàn cảnh ghi lại buổi lễ ký kết trang trọng bên trong căn phòng có ốp gỗ. Hai người đàn ông đứng ở trung tâm cầm cặp tài liệu trước chiếc bàn gỗ dài được trang trí hoa tươi. Một số quan chức đứng phía sau cạnh quốc kỳ và bản đồ trang trí lớn.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "flag_0",
+        "label": "flag",
         "bbox": [
-          0.175,
-          0.356,
-          0.281,
-          0.8310000000000001
+          0.128,
+          0.051,
+          0.21400000000000002,
+          0.7270000000000001
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a tall national flag with blue, yellow, and red stripes",
+        "description_vi": "một cột quốc kỳ cao với các sọc xanh, vàng và đỏ",
+        "attributes": [
+          "colorful",
+          "tall"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "flag_1",
+        "label": "flag",
+        "bbox": [
+          0.248,
+          0.079,
+          0.339,
+          0.677
+        ],
+        "description": "a tall red flag with a yellow star",
+        "description_vi": "một lá cờ đỏ cao với ngôi sao vàng",
+        "attributes": [
+          "red",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
           0.43099999999999994,
           0.311,
-          0.558,
-          0.94
+          0.5589999999999999,
+          0.9380000000000001
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a man in a dark suit holding a blue document folder",
+        "description_vi": "một người đàn ông mặc suit sẫm màu đang cầm cặp tài liệu màu xanh",
+        "attributes": [
+          "male",
+          "suit",
+          "dark"
+        ],
+        "action": "holding folder"
       },
       {
-        "object_id": "person_2",
-        "label": "person",
+        "object_id": "man_1",
+        "label": "man",
         "bbox": [
-          0.5559999999999999,
-          0.287,
-          0.689,
-          0.9359999999999999
+          0.558,
+          0.286,
+          0.688,
+          0.941
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a man in a blue suit holding a red document folder",
+        "description_vi": "một người đàn ông mặc suit xanh đang cầm cặp tài liệu màu đỏ",
+        "attributes": [
+          "male",
+          "suit",
+          "blue"
+        ],
+        "action": "holding folder"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.16399999999999998,
+          0.6739999999999999,
+          1.0,
+          1.0
+        ],
+        "description": "a long polished wooden table with flower arrangement",
+        "description_vi": "một chiếc bàn gỗ dài bóng loáng có cắm hoa",
+        "attributes": [
+          "wooden",
+          "long",
+          "polished"
+        ],
         "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
+        "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "flag_1"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "flag_1",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "flag_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "man_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_1",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "flag_1"
+      },
+      {
+        "subject_id": "flag_1",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "flag_1"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_1"
       }
     ]
   },
   {
     "frame_id": "L25_V059_f0318",
-    "visual_source_frame_id": "L25_V059_f0317",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Two men standing in front of flags and a floral arrangement on a table, holding folders.",
-    "detailed_caption": "A medium shot of two men standing behind a large wooden table adorned with a floral centerpiece. On the left, a man in a dark suit holds a dark folder. On the right, a man in a blue suit holds a red folder. National flags stand behind them in front of a decorative wall map.",
-    "caption_vi": "Hai người đàn ông đứng trước bàn có cờ và hoa tươi, đang cầm các tập tài liệu.",
-    "detailed_caption_vi": "Cảnh trung hai người đàn ông đứng phía sau chiếc bàn gỗ lớn có trang trí cụm hoa ở giữa. Bên trái, một người đàn ông mặc vest tối màu đang cầm bìa đựng tài liệu màu xanh sẫm. Bên phải, người đàn ông mặc vest xanh dương cầm bìa tài liệu màu đỏ. Phía sau là các lá quốc kỳ và tường trang trí.",
+    "visual_source_frame_id": "L25_V059_f0318",
+    "ocr_source_frame_id": "L25_V059_f0318",
+    "quality_flags": [],
+    "caption": "Two men stand behind a long polished table holding document folders, flanked by flags and officials in a formal hall.",
+    "detailed_caption": "A wide shot shows a formal signing ceremony inside a wood-paneled room. Two men stand in the center holding document folders in front of a long wooden table adorned with flowers. Several officials stand in the background next to national flags and a large decorative wall map.",
+    "caption_vi": "Hai người đàn ông đứng sau chiếc bàn dài cầm cặp tài liệu, xung quanh có cờ và các quan chức trong một căn phòng trang trọng.",
+    "detailed_caption_vi": "Cảnh toàn cảnh ghi lại buổi lễ ký kết trang trọng bên trong căn phòng có ốp gỗ. Hai người đàn ông đứng ở trung tâm cầm cặp tài liệu trước chiếc bàn gỗ dài được trang trí hoa tươi. Một số quan chức đứng phía sau cạnh quốc kỳ và bản đồ trang trí lớn.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "flag_0",
+        "label": "flag",
         "bbox": [
-          0.175,
-          0.356,
-          0.281,
-          0.8310000000000001
+          0.128,
+          0.051,
+          0.21400000000000002,
+          0.7270000000000001
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a tall national flag with blue, yellow, and red vertical stripes",
+        "description_vi": "một lá cờ quốc gia cao có sọc dọc xanh, vàng và đỏ",
+        "attributes": [
+          "colorful",
+          "tall"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "flag_1",
+        "label": "flag",
         "bbox": [
-          0.43099999999999994,
+          0.248,
+          0.079,
+          0.339,
+          0.677
+        ],
+        "description": "a red flag with a yellow star",
+        "description_vi": "một lá cờ đỏ có ngôi sao vàng",
+        "attributes": [
+          "red",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.42699999999999994,
           0.311,
-          0.558,
-          0.94
+          0.5589999999999999,
+          0.9380000000000001
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a man in a dark suit holding a blue folder",
+        "description_vi": "một người đàn ông mặc suit sẫm màu cầm bìa hồ sơ màu xanh",
+        "attributes": [
+          "male",
+          "suit",
+          "dark"
+        ],
+        "action": "holding folder"
       },
       {
-        "object_id": "person_2",
-        "label": "person",
+        "object_id": "man_1",
+        "label": "man",
         "bbox": [
-          0.5559999999999999,
-          0.287,
-          0.689,
-          0.9359999999999999
+          0.558,
+          0.286,
+          0.688,
+          0.941
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a man in a blue suit holding a red folder",
+        "description_vi": "một người đàn ông mặc suit xanh cầm bìa hồ sơ màu đỏ",
+        "attributes": [
+          "male",
+          "suit",
+          "blue"
+        ],
+        "action": "holding folder"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.16399999999999998,
+          0.6739999999999999,
+          1.0,
+          1.0
+        ],
+        "description": "a long wooden table with flowers and pens",
+        "description_vi": "một chiếc bàn gỗ dài có hoa và bút",
+        "attributes": [
+          "wooden",
+          "long"
+        ],
         "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
+        "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "flag_1"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "flag_1",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "flag_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "man_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_1",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "flag_1"
+      },
+      {
+        "subject_id": "flag_1",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "flag_1"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_1"
       }
     ]
   },
@@ -18818,130 +19081,173 @@
     "visual_source_frame_id": "L25_V059_f0322",
     "ocr_source_frame_id": "L25_V059_f0322",
     "quality_flags": [],
-    "caption": "Multiple representatives standing and holding presentation folders behind a table with floral arrangements.",
-    "detailed_caption": "A wide view of a ceremony featuring several individuals standing in a row behind a long table, each holding an open folder with university branding. A large blue banner forms the backdrop with yellow text. The visual has a slight overlay effect.",
-    "caption_vi": "Nhiều đại diện đứng cầm bìa hồ sơ phía sau bàn dài có hoa trang trí.",
-    "detailed_caption_vi": "Cảnh rộng ghi lại buổi lễ với nhiều đại biểu đứng xếp hàng phía sau chiếc bàn dài, mỗi người cầm một bìa đựng tài liệu có logo trường đại học. Phía sau là phông nền xanh dương có chữ vàng. Hình ảnh có hiệu ứng chồng mờ nhẹ.",
-    "ocr_text": "SIU Saigon International ...",
+    "caption": "Several people stand behind a long red-skirted table holding document folders during a ceremony with overlaid text graphics.",
+    "detailed_caption": "A wide shot shows multiple individuals standing behind a long table covered with red fabric bearing university logos and floral decorations. Each person holds open document folders. The background features a large banner with English text and semi-transparent portraits.",
+    "caption_vi": "Nhiều người đứng sau một chiếc bàn dài phủ khăn đỏ cầm cặp tài liệu trong buổi lễ có phủ chữ đồ họa.",
+    "detailed_caption_vi": "Cảnh toàn cảnh ghi lại nhiều người đứng phía sau chiếc bàn dài phủ vải đỏ in logo trường và có hoa tươi trang trí. Mỗi người đều cầm các cặp tài liệu mở. Phía sau là tấm phông nền lớn có chữ tiếng Anh và hình ảnh mờ.",
+    "ocr_text": "MERIDIEN THE WESTIN SÔI ĐỘN RỘN RÌN NGREEMENT COOPE EMENT GREM 222 A SIU University Chang DuNG UNIVERSITY MARRIOTT INTERNATIONAL SIU Saigon International SIU",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.036,
+          0.352,
+          0.191,
+          0.759
+        ],
+        "description": "a man standing on the far left in a dark suit",
+        "description_vi": "một người đàn ông đứng ở góc xa bên trái mặc vest sẫm màu",
+        "attributes": [
+          "male",
+          "suit",
+          "dark"
+        ],
+        "action": "holding folder"
+      },
+      {
+        "object_id": "man_1",
+        "label": "man",
+        "bbox": [
+          0.655,
+          0.272,
+          0.8099999999999999,
+          0.759
+        ],
+        "description": "a man standing in the center-right wearing a suit and glasses",
+        "description_vi": "một người đàn ông đứng ở góc trung tâm bên phải mặc vest và đeo kính",
+        "attributes": [
+          "male",
+          "suit",
+          "glasses"
+        ],
+        "action": "holding folder"
+      },
+      {
+        "object_id": "man_2",
+        "label": "man",
+        "bbox": [
+          0.8380000000000001,
+          0.272,
+          0.999,
+          0.764
+        ],
+        "description": "a man standing on the far right holding a document folder",
+        "description_vi": "một người đàn ông đứng ở góc xa bên phải cầm cặp tài liệu",
+        "attributes": [
+          "male",
+          "shirt",
+          "glasses"
+        ],
+        "action": "holding folder"
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.037,
-          0.353,
-          0.191,
-          0.755
-        ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
-      },
-      {
-        "object_id": "person_1",
-        "label": "person",
-        "bbox": [
-          0.391,
+          0.393,
           0.358,
-          0.542,
-          0.747
+          0.541,
+          0.753
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a person holding a red document folder in the middle",
+        "description_vi": "một người cầm cặp tài liệu màu đỏ ở giữa",
+        "attributes": [
+          "holding",
+          "folder"
+        ],
+        "action": "holding folder"
       },
       {
-        "object_id": "person_2",
-        "label": "person",
+        "object_id": "table_0",
+        "label": "table",
         "bbox": [
-          0.654,
-          0.271,
-          0.8099999999999999,
-          0.758
+          0.0,
+          0.767,
+          1.0,
+          1.0
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
-      },
-      {
-        "object_id": "person_3",
-        "label": "person",
-        "bbox": [
-          0.836,
-          0.273,
-          0.998,
-          0.758
+        "description": "a long table covered with red fabric and university logos",
+        "description_vi": "một chiếc bàn dài phủ vải đỏ và logo trường đại học",
+        "attributes": [
+          "red",
+          "long",
+          "covered"
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
         "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "man_1"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "man_2"
+      },
+      {
+        "subject_id": "man_2",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "left_of",
+        "object_id": "man_2"
+      },
+      {
+        "subject_id": "man_2",
+        "predicate": "right_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
         "predicate": "right_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "man_2"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "man_2",
         "predicate": "right_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_3"
+        "predicate": "above",
+        "object_id": "table_0"
       },
       {
-        "subject_id": "person_3",
-        "predicate": "right_of",
+        "subject_id": "table_0",
+        "predicate": "below",
         "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "right_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_3"
-      },
-      {
-        "subject_id": "person_3",
-        "predicate": "right_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "left_of",
-        "object_id": "person_3"
-      },
-      {
-        "subject_id": "person_3",
-        "predicate": "right_of",
-        "object_id": "person_2"
       }
     ]
   },
@@ -19082,52 +19388,192 @@
     "visual_source_frame_id": "L25_V059_f0324",
     "ocr_source_frame_id": "L25_V059_f0324",
     "quality_flags": [],
-    "caption": "Two individuals holding signed folder documents in an indoor setting with a projection screen.",
-    "detailed_caption": "A medium shot of a man on the left in a black blazer and red shirt holding a red folder, and a woman on the right in a dark suit jacket holding a blue folder. They present the folders together facing forward in front of a white projection screen.",
-    "caption_vi": "Hai người đang cầm tài liệu bìa hồ sơ đã ký trong phòng có màn hình chiếu.",
-    "detailed_caption_vi": "Cảnh trung một người đàn ông bên trái mặc áo khoác đen bên trong áo sơ mi đỏ đang cầm bìa hồ sơ màu đỏ, cùng một phụ nữ bên phải mặc vest tối màu cầm bìa màu xanh. Cả hai cùng cầm tài liệu hướng về phía trước trước màn chiếu trắng.",
+    "caption": "A man in a black suit and red shirt on the left exchanges document folders with a woman in a black suit on the right.",
+    "detailed_caption": "A medium shot shows a man on the left wearing a black suit jacket and a red button-down shirt handing red and blue document folders to a smiling woman on the right wearing a black suit and light blue blouse. A white projection screen is visible in the background.",
+    "caption_vi": "Một người đàn ông mặc suit đen và áo đỏ bên trái trao đổi cặp tài liệu với người phụ nữ mặc suit đen bên phải.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông ở bên trái mặc áo khoác vest đen và áo sơ mi đỏ đang trao cặp tài liệu màu đỏ và xanh cho một phụ nữ mỉm cười ở bên phải mặc vest đen kết hợp áo sơ mi xanh nhạt. Phía sau là màn hình chiếu trắng.",
     "ocr_text": "SIU Saigon International University",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "folder_0",
+        "label": "folder",
         "bbox": [
-          0.255,
-          0.133,
-          0.484,
-          0.995
+          0.40099999999999997,
+          0.691,
+          0.571,
+          0.913
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a red document folder with university logo",
+        "description_vi": "một cặp tài liệu màu đỏ có logo trường đại học",
+        "attributes": [
+          "red",
+          "document"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "folder_1",
+        "label": "folder",
         "bbox": [
-          0.513,
-          0.307,
-          0.764,
-          0.995
+          0.471,
+          0.528,
+          0.5940000000000001,
+          0.772
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a blue document folder with circular emblem",
+        "description_vi": "một cặp tài liệu màu xanh có huy hiệu hình tròn",
+        "attributes": [
+          "blue",
+          "document"
+        ],
         "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.254,
+          0.135,
+          0.475,
+          1.0
+        ],
+        "description": "a man wearing a black suit jacket, red shirt, and glasses holding document folders",
+        "description_vi": "một người đàn ông mặc áo vest đen, áo sơ mi đỏ và đeo kính đang cầm cặp tài liệu",
+        "attributes": [
+          "male",
+          "suit",
+          "glasses",
+          "red"
+        ],
+        "action": "holding folder"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.16399999999999998,
+          0.0,
+          1.0,
+          0.883
+        ],
+        "description": "a large white projection screen in the background",
+        "description_vi": "một màn hình chiếu trắng lớn ở phía sau",
+        "attributes": [
+          "white",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.517,
+          0.308,
+          0.763,
+          1.0
+        ],
+        "description": "a smiling woman wearing a black suit and light blue blouse holding document folders",
+        "description_vi": "một phụ nữ mỉm cười mặc vest đen và áo sơ mi xanh nhạt đang cầm cặp tài liệu",
+        "attributes": [
+          "female",
+          "suit",
+          "smiling"
+        ],
+        "action": "holding folder"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_1"
+        "subject_id": "folder_0",
+        "predicate": "overlapping",
+        "object_id": "folder_1"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "folder_1",
+        "predicate": "overlapping",
+        "object_id": "folder_0"
+      },
+      {
+        "subject_id": "folder_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "folder_0"
+      },
+      {
+        "subject_id": "folder_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "folder_0"
+      },
+      {
+        "subject_id": "folder_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "folder_0"
+      },
+      {
+        "subject_id": "folder_1",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "folder_1"
+      },
+      {
+        "subject_id": "folder_1",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "folder_1"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
       }
     ]
   },
@@ -19501,131 +19947,196 @@
     "frame_id": "L25_V059_f0329",
     "visual_source_frame_id": "L25_V059_f0329",
     "ocr_source_frame_id": "L25_V059_f0329",
-    "quality_flags": [],
-    "caption": "A mock courtroom setting with students participating in a trial simulation.",
-    "detailed_caption": "A medium shot of a mock courtroom trial. A person in a black shirt stands in the center facing the judges. On the left, a student speaks into a microphone behind a desk with a red banner reading SIU. On the right, two students in judicial robes sit behind another desk.",
-    "caption_vi": "Cảnh phòng xử án giả định với học sinh tham gia phiên tòa mô phỏng.",
-    "detailed_caption_vi": "Cảnh trung một buổi mô phỏng phiên tòa xét xử. Một người mặc áo đen đứng ở trung tâm quay mặt về phía hội đồng xét xử. Bên trái, một học sinh đang nói micro đứng sau bàn phủ khăn đỏ có logo SIU. Bên phải, hai học sinh mặc trang phục thẩm phán ngồi sau bàn.",
-    "ocr_text": "THƯ KÝ SIU Saigon International UNIVERSITY du.vn THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A mock trial setting shows a speaking at a podium on the left, a man standing in the center with his back turned, and judges seated at a desk on the right.",
+    "detailed_caption": "A wide shot of a mock courtroom features a female student in a black suit standing behind a podium labeled 'THU KÝ' on the left. In the center, a man stands facing away from the camera. On the right, two female judges in robes sit behind a desk below a large Vietnamese national emblem displayed on a projection screen.",
+    "caption_vi": "Cảnh phiên tòa giả định cho thấy một phụ nữ trẻ nói ở bục bên trái, một người đàn ông đứng giữa quay lưng và các thẩm phán ngồi bàn bên phải.",
+    "detailed_caption_vi": "Cảnh toàn cảnh phòng xử án giả định có một nữ sinh mặc vest đen đứng sau bục giảng có biển 'THU KÝ' ở bên trái. Ở giữa, một người đàn ông đứng quay lưng về phía máy ảnh. Bên phải, hai nữ thẩm phán mặc áo choàng ngồi sau bàn làm việc dưới quốc huy Việt Nam lớn được chiếu trên màn hình.",
+    "ocr_text": "THƯ KÝ SIU Saigon International University du.vn THẨM PHÁN CHỦ TỌA PHIÊN TOÀ HỘI THẨM NHÂN DÂN",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.396,
+          0.295,
+          0.588,
+          1.0
+        ],
+        "description": "a man wearing a dark shirt standing with his back to the camera",
+        "description_vi": "một người đàn ông mặc áo tối màu đang đứng quay lưng về phía camera",
+        "attributes": [
+          "male",
+          "dark",
+          "back"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.528,
+          0.156,
+          0.933,
+          0.6639999999999999
+        ],
+        "description": "a projection screen showing the Vietnamese national emblem",
+        "description_vi": "màn hình chiếu hiển thị quốc huy Việt Nam",
+        "attributes": [
+          "yellow",
+          "emblem"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
         "bbox": [
           0.126,
           0.316,
-          0.22999999999999998,
-          0.64
+          0.231,
+          0.639
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a in a black suit jacket standing at a podium and speaking into a microphone",
+        "description_vi": "một phụ nữ trẻ mặc áo vest đen đứng tại bục giảng và nói vào micro",
+        "attributes": [
+          "female",
+          "suit",
+          "standing"
+        ],
+        "action": "speaking"
       },
       {
-        "object_id": "person_1",
-        "label": "person",
-        "bbox": [
-          0.397,
-          0.295,
-          0.5860000000000001,
-          0.995
-        ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
-      },
-      {
-        "object_id": "person_2",
-        "label": "person",
+        "object_id": "woman_1",
+        "label": "woman",
         "bbox": [
           0.644,
-          0.41,
-          0.786,
-          0.663
+          0.41100000000000003,
+          0.7849999999999999,
+          0.659
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a female judge in robes sitting at the center desk",
+        "description_vi": "một nữ thẩm phán mặc áo choàng ngồi ở bàn chính giữa",
+        "attributes": [
+          "female",
+          "robe",
+          "judge"
+        ],
+        "action": "sitting"
       },
       {
-        "object_id": "person_3",
-        "label": "person",
+        "object_id": "woman_2",
+        "label": "woman",
         "bbox": [
           0.865,
-          0.41500000000000004,
-          0.998,
-          0.655
+          0.416,
+          1.0,
+          0.667
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a female juror in a black suit sitting on the right",
+        "description_vi": "một nữ hội thẩm mặc vest đen ngồi ở bên phải",
+        "attributes": [
+          "female",
+          "suit",
+          "sitting"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
+        "subject_id": "woman_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "man_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "woman_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "woman_1"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "woman_1",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "person_3"
+        "object_id": "woman_2"
       },
       {
-        "subject_id": "person_3",
+        "subject_id": "woman_2",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "woman_0",
         "predicate": "left_of",
-        "object_id": "person_2"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "person_1"
+        "object_id": "woman_0"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "woman_0",
         "predicate": "left_of",
-        "object_id": "person_3"
+        "object_id": "woman_1"
       },
       {
-        "subject_id": "person_3",
+        "subject_id": "woman_1",
         "predicate": "right_of",
-        "object_id": "person_1"
+        "object_id": "woman_0"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "woman_0",
         "predicate": "left_of",
-        "object_id": "person_3"
+        "object_id": "woman_2"
       },
       {
-        "subject_id": "person_3",
+        "subject_id": "woman_2",
         "predicate": "right_of",
-        "object_id": "person_2"
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "left_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "right_of",
+        "object_id": "woman_1"
       }
     ]
   },
@@ -20240,44 +20751,44 @@
     "visual_source_frame_id": "L25_V059_f0337",
     "ocr_source_frame_id": "L25_V059_f0337",
     "quality_flags": [],
-    "caption": "Two students standing in front of a blue background with red flags.",
-    "detailed_caption": "A medium shot displays two students standing before a blue background adorned with red flags and large text. The scene transitions with a slight blur effect.",
-    "caption_vi": "Hai học sinh đứng trước phông nền xanh dương có cờ đỏ.",
-    "detailed_caption_vi": "Cảnh trung cảnh hiển thị hai học sinh đứng trước phông nền màu xanh có cờ đỏ và chữ lớn. Cảnh có hiệu ứng chuyển động mờ.",
-    "ocr_text": "4 PHƯƠNG THỨC XÉT TUYỂN TẠI SIU 1. Xét tuyển học bạ 3 học kỳ (2HK lớp 11 + HK1 lớp 12) 2. Xét tuyển học bạ lớp 12 3. Xét tuyển kết quả kỳ thi THPT 4. Xét tuyển kết quả kỳ thi đánh giá năng lực của Đại học Quốc gia TPHCM",
+    "caption": "A blurry promotional frame shows two students standing next to educational graphics and large Vietnamese text.",
+    "detailed_caption": "A medium shot with motion blur displays two students standing on the left side of the frame in front of flags and a purple background. Large bold golden numbers and Vietnamese text overlay the right side of the screen.",
+    "caption_vi": "Khung hình quảng cáo mờ ảo hiển thị hai học sinh đứng cạnh đồ họa giáo dục và chữ tiếng Việt lớn.",
+    "detailed_caption_vi": "Khung hình trung cảnh bị mờ chuyển động hiển thị hai học sinh đứng ở bên trái khung hình trước cờ và nền tím. Các con số vàng lớn và chữ tiếng Việt phủ lên phía bên phải màn hình.",
+    "ocr_text": "PHƯƠNG THỨC XÉT TUYỂN TẠI SIU 4 SIU 1. Xét tuyển học bạ THPT (dựa vào kết quả học tập lớp 12) 2. Xét tuyển dựa vào kết quả kỳ thi tốt nghiệp THPT 3. Xét tuyển kết quả kỳ thi đánh giá năng lực của Đại học Quốc gia Thành phố Hồ Chí Minh 4. Xét tuyển kết quả kỳ thi đánh giá năng lực, phỏng vấn tuyển sinh kết hợp học bạ hoặc điểm thi tốt nghiệp THPT",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "student_0",
-        "label": "student",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
           0.067,
-          0.237,
-          0.286,
-          1.0
+          0.23299999999999998,
+          0.29300000000000004,
+          0.971
         ],
-        "description": "male student in white shirt",
-        "description_vi": "nam học sinh mặc áo sơ mi trắng",
+        "description": "a person in a light pink shirt standing on the left",
+        "description_vi": "một người mặc áo sơ mi hồng nhạt đang đứng bên trái",
         "attributes": [
-          "male",
-          "white shirt"
+          "pink",
+          "standing"
         ],
         "action": "standing"
       },
       {
-        "object_id": "student_1",
-        "label": "student",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
-          0.29300000000000004,
-          0.268,
-          0.475,
-          1.0
+          0.28300000000000003,
+          0.26199999999999996,
+          0.47400000000000003,
+          0.997
         ],
-        "description": "female student in white shirt",
-        "description_vi": "nữ học sinh mặc áo sơ mi trắng",
+        "description": "a person in a white shirt and dark pants standing next to the other person",
+        "description_vi": "một người mặc áo trắng và quần tối màu đứng cạnh người kia",
         "attributes": [
-          "female",
-          "white shirt"
+          "white",
+          "standing"
         ],
         "action": "standing"
       }
@@ -20990,11 +21501,13 @@
     "frame_id": "L25_V059_f0345",
     "visual_source_frame_id": "L25_V059_f0345",
     "ocr_source_frame_id": "L25_V059_f0345",
-    "quality_flags": [],
-    "caption": "Two female students in school uniforms opening wooden double doors to a stage.",
-    "detailed_caption": "A close-up shot shows two female students pulling open wooden double doors with metal vertical handles. Through the narrow opening between the doors, performers in red and white outfits are visible on a stage.",
-    "caption_vi": "Hai nữ học sinh mặc đồng phục đang kéo mở cửa gỗ đôi nhìn ra sân khấu.",
-    "detailed_caption_vi": "Cảnh cận cảnh cho thấy hai nữ học sinh đang kéo mở cửa gỗ đôi có tay cầm kim loại dọc. Qua khe hở giữa hai cánh cửa, có thể thấy những người biểu diễn mặc trang phục đỏ trắng trên sân khấu.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A with dark hair seen from behind and reflected in a split wooden door pulls the handles open.",
+    "detailed_caption": "A close-up shot shows a with long dark hair wearing a white shirt standing between two wooden doors with metal handles. Her reflection is symmetrically shown on both sides as she grips the handles to pull the doors open, revealing a glimpse of a stage in the center gap.",
+    "caption_vi": "Một phụ nữ trẻ tóc đen nhìn từ phía sau và phản chiếu qua cánh cửa gỗ đôi đang kéo tay nắm mở cửa.",
+    "detailed_caption_vi": "Cận cảnh cho thấy một người phụ nữ trẻ tóc dài sẫm màu mặc áo sơ mi trắng đứng giữa hai cánh cửa gỗ có tay cầm bằng kim loại. Hình ảnh phản chiếu của cô xuất hiện đối xứng ở cả hai bên khi cô nắm lấy tay cầm để kéo cửa mở ra, hé lộ một góc sân khấu ở giữa khe cửa.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -21007,60 +21520,35 @@
           1.0,
           1.0
         ],
-        "description": "wooden double doors",
-        "description_vi": "cửa gỗ đôi",
+        "description": "a pair of wooden doors with vertical silver handles being pulled open",
+        "description_vi": "một cặp cửa gỗ có tay nắm dọc bằng bạc đang được kéo mở",
         "attributes": [
-          "wooden"
+          "wooden",
+          "brown",
+          "open"
         ],
         "action": "opening"
       },
       {
-        "object_id": "student_0",
-        "label": "student",
-        "bbox": [
-          0.0,
-          0.163,
-          0.335,
-          1.0
-        ],
-        "description": "female student in white shirt pulling door",
-        "description_vi": "nữ học sinh mặc áo sơ mi trắng kéo cửa",
-        "attributes": [
-          "female",
-          "white shirt"
-        ],
-        "action": "opening door"
-      },
-      {
-        "object_id": "student_1",
-        "label": "student",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
           0.5589999999999999,
           0.11599999999999999,
-          1.0,
+          0.999,
           1.0
         ],
-        "description": "female student in white shirt pulling door",
-        "description_vi": "nữ học sinh mặc áo sơ mi trắng kéo cửa",
+        "description": "a with dark hair wearing a white shirt pulling door handles",
+        "description_vi": "một người phụ nữ trẻ tóc tối màu mặc áo sơ mi trắng đang kéo tay nắm cửa",
         "attributes": [
           "female",
-          "white shirt"
+          "white",
+          "long hair"
         ],
-        "action": "opening door"
+        "action": "pulling"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "student_0",
-        "predicate": "left_of",
-        "object_id": "student_1"
-      },
-      {
-        "subject_id": "student_1",
-        "predicate": "right_of",
-        "object_id": "student_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V059_f0346",
@@ -21373,174 +21861,261 @@
     "visual_source_frame_id": "L25_V059_f0348",
     "ocr_source_frame_id": "L25_V059_f0348",
     "quality_flags": [],
-    "caption": "A group of dancers performing on a stage with a starry night projection.",
-    "detailed_caption": "A wide shot shows dancers in white outfits performing on a stage with a large projection screen displaying a starry night background. Black stage speakers are visible on the floor.",
-    "caption_vi": "Một nhóm vũ công biểu diễn trên sân khấu với màn hình chiếu bầu trời đêm đầy sao.",
-    "detailed_caption_vi": "Cảnh toàn cảnh cho thấy các vũ công mặc trang phục trắng đang biểu diễn trên sân khấu với màn hình chiếu lớn hiển thị nền bầu trời đêm đầy sao. Các loa sân khấu màu đen được nhìn thấy trên sàn.",
+    "caption": "An aerial view shows several basketball players moving across a green outdoor court with white boundary lines.",
+    "detailed_caption": "An overhead high-angle shot displays an outdoor basketball court painted green with white and yellow boundary lines. Several players in dark uniforms with green accents are scattered across the court, running and positioning themselves during a game.",
+    "caption_vi": "Góc nhìn từ trên cao cho thấy một số cầu thủ bóng rổ di chuyển trên sân ngoài trời màu xanh lá cây có vạch kẻ trắng.",
+    "detailed_caption_vi": "Khung hình góc cao từ trên xuống hiển thị sân bóng rổ ngoài trời được sơn màu xanh lá cây với các vạch kẻ biên màu trắng và vàng. Một số cầu thủ mặc đồng phục tối màu có điểm nhấn màu xanh đang rải rác trên sân, chạy và di chuyển vị trí trong trận đấu.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "performer_0",
-        "label": "performer",
+        "object_id": "court_0",
+        "label": "court",
         "bbox": [
-          0.417,
-          0.5239999999999999,
-          0.6,
-          0.875
+          0.0,
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "dancer in white outfit posing",
-        "description_vi": "vũ công mặc trang phục trắng tạo dáng",
+        "description": "a green outdoor basketball court with white and yellow markings",
+        "description_vi": "sân bóng rổ ngoài trời màu xanh lá cây với các vạch kẻ trắng và vàng",
         "attributes": [
-          "white outfit",
-          "female"
-        ],
-        "action": "dancing"
-      },
-      {
-        "object_id": "performer_1",
-        "label": "performer",
-        "bbox": [
-          0.607,
-          0.5389999999999999,
-          0.8130000000000001,
-          0.9029999999999999
-        ],
-        "description": "dancer in white dress",
-        "description_vi": "vũ công mặc đầm trắng",
-        "attributes": [
-          "white dress",
-          "female"
-        ],
-        "action": "dancing"
-      },
-      {
-        "object_id": "speaker_0",
-        "label": "speaker",
-        "bbox": [
-          0.753,
-          0.846,
-          0.8460000000000001,
-          0.9510000000000001
-        ],
-        "description": "black stage speaker on the floor",
-        "description_vi": "loa sân khấu màu đen trên sàn",
-        "attributes": [
-          "black",
-          "speaker"
+          "green",
+          "outdoor",
+          "marked"
         ],
         "action": ""
+      },
+      {
+        "object_id": "player_0",
+        "label": "player",
+        "bbox": [
+          0.045,
+          0.859,
+          0.1,
+          0.9470000000000001
+        ],
+        "description": "a basketball player positioned near the left side line",
+        "description_vi": "một cầu thủ bóng rổ ở gần đường biên dọc bên trái",
+        "attributes": [
+          "athletic",
+          "standing"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "player_1",
+        "label": "player",
+        "bbox": [
+          0.20099999999999998,
+          0.49699999999999994,
+          0.272,
+          0.5619999999999999
+        ],
+        "description": "a basketball player in dark uniform near the top of the key",
+        "description_vi": "một cầu thủ bóng rổ mặc đồng phục tối màu ở gần khu vực ném phạt",
+        "attributes": [
+          "athletic",
+          "running"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "player_2",
+        "label": "player",
+        "bbox": [
+          0.38,
+          0.859,
+          0.44800000000000006,
+          0.925
+        ],
+        "description": "a basketball player moving near the bottom of the court",
+        "description_vi": "một cầu thủ bóng rổ di chuyển ở gần cuối sân",
+        "attributes": [
+          "athletic",
+          "moving"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "player_3",
+        "label": "player",
+        "bbox": [
+          0.403,
+          0.46900000000000003,
+          0.471,
+          0.553
+        ],
+        "description": "a basketball player wearing dark uniform running near the center circle",
+        "description_vi": "một cầu thủ bóng rổ mặc đồng phục tối màu đang chạy gần vòng tròn trung tâm",
+        "attributes": [
+          "athletic",
+          "running"
+        ],
+        "action": "running"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "performer_0",
+        "subject_id": "player_0",
         "predicate": "left_of",
-        "object_id": "speaker_0"
+        "object_id": "player_2"
       },
       {
-        "subject_id": "speaker_0",
+        "subject_id": "player_2",
         "predicate": "right_of",
-        "object_id": "performer_0"
+        "object_id": "player_0"
       },
       {
-        "subject_id": "performer_1",
-        "predicate": "overlapping",
-        "object_id": "speaker_0"
+        "subject_id": "player_1",
+        "predicate": "left_of",
+        "object_id": "player_3"
       },
       {
-        "subject_id": "speaker_0",
-        "predicate": "overlapping",
-        "object_id": "performer_1"
+        "subject_id": "player_3",
+        "predicate": "right_of",
+        "object_id": "player_1"
+      },
+      {
+        "subject_id": "player_3",
+        "predicate": "above",
+        "object_id": "player_2"
+      },
+      {
+        "subject_id": "player_2",
+        "predicate": "below",
+        "object_id": "player_3"
       }
     ]
   },
   {
     "frame_id": "L25_V059_f0349",
-    "visual_source_frame_id": "L25_V059_f0348",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A group of dancers performing on a stage with a starry night projection.",
-    "detailed_caption": "A wide shot shows dancers in white outfits performing on a stage with a large projection screen displaying a starry night background. Black stage speakers are visible on the floor.",
-    "caption_vi": "Một nhóm vũ công biểu diễn trên sân khấu với màn hình chiếu bầu trời đêm đầy sao.",
-    "detailed_caption_vi": "Cảnh toàn cảnh cho thấy các vũ công mặc trang phục trắng đang biểu diễn trên sân khấu với màn hình chiếu lớn hiển thị nền bầu trời đêm đầy sao. Các loa sân khấu màu đen được nhìn thấy trên sàn.",
+    "visual_source_frame_id": "L25_V059_f0349",
+    "ocr_source_frame_id": "L25_V059_f0349",
+    "quality_flags": [],
+    "caption": "An aerial view shows several basketball players moving across a green outdoor court with white boundary lines.",
+    "detailed_caption": "An overhead high-angle shot displays an outdoor basketball court painted green with white and yellow boundary lines. Several players in dark uniforms with green accents are scattered across the court, running and positioning themselves during a game.",
+    "caption_vi": "Góc nhìn từ trên cao cho thấy một số cầu thủ bóng rổ di chuyển trên sân ngoài trời màu xanh lá cây có vạch kẻ trắng.",
+    "detailed_caption_vi": "Khung hình góc cao từ trên xuống hiển thị sân bóng rổ ngoài trời được sơn màu xanh lá cây với các vạch kẻ biên màu trắng và vàng. Một số cầu thủ mặc đồng phục tối màu có điểm nhấn màu xanh đang rải rác trên sân, chạy và di chuyển vị trí trong trận đấu.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "performer_0",
-        "label": "performer",
+        "object_id": "court_0",
+        "label": "court",
         "bbox": [
-          0.417,
-          0.5239999999999999,
-          0.6,
-          0.875
+          0.0,
+          0.0,
+          1.0,
+          1.0
         ],
-        "description": "dancer in white outfit posing",
-        "description_vi": "vũ công mặc trang phục trắng tạo dáng",
+        "description": "a green outdoor basketball court with white and yellow markings",
+        "description_vi": "sân bóng rổ ngoài trời màu xanh lá cây có vạch kẻ trắng và vàng",
         "attributes": [
-          "white outfit",
-          "female"
-        ],
-        "action": "dancing"
-      },
-      {
-        "object_id": "performer_1",
-        "label": "performer",
-        "bbox": [
-          0.607,
-          0.5389999999999999,
-          0.8130000000000001,
-          0.9029999999999999
-        ],
-        "description": "dancer in white dress",
-        "description_vi": "vũ công mặc đầm trắng",
-        "attributes": [
-          "white dress",
-          "female"
-        ],
-        "action": "dancing"
-      },
-      {
-        "object_id": "speaker_0",
-        "label": "speaker",
-        "bbox": [
-          0.753,
-          0.846,
-          0.8460000000000001,
-          0.9510000000000001
-        ],
-        "description": "black stage speaker on the floor",
-        "description_vi": "loa sân khấu màu đen trên sàn",
-        "attributes": [
-          "black",
-          "speaker"
+          "green",
+          "outdoor"
         ],
         "action": ""
+      },
+      {
+        "object_id": "player_0",
+        "label": "player",
+        "bbox": [
+          0.009,
+          0.809,
+          0.061,
+          0.883
+        ],
+        "description": "a basketball player running near the bottom left corner",
+        "description_vi": "một cầu thủ bóng rổ đang chạy gần góc dưới bên trái",
+        "attributes": [
+          "athletic",
+          "running"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "player_1",
+        "label": "player",
+        "bbox": [
+          0.159,
+          0.367,
+          0.22799999999999998,
+          0.45799999999999996
+        ],
+        "description": "a basketball player wearing dark uniform running near the top of the key",
+        "description_vi": "một cầu thủ bóng rổ mặc đồng phục tối màu chạy gần khu vực ném phạt",
+        "attributes": [
+          "athletic",
+          "running"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "player_2",
+        "label": "player",
+        "bbox": [
+          0.356,
+          0.37800000000000006,
+          0.40700000000000003,
+          0.45
+        ],
+        "description": "a basketball player wearing dark uniform running near the center",
+        "description_vi": "một cầu thủ bóng rổ mặc đồng phục tối màu đang chạy gần khu vực trung tâm",
+        "attributes": [
+          "athletic",
+          "running"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "player_3",
+        "label": "player",
+        "bbox": [
+          0.391,
+          0.8470000000000001,
+          0.441,
+          0.925
+        ],
+        "description": "a basketball player running near the bottom of the court",
+        "description_vi": "một cầu thủ bóng rổ đang chạy gần cuối sân",
+        "attributes": [
+          "athletic",
+          "running"
+        ],
+        "action": "running"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "performer_0",
+        "subject_id": "player_0",
         "predicate": "left_of",
-        "object_id": "speaker_0"
+        "object_id": "player_3"
       },
       {
-        "subject_id": "speaker_0",
+        "subject_id": "player_3",
         "predicate": "right_of",
-        "object_id": "performer_0"
+        "object_id": "player_0"
       },
       {
-        "subject_id": "performer_1",
-        "predicate": "overlapping",
-        "object_id": "speaker_0"
+        "subject_id": "player_1",
+        "predicate": "left_of",
+        "object_id": "player_2"
       },
       {
-        "subject_id": "speaker_0",
-        "predicate": "overlapping",
-        "object_id": "performer_1"
+        "subject_id": "player_2",
+        "predicate": "right_of",
+        "object_id": "player_1"
+      },
+      {
+        "subject_id": "player_2",
+        "predicate": "above",
+        "object_id": "player_3"
+      },
+      {
+        "subject_id": "player_3",
+        "predicate": "below",
+        "object_id": "player_2"
       }
     ]
   },
@@ -21964,10 +22539,10 @@
     "visual_source_frame_id": "L25_V059_f0356",
     "ocr_source_frame_id": "L25_V059_f0356",
     "quality_flags": [],
-    "caption": "An overhead view blending a sports court and a person in a pink cap.",
-    "detailed_caption": "An overhead shot features a blended transition showing a green sports court on the right and a person wearing a pink cap and sports gear on the left. Court lines and shadows are visible.",
-    "caption_vi": "Góc nhìn từ trên cao kết hợp giữa sân thể thao và người đội mũ hồng.",
-    "detailed_caption_vi": "Cảnh quay từ trên cao có hiệu ứng chuyển cảnh kết hợp hiển thị sân thể thao màu xanh bên phải và một người đội mũ hồng mặc đồ thể thao bên bên trái. Các đường kẻ sân và bóng đổ hiển thị rõ.",
+    "caption": "A double exposure image blends a person swimming in a pool with an aerial view of a green basketball court.",
+    "detailed_caption": "A surreal double exposure shot overlays the view of a person swimming in blue water on the left with an aerial view of a green outdoor basketball court across the right side. Translucent figures and motion trails create a layered collage effect.",
+    "caption_vi": "Bức ảnh phơi sáng kép kết hợp hình ảnh người bơi lội dưới nước với góc nhìn từ trên cao xuống sân bóng rổ xanh.",
+    "detailed_caption_vi": "Bức ảnh phơi sáng kép siêu thực chồng hình ảnh một người đang bơi trong làn nước xanh ở bên trái lên khung cảnh góc cao của sân bóng rổ ngoài trời ở bên phải. Các nhân vật mờ ảo và vệt chuyển động tạo nên hiệu ứng ghép hình nhiều lớp.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -21975,16 +22550,16 @@
         "object_id": "court_0",
         "label": "court",
         "bbox": [
-          0.29500000000000004,
+          0.303,
           0.0,
           1.0,
           1.0
         ],
-        "description": "green sports court with markings",
-        "description_vi": "sân thể thao màu xanh lá có vạch kẻ",
+        "description": "an outdoor basketball court overlaid with water ripples",
+        "description_vi": "sân bóng rổ ngoài trời bị chồng lấp bởi các gợn sóng nước",
         "attributes": [
           "green",
-          "court"
+          "overlaid"
         ],
         "action": ""
       },
@@ -21994,16 +22569,17 @@
         "bbox": [
           0.041999999999999996,
           0.2,
-          0.16699999999999998,
-          0.528
+          0.145,
+          0.369
         ],
-        "description": "person wearing pink cap",
-        "description_vi": "người đội mũ màu hồng",
+        "description": "a person wearing a pink swim cap swimming in water",
+        "description_vi": "một người đội mũ bơi màu hồng đang bơi dưới nước",
         "attributes": [
-          "pink cap",
-          "athletic wear"
+          "swimming",
+          "pink",
+          "water"
         ],
-        "action": "moving"
+        "action": "swimming"
       }
     ],
     "spatial_relations": [

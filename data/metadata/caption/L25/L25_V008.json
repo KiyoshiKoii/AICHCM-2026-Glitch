@@ -4,10 +4,10 @@
     "visual_source_frame_id": "L25_V008_f0001",
     "ocr_source_frame_id": "L25_V008_f0001",
     "quality_flags": [],
-    "caption": "A blue channel logo on a plain white studio background.",
-    "detailed_caption": "A light blue logo sits centered horizontally against a plain white studio background with soft floor lighting and reflections. The minimalist scene features clean geometric lines and a subtle shadow underneath the text.",
-    "caption_vi": "Logo kênh màu xanh lam trên nền phòng thu màu trắng trơn.",
-    "detailed_caption_vi": "Một logo màu xanh lam nhạt nằm ở chính giữa trên nền phòng thu màu trắng đơn giản với ánh sáng sàn nhẹ và bóng phản chiếu. Cảnh tối giản có các đường nét hình học sạch sẽ và một bóng mờ tinh tế bên dưới văn bản.",
+    "caption": "A light blue logo reads thanh niên centered on a bright gradient gray background.",
+    "detailed_caption": "A light blue logo is displayed in the center of a minimalist gradient gray background. The text forms the word thanh niên in a stylized typeface. Soft lighting casts a subtle shadow beneath the lettering on the floor.",
+    "caption_vi": "Logo màu xanh nhạt với dòng chữ thanh niên ở giữa trên nền xám sáng.",
+    "detailed_caption_vi": "Logo màu xanh nhạt hiển thị ở chính giữa phông nền xám chuyển sắc tối giản. Chữ cái tạo thành từ thanh niên bằng một kiểu chữ cách điệu. Ánh sáng dịu tạo ra một bóng mờ nhẹ bên dưới phần chữ trên sàn nhà.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
     "detections": [],
@@ -15,15 +15,13 @@
   },
   {
     "frame_id": "L25_V008_f0002",
-    "visual_source_frame_id": "L25_V008_f0001",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A blue channel logo on a plain white studio background.",
-    "detailed_caption": "A light blue logo sits centered horizontally against a plain white studio background with soft floor lighting and reflections. The minimalist scene features clean geometric lines and a subtle shadow underneath the text.",
-    "caption_vi": "Logo kênh màu xanh lam trên nền phòng thu màu trắng trơn.",
-    "detailed_caption_vi": "Một logo màu xanh lam nhạt nằm ở chính giữa trên nền phòng thu màu trắng đơn giản với ánh sáng sàn nhẹ và bóng phản chiếu. Cảnh tối giản có các đường nét hình học sạch sẽ và một bóng mờ tinh tế bên dưới văn bản.",
+    "visual_source_frame_id": "L25_V008_f0002",
+    "ocr_source_frame_id": "L25_V008_f0002",
+    "quality_flags": [],
+    "caption": "A dark teal logo reads thanh niên centered on a dark gray background.",
+    "detailed_caption": "A dark teal logo is positioned centrally against a dark gray background. The stylized typography spells out thanh niên. A faint shadow appears beneath the text on the studio floor.",
+    "caption_vi": "Logo màu xanh cổ vịt tối với dòng chữ thanh niên ở giữa trên nền xám tối.",
+    "detailed_caption_vi": "Logo màu xanh cổ vịt tối được đặt ở vị trí trung tâm trên nền xám tối. Kiểu chữ cách điệu đánh vần thanh niên. Một chiếc bóng mờ xuất hiện bên dưới phần chữ trên sàn phòng thu.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
     "detections": [],
@@ -983,33 +981,80 @@
     "frame_id": "L25_V008_f0019",
     "visual_source_frame_id": "L25_V008_f0019",
     "ocr_source_frame_id": "L25_V008_f0019",
-    "quality_flags": [],
-    "caption": "A brightly overexposed shot of a man reading a book at a desk.",
-    "detailed_caption": "An overexposed, washed-out frame showing a man in a light blue shirt seated and reading a book at a desk in a library. The background features bright lighting and library shelving.",
-    "caption_vi": "Một bức ảnh bị phơi sáng quá sáng của một người đàn ông đang đọc sách ở bàn.",
-    "detailed_caption_vi": "Khung hình bị phơi sáng quá mức, nhạt màu hiển thị một người đàn ông mặc áo sơ mi xanh nhạt ngồi và đọc sách tại bàn trong thư viện. Phông nền có ánh sáng rực rỡ và giá sách thư viện.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A young person in a light shirt stands in a brightly lit library surrounded by bookshelves.",
+    "detailed_caption": "A medium shot shows a young person wearing a light button-down shirt standing in a library aisle. Tall white bookshelves filled with books line the left and background. The person looks down while handling papers near a desk with stacked books in the foreground.",
+    "caption_vi": "Một mặc áo sáng màu đứng trong thư viện sáng sủa xung quanh có các kệ sách.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một mặc áo sơ mi cài nút sáng màu đang đứng ở lối đi trong thư viện. Các kệ sách trắng cao đầy sách xếp dọc bên trái và phía sau. Người này cúi nhìn xuống khi đang xử lý tài liệu gần bàn có sách chồng chất ở tiền cảnh.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.269,
+          0.784,
+          0.568,
+          0.988
+        ],
+        "description": "stacked book on desk",
+        "description_vi": "sách xếp chồng trên bàn",
+        "attributes": [
+          "stacked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.127,
+          0.133,
+          0.47300000000000003,
+          1.0
+        ],
+        "description": "tall white bookshelf filled with books",
+        "description_vi": "kệ sách màu trắng cao đầy sách",
+        "attributes": [
+          "white",
+          "tall",
+          "filled"
+        ],
+        "action": ""
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
           0.44400000000000006,
-          0.179,
-          0.686,
-          0.793
+          0.177,
+          0.6900000000000001,
+          0.7939999999999999
         ],
-        "description": "overexposed figure of a man reading",
-        "description_vi": "hình dáng bị phơi sáng quá mức của người đàn ông đang đọc sách",
+        "description": "young person in light shirt",
+        "description_vi": "mặc áo sáng màu",
         "attributes": [
-          "overexposed",
-          "seated"
+          "light shirt",
+          "young"
         ],
-        "action": "reading"
+        "action": "standing"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "book_0",
+        "predicate": "overlapping",
+        "object_id": "bookshelf_0"
+      },
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "overlapping",
+        "object_id": "book_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V008_f0020",
@@ -4386,32 +4431,31 @@
   },
   {
     "frame_id": "L25_V008_f0088",
-    "visual_source_frame_id": "L25_V008_f0073",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A digital educational slide displays a multiple-choice math question.",
-    "detailed_caption": "A close-up shot shows a digital educational screen displaying a math question with multiple-choice options on a light yellow background.",
-    "caption_vi": "Một slide giáo dục kỹ thuật số hiển thị một câu hỏi toán trắc nghiệm.",
-    "detailed_caption_vi": "Cận cảnh màn hình giáo dục kỹ thuật số hiển thị một câu hỏi toán học kèm các lựa chọn trắc nghiệm trên nền vàng nhạt.",
-    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng A 9 35 B 18 35 C 4 35 D 1 7",
+    "visual_source_frame_id": "L25_V008_f0088",
+    "ocr_source_frame_id": "L25_V008_f0088",
+    "quality_flags": [],
+    "caption": "A math slide displays a multiple choice question about probability with text and formulas.",
+    "detailed_caption": "A digital slide presents a math problem labeled Cau 1 with text detailing a probability question involving colored balls. Multiple-choice options A, B, C, and D appear below the problem statement. The solution section starts explaining the sample space with mathematical notation.",
+    "caption_vi": "Trang chiếu toán học hiển thị một câu hỏi trắc nghiệm về xác suất kèm văn bản và công thức.",
+    "detailed_caption_vi": "Một trang chiếu kỹ thuật số trình bày bài toán có nhãn Câu 1 kèm văn bản chi tiết về câu hỏi xác suất liên quan đến các quả bóng màu. Các lựa chọn trắc nghiệm A, B, C và D xuất hiện bên dưới đề bài. Phần lời giải bắt đầu giải thích không gian mẫu với ký hiệu toán học.",
+    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng 9/35 18/35 4/35 1/7 Lời giải. * Mô tả không gian mẫu: Chọn 2 quả cầu từ hộp có 15 quả cầu. Do đó n(Ω) = C²₁₅ = 105. * Gọi A là biến cố: “lấy được hai quả khác màu và tổng hai số ghi trên chúng là số chẵn”. Do tổng hai số của chúng là số chẵn nên ta có các trường hợp sau: TH1: Cả hai quả cầu đều ghi số lẻ (đỏ lẻ và xanh lẻ). Số cách lấy là C¹₃ · C¹₅",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
-          0.023,
-          0.049,
-          0.978,
+          0.014000000000000002,
+          0.079,
+          0.9869999999999999,
           0.9149999999999999
         ],
-        "description": "a digital screen displaying a math question",
-        "description_vi": "màn hình kỹ thuật số hiển thị câu hỏi toán học",
+        "description": "math problem slide with text and formulas",
+        "description_vi": "trang chiếu bài toán với văn bản và công thức",
         "attributes": [
-          "screen",
-          "educational"
+          "digital",
+          "educational",
+          "textual"
         ],
         "action": ""
       }
@@ -4420,31 +4464,29 @@
   },
   {
     "frame_id": "L25_V008_f0089",
-    "visual_source_frame_id": "L25_V008_f0073",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A digital educational slide displays a multiple-choice math question.",
-    "detailed_caption": "A close-up shot shows a digital educational screen displaying a math question with multiple-choice options on a light yellow background.",
-    "caption_vi": "Một slide giáo dục kỹ thuật số hiển thị một câu hỏi toán trắc nghiệm.",
-    "detailed_caption_vi": "Cận cảnh màn hình giáo dục kỹ thuật số hiển thị một câu hỏi toán học kèm các lựa chọn trắc nghiệm trên nền vàng nhạt.",
-    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng A 9 35 B 18 35 C 4 35 D 1 7",
+    "visual_source_frame_id": "L25_V008_f0089",
+    "ocr_source_frame_id": "L25_V008_f0089",
+    "quality_flags": [],
+    "caption": "A math slide displays a probability problem with a mouse cursor pointing at text.",
+    "detailed_caption": "A digital educational slide displays a math problem and solution text in Vietnamese. A hand-shaped mouse cursor hovers over the words xanh lẻ on the screen. Formulas and option buttons A, B, C, D are visible near the top.",
+    "caption_vi": "Trang chiếu toán học hiển thị bài toán xác suất với con trỏ chuột trỏ vào văn bản.",
+    "detailed_caption_vi": "Trang chiếu giáo dục kỹ thuật số hiển thị bài toán và phần văn bản lời giải bằng tiếng Việt. Con trỏ chuột hình bàn tay lơ lửng trên các từ xanh lẻ trên màn hình. Các công thức và nút lựa chọn A, B, C, D hiển thị gần phía trên.",
+    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng 9/35 18/35 4/35 1/7 Lời giải. * Mô tả không gian mẫu: Chọn 2 quả cầu từ hộp có 15 quả cầu. Do đó n(Ω) = C²₁₅ = 105. * Gọi A là biến cố: “lấy được hai quả khác màu và tổng hai số ghi trên chúng là số chẵn”. Do tổng hai số của chúng là số chẵn nên ta có các trường hợp sau: TH1: Cả hai quả cầu đều ghi số lẻ (đỏ lẻ và xanh lẻ). Số cách lấy là C¹₃ · C¹₅",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
-          0.023,
-          0.049,
-          0.978,
-          0.9149999999999999
+          0.013000000000000001,
+          0.079,
+          0.9869999999999999,
+          0.917
         ],
-        "description": "a digital screen displaying a math question",
-        "description_vi": "màn hình kỹ thuật số hiển thị câu hỏi toán học",
+        "description": "math problem slide with cursor",
+        "description_vi": "trang chiếu bài toán có con trỏ",
         "attributes": [
-          "screen",
+          "digital",
           "educational"
         ],
         "action": ""
@@ -4454,31 +4496,29 @@
   },
   {
     "frame_id": "L25_V008_f0090",
-    "visual_source_frame_id": "L25_V008_f0073",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A digital educational slide displays a multiple-choice math question.",
-    "detailed_caption": "A close-up shot shows a digital educational screen displaying a math question with multiple-choice options on a light yellow background.",
-    "caption_vi": "Một slide giáo dục kỹ thuật số hiển thị một câu hỏi toán trắc nghiệm.",
-    "detailed_caption_vi": "Cận cảnh màn hình giáo dục kỹ thuật số hiển thị một câu hỏi toán học kèm các lựa chọn trắc nghiệm trên nền vàng nhạt.",
-    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng A 9 35 B 18 35 C 4 35 D 1 7",
+    "visual_source_frame_id": "L25_V008_f0090",
+    "ocr_source_frame_id": "L25_V008_f0090",
+    "quality_flags": [],
+    "caption": "A math slide displays a probability problem with a mouse cursor positioned over the background.",
+    "detailed_caption": "A digital slide presents math formulas and solution steps for a probability problem. A mouse cursor is visible on the lower right area of the slide. The text outlines cases for choosing colored balls from a box.",
+    "caption_vi": "Trang chiếu toán học hiển thị bài toán xác suất với con trỏ chuột đặt trên nền.",
+    "detailed_caption_vi": "Trang chiếu kỹ thuật số trình bày các công thức toán học và các bước giải cho một bài toán xác suất. Con trỏ chuột hiển thị ở vùng phía dưới bên phải của trang chiếu. Văn bản nêu ra các trường hợp chọn quả bóng màu từ hộp.",
+    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng 9/35 18/35 4/35 1/7 Lời giải. * Mô tả không gian mẫu: Chọn 2 quả cầu từ hộp có 15 quả cầu. Do đó n(Ω) = C²₁₅ = 105. * Gọi A là biến cố: “lấy được hai quả khác màu và tổng hai số ghi trên chúng là số chẵn”. Do tổng hai số của chúng là số chẵn nên ta có các trường hợp sau: TH1: Cả hai quả cầu đều ghi số lẻ (đỏ lẻ và xanh lẻ). Số cách lấy là C¹₃ · C¹₅",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
-          0.023,
-          0.049,
-          0.978,
+          0.014000000000000002,
+          0.078,
+          0.986,
           0.9149999999999999
         ],
-        "description": "a digital screen displaying a math question",
-        "description_vi": "màn hình kỹ thuật số hiển thị câu hỏi toán học",
+        "description": "math problem slide",
+        "description_vi": "trang chiếu bài toán",
         "attributes": [
-          "screen",
+          "digital",
           "educational"
         ],
         "action": ""
@@ -4791,28 +4831,28 @@
     "visual_source_frame_id": "L25_V008_f0100",
     "ocr_source_frame_id": "L25_V008_f0100",
     "quality_flags": [],
-    "caption": "A math slide displaying a final probability formula computation on a light yellow grid background.",
-    "detailed_caption": "A math presentation slide displaying the final step of a probability calculation. The formula P(A) is shown alongside fraction equations on a light yellow lined background.",
-    "caption_vi": "Slide toán học hiển thị bước tính xác suất cuối cùng trên nền giấy kẻ sọc vàng nhạt.",
-    "detailed_caption_vi": "Slide trình bày các bước giải bài toán xác suất với công thức tính P(A) ở dòng cuối cùng. Văn bản và công thức toán học được hiển thị rõ ràng trên nền giấy kẻ ngang màu vàng.",
-    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng 9/35, 18/35, 4/35, 1/7. Lời giải. * Mô tả không gian mẫu: Chọn 2 quả cầu từ hộp có 15 quả cầu. Do đó n(Ω) = C_15^2 = 105. * Gọi A là biến cố: “lấy được hai quả khác màu và tổng hai số ghi trên chúng là số chẵn”. Do tổng hai số của chúng là số chẵn nên ta có các trường hợp sau: ► TH1: Cả hai quả cầu đều ghi số lẻ (đỏ lẻ và xanh lẻ). Số cách lấy là C_3^1 · C_5^1 = 15. ► TH2: Cả hai quả cầu đều ghi số chẵn (đỏ chẵn và xanh chẵn). Số cách lấy là C_3^1 · C_4^1 = 12. Số phần tử của biến cố A là n(A) = 15 + 12 = 27. Vậy xác suất xuất hiện của biến cố A là P(A) = 27 / 105 = 9 / 35.",
+    "caption": "A math slide displays a complete probability problem solution with multiple cases and formulas.",
+    "detailed_caption": "A digital educational slide displays detailed steps for solving a probability problem involving colored balls. Two cases TH1 and TH2 are listed along with calculations for the number of elements in event A. The final probability fraction calculation appears at the bottom.",
+    "caption_vi": "Trang chiếu toán học hiển thị lời giải bài toán xác suất hoàn chỉnh với nhiều trường hợp và công thức.",
+    "detailed_caption_vi": "Trang chiếu giáo dục kỹ thuật số hiển thị các bước chi tiết để giải bài toán xác suất liên quan đến các quả bóng màu. Hai trường hợp TH1 và TH2 được liệt kê cùng với các phép tính số phần tử trong biến cố A. Phép tính phân số xác suất cuối cùng xuất hiện ở phía dưới.",
+    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng 9/35 18/35 4/35 1/7 Lời giải. * Mô tả không gian mẫu: Chọn 2 quả cầu từ hộp có 15 quả cầu. Do đó n(Ω) = C²₁₅ = 105. * Gọi A là biến cố: “lấy được hai quả khác màu và tổng hai số ghi trên chúng là số chẵn”. Do tổng hai số của chúng là số chẵn nên ta có các trường hợp sau: TH1: Cả hai quả cầu đều ghi số lẻ (đỏ lẻ và xanh lẻ). Số cách lấy là C¹₃ · C¹₅ = 15. * TH2: Cả hai quả cầu đều ghi số chẵn (đỏ chẵn và xanh chẵn). Số cách lấy là C¹₃ · C¹₄ = 12. Số phần tử của biến cố A là n(A) = 15 + 12 = 27. Vậy xác suất xuất hiện của biến cố A là P(A) = 27/105 = 9/35.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "slide_0",
         "label": "slide",
         "bbox": [
-          0.023,
-          0.075,
-          0.959,
-          0.7050000000000001
+          0.014000000000000002,
+          0.078,
+          0.9869999999999999,
+          0.9149999999999999
         ],
-        "description": "a math presentation slide displaying a probability formula and calculation",
-        "description_vi": "slide bài giảng toán học hiển thị công thức và phép tính xác suất",
+        "description": "math problem solution slide",
+        "description_vi": "trang chiếu lời giải bài toán",
         "attributes": [
-          "text",
-          "formula",
-          "lined"
+          "digital",
+          "educational",
+          "detailed"
         ],
         "action": ""
       }
@@ -4821,33 +4861,30 @@
   },
   {
     "frame_id": "L25_V008_f0101",
-    "visual_source_frame_id": "L25_V008_f0100",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying a final probability formula computation on a light yellow grid background.",
-    "detailed_caption": "A math presentation slide displaying the final step of a probability calculation. The formula P(A) is shown alongside fraction equations on a light yellow lined background.",
-    "caption_vi": "Slide toán học hiển thị bước tính xác suất cuối cùng trên nền giấy kẻ sọc vàng nhạt.",
-    "detailed_caption_vi": "Slide trình bày các bước giải bài toán xác suất với công thức tính P(A) ở dòng cuối cùng. Văn bản và công thức toán học được hiển thị rõ ràng trên nền giấy kẻ ngang màu vàng.",
-    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng 9/35, 18/35, 4/35, 1/7. Lời giải. * Mô tả không gian mẫu: Chọn 2 quả cầu từ hộp có 15 quả cầu. Do đó n(Ω) = C_15^2 = 105. * Gọi A là biến cố: “lấy được hai quả khác màu và tổng hai số ghi trên chúng là số chẵn”. Do tổng hai số của chúng là số chẵn nên ta có các trường hợp sau: ► TH1: Cả hai quả cầu đều ghi số lẻ (đỏ lẻ và xanh lẻ). Số cách lấy là C_3^1 · C_5^1 = 15. ► TH2: Cả hai quả cầu đều ghi số chẵn (đỏ chẵn và xanh chẵn). Số cách lấy là C_3^1 · C_4^1 = 12. Số phần tử của biến cố A là n(A) = 15 + 12 = 27. Vậy xác suất xuất hiện của biến cố A là P(A) = 27 / 105 = 9 / 35.",
+    "visual_source_frame_id": "L25_V008_f0101",
+    "ocr_source_frame_id": "L25_V008_f0101",
+    "quality_flags": [],
+    "caption": "A math slide displays a completed probability solution with a mouse cursor near the bottom.",
+    "detailed_caption": "A digital slide presents the full solution to a math probability problem with formulas and fractions. A mouse cursor points to the lower center of the screen. The background is light gray with horizontal ruled lines resembling paper.",
+    "caption_vi": "Trang chiếu toán học hiển thị lời giải xác suất hoàn chỉnh với con trỏ chuột ở gần phía dưới.",
+    "detailed_caption_vi": "Trang chiếu kỹ thuật số trình bày lời giải đầy đủ cho bài toán xác suất toán học với các công thức và phân số. Con trỏ chuột trỏ vào vùng giữa phía dưới của màn hình. Nền màu xám nhạt có các đường kẻ ngang giống như giấy.",
+    "ocr_text": "Câu 1. (Trích đề minh họa 2023) Một hộp chứa 15 quả cầu gồm 6 quả màu đỏ được đánh số từ 1 đến 6 và 9 quả màu xanh được đánh số từ 1 đến 9. Lấy ngẫu nhiên hai quả cầu từ hộp đó, xác suất để lấy được hai quả khác màu đồng thời tổng hai số ghi trên chúng là số chẵn bằng 9/35 18/35 4/35 1/7 Lời giải. * Mô tả không gian mẫu: Chọn 2 quả cầu từ hộp có 15 quả cầu. Do đó n(Ω) = C²₁₅ = 105. * Gọi A là biến cố: “lấy được hai quả khác màu và tổng hai số ghi trên chúng là số chẵn”. Do tổng hai số của chúng là số chẵn nên ta có các trường hợp sau: TH1: Cả hai quả cầu đều ghi số lẻ (đỏ lẻ và xanh lẻ). Số cách lấy là C¹₃ · C¹₅ = 15. * TH2: Cả hai quả cầu đều ghi số cầu đều ghi số chẵn (đỏ chẵn và xanh chẵn). Số cách lấy là C¹₃ · C¹₄ = 12. Số phần tử của biến cố A là n(A) = 15 + 12 = 27. Vậy xác suất xuất hiện của biến cố A là P(A) = 27/105 = 9/35.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "slide_0",
         "label": "slide",
         "bbox": [
-          0.023,
-          0.075,
-          0.959,
-          0.7050000000000001
+          0.014000000000000002,
+          0.078,
+          0.986,
+          0.9149999999999999
         ],
-        "description": "a math presentation slide displaying a probability formula and calculation",
-        "description_vi": "slide bài giảng toán học hiển thị công thức và phép tính xác suất",
+        "description": "math problem solution slide with cursor",
+        "description_vi": "trang chiếu lời giải bài toán có con trỏ",
         "attributes": [
-          "text",
-          "formula",
-          "lined"
+          "digital",
+          "educational"
         ],
         "action": ""
       }
@@ -6899,11 +6936,13 @@
     "frame_id": "L25_V008_f0150",
     "visual_source_frame_id": "L25_V008_f0150",
     "ocr_source_frame_id": "L25_V008_f0150",
-    "quality_flags": [],
-    "caption": "A young boy wearing a red basketball jersey dribbles a basketball outdoors near white school buildings.",
-    "detailed_caption": "A medium shot of a young boy wearing a red and black basketball jersey dribbling a basketball on an outdoor court. In the background are multi-story white school buildings with green-framed windows.",
-    "caption_vi": "Một nam sinh mặc áo bóng rổ màu đỏ đang dẫn bóng ngoài trời trước các tòa nhà trường học màu trắng.",
-    "detailed_caption_vi": "Cận cảnh nam sinh mặc áo đấu bóng rổ màu đỏ đen đang tập trung dẫn quả bóng rổ trên sân trường ngoài trời. Phía sau là các tòa nhà trường học màu trắng có ô cửa kính khung xanh.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A young person in a red basketball jersey dribbles a ball outdoors in front of a white building.",
+    "detailed_caption": "A medium shot shows a young person wearing a red basketball jersey with the number 14, dribbling a basketball outdoors. The person is in motion on a court with a multi-story white building featuring green-framed windows in the background.",
+    "caption_vi": "Một mặc áo bóng rổ màu đỏ đang dẫn bóng ngoài trời trước một tòa nhà màu trắng.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một mặc áo bóng rổ màu đỏ có số 14, đang dẫn bóng rổ ngoài trời. Người này đang chuyển động trên sân với một tòa nhà trắng nhiều tầng có các cửa sổ khung xanh ở phía sau.",
     "ocr_text": "14",
     "news_ticker_text": "",
     "detections": [
@@ -6913,11 +6952,11 @@
         "bbox": [
           0.595,
           0.645,
-          0.7190000000000001,
-          0.861
+          0.72,
+          0.862
         ],
-        "description": "an orange basketball being dribbled near the player's hands",
-        "description_vi": "quả bóng rổ màu cam đang được dẫn gần tay cầu thủ",
+        "description": "orange basketball in motion",
+        "description_vi": "quả bóng rổ màu cam đang chuyển động",
         "attributes": [
           "orange",
           "spherical"
@@ -6925,25 +6964,53 @@
         "action": "moving"
       },
       {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.08399999999999999,
+          0.0,
+          0.999,
+          1.0
+        ],
+        "description": "multi-story white building with green windows",
+        "description_vi": "tòa nhà trắng nhiều tầng với cửa sổ xanh",
+        "attributes": [
+          "white",
+          "multi-story",
+          "green windows"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
           0.5740000000000001,
-          0.353,
-          0.876,
-          0.999
+          0.355,
+          0.874,
+          1.0
         ],
-        "description": "a young boy wearing a red basketball jersey dribbling a basketball",
-        "description_vi": "nam sinh mặc áo bóng rổ đỏ đang dẫn bóng",
+        "description": "young person in red basketball jersey",
+        "description_vi": "mặc áo bóng rổ đỏ",
         "attributes": [
-          "jersey",
-          "red",
-          "dribbling"
+          "red jersey",
+          "number 14",
+          "young"
         ],
         "action": "dribbling"
       }
     ],
     "spatial_relations": [
+      {
+        "subject_id": "basketball_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "basketball_0"
+      },
       {
         "subject_id": "basketball_0",
         "predicate": "overlapping",
@@ -6953,6 +7020,16 @@
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "basketball_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
       }
     ]
   },
@@ -8745,59 +8822,75 @@
     "visual_source_frame_id": "L25_V008_f0180",
     "ocr_source_frame_id": "L25_V008_f0180",
     "quality_flags": [],
-    "caption": "A close-up view of an alcohol burner being lit with a match in a science laboratory.",
-    "detailed_caption": "A close-up shot shows a hand wearing a white glove holding a lit match to the wick of an alcohol burner. The glass burner sits in a yellow holder on a laboratory table, with a blurred science classroom background.",
-    "caption_vi": "Cận cảnh một ngọn đèn cồn đang được châm lửa bằng diêm trong phòng thí nghiệm.",
-    "detailed_caption_vi": "Cận cảnh cho thấy một bàn tay đeo găng tay trắng đang cầm que diêm đang cháy để châm vào bấc đèn cồn. Đèn cồn bằng thủy tinh đặt trong đế vàng trên bàn thí nghiệm.",
+    "caption": "Multiple students in a bright school laboratory work around lab benches and equipment.",
+    "detailed_caption": "A wide interior shot of a science laboratory shows several students in light-colored uniforms working at wooden lab benches. Glassware, sinks, and chemical apparatus are arranged on the counters. Wooden cabinets line the back wall.",
+    "caption_vi": "Nhiều học sinh trong phòng thí nghiệm trường học sáng sủa làm việc xung quanh các bàn thí nghiệm và thiết bị.",
+    "detailed_caption_vi": "Cảnh nội thất rộng của phòng thí nghiệm khoa học cho thấy một số học sinh mặc đồng phục màu sáng đang làm việc tại các bàn thí nghiệm bằng gỗ. Dụng cụ thủy tinh, bồn rửa và thiết bị hóa học được sắp xếp trên các quầy. Tủ gỗ xếp dọc bức tường phía sau.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "burner_0",
-        "label": "burner",
+        "object_id": "cabinet_0",
+        "label": "cabinet",
         "bbox": [
-          0.316,
-          0.33399999999999996,
-          0.853,
-          1.0
+          0.077,
+          0.098,
+          0.52,
+          0.36300000000000004
         ],
-        "description": "a glass alcohol burner with a lit wick resting in a yellow base",
-        "description_vi": "đèn cồn thủy tinh có bấc đang cháy đặt trong đế màu vàng",
+        "description": "wooden wall cabinets in laboratory",
+        "description_vi": "tủ treo tường bằng gỗ trong phòng thí nghiệm",
         "attributes": [
-          "burner",
-          "glass",
-          "yellow"
+          "wooden",
+          "wall-mounted"
         ],
-        "action": "burning"
+        "action": ""
       },
       {
-        "object_id": "hand_0",
-        "label": "hand",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.47400000000000003,
-          0.0,
-          0.834,
-          0.48400000000000004
+          0.8039999999999999,
+          0.425,
+          0.966,
+          0.9149999999999999
         ],
-        "description": "a gloved hand holding a lit match",
-        "description_vi": "bàn tay đeo găng tay đang cầm que diêm đang cháy",
+        "description": "student in uniform working at lab bench",
+        "description_vi": "học sinh mặc đồng phục làm việc tại bàn thí nghiệm",
         "attributes": [
-          "hand",
-          "gloved"
+          "uniform",
+          "student"
         ],
-        "action": "holding"
+        "action": "working"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.621,
+          0.661,
+          0.9359999999999999,
+          0.999
+        ],
+        "description": "wooden laboratory bench with equipment",
+        "description_vi": "bàn thí nghiệm bằng gỗ có thiết bị",
+        "attributes": [
+          "wooden",
+          "laboratory"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "burner_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
-        "object_id": "hand_0"
+        "object_id": "table_0"
       },
       {
-        "subject_id": "hand_0",
+        "subject_id": "table_0",
         "predicate": "overlapping",
-        "object_id": "burner_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -9803,33 +9896,30 @@
   },
   {
     "frame_id": "L25_V008_f0194",
-    "visual_source_frame_id": "L25_V008_f0193",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A close-up view of a digital screen displaying a mathematics problem in Vietnamese.",
-    "detailed_caption": "A close-up shot shows a digital monitor with a lined yellow background displaying a Vietnamese math word problem titled 'Câu 3' regarding probability and numbered cards.",
-    "caption_vi": "Cận cảnh màn hình điện tử hiển thị một bài toán bằng tiếng Việt.",
-    "detailed_caption_vi": "Cận cảnh cho thấy màn hình hiển thị với nền kẻ ngang màu vàng, trình bày một bài toán xác suất có tiêu đề 'Câu 3' về việc bốc thẻ số bằng tiếng Việt.",
-    "ocr_text": "Câu 3. Trong hộp có 40 tấm thẻ được đánh số từ 1 đến 40, chọn ngẫu nhiên 3 thẻ trong hộp. Tính xác suất để tổng 3 số trên 3 thẻ lấy được là một số chia hết cho 3.",
+    "visual_source_frame_id": "L25_V008_f0194",
+    "ocr_source_frame_id": "L25_V008_f0194",
+    "quality_flags": [],
+    "caption": "A math slide displays a probability problem about cards in a box with formulas.",
+    "detailed_caption": "A digital educational slide presents a math problem labeled Cau 3 concerning numbered cards in a box. The text outlines the problem statement and the first step of describing the sample space. The background is light-colored with horizontal ruled lines.",
+    "caption_vi": "Trang chiếu toán học hiển thị bài toán xác suất về các tấm thẻ trong hộp kèm công thức.",
+    "detailed_caption_vi": "Trang chiếu giáo dục kỹ thuật số trình bày bài toán có nhãn Câu 3 liên quan đến các tấm thẻ được đánh số trong hộp. Văn bản nêu rõ đề bài và bước đầu tiên mô tả không gian mẫu. Nền có màu sáng với các đường kẻ ngang.",
+    "ocr_text": "Câu 3. Trong hộp có 40 tấm thẻ được đánh số từ 1 đến 40, chọn ngẫu nhiên 3 thẻ trong hộp. Tính xác suất để tổng 3 số trên 3 thẻ lấy được là một số chia hết cho 3. Lời giải. * Mô tả không gian mẫu: Chọn 3 thẻ trong 40 thẻ.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
-          0.024,
-          0.049,
-          0.977,
-          0.912
+          0.014000000000000002,
+          0.08,
+          0.9880000000000001,
+          0.9149999999999999
         ],
-        "description": "a digital monitor showing a math question on a lined yellow background",
-        "description_vi": "màn hình hiển thị câu hỏi toán học trên nền giấy kẻ sọc vàng",
+        "description": "math problem slide about cards",
+        "description_vi": "trang chiếu bài toán về thẻ",
         "attributes": [
-          "screen",
-          "monitor",
-          "display"
+          "digital",
+          "educational"
         ],
         "action": ""
       }
@@ -11098,33 +11188,31 @@
   },
   {
     "frame_id": "L25_V008_f0231",
-    "visual_source_frame_id": "L25_V008_f0193",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A close-up view of a digital screen displaying a mathematics problem in Vietnamese.",
-    "detailed_caption": "A close-up shot shows a digital monitor with a lined yellow background displaying a Vietnamese math word problem titled 'Câu 3' regarding probability and numbered cards.",
-    "caption_vi": "Cận cảnh màn hình điện tử hiển thị một bài toán bằng tiếng Việt.",
-    "detailed_caption_vi": "Cận cảnh cho thấy màn hình hiển thị với nền kẻ ngang màu vàng, trình bày một bài toán xác suất có tiêu đề 'Câu 3' về việc bốc thẻ số bằng tiếng Việt.",
-    "ocr_text": "Câu 3. Trong hộp có 40 tấm thẻ được đánh số từ 1 đến 40, chọn ngẫu nhiên 3 thẻ trong hộp. Tính xác suất để tổng 3 số trên 3 thẻ lấy được là một số chia hết cho 3.",
+    "visual_source_frame_id": "L25_V008_f0231",
+    "ocr_source_frame_id": "L25_V008_f0231",
+    "quality_flags": [],
+    "caption": "A math slide displays a detailed solution for a probability problem involving card numbers.",
+    "detailed_caption": "A digital slide presents multiple cases and formulas for solving a probability problem about cards divisible by 3. Several bullet points detail modular arithmetic cases for card combinations. The layout includes structured text on a lined background.",
+    "caption_vi": "Trang chiếu toán học hiển thị lời giải chi tiết cho bài toán xác suất liên quan đến số trên thẻ.",
+    "detailed_caption_vi": "Trang chiếu kỹ thuật số trình bày nhiều trường hợp và công thức để giải bài toán xác suất về các thẻ chia hết cho 3. Một số gạch đầu dòng chi tiết các trường hợp số học đồng dư cho các tổ hợp thẻ. Bố cục bao gồm văn bản có cấu trúc trên nền có đường kẻ.",
+    "ocr_text": "Câu 3. Trong hộp có 40 tấm thẻ được đánh số từ 1 đến 40, chọn ngẫu nhiên 3 thẻ trong hộp. Tính xác suất để tổng 3 số trên 3 thẻ lấy được là một số chia hết cho 3. Lời giải. * Mô tả không gian mẫu: Chọn 3 thẻ trong 40 thẻ. Do đó n(Ω) = C³₄₀. * Gọi A là biến cố \"tổng 3 số ghi trên 3 thẻ là một số chia hết cho 3\". ▶ Số chia hết cho 3 (dạng 3n) gồm các số 3, 6, 9,..., 39 có (39-3)/3 + 1 = 13 số. ▶ Số chia cho 3 dư 1 (dạng 3n + 1) gồm các số 1, 4, 7,..., 40 có (40-1)/3 + 1 = 14 số. ▶ Số chia cho 3 dư 2 (dạng 3n + 2) gồm các số 2, 5, 8,..., 38 có (38-2)/3 + 1 = 13 số. Mô tả khả năng thuận lợi của biến cố A ▶ TH1: Chọn 3 số chia hết cho 3 có C³₁₃ cách. ▶ TH2: Chọn 3 số chia 3 dư 1 có C³₁₄ cách. ▶ TH3: Chọn 3 số chia 3 dư 2 có C³₁₃ cách. ▶ TH4: Chọn 3 số trong đó có một số chia 3 dư 1, một số chia 3 dư 2, một số chia hết cho 3. Tổng cộng có C¹₁₄ · C¹₁₃ · C¹₁₃ số.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
-          0.024,
-          0.049,
-          0.977,
-          0.912
+          0.014000000000000002,
+          0.078,
+          0.9880000000000001,
+          0.917
         ],
-        "description": "a digital monitor showing a math question on a lined yellow background",
-        "description_vi": "màn hình hiển thị câu hỏi toán học trên nền giấy kẻ sọc vàng",
+        "description": "math solution slide with multiple cases",
+        "description_vi": "trang chiếu lời giải toán với nhiều trường hợp",
         "attributes": [
-          "screen",
-          "monitor",
-          "display"
+          "digital",
+          "educational",
+          "detailed"
         ],
         "action": ""
       }
@@ -11336,27 +11424,27 @@
     "visual_source_frame_id": "L25_V008_f0238",
     "ocr_source_frame_id": "L25_V008_f0238",
     "quality_flags": [],
-    "caption": "A male teacher wearing glasses and a light blue shirt sits behind a laptop with a digital slide visible in the background.",
-    "detailed_caption": "A medium shot shows a male teacher wearing glasses and a light blue button-down shirt, seated behind a dark grey laptop with an ASUS logo on a white desk. A digital slide displaying mathematical text and formulas is positioned in the upper right background against a dark chalkboard showing math diagrams.",
-    "caption_vi": "Một nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt ngồi sau máy tính xách tay với trang slide hiển thị ở phía sau.",
-    "detailed_caption_vi": "Cận cảnh một nam giáo viên đeo kính và mặc áo sơ mi dài tay màu xanh nhạt, đang ngồi học tập hoặc giảng dạy trước máy tính xách tay màu xám đặt trên bàn trắng. Phía sau bên phải là màn hình slide trình chiếu tài liệu toán học trên nền bảng đen có vẽ các sơ đồ.",
-    "ocr_text": "THANH MÊN Câu 3. Trong hộp có 40 tấm thẻ được đánh số từ 1 đến 40, chọn ngẫu nhiên 3 thẻ trong hộp. Tính xác suất để tổng 3 số trên 3 thẻ lấy được là một số chia hết cho 3. Lời giải. * Mô tả không gian mẫu: Chọn 3 thẻ trong 40 thẻ. Do đó n(Ω) = C^3_40. * Gọi A là biến cố \"tổng 3 số ghi trên 3 thẻ là một số chia hết cho 3\". ▶ Số chia hết cho 3 (dạng 3n) gồm các số 3, 6, 9,..., 39 có (39 - 3)/3 + 1 = 13 số. ▶ Số chia cho 3 dư 1 (dạng 3n + 1) gồm các số 1, 4, 7,..., 40 có (40 - 1)/3 + 1 = 14 số. ▶ Số chia cho 3 dư 2 (dạng 3n + 2) gồm các số 2, 5, 8,..., 38 có (38 - 2)/3 + 1 = 13 số. Mô tả khả năng thuận lợi của biến cố A ▶ TH1: Chọn 3 số chia hết cho 3 có C^3_13 cách. ▶ TH2: Chọn 3 số chia 3 dư 1 có C^3_14 cách. ▶ TH3: Chọn 3 số chia 3 dư 2 có C^3_13 cách. ▶ TH4: Chọn 3 số trong đó có một số chia 3 dư 1, một số chia 3 dư 2, một số chia hết cho 3. Tổng cộng có C^1_14 · C^1_13 · C^1_13 số. ⇒ n(A) = C^3_13 + C^3_13 + C^3_14 + C^1_13 · C^1_13 · C^1_14 = 3302. Vậy xác suất cần tìm là P = 3302 / C^3_40 = 127 / 380.",
+    "caption": "A teacher in a light blue shirt sits at a desk with a laptop in front of a chalkboard and a math slide.",
+    "detailed_caption": "A medium shot shows a male teacher wearing glasses and a light blue button-down shirt sitting at a desk with an Asus laptop. He gestures while speaking in a studio setting. A chalkboard background is visible behind him, alongside a digital screen displaying a math problem.",
+    "caption_vi": "Một thầy giáo mặc áo sơ mi xanh nhạt ngồi ở bàn có máy tính xách tay trước bảng đen và trang chiếu toán học.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một thầy giáo đeo kính và mặc áo sơ mi cài nút màu xanh nhạt đang ngồi ở bàn có máy tính xách tay Asus. Thầy đang cử chỉ khi nói trong bối cảnh phòng thu. Phông nền bảng đen hiển thị phía sau thầy, bên cạnh màn hình kỹ thuật số hiển thị bài toán.",
+    "ocr_text": "THANH NIÊN Câu 3. Trong hộp có 40 tấm thẻ được đánh số từ 1 đến 40, chọn ngẫu nhiên 3 thẻ trong hộp. Tính xác suất để tổng 3 số trên 3 thẻ lấy được là một số chia hết cho 3. Lời giải. * Mô tả không gian mẫu: Chọn 3 thẻ trong 40 thẻ. Do đó n(Ω) = C³₄₀. * Gọi A là biến cố \"tổng 3 số ghi trên 3 thẻ là một số chia hết cho 3\". ▶ Số chia hết cho 3 (dạng 3n) gồm các số 3, 6, 9,..., 39 có (39-3)/3 + 1 = 13 số. ▶ Số chia cho 3 dư 1 (dạng 3n + 1) gồm các số 1, 4, 7,..., 40 có (40-1)/3 + 1 = 14 số. ▶ Số chia cho 3 dư 2 (dạng 3n + 2) gồm các số 2, 5, 8,..., 38 có (38-2)/3 + 1 = 13 số. Mô tả khả năng thuận lợi của biến cố A ▶ TH1: Chọn 3 số chia hết cho 3 có C³₁₃ cách. ▶ TH2: Chọn 3 số chia 3 dư 1 có C³₁₄ cách. ▶ TH3: Chọn 3 số chia 3 dư 2 có C³₁₃ cách. ▶ TH4: Chọn 3 số trong đó có một số chia 3 dư 1, một số chia 3 dư 2, một số chia hết cho 3. Tổng cộng có C¹₁₄ · C¹₁₃ · C¹₁₃ số. ASUS",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.091,
-          0.784,
-          0.356,
+          0.088,
+          0.7779999999999999,
+          0.36,
           1.0
         ],
-        "description": "dark grey laptop with asus logo on white desk",
-        "description_vi": "máy tính xách tay màu xám tối có logo asus trên bàn trắng",
+        "description": "asus laptop on desk",
+        "description_vi": "máy tính xách tay asus trên bàn",
         "attributes": [
-          "dark grey",
-          "laptop"
+          "laptop",
+          "asus"
         ],
         "action": ""
       },
@@ -11364,34 +11452,34 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.052000000000000005,
+          0.051000000000000004,
           0.13099999999999998,
-          0.42800000000000005,
-          0.987
+          0.429,
+          0.999
         ],
-        "description": "male teacher wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
+        "description": "male teacher in light blue shirt wearing glasses",
+        "description_vi": "thầy giáo mặc áo sơ mi xanh nhạt đeo kính",
         "attributes": [
-          "male",
           "glasses",
-          "light blue shirt"
+          "light blue shirt",
+          "male"
         ],
-        "action": "sitting"
+        "action": "speaking"
       },
       {
         "object_id": "slide_0",
         "label": "slide",
         "bbox": [
           0.45099999999999996,
-          0.007,
-          0.9949999999999999,
-          0.5239999999999999
+          0.006,
+          1.0,
+          0.523
         ],
-        "description": "digital math slide displayed on screen",
-        "description_vi": "slide bài giảng toán học hiển thị trên màn hình",
+        "description": "digital screen displaying math problem",
+        "description_vi": "màn hình kỹ thuật số hiển thị bài toán",
         "attributes": [
           "digital",
-          "document"
+          "educational"
         ],
         "action": ""
       }
@@ -13931,10 +14019,10 @@
     "visual_source_frame_id": "L25_V008_f0287",
     "ocr_source_frame_id": "L25_V008_f0287",
     "quality_flags": [],
-    "caption": "Two men stand behind a large conference table holding folders, flanked by national flags and officials.",
-    "detailed_caption": "A wide shot shows two men standing behind a polished wooden table in a formal hall, each holding a folder. Several flags, including the Vietnamese and Romanian flags, are placed in the background beneath a large wall map. Other officials stand behind them.",
-    "caption_vi": "Hai người nam đứng phía sau bàn họp lớn cầm theo bìa hồ sơ, xung quanh có cờ quốc gia và các quan chức.",
-    "detailed_caption_vi": "Cảnh quay toàn cảnh ghi lại hai người đàn ông đứng sau một chiếc bàn gỗ lớn trong phòng khánh tiết, mỗi người cầm một tập tài liệu. Phía sau là các lá cờ quốc gia dưới tấm bản đồ lớn gắn trên tường và một số quan chức khác đứng phía sau.",
+    "caption": "Four officials stand behind a large polished wooden table with flags and floral arrangements in a formal room.",
+    "detailed_caption": "A wide shot shows four officials standing behind a long, polished wooden table in a formal hall. Two central officials hold document folders while two flanking officials stand beside national flags including Romanian and Vietnamese flags. A large wall map and wood-paneled walls decorate the background.",
+    "caption_vi": "Bốn quan chức đứng sau một chiếc bàn gỗ bóng lớn với cờ và hoa trong một căn phòng trang trọng.",
+    "detailed_caption_vi": "Cảnh rộng cho thấy bốn quan chức đứng sau một chiếc bàn gỗ dài được đánh bóng trong một hội trường trang trọng. Hai quan chức ở giữa cầm tập tài liệu trong khi hai quan chức đứng hai bên cạnh quốc kỳ gồm cờ Romania và cờ Việt Nam. Bản đồ tường lớn và tường ốp gỗ trang trí phía sau.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -13942,84 +14030,70 @@
         "object_id": "flag_0",
         "label": "flag",
         "bbox": [
-          0.13,
-          0.07200000000000001,
+          0.128,
+          0.061000000000000006,
           0.213,
-          0.716
+          0.725
         ],
-        "description": "a blue, yellow, and red vertical tricolor flag",
-        "description_vi": "lá cờ ba sọc dọc xanh lam, vàng và đỏ",
+        "description": "national flag with blue yellow and red vertical stripes",
+        "description_vi": "quốc kỳ với sọc dọc màu xanh dương vàng và đỏ",
         "attributes": [
-          "tricolor",
-          "vertical"
+          "vertical stripes",
+          "flag"
         ],
         "action": ""
       },
       {
-        "object_id": "flag_1",
-        "label": "flag",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.25,
-          0.09400000000000001,
-          0.33799999999999997,
-          0.6809999999999999
+          0.43200000000000005,
+          0.313,
+          0.558,
+          0.94
         ],
-        "description": "a yellow star on red background flag representing Vietnam",
-        "description_vi": "lá cờ đỏ sao vàng biểu tượng của Việt Nam",
-        "attributes": [
-          "red",
-          "yellow star"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "man_0",
-        "label": "man",
-        "bbox": [
-          0.43099999999999994,
-          0.312,
-          0.5559999999999999,
-          0.9380000000000001
-        ],
-        "description": "a man in a dark suit holding a dark folder",
-        "description_vi": "một người nam mặc vest tối màu đang cầm tập tài liệu tối màu",
+        "description": "official in dark suit with red tie",
+        "description_vi": "quan chức mặc vest tối màu với cà vạt đỏ",
         "attributes": [
           "suit",
-          "folder"
+          "red tie",
+          "formal"
         ],
-        "action": "holding"
+        "action": "standing"
       },
       {
-        "object_id": "man_1",
-        "label": "man",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
-          0.5589999999999999,
-          0.284,
-          0.689,
-          0.9380000000000001
+          0.558,
+          0.287,
+          0.688,
+          0.9390000000000001
         ],
-        "description": "a man in a blue suit holding a red folder",
-        "description_vi": "một người nam mặc vest xanh đang cầm tập hồ sơ màu đỏ",
+        "description": "official in dark suit holding folder",
+        "description_vi": "quan chức mặc vest tối màu cầm tập tài liệu",
         "attributes": [
-          "blue suit",
-          "folder"
+          "suit",
+          "dark",
+          "formal"
         ],
-        "action": "holding"
+        "action": "standing"
       },
       {
         "object_id": "table_0",
         "label": "table",
         "bbox": [
-          0.16699999999999998,
-          0.6699999999999999,
+          0.16899999999999998,
+          0.673,
           1.0,
           1.0
         ],
-        "description": "a large wooden conference table with a floral arrangement",
-        "description_vi": "bàn hội nghị bằng gỗ lớn có trang trí hoa",
+        "description": "long polished wooden conference table",
+        "description_vi": "bàn hội nghị bằng gỗ được đánh bóng dài",
         "attributes": [
           "wooden",
-          "large"
+          "polished",
+          "long"
         ],
         "action": ""
       }
@@ -14028,72 +14102,42 @@
       {
         "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "flag_1"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "flag_1",
+        "subject_id": "person_0",
         "predicate": "right_of",
         "object_id": "flag_0"
       },
       {
         "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "man_0"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_1",
         "predicate": "right_of",
         "object_id": "flag_0"
       },
       {
-        "subject_id": "flag_0",
-        "predicate": "left_of",
-        "object_id": "man_1"
-      },
-      {
-        "subject_id": "man_1",
-        "predicate": "right_of",
-        "object_id": "flag_0"
-      },
-      {
-        "subject_id": "flag_1",
-        "predicate": "left_of",
-        "object_id": "man_0"
-      },
-      {
-        "subject_id": "man_0",
-        "predicate": "right_of",
-        "object_id": "flag_1"
-      },
-      {
-        "subject_id": "flag_1",
-        "predicate": "left_of",
-        "object_id": "man_1"
-      },
-      {
-        "subject_id": "man_1",
-        "predicate": "right_of",
-        "object_id": "flag_1"
-      },
-      {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "table_0"
       },
       {
         "subject_id": "table_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_1",
+        "subject_id": "person_1",
         "predicate": "overlapping",
         "object_id": "table_0"
       },
       {
         "subject_id": "table_0",
         "predicate": "overlapping",
-        "object_id": "man_1"
+        "object_id": "person_1"
       }
     ]
   },
@@ -14102,10 +14146,10 @@
     "visual_source_frame_id": "L25_V008_f0288",
     "ocr_source_frame_id": "L25_V008_f0288",
     "quality_flags": [],
-    "caption": "Two men stand behind a large conference table holding folders, flanked by national flags and officials.",
-    "detailed_caption": "A wide shot shows two men standing behind a polished wooden table in a formal hall, each holding a folder. Several flags, including the Vietnamese and Romanian flags, are placed in the background beneath a large wall map. Other officials stand behind them.",
-    "caption_vi": "Hai người nam đứng sau bàn hội nghị lớn cầm tập tài liệu, xung quanh có cờ quốc gia và các quan chức.",
-    "detailed_caption_vi": "Cảnh quay toàn cảnh ghi lại hai người đàn ông đứng sau một chiếc bàn gỗ lớn trong phòng khánh tiết, mỗi người cầm một tập tài liệu. Phía sau là các lá cờ quốc gia dưới tấm bản đồ lớn gắn trên tường và một số quan chức khác đứng phía sau.",
+    "caption": "Four officials stand behind a polished wooden table with flags and floral arrangements in a formal hall.",
+    "detailed_caption": "A wide shot shows four officials standing behind a long wooden conference table in an ornate room. Two central figures hold document folders, flanked by officials and national flags. A large decorative wall map and wood paneling form the background.",
+    "caption_vi": "Bốn quan chức đứng sau chiếc bàn gỗ được đánh bóng có cờ và hoa trang trí trong hội trường trang trọng.",
+    "detailed_caption_vi": "Cảnh rộng cho thấy bốn quan chức đứng sau một chiếc bàn hội nghị bằng gỗ dài trong một căn phòng trang trí lộng lẫy. Hai nhân vật ở giữa cầm tập tài liệu, được kèm theo bởi các quan chức và quốc kỳ. Bản đồ tường trang trí lớn và ốp gỗ tạo nên phông nền.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -14113,84 +14157,67 @@
         "object_id": "flag_0",
         "label": "flag",
         "bbox": [
-          0.13,
-          0.07200000000000001,
+          0.128,
+          0.061000000000000006,
           0.213,
-          0.716
+          0.723
         ],
-        "description": "a blue, yellow, and red vertical tricolor flag",
-        "description_vi": "lá cờ ba sọc dọc xanh lam, vàng và đỏ",
+        "description": "national flag with vertical tricolor stripes",
+        "description_vi": "quốc kỳ với sọc ba màu dọc",
         "attributes": [
           "tricolor",
-          "vertical"
+          "vertical stripes"
         ],
         "action": ""
       },
       {
-        "object_id": "flag_1",
-        "label": "flag",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.25,
-          0.09400000000000001,
-          0.33799999999999997,
-          0.6809999999999999
+          0.42800000000000005,
+          0.313,
+          0.558,
+          0.9420000000000001
         ],
-        "description": "a yellow star on red background flag representing Vietnam",
-        "description_vi": "lá cờ đỏ sao vàng biểu tượng của Việt Nam",
+        "description": "official in dark suit with red tie",
+        "description_vi": "quan chức mặc vest tối màu với cà vạt đỏ",
         "attributes": [
-          "red",
-          "yellow star"
+          "dark suit",
+          "red tie"
         ],
-        "action": ""
+        "action": "standing"
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
-          0.43099999999999994,
-          0.312,
-          0.5559999999999999,
-          0.9380000000000001
-        ],
-        "description": "a man in a dark suit holding a dark folder",
-        "description_vi": "một người nam mặc vest tối màu đang cầm tập tài liệu tối màu",
-        "attributes": [
-          "suit",
-          "folder"
-        ],
-        "action": "holding"
-      },
-      {
-        "object_id": "man_1",
-        "label": "man",
-        "bbox": [
-          0.5589999999999999,
+          0.558,
           0.284,
-          0.689,
+          0.688,
           0.9380000000000001
         ],
-        "description": "a man in a blue suit holding a red folder",
-        "description_vi": "một người nam mặc vest xanh đang cầm tập hồ sơ màu đỏ",
+        "description": "official in blue suit holding red folder",
+        "description_vi": "quan chức mặc vest xanh dương cầm tập tài liệu đỏ",
         "attributes": [
           "blue suit",
-          "folder"
+          "formal"
         ],
-        "action": "holding"
+        "action": "standing"
       },
       {
         "object_id": "table_0",
         "label": "table",
         "bbox": [
-          0.16699999999999998,
-          0.6699999999999999,
+          0.16899999999999998,
+          0.6719999999999999,
           1.0,
           1.0
         ],
-        "description": "a large wooden conference table with a floral arrangement",
-        "description_vi": "bàn hội nghị bằng gỗ lớn có trang trí hoa",
+        "description": "long polished wooden table with floral centerpiece",
+        "description_vi": "bàn gỗ dài được đánh bóng với cắm hoa trung tâm",
         "attributes": [
           "wooden",
-          "large"
+          "polished"
         ],
         "action": ""
       }
@@ -14199,72 +14226,42 @@
       {
         "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "flag_1"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "flag_1",
+        "subject_id": "person_0",
         "predicate": "right_of",
         "object_id": "flag_0"
       },
       {
         "subject_id": "flag_0",
         "predicate": "left_of",
-        "object_id": "man_0"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_1",
         "predicate": "right_of",
         "object_id": "flag_0"
       },
       {
-        "subject_id": "flag_0",
-        "predicate": "left_of",
-        "object_id": "man_1"
-      },
-      {
-        "subject_id": "man_1",
-        "predicate": "right_of",
-        "object_id": "flag_0"
-      },
-      {
-        "subject_id": "flag_1",
-        "predicate": "left_of",
-        "object_id": "man_0"
-      },
-      {
-        "subject_id": "man_0",
-        "predicate": "right_of",
-        "object_id": "flag_1"
-      },
-      {
-        "subject_id": "flag_1",
-        "predicate": "left_of",
-        "object_id": "man_1"
-      },
-      {
-        "subject_id": "man_1",
-        "predicate": "right_of",
-        "object_id": "flag_1"
-      },
-      {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "table_0"
       },
       {
         "subject_id": "table_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_1",
+        "subject_id": "person_1",
         "predicate": "overlapping",
         "object_id": "table_0"
       },
       {
         "subject_id": "table_0",
         "predicate": "overlapping",
-        "object_id": "man_1"
+        "object_id": "person_1"
       }
     ]
   },
@@ -14836,28 +14833,45 @@
     "visual_source_frame_id": "L25_V008_f0294",
     "ocr_source_frame_id": "L25_V008_f0294",
     "quality_flags": [],
-    "caption": "A man in a black suit and red shirt presents a folder to a woman in a black suit with a bright lens flare.",
-    "detailed_caption": "A medium shot displays a man on the left in a black suit and red shirt holding folders, alongside a woman on the right in a black suit receiving them. A prominent lens flare washes across parts of the image from the left side.",
-    "caption_vi": "Một người nam mặc vest đen áo đỏ đang trao tập hồ sơ cho một người nữ mặc vest đen với hiệu ứng lóa sáng.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại người nam bên trái mặc vest đen và áo đỏ đang cầm hồ sơ, bên cạnh là người nữ mặc vest đen nhận hồ sơ. Hiệu ứng lóe sáng mạnh xuất hiện ở nửa bên trái khung hình.",
+    "caption": "Two people holding a red document folder in an indoor setting.",
+    "detailed_caption": "This medium shot captures two people standing indoors holding a red document folder together. On the left, a man wearing glasses and a dark blazer over a maroon shirt holds the left side of the folder. On the right, a woman in a dark suit with a light blouse holds the right side. A projector screen is visible in the background.",
+    "caption_vi": "Hai người đang cầm một bìa tài liệu màu đỏ trong không gian trong nhà.",
+    "detailed_caption_vi": "Cảnh trung cảnh ghi lại hai người đang đứng trong nhà và cùng cầm một bìa tài liệu màu đỏ. Bên trái, một người đàn ông đeo kính và mặc áo khoác tối màu đè ngoài áo sơ mi đỏ giữ phần bên trái của bìa tài liệu. Bên phải, một người phụ nữ mặc comple tối màu với áo sơ mi sáng màu giữ phần bên phải.",
     "ocr_text": "SIU Saigon International University",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "document_folder_0",
+        "label": "document folder",
+        "bbox": [
+          0.403,
+          0.691,
+          0.571,
+          0.9149999999999999
+        ],
+        "description": "Red document folder with university text",
+        "description_vi": "Bìa tài liệu màu đỏ có chữ đại học",
+        "attributes": [
+          "red",
+          "rectangular"
+        ],
+        "action": "holding"
+      },
+      {
         "object_id": "man_0",
         "label": "man",
         "bbox": [
-          0.253,
-          0.134,
-          0.475,
-          0.997
+          0.254,
+          0.135,
+          0.479,
+          1.0
         ],
-        "description": "a man in a black suit and red shirt holding folders",
-        "description_vi": "một người nam mặc vest đen và áo đỏ đang cầm hồ sơ",
+        "description": "Man wearing glasses and a dark blazer over a maroon shirt",
+        "description_vi": "Người đàn ông đeo kính và mặc áo khoác tối màu ngoài áo sơ mi đỏ",
         "attributes": [
-          "suit",
-          "red shirt",
-          "glasses"
+          "glasses",
+          "blazer",
+          "maroon shirt"
         ],
         "action": "holding"
       },
@@ -14865,21 +14879,41 @@
         "object_id": "woman_0",
         "label": "woman",
         "bbox": [
-          0.53,
-          0.309,
+          0.512,
+          0.307,
           0.766,
-          0.997
+          1.0
         ],
-        "description": "a woman in a black suit and light blouse receiving folders",
-        "description_vi": "một người nữ mặc vest đen và áo sáng màu đang nhận hồ sơ",
+        "description": "Woman wearing a dark suit with a light blouse",
+        "description_vi": "Phụ nữ mặc comple tối màu với áo sơ mi sáng màu",
         "attributes": [
-          "suit",
-          "blouse"
+          "dark suit",
+          "light blouse"
         ],
         "action": "holding"
       }
     ],
     "spatial_relations": [
+      {
+        "subject_id": "document_folder_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "document_folder_0"
+      },
+      {
+        "subject_id": "document_folder_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "document_folder_0"
+      },
       {
         "subject_id": "man_0",
         "predicate": "left_of",
@@ -14897,27 +14931,43 @@
     "visual_source_frame_id": "L25_V008_f0295",
     "ocr_source_frame_id": "L25_V008_f0295",
     "quality_flags": [],
-    "caption": "A man and woman hold folders together in a brightly lit room with a lens flare overlay.",
-    "detailed_caption": "A medium shot shows a man in a black suit on the left and a woman in a dark suit on the right holding university folders together. Heavy lens flare obscures parts of the subjects and background.",
-    "caption_vi": "Một người nam và người nữ cùng cầm tập hồ sơ trong căn phòng sáng rực với hiệu ứng lóe sáng.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại người nam mặc vest đen bên trái và người nữ mặc vest tối màu bên phải đang cùng cầm tập hồ sơ. Vết lóe sáng lớn làm mờ một phần chủ thể và bối cảnh.",
+    "caption": "Two people holding a red document folder in a brightly lit room.",
+    "detailed_caption": "This medium shot shows two individuals holding a red folder inside a brightly lit room with a projector screen in the background. The man on the left wears glasses and a dark blazer. The woman on the right wears a dark suit.",
+    "caption_vi": "Hai người đang cầm một bìa tài liệu màu đỏ trong phòng sáng sủa.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy hai cá nhân đang giữ một bìa tài liệu màu đỏ bên trong căn phòng sáng sủa với màn hình chiếu ở phía sau. Người đàn ông bên trái đeo kính và mặc áo khoác tối màu. Người phụ nữ bên phải mặc comple tối màu.",
     "ocr_text": "SIU Saigon International University",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "document_folder_0",
+        "label": "document folder",
+        "bbox": [
+          0.403,
+          0.695,
+          0.571,
+          0.9159999999999999
+        ],
+        "description": "Red document folder with university logo",
+        "description_vi": "Bìa tài liệu màu đỏ có logo đại học",
+        "attributes": [
+          "red"
+        ],
+        "action": "holding"
+      },
+      {
         "object_id": "man_0",
         "label": "man",
         "bbox": [
-          0.253,
-          0.134,
-          0.475,
-          0.997
+          0.254,
+          0.135,
+          0.47400000000000003,
+          1.0
         ],
-        "description": "a man in a dark suit holding folders with a lens flare effect",
-        "description_vi": "một người nam mặc vest tối màu cầm hồ sơ bị hiệu ứng lóe sáng che khuất",
+        "description": "Man wearing glasses and a dark blazer",
+        "description_vi": "Người đàn ông đeo kính và mặc áo khoác tối màu",
         "attributes": [
-          "suit",
-          "folder"
+          "glasses",
+          "blazer"
         ],
         "action": "holding"
       },
@@ -14925,21 +14975,40 @@
         "object_id": "woman_0",
         "label": "woman",
         "bbox": [
-          0.53,
-          0.309,
+          0.512,
+          0.34,
           0.766,
-          0.997
+          1.0
         ],
-        "description": "a woman in a dark suit holding folders",
-        "description_vi": "một người nữ mặc vest tối màu đang cầm hồ sơ",
+        "description": "Woman wearing a dark suit",
+        "description_vi": "Phụ nữ mặc comple tối màu",
         "attributes": [
-          "suit",
-          "folder"
+          "dark suit"
         ],
         "action": "holding"
       }
     ],
     "spatial_relations": [
+      {
+        "subject_id": "document_folder_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "document_folder_0"
+      },
+      {
+        "subject_id": "document_folder_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "document_folder_0"
+      },
       {
         "subject_id": "man_0",
         "predicate": "left_of",
@@ -15053,102 +15122,142 @@
     "visual_source_frame_id": "L25_V008_f0297",
     "ocr_source_frame_id": "L25_V008_f0297",
     "quality_flags": [],
-    "caption": "A mock trial setup features a speaker standing at a podium and officials seated at desks below a national emblem.",
-    "detailed_caption": "A medium shot shows a mock courtroom with a speaker standing at a podium on the left, facing officials seated at desks on the right. A large yellow star emblem is displayed on the wall behind them beneath flags on the left side.",
-    "caption_vi": "Cảnh giả định phiên tòa với người phát biểu đứng bục và các hội thẩm ngồi bàn bên dưới biểu tượng quốc gia.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại không gian phiên tòa giả định có một người đang đứng phát biểu ở bục bên trái, đối diện với các hội thẩm ngồi bàn bên phải. Phía sau là bức tường gắn huy hiệu ngôi sao vàng lớn và quốc kỳ bên trái.",
-    "ocr_text": "THU KỲ SIU Saigon International University du.vn THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
+    "caption": "Several people in a conference room with red banners and flags.",
+    "detailed_caption": "This wide shot shows a conference setting with a person standing with their back to the camera in the foreground. To the left, a woman stands behind a desk with a microphone. To the right, two women sit behind desks with nameplates. Red banners with university text and flags are displayed.",
+    "caption_vi": "Nhiều người trong phòng họp với các biểu ngữ và cờ màu đỏ.",
+    "detailed_caption_vi": "Cảnh toàn cảnh cho thấy bối cảnh phòng họp với một người đứng quay lưng về phía máy ảnh ở tiền cảnh. Bên trái, một người phụ nữ đứng sau bàn có micro. Phía bên phải, hai người phụ nữ ngồi sau bàn có biển tên. Các biểu ngữ màu đỏ có chữ đại học và cờ được trưng bày.",
+    "ocr_text": "THU KÝ THAM PHÁN CHỦ TÒA PHIÊN TÒA HỘI THẨM NHÂN DÂN SIU Saigon International University",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "emblem_0",
-        "label": "emblem",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.634,
-          0.17200000000000001,
-          0.898,
-          0.625
+          0.399,
+          0.298,
+          0.588,
+          1.0
         ],
-        "description": "a large yellow star emblem mounted on the wall behind the stage",
-        "description_vi": "huy hiệu ngôi sao vàng lớn gắn trên tường phía sau sân khấu",
+        "description": "Person standing with back to the camera wearing a dark shirt",
+        "description_vi": "Người đang đứng quay lưng về phía máy ảnh mặc áo tối màu",
         "attributes": [
-          "yellow star",
-          "emblem"
+          "dark shirt",
+          "back view"
         ],
-        "action": ""
+        "action": "standing"
       },
       {
-        "object_id": "judge_0",
-        "label": "judge",
+        "object_id": "woman_0",
+        "label": "woman",
         "bbox": [
-          0.648,
+          0.126,
+          0.319,
+          0.22999999999999998,
+          0.64
+        ],
+        "description": "Woman standing behind a desk with a microphone",
+        "description_vi": "Phụ nữ đứng sau bàn có micro",
+        "attributes": [
+          "dark suit",
+          "microphone"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "woman_1",
+        "label": "woman",
+        "bbox": [
+          0.661,
           0.412,
           0.786,
-          0.6659999999999999
+          0.6639999999999999
         ],
-        "description": "a judge seated at the desk in black robes with red accents",
-        "description_vi": "thẩm phán ngồi tại bàn mặc áo choàng đen viền đỏ",
+        "description": "Woman sitting behind a desk in judicial robes",
+        "description_vi": "Phụ nữ ngồi sau bàn mặc áo choàng tư pháp",
         "attributes": [
-          "robes",
-          "black and red"
+          "judicial robes",
+          "sitting"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "official_0",
-        "label": "official",
+        "object_id": "woman_2",
+        "label": "woman",
         "bbox": [
-          0.867,
-          0.416,
-          1.0,
-          0.669
+          0.868,
+          0.418,
+          0.999,
+          0.6699999999999999
         ],
-        "description": "an official seated at the desk wearing a black suit and tie",
-        "description_vi": "hội thẩm ngồi tại bàn mặc vest đen và cà vạt",
+        "description": "Woman sitting behind a desk wearing a dark suit",
+        "description_vi": "Phụ nữ ngồi sau bàn mặc comple tối màu",
         "attributes": [
-          "suit",
-          "tie"
+          "dark suit",
+          "glasses"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "podium_0",
-        "label": "podium",
-        "bbox": [
-          0.10200000000000001,
-          0.638,
-          0.333,
-          0.966
-        ],
-        "description": "a red-skirted podium with the university logo on the front",
-        "description_vi": "bục phát biểu phủ khăn đỏ có in logo trường đại học",
-        "attributes": [
-          "red",
-          "logo"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "emblem_0",
-        "predicate": "overlapping",
-        "object_id": "judge_0"
-      },
-      {
-        "subject_id": "judge_0",
-        "predicate": "overlapping",
-        "object_id": "emblem_0"
-      },
-      {
-        "subject_id": "judge_0",
+        "subject_id": "woman_0",
         "predicate": "left_of",
-        "object_id": "official_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "official_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "judge_0"
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "left_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "right_of",
+        "object_id": "woman_1"
       }
     ]
   },
@@ -16312,95 +16421,77 @@
     "visual_source_frame_id": "L25_V008_f0311",
     "ocr_source_frame_id": "L25_V008_f0311",
     "quality_flags": [],
-    "caption": "Two women in white shirts pull open large wooden double doors revealing a stage with pink lighting.",
-    "detailed_caption": "A medium shot shows two women in white shirts and black skirts standing at the handles of tall wooden double doors. As they pull the doors apart, a brightly lit stage with pink and purple lighting becomes visible in the narrow gap. The wooden interior hallway features a wall-mounted phone device on the right.",
-    "caption_vi": "Hai người phụ nữ đang kéo mở cánh cửa gỗ lớn để lộ sân khấu sáng ánh đèn hồng.",
-    "detailed_caption_vi": "Cận cảnh hai người phụ nữ mặc áo sơ mi trắng và váy đen đang kéo tách hai cánh cửa gỗ. Qua khe cửa đang mở rộng, ánh đèn sân khấu màu hồng tím rực rỡ lộ ra. Tường bên phải gắn một thiết bị điện tử.",
+    "caption": "Two women opening double wooden doors in an indoor space.",
+    "detailed_caption": "This medium shot shows two women from behind as they open tall double wooden doors. Both women wear white shirts and dark skirts. Their hands are on the silver door handles as they pull the doors apart.",
+    "caption_vi": "Hai người phụ nữ đang mở cửa gỗ đôi trong không gian trong nhà.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy hai người phụ nữ từ phía sau khi họ đang mở cửa gỗ đôi cao. Cả hai phụ nữ đều mặc áo sơ mi trắng và chân váy tối màu. Tay họ đặt trên tay nắm cửa bằng bạc khi họ kéo cửa ra.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "door_0",
-        "label": "door",
-        "bbox": [
-          0.0,
-          0.0,
-          0.8560000000000001,
-          1.0
-        ],
-        "description": "tall wooden double doors partially opened",
-        "description_vi": "cửa đôi bằng gỗ đang hé mở",
-        "attributes": [
-          "wooden",
-          "double"
-        ],
-        "action": "opening"
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "woman_0",
+        "label": "woman",
         "bbox": [
           0.126,
           0.263,
-          0.40099999999999997,
+          0.4,
           1.0
         ],
-        "description": "woman pulling left wooden door handle",
-        "description_vi": "phụ nữ kéo tay nắm cửa gỗ bên trái",
+        "description": "Woman wearing a white shirt and dark skirt pulling a door handle",
+        "description_vi": "Phụ nữ mặc áo sơ mi trắng và chân váy tối màu đang kéo tay nắm cửa",
         "attributes": [
-          "female",
-          "white shirt"
+          "white shirt",
+          "dark skirt",
+          "long hair"
         ],
-        "action": "pulling door"
+        "action": "opening door"
       },
       {
-        "object_id": "person_1",
-        "label": "person",
+        "object_id": "woman_1",
+        "label": "woman",
         "bbox": [
-          0.489,
-          0.247,
-          0.8400000000000001,
+          0.491,
+          0.249,
+          0.843,
           1.0
         ],
-        "description": "woman pulling right wooden door handle",
-        "description_vi": "phụ nữ kéo tay nắm cửa gỗ bên phải",
+        "description": "Woman wearing a white shirt and dark skirt pulling the other door handle",
+        "description_vi": "Phụ nữ mặc áo sơ mi trắng và chân váy tối màu đang kéo tay nắm cửa còn lại",
         "attributes": [
-          "female",
-          "white shirt"
+          "white shirt",
+          "dark skirt",
+          "long hair"
         ],
-        "action": "pulling door"
+        "action": "opening door"
+      },
+      {
+        "object_id": "wooden_door_0",
+        "label": "wooden door",
+        "bbox": [
+          0.0,
+          0.0,
+          0.999,
+          1.0
+        ],
+        "description": "Tall double wooden doors with vertical metal handles",
+        "description_vi": "Cửa gỗ đôi cao có tay nắm kim loại dọc",
+        "attributes": [
+          "wooden",
+          "double doors"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "door_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "door_0"
-      },
-      {
-        "subject_id": "door_0",
-        "predicate": "overlapping",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "overlapping",
-        "object_id": "door_0"
-      },
-      {
-        "subject_id": "person_0",
+        "subject_id": "woman_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "woman_1"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "woman_1",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "woman_0"
       }
     ]
   },
@@ -16409,57 +16500,73 @@
     "visual_source_frame_id": "L25_V008_f0312",
     "ocr_source_frame_id": "L25_V008_f0312",
     "quality_flags": [],
-    "caption": "Two women pull open tall wooden doors to reveal a brightly lit stage with performers.",
-    "detailed_caption": "A medium shot captures two women's hands pulling open large wooden double doors. Through the widening gap, a stage with performers dressed in red and white under pink lighting is clearly visible. The wooden door frames and long vertical metal handles dominate the foreground.",
-    "caption_vi": "Hai người phụ nữ mở rộng cửa gỗ để lộ sân khấu có các nghệ sĩ biểu diễn.",
-    "detailed_caption_vi": "Cận cảnh tay hai người phụ nữ đang kéo rộng cánh cửa gỗ đôi. Qua khe hở lớn, sân khấu với các nghệ sĩ mặc trang phục đỏ trắng dưới ánh đèn hồng xuất hiện rõ ràng. Khung cửa gỗ và tay nắm kim loại chiếm phần lớn khung hình.",
+    "caption": "Two women opening wooden doors to reveal a brightly lit stage inside.",
+    "detailed_caption": "This medium shot shows two women opening double wooden doors. Through the gap, a stage with multiple performers wearing red and white outfits is visible under bright lighting.",
+    "caption_vi": "Hai người phụ nữ đang mở cửa gỗ để lộ sân khấu sáng rực bên trong.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy hai người phụ nữ đang mở cửa gỗ đôi. Qua khe hở, một sân khấu với nhiều nghệ sĩ biểu diễn mặc trang phục đỏ và trắng có thể nhìn thấy dưới ánh đèn sáng rực.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "door_0",
-        "label": "door",
+        "object_id": "woman_0",
+        "label": "woman",
         "bbox": [
           0.0,
-          0.0,
-          0.807,
+          0.183,
+          0.267,
           1.0
         ],
-        "description": "wooden double doors opening to reveal a stage",
-        "description_vi": "cửa đôi bằng gỗ đang mở hé lộ sân khấu",
+        "description": "Woman's arm and torso pulling the left wooden door",
+        "description_vi": "Cánh tay và thân người phụ nữ đang kéo cánh cửa gỗ bên trái",
         "attributes": [
-          "wooden",
-          "double"
+          "white sleeve"
         ],
-        "action": "opening"
+        "action": "opening door"
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "woman_1",
+        "label": "woman",
         "bbox": [
-          0.36,
-          0.5760000000000001,
-          0.523,
-          0.8939999999999999
+          0.631,
+          0.036000000000000004,
+          1.0,
+          1.0
         ],
-        "description": "performers on stage visible through the open doors",
-        "description_vi": "người biểu diễn trên sân khấu nhìn qua khe cửa",
+        "description": "Woman's arm and side profile pulling the right wooden door",
+        "description_vi": "Cánh tay và góc nghiêng của phụ nữ đang kéo cánh cửa gỗ bên phải",
         "attributes": [
-          "performer"
+          "white shirt",
+          "dark hair"
         ],
-        "action": "performing"
+        "action": "opening door"
+      },
+      {
+        "object_id": "wooden_door_0",
+        "label": "wooden door",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "Double wooden doors being pulled open",
+        "description_vi": "Cửa gỗ đôi đang được kéo mở",
+        "attributes": [
+          "wooden"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "door_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_1"
       },
       {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "door_0"
+        "subject_id": "woman_1",
+        "predicate": "right_of",
+        "object_id": "woman_0"
       }
     ]
   },
@@ -17004,76 +17111,194 @@
     "visual_source_frame_id": "L25_V008_f0320",
     "ocr_source_frame_id": "L25_V008_f0320",
     "quality_flags": [],
-    "caption": "Five people stand behind a long table covered with red and white cloths holding red folders on a stage.",
-    "detailed_caption": "A wide shot shows five individuals standing in a row behind a long presentation table draped in white and red banners with 'SIU UNIVERSITY' printed on them. Each person holds a red folder in front of them on stage. A large projection screen with Vietnamese text is in the background.",
-    "caption_vi": "Năm người đứng sau chiếc bàn dài phủ vải đỏ trắng trên sân khấu và cầm các bìa đỏ.",
-    "detailed_caption_vi": "Toàn cảnh năm người đứng trang trọng phía sau chiếc bàn dài phủ khăn trắng và cờ đỏ in chữ SIU UNIVERSITY. Mỗi người đang cầm một tập hồ bìa màu đỏ trên tay. Phía sau là màn hình chiếu với dòng chữ tiếng Việt lớn.",
-    "ocr_text": "The Saigon International University LỄ KÝ KẾT HỌC BỔNG ĐỒNG HÀNH XÂY DỰNG NHÂN LỰC CHẤT LƯỢNG CAO CHO THÀNH PHỐ THỦ ĐỨC SIU SIU Saigon International UNIVERSITY www.siu.edu.vn Saigon International UNIVERSITY www.siu.edu.vn",
+    "caption": "Five people standing behind tables on a stage with a large projection screen.",
+    "detailed_caption": "This wide shot shows five people standing behind tables draped in red fabric on a stage. A large projection screen with Vietnamese text is in the background, flanked by red curtains on both sides.",
+    "caption_vi": "Năm người đứng sau bàn trên sân khấu có màn hình chiếu lớn.",
+    "detailed_caption_vi": "Cảnh toàn cảnh cho thấy năm người đang đứng sau bàn phủ vải đỏ trên sân khấu. Màn hình chiếu lớn có chữ tiếng Việt ở phía sau, hai bên là rèm đỏ.",
+    "ocr_text": "The Saigon International University LÊ KÝ KẾT HỌC BỔNG ĐỒNG HÀNH XÂY DỰNG NHÂN LỰC CHẤT LƯỢNG CAO CHO THÀNH PHỐ THỦ ĐỨC SIU",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.25,
-          0.526,
-          0.32599999999999996,
-          0.762
+          0.649,
+          0.522,
+          0.728,
+          0.7439999999999999
         ],
-        "description": "woman in blue dress holding red folder",
-        "description_vi": "phụ nữ mặc đầm xanh dương cầm bìa đỏ",
+        "description": "Man in a light shirt standing on the right",
+        "description_vi": "Người đàn ông mặc áo sáng màu đứng bên phải",
         "attributes": [
-          "female",
-          "blue dress"
-        ],
-        "action": "standing"
-      },
-      {
-        "object_id": "person_1",
-        "label": "person",
-        "bbox": [
-          0.65,
-          0.521,
-          0.729,
-          0.749
-        ],
-        "description": "man in light shirt holding red folder on the right",
-        "description_vi": "nam giới mặc áo sáng màu cầm bìa đỏ bên phải",
-        "attributes": [
-          "male",
           "light shirt"
         ],
         "action": "standing"
       },
       {
-        "object_id": "table_0",
-        "label": "table",
+        "object_id": "woman_0",
+        "label": "woman",
         "bbox": [
-          0.198,
-          0.753,
-          0.768,
-          0.963
+          0.24900000000000003,
+          0.528,
+          0.324,
+          0.766
         ],
-        "description": "long presentation table with red and white banners",
-        "description_vi": "bàn hội nghị dài phủ khăn trắng và băng rôn đỏ",
+        "description": "Woman in a blue dress standing on the far left",
+        "description_vi": "Phụ nữ mặc váy xanh đứng ở bìa trái",
         "attributes": [
-          "table",
-          "red",
-          "white"
+          "blue dress"
         ],
-        "action": ""
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_1",
+        "label": "woman",
+        "bbox": [
+          0.356,
+          0.5559999999999999,
+          0.426,
+          0.758
+        ],
+        "description": "Woman in a dark top standing second from left",
+        "description_vi": "Phụ nữ mặc áo tối màu đứng thứ hai từ trái sang",
+        "attributes": [
+          "dark top"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_2",
+        "label": "woman",
+        "bbox": [
+          0.45899999999999996,
+          0.548,
+          0.53,
+          0.7310000000000001
+        ],
+        "description": "Woman in a suit standing in the middle",
+        "description_vi": "Phụ nữ mặc comple đứng ở giữa",
+        "attributes": [
+          "suit"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_3",
+        "label": "woman",
+        "bbox": [
+          0.553,
+          0.5559999999999999,
+          0.619,
+          0.758
+        ],
+        "description": "Woman in a blue top standing second from right",
+        "description_vi": "Phụ nữ mặc áo xanh đứng thứ hai từ phải sang",
+        "attributes": [
+          "blue top"
+        ],
+        "action": "standing"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
+        "subject_id": "woman_0",
         "predicate": "left_of",
-        "object_id": "person_1"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_1",
+        "subject_id": "man_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_3",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "woman_3"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_3"
+      },
+      {
+        "subject_id": "woman_3",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "left_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "right_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "left_of",
+        "object_id": "woman_3"
+      },
+      {
+        "subject_id": "woman_3",
+        "predicate": "right_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "left_of",
+        "object_id": "woman_3"
+      },
+      {
+        "subject_id": "woman_3",
+        "predicate": "right_of",
+        "object_id": "woman_2"
       }
     ]
   },
@@ -18124,10 +18349,10 @@
     "visual_source_frame_id": "L25_V008_f0333",
     "ocr_source_frame_id": "L25_V008_f0333",
     "quality_flags": [],
-    "caption": "A man in a light blue shirt sits at a desk with a laptop next to a digital math lesson slide.",
-    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue button-down shirt seated at a white desk with a laptop. He looks forward in a studio setting with a dark chalkboard background. A digital screen on the right displays Vietnamese math lesson text about school celebrations.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh ngồi bên máy tính xách tay cạnh màn hình chiếu nội dung bài học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một nam giáo viên đeo kính, mặc áo sơ mi xanh nhạt đang ngồi trước máy tính xách tay đặt trên bàn. Bối cảnh phòng thu với phông nền bảng đen phía sau. Màn hình bên phải hiển thị nội dung bài học toán bằng tiếng Việt.",
+    "caption": "A man sitting at a desk with a laptop and a projection screen in the background.",
+    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue button-down shirt sitting at a desk with a dark laptop. Behind him is a large projection screen displaying educational math text. The background wall is dark with faint geometric chalk drawings.",
+    "caption_vi": "Một người đàn ông ngồi bên bàn làm việc với máy tính xách tay và màn hình chiếu phía sau.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một người đàn ông đeo kính và mặc áo sơ mi xanh nhạt cài nút ngồi bên bàn làm việc có máy tính xách tay màu tối. Phía sau anh ta là màn hình chiếu lớn hiển thị nội dung toán học mang tính giáo dục. Tường phía sau tối màu với các hình vẽ phấn hình học mờ.",
     "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ.",
     "news_ticker_text": "",
     "detections": [
@@ -18135,51 +18360,51 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.089,
-          0.7779999999999999,
-          0.355,
+          0.091,
+          0.78,
+          0.356,
           1.0
         ],
-        "description": "dark gray laptop with ASUS logo on the front",
-        "description_vi": "máy tính xách tay xám tối có logo ASUS phía trước",
+        "description": "Dark laptop on a white desk",
+        "description_vi": "Máy tính xách tay màu tối trên bàn trắng",
         "attributes": [
-          "laptop",
-          "dark"
+          "dark",
+          "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
           0.044,
-          0.148,
-          0.43200000000000005,
-          0.992
+          0.15,
+          0.43099999999999994,
+          0.978
         ],
-        "description": "man wearing glasses and light blue shirt sitting behind desk",
-        "description_vi": "người đàn ông đeo kính mặc áo sơ mi xanh nhạt ngồi sau bàn",
+        "description": "Man wearing glasses and a light blue button-down shirt",
+        "description_vi": "Người đàn ông đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
           "light blue shirt",
-          "sitting"
+          "short hair"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "projection_screen_0",
+        "label": "projection screen",
         "bbox": [
-          0.45199999999999996,
-          0.005,
+          0.453,
+          0.008,
           0.994,
-          0.525
+          0.522
         ],
-        "description": "digital display screen showing text with mathematical problems",
-        "description_vi": "màn hình hiển thị nội dung bài toán văn bản",
+        "description": "Screen displaying math problem text",
+        "description_vi": "Màn hình hiển thị nội dung bài toán",
         "attributes": [
-          "digital",
-          "screen"
+          "screen",
+          "text"
         ],
         "action": ""
       }
@@ -18188,22 +18413,22 @@
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "projection_screen_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "projection_screen_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
       }
     ]
   },
@@ -19969,62 +20194,60 @@
     "visual_source_frame_id": "L25_V008_f0375",
     "ocr_source_frame_id": "L25_V008_f0375",
     "quality_flags": [],
-    "caption": "A man in a light blue shirt sits at a desk with a laptop next to a digital math solution slide.",
-    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue button-down shirt seated at a white desk with a laptop. A digital display screen on the right shows math solution steps and probability calculations in Vietnamese text.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bên máy tính xách tay cạnh màn hình chiếu lời giải toán.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nam giáo viên đeo kính, mặc áo sơ mi xanh nhạt đang ngồi trước máy tính xách tay tại bàn làm việc. Màn hình bên phải hiển thị các bước giải bài toán và tính toán xác suất bằng tiếng Việt.",
-    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tổ 1 Tổ 2 Tổ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C3 cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(Ω) = C3 • C3 • C3 = 1680. Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 C2 • C2 cách. Theo quy tắc nhân, suy ra n(E) = 6 • C2 • C2 • C2 = 540. Xác suất cần tìm P(E) = n(E)/n(Ω) = 540/1680 = 9/28.",
+    "caption": "A man sitting at a desk with a laptop next to a screen showing math solutions.",
+    "detailed_caption": "This medium shot features a man wearing glasses and a light blue shirt seated in front of a laptop. Next to him, a projection screen shows detailed steps of a math problem resolution. The background is a dark chalkboard covered in math formulas.",
+    "caption_vi": "Một người đàn ông ngồi bên bàn với máy tính xách tay cạnh màn hình hiển thị lời giải toán.",
+    "detailed_caption_vi": "Cảnh trung cảnh có một người đàn ông đeo kính và mặc áo sơ mi xanh nhạt ngồi trước máy tính xách tay. Bên cạnh anh ta, màn hình chiếu hiển thị các bước chi tiết của việc giải bài toán. Phía sau là bảng đen tối màu phủ đầy các công thức toán học.",
+    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. * Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tờ 1 Tờ 2 Tờ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C2, cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(2) = C3 C3 C3 = 1680. * Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 - C2 - C2 cách. Theo quy tắc nhân, suy ra n(E) = 6.C C C = 540. Xác suất cần tìm P(E) = n(E) / n(2) = 540 / 1680 = 9/28",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.089,
-          0.7779999999999999,
-          0.355,
+          0.091,
+          0.781,
+          0.356,
           1.0
         ],
-        "description": "dark gray laptop computer on the desk",
-        "description_vi": "máy tính xách tay màu xám tối đặt trên bàn",
+        "description": "Dark laptop on a white desk",
+        "description_vi": "Máy tính xách tay màu tối trên bàn trắng",
         "attributes": [
-          "laptop",
-          "gray"
+          "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.044,
-          0.148,
-          0.43200000000000005,
-          0.992
+          0.048,
+          0.161,
+          0.43099999999999994,
+          0.9770000000000001
         ],
-        "description": "man wearing glasses and light blue shirt sitting at a desk",
-        "description_vi": "người đàn ông đeo kính mặc áo sơ mi xanh nhạt ngồi bàn",
+        "description": "Man wearing glasses and a light blue shirt",
+        "description_vi": "Người đàn ông đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
-          "light blue shirt",
-          "sitting"
+          "light blue shirt"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "projection_screen_0",
+        "label": "projection screen",
         "bbox": [
-          0.45199999999999996,
-          0.005,
+          0.453,
+          0.009000000000000001,
           0.994,
-          0.525
+          0.522
         ],
-        "description": "digital display screen with mathematical solution steps",
-        "description_vi": "màn hình hiển thị các bước giải bài tập",
+        "description": "Screen showing detailed math problem solutions",
+        "description_vi": "Màn hình hiển thị lời giải chi tiết bài toán",
         "attributes": [
-          "digital",
-          "screen"
+          "screen",
+          "text"
         ],
         "action": ""
       }
@@ -20033,88 +20256,84 @@
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "projection_screen_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "projection_screen_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
       }
     ]
   },
   {
     "frame_id": "L25_V008_f0376",
-    "visual_source_frame_id": "L25_V008_f0375",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A man in a light blue shirt sits at a desk with a laptop next to a digital math solution slide.",
-    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue button-down shirt seated at a white desk with a laptop. A digital display screen on the right shows math solution steps and probability calculations in Vietnamese text.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bên máy tính xách tay cạnh màn hình chiếu lời giải toán.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nam giáo viên đeo kính, mặc áo sơ mi xanh nhạt đang ngồi trước máy tính xách tay tại bàn làm việc. Màn hình bên phải hiển thị các bước giải bài toán và tính toán xác suất bằng tiếng Việt.",
-    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tổ 1 Tổ 2 Tổ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C3 cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(Ω) = C3 • C3 • C3 = 1680. Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 C2 • C2 cách. Theo quy tắc nhân, suy ra n(E) = 6 • C2 • C2 • C2 = 540. Xác suất cần tìm P(E) = n(E)/n(Ω) = 540/1680 = 9/28.",
+    "visual_source_frame_id": "L25_V008_f0376",
+    "ocr_source_frame_id": "L25_V008_f0376",
+    "quality_flags": [],
+    "caption": "A man speaking while seated at a desk with a math presentation on screen.",
+    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue shirt speaking while seated at a desk with a laptop. A projection screen displaying a math lesson is beside him. A lower-third graphic with Vietnamese text is displayed at the bottom right.",
+    "caption_vi": "Một người đàn ông đang nói chuyện khi ngồi bên bàn với bài giảng toán trên màn hình.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một người đàn ông đeo kính và mặc áo sơ mi xanh nhạt đang nói chuyện khi ngồi bên bàn làm việc có máy tính xách tay. Màn hình chiếu hiển thị bài học toán ở bên cạnh anh ta. Đồ họa phụ đề có chữ tiếng Việt hiển thị ở góc dưới bên phải.",
+    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. * Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tờ 1 Tờ 2 Tờ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C2, cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(2) = C3 C3 C3 = 1680. * Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 - C2 - C2 cách. Theo quy tắc nhân, suy ra n(E) = 6.C C C = 540. Xác suất cần tìm P(E) = n(E) / n(2) = 540 / 1680 = 9/28 Thầy LÊ MINH HUY Giáo viên môn Toán Trường THPT Nguyễn Hiển (Q.11, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.089,
-          0.7779999999999999,
-          0.355,
+          0.091,
+          0.781,
+          0.356,
           1.0
         ],
-        "description": "dark gray laptop computer on the desk",
-        "description_vi": "máy tính xách tay màu xám tối đặt trên bàn",
+        "description": "Dark laptop on a white desk",
+        "description_vi": "Máy tính xách tay màu tối trên bàn trắng",
         "attributes": [
-          "laptop",
-          "gray"
+          "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.044,
-          0.148,
-          0.43200000000000005,
-          0.992
+          0.048,
+          0.161,
+          0.44000000000000006,
+          0.9770000000000001
         ],
-        "description": "man wearing glasses and light blue shirt sitting at a desk",
-        "description_vi": "người đàn ông đeo kính mặc áo sơ mi xanh nhạt ngồi bàn",
+        "description": "Man wearing glasses and a light blue shirt speaking",
+        "description_vi": "Người đàn ông đeo kính và mặc áo sơ mi xanh nhạt đang nói",
         "attributes": [
           "glasses",
-          "light blue shirt",
-          "sitting"
+          "light blue shirt"
         ],
-        "action": "sitting"
+        "action": "speaking"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "projection_screen_0",
+        "label": "projection screen",
         "bbox": [
-          0.45199999999999996,
-          0.005,
+          0.453,
+          0.009000000000000001,
           0.994,
-          0.525
+          0.522
         ],
-        "description": "digital display screen with mathematical solution steps",
-        "description_vi": "màn hình hiển thị các bước giải bài tập",
+        "description": "Screen showing math lesson text",
+        "description_vi": "Màn hình hiển thị nội dung bài học toán",
         "attributes": [
-          "digital",
-          "screen"
+          "screen",
+          "text"
         ],
         "action": ""
       }
@@ -20123,22 +20342,22 @@
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "projection_screen_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "projection_screen_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
       }
     ]
   },
@@ -20147,62 +20366,60 @@
     "visual_source_frame_id": "L25_V008_f0377",
     "ocr_source_frame_id": "L25_V008_f0377",
     "quality_flags": [],
-    "caption": "A man in a light blue shirt sits at a desk with a laptop beside a digital math solution screen.",
-    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue shirt sitting at a white desk with a laptop computer. A large digital screen on the right displays detailed math solution steps and probability calculations in Vietnamese.",
-    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi xanh nhạt ngồi bàn làm việc bên cạnh màn hình hiển thị bài giải.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nam giáo viên đeo kính, mặc áo sơ mi xanh đang ngồi làm việc bên máy tính xách tay. Màn hình bên phải hiển thị chi tiết các bước giải toán và công thức xác suất.",
-    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tổ 1 Tổ 2 Tổ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C3 cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(Ω) = C3 • C3 • C3 = 1680. Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 C2 • C2 cách. Theo quy tắc nhân, suy ra n(E) = 6 • C2 • C2 • C2 = 540. Xác suất cần tìm P(E) = n(E)/n(Ω) = 540/1680 = 9/28.",
+    "caption": "A man sitting at a desk with a laptop and a math slide on screen.",
+    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue button-down shirt sitting at a desk with a laptop. A projection screen displaying a math problem and its solution is visible on the right. The background is a dark wall with faint chalk drawings.",
+    "caption_vi": "Một người đàn ông ngồi bên bàn làm việc với máy tính xách tay và slide toán học trên màn hình.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một người đàn ông đeo kính và mặc áo sơ mi xanh nhạt cài nút ngồi bên bàn làm việc có máy tính xách tay. Màn hình chiếu hiển thị bài toán và lời giải ở bên phải. Tường phía sau tối màu với các hình vẽ phấn mờ.",
+    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. * Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tờ 1 Tờ 2 Tờ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C2, cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(2) = C3 C3 C3 = 1680. * Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 - C2 - C2 cách. Theo quy tắc nhân, suy ra n(E) = 6.C C C = 540. Xác suất cần tìm P(E) = n(E) / n(2) = 540 / 1680 = 9/28",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.089,
-          0.7779999999999999,
-          0.355,
+          0.091,
+          0.781,
+          0.356,
           1.0
         ],
-        "description": "dark gray laptop computer on desk",
-        "description_vi": "máy tính xách tay màu xám tối trên bàn",
+        "description": "Dark laptop on a white desk",
+        "description_vi": "Máy tính xách tay màu tối trên bàn trắng",
         "attributes": [
-          "laptop",
-          "gray"
+          "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.044,
-          0.148,
-          0.43200000000000005,
-          0.992
+          0.048,
+          0.161,
+          0.438,
+          0.9770000000000001
         ],
-        "description": "man wearing glasses and light blue shirt sitting at a desk",
-        "description_vi": "người đàn ông đeo kính mặc áo sơ mi xanh nhạt ngồi bàn",
+        "description": "Man wearing glasses and a light blue shirt",
+        "description_vi": "Người đàn ông đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
-          "light blue shirt",
-          "sitting"
+          "light blue shirt"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "projection_screen_0",
+        "label": "projection screen",
         "bbox": [
-          0.45199999999999996,
-          0.005,
+          0.453,
+          0.009000000000000001,
           0.994,
-          0.525
+          0.522
         ],
-        "description": "digital display screen with Vietnamese math solution text",
-        "description_vi": "màn hình hiển thị văn bản giải toán tiếng Việt",
+        "description": "Screen showing math problem text",
+        "description_vi": "Màn hình hiển thị văn bản bài toán",
         "attributes": [
-          "digital",
-          "screen"
+          "screen",
+          "text"
         ],
         "action": ""
       }
@@ -20211,22 +20428,22 @@
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "projection_screen_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "projection_screen_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
       }
     ]
   },
@@ -20235,62 +20452,60 @@
     "visual_source_frame_id": "L25_V008_f0378",
     "ocr_source_frame_id": "L25_V008_f0378",
     "quality_flags": [],
-    "caption": "A man in a light blue shirt sits at a desk with a laptop next to a digital math solution slide.",
-    "detailed_caption": "This medium shot shows a man wearing glasses and a light blue button-down shirt sitting at a white desk with a laptop computer. A digital display screen on the right displays math solution steps and probability calculations in Vietnamese text.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bên máy tính xách tay cạnh màn hình lời giải toán.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nam giáo viên đeo kính, mặc áo sơ mi xanh nhạt đang ngồi trước máy tính xách tay tại bàn làm việc. Màn hình bên phải hiển thị chi tiết các bước giải bài toán xác suất bằng tiếng Việt.",
-    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tổ 1 Tổ 2 Tổ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C3 cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(Ω) = C3 • C3 • C3 = 1680. Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 C2 • C2 cách. Theo quy tắc nhân, suy ra n(E) = 6 • C2 • C2 • C2 = 540. Xác suất cần tìm P(E) = n(E)/n(Ω) = 540/1680 = 9/28.",
+    "caption": "A man sitting at a desk with a laptop next to a math projection screen.",
+    "detailed_caption": "This medium shot features a man wearing glasses and a light blue button-down shirt seated in front of a laptop on a white desk. A projection screen displaying a math lesson is positioned on the right against a dark background.",
+    "caption_vi": "Một người đàn ông ngồi bên bàn với máy tính xách tay cạnh màn hình chiếu toán học.",
+    "detailed_caption_vi": "Cảnh trung cảnh có một người đàn ông đeo kính và mặc áo sơ mi xanh nhạt cài nút ngồi trước máy tính xách tay trên bàn màu trắng. Màn hình chiếu hiển thị bài học toán được đặt ở phía bên phải trên nền tối.",
+    "ocr_text": "THANH NIÊN Câu 5. Chuẩn bị chào mừng ngày nhà giáo Việt Nam 20/11, đội văn nghệ của trường THPT X gồm 9 học sinh, trong đó có 3 học sinh nữ chia thành 3 tổ đều nhau (mỗi tổ 3 học sinh) để làm công tác biểu diễn văn nghệ. Tính xác suất để mỗi tổ có đúng 1 nữ. Lời giải. * Mô tả không gian mẫu: Chia 9 học sinh về 3 tổ. Tờ 1 Tờ 2 Tờ 3 Chọn 3 bạn trong 9 để đưa vào tổ một, có C3 cách; chọn 3 trong 6 bạn còn lại để đưa vào tổ hai, có C2, cách; chọn 3 trong 3 bạn còn lại để đưa vào tổ ba, có C3 cách. Do đó n(2) = C3 C3 C3 = 1680. * Gọi E là biến cố: “mỗi tổ có đúng một nữ”. Bước 1: Xếp 3 bạn nữ vào 3 tổ, có 3! = 6 cách. Bước 2: Xếp 6 bạn còn lại vào 3 tổ (tổ một, tổ hai, tổ ba) cho đủ mỗi tổ là 3, có C2 - C2 - C2 cách. Theo quy tắc nhân, suy ra n(E) = 6.C C C = 540. Xác suất cần tìm P(E) = n(E) / n(2) = 540 / 1680 = 9/28",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.089,
-          0.7779999999999999,
-          0.355,
+          0.091,
+          0.781,
+          0.356,
           1.0
         ],
-        "description": "dark gray laptop computer on the desk",
-        "description_vi": "máy tính xách tay màu xám tối đặt trên bàn",
+        "description": "Dark laptop on a white desk",
+        "description_vi": "Máy tính xách tay màu tối trên bàn trắng",
         "attributes": [
-          "laptop",
-          "gray"
+          "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.044,
-          0.148,
-          0.43200000000000005,
-          0.992
+          0.048,
+          0.161,
+          0.43600000000000005,
+          0.9770000000000001
         ],
-        "description": "man wearing glasses and light blue shirt sitting at a desk",
-        "description_vi": "người đàn ông đeo kính mặc áo sơ mi xanh nhạt ngồi bàn",
+        "description": "Man wearing glasses and a light blue shirt",
+        "description_vi": "Người đàn ông đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
-          "light blue shirt",
-          "sitting"
+          "light blue shirt"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "projection_screen_0",
+        "label": "projection screen",
         "bbox": [
-          0.45199999999999996,
-          0.005,
+          0.453,
+          0.009000000000000001,
           0.994,
-          0.525
+          0.522
         ],
-        "description": "digital display screen with math solution text",
-        "description_vi": "màn hình hiển thị nội dung giải toán",
+        "description": "Screen showing math lesson details",
+        "description_vi": "Màn hình hiển thị chi tiết bài học toán",
         "attributes": [
-          "digital",
-          "screen"
+          "screen",
+          "text"
         ],
         "action": ""
       }
@@ -20299,22 +20514,22 @@
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "man_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "man_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "projection_screen_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "projection_screen_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "man_0"
       }
     ]
   },
@@ -20351,45 +20566,95 @@
     "visual_source_frame_id": "L25_V008_f0381",
     "ocr_source_frame_id": "L25_V008_f0381",
     "quality_flags": [],
-    "caption": "A gray intro frame displaying the teal logo text centered on a light gray background.",
-    "detailed_caption": "This intro frame displays the program's teal logo text centered on a smooth light gray background. A soft shadow is cast underneath the letters.",
-    "caption_vi": "Khung hình giới thiệu hiển thị logo chữ màu xanh ngọc đặt giữa nền xám sáng.",
-    "detailed_caption_vi": "Cảnh quay giới thiệu hiển thị dòng chữ logo màu xanh ngọc nằm giữa nền xám sáng mượt mà. Phần bóng đổ nhẹ được thể hiện bên dưới dòng chữ.",
+    "caption": "Blue text on a plain gray background.",
+    "detailed_caption": "This minimalist frame displays light blue text centered on a smooth, gray background. A subtle shadow appears beneath the text letters.",
+    "caption_vi": "Chữ màu xanh trên nền xám đơn giản.",
+    "detailed_caption_vi": "Khung hình tối giản hiển thị chữ màu xanh nhạt ở trung tâm trên nền xám mịn màng. Một bóng mờ tinh tế xuất hiện bên dưới các chữ cái.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
-    "detections": [],
+    "detections": [
+      {
+        "object_id": "text_0",
+        "label": "text",
+        "bbox": [
+          0.333,
+          0.42800000000000005,
+          0.669,
+          0.5599999999999999
+        ],
+        "description": "Blue text logo on a gray background",
+        "description_vi": "Logo chữ màu xanh trên nền xám",
+        "attributes": [
+          "blue",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V008_f0382",
-    "visual_source_frame_id": "L25_V008_f0381",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A gray intro frame displaying the teal logo text centered on a light gray background.",
-    "detailed_caption": "This intro frame displays the program's teal logo text centered on a smooth light gray background. A soft shadow is cast underneath the letters.",
-    "caption_vi": "Khung hình giới thiệu hiển thị logo chữ màu xanh ngọc đặt giữa nền xám sáng.",
-    "detailed_caption_vi": "Cảnh quay giới thiệu hiển thị dòng chữ logo màu xanh ngọc nằm giữa nền xám sáng mượt mà. Phần bóng đổ nhẹ được thể hiện bên dưới dòng chữ.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V008_f0382",
+    "ocr_source_frame_id": "L25_V008_f0382",
+    "quality_flags": [],
+    "caption": "Blue text and a website address on a gray background.",
+    "detailed_caption": "This frame features centered blue text with a smaller website address underneath against a uniform gray background. A faint shadow is cast below the text.",
+    "caption_vi": "Chữ màu xanh và địa chỉ trang web trên nền xám.",
+    "detailed_caption_vi": "Khung hình có chữ màu xanh ở giữa với một địa chỉ trang web nhỏ hơn ở phía dưới trên nền xám đồng nhất. Một bóng mờ nhạt được đổ bên dưới văn bản.",
+    "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [],
+    "detections": [
+      {
+        "object_id": "text_0",
+        "label": "text",
+        "bbox": [
+          0.322,
+          0.42800000000000005,
+          0.679,
+          0.606
+        ],
+        "description": "Blue logo text with a website URL below",
+        "description_vi": "Chữ logo màu xanh có URL trang web bên dưới",
+        "attributes": [
+          "blue",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V008_f0383",
-    "visual_source_frame_id": "L25_V008_f0381",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A gray intro frame displaying the teal logo text centered on a light gray background.",
-    "detailed_caption": "This intro frame displays the program's teal logo text centered on a smooth light gray background. A soft shadow is cast underneath the letters.",
-    "caption_vi": "Khung hình giới thiệu hiển thị logo chữ màu xanh ngọc đặt giữa nền xám sáng.",
-    "detailed_caption_vi": "Cảnh quay giới thiệu hiển thị dòng chữ logo màu xanh ngọc nằm giữa nền xám sáng mượt mà. Phần bóng đổ nhẹ được thể hiện bên dưới dòng chữ.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V008_f0383",
+    "ocr_source_frame_id": "L25_V008_f0383",
+    "quality_flags": [],
+    "caption": "Blue brand logo and website URL on a gray background.",
+    "detailed_caption": "This minimalist shot displays a blue brand title and a website address below it on a neutral gray studio background. A soft shadow is visible beneath the text.",
+    "caption_vi": "Logo thương hiệu màu xanh và URL trang web trên nền xám.",
+    "detailed_caption_vi": "Cảnh tối giản hiển thị tiêu đề thương hiệu màu xanh và địa chỉ trang web bên dưới trên nền xám trung tính của phòng thu. Bóng mềm có thể nhìn thấy bên dưới văn bản.",
+    "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [],
+    "detections": [
+      {
+        "object_id": "text_0",
+        "label": "text",
+        "bbox": [
+          0.322,
+          0.42800000000000005,
+          0.679,
+          0.606
+        ],
+        "description": "Blue brand logo and website URL",
+        "description_vi": "Logo thương hiệu màu xanh và URL trang web",
+        "attributes": [
+          "blue",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
     "spatial_relations": []
   },
   {
@@ -20397,13 +20662,31 @@
     "visual_source_frame_id": "L25_V008_f0384",
     "ocr_source_frame_id": "L25_V008_f0384",
     "quality_flags": [],
-    "caption": "A gray intro frame showing the teal logo text and website address on a light gray background.",
-    "detailed_caption": "This intro frame shows the teal logo text centered on a light gray background with a small website address displayed underneath to the right. A soft shadow appears below the main logo text.",
-    "caption_vi": "Khung hình giới thiệu hiển thị logo chữ màu xanh ngọc kèm địa chỉ trang web ở góc dưới.",
-    "detailed_caption_vi": "Cảnh quay giới thiệu hiển thị dòng chữ logo màu xanh ngọc trên nền xám sáng cùng với địa chỉ trang web nhỏ ở phía dưới bên phải. Bóng đổ nhẹ xuất hiện phía dưới logo chính.",
+    "caption": "Blue brand logo and website address on a neutral gray background.",
+    "detailed_caption": "This clean studio shot shows blue typography centered on a solid gray background. A website URL is positioned just beneath the main title.",
+    "caption_vi": "Logo thương hiệu màu xanh và địa chỉ trang web trên nền xám trung tính.",
+    "detailed_caption_vi": "Cảnh phòng thu gọn gàng cho thấy kiểu chữ màu xanh được đặt ở giữa trên nền xám đồng nhất. URL trang web được đặt ngay bên dưới tiêu đề chính.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [],
+    "detections": [
+      {
+        "object_id": "text_0",
+        "label": "text",
+        "bbox": [
+          0.322,
+          0.42800000000000005,
+          0.679,
+          0.606
+        ],
+        "description": "Blue brand logo and website address",
+        "description_vi": "Logo thương hiệu màu xanh và địa chỉ trang web",
+        "attributes": [
+          "blue",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
     "spatial_relations": []
   },
   {
@@ -20411,10 +20694,10 @@
     "visual_source_frame_id": "L25_V008_f0385",
     "ocr_source_frame_id": "L25_V008_f0385",
     "quality_flags": [],
-    "caption": "A gray intro frame showing the teal logo text and website address on a light gray background.",
-    "detailed_caption": "This intro frame displays the teal logo text centered on a minimalist light gray background with the website address below it on the right. A soft shadow is cast beneath the main letters.",
-    "caption_vi": "Khung hình giới thiệu hiển thị logo chữ màu xanh ngọc kèm tên trang web trên nền xám sáng.",
-    "detailed_caption_vi": "Cảnh quay giới thiệu hiển thị dòng chữ logo màu xanh ngọc ở giữa nền phông xám sáng cùng dòng địa chỉ trang web ở góc dưới phải. Bóng mờ nhẹ hiển thị bên dưới dòng chữ chính.",
+    "caption": "A teal logo for Thanh Nien is centered against a gray studio background.",
+    "detailed_caption": "A teal logo featuring the bold text Thanh Nien and the web address thanhbien.vn is centered horizontally and vertically in the frame. The background consists of a smooth, plain gray studio wall and floor with a subtle shadow beneath the text.",
+    "caption_vi": "Logo màu xanh mòng két của Thanh Niên được đặt ở trung tâm trên nền xám.",
+    "detailed_caption_vi": "Logo màu xanh mòng két gồm dòng chữ đậm Thanh Niên và địa chỉ website thanhnien.vn được đặt ở chính giữa khung hình. Phông nền là một bức tường và sàn studio màu xám trơn với một bóng mờ nhẹ phía dưới dòng chữ.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
     "detections": [],
@@ -20422,15 +20705,13 @@
   },
   {
     "frame_id": "L25_V008_f0386",
-    "visual_source_frame_id": "L25_V008_f0385",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A gray intro frame showing the teal logo text and website address on a light gray background.",
-    "detailed_caption": "This intro frame displays the teal logo text centered on a minimalist light gray background with the website address below it on the right. A soft shadow is cast beneath the main letters.",
-    "caption_vi": "Khung hình giới thiệu hiển thị logo chữ màu xanh ngọc kèm tên trang web trên nền xám sáng.",
-    "detailed_caption_vi": "Cảnh quay giới thiệu hiển thị dòng chữ logo màu xanh ngọc ở giữa nền phông xám sáng cùng dòng địa chỉ trang web ở góc dưới phải. Bóng mờ nhẹ hiển thị bên dưới dòng chữ chính.",
+    "visual_source_frame_id": "L25_V008_f0386",
+    "ocr_source_frame_id": "L25_V008_f0386",
+    "quality_flags": [],
+    "caption": "A teal logo for Thanh Nien is centered against a gray studio background.",
+    "detailed_caption": "A teal logo featuring the bold text Thanh Nien and the web address thanhbien.vn is centered horizontally and vertically in the frame. The background consists of a smooth, plain gray studio wall and floor with a subtle shadow beneath the text.",
+    "caption_vi": "Logo màu xanh mòng két của Thanh Niên được đặt ở trung tâm trên nền xám.",
+    "detailed_caption_vi": "Logo màu xanh mòng két gồm dòng chữ đậm Thanh Niên và địa chỉ website thanhnien.vn được đặt ở chính giữa khung hình. Phông nền là một bức tường và sàn studio màu xám trơn với một bóng mờ nhẹ phía dưới dòng chữ.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
     "detections": [],
@@ -20454,15 +20735,13 @@
   },
   {
     "frame_id": "L25_V008_f0388",
-    "visual_source_frame_id": "L25_V008_f0385",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A gray intro frame showing the teal logo text and website address on a light gray background.",
-    "detailed_caption": "This intro frame displays the teal logo text centered on a minimalist light gray background with the website address below it on the right. A soft shadow is cast beneath the main letters.",
-    "caption_vi": "Khung hình giới thiệu hiển thị logo chữ màu xanh ngọc kèm tên trang web trên nền xám sáng.",
-    "detailed_caption_vi": "Cảnh quay giới thiệu hiển thị dòng chữ logo màu xanh ngọc ở giữa nền phông xám sáng cùng dòng địa chỉ trang web ở góc dưới phải. Bóng mờ nhẹ hiển thị bên dưới dòng chữ chính.",
+    "visual_source_frame_id": "L25_V008_f0388",
+    "ocr_source_frame_id": "L25_V008_f0388",
+    "quality_flags": [],
+    "caption": "A teal logo for Thanh Nien is centered against a gray studio background.",
+    "detailed_caption": "A teal logo featuring the bold text Thanh Nien and the web address thanhbien.vn is centered horizontally and vertically in the frame. The background consists of a smooth, plain gray studio wall and floor with a subtle shadow beneath the text.",
+    "caption_vi": "Logo màu xanh mòng két của Thanh Niên được đặt ở trung tâm trên nền xám.",
+    "detailed_caption_vi": "Logo màu xanh mòng két gồm dòng chữ đậm Thanh Niên và địa chỉ website thanhnien.vn được đặt ở chính giữa khung hình. Phông nền là một bức tường và sàn studio màu xám trơn với một bóng mờ nhẹ phía dưới dòng chữ.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
     "detections": [],

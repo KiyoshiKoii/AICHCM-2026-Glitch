@@ -62,13 +62,30 @@
     "visual_source_frame_id": "L25_V088_f0005",
     "ocr_source_frame_id": "L25_V088_f0005",
     "quality_flags": [],
-    "caption": "A man in a blue suit sits at a desk with a laptop next to a digital presentation screen.",
-    "detailed_caption": "A medium shot shows a man in a dark blue suit jacket and white collared shirt sitting behind a gray laptop. To his right, a digital screen displays presentation text about mathematics and dates. The background consists of a dark chalkboard covered in mathematical formulas and diagrams.",
-    "caption_vi": "Một nam giáo viên mặc vest xanh ngồi trước máy tính xách tay cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo vest xanh đậm và áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu xám. Ở bên phải anh ta là một màn hình hiển thị văn bản bài học toán và ngày tháng. Phía sau là bảng đen chi chít các công thức và sơ đồ toán học.",
+    "caption": "A man wearing glasses and a blue suit jacket sits before a laptop in a classroom studio.",
+    "detailed_caption": "A medium shot shows one man wearing glasses, a blue suit jacket, and a white collared shirt seated behind a grey laptop computer with an ASUS logo on a white desk. A chalkboard with mathematical diagrams and a presentation screen displaying a title are visible in the background.",
+    "caption_vi": "Một nam giáo viên đeo kính và mặc áo vest xanh ngồi trước máy tính xách tay trong phòng thu.",
+    "detailed_caption_vi": "Cận cảnh một người nam mặc áo vest màu xanh và áo sơ mi trắng đang ngồi làm việc trước một chiếc máy tính xách tay đặt trên bàn. Phía sau là bảng đen có các ký hiệu toán học và một màn hình chiếu hiển thị nội dung bài học.",
     "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 1: KHẢO SÁT HÀM SỐ CÁC BÀI TOÁN CHỨA THAM SỐ M GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024 ASUS",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a dark chalkboard background covered with white mathematical formulas and diagrams",
+        "description_vi": "phông nền bảng đen phủ các công thức và sơ đồ toán học màu trắng",
+        "attributes": [
+          "chalkboard",
+          "blackboard"
+        ],
+        "action": ""
+      },
       {
         "object_id": "laptop_0",
         "label": "laptop",
@@ -78,30 +95,30 @@
           0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop with asus logo on lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "a grey laptop with an ASUS logo",
+        "description_vi": "một máy tính xách tay màu xám có logo ASUS",
         "attributes": [
-          "laptop",
-          "gray"
+          "grey",
+          "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.091,
+          0.093,
           0.181,
           0.44800000000000006,
-          0.995
+          0.987
         ],
-        "description": "man in dark blue suit and white shirt wearing glasses",
-        "description_vi": "người đàn ông mặc vest xanh đậm và áo sơ mi trắng đeo kính",
+        "description": "a man wearing glasses, a blue suit jacket, and a white collared shirt",
+        "description_vi": "một người nam đeo kính, mặc áo vest xanh và áo sơ mi trắng",
         "attributes": [
+          "man",
           "glasses",
-          "suit",
-          "shirt",
-          "sitting"
+          "suit jacket",
+          "white shirt"
         ],
         "action": "sitting"
       },
@@ -109,16 +126,16 @@
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.45099999999999996,
-          0.008,
-          0.9949999999999999,
-          0.523
+          0.453,
+          0.011,
+          0.993,
+          0.49699999999999994
         ],
-        "description": "digital presentation screen displaying text",
-        "description_vi": "màn hình trình chiếu kỹ thuật số hiển thị văn bản",
+        "description": "a presentation screen showing mathematical lecture titles",
+        "description_vi": "màn hình hiển thị tiêu đề bài giảng toán",
         "attributes": [
           "screen",
-          "text"
+          "projector"
         ],
         "action": ""
       }
@@ -127,10 +144,10 @@
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -138,16 +155,14 @@
   },
   {
     "frame_id": "L25_V088_f0006",
-    "visual_source_frame_id": "L25_V088_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A man in a blue suit sits at a desk with a laptop next to a digital presentation screen.",
-    "detailed_caption": "A medium shot shows a man in a dark blue suit jacket and white collared shirt sitting behind a gray laptop. To his right, a digital screen displays presentation text about mathematics and dates. The background consists of a dark chalkboard covered in mathematical formulas and diagrams.",
-    "caption_vi": "Một nam giáo viên mặc vest xanh ngồi trước máy tính xách tay cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo vest xanh đậm và áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu xám. Ở bên phải anh ta là một màn hình hiển thị văn bản bài học toán và ngày tháng. Phía sau là bảng đen chi chít các công thức và sơ đồ toán học.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 1: KHẢO SÁT HÀM SỐ CÁC BÀI TOÁN CHỨA THAM SỐ M GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024 ASUS",
+    "visual_source_frame_id": "L25_V088_f0006",
+    "ocr_source_frame_id": "L25_V088_f0006",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a blue suit jacket sits before a laptop with an overlay banner at the bottom.",
+    "detailed_caption": "A medium shot shows one man wearing glasses and a blue suit jacket seated behind a laptop computer. An overlay text banner showing a teacher's name and school affiliation is displayed at the lower right. A presentation screen and a blackboard with math diagrams appear in the background.",
+    "caption_vi": "Một nam giáo viên mặc áo vest xanh ngồi trước máy tính xách tay với bảng tên hiển thị phía dưới.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại một người đàn ông mặc áo vest xanh và đeo kính đang ngồi trước máy tính xách tay. Phía dưới màn hình xuất hiện một băng rôn tên giáo viên và trường học. Phía sau là bảng đen ghi các công thức toán và màn hình chiếu.",
+    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 1: KHẢO SÁT HÀM SỐ CÁC BÀI TOÁN CHỨA THAM SỐ M GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024 Thầy LÊ MINH HUY Giáo viên môn Toán Trường THPT Nguyễn Hiền (Q.11, TP.HCM) ASUS",
     "news_ticker_text": "",
     "detections": [
       {
@@ -159,30 +174,29 @@
           0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop with asus logo on lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "a grey laptop computer",
+        "description_vi": "một máy tính xách tay màu xám",
         "attributes": [
           "laptop",
-          "gray"
+          "grey"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.091,
+          0.098,
           0.181,
-          0.44800000000000006,
-          0.995
+          0.45199999999999996,
+          0.997
         ],
-        "description": "man in dark blue suit and white shirt wearing glasses",
-        "description_vi": "người đàn ông mặc vest xanh đậm và áo sơ mi trắng đeo kính",
+        "description": "a man wearing glasses and a blue suit jacket",
+        "description_vi": "một người nam đeo kính và mặc áo vest xanh",
         "attributes": [
+          "man",
           "glasses",
-          "suit",
-          "shirt",
-          "sitting"
+          "suit"
         ],
         "action": "sitting"
       },
@@ -190,16 +204,15 @@
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.45099999999999996,
-          0.008,
-          0.9949999999999999,
-          0.523
+          0.453,
+          0.011,
+          0.993,
+          0.49699999999999994
         ],
-        "description": "digital presentation screen displaying text",
-        "description_vi": "màn hình trình chiếu kỹ thuật số hiển thị văn bản",
+        "description": "a presentation screen displaying educational slide content",
+        "description_vi": "màn hình chiếu hiển thị nội dung slide giáo dục",
         "attributes": [
-          "screen",
-          "text"
+          "screen"
         ],
         "action": ""
       }
@@ -208,10 +221,10 @@
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -219,15 +232,13 @@
   },
   {
     "frame_id": "L25_V088_f0007",
-    "visual_source_frame_id": "L25_V088_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A man in a blue suit sits at a desk with a laptop next to a digital presentation screen.",
-    "detailed_caption": "A medium shot shows a man in a dark blue suit jacket and white collared shirt sitting behind a gray laptop. To his right, a digital screen displays presentation text about mathematics and dates. The background consists of a dark chalkboard covered in mathematical formulas and diagrams.",
-    "caption_vi": "Một nam giáo viên mặc vest xanh ngồi trước máy tính xách tay cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo vest xanh đậm và áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu xám. Ở bên phải anh ta là một màn hình hiển thị văn bản bài học toán và ngày tháng. Phía sau là bảng đen chi chít các công thức và sơ đồ toán học.",
+    "visual_source_frame_id": "L25_V088_f0007",
+    "ocr_source_frame_id": "L25_V088_f0007",
+    "quality_flags": [],
+    "caption": "A man in a blue suit jacket and glasses sits behind a laptop in a studio setting.",
+    "detailed_caption": "A medium shot displays a man wearing glasses, a white collared shirt, and a blue suit jacket sitting at a white desk with a laptop. A presentation screen and a dark chalkboard with mathematical drawings form the background.",
+    "caption_vi": "Một nam giáo viên mặc áo vest xanh ngồi trước máy tính trong phòng thu.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người đàn ông đeo kính và mặc áo vest xanh đang ngồi làm việc trước máy tính xách tay. Phía sau là màn hình chiếu và bảng đen với các ký hiệu toán học.",
     "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 1: KHẢO SÁT HÀM SỐ CÁC BÀI TOÁN CHỨA THAM SỐ M GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024 ASUS",
     "news_ticker_text": "",
     "detections": [
@@ -240,59 +251,41 @@
           0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop with asus logo on lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "a grey laptop on a white desk",
+        "description_vi": "máy tính xách tay màu xám đặt trên bàn trắng",
         "attributes": [
           "laptop",
-          "gray"
+          "grey"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.091,
+          0.098,
           0.181,
-          0.44800000000000006,
-          0.995
+          0.45199999999999996,
+          0.997
         ],
-        "description": "man in dark blue suit and white shirt wearing glasses",
-        "description_vi": "người đàn ông mặc vest xanh đậm và áo sơ mi trắng đeo kính",
+        "description": "a man wearing glasses and a blue suit jacket",
+        "description_vi": "một người nam đeo kính và mặc áo vest xanh",
         "attributes": [
+          "man",
           "glasses",
-          "suit",
-          "shirt",
-          "sitting"
+          "suit"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.45099999999999996,
-          0.008,
-          0.9949999999999999,
-          0.523
-        ],
-        "description": "digital presentation screen displaying text",
-        "description_vi": "màn hình trình chiếu kỹ thuật số hiển thị văn bản",
-        "attributes": [
-          "screen",
-          "text"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -300,15 +293,13 @@
   },
   {
     "frame_id": "L25_V088_f0008",
-    "visual_source_frame_id": "L25_V088_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A man in a blue suit sits at a desk with a laptop next to a digital presentation screen.",
-    "detailed_caption": "A medium shot shows a man in a dark blue suit jacket and white collared shirt sitting behind a gray laptop. To his right, a digital screen displays presentation text about mathematics and dates. The background consists of a dark chalkboard covered in mathematical formulas and diagrams.",
-    "caption_vi": "Một nam giáo viên mặc vest xanh ngồi trước máy tính xách tay cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo vest xanh đậm và áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu xám. Ở bên phải anh ta là một màn hình hiển thị văn bản bài học toán và ngày tháng. Phía sau là bảng đen chi chít các công thức và sơ đồ toán học.",
+    "visual_source_frame_id": "L25_V088_f0008",
+    "ocr_source_frame_id": "L25_V088_f0008",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a blue suit jacket sits before a laptop.",
+    "detailed_caption": "A medium shot shows one man wearing glasses and a blue suit jacket sitting at a desk with a laptop computer in front of him. A projection screen and a chalkboard with mathematical formulas are in the background.",
+    "caption_vi": "Một người đàn ông đeo kính mặc áo vest xanh ngồi trước máy tính xách tay.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại hình ảnh một người nam đeo kính và mặc áo vest xanh đang ngồi sau máy tính xách tay. Bối cảnh phía sau là bảng đen và màn hình chiếu.",
     "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 1: KHẢO SÁT HÀM SỐ CÁC BÀI TOÁN CHỨA THAM SỐ M GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024 ASUS",
     "news_ticker_text": "",
     "detections": [
@@ -321,59 +312,41 @@
           0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop with asus logo on lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "a grey laptop computer",
+        "description_vi": "một máy tính xách tay màu xám",
         "attributes": [
           "laptop",
-          "gray"
+          "grey"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.091,
+          0.098,
           0.181,
-          0.44800000000000006,
-          0.995
+          0.45199999999999996,
+          0.997
         ],
-        "description": "man in dark blue suit and white shirt wearing glasses",
-        "description_vi": "người đàn ông mặc vest xanh đậm và áo sơ mi trắng đeo kính",
+        "description": "a man wearing glasses and a blue suit jacket",
+        "description_vi": "một người nam đeo kính và mặc áo vest xanh",
         "attributes": [
+          "man",
           "glasses",
-          "suit",
-          "shirt",
-          "sitting"
+          "suit"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.45099999999999996,
-          0.008,
-          0.9949999999999999,
-          0.523
-        ],
-        "description": "digital presentation screen displaying text",
-        "description_vi": "màn hình trình chiếu kỹ thuật số hiển thị văn bản",
-        "attributes": [
-          "screen",
-          "text"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -381,15 +354,13 @@
   },
   {
     "frame_id": "L25_V088_f0009",
-    "visual_source_frame_id": "L25_V088_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A man in a blue suit sits at a desk with a laptop next to a digital presentation screen.",
-    "detailed_caption": "A medium shot shows a man in a dark blue suit jacket and white collared shirt sitting behind a gray laptop. To his right, a digital screen displays presentation text about mathematics and dates. The background consists of a dark chalkboard covered in mathematical formulas and diagrams.",
-    "caption_vi": "Một nam giáo viên mặc vest xanh ngồi trước máy tính xách tay cạnh màn hình trình chiếu.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo vest xanh đậm và áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu xám. Ở bên phải anh ta là một màn hình hiển thị văn bản bài học toán và ngày tháng. Phía sau là bảng đen chi chít các công thức và sơ đồ toán học.",
+    "visual_source_frame_id": "L25_V088_f0009",
+    "ocr_source_frame_id": "L25_V088_f0009",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a blue suit jacket sits before a laptop.",
+    "detailed_caption": "A medium shot shows a man wearing glasses and a blue suit jacket seated behind a laptop on a white desk. A presentation screen and a blackboard covered in mathematical diagrams are visible in the background.",
+    "caption_vi": "Một nam giáo viên mặc áo vest xanh đeo kính ngồi trước máy tính xách tay.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người nam đeo kính mặc áo vest xanh đang ngồi làm việc bên chiếc máy tính xách tay trên bàn. Phía sau là bảng đen và màn hình chiếu nội dung học tập.",
     "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 1: KHẢO SÁT HÀM SỐ CÁC BÀI TOÁN CHỨA THAM SỐ M GV: Lê Minh Huy Ngày 29 tháng 3 năm 2024 ASUS",
     "news_ticker_text": "",
     "detections": [
@@ -402,59 +373,41 @@
           0.42699999999999994,
           1.0
         ],
-        "description": "gray laptop with asus logo on lid",
-        "description_vi": "máy tính xách tay màu xám có logo asus trên nắp",
+        "description": "a grey laptop computer",
+        "description_vi": "một máy tính xách tay màu xám",
         "attributes": [
           "laptop",
-          "gray"
+          "grey"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.091,
+          0.098,
           0.181,
-          0.44800000000000006,
-          0.995
+          0.45199999999999996,
+          0.997
         ],
-        "description": "man in dark blue suit and white shirt wearing glasses",
-        "description_vi": "người đàn ông mặc vest xanh đậm và áo sơ mi trắng đeo kính",
+        "description": "a man wearing glasses and a blue suit jacket",
+        "description_vi": "một người nam đeo kính và mặc áo vest xanh",
         "attributes": [
+          "man",
           "glasses",
-          "suit",
-          "shirt",
-          "sitting"
+          "suit"
         ],
         "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.45099999999999996,
-          0.008,
-          0.9949999999999999,
-          0.523
-        ],
-        "description": "digital presentation screen displaying text",
-        "description_vi": "màn hình trình chiếu kỹ thuật số hiển thị văn bản",
-        "attributes": [
-          "screen",
-          "text"
-        ],
-        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       }
@@ -690,10 +643,10 @@
     "visual_source_frame_id": "L25_V088_f0015",
     "ocr_source_frame_id": "L25_V088_f0015",
     "quality_flags": [],
-    "caption": "A man speaks at a podium on a stage before an audience, with a projection screen behind him.",
-    "detailed_caption": "A wide shot shows a man standing at a white podium on a stage, gesturing with his left hand while speaking. A large projection screen behind him displays the title Learning towards Creative Society and the name Ehud Barak. Red curtains frame the stage sides, and the backs of audience members' heads are visible in the foreground.",
-    "caption_vi": "Một người đàn ông phát biểu tại bục trên sân khấu trước khán giả, phía sau là màn hình chiếu.",
-    "detailed_caption_vi": "Góc chụp rộng ghi lại cảnh một người đàn ông đứng ở bục màu trắng trên sân khấu, tay trái cử động khi đang nói chuyện. Màn hình chiếu lớn phía sau hiển thị tiêu đề bài thuyết trình và tên nhân vật. Hai bên sân khấu treo rèm đỏ, và phía trước có hình ảnh phía sau đầu của khán giả.",
+    "caption": "A man in a suit stands at a podium on a stage raising his hand, with a large screen behind him.",
+    "detailed_caption": "A wide shot shows a man in a dark suit standing behind a white podium adorned with flowers, raising his right hand. A large projector screen displays text and graphic designs behind him. Several audience members are seated in the foreground with their backs to the camera.",
+    "caption_vi": "Một người đàn ông mặc vest đứng sau bục phát biểu trên sân khấu giơ tay lên.",
+    "detailed_caption_vi": "Khung hình rộng hiển thị một người đàn ông mặc suit đứng cạnh bục phát biểu có trang trí hoa tươi và đang giơ tay phải. Phía sau là một màn hình chiếu lớn hiển thị thông tin sự kiện. Nhiều khán giả ngồi phía trước hướng về sân khấu.",
     "ocr_text": "SIU UNIVERSITY IACBE Learning towards Creative Society Presented by Former Prime Minister of Israel EHUD BARAK August 05, 2022",
     "news_ticker_text": "",
     "detections": [
@@ -706,30 +659,46 @@
           0.868,
           0.528
         ],
-        "description": "man standing behind podium raising hand",
-        "description_vi": "người đàn ông đứng sau bục phát biểu giơ tay",
+        "description": "a man in a dark suit standing at a podium",
+        "description_vi": "một người nam mặc vest tối màu đứng tại bục phát biểu",
         "attributes": [
           "man",
-          "suit",
-          "standing"
+          "suit"
         ],
-        "action": "speaking"
+        "action": "standing"
+      },
+      {
+        "object_id": "podium_0",
+        "label": "podium",
+        "bbox": [
+          0.6990000000000001,
+          0.49699999999999994,
+          0.881,
+          0.935
+        ],
+        "description": "a white podium decorated with yellow and red flowers",
+        "description_vi": "bục phát biểu màu trắng được trang trí hoa vàng và đỏ",
+        "attributes": [
+          "podium",
+          "white",
+          "flowers"
+        ],
+        "action": ""
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.24300000000000002,
+          0.233,
           0.0,
-          0.913,
-          0.682
+          0.9289999999999999,
+          0.6940000000000001
         ],
-        "description": "large projection screen displaying presentation text",
-        "description_vi": "màn hình chiếu lớn hiển thị văn bản thuyết trình",
+        "description": "a large projection screen displaying presentation text",
+        "description_vi": "màn hình chiếu lớn hiển thị chữ trình bày",
         "attributes": [
           "screen",
-          "projection",
-          "text"
+          "projection"
         ],
         "action": ""
       }
@@ -744,6 +713,16 @@
         "subject_id": "screen_0",
         "predicate": "overlapping",
         "object_id": "person_0"
+      },
+      {
+        "subject_id": "podium_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "podium_0"
       }
     ]
   },
@@ -1444,58 +1423,76 @@
     "visual_source_frame_id": "L25_V088_f0028",
     "ocr_source_frame_id": "L25_V088_f0028",
     "quality_flags": [],
-    "caption": "A conference room features multiple participants seated at a long wooden table during a presentation.",
-    "detailed_caption": "A wide shot of a conference room captures several people seated along a long wooden meeting table. Two wall-mounted screens display presentation graphics with university logos. A speaker gestures on the right side of the table while others look on or use laptops.",
-    "caption_vi": "Phòng họp có nhiều người tham gia ngồi quanh chiếc bàn gỗ dài trong một buổi thuyết trình.",
-    "detailed_caption_vi": "Góc chụp rộng của phòng họp ghi lại nhiều người ngồi dọc theo chiếc bàn họp bằng gỗ dài. Hai màn hình gắn trên tường hiển thị hình ảnh đồ họa thuyết trình có logo trường đại học. Một người đang phát biểu ở bên phải bàn trong khi những người khác đang lắng nghe hoặc dùng máy tính xách tay.",
-    "ocr_text": "SIU University SIU University Welcome International College of Advanced Education (ICAE), Australia Welcome International College of Advanced Education (ICAE), Australia Janney 10, 2024",
+    "caption": "Several people sit around a large conference table in a meeting room.",
+    "detailed_caption": "A medium shot shows a conference room with a long wooden table where several people are seated. A man in a blue shirt and glasses sits on the right side speaking with hand gestures, while other attendees are seated on the left. Water bottles, laptops, and a floral arrangement rest on the table.",
+    "caption_vi": "Nhiều người đang ngồi họp xung quanh một bàn hội nghị dài bằng gỗ trong phòng họp.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại cảnh họp mặt tại một bàn hội nghị dài bằng gỗ. Một người nam đeo kính mặc áo xanh đang nói chuyện và ra hiệu tay ở bên phải, trong khi nhiều người khác ngồi ở phía bên trái bàn. Trên bàn có đặt nước suối, máy tính xách tay và giỏ hoa.",
+    "ocr_text": "SIU University Welcome International College of Advanced Education (ICAE), Australia SIU University Welcome International College of Advanced Education (ICAE), Australia SIU",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.0,
-          0.156,
-          0.195,
-          0.392
+          0.23399999999999999,
+          0.677,
+          0.387,
+          0.9189999999999999
         ],
-        "description": "wall-mounted display screen showing presentation slide",
-        "description_vi": "màn hình hiển thị gắn trên tường chiếu slide thuyết trình",
+        "description": "a silver laptop open on the table",
+        "description_vi": "một máy tính xách tay màu bạc mở trên bàn",
         "attributes": [
-          "screen",
-          "display"
+          "laptop",
+          "silver"
         ],
         "action": ""
       },
       {
-        "object_id": "screen_1",
-        "label": "screen",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.396,
-          0.163,
-          0.5980000000000001,
-          0.38
+          0.622,
+          0.33199999999999996,
+          0.7929999999999999,
+          0.656
         ],
-        "description": "second wall-mounted display screen showing presentation slide",
-        "description_vi": "màn hình hiển thị thứ hai gắn trên tường chiếu slide thuyết trình",
+        "description": "a man in a blue shirt and glasses sitting and gesturing",
+        "description_vi": "một người nam mặc áo xanh và đeo kính đang ngồi và ra hiệu tay",
         "attributes": [
-          "screen",
-          "display"
+          "man",
+          "glasses",
+          "shirt"
         ],
-        "action": ""
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.827,
+          0.40599999999999997,
+          0.9949999999999999,
+          0.746
+        ],
+        "description": "a man with glasses seated on the far right",
+        "description_vi": "một người nam đeo kính ngồi ở phía bìa phải",
+        "attributes": [
+          "man",
+          "glasses"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "table_0",
         "label": "table",
         "bbox": [
           0.20600000000000002,
-          0.554,
+          0.577,
           1.0,
           1.0
         ],
-        "description": "long wooden conference table with participants and water bottles",
-        "description_vi": "bàn họp gỗ dài có người tham gia và chai nước",
+        "description": "a long polished wooden conference table with documents and bottles",
+        "description_vi": "một chiếc bàn họp bằng gỗ dài được đánh bóng có tài liệu và chai lọ",
         "attributes": [
           "table",
           "wooden"
@@ -1505,24 +1502,54 @@
     ],
     "spatial_relations": [
       {
-        "subject_id": "screen_0",
+        "subject_id": "laptop_0",
         "predicate": "left_of",
-        "object_id": "screen_1"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "screen_1",
+        "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "screen_0"
+        "object_id": "laptop_0"
       },
       {
-        "subject_id": "screen_1",
-        "predicate": "above",
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
         "object_id": "table_0"
       },
       {
         "subject_id": "table_0",
-        "predicate": "below",
-        "object_id": "screen_1"
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
       }
     ]
   },
@@ -1531,27 +1558,26 @@
     "visual_source_frame_id": "L25_V088_f0029",
     "ocr_source_frame_id": "L25_V088_f0029",
     "quality_flags": [],
-    "caption": "Two men hold folders at a large wooden desk in front of flags and a decorative wall map.",
-    "detailed_caption": "A wide shot shows two men standing behind a polished wooden desk, holding folders and documents. Flags of Romania and Vietnam stand on either side, and a large artistic world map hangs on the wooden paneled wall behind them.",
-    "caption_vi": "Hai người đàn ông cầm bìa tài liệu tại một chiếc bàn gỗ lớn trước các lá cờ và bản đồ tường trang trí.",
-    "detailed_caption_vi": "Góc chụp rộng hiển thị hai người đàn ông đứng sau chiếc bàn gỗ bóng, đang cầm các bìa tài liệu và văn bản. Quốc kỳ Romania và Việt Nam được đặt ở hai bên, phía sau là một bản đồ thế giới nghệ thuật lớn được gắn trên bức tường ốp gỗ.",
+    "caption": "Two men stand behind a large conference table holding documents, with national flags and a map behind them.",
+    "detailed_caption": "A wide shot shows two men standing behind a large wooden table, holding folders and documents. Other individuals stand in the background flanked by national flags and a large decorative wall map. A floral arrangement sits on the center of the table.",
+    "caption_vi": "Hai người đàn ông đứng sau bàn họp lớn cầm tài liệu với quốc kỳ và bản đồ phía sau.",
+    "detailed_caption_vi": "Khung hình rộng hiển thị hai người đàn ông đang đứng cạnh nhau phía sau một bàn họp bằng gỗ lớn, trên tay cầm các tài liệu và hồ sơ. Phía sau họ là các cột cờ quốc gia và một bức tường trang trí bản đồ lớn. Một lẵng hoa được đặt giữa bàn.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "desk_0",
-        "label": "desk",
+        "object_id": "flag_0",
+        "label": "flag",
         "bbox": [
-          0.16499999999999998,
-          0.6699999999999999,
-          1.0,
-          1.0
+          0.127,
+          0.061000000000000006,
+          0.21400000000000002,
+          0.7270000000000001
         ],
-        "description": "large polished wooden desk with floral arrangement",
-        "description_vi": "bàn gỗ bóng lớn có cắm hoa",
+        "description": "a vertical national flag with blue, yellow, and red stripes",
+        "description_vi": "lá quốc kỳ sọc xanh dương, vàng và đỏ",
         "attributes": [
-          "desk",
-          "wooden"
+          "flag"
         ],
         "action": ""
       },
@@ -1560,149 +1586,179 @@
         "label": "person",
         "bbox": [
           0.43099999999999994,
-          0.312,
-          0.558,
-          0.9430000000000001
+          0.31,
+          0.5559999999999999,
+          0.9329999999999999
         ],
-        "description": "man in dark suit holding blue folder",
-        "description_vi": "người đàn ông mặc vest tối màu cầm bìa kẹp màu xanh",
+        "description": "a man in a dark suit holding a blue folder",
+        "description_vi": "một người nam mặc suit tối màu cầm bìa hồ sơ màu xanh",
         "attributes": [
           "man",
-          "suit",
-          "holding folder"
+          "suit"
         ],
-        "action": "holding folder"
+        "action": "standing"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.558,
-          0.284,
+          0.5559999999999999,
+          0.283,
           0.688,
-          0.9390000000000001
+          0.93
         ],
-        "description": "man in blue suit holding red folder",
-        "description_vi": "người đàn ông mặc vest xanh dương cầm bìa kẹp màu đỏ",
+        "description": "a man in a blue suit holding a red document folder",
+        "description_vi": "một người nam mặc suit xanh cầm tập tài liệu màu đỏ",
         "attributes": [
           "man",
-          "suit",
-          "holding folder"
+          "suit"
         ],
-        "action": "holding folder"
+        "action": "standing"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.16699999999999998,
+          0.6699999999999999,
+          0.9949999999999999,
+          1.0
+        ],
+        "description": "a long polished wooden table with a floral arrangement",
+        "description_vi": "một chiếc bàn gỗ dài được đánh bóng có cắm hoa",
+        "attributes": [
+          "table",
+          "wooden"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "desk_0",
-        "predicate": "overlapping",
+        "subject_id": "flag_0",
+        "predicate": "left_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "desk_0"
+        "predicate": "right_of",
+        "object_id": "flag_0"
       },
       {
-        "subject_id": "desk_0",
-        "predicate": "overlapping",
+        "subject_id": "flag_0",
+        "predicate": "left_of",
         "object_id": "person_1"
       },
       {
         "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "person_0",
         "predicate": "overlapping",
-        "object_id": "desk_0"
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
       }
     ]
   },
   {
     "frame_id": "L25_V088_f0030",
-    "visual_source_frame_id": "L25_V088_f0029",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Two men hold folders at a large wooden desk in front of flags and a decorative wall map.",
-    "detailed_caption": "A wide shot shows two men standing behind a polished wooden desk, holding folders and documents. Flags of Romania and Vietnam stand on either side, and a large artistic world map hangs on the wooden paneled wall behind them.",
-    "caption_vi": "Hai người đàn ông cầm bìa tài liệu tại một chiếc bàn gỗ lớn trước các lá cờ và bản đồ tường trang trí.",
-    "detailed_caption_vi": "Góc chụp rộng hiển thị hai người đàn ông đứng sau chiếc bàn gỗ bóng, đang cầm các bìa tài liệu và văn bản. Quốc kỳ Romania và Việt Nam được đặt ở hai bên, phía sau là một bản đồ thế giới nghệ thuật lớn được gắn trên bức tường ốp gỗ.",
+    "visual_source_frame_id": "L25_V088_f0030",
+    "ocr_source_frame_id": "L25_V088_f0030",
+    "quality_flags": [],
+    "caption": "Two men stand behind a large conference table holding documents, with flags and a large map in the background.",
+    "detailed_caption": "A wide shot shows two men standing behind a polished wooden conference table holding document folders. Several other people stand behind them near national flags and a large textured wall map. A floral arrangement rests on the table.",
+    "caption_vi": "Hai người nam đứng sau bàn họp dài cầm tài liệu, phía sau là quốc kỳ và bản đồ.",
+    "detailed_caption_vi": "Khung hình rộng ghi lại cảnh hai người đàn ông đang đứng phía sau một chiếc bàn họp bằng gỗ dài và cầm các tập tài liệu. Phía sau họ là những người khác đứng cạnh các lá cờ quốc gia và bản đồ tường. Giữa bàn có một lẵng hoa tươi.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "desk_0",
-        "label": "desk",
-        "bbox": [
-          0.16499999999999998,
-          0.6699999999999999,
-          1.0,
-          1.0
-        ],
-        "description": "large polished wooden desk with floral arrangement",
-        "description_vi": "bàn gỗ bóng lớn có cắm hoa",
-        "attributes": [
-          "desk",
-          "wooden"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.43099999999999994,
-          0.312,
-          0.558,
-          0.9430000000000001
+          0.42699999999999994,
+          0.31,
+          0.5559999999999999,
+          0.9329999999999999
         ],
-        "description": "man in dark suit holding blue folder",
-        "description_vi": "người đàn ông mặc vest tối màu cầm bìa kẹp màu xanh",
+        "description": "a man in a dark suit holding a blue folder",
+        "description_vi": "một người nam mặc suit tối màu cầm bìa hồ sơ màu xanh",
         "attributes": [
           "man",
-          "suit",
-          "holding folder"
+          "suit"
         ],
-        "action": "holding folder"
+        "action": "standing"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.558,
-          0.284,
-          0.688,
-          0.9390000000000001
+          0.562,
+          0.283,
+          0.6910000000000001,
+          0.93
         ],
-        "description": "man in blue suit holding red folder",
-        "description_vi": "người đàn ông mặc vest xanh dương cầm bìa kẹp màu đỏ",
+        "description": "a man in a blue suit holding a red folder",
+        "description_vi": "một người nam mặc suit xanh cầm bìa hồ sơ màu đỏ",
         "attributes": [
           "man",
-          "suit",
-          "holding folder"
+          "suit"
         ],
-        "action": "holding folder"
+        "action": "standing"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.16699999999999998,
+          0.6699999999999999,
+          0.9949999999999999,
+          1.0
+        ],
+        "description": "a long polished wooden table",
+        "description_vi": "một bàn họp bằng gỗ dài được đánh bóng",
+        "attributes": [
+          "table"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "desk_0",
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
         "predicate": "overlapping",
         "object_id": "person_0"
       },
       {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "desk_0"
-      },
-      {
-        "subject_id": "desk_0",
-        "predicate": "overlapping",
-        "object_id": "person_1"
-      },
-      {
         "subject_id": "person_1",
         "predicate": "overlapping",
-        "object_id": "desk_0"
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
       }
     ]
   },
@@ -2408,98 +2464,58 @@
     "visual_source_frame_id": "L25_V088_f0035",
     "ocr_source_frame_id": "L25_V088_f0035",
     "quality_flags": [],
-    "caption": "A man in a dark blazer and red shirt and a woman in a dark blazer hold folders while a bright lens flare washes over the left side of the frame.",
-    "detailed_caption": "A medium shot features a man on the left wearing a black blazer over a red shirt holding a red folder, and a woman on the right in a dark blazer holding a blue folder. A prominent, bright white and purple lens flare obscures part of the scene on the left side. A white projection screen and wood paneling form the background.",
-    "caption_vi": "Một người đàn ông mặc áo blazer đen áo đỏ và một phụ nữ mặc áo blazer sẫm màu cầm bìa tài liệu khi có ánh sáng lóa mạnh chiếu qua bên trái khung hình.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại người đàn ông bên trái mặc áo blazer đen ngoài áo đỏ đang cầm bìa đỏ, và người phụ nữ bên phải mặc áo blazer sẫm màu cầm bìa xanh. Một hiệu ứng lóe sáng màu trắng và tím nổi bật che khuất một phần cảnh ở phía bên trái. Phông nền là màn hình chiếu trắng và vách ốp gỗ.",
+    "caption": "Two people hold document folders together indoors in a brightly lit room.",
+    "detailed_caption": "A medium shot shows a man in a dark suit on the left and a woman in a uniform on the right holding open document folders with university logos. A bright light flare washes out the left side of the scene.",
+    "caption_vi": "Hai người cầm các tập hồ sơ đứng trong phòng có ánh sáng chiếu mạnh.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại cảnh một người đàn ông mặc suit tối màu bên trái và một phụ nữ mặc đồng phục bên phải đang cùng cầm các bìa hồ sơ có logo trường đại học. Ánh sáng mạnh chiếu lóa một phần khung hình.",
     "ocr_text": "SIU Saigon International University",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "folder_0",
-        "label": "folder",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.4,
-          0.6920000000000001,
-          0.571,
-          0.913
-        ],
-        "description": "a red document folder with golden lettering",
-        "description_vi": "một bìa tài liệu màu đỏ có chữ vàng",
-        "attributes": [
-          "folder",
-          "red"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "man_0",
-        "label": "man",
-        "bbox": [
-          0.254,
+          0.25,
           0.135,
-          0.47800000000000004,
+          0.475,
           1.0
         ],
-        "description": "a man in a dark blazer and red shirt holding a red folder",
-        "description_vi": "một người đàn ông mặc áo blazer sẫm màu và sơ mi đỏ cầm bìa tài liệu đỏ",
+        "description": "a man in a dark suit holding a document folder",
+        "description_vi": "một người nam mặc suit tối màu đang cầm bìa hồ sơ",
         "attributes": [
           "man",
-          "dark blazer",
-          "red shirt",
-          "holding folder"
+          "suit"
         ],
-        "action": "holding folder"
+        "action": "holding"
       },
       {
-        "object_id": "woman_0",
-        "label": "woman",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
           0.528,
-          0.308,
-          0.764,
+          0.322,
+          0.766,
           1.0
         ],
-        "description": "a woman in a dark blazer holding a blue folder",
-        "description_vi": "một phụ nữ mặc áo blazer sẫm màu cầm bìa tài liệu xanh",
+        "description": "a woman in uniform holding a document folder",
+        "description_vi": "một người phụ nữ mặc đồng phục đang cầm bìa hồ sơ",
         "attributes": [
           "woman",
-          "dark blazer",
-          "holding folder"
+          "uniform"
         ],
-        "action": "holding folder"
+        "action": "holding"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "folder_0",
-        "predicate": "overlapping",
-        "object_id": "man_0"
-      },
-      {
-        "subject_id": "man_0",
-        "predicate": "overlapping",
-        "object_id": "folder_0"
-      },
-      {
-        "subject_id": "folder_0",
-        "predicate": "overlapping",
-        "object_id": "woman_0"
-      },
-      {
-        "subject_id": "woman_0",
-        "predicate": "overlapping",
-        "object_id": "folder_0"
-      },
-      {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "woman_0"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "woman_0",
+        "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "man_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -2634,63 +2650,27 @@
     "visual_source_frame_id": "L25_V088_f0037",
     "ocr_source_frame_id": "L25_V088_f0037",
     "quality_flags": [],
-    "caption": "Students sit and study at tables in a brightly lit library with extensive wooden bookshelves in the background.",
-    "detailed_caption": "A wide shot captures a library study room featuring rows of wooden bookshelves packed with books lining the walls. Several students in white shirts are seated around wooden tables, reading textbooks and writing notes. A bright lens flare effect softly diffuses light across the left side of the frame.",
-    "caption_vi": "Học sinh ngồi học tập tại các bàn trong thư viện đủ ánh sáng với các kệ sách gỗ lớn ở phía sau.",
-    "detailed_caption_vi": "Cảnh toàn cảnh ghi lại phòng đọc sách trong thư viện với các hàng kệ sách gỗ đầy ắp sách dọc theo các bức tường. Một số học sinh mặc áo sơ mi trắng ngồi quanh các bàn gỗ, đọc sách giáo khoa và ghi chép. Hiệu ứng lóe sáng làm mờ nhẹ ánh sáng ở phía bên trái khung hình.",
+    "caption": "Several students study and review documents around tables in a library with tall bookshelves.",
+    "detailed_caption": "A medium shot shows four students in white shirts sitting and standing around study tables in a library. Tall wooden bookshelves filled with books line the walls in the background. Bright lighting creates a lens flare effect across the left side.",
+    "caption_vi": "Nhiều học sinh đang ngồi học và xem tài liệu quanh bàn trong thư viện có các kệ sách lớn.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị bốn học sinh mặc áo sơ mi trắng đang đứng và ngồi quanh các bàn học trong một thư viện. Phía sau là các kệ sách bằng gỗ cao đầy ắp sách. Ánh sáng mạnh tạo hiệu ứng lóe sáng ở bên trái.",
     "ocr_text": "QUẢNG CÁO SÁNG TẠO",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "book_0",
-        "label": "book",
-        "bbox": [
-          0.5389999999999999,
-          0.883,
-          0.661,
-          1.0
-        ],
-        "description": "an open book on the study table",
-        "description_vi": "một cuốn sách mở trên bàn học",
-        "attributes": [
-          "book",
-          "open"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "bookshelf_0",
-        "label": "bookshelf",
-        "bbox": [
-          0.0,
-          0.14500000000000002,
-          0.8320000000000001,
-          0.855
-        ],
-        "description": "large wooden bookshelves filled with books lining the wall",
-        "description_vi": "các kệ sách gỗ lớn chứa đầy sách dọc theo tường",
-        "attributes": [
-          "bookshelf",
-          "wooden",
-          "books"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.323,
+          0.321,
           0.358,
-          0.475,
-          0.7859999999999999
+          0.47400000000000003,
+          0.779
         ],
-        "description": "a student standing near shelves talking or assisting",
-        "description_vi": "một học sinh đứng gần kệ sách đang nói chuyện hoặc hỗ trợ",
+        "description": "a student in a white shirt standing near a bookshelf",
+        "description_vi": "một học sinh mặc áo sơ mi trắng đang đứng gần kệ sách",
         "attributes": [
-          "person",
-          "white shirt",
-          "student"
+          "student",
+          "white shirt"
         ],
         "action": "standing"
       },
@@ -2698,18 +2678,16 @@
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.34500000000000003,
-          0.577,
-          0.517,
-          0.995
+          0.34700000000000003,
+          0.571,
+          0.519,
+          0.992
         ],
-        "description": "a student in a white shirt writing in a notebook at a table",
-        "description_vi": "một học sinh mặc áo sơ mi trắng đang viết vào vở tại bàn",
+        "description": "a student in a white shirt writing at a table",
+        "description_vi": "một học sinh mặc áo sơ mi trắng đang viết bài ở bàn",
         "attributes": [
-          "person",
-          "white shirt",
           "student",
-          "writing"
+          "white shirt"
         ],
         "action": "writing"
       },
@@ -2717,74 +2695,56 @@
         "object_id": "person_2",
         "label": "person",
         "bbox": [
-          0.6940000000000001,
-          0.591,
-          0.853,
-          0.8979999999999999
+          0.562,
+          0.535,
+          0.7,
+          0.7909999999999999
         ],
-        "description": "a student in a white shirt reading a book at a table",
-        "description_vi": "một học sinh mặc áo sơ mi trắng đang đọc sách tại bàn",
+        "description": "a student in a white shirt sitting at a table with books",
+        "description_vi": "một học sinh mặc áo sơ mi trắng đang ngồi học bên bàn sách",
         "attributes": [
-          "person",
-          "white shirt",
           "student",
-          "reading"
+          "white shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.688,
+          0.412,
+          0.827,
+          0.759
+        ],
+        "description": "a student in a white shirt standing by the table",
+        "description_vi": "một học sinh mặc áo sơ mi trắng đang đứng cạnh bàn",
+        "attributes": [
+          "student",
+          "white shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_4",
+        "label": "person",
+        "bbox": [
+          0.701,
+          0.593,
+          0.851,
+          0.891
+        ],
+        "description": "a student in a white shirt sitting reading at a table",
+        "description_vi": "một học sinh mặc áo sơ mi trắng đang ngồi đọc sách ở bàn",
+        "attributes": [
+          "student",
+          "white shirt"
         ],
         "action": "reading"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "bookshelf_0",
-        "predicate": "above",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "below",
-        "object_id": "bookshelf_0"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "right_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "bookshelf_0"
-      },
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "overlapping",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "overlapping",
-        "object_id": "bookshelf_0"
-      },
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "overlapping",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "overlapping",
-        "object_id": "bookshelf_0"
-      },
-      {
         "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "person_1"
@@ -2805,6 +2765,26 @@
         "object_id": "person_0"
       },
       {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
         "subject_id": "person_1",
         "predicate": "left_of",
         "object_id": "person_2"
@@ -2813,6 +2793,36 @@
         "subject_id": "person_2",
         "predicate": "right_of",
         "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "overlapping",
+        "object_id": "person_3"
       }
     ]
   },
@@ -4731,10 +4741,10 @@
     "visual_source_frame_id": "L25_V088_f0051",
     "ocr_source_frame_id": "L25_V088_f0051",
     "quality_flags": [],
-    "caption": "Two women in white shirts and dark skirts pull open large wooden double doors, revealing a brightly lit stage inside.",
-    "detailed_caption": "A medium shot captures two women standing on either side of large wooden double doors, pulling them open by their metal handles. Both wear white shirts and dark skirts. As the doors part, a brightly lit stage with pink and white lighting and performers becomes visible in the gap.",
-    "caption_vi": "Hai phụ nữ mặc áo sơ mi trắng và chân váy tối màu kéo mở cửa đôi bằng gỗ lớn, để lộ sân khấu sáng rực bên trong.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hai phụ nữ đứng hai bên cánh cửa đôi bằng gỗ lớn, dùng tay nắm kim loại kéo mở chúng ra. Cả hai đều mặc áo sơ mi trắng và chân váy tối màu. Khi cánh cửa mở ra, một sân khấu sáng rực với ánh đèn hồng trắng và các nghệ sĩ biểu diễn lộ ra ở khe hở.",
+    "caption": "Two women in white shirts and dark skirts pull open large wooden double doors.",
+    "detailed_caption": "A medium shot shows two women seen from behind, both wearing white shirts and dark skirts, pulling open tall wooden double doors with metal handles. A brightly lit stage is visible through the narrow opening between the doors.",
+    "caption_vi": "Hai người phụ nữ mặc áo trắng và chân váy tối màu đang kéo mở cửa gỗ lớn.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại hình ảnh hai người phụ nữ nhìn từ phía sau, mặc áo sơ mi trắng và chân váy đen, đang dùng tay kéo mở hai cánh cửa gỗ lớn có tay nắm kim loại. Phía sau khe cửa là không gian sân khấu sáng rực.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -4744,87 +4754,64 @@
         "bbox": [
           0.0,
           0.0,
-          0.8880000000000001,
+          0.966,
           1.0
         ],
-        "description": "large wooden double doors being pulled open",
-        "description_vi": "cửa đôi bằng gỗ lớn đang được kéo mở",
+        "description": "tall wooden double doors with vertical metal handles",
+        "description_vi": "cửa đôi bằng gỗ cao với tay nắm kim loại dọc",
         "attributes": [
           "door",
-          "wooden",
-          "double doors"
+          "wooden"
         ],
-        "action": "opening"
+        "action": ""
       },
       {
-        "object_id": "woman_0",
-        "label": "woman",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.122,
-          0.261,
+          0.124,
+          0.26,
           0.4,
           1.0
         ],
-        "description": "a woman in a white shirt and dark skirt pulling the left door open",
-        "description_vi": "một phụ nữ mặc áo sơ mi trắng và chân váy tối màu đang kéo mở cánh cửa trái",
+        "description": "a woman in a white shirt and dark skirt pulling a door handle",
+        "description_vi": "một người phụ nữ mặc áo trắng và chân váy tối màu đang kéo tay nắm cửa",
         "attributes": [
           "woman",
           "white shirt",
-          "dark skirt",
-          "pulling door"
+          "dark skirt"
         ],
-        "action": "pulling door"
+        "action": "pulling"
       },
       {
-        "object_id": "woman_1",
-        "label": "woman",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
           0.491,
-          0.25,
-          0.844,
+          0.247,
+          0.841,
           1.0
         ],
-        "description": "a woman in a white shirt and dark skirt pulling the right door open",
-        "description_vi": "một phụ nữ mặc áo sơ mi trắng và chân váy tối màu đang kéo mở cánh cửa phải",
+        "description": "a woman in a white shirt and dark skirt opening a wooden door",
+        "description_vi": "một người phụ nữ mặc áo trắng và chân váy tối màu đang mở cửa gỗ",
         "attributes": [
           "woman",
           "white shirt",
-          "dark skirt",
-          "pulling door"
+          "dark skirt"
         ],
-        "action": "pulling door"
+        "action": "opening"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "door_0",
-        "predicate": "overlapping",
-        "object_id": "woman_0"
-      },
-      {
-        "subject_id": "woman_0",
-        "predicate": "overlapping",
-        "object_id": "door_0"
-      },
-      {
-        "subject_id": "door_0",
-        "predicate": "overlapping",
-        "object_id": "woman_1"
-      },
-      {
-        "subject_id": "woman_1",
-        "predicate": "overlapping",
-        "object_id": "door_0"
-      },
-      {
-        "subject_id": "woman_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "woman_1"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "woman_1",
+        "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "woman_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -5783,119 +5770,140 @@
     "visual_source_frame_id": "L25_V088_f0058",
     "ocr_source_frame_id": "L25_V088_f0058",
     "quality_flags": [],
-    "caption": "An aerial view of athletes in green and black uniforms practicing on a green outdoor court with a basketball.",
-    "detailed_caption": "An overhead high-angle shot shows several athletes in green and black uniforms moving across a green court with yellow and white lines. A basketball is visible near the left side while players run and practice in various positions.",
-    "caption_vi": "Góc nhìn từ trên cao các vận động viên mặc đồng phục xanh lá và đen đang tập luyện với quả bóng rổ trên sân ngoài trời.",
-    "detailed_caption_vi": "Ảnh chụp từ trên cao hiển thị một số vận động viên mặc đồ thể thao màu xanh lá và đen đang di chuyển trên sân đấu màu xanh lục. Một quả bóng rổ nằm ở phía bên trái khi các vận động viên đang chạy trên sân.",
-    "ocr_text": "SIU",
+    "caption": "Several basketball players in green and yellow uniforms play on an outdoor court, viewed from above.",
+    "detailed_caption": "An aerial view shows multiple basketball players in green and yellow jerseys moving across a green and red outdoor basketball court with yellow markings. A basketball is visible near the left side of the court.",
+    "caption_vi": "Nhiều cầu thủ bóng rổ mặc đồng phục xanh và vàng đang thi đấu trên sân ngoài trời nhìn từ trên cao.",
+    "detailed_caption_vi": "Góc nhìn từ trên cao ghi lại cảnh nhiều cầu thủ bóng rổ mặc áo đấu màu xanh lá và vàng đang di chuyển trên sân đấu ngoài trời có nền xanh lá và đỏ với các đường kẻ màu vàng. Một quả bóng rổ đang lăn ở phía bên trái sân.",
+    "ocr_text": "11",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "athlete_0",
-        "label": "athlete",
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.05,
+          0.762,
+          0.11699999999999999,
+          0.9390000000000001
+        ],
+        "description": "a basketball player in a green and yellow uniform running on the court",
+        "description_vi": "cầu thủ bóng rổ mặc đồng phục xanh và vàng đang chạy trên sân",
+        "attributes": [
+          "player",
+          "uniform",
+          "jersey"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
           0.08399999999999999,
-          0.554,
-          0.202,
-          0.675
+          0.553,
+          0.20099999999999998,
+          0.6719999999999999
         ],
-        "description": "an athlete in a green and black uniform on the left side",
-        "description_vi": "một vận động viên mặc đồng phục xanh lá và đen ở phía bên trái",
+        "description": "a basketball player in a green and yellow uniform moving near the left boundary",
+        "description_vi": "cầu thủ bóng rổ mặc đồng phục xanh và vàng di chuyển gần biên trái",
         "attributes": [
-          "green",
-          "black"
+          "player",
+          "uniform"
         ],
-        "action": "running"
+        "action": "moving"
       },
       {
-        "object_id": "athlete_1",
-        "label": "athlete",
+        "object_id": "person_2",
+        "label": "person",
         "bbox": [
-          0.252,
-          0.212,
-          0.34500000000000003,
+          0.25,
+          0.21,
+          0.34700000000000003,
           0.33199999999999996
         ],
-        "description": "an athlete in a green and black uniform near the top left",
-        "description_vi": "một vận động viên mặc đồng phục xanh lá và đen ở góc trên bên trái",
+        "description": "a basketball player in a green and yellow uniform dribbling the ball",
+        "description_vi": "cầu thủ bóng rổ mặc đồng phục xanh và vàng đang dẫn bóng",
         "attributes": [
-          "green",
-          "black"
+          "player",
+          "uniform"
         ],
-        "action": "running"
+        "action": "dribbling"
       },
       {
-        "object_id": "athlete_2",
-        "label": "athlete",
+        "object_id": "person_3",
+        "label": "person",
         "bbox": [
-          0.365,
+          0.363,
           0.528,
-          0.445,
-          0.64
+          0.44699999999999995,
+          0.639
         ],
-        "description": "an athlete in a green and black uniform near the center",
-        "description_vi": "một vận động viên mặc đồng phục xanh lá và đen ở gần khu vực giữa sân",
+        "description": "a basketball player in a dark uniform running near the center circle",
+        "description_vi": "cầu thủ mặc đồng phục tối màu đang chạy gần vòng tròn trung tâm",
         "attributes": [
-          "green",
-          "black"
+          "player",
+          "dark uniform"
         ],
         "action": "running"
       },
       {
-        "object_id": "athlete_3",
-        "label": "athlete",
+        "object_id": "person_4",
+        "label": "person",
         "bbox": [
-          0.421,
-          0.863,
-          0.508,
-          0.9640000000000001
+          0.4,
+          0.207,
+          0.461,
+          0.312
         ],
-        "description": "an athlete in a green and black uniform at the bottom",
-        "description_vi": "một vận động viên mặc đồng phục xanh lá và đen ở phía dưới",
+        "description": "a basketball player in a green and yellow uniform moving on the court",
+        "description_vi": "cầu thủ bóng rổ mặc đồng phục xanh và vàng di chuyển trên sân",
         "attributes": [
-          "green",
-          "black"
+          "player",
+          "uniform"
         ],
-        "action": "running"
-      },
-      {
-        "object_id": "basketball_0",
-        "label": "basketball",
-        "bbox": [
-          0.202,
-          0.47600000000000003,
-          0.225,
-          0.512
-        ],
-        "description": "a basketball on the court surface",
-        "description_vi": "quả bóng rổ nằm trên mặt sân",
-        "attributes": [
-          "round",
-          "orange"
-        ],
-        "action": ""
+        "action": "moving"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "athlete_0",
-        "predicate": "left_of",
-        "object_id": "athlete_2"
-      },
-      {
-        "subject_id": "athlete_2",
-        "predicate": "right_of",
-        "object_id": "athlete_0"
-      },
-      {
-        "subject_id": "athlete_2",
+        "subject_id": "person_1",
         "predicate": "above",
-        "object_id": "athlete_3"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "athlete_3",
+        "subject_id": "person_0",
         "predicate": "below",
-        "object_id": "athlete_2"
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "left_of",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "right_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "above",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "below",
+        "object_id": "person_4"
       }
     ]
   },
@@ -7940,27 +7948,27 @@
     "visual_source_frame_id": "L25_V088_f0082",
     "ocr_source_frame_id": "L25_V088_f0082",
     "quality_flags": [],
-    "caption": "An educational slide with two yellow boxes containing mathematical theorems and conditions.",
-    "detailed_caption": "A close-up shot of a presentation slide with two distinct yellow content boxes against a lined notebook background. The slides present mathematical definitions and theorems regarding function monotonicity and local extrema with formulas.",
-    "caption_vi": "Slide giáo dục có hai hộp màu vàng chứa các định lý và điều kiện toán học.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide trình chiếu gồm hai hộp nội dung màu vàng nổi bật trên nền giấy kẻ ngang. Slide trình bày các định nghĩa và định lý toán học về tính đơn điệu và cực trị của hàm số kèm theo công thức.",
-    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <-> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <-> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x_0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x_0 in D nếu f'(x_0) = 0 hoặc f(x) không có đạo hàm tại x_0 f'(x) đổi dấu khi đi qua điểm x_0.",
+    "caption": "A study slide with mathematical formulas and theorems displayed on a yellow background.",
+    "detailed_caption": "A medium shot displays an educational slide titled with red text at the top, followed by two yellow boxes containing mathematical definitions and theorems regarding function monotonicity and extrema, written in Vietnamese.",
+    "caption_vi": "Slide học tập hiển thị các công thức toán học và định lý trên nền vàng.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một trang slide giáo dục có tiêu đề màu đỏ ở phía trên, bên dưới gồm hai hộp màu vàng chứa các định lý và điều kiện về tính đơn trực và cực trị của hàm số bằng tiếng Việt.",
+    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K ⇔ f'(x) ≥ 0, ∀x ∈ K. f(x) nghịch biến trên khoảng K ⇔ f'(x) ≤ 0, ∀x ∈ K. Điều kiện cần và đủ để hàm số đạt cực trị tại x₀: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x₀ ∈ D nếu f'(x₀) = 0 hoặc f(x) không có đạo hàm tại x₀ f'(x₀) đổi dấu khi đi qua điểm x₀.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.027000000000000003,
-          0.052,
-          0.9869999999999999,
-          0.725
+          0.071,
+          0.9720000000000001,
+          0.721
         ],
-        "description": "a presentation slide displaying mathematical theorems in two yellow boxes",
-        "description_vi": "slide trình chiếu hiển thị các định lý toán học trong hai hộp màu vàng",
+        "description": "an educational presentation slide containing mathematical text and formulas",
+        "description_vi": "slide trình bày giáo dục chứa văn bản và công thức toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "slide",
+          "yellow"
         ],
         "action": ""
       }
@@ -7969,32 +7977,30 @@
   },
   {
     "frame_id": "L25_V088_f0083",
-    "visual_source_frame_id": "L25_V088_f0082",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide with two yellow boxes containing mathematical theorems and conditions.",
-    "detailed_caption": "A close-up shot of a presentation slide with two distinct yellow content boxes against a lined notebook background. The slides present mathematical definitions and theorems regarding function monotonicity and local extrema with formulas.",
-    "caption_vi": "Slide giáo dục có hai hộp màu vàng chứa các định lý và điều kiện toán học.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide trình chiếu gồm hai hộp nội dung màu vàng nổi bật trên nền giấy kẻ ngang. Slide trình bày các định nghĩa và định lý toán học về tính đơn điệu và cực trị của hàm số kèm theo công thức.",
-    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <-> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <-> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x_0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x_0 in D nếu f'(x_0) = 0 hoặc f(x) không có đạo hàm tại x_0 f'(x) đổi dấu khi đi qua điểm x_0.",
+    "visual_source_frame_id": "L25_V088_f0083",
+    "ocr_source_frame_id": "L25_V088_f0083",
+    "quality_flags": [],
+    "caption": "A study slide with mathematical formulas and theorems displayed on a yellow background.",
+    "detailed_caption": "A medium shot shows an educational presentation slide with red header text and two yellow text boxes presenting mathematical formulas and theorems regarding function monotonicity and extrema.",
+    "caption_vi": "Slide giáo dục hiển thị các công thức và định lý toán học trên nền màu vàng.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một slide bài học với tiêu đề đỏ ở trên cùng và hai khung nội dung màu vàng trình bày các định lý toán học về tính đơn điệu và cực trị của hàm số.",
+    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K ⇔ f'(x) ≥ 0, ∀x ∈ K. f(x) nghịch biến trên khoảng K ⇔ f'(x) ≤ 0, ∀x ∈ K. Điều kiện cần và đủ để hàm số đạt cực trị tại x₀: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x₀ ∈ D nếu f'(x₀) = 0 hoặc f(x) không có đạo hàm tại x₀ f'(x₀) đổi dấu khi đi qua điểm x₀.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.027000000000000003,
-          0.052,
-          0.9869999999999999,
-          0.725
+          0.071,
+          0.9720000000000001,
+          0.721
         ],
-        "description": "a presentation slide displaying mathematical theorems in two yellow boxes",
-        "description_vi": "slide trình chiếu hiển thị các định lý toán học trong hai hộp màu vàng",
+        "description": "an educational presentation slide with mathematical text boxes",
+        "description_vi": "slide trình bày giáo dục với các hộp văn bản toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "slide",
+          "yellow"
         ],
         "action": ""
       }
@@ -8003,166 +8009,273 @@
   },
   {
     "frame_id": "L25_V088_f0084",
-    "visual_source_frame_id": "L25_V088_f0082",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide with two yellow boxes containing mathematical theorems and conditions.",
-    "detailed_caption": "A close-up shot of a presentation slide with two distinct yellow content boxes against a lined notebook background. The slides present mathematical definitions and theorems regarding function monotonicity and local extrema with formulas.",
-    "caption_vi": "Slide giáo dục có hai hộp màu vàng chứa các định lý và điều kiện toán học.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide trình chiếu gồm hai hộp nội dung màu vàng nổi bật trên nền giấy kẻ ngang. Slide trình bày các định nghĩa và định lý toán học về tính đơn điệu và cực trị của hàm số kèm theo công thức.",
-    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <-> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <-> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x_0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x_0 in D nếu f'(x_0) = 0 hoặc f(x) không có đạo hàm tại x_0 f'(x) đổi dấu khi đi qua điểm x_0.",
+    "visual_source_frame_id": "L25_V088_f0084",
+    "ocr_source_frame_id": "L25_V088_f0084",
+    "quality_flags": [],
+    "caption": "Two green informational text boxes with red heading text displayed on a light background screen.",
+    "detailed_caption": "This medium shot presents two stacked green informational cards with dark borders and red header text reading CÁC KIẾN THỨC TRỌNG TÂM. The top box details mathematical properties with bulleted formulas, and the bottom box explains conditions for function extrema. The entire text is displayed against a pale yellow striped background.",
+    "caption_vi": "Hai hộp văn bản thông tin màu xanh lá cây với tiêu đề màu đỏ hiển thị trên màn hình nền sáng.",
+    "detailed_caption_vi": "Khung hình trung cảnh này hiển thị hai thẻ thông tin màu xanh lá cây xếp chồng lên nhau với viền tối và tiêu đề màu đỏ. Hộp trên cùng trình bày các tính năng toán học với các công thức có dấu đầu dòng, và hộp dưới giải thích các điều kiện cực trị của hàm số. Toàn bộ văn bản hiển thị trên nền sọc vàng nhạt.",
+    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <=> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <=> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x0 in D nếu f'(x0) = 0 hoặc f(x) không có đạo hàm tại x0 f'(x) đổi dấu khi đi qua điểm x0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.052,
-          0.9869999999999999,
-          0.725
+          0.028000000000000004,
+          0.16699999999999998,
+          0.966,
+          0.427
         ],
-        "description": "a presentation slide displaying mathematical theorems in two yellow boxes",
-        "description_vi": "slide trình chiếu hiển thị các định lý toán học trong hai hộp màu vàng",
+        "description": "top green informational card displaying mathematical theorem and formulas",
+        "description_vi": "thẻ thông tin màu xanh lá cây phía trên hiển thị định lý toán học và các công thức",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "rectangular",
+          "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_1",
+        "label": "document",
+        "bbox": [
+          0.028000000000000004,
+          0.455,
+          0.966,
+          0.7180000000000001
+        ],
+        "description": "bottom green informational card displaying conditions for function extrema",
+        "description_vi": "thẻ thông tin màu xanh lá cây phía dưới hiển thị điều kiện cực trị của hàm số",
+        "attributes": [
+          "green",
+          "rectangular",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "document_0",
+        "predicate": "above",
+        "object_id": "document_1"
+      },
+      {
+        "subject_id": "document_1",
+        "predicate": "below",
+        "object_id": "document_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0085",
-    "visual_source_frame_id": "L25_V088_f0082",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide with two yellow boxes containing mathematical theorems and conditions.",
-    "detailed_caption": "A close-up shot of a presentation slide with two distinct yellow content boxes against a lined notebook background. The slides present mathematical definitions and theorems regarding function monotonicity and local extrema with formulas.",
-    "caption_vi": "Slide giáo dục có hai hộp màu vàng chứa các định lý và điều kiện toán học.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide trình chiếu gồm hai hộp nội dung màu vàng nổi bật trên nền giấy kẻ ngang. Slide trình bày các định nghĩa và định lý toán học về tính đơn điệu và cực trị của hàm số kèm theo công thức.",
-    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <-> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <-> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x_0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x_0 in D nếu f'(x_0) = 0 hoặc f(x) không có đạo hàm tại x_0 f'(x) đổi dấu khi đi qua điểm x_0.",
+    "visual_source_frame_id": "L25_V088_f0085",
+    "ocr_source_frame_id": "L25_V088_f0085",
+    "quality_flags": [],
+    "caption": "Two green informational text boxes with mathematical formulas displayed on a striped screen.",
+    "detailed_caption": "This medium shot shows two rectangular green text boxes centered on a pale yellow lined background. The top box contains a theorem about function monotonicity, while the bottom box explains conditions for extrema. Red title text reads CÁC KIẾN THỨC TRỌNG TÂM at the top.",
+    "caption_vi": "Hai hộp văn bản thông tin màu xanh lá cây với các công thức toán học hiển thị trên màn hình sọc.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị hai hộp văn bản màu xanh lá cây hình chữ nhật nằm giữa nền có sọc vàng nhạt. Hộp trên chứa định lý về tính đơn điệu của hàm số, trong khi hộp dưới giải thích các điều kiện cực trị. Tiêu đề màu đỏ ghi CÁC KIẾN THỨC TRỌNG TÂM ở phía trên.",
+    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <=> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <=> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x0 in D nếu f'(x0) = 0 hoặc f(x) không có đạo hàm tại x0 f'(x) đổi dấu khi đi qua điểm x0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.052,
-          0.9869999999999999,
-          0.725
+          0.028000000000000004,
+          0.16699999999999998,
+          0.966,
+          0.427
         ],
-        "description": "a presentation slide displaying mathematical theorems in two yellow boxes",
-        "description_vi": "slide trình chiếu hiển thị các định lý toán học trong hai hộp màu vàng",
+        "description": "top green instructional box with mathematical definitions",
+        "description_vi": "hộp hướng dẫn màu xanh lá cây phía trên chứa định nghĩa toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_1",
+        "label": "document",
+        "bbox": [
+          0.028000000000000004,
+          0.455,
+          0.966,
+          0.7180000000000001
+        ],
+        "description": "bottom green instructional box with extrema conditions",
+        "description_vi": "hộp hướng dẫn màu xanh lá cây phía dưới chứa điều kiện cực trị",
+        "attributes": [
+          "green",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "document_0",
+        "predicate": "above",
+        "object_id": "document_1"
+      },
+      {
+        "subject_id": "document_1",
+        "predicate": "below",
+        "object_id": "document_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0086",
-    "visual_source_frame_id": "L25_V088_f0082",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide with two yellow boxes containing mathematical theorems and conditions.",
-    "detailed_caption": "A close-up shot of a presentation slide with two distinct yellow content boxes against a lined notebook background. The slides present mathematical definitions and theorems regarding function monotonicity and local extrema with formulas.",
-    "caption_vi": "Slide giáo dục có hai hộp màu vàng chứa các định lý và điều kiện toán học.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide trình chiếu gồm hai hộp nội dung màu vàng nổi bật trên nền giấy kẻ ngang. Slide trình bày các định nghĩa và định lý toán học về tính đơn điệu và cực trị của hàm số kèm theo công thức.",
-    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <-> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <-> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x_0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x_0 in D nếu f'(x_0) = 0 hoặc f(x) không có đạo hàm tại x_0 f'(x) đổi dấu khi đi qua điểm x_0.",
+    "visual_source_frame_id": "L25_V088_f0086",
+    "ocr_source_frame_id": "L25_V088_f0086",
+    "quality_flags": [],
+    "caption": "Two green informational text boxes with mathematical formulas displayed on a striped screen.",
+    "detailed_caption": "This medium shot shows two rectangular green text boxes centered on a pale yellow lined background. The top box contains a theorem about function monotonicity, while the bottom box explains conditions for extrema. Red title text reads CÁC KIẾN THỨC TRỌNG TÂM at the top.",
+    "caption_vi": "Hai hộp văn bản thông tin màu xanh lá cây với các công thức toán học hiển thị trên màn hình sọc.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị hai hộp văn bản màu xanh lá cây hình chữ nhật nằm giữa nền có sọc vàng nhạt. Hộp trên chứa định lý về tính đơn điệu của hàm số, trong khi hộp dưới giải thích các điều kiện cực trị. Tiêu đề màu đỏ ghi CÁC KIẾN THỨC TRỌNG TÂM ở phía trên.",
+    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <=> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <=> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x0 in D nếu f'(x0) = 0 hoặc f(x) không có đạo hàm tại x0 f'(x) đổi dấu khi đi qua điểm x0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.052,
-          0.9869999999999999,
-          0.725
+          0.028000000000000004,
+          0.16699999999999998,
+          0.966,
+          0.427
         ],
-        "description": "a presentation slide displaying mathematical theorems in two yellow boxes",
-        "description_vi": "slide trình chiếu hiển thị các định lý toán học trong hai hộp màu vàng",
+        "description": "top green instructional box with mathematical definitions",
+        "description_vi": "hộp hướng dẫn màu xanh lá cây phía trên chứa định nghĩa toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_1",
+        "label": "document",
+        "bbox": [
+          0.028000000000000004,
+          0.455,
+          0.966,
+          0.7180000000000001
+        ],
+        "description": "bottom green instructional box with extrema conditions",
+        "description_vi": "hộp hướng dẫn màu xanh lá cây phía dưới chứa điều kiện cực trị",
+        "attributes": [
+          "green",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "document_0",
+        "predicate": "above",
+        "object_id": "document_1"
+      },
+      {
+        "subject_id": "document_1",
+        "predicate": "below",
+        "object_id": "document_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0087",
-    "visual_source_frame_id": "L25_V088_f0082",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide with two yellow boxes containing mathematical theorems and conditions.",
-    "detailed_caption": "A close-up shot of a presentation slide with two distinct yellow content boxes against a lined notebook background. The slides present mathematical definitions and theorems regarding function monotonicity and local extrema with formulas.",
-    "caption_vi": "Slide giáo dục có hai hộp màu vàng chứa các định lý và điều kiện toán học.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide trình chiếu gồm hai hộp nội dung màu vàng nổi bật trên nền giấy kẻ ngang. Slide trình bày các định nghĩa và định lý toán học về tính đơn điệu và cực trị của hàm số kèm theo công thức.",
-    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <-> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <-> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x_0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x_0 in D nếu f'(x_0) = 0 hoặc f(x) không có đạo hàm tại x_0 f'(x) đổi dấu khi đi qua điểm x_0.",
+    "visual_source_frame_id": "L25_V088_f0087",
+    "ocr_source_frame_id": "L25_V088_f0087",
+    "quality_flags": [],
+    "caption": "Two green informational text boxes with mathematical formulas displayed on a striped screen.",
+    "detailed_caption": "This medium shot shows two rectangular green text boxes centered on a pale yellow lined background. The top box contains a theorem about function monotonicity, while the bottom box explains conditions for extrema. Red title text reads CÁC KIẾN THỨC TRỌNG TÂM at the top.",
+    "caption_vi": "Hai hộp văn bản thông tin màu xanh lá cây với các công thức toán học hiển thị trên màn hình sọc.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị hai hộp văn bản màu xanh lá cây hình chữ nhật nằm giữa nền có sọc vàng nhạt. Hộp trên chứa định lý về tính đơn điệu của hàm số, trong khi hộp dưới giải thích các điều kiện cực trị. Tiêu đề màu đỏ ghi CÁC KIẾN THỨC TRỌNG TÂM ở phía trên.",
+    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí về tính đơn điệu của hàm số: Giả sử hàm số đa thức y = f(x) có đạo hàm trên khoảng K. f(x) đồng biến trên khoảng K <=> f'(x) >= 0, forall x in K. f(x) nghịch biến trên khoảng K <=> f'(x) <= 0, forall x in K. Điều kiện cần và đủ để hàm số đạt cực trị tại x0: Cho hàm số f(x) xác định và liên tục trên D. Hàm số đạt cực trị tại x0 in D nếu f'(x0) = 0 hoặc f(x) không có đạo hàm tại x0 f'(x) đổi dấu khi đi qua điểm x0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.052,
-          0.9869999999999999,
-          0.725
+          0.028000000000000004,
+          0.16699999999999998,
+          0.966,
+          0.427
         ],
-        "description": "a presentation slide displaying mathematical theorems in two yellow boxes",
-        "description_vi": "slide trình chiếu hiển thị các định lý toán học trong hai hộp màu vàng",
+        "description": "top green instructional box with mathematical definitions",
+        "description_vi": "hộp hướng dẫn màu xanh lá cây phía trên chứa định nghĩa toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_1",
+        "label": "document",
+        "bbox": [
+          0.028000000000000004,
+          0.455,
+          0.966,
+          0.7180000000000001
+        ],
+        "description": "bottom green instructional box with extrema conditions",
+        "description_vi": "hộp hướng dẫn màu xanh lá cây phía dưới chứa điều kiện cực trị",
+        "attributes": [
+          "green",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "document_0",
+        "predicate": "above",
+        "object_id": "document_1"
+      },
+      {
+        "subject_id": "document_1",
+        "predicate": "below",
+        "object_id": "document_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0088",
     "visual_source_frame_id": "L25_V088_f0088",
     "ocr_source_frame_id": "L25_V088_f0088",
     "quality_flags": [],
-    "caption": "An educational slide presenting a theorem about the number of local extrema of a polynomial function.",
-    "detailed_caption": "A close-up shot of a presentation slide with a yellow content box on a lined notebook background. The slide displays a mathematical theorem stating the relationship between the number of local extrema of a polynomial function and the number of odd-multiplicity roots of its derivative.",
-    "caption_vi": "Slide giáo dục trình bày định lý về số điểm cực trị của hàm đa thức.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide bài giảng có hộp nội dung màu vàng trên nền giấy kẻ sọc. Slide trình bày định lý toán học về mối quan hệ giữa số điểm cực trị của hàm số đa thức và số nghiệm bội lẻ của đạo hàm.",
+    "caption": "A single green text box with mathematical theorem displayed on a pale lined background.",
+    "detailed_caption": "This medium shot presents a single green rectangular text box with red header text CÁC KIẾN THỨC TRỌNG TÂM above it. Inside the box, a mathematical theorem regarding polynomial functions and extrema is displayed. The background consists of light yellow horizontal lines.",
+    "caption_vi": "Một hộp văn bản màu xanh lá cây duy nhất chứa định lý toán học hiển thị trên nền có dòng kẻ nhạt.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một hộp văn bản hình chữ nhật màu xanh lá cây đơn lẻ với tiêu đề màu đỏ CÁC KIẾN THỨC TRỌNG TÂM ở phía trên. Bên trong hộp là định lý toán học về hàm số đa thức và điểm cực trị. Nền bao gồm các đường kẻ ngang màu vàng nhạt.",
     "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí: Cho hàm số đa thức y = f(x). Khi đó, số cực trị của hàm số y = f(x) bằng số nghiệm bội lẻ của phương trình f'(x) = 0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.09299999999999999,
-          0.9869999999999999,
-          0.322
+          0.03,
+          0.179,
+          0.9650000000000001,
+          0.319
         ],
-        "description": "a presentation slide with a yellow box detailing a mathematical theorem",
-        "description_vi": "slide bài giảng có hộp màu vàng trình bày định lý toán học",
+        "description": "green text box containing a mathematical theorem",
+        "description_vi": "hộp văn bản màu xanh lá cây chứa định lý toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "rectangular",
+          "text"
         ],
         "action": ""
       }
@@ -8171,32 +8284,31 @@
   },
   {
     "frame_id": "L25_V088_f0089",
-    "visual_source_frame_id": "L25_V088_f0088",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide presenting a theorem about the number of local extrema of a polynomial function.",
-    "detailed_caption": "A close-up shot of a presentation slide with a yellow content box on a lined notebook background. The slide displays a mathematical theorem stating the relationship between the number of local extrema of a polynomial function and the number of odd-multiplicity roots of its derivative.",
-    "caption_vi": "Slide giáo dục trình bày định lý về số điểm cực trị của hàm đa thức.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide bài giảng có hộp nội dung màu vàng trên nền giấy kẻ sọc. Slide trình bày định lý toán học về mối quan hệ giữa số điểm cực trị của hàm số đa thức và số nghiệm bội lẻ của đạo hàm.",
+    "visual_source_frame_id": "L25_V088_f0089",
+    "ocr_source_frame_id": "L25_V088_f0089",
+    "quality_flags": [],
+    "caption": "A single green text box with mathematical theorem displayed on a pale lined background.",
+    "detailed_caption": "This medium shot presents a single green rectangular text box with red header text CÁC KIẾN THỨC TRỌNG TÂM above it. Inside the box, a mathematical theorem regarding polynomial functions and extrema is displayed. The background consists of light yellow horizontal lines.",
+    "caption_vi": "Một hộp văn bản màu xanh lá cây duy nhất chứa định lý toán học hiển thị trên nền có dòng kẻ nhạt.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một hộp văn bản hình chữ nhật màu xanh lá cây đơn lẻ với tiêu đề màu đỏ CÁC KIẾN THỨC TRỌNG TÂM ở phía trên. Bên trong hộp là định lý toán học về hàm số đa thức và điểm cực trị. Nền bao gồm các đường kẻ ngang màu vàng nhạt.",
     "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí: Cho hàm số đa thức y = f(x). Khi đó, số cực trị của hàm số y = f(x) bằng số nghiệm bội lẻ của phương trình f'(x) = 0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.09299999999999999,
-          0.9869999999999999,
-          0.322
+          0.03,
+          0.179,
+          0.9650000000000001,
+          0.319
         ],
-        "description": "a presentation slide with a yellow box detailing a mathematical theorem",
-        "description_vi": "slide bài giảng có hộp màu vàng trình bày định lý toán học",
+        "description": "green text box containing a mathematical theorem",
+        "description_vi": "hộp văn bản màu xanh lá cây chứa định lý toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "rectangular",
+          "text"
         ],
         "action": ""
       }
@@ -8205,32 +8317,31 @@
   },
   {
     "frame_id": "L25_V088_f0090",
-    "visual_source_frame_id": "L25_V088_f0088",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide presenting a theorem about the number of local extrema of a polynomial function.",
-    "detailed_caption": "A close-up shot of a presentation slide with a yellow content box on a lined notebook background. The slide displays a mathematical theorem stating the relationship between the number of local extrema of a polynomial function and the number of odd-multiplicity roots of its derivative.",
-    "caption_vi": "Slide giáo dục trình bày định lý về số điểm cực trị của hàm đa thức.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide bài giảng có hộp nội dung màu vàng trên nền giấy kẻ sọc. Slide trình bày định lý toán học về mối quan hệ giữa số điểm cực trị của hàm số đa thức và số nghiệm bội lẻ của đạo hàm.",
+    "visual_source_frame_id": "L25_V088_f0090",
+    "ocr_source_frame_id": "L25_V088_f0090",
+    "quality_flags": [],
+    "caption": "A single green text box with mathematical theorem displayed on a pale lined background.",
+    "detailed_caption": "This medium shot presents a single green rectangular text box with red header text CÁC KIẾN THỨC TRỌNG TÂM above it. Inside the box, a mathematical theorem regarding polynomial functions and extrema is displayed. The background consists of light yellow horizontal lines.",
+    "caption_vi": "Một hộp văn bản màu xanh lá cây duy nhất chứa định lý toán học hiển thị trên nền có dòng kẻ nhạt.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một hộp văn bản hình chữ nhật màu xanh lá cây đơn lẻ với tiêu đề màu đỏ CÁC KIẾN THỨC TRỌNG TÂM ở phía trên. Bên trong hộp là định lý toán học về hàm số đa thức và điểm cực trị. Nền bao gồm các đường kẻ ngang màu vàng nhạt.",
     "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí: Cho hàm số đa thức y = f(x). Khi đó, số cực trị của hàm số y = f(x) bằng số nghiệm bội lẻ của phương trình f'(x) = 0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.09299999999999999,
-          0.9869999999999999,
-          0.322
+          0.03,
+          0.179,
+          0.9650000000000001,
+          0.319
         ],
-        "description": "a presentation slide with a yellow box detailing a mathematical theorem",
-        "description_vi": "slide bài giảng có hộp màu vàng trình bày định lý toán học",
+        "description": "green text box containing a mathematical theorem",
+        "description_vi": "hộp văn bản màu xanh lá cây chứa định lý toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "rectangular",
+          "text"
         ],
         "action": ""
       }
@@ -8239,32 +8350,31 @@
   },
   {
     "frame_id": "L25_V088_f0091",
-    "visual_source_frame_id": "L25_V088_f0088",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide presenting a theorem about the number of local extrema of a polynomial function.",
-    "detailed_caption": "A close-up shot of a presentation slide with a yellow content box on a lined notebook background. The slide displays a mathematical theorem stating the relationship between the number of local extrema of a polynomial function and the number of odd-multiplicity roots of its derivative.",
-    "caption_vi": "Slide giáo dục trình bày định lý về số điểm cực trị của hàm đa thức.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide bài giảng có hộp nội dung màu vàng trên nền giấy kẻ sọc. Slide trình bày định lý toán học về mối quan hệ giữa số điểm cực trị của hàm số đa thức và số nghiệm bội lẻ của đạo hàm.",
+    "visual_source_frame_id": "L25_V088_f0091",
+    "ocr_source_frame_id": "L25_V088_f0091",
+    "quality_flags": [],
+    "caption": "A single green text box with mathematical theorem displayed on a pale lined background.",
+    "detailed_caption": "This medium shot presents a single green rectangular text box with red header text CÁC KIẾN THỨC TRỌNG TÂM above it. Inside the box, a mathematical theorem regarding polynomial functions and extrema is displayed. The background consists of light yellow horizontal lines.",
+    "caption_vi": "Một hộp văn bản màu xanh lá cây duy nhất chứa định lý toán học hiển thị trên nền có dòng kẻ nhạt.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một hộp văn bản hình chữ nhật màu xanh lá cây đơn lẻ với tiêu đề màu đỏ CÁC KIẾN THỨC TRỌNG TÂM ở phía trên. Bên trong hộp là định lý toán học về hàm số đa thức và điểm cực trị. Nền bao gồm các đường kẻ ngang màu vàng nhạt.",
     "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí: Cho hàm số đa thức y = f(x). Khi đó, số cực trị của hàm số y = f(x) bằng số nghiệm bội lẻ của phương trình f'(x) = 0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.09299999999999999,
-          0.9869999999999999,
-          0.322
+          0.03,
+          0.179,
+          0.9650000000000001,
+          0.319
         ],
-        "description": "a presentation slide with a yellow box detailing a mathematical theorem",
-        "description_vi": "slide bài giảng có hộp màu vàng trình bày định lý toán học",
+        "description": "green text box containing a mathematical theorem",
+        "description_vi": "hộp văn bản màu xanh lá cây chứa định lý toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "rectangular",
+          "text"
         ],
         "action": ""
       }
@@ -8273,32 +8383,31 @@
   },
   {
     "frame_id": "L25_V088_f0092",
-    "visual_source_frame_id": "L25_V088_f0088",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide presenting a theorem about the number of local extrema of a polynomial function.",
-    "detailed_caption": "A close-up shot of a presentation slide with a yellow content box on a lined notebook background. The slide displays a mathematical theorem stating the relationship between the number of local extrema of a polynomial function and the number of odd-multiplicity roots of its derivative.",
-    "caption_vi": "Slide giáo dục trình bày định lý về số điểm cực trị của hàm đa thức.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide bài giảng có hộp nội dung màu vàng trên nền giấy kẻ sọc. Slide trình bày định lý toán học về mối quan hệ giữa số điểm cực trị của hàm số đa thức và số nghiệm bội lẻ của đạo hàm.",
+    "visual_source_frame_id": "L25_V088_f0092",
+    "ocr_source_frame_id": "L25_V088_f0092",
+    "quality_flags": [],
+    "caption": "A single green text box with mathematical theorem displayed on a pale lined background.",
+    "detailed_caption": "This medium shot presents a single green rectangular text box with red header text CÁC KIẾN THỨC TRỌNG TÂM above it. Inside the box, a mathematical theorem regarding polynomial functions and extrema is displayed. The background consists of light yellow horizontal lines.",
+    "caption_vi": "Một hộp văn bản màu xanh lá cây duy nhất chứa định lý toán học hiển thị trên nền có dòng kẻ nhạt.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một hộp văn bản hình chữ nhật màu xanh lá cây đơn lẻ với tiêu đề màu đỏ CÁC KIẾN THỨC TRỌNG TÂM ở phía trên. Bên trong hộp là định lý toán học về hàm số đa thức và điểm cực trị. Nền bao gồm các đường kẻ ngang màu vàng nhạt.",
     "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí: Cho hàm số đa thức y = f(x). Khi đó, số cực trị của hàm số y = f(x) bằng số nghiệm bội lẻ của phương trình f'(x) = 0.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.09299999999999999,
-          0.9869999999999999,
-          0.322
+          0.03,
+          0.179,
+          0.9650000000000001,
+          0.319
         ],
-        "description": "a presentation slide with a yellow box detailing a mathematical theorem",
-        "description_vi": "slide bài giảng có hộp màu vàng trình bày định lý toán học",
+        "description": "green text box containing a mathematical theorem",
+        "description_vi": "hộp văn bản màu xanh lá cây chứa định lý toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "rectangular",
+          "text"
         ],
         "action": ""
       }
@@ -8307,32 +8416,30 @@
   },
   {
     "frame_id": "L25_V088_f0093",
-    "visual_source_frame_id": "L25_V088_f0088",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "An educational slide presenting a theorem about the number of local extrema of a polynomial function.",
-    "detailed_caption": "A close-up shot of a presentation slide with a yellow content box on a lined notebook background. The slide displays a mathematical theorem stating the relationship between the number of local extrema of a polynomial function and the number of odd-multiplicity roots of its derivative.",
-    "caption_vi": "Slide giáo dục trình bày định lý về số điểm cực trị của hàm đa thức.",
-    "detailed_caption_vi": "Ảnh chụp cận cảnh slide bài giảng có hộp nội dung màu vàng trên nền giấy kẻ sọc. Slide trình bày định lý toán học về mối quan hệ giữa số điểm cực trị của hàm số đa thức và số nghiệm bội lẻ của đạo hàm.",
-    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí: Cho hàm số đa thức y = f(x). Khi đó, số cực trị của hàm số y = f(x) bằng số nghiệm bội lẻ của phương trình f'(x) = 0.",
+    "visual_source_frame_id": "L25_V088_f0093",
+    "ocr_source_frame_id": "L25_V088_f0093",
+    "quality_flags": [],
+    "caption": "A green text box and a line of algebraic text displayed on a pale lined background screen.",
+    "detailed_caption": "This medium shot shows a green text box at the top containing a mathematical theorem, followed by an additional line of algebraic text below reading Ví dụ về nghiệm bội lẻ, bội chẵn. The background consists of pale yellow horizontal lines.",
+    "caption_vi": "Một hộp văn bản màu xanh lá cây và dòng chữ đại số hiển thị trên màn hình nền có dòng kẻ nhạt.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một hộp văn bản màu xanh lá cây ở phía trên chứa định lý toán học, tiếp theo là dòng văn bản đại số bên dưới. Nền bao gồm các đường kẻ ngang màu vàng nhạt.",
+    "ocr_text": "CÁC KIẾN THỨC TRỌNG TÂM Định lí: Cho hàm số đa thức y = f(x). Khi đó, số cực trị của hàm số y = f(x) bằng số nghiệm bội lẻ của phương trình f'(x) = 0. Ví dụ về nghiệm bội lẻ, bội chẵn: Giả sử g(x) = (x - a)^2(x - b)(x - c)^3.",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.027000000000000003,
-          0.09299999999999999,
-          0.9869999999999999,
-          0.322
+          0.03,
+          0.179,
+          0.9650000000000001,
+          0.319
         ],
-        "description": "a presentation slide with a yellow box detailing a mathematical theorem",
-        "description_vi": "slide bài giảng có hộp màu vàng trình bày định lý toán học",
+        "description": "green text box with a mathematical theorem",
+        "description_vi": "hộp văn bản màu xanh lá cây chứa định lý toán học",
         "attributes": [
-          "yellow",
-          "educational"
+          "green",
+          "text"
         ],
         "action": ""
       }
@@ -17213,10 +17320,10 @@
     "visual_source_frame_id": "L25_V088_f0301",
     "ocr_source_frame_id": "L25_V088_f0301",
     "quality_flags": [],
-    "caption": "A faded image of a person walking along a library aisle.",
-    "detailed_caption": "A lightly faded shot shows a person walking forward along the center of a library aisle filled with books on both sides.",
-    "caption_vi": "Hình ảnh mờ nhạt của một người đang đi dọc theo lối đi thư viện.",
-    "detailed_caption_vi": "Cảnh quay hơi mờ nhạt hiển thị một người đang đi về phía trước dọc theo trung tâm lối đi thư viện có chứa đầy sách ở cả hai bên.",
+    "caption": "A person holding a book walks down a brightly lit library aisle lined with bookshelves.",
+    "detailed_caption": "This full shot shows a person wearing a light-colored button-down shirt and dark trousers walking forward while holding a book in a library corridor. Tall white bookshelves filled with various books line both sides of the aisle. The overall lighting is bright and evenly distributed.",
+    "caption_vi": "Một người cầm sách đi dọc theo lối đi sáng sủa trong thư viện được xếp đầy các kệ sách.",
+    "detailed_caption_vi": "Khung hình toàn cảnh cho thấy một người mặc áo sơ mi sáng màu và quần tối màu đang bước tới trong khi cầm một cuốn sách ở hành lang thư viện. Các kệ sách màu trắng cao được xếp đầy sách ở hai bên lối đi. Ánh sáng trong không gian rất sáng và đều.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -17225,32 +17332,85 @@
         "label": "person",
         "bbox": [
           0.41500000000000004,
-          0.223,
+          0.22,
           0.5599999999999999,
-          0.997
+          1.0
         ],
-        "description": "a person walking along a library aisle",
-        "description_vi": "một người đang đi dọc theo lối đi thư viện",
+        "description": "person wearing a light shirt and dark trousers walking in a library",
+        "description_vi": "người mặc áo sáng màu và quần tối màu đang đi trong thư viện",
         "attributes": [
-          "walking",
-          "faded"
+          "standing",
+          "walking"
         ],
         "action": "walking"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.11000000000000001,
+          0.0,
+          0.43,
+          1.0
+        ],
+        "description": "tall white bookshelf filled with books on the left side",
+        "description_vi": "kệ sách màu trắng cao xếp đầy sách ở bên trái",
+        "attributes": [
+          "white",
+          "wooden"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shelf_1",
+        "label": "shelf",
+        "bbox": [
+          0.52,
+          0.0,
+          0.9,
+          1.0
+        ],
+        "description": "tall white bookshelf filled with books on the right side",
+        "description_vi": "kệ sách màu trắng cao xếp đầy sách ở bên phải",
+        "attributes": [
+          "white",
+          "wooden"
+        ],
+        "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "shelf_1"
+      },
+      {
+        "subject_id": "shelf_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "shelf_0",
+        "predicate": "left_of",
+        "object_id": "shelf_1"
+      },
+      {
+        "subject_id": "shelf_1",
+        "predicate": "right_of",
+        "object_id": "shelf_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0302",
-    "visual_source_frame_id": "L25_V088_f0301",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A faded image of a person walking along a library aisle.",
-    "detailed_caption": "A lightly faded shot shows a person walking forward along the center of a library aisle filled with books on both sides.",
-    "caption_vi": "Hình ảnh mờ nhạt của một người đang đi dọc theo lối đi thư viện.",
-    "detailed_caption_vi": "Cảnh quay hơi mờ nhạt hiển thị một người đang đi về phía trước dọc theo trung tâm lối đi thư viện có chứa đầy sách ở cả hai bên.",
+    "visual_source_frame_id": "L25_V088_f0302",
+    "ocr_source_frame_id": "L25_V088_f0302",
+    "quality_flags": [],
+    "caption": "A person holding a book walks down a brightly lit library aisle lined with bookshelves.",
+    "detailed_caption": "This full shot shows a person wearing a light-colored button-down shirt and dark trousers walking forward while holding a book in a library corridor. Tall white bookshelves filled with various books line both sides of the aisle. The overall lighting is bright and evenly distributed.",
+    "caption_vi": "Một người cầm sách đi dọc theo lối đi sáng sủa trong thư viện được xếp đầy các kệ sách.",
+    "detailed_caption_vi": "Khung hình toàn cảnh cho thấy một người mặc áo sơ mi sáng màu và quần tối màu đang bước tới trong khi cầm một cuốn sách ở hành lang thư viện. Các kệ sách màu trắng cao được xếp đầy sách ở hai bên lối đi. Ánh sáng trong không gian rất sáng và đều.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -17259,20 +17419,73 @@
         "label": "person",
         "bbox": [
           0.41500000000000004,
-          0.223,
+          0.22,
           0.5599999999999999,
-          0.997
+          1.0
         ],
-        "description": "a person walking along a library aisle",
-        "description_vi": "một người đang đi dọc theo lối đi thư viện",
+        "description": "person wearing a light shirt and dark trousers walking in a library",
+        "description_vi": "người mặc áo sáng màu và quần tối màu đang đi trong thư viện",
         "attributes": [
-          "walking",
-          "faded"
+          "standing",
+          "walking"
         ],
         "action": "walking"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.11000000000000001,
+          0.0,
+          0.43,
+          1.0
+        ],
+        "description": "tall white bookshelf filled with books on the left side",
+        "description_vi": "kệ sách màu trắng cao xếp đầy sách ở bên trái",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shelf_1",
+        "label": "shelf",
+        "bbox": [
+          0.52,
+          0.0,
+          0.9,
+          1.0
+        ],
+        "description": "tall white bookshelf filled with books on the right side",
+        "description_vi": "kệ sách màu trắng cao xếp đầy sách ở bên phải",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "shelf_1"
+      },
+      {
+        "subject_id": "shelf_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "shelf_0",
+        "predicate": "left_of",
+        "object_id": "shelf_1"
+      },
+      {
+        "subject_id": "shelf_1",
+        "predicate": "right_of",
+        "object_id": "shelf_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0303",
@@ -17311,10 +17524,10 @@
     "visual_source_frame_id": "L25_V088_f0304",
     "ocr_source_frame_id": "L25_V088_f0304",
     "quality_flags": [],
-    "caption": "An extremely faded, low-contrast view of a person in a library.",
-    "detailed_caption": "An extremely faded and brightened shot displays a person walking down a library aisle between rows of books.",
-    "caption_vi": "Góc nhìn cực kỳ mờ và tương phản thấp của một người trong thư viện.",
-    "detailed_caption_vi": "Cảnh quay cực kỳ mờ và được làm sáng hiển thị một người đang đi xuống lối đi thư viện giữa các hàng sách.",
+    "caption": "A person holding a book walks down a brightly lit library aisle lined with bookshelves.",
+    "detailed_caption": "This full shot shows a person wearing a light-colored button-down shirt and dark trousers walking forward while holding a book in a library corridor. Tall white bookshelves filled with various books line both sides of the aisle. The overall lighting is bright and evenly distributed.",
+    "caption_vi": "Một người cầm sách đi dọc theo lối đi sáng sủa trong thư viện được xếp đầy các kệ sách.",
+    "detailed_caption_vi": "Khung hình toàn cảnh cho thấy một người mặc áo sơ mi sáng màu và quần tối màu đang bước tới trong khi cầm một cuốn sách ở hành lang thư viện. Các kệ sách màu trắng cao được xếp đầy sách ở hai bên lối đi. Ánh sáng trong không gian rất sáng và đều.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -17322,21 +17535,74 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.417,
-          0.223,
+          0.41500000000000004,
+          0.22,
           0.5599999999999999,
-          0.997
+          1.0
         ],
-        "description": "a person walking in a library aisle",
-        "description_vi": "một người đang đi trong lối đi thư viện",
+        "description": "person wearing a light shirt and dark trousers walking in a library",
+        "description_vi": "người mặc áo sáng màu và quần tối màu đang đi trong thư viện",
         "attributes": [
-          "walking",
-          "faded"
+          "standing",
+          "walking"
         ],
         "action": "walking"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.11000000000000001,
+          0.0,
+          0.43,
+          1.0
+        ],
+        "description": "tall white bookshelf filled with books on the left side",
+        "description_vi": "kệ sách màu trắng cao xếp đầy sách ở bên trái",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shelf_1",
+        "label": "shelf",
+        "bbox": [
+          0.52,
+          0.0,
+          0.9,
+          1.0
+        ],
+        "description": "tall white bookshelf filled with books on the right side",
+        "description_vi": "kệ sách màu trắng cao xếp đầy sách ở bên phải",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "shelf_1"
+      },
+      {
+        "subject_id": "shelf_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "shelf_0",
+        "predicate": "left_of",
+        "object_id": "shelf_1"
+      },
+      {
+        "subject_id": "shelf_1",
+        "predicate": "right_of",
+        "object_id": "shelf_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0305",
@@ -17512,76 +17778,182 @@
     "visual_source_frame_id": "L25_V088_f0308",
     "ocr_source_frame_id": "L25_V088_f0308",
     "quality_flags": [],
-    "caption": "A faded frame showing a person reading at a desk in a library.",
-    "detailed_caption": "A moderately faded medium shot shows a person seated at a desk reading a book.",
-    "caption_vi": "Khung hình mờ hiển thị một người đang đọc sách tại bàn trong thư viện.",
-    "detailed_caption_vi": "Cảnh trung hơi mờ hiển thị một người đang ngồi tại bàn đọc sách.",
+    "caption": "A person in a light shirt reads a book at a desk in a well-lit library.",
+    "detailed_caption": "This medium shot shows a person wearing a light-blue button-down shirt standing at a desk and reading an open book. Stacks of books rest on the wooden surface. In the background, white bookshelves filled with books line the modern library interior.",
+    "caption_vi": "Một người mặc áo sáng màu đọc sách tại bàn trong một thư viện đủ ánh sáng.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người mặc áo sơ mi xanh nhạt đang đứng tại bàn và đọc một cuốn sách mở. Các chồng sách nằm trên bề mặt gỗ. Phía sau là các kệ sách màu trắng chứa đầy sách trong không gian thư viện hiện đại.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.541,
+          0.721,
+          0.837,
+          0.861
+        ],
+        "description": "open book lying on the desk",
+        "description_vi": "cuốn sách mở nằm trên bàn",
+        "attributes": [
+          "open",
+          "paper"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.44800000000000006,
-          0.181,
+          0.44400000000000006,
+          0.175,
           0.688,
-          0.7979999999999999
+          0.7949999999999999
         ],
-        "description": "a person sitting at a desk reading",
-        "description_vi": "một người đang ngồi tại bàn đọc sách",
+        "description": "person wearing a light-blue button-down shirt reading a book",
+        "description_vi": "người mặc áo sơ mi xanh nhạt đang đọc sách",
         "attributes": [
-          "sitting",
-          "reading",
-          "faded"
+          "standing",
+          "reading"
         ],
         "action": "reading"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.123,
+          0.159,
+          0.471,
+          0.997
+        ],
+        "description": "white bookshelves filled with books in the background",
+        "description_vi": "kệ sách màu trắng chứa đầy sách ở phía sau",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "book_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "shelf_0",
+        "predicate": "left_of",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "book_0",
+        "predicate": "right_of",
+        "object_id": "shelf_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0309",
     "visual_source_frame_id": "L25_V088_f0309",
     "ocr_source_frame_id": "L25_V088_f0309",
     "quality_flags": [],
-    "caption": "A heavily faded frame of a person reading at a desk.",
-    "detailed_caption": "A very faded shot displays a person sitting at a desk in a library reading a book.",
-    "caption_vi": "Khung hình rất mờ hiển thị một người đang đọc sách tại bàn.",
-    "detailed_caption_vi": "Cảnh rất mờ hiển thị một người đang ngồi tại bàn trong thư viện đọc sách.",
+    "caption": "A person in a light shirt reads a book at a desk in a well-lit library.",
+    "detailed_caption": "This medium shot shows a person wearing a light-blue button-down shirt standing at a desk and reading an open book. Stacks of books rest on the wooden surface. In the background, white bookshelves filled with books line the modern library interior.",
+    "caption_vi": "Một người mặc áo sáng màu đọc sách tại bàn trong một thư viện đủ ánh sáng.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người mặc áo sơ mi xanh nhạt đang đứng tại bàn và đọc một cuốn sách mở. Các chồng sách nằm trên bề mặt gỗ. Phía sau là các kệ sách màu trắng chứa đầy sách trong không gian thư viện hiện đại.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.541,
+          0.721,
+          0.837,
+          0.861
+        ],
+        "description": "open book lying on the desk",
+        "description_vi": "cuốn sách mở nằm trên bàn",
+        "attributes": [
+          "open",
+          "paper"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.44800000000000006,
-          0.181,
+          0.44400000000000006,
+          0.175,
           0.688,
-          0.7979999999999999
+          0.7949999999999999
         ],
-        "description": "a person sitting at a desk",
-        "description_vi": "một người đang ngồi tại bàn",
+        "description": "person wearing a light-blue button-down shirt reading a book",
+        "description_vi": "người mặc áo sơ mi xanh nhạt đang đọc sách",
         "attributes": [
-          "sitting",
-          "reading",
-          "faded"
+          "standing",
+          "reading"
         ],
         "action": "reading"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.123,
+          0.159,
+          0.471,
+          0.997
+        ],
+        "description": "white bookshelves filled with books in the background",
+        "description_vi": "kệ sách màu trắng chứa đầy sách ở phía sau",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "book_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "shelf_0",
+        "predicate": "left_of",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "book_0",
+        "predicate": "right_of",
+        "object_id": "shelf_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V088_f0310",
     "visual_source_frame_id": "L25_V088_f0310",
     "ocr_source_frame_id": "L25_V088_f0310",
     "quality_flags": [],
-    "caption": "An extremely faded frame of a person sitting at a desk.",
-    "detailed_caption": "An extremely faded shot shows a person sitting at a desk with books.",
-    "caption_vi": "Khung hình cực kỳ mờ hiển thị một người đang ngồi tại bàn.",
-    "detailed_caption_vi": "Cảnh cực kỳ mờ hiển thị một người đang ngồi tại bàn có sách.",
+    "caption": "A man in a light-colored shirt stands in a brightly lit library with bookshelves in the background.",
+    "detailed_caption": "This medium shot shows one dominant foreground subject, a man wearing a light-colored button-down shirt, standing indoors. Shelves filled with books are visible in the background.",
+    "caption_vi": "Một người đàn ông mặc áo sáng màu đứng trong thư viện sáng sủa với các giá sách ở phía sau.",
+    "detailed_caption_vi": "Khung hình trung cảnh này hiển thị một nhân vật nam chính ở tiền cảnh, mặc áo sơ mi cài nút màu sáng đang đứng trong không gian nội thất. Phía sau là các kệ trưng bày sách.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -17589,18 +17961,18 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.44800000000000006,
-          0.181,
-          0.688,
-          0.7979999999999999
+          0.462,
+          0.18,
+          0.687,
+          0.81
         ],
-        "description": "a person sitting at a desk",
-        "description_vi": "một person đang ngồi tại bàn",
+        "description": "a man wearing a light-colored button-down shirt",
+        "description_vi": "một người đàn ông mặc áo sơ mi màu sáng",
         "attributes": [
-          "sitting",
-          "faded"
+          "light-colored shirt",
+          "man"
         ],
-        "action": "sitting"
+        "action": "standing"
       }
     ],
     "spatial_relations": []
@@ -17642,28 +18014,28 @@
     "visual_source_frame_id": "L25_V088_f0312",
     "ocr_source_frame_id": "L25_V088_f0312",
     "quality_flags": [],
-    "caption": "A blurred exterior view of a multi-story building under a blue sky.",
-    "detailed_caption": "A heavily motion-blurred shot of a multi-story building exterior. The facade features rows of windows and a sign near the top. The sky above is bright blue with scattered clouds.",
-    "caption_vi": "Khung cảnh ngoại thất bị mờ của một tòa nhà nhiều tầng dưới bầu trời xanh.",
-    "detailed_caption_vi": "Cảnh ngoại thất tòa nhà nhiều tầng bị nhòe chuyển động mạnh. Mặt tiền có các hàng cửa sổ và một biển hiệu ở gần phía trên.",
-    "ocr_text": "UNIVERSITY",
+    "caption": "An exterior view of a multi-story building against a bright blue sky.",
+    "detailed_caption": "This shot shows the exterior of a multi-story modern building with large glass windows. A clear blue sky is visible in the background.",
+    "caption_vi": "Góc nhìn bên ngoài của một tòa nhà nhiều tầng trên nền trời xanh sáng.",
+    "detailed_caption_vi": "Cảnh quay hiển thị ngoại thất của một tòa nhà hiện đại nhiều tầng với các ô cửa kính lớn. Bầu trời xanh sáng xuất hiện ở phía sau.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.339,
-          0.18,
-          0.9720000000000001,
-          0.837
+          0.34700000000000003,
+          0.161,
+          0.969,
+          0.721
         ],
-        "description": "A multi-story building facade with windows and signage",
-        "description_vi": "Mặt tiền tòa nhà nhiều tầng có cửa sổ và biển hiệu",
+        "description": "a multi-story modern building with large glass windows",
+        "description_vi": "một tòa nhà hiện đại nhiều tầng với các cửa kính lớn",
         "attributes": [
           "multi-story",
-          "white",
-          "blurred"
+          "modern",
+          "glass windows"
         ],
         "action": ""
       }
@@ -17892,28 +18264,29 @@
     "visual_source_frame_id": "L25_V088_f0317",
     "ocr_source_frame_id": "L25_V088_f0317",
     "quality_flags": [],
-    "caption": "A teacher stands in front of a large auditorium of seated students.",
-    "detailed_caption": "A medium shot of a teacher standing on the left in a black outfit, gesturing toward a large auditorium filled with students sitting in red seats. The students are arranged in rows facing the front.",
-    "caption_vi": "Một giáo viên đứng trước một hội trường lớn đầy học sinh đang ngồi.",
-    "detailed_caption_vi": "Cảnh trung một giáo viên đứng bên trái mặc trang phục màu đen, đang ra hiệu về phía hội trường lớn có học sinh ngồi ghế đỏ.",
+    "caption": "A woman stands in the foreground addressing a large audience seated in a lecture hall.",
+    "detailed_caption": "This medium shot shows one woman in the left foreground wearing a dark top, facing right. In the background, a large audience of people is seated in rows inside a lecture hall with red chairs.",
+    "caption_vi": "Một phụ nữ đứng ở tiền cảnh đang phát biểu trước một hội trường đông đảo người ngồi.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một phụ nữ ở tiền cảnh bên trái mặc trang phục tối màu đang hướng về phía bên phải. Phía sau là một khán phòng lớn với nhiều người ngồi trên ghế màu đỏ.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.077,
+          0.075,
           0.09,
-          0.374,
+          0.5,
           0.995
         ],
-        "description": "A person in a black outfit standing and gesturing",
-        "description_vi": "Một người mặc trang phục đen đang đứng và ra hiệu",
+        "description": "a woman in a dark top standing in the foreground",
+        "description_vi": "một phụ nữ mặc áo tối màu đang đứng ở tiền cảnh",
         "attributes": [
-          "black outfit"
+          "dark top",
+          "woman"
         ],
-        "action": "gesturing"
+        "action": "standing"
       }
     ],
     "spatial_relations": []
@@ -18492,46 +18865,48 @@
     "quality_flags": [
       "removed_inferred_demographic"
     ],
-    "caption": "A plays a grand piano in a brightly lit room.",
-    "detailed_caption": "A medium shot of a playing a black grand piano in a brightly lit room with white vertical blinds and large windows. He wears a white button-down shirt and black trousers, pressing the keys with both hands.",
-    "caption_vi": "Một thanh niên đang chơi đàn đại dương cầm trong căn phòng ngập tràn ánh sáng.",
-    "detailed_caption_vi": "Cảnh trung một thanh niên đang chơi cây đàn grand piano màu đen trong căn phòng sáng sủa có rèm cửa trắng và cửa sổ lớn. Anh mặc áo sơ mi trắng và quần tây đen, đang bấm phím đàn bằng cả hai tay.",
+    "caption": "A in a white shirt plays a black grand piano indoors.",
+    "detailed_caption": "This medium shot features one dominant foreground subject, a wearing a white shirt and dark pants, seated and playing a grand piano. The piano has its lid open, revealing the interior strings and structure. The background shows an office-like setting with large windows.",
+    "caption_vi": "Một nam thanh niên mặc áo trắng đang chơi đàn đại dương cầm màu đen trong nhà.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại một nhân vật nam trẻ tuổi mặc áo sơ mi trắng và quần tối màu đang ngồi chơi đàn piano lớn. Nắp đàn mở rộng để lộ các dây đàn bên trong. Phía sau là không gian làm việc có cửa sổ lớn.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "grand_piano_0",
-        "label": "grand piano",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.471,
+          0.177,
+          0.219,
+          0.52,
+          1.0
+        ],
+        "description": "a in a white shirt and dark pants",
+        "description_vi": "một nam thanh niên mặc áo sơ mi trắng và quần tối màu",
+        "attributes": [
+          "white shirt",
+          "dark pants",
+          "man"
+        ],
+        "action": "playing piano"
+      },
+      {
+        "object_id": "piano_0",
+        "label": "piano",
+        "bbox": [
+          0.507,
           0.0,
           1.0,
           1.0
         ],
-        "description": "A large black grand piano with its lid open",
-        "description_vi": "Một cây đàn đại dương cầm màu đen lớn mở nắp",
+        "description": "a black grand piano with an open lid",
+        "description_vi": "một cây đàn đại dương cầm màu đen mở nắp",
         "attributes": [
           "black",
-          "grand piano"
+          "grand piano",
+          "open lid"
         ],
         "action": ""
-      },
-      {
-        "object_id": "piano_player_0",
-        "label": "piano player",
-        "bbox": [
-          0.179,
-          0.219,
-          0.517,
-          0.997
-        ],
-        "description": "A wearing a white shirt and black trousers playing a grand piano",
-        "description_vi": "Một thanh niên mặc áo sơ mi trắng và quần tây đen đang chơi đàn grand piano",
-        "attributes": [
-          "white shirt",
-          "black trousers"
-        ],
-        "action": "playing piano"
       }
     ],
     "spatial_relations": []
@@ -19126,204 +19501,36 @@
   },
   {
     "frame_id": "L25_V088_f0339",
-    "visual_source_frame_id": "L25_V088_f0338",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Four people stand and work around a large white bed in a brightly lit room.",
-    "detailed_caption": "A wide shot shows four people in a modern room with a large white bed in the foreground. A woman in a white blouse and dark skirt stands on the left, while three other individuals stand around the bed, looking down at it. A television is mounted on the wall to the left.",
-    "caption_vi": "Bốn người đứng và làm việc quanh chiếc giường trắng lớn trong căn phòng sáng sủa.",
-    "detailed_caption_vi": "Cảnh quay rộng cho thấy bốn người trong một căn phòng hiện đại với chiếc giường trắng lớn ở tiền cảnh. Một phụ nữ mặc áo blouse trắng và chân váy tối màu đứng bên trái, trong khi ba người khác đứng quanh giường và nhìn xuống đó. Một chiếc tivi được gắn trên tường bên trái.",
+    "visual_source_frame_id": "L25_V088_f0339",
+    "ocr_source_frame_id": "L25_V088_f0339",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a dark shirt stands behind a bar filled with liquor bottles.",
+    "detailed_caption": "This medium shot shows one man wearing glasses and a dark button-down shirt, standing behind a bar. Shelves lined with various liquor bottles and glassware are visible in the background.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo tối màu đứng sau quầy bar có nhiều chai rượu.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông đeo kính, mặc áo sơ mi tối màu đang đứng sau quầy bar. Phía sau là các kệ trưng bày nhiều chai đồ uống và ly tách.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "bed_0",
-        "label": "bed",
-        "bbox": [
-          0.273,
-          0.492,
-          0.9029999999999999,
-          0.992
-        ],
-        "description": "large white bed with white pillows and sheets",
-        "description_vi": "giường trắng lớn với gối và ga trải giường trắng",
-        "attributes": [
-          "white",
-          "large"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.315,
-          0.33499999999999996,
-          0.383,
-          0.7479999999999999
+          0.161,
+          0.135,
+          0.688,
+          0.9239999999999999
         ],
-        "description": "woman standing on the left wearing white blouse and dark skirt",
-        "description_vi": "phụ nữ đứng bên trái mặc áo trắng và chân váy tối màu",
+        "description": "a man wearing glasses and a dark shirt",
+        "description_vi": "một người đàn ông đeo kính và mặc áo tối màu",
         "attributes": [
-          "white blouse",
-          "dark skirt"
-        ],
-        "action": "standing"
-      },
-      {
-        "object_id": "person_1",
-        "label": "person",
-        "bbox": [
-          0.396,
-          0.307,
-          0.46299999999999997,
-          0.597
-        ],
-        "description": "person standing near the center",
-        "description_vi": "người đứng gần khu vực trung tâm",
-        "attributes": [
-          "white shirt",
-          "dark pants"
-        ],
-        "action": "standing"
-      },
-      {
-        "object_id": "person_2",
-        "label": "person",
-        "bbox": [
-          0.479,
-          0.438,
-          0.583,
-          0.592
-        ],
-        "description": "person bending over the bed",
-        "description_vi": "người cúi người trên giường",
-        "attributes": [
-          "white shirt"
-        ],
-        "action": "working"
-      },
-      {
-        "object_id": "person_3",
-        "label": "person",
-        "bbox": [
-          0.563,
-          0.4,
-          0.622,
-          0.592
-        ],
-        "description": "person standing on the right wearing dark suit",
-        "description_vi": "người đứng bên phải mặc bộ vest tối màu",
-        "attributes": [
-          "dark suit"
+          "glasses",
+          "dark shirt",
+          "man"
         ],
         "action": "standing"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "bed_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "bed_0"
-      },
-      {
-        "subject_id": "bed_0",
-        "predicate": "overlapping",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "overlapping",
-        "object_id": "bed_0"
-      },
-      {
-        "subject_id": "bed_0",
-        "predicate": "overlapping",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "overlapping",
-        "object_id": "bed_0"
-      },
-      {
-        "subject_id": "bed_0",
-        "predicate": "overlapping",
-        "object_id": "person_3"
-      },
-      {
-        "subject_id": "person_3",
-        "predicate": "overlapping",
-        "object_id": "bed_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_3"
-      },
-      {
-        "subject_id": "person_3",
-        "predicate": "right_of",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_2"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "right_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_3"
-      },
-      {
-        "subject_id": "person_3",
-        "predicate": "right_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_2",
-        "predicate": "overlapping",
-        "object_id": "person_3"
-      },
-      {
-        "subject_id": "person_3",
-        "predicate": "overlapping",
-        "object_id": "person_2"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V088_f0340",
@@ -22470,13 +22677,31 @@
     "visual_source_frame_id": "L25_V088_f0412",
     "ocr_source_frame_id": "L25_V088_f0412",
     "quality_flags": [],
-    "caption": "A dark frame with faint blue text centered on the screen.",
-    "detailed_caption": "A dark, low-visibility frame displays faint blue text centered in the middle against a dark background.",
-    "caption_vi": "Khung hình tối với chữ màu xanh mờ nằm ở chính giữa màn hình.",
-    "detailed_caption_vi": "Khung hình tối, độ sáng thấp hiển thị văn bản màu xanh mờ ở chính giữa trên nền tối.",
-    "ocr_text": "THÀNH NIÊN",
+    "caption": "A dark title card displays centered text against a dark background.",
+    "detailed_caption": "This dark shot features centered text displayed on a dark background. No dominant foreground subjects are present.",
+    "caption_vi": "Một khung tiêu đề tối màu hiển thị văn bản ở giữa trên nền tối.",
+    "detailed_caption_vi": "Khung hình tối này hiển thị dòng chữ ở trung tâm trên nền tối màu. Không có nhân vật nào xuất hiện ở tiền cảnh.",
+    "ocr_text": "THANH NIEN",
     "news_ticker_text": "",
-    "detections": [],
+    "detections": [
+      {
+        "object_id": "text_0",
+        "label": "text",
+        "bbox": [
+          0.329,
+          0.442,
+          0.67,
+          0.5579999999999999
+        ],
+        "description": "dark text reading THANH NIEN on a dark background",
+        "description_vi": "chữ tối màu hiển thị THANH NIEN trên nền tối",
+        "attributes": [
+          "dark text",
+          "centered"
+        ],
+        "action": ""
+      }
+    ],
     "spatial_relations": []
   },
   {

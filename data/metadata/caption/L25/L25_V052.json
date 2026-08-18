@@ -104,640 +104,601 @@
     "visual_source_frame_id": "L25_V052_f0005",
     "ocr_source_frame_id": "L25_V052_f0005",
     "quality_flags": [],
-    "caption": "A teacher sits at a desk with a laptop next to a digital presentation screen in a classroom.",
-    "detailed_caption": "This is a medium shot featuring a male teacher seated on the left side of a desk with a black laptop. He is wearing glasses and a light blue long-sleeve shirt. To his right is a large screen displaying presentation slides against a dark chalkboard background.",
-    "caption_vi": "Một giáo viên ngồi bên bàn làm việc có máy tính xách tay bên cạnh màn hình thuyết trình kỹ thuật số trong lớp học.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh ghi lại cảnh một nam giáo viên ngồi bên trái chiếc bàn có máy tính xách tay màu đen. Thầy đeo kính và mặc áo sơ mi dài tay màu xanh nhạt. Phía bên phải là một màn hình lớn hiển thị các slide thuyết trình trên nền bảng đen.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy ASUS",
+    "caption": "A man wearing glasses and a light blue shirt sits behind a desk with a laptop, next to a slide presentation showing text.",
+    "detailed_caption": "A medium shot shows a man wearing glasses and a light blue button-down shirt sitting at a white desk with a gray laptop. To his right is a projection screen displaying a lined slide with red and black Vietnamese text. The background features a dark chalkboard with white mathematical drawings and formulas.",
+    "caption_vi": "Một nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt ngồi trước bàn làm việc có máy tính xách tay bên cạnh màn hình chiếu chữ.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh một nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt đang ngồi cạnh máy tính xách tay màu xám đặt trên bàn trắng. Phía bên phải là màn hình chiếu hiển thị trang tài liệu có tiêu đề màu đỏ. Phông nền phía sau là bảng đen với nhiều công thức và hình vẽ toán học màu trắng.",
+    "ocr_text": "CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11699999999999999,
+          0.11599999999999999,
           0.7979999999999999,
           0.368,
           0.995
         ],
-        "description": "black laptop computer",
-        "description_vi": "máy tính xách tay màu đen",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám trên bàn",
         "attributes": [
-          "black",
-          "electronic"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.066,
+          0.16799999999999998,
+          0.397,
+          0.969
+        ],
+        "description": "man wearing glasses and light blue shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
+        "attributes": [
+          "glasses",
+          "light blue shirt",
+          "short hair"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.453,
-          0.01,
-          0.9949999999999999,
-          0.49699999999999994
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.52
         ],
-        "description": "digital presentation screen with text",
-        "description_vi": "màn hình thuyết trình kỹ thuật số có chữ",
+        "description": "slide presentation on projector screen",
+        "description_vi": "màn hình chiếu slide bài giảng",
         "attributes": [
           "white",
-          "digital",
-          "rectangular"
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.068,
-          0.171,
-          0.396,
-          0.9319999999999999
-        ],
-        "description": "man wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi màu xanh nhạt",
-        "attributes": [
-          "man",
-          "glasses",
-          "long-sleeve",
-          "blue"
-        ],
-        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V052_f0006",
-    "visual_source_frame_id": "L25_V052_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a desk with a laptop next to a digital presentation screen in a classroom.",
-    "detailed_caption": "This is a medium shot featuring a male teacher seated on the left side of a desk with a black laptop. He is wearing glasses and a light blue long-sleeve shirt. To his right is a large screen displaying presentation slides against a dark chalkboard background.",
-    "caption_vi": "Một giáo viên ngồi bên bàn làm việc có máy tính xách tay bên cạnh màn hình thuyết trình kỹ thuật số trong lớp học.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh ghi lại cảnh một nam giáo viên ngồi bên trái chiếc bàn có máy tính xách tay màu đen. Thầy đeo kính và mặc áo sơ mi dài tay màu xanh nhạt. Phía bên phải là một màn hình lớn hiển thị các slide thuyết trình trên nền bảng đen.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy ASUS",
+    "visual_source_frame_id": "L25_V052_f0006",
+    "ocr_source_frame_id": "L25_V052_f0006",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a light blue shirt sits behind a desk with a laptop, beside a slide presentation with text.",
+    "detailed_caption": "A medium shot shows a man in a light blue button-down shirt and glasses sitting at a desk with a laptop. A projector screen with text is mounted to the right. A lower-third graphic with Vietnamese text appears at the bottom right.",
+    "caption_vi": "Một nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính ngồi làm việc với máy tính xách tay cạnh màn hình trình chiếu.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại cảnh một nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt ngồi trước máy tính xách tay. Phía trên bên phải là màn hình chiếu chứa nội dung văn bản. Phông nền phía sau là bảng đen có các ký hiệu toán học.",
+    "ocr_text": "CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy Thầy LÊ MINH HUY Giáo viên môn Toán Trường THPT Nguyễn Hiền (Q.11, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11699999999999999,
+          0.11599999999999999,
           0.7979999999999999,
           0.368,
           0.995
         ],
-        "description": "black laptop computer",
-        "description_vi": "máy tính xách tay màu đen",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
-          "black",
-          "electronic"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.072,
+          0.183,
+          0.404,
+          0.969
+        ],
+        "description": "man wearing glasses and a light blue shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi sáng màu",
+        "attributes": [
+          "glasses",
+          "light blue shirt"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.453,
-          0.01,
-          0.9949999999999999,
-          0.49699999999999994
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.52
         ],
-        "description": "digital presentation screen with text",
-        "description_vi": "màn hình thuyết trình kỹ thuật số có chữ",
+        "description": "projector screen displaying educational slide",
+        "description_vi": "màn hình chiếu nội dung bài học",
         "attributes": [
           "white",
-          "digital",
-          "rectangular"
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.068,
-          0.171,
-          0.396,
-          0.9319999999999999
-        ],
-        "description": "man wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi màu xanh nhạt",
-        "attributes": [
-          "man",
-          "glasses",
-          "long-sleeve",
-          "blue"
-        ],
-        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V052_f0007",
-    "visual_source_frame_id": "L25_V052_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a desk with a laptop next to a digital presentation screen in a classroom.",
-    "detailed_caption": "This is a medium shot featuring a male teacher seated on the left side of a desk with a black laptop. He is wearing glasses and a light blue long-sleeve shirt. To his right is a large screen displaying presentation slides against a dark chalkboard background.",
-    "caption_vi": "Một giáo viên ngồi bên bàn làm việc có máy tính xách tay bên cạnh màn hình thuyết trình kỹ thuật số trong lớp học.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh ghi lại cảnh một nam giáo viên ngồi bên trái chiếc bàn có máy tính xách tay màu đen. Thầy đeo kính và mặc áo sơ mi dài tay màu xanh nhạt. Phía bên phải là một màn hình lớn hiển thị các slide thuyết trình trên nền bảng đen.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy ASUS",
+    "visual_source_frame_id": "L25_V052_f0007",
+    "ocr_source_frame_id": "L25_V052_f0007",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a light blue shirt sits at a desk with a laptop, next to a slide presentation.",
+    "detailed_caption": "A medium shot captures a man wearing glasses and a light blue shirt sitting behind a desk with a gray laptop. To his right, a projector screen displays a slide with text. The background is a dark chalkboard covered in mathematical formulas.",
+    "caption_vi": "Một người đàn ông mặc áo sơ mi xanh nhạt đeo kính ngồi trước máy tính xách tay bên cạnh màn hình trình chiếu.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh một nam giáo viên mặc áo sơ mi sáng màu đeo kính ngồi làm việc với máy tính xách tay. Phía bên phải là bảng chiếu hiển thị văn bản hướng dẫn học tập.",
+    "ocr_text": "CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11699999999999999,
+          0.11599999999999999,
           0.7979999999999999,
           0.368,
           0.995
         ],
-        "description": "black laptop computer",
-        "description_vi": "máy tính xách tay màu đen",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
-          "black",
-          "electronic"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.072,
+          0.183,
+          0.41,
+          0.969
+        ],
+        "description": "man wearing glasses and light blue shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
+        "attributes": [
+          "glasses",
+          "light blue shirt"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.453,
-          0.01,
-          0.9949999999999999,
-          0.49699999999999994
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.52
         ],
-        "description": "digital presentation screen with text",
-        "description_vi": "màn hình thuyết trình kỹ thuật số có chữ",
+        "description": "projector screen with text",
+        "description_vi": "màn hình chiếu tài liệu",
         "attributes": [
           "white",
-          "digital",
-          "rectangular"
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.068,
-          0.171,
-          0.396,
-          0.9319999999999999
-        ],
-        "description": "man wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi màu xanh nhạt",
-        "attributes": [
-          "man",
-          "glasses",
-          "long-sleeve",
-          "blue"
-        ],
-        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V052_f0008",
-    "visual_source_frame_id": "L25_V052_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a desk with a laptop next to a digital presentation screen in a classroom.",
-    "detailed_caption": "This is a medium shot featuring a male teacher seated on the left side of a desk with a black laptop. He is wearing glasses and a light blue long-sleeve shirt. To his right is a large screen displaying presentation slides against a dark chalkboard background.",
-    "caption_vi": "Một giáo viên ngồi bên bàn làm việc có máy tính xách tay bên cạnh màn hình thuyết trình kỹ thuật số trong lớp học.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh ghi lại cảnh một nam giáo viên ngồi bên trái chiếc bàn có máy tính xách tay màu đen. Thầy đeo kính và mặc áo sơ mi dài tay màu xanh nhạt. Phía bên phải là một màn hình lớn hiển thị các slide thuyết trình trên nền bảng đen.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy ASUS",
+    "visual_source_frame_id": "L25_V052_f0008",
+    "ocr_source_frame_id": "L25_V052_f0008",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a light blue shirt sits at a desk with a laptop next to a slide presentation.",
+    "detailed_caption": "A medium shot features a man in a light blue shirt and glasses sitting behind a desk with a gray laptop. A projector screen with text is positioned to the right against a dark chalkboard background.",
+    "caption_vi": "Một nam giáo viên mặc áo sơ mi sáng màu đeo kính ngồi trước máy tính xách tay cạnh màn hình chiếu.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị nam giáo viên đeo kính mặc áo sơ mi xanh nhạt đang ngồi cạnh máy tính xách tay. Phía sau là bảng đen và một màn hình chiếu tài liệu.",
+    "ocr_text": "CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11699999999999999,
+          0.11599999999999999,
           0.7979999999999999,
           0.368,
           0.995
         ],
-        "description": "black laptop computer",
-        "description_vi": "máy tính xách tay màu đen",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
-          "black",
-          "electronic"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.075,
+          0.183,
+          0.40599999999999997,
+          0.969
+        ],
+        "description": "man wearing glasses and light blue shirt",
+        "description_vi": "nam giáo viên đeo kính mặc áo sơ mi xanh nhạt",
+        "attributes": [
+          "glasses",
+          "light blue shirt"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.453,
-          0.01,
-          0.9949999999999999,
-          0.49699999999999994
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.52
         ],
-        "description": "digital presentation screen with text",
-        "description_vi": "màn hình thuyết trình kỹ thuật số có chữ",
+        "description": "projector screen with text slide",
+        "description_vi": "màn hình chiếu nội dung",
         "attributes": [
           "white",
-          "digital",
-          "rectangular"
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.068,
-          0.171,
-          0.396,
-          0.9319999999999999
-        ],
-        "description": "man wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi màu xanh nhạt",
-        "attributes": [
-          "man",
-          "glasses",
-          "long-sleeve",
-          "blue"
-        ],
-        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V052_f0009",
-    "visual_source_frame_id": "L25_V052_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a desk with a laptop next to a digital presentation screen in a classroom.",
-    "detailed_caption": "This is a medium shot featuring a male teacher seated on the left side of a desk with a black laptop. He is wearing glasses and a light blue long-sleeve shirt. To his right is a large screen displaying presentation slides against a dark chalkboard background.",
-    "caption_vi": "Một giáo viên ngồi bên bàn làm việc có máy tính xách tay bên cạnh màn hình thuyết trình kỹ thuật số trong lớp học.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh ghi lại cảnh một nam giáo viên ngồi bên trái chiếc bàn có máy tính xách tay màu đen. Thầy đeo kính và mặc áo sơ mi dài tay màu xanh nhạt. Phía bên phải là một màn hình lớn hiển thị các slide thuyết trình trên nền bảng đen.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy ASUS",
+    "visual_source_frame_id": "L25_V052_f0009",
+    "ocr_source_frame_id": "L25_V052_f0009",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a light blue shirt sits at a desk with a laptop, next to a slide presentation.",
+    "detailed_caption": "A medium shot shows a man wearing glasses and a light blue button-down shirt sitting at a white desk with a laptop. A projector screen is mounted on the wall to his right, displaying text against a lined yellow background.",
+    "caption_vi": "Nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt ngồi cạnh máy tính xách tay trước màn hình chiếu.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh một nam giáo viên đeo kính, mặc áo sơ mi sáng màu đang ngồi làm việc với máy tính xách tay. Phía bên phải là màn hình máy chiếu hiển thị slide bài học.",
+    "ocr_text": "CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11699999999999999,
+          0.11599999999999999,
           0.7979999999999999,
           0.368,
           0.995
         ],
-        "description": "black laptop computer",
-        "description_vi": "máy tính xách tay màu đen",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
-          "black",
-          "electronic"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.078,
+          0.183,
+          0.40800000000000003,
+          0.969
+        ],
+        "description": "man wearing glasses and light blue shirt",
+        "description_vi": "nam giáo viên đeo kính mặc áo sơ mi xanh nhạt",
+        "attributes": [
+          "glasses",
+          "light blue shirt"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.453,
-          0.01,
-          0.9949999999999999,
-          0.49699999999999994
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.52
         ],
-        "description": "digital presentation screen with text",
-        "description_vi": "màn hình thuyết trình kỹ thuật số có chữ",
+        "description": "projector screen with text",
+        "description_vi": "màn hình chiếu tài liệu",
         "attributes": [
           "white",
-          "digital",
-          "rectangular"
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.068,
-          0.171,
-          0.396,
-          0.9319999999999999
-        ],
-        "description": "man wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi màu xanh nhạt",
-        "attributes": [
-          "man",
-          "glasses",
-          "long-sleeve",
-          "blue"
-        ],
-        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V052_f0010",
-    "visual_source_frame_id": "L25_V052_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a desk with a laptop next to a digital presentation screen in a classroom.",
-    "detailed_caption": "This is a medium shot featuring a male teacher seated on the left side of a desk with a black laptop. He is wearing glasses and a light blue long-sleeve shirt. To his right is a large screen displaying presentation slides against a dark chalkboard background.",
-    "caption_vi": "Một giáo viên ngồi bên bàn làm việc có máy tính xách tay bên cạnh màn hình thuyết trình kỹ thuật số trong lớp học.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh ghi lại cảnh một nam giáo viên ngồi bên trái chiếc bàn có máy tính xách tay màu đen. Thầy đeo kính và mặc áo sơ mi dài tay màu xanh nhạt. Phía bên phải là một màn hình lớn hiển thị các slide thuyết trình trên nền bảng đen.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy ASUS",
+    "visual_source_frame_id": "L25_V052_f0010",
+    "ocr_source_frame_id": "L25_V052_f0010",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a light blue shirt sits at a desk with a laptop, beside a slide presentation.",
+    "detailed_caption": "A medium shot features a man in a light blue shirt and glasses sitting behind a desk with a laptop. A projector screen displaying educational text is positioned to the right.",
+    "caption_vi": "Một nam giáo viên mặc áo sơ mi xanh nhạt đeo kính ngồi trước máy tính xách tay cạnh màn hình trình chiếu.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị nam giáo viên đeo kính và mặc áo sơ mi sáng màu đang ngồi bên máy tính xách tay. Phía bên phải là màn hình chiếu slide nội dung.",
+    "ocr_text": "CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11699999999999999,
+          0.11599999999999999,
           0.7979999999999999,
           0.368,
           0.995
         ],
-        "description": "black laptop computer",
-        "description_vi": "máy tính xách tay màu đen",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
-          "black",
-          "electronic"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.072,
+          0.183,
+          0.40800000000000003,
+          0.969
+        ],
+        "description": "man wearing glasses and light blue shirt",
+        "description_vi": "nam giáo viên đeo kính mặc áo sơ mi xanh nhạt",
+        "attributes": [
+          "glasses",
+          "light blue shirt"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.453,
-          0.01,
-          0.9949999999999999,
-          0.49699999999999994
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.52
         ],
-        "description": "digital presentation screen with text",
-        "description_vi": "màn hình thuyết trình kỹ thuật số có chữ",
+        "description": "projector screen with text",
+        "description_vi": "màn hình chiếu",
         "attributes": [
           "white",
-          "digital",
-          "rectangular"
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.068,
-          0.171,
-          0.396,
-          0.9319999999999999
-        ],
-        "description": "man wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi màu xanh nhạt",
-        "attributes": [
-          "man",
-          "glasses",
-          "long-sleeve",
-          "blue"
-        ],
-        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
   {
     "frame_id": "L25_V052_f0011",
-    "visual_source_frame_id": "L25_V052_f0005",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher sits at a desk with a laptop next to a digital presentation screen in a classroom.",
-    "detailed_caption": "This is a medium shot featuring a male teacher seated on the left side of a desk with a black laptop. He is wearing glasses and a light blue long-sleeve shirt. To his right is a large screen displaying presentation slides against a dark chalkboard background.",
-    "caption_vi": "Một giáo viên ngồi bên bàn làm việc có máy tính xách tay bên cạnh màn hình thuyết trình kỹ thuật số trong lớp học.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh ghi lại cảnh một nam giáo viên ngồi bên trái chiếc bàn có máy tính xách tay màu đen. Thầy đeo kính và mặc áo sơ mi dài tay màu xanh nhạt. Phía bên phải là một màn hình lớn hiển thị các slide thuyết trình trên nền bảng đen.",
-    "ocr_text": "THANH NIÊN CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy ASUS",
+    "visual_source_frame_id": "L25_V052_f0011",
+    "ocr_source_frame_id": "L25_V052_f0011",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a light blue shirt sits at a desk with a laptop, next to a slide presentation.",
+    "detailed_caption": "A medium shot shows a man wearing glasses and a light blue shirt sitting behind a desk with a gray laptop. A projector screen with text is located to the right against a dark background.",
+    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi xanh nhạt ngồi làm việc với máy tính xách tay bên cạnh màn hình chiếu.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh một nam giáo viên đeo kính, mặc áo sơ mi xanh nhạt đang ngồi trước máy tính xách tay. Phía bên phải là màn hình chiếu slide bài học.",
+    "ocr_text": "CHUYÊN ĐỀ 5: CÁC BÀI TOÁN VỀ SỐ PHỨC VÀ ỨNG DỤNG CỦA HÌNH HỌC TRONG SỐ PHỨC GV hướng dẫn: Lê Minh Huy",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11699999999999999,
+          0.11599999999999999,
           0.7979999999999999,
           0.368,
           0.995
         ],
-        "description": "black laptop computer",
-        "description_vi": "máy tính xách tay màu đen",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
-          "black",
-          "electronic"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.072,
+          0.183,
+          0.40800000000000003,
+          0.969
+        ],
+        "description": "man wearing glasses and light blue shirt",
+        "description_vi": "nam giáo viên đeo kính mặc áo sơ mi xanh nhạt",
+        "attributes": [
+          "glasses",
+          "light blue shirt"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.453,
-          0.01,
-          0.9949999999999999,
-          0.49699999999999994
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.52
         ],
-        "description": "digital presentation screen with text",
-        "description_vi": "màn hình thuyết trình kỹ thuật số có chữ",
+        "description": "projector screen displaying text",
+        "description_vi": "màn hình chiếu nội dung",
         "attributes": [
           "white",
-          "digital",
-          "rectangular"
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.068,
-          0.171,
-          0.396,
-          0.9319999999999999
-        ],
-        "description": "man wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi màu xanh nhạt",
-        "attributes": [
-          "man",
-          "glasses",
-          "long-sleeve",
-          "blue"
-        ],
-        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -1535,35 +1496,101 @@
     "frame_id": "L25_V052_f0028",
     "visual_source_frame_id": "L25_V052_f0028",
     "ocr_source_frame_id": "L25_V052_f0028",
-    "quality_flags": [],
-    "caption": "A man in a dark suit and green patterned tie speaks in a conference room.",
-    "detailed_caption": "This is a medium shot of an older man with a goatee wearing a dark suit jacket, white shirt, and a green patterned tie. He stands in a meeting room, gesturing with both hands while talking, with framed portraits on the wall behind him.",
-    "caption_vi": "Một nam giới mặc vest tối màu và cà vạt họa tiết xanh lá phát biểu trong phòng họp.",
-    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông lớn tuổi có râu cằm mặc áo vest tối màu, áo sơ mi trắng và cà vạt họa tiết xanh lá. Ông đang đứng trong phòng họp, cử động bằng cả hai tay khi nói chuyện, phía sau là các bức chân dung đóng khung trên tường.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A man in a dark suit and green patterned tie stands gesturing in a bright room with framed portraits on the wall.",
+    "detailed_caption": "A medium shot features a man wearing a dark suit, white shirt, and a green patterned tie, standing in a room and gesturing with his hands. Framed portraits hang on the white wall behind him, and chairs are visible in the foreground.",
+    "caption_vi": "Một người đàn ông mặc suit tối màu và đeo cà vạt họa tiết xanh lá đang đứng phát biểu trong phòng sáng sủa.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh một người đàn ông mặc áo vest tối màu, sơ mi trắng và cà vạt họa tiết xanh lá đang đứng nói chuyện và ra hiệu bằng tay. Phía sau ông trên tường treo các bức chân dung đóng khung gỗ.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
+        "object_id": "painting_0",
+        "label": "painting",
+        "bbox": [
+          0.22999999999999998,
+          0.0,
+          0.46900000000000003,
+          0.5489999999999999
+        ],
+        "description": "framed portrait on the wall",
+        "description_vi": "bức chân dung đóng khung trên tường",
+        "attributes": [
+          "framed",
+          "portrait"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "painting_1",
+        "label": "painting",
+        "bbox": [
+          0.8779999999999999,
+          0.0,
+          1.0,
+          0.532
+        ],
+        "description": "framed portrait on the right wall",
+        "description_vi": "bức chân dung đóng khung bên phải",
+        "attributes": [
+          "framed",
+          "portrait"
+        ],
+        "action": ""
+      },
+      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.267,
-          0.07300000000000001,
-          0.662,
+          0.265,
+          0.079,
+          0.663,
           1.0
         ],
-        "description": "man wearing a dark suit and green tie",
-        "description_vi": "nam giới mặc vest tối màu và cà vạt xanh lá",
+        "description": "man in dark suit and green patterned tie",
+        "description_vi": "người đàn ông mặc suit tối màu và cà vạt xanh lá",
         "attributes": [
-          "man",
-          "suit",
-          "tie",
-          "goatee"
+          "dark suit",
+          "green tie",
+          "white shirt"
         ],
-        "action": "speaking"
+        "action": "standing and gesturing"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "painting_0",
+        "predicate": "left_of",
+        "object_id": "painting_1"
+      },
+      {
+        "subject_id": "painting_1",
+        "predicate": "right_of",
+        "object_id": "painting_0"
+      },
+      {
+        "subject_id": "painting_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "painting_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "painting_1"
+      },
+      {
+        "subject_id": "painting_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0029",
@@ -2212,96 +2239,133 @@
     "visual_source_frame_id": "L25_V052_f0036",
     "ocr_source_frame_id": "L25_V052_f0036",
     "quality_flags": [],
-    "caption": "A man in a dark jacket and red shirt holding a red folder alongside a woman in a black suit.",
-    "detailed_caption": "A medium shot displays a man on the left wearing a black jacket, glasses, and a red shirt, holding a red folder with 'SIU Saigon International University' printed on it. Beside him on the right, a woman in a black suit and blue blouse holds a blue folder.",
-    "caption_vi": "Một nam giới mặc áo khoác tối màu và áo đỏ cầm tập hồ sơ đỏ bên cạnh một phụ nữ mặc vest đen.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông bên trái mặc áo khoác đen, đeo kính và áo sơ mi đỏ, đang cầm tập hồ sơ màu đỏ có in chữ 'SIU Saigon International University'. Bên cạnh ông ở phía bên phải, một phụ nữ mặc vest đen và áo sơ mi xanh đang cầm tập hồ sơ màu xanh.",
+    "caption": "Two people stand holding folders in an indoor setting with a projection screen in the background.",
+    "detailed_caption": "A medium shot displays two people standing side by side holding folders. On the left, a man wearing glasses, a black blazer, and a red shirt holds a red folder. On the right, a woman in a black blazer and light-colored scarf holds a blue folder. A white projector screen is behind them.",
+    "caption_vi": "Hai người đứng cầm bìa tài liệu trong phòng họp có màn hình máy chiếu phía sau.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai người đang đứng cầm các tập tài liệu. Nam nhân viên bên trái mặc vest đen và áo sơ mi đỏ cầm bìa màu đỏ, nữ nhân viên bên phải mặc vest đen cầm bìa màu xanh. Phía sau là màn hình chiếu màu trắng.",
     "ocr_text": "SIU Saigon International University",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "folder_0",
-        "label": "folder",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.403,
-          0.6900000000000001,
-          0.572,
-          0.912
+          0.40099999999999997,
+          0.693,
+          0.571,
+          0.9149999999999999
         ],
-        "description": "Red folder with gold text 'SIU Saigon International University'",
-        "description_vi": "Tập hồ sơ màu đỏ có chữ vàng 'SIU Saigon International University'",
+        "description": "red folder held by man",
+        "description_vi": "bìa hồ sơ màu đỏ",
         "attributes": [
           "red",
-          "gold text"
+          "folder"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "document_1",
+        "label": "document",
         "bbox": [
-          0.253,
-          0.135,
-          0.502,
-          0.9979999999999999
+          0.471,
+          0.5239999999999999,
+          0.595,
+          0.792
         ],
-        "description": "Man wearing glasses, black jacket, and red shirt holding a red folder",
-        "description_vi": "Nam giới đeo kính, mặc áo khoác đen và áo đỏ đang cầm tập hồ sơ đỏ",
+        "description": "blue folder held by woman",
+        "description_vi": "bìa hồ sơ màu xanh",
         "attributes": [
-          "glasses",
-          "black jacket",
-          "red shirt"
+          "blue",
+          "folder"
         ],
-        "action": "holding"
+        "action": ""
       },
       {
-        "object_id": "woman_0",
-        "label": "woman",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.516,
-          0.308,
-          0.762,
-          0.9979999999999999
+          0.255,
+          0.133,
+          0.484,
+          1.0
         ],
-        "description": "Woman in black suit and blue blouse holding a blue folder",
-        "description_vi": "Phụ nữ mặc vest đen và áo blouse xanh đang cầm tập hồ sơ xanh",
+        "description": "man wearing glasses, black blazer, and red shirt",
+        "description_vi": "nam giới đeo kính mặc áo khoác đen và áo sơ mi đỏ",
         "attributes": [
-          "black suit",
-          "blue blouse"
+          "glasses",
+          "black blazer",
+          "red shirt"
         ],
-        "action": "holding"
+        "action": "holding folder"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.514,
+          0.307,
+          0.762,
+          1.0
+        ],
+        "description": "woman in black blazer and light scarf holding blue folder",
+        "description_vi": "nữ giới mặc áo khoác đen và khăn quàng cổ cầm bìa xanh",
+        "attributes": [
+          "black blazer",
+          "light scarf"
+        ],
+        "action": "holding folder"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "folder_0",
+        "subject_id": "document_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "document_1"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "document_1",
         "predicate": "overlapping",
-        "object_id": "folder_0"
+        "object_id": "document_0"
       },
       {
-        "subject_id": "folder_0",
+        "subject_id": "document_0",
         "predicate": "overlapping",
-        "object_id": "woman_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "woman_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
-        "object_id": "folder_0"
+        "object_id": "document_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "document_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "document_0"
+      },
+      {
+        "subject_id": "document_1",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "document_1"
+      },
+      {
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "woman_0"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "woman_0",
+        "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "man_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -2407,95 +2471,166 @@
     "visual_source_frame_id": "L25_V052_f0038",
     "ocr_source_frame_id": "L25_V052_f0038",
     "quality_flags": [],
-    "caption": "A person standing at a podium speaking to attendees in a conference room with an emblem on the wall.",
-    "detailed_caption": "A medium shot displays a person standing behind a podium on the left, speaking into a microphone. In the foreground, the back of a seated person is visible. On the right, two officials sit behind a desk draped with a red cloth featuring the SIU logo, with a large national emblem displayed on the wall behind them.",
-    "caption_vi": "Một người đứng tại bục phát biểu trước những người tham dự trong phòng họp với huy hiệu trên tường.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đứng sau bục phát biểu bên trái, đang nói vào micro. Ở tiền cảnh, phần lưng của một người đang ngồi hiện ra. Phía bên phải, hai quan chức ngồi sau bàn phủ khăn đỏ có logo SIU, với quốc huy lớn treo trên tường phía sau.",
-    "ocr_text": "SIU Saigon International University THU KÝ THẨM PHÁN CHỦ TÒA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
+    "caption": "Several people are seated and standing in a mock courtroom with red banners displaying university text.",
+    "detailed_caption": "A wide shot of a mock courtroom shows a person standing at a podium on the left, a person standing with their back to the camera in the center foreground, and judges seated at desks on the right. Red banners with university logos are draped across the desks. A large emblem is displayed on the wall behind the judges.",
+    "caption_vi": "Nhiều người trong phòng xử án giả định có bục phát biểu và bàn dài phủ khăn đỏ.",
+    "detailed_caption_vi": "Ảnh chụp toàn cảnh một phòng họp hoặc phiên tòa giả định với các bàn làm việc phủ khăn đỏ có in logo. Một người đang đứng phát biểu ở bục bên trái, một người quay lưng ở trung tâm và các giám khảo ngồi ở bàn bên phải.",
+    "ocr_text": "THƯ KÝ SIU Saigon International University du.vn THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "emblem_0",
-        "label": "emblem",
-        "bbox": [
-          0.634,
-          0.17200000000000001,
-          0.899,
-          0.658
-        ],
-        "description": "Large yellow national emblem displayed on the projection screen",
-        "description_vi": "Quốc huy màu vàng lớn hiển thị trên màn hình chiếu",
-        "attributes": [
-          "yellow",
-          "star"
-        ],
-        "action": ""
-      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
           0.126,
-          0.318,
-          0.23199999999999998,
-          0.64
+          0.316,
+          0.231,
+          0.642
         ],
-        "description": "Person standing behind a podium speaking into a microphone",
-        "description_vi": "Người đứng sau bục phát biểu nói vào micro",
+        "description": "woman standing at podium holding microphone",
+        "description_vi": "nữ nhân viên đứng ở bục cầm mic",
         "attributes": [
-          "black suit",
-          "glasses"
+          "black suit"
         ],
-        "action": "speaking"
+        "action": "speaking into microphone"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.396,
-          0.295,
-          0.587,
-          0.995
+          0.397,
+          0.296,
+          0.5860000000000001,
+          1.0
         ],
-        "description": "Person in black shirt viewed from behind in the foreground",
-        "description_vi": "Người mặc áo đen nhìn từ phía sau ở tiền cảnh",
+        "description": "person standing with back turned",
+        "description_vi": "người đứng quay lưng",
         "attributes": [
-          "black shirt",
-          "back view"
+          "black shirt"
         ],
         "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.649,
+          0.41300000000000003,
+          0.786,
+          0.663
+        ],
+        "description": "woman sitting at desk in judicial robes",
+        "description_vi": "nữ thẩm phán ngồi bàn",
+        "attributes": [
+          "robes"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.866,
+          0.41700000000000004,
+          0.999,
+          0.6719999999999999
+        ],
+        "description": "woman sitting at desk in black suit",
+        "description_vi": "nữ hội thẩm ngồi bàn mặc đồ đen",
+        "attributes": [
+          "black suit",
+          "glasses"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.101,
+          0.637,
+          0.33399999999999996,
+          0.966
+        ],
+        "description": "table with red cloth and logo",
+        "description_vi": "bàn phủ khăn đỏ có logo",
+        "attributes": [
+          "red cloth",
+          "table"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "emblem_0"
-      },
-      {
-        "subject_id": "emblem_0",
-        "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "person_1"
       },
       {
         "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "emblem_0"
-      },
-      {
-        "subject_id": "emblem_0",
         "predicate": "right_of",
-        "object_id": "person_1"
+        "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
         "object_id": "person_1"
       },
       {
         "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_2"
       }
     ]
   },
@@ -3352,85 +3487,86 @@
     "visual_source_frame_id": "L25_V052_f0049",
     "ocr_source_frame_id": "L25_V052_f0049",
     "quality_flags": [],
-    "caption": "Two men holding a large banner about scholarships with SIU University branding.",
-    "detailed_caption": "A medium shot features two men holding a large blue banner featuring text about scholarship funds and percentages. The man on the left wears a light blue button-down shirt, while the man on the right wears a black suit with a red tie and blue lanyard.",
-    "caption_vi": "Hai nam giới cầm tấm biển lớn về học bổng với biểu trưng của Đại học SIU.",
-    "detailed_caption_vi": "Khung hình trung cảnh ghi lại hai nam giới đang cầm một tấm banner lớn màu xanh dương có nội dung về quỹ học bổng và các mức phần trăm. Nam giới bên trái mặc áo sơ mi xanh nhạt, trong khi nam giới bên phải mặc vest đen với cà vạt đỏ và dây đeo thẻ xanh.",
-    "ocr_text": "The Saigon International University TRƯỜNG ĐẠI HỌC QUỐC TẾ SÀI GÒN TRAO TẶNG QUỸ HỌC BỔNG TÀI NĂNG TRẺ 40% - 60% - 100% HỌC PHÍ TOÀN KHÓA www.siu.edu.vn",
+    "caption": "Two men hold a large scholarship check banner with blue and white text in front of a stage backdrop.",
+    "detailed_caption": "A medium shot captures two men holding a large blue scholarship banner. On the left, an older man in a light blue shirt holds the left side. On the right, a younger man in a black suit and red tie holds the right side. The banner displays Vietnamese text regarding scholarship funds.",
+    "caption_vi": "Hai người đàn ông cầm một tấm biển học bổng lớn có chữ màu xanh và trắng trước phông nền sự kiện.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai người đàn ông đang cùng cầm tấm bảng học bổng màu xanh dương. Người đàn ông bên trái mặc áo sơ mi xanh nhạt, người bên phải mặc vest đen và cà vạt đỏ. Phía sau là phông nền sự kiện có trang trí hoa.",
+    "ocr_text": "The Saigon International University TRƯỜNG ĐẠI HỌC QUỐC TẾ SÀI GÒN TRAO TẶNG QUỸ HỌC BỔNG TÀI NĂNG TRẺ 40% - 60% - 100% HỌC PHÍ TOÀN KHOÁ https://www.facebook.com/dhquoctesaigon www.siu.edu.vn",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "banner_0",
-        "label": "banner",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.21400000000000002,
-          0.485,
-          0.63,
+          0.211,
+          0.48400000000000004,
+          0.633,
           0.9149999999999999
         ],
-        "description": "Large blue promotional banner with white and yellow Vietnamese text",
-        "description_vi": "Tấm banner quảng cáo màu xanh lớn có chữ tiếng Việt trắng và vàng",
+        "description": "large blue scholarship banner",
+        "description_vi": "tấm biển học bổng lớn màu xanh",
         "attributes": [
-          "blue banner",
+          "blue",
+          "banner",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "man_0",
-        "label": "man",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.092,
-          0.088,
+          0.09,
+          0.089,
           0.396,
-          0.995
+          1.0
         ],
-        "description": "Man in light blue shirt holding the left side of the banner",
-        "description_vi": "Nam giới mặc áo sơ mi xanh nhạt giữ bên trái tấm banner",
+        "description": "older man in light blue shirt holding banner",
+        "description_vi": "người đàn ông lớn tuổi mặc áo sơ mi xanh nhạt cầm biển",
         "attributes": [
           "light blue shirt",
-          "short hair"
+          "glasses"
         ],
-        "action": "holding"
+        "action": "holding banner"
       },
       {
-        "object_id": "man_1",
-        "label": "man",
+        "object_id": "person_1",
+        "label": "person",
         "bbox": [
-          0.6,
+          0.604,
           0.057999999999999996,
           0.882,
-          0.995
+          1.0
         ],
-        "description": "Man in black suit and red tie holding the right side of the banner",
-        "description_vi": "Nam giới mặc vest đen và cà vạt đỏ giữ bên phải tấm banner",
+        "description": "younger man in black suit and red tie holding banner",
+        "description_vi": "nam thanh niên mặc vest đen và cà vạt đỏ cầm biển",
         "attributes": [
           "black suit",
           "red tie"
         ],
-        "action": "holding"
+        "action": "holding banner"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "banner_0",
+        "subject_id": "document_0",
         "predicate": "overlapping",
-        "object_id": "man_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
-        "object_id": "banner_0"
+        "object_id": "document_0"
       },
       {
-        "subject_id": "man_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "man_1"
+        "object_id": "person_1"
       },
       {
-        "subject_id": "man_1",
+        "subject_id": "person_1",
         "predicate": "right_of",
-        "object_id": "man_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -4184,48 +4320,86 @@
     "visual_source_frame_id": "L25_V052_f0065",
     "ocr_source_frame_id": "L25_V052_f0065",
     "quality_flags": [],
-    "caption": "Seven people stand behind a presentation table during a signing ceremony.",
-    "detailed_caption": "A wide shot captures seven individuals standing in a row behind a long table covered with red fabric bearing white university logos. Each person holds a red folder. A projector screen with English text is visible in the background.",
-    "caption_vi": "Bảy người đứng sau bàn hội nghị trong một buổi lễ ký kết.",
-    "detailed_caption_vi": "Toàn cảnh ghi lại bảy người đứng thành hàng sau chiếc bàn phủ khăn đỏ in logo đại học màu trắng. Mỗi người đều cầm một tập hồ sơ đỏ, phía trên là màn hình chiếu chữ tiếng Anh.",
+    "caption": "Seven people stand behind tables covered with red cloths, holding red folders during a ceremony on a stage.",
+    "detailed_caption": "A wide shot shows seven people standing in a row behind tables draped with red cloths bearing university logos. Each person holds a red folder. A large projection screen in the background displays 'MOU SIGNING CEREMONY with BUSINESS PARTNERS'.",
+    "caption_vi": "Bảy người đứng xếp hàng sau các bàn phủ khăn đỏ, mỗi người cầm một bìa hồ sơ trong buổi lễ.",
+    "detailed_caption_vi": "Ảnh chụp toàn cảnh bảy người đứng dọc theo hàng bàn dài phủ khăn đỏ có in logo trường đại học. Mỗi người đang cầm một bìa hồ sơ màu đỏ. Phía sau là màn hình lớn hiển thị tiêu đề buổi lễ ký kết hợp tác.",
     "ocr_text": "International University MOU SIGNING CEREMONY with BUSINESS PARTNERS Ho Chi Minh City, December 20, 2023 www.siu.edu.vn SIU Saigon International University www.siu.edu.vn",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "people_0",
-        "label": "people",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
           0.172,
-          0.517,
-          0.8710000000000001,
-          0.7859999999999999
+          0.522,
+          0.873,
+          0.7779999999999999
         ],
-        "description": "group of seven individuals standing behind the table holding folders",
-        "description_vi": "nhóm bảy người đứng sau bàn cầm các tập hồ sơ",
+        "description": "seven people standing behind tables holding folders",
+        "description_vi": "bảy người đứng sau bàn cầm tài liệu",
         "attributes": [
-          "formal"
+          "formal wear"
         ],
         "action": "standing"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.05600000000000001,
+          0.0,
+          0.8710000000000001,
+          0.725
+        ],
+        "description": "projector screen with signing ceremony text",
+        "description_vi": "màn hình chiếu tiêu đề lễ ký kết",
+        "attributes": [
+          "projector screen",
+          "text"
+        ],
+        "action": ""
       },
       {
         "object_id": "table_0",
         "label": "table",
         "bbox": [
-          0.091,
-          0.7729999999999999,
-          0.913,
-          0.9979999999999999
+          0.093,
+          0.759,
+          0.914,
+          1.0
         ],
-        "description": "long presentation table with red cloth and white university logos",
-        "description_vi": "bàn hội nghị dài phủ vải đỏ và logo trường đại học màu trắng",
+        "description": "tables with red cloths and university logos",
+        "description_vi": "dãy bàn phủ khăn đỏ có logo",
         "attributes": [
-          "red",
-          "white"
+          "red cloth",
+          "table"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "above",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "below",
+        "object_id": "screen_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0066",
@@ -4816,11 +4990,11 @@
     "visual_source_frame_id": "L25_V052_f0073",
     "ocr_source_frame_id": "L25_V052_f0073",
     "quality_flags": [],
-    "caption": "A teacher sits at a desk with a laptop in front of a blackboard and a digital screen showing a math problem.",
-    "detailed_caption": "A medium shot shows a male teacher wearing glasses and a light blue shirt seated at a white desk with a laptop. Behind him is a dark chalkboard with white mathematical diagrams, and to his right is a large screen displaying an algebra problem with multiple-choice options.",
-    "caption_vi": "Một giáo viên ngồi bên bàn có máy tính xách tay trước bảng đen và màn hình hiển thị bài toán.",
-    "detailed_caption_vi": "Cận cảnh trung bình nam giáo viên đeo kính mặc áo sơ mi xanh nhạt ngồi tại bàn trắng có máy tính xách tay. Phía sau anh là bảng đen vẽ hình học, bên phải là màn hình lớn hiển thị câu hỏi toán học trắc nghiệm.",
-    "ocr_text": "THANH NIÊN Ví dụ 1. Số phức z thỏa mãn z + 2z = (1 + 5i)² có phần ảo là A -8. B -8i. C -10 D -10i. ASUS",
+    "caption": "A man wearing glasses and a light blue shirt sits at a desk with a laptop, next to a slide presentation showing math problems.",
+    "detailed_caption": "A medium shot displays a man in a light blue shirt and glasses sitting behind a desk with a laptop. To his right, a projector screen displays a slide titled 'Ví dụ 1.' with multiple-choice math questions. The background is a dark chalkboard covered in formulas.",
+    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi xanh nhạt ngồi làm việc với máy tính xách tay bên cạnh màn hình chiếu bài toán.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh nam giáo viên đeo kính và mặc áo sơ mi sáng màu đang ngồi trước máy tính xách tay. Phía bên phải là màn hình chiếu hiển thị bài tập toán học có các lựa chọn A, B, C, D.",
+    "ocr_text": "Ví dụ 1. Số phức z thỏa mãn z + 2z = (1 + 5i)² có phần ảo là A -8. B -8i. C -10 D -10i.",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4832,68 +5006,68 @@
           0.368,
           0.995
         ],
-        "description": "dark laptop on white desk",
-        "description_vi": "máy tính xách tay màu tối trên bàn trắng",
+        "description": "gray laptop on desk",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
-          "dark"
+          "gray"
         ],
         "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.072,
+          0.183,
+          0.41,
+          0.969
+        ],
+        "description": "man wearing glasses and light blue shirt",
+        "description_vi": "nam giáo viên đeo kính mặc áo sơ mi xanh nhạt",
+        "attributes": [
+          "glasses",
+          "light blue shirt"
+        ],
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
         "label": "screen",
         "bbox": [
-          0.45199999999999996,
-          0.011,
-          0.9970000000000001,
-          0.5239999999999999
+          0.45099999999999996,
+          0.007,
+          1.0,
+          0.522
         ],
-        "description": "digital screen displaying math problem and multiple choice options",
-        "description_vi": "màn hình hiển thị bài toán và các lựa chọn trắc nghiệm",
+        "description": "projector screen showing math example slide",
+        "description_vi": "màn hình chiếu bài tập toán",
         "attributes": [
-          "digital",
-          "screen"
+          "white",
+          "projector screen"
         ],
         "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.072,
-          0.181,
-          0.40800000000000003,
-          0.971
-        ],
-        "description": "male teacher in light blue shirt and glasses sitting at laptop",
-        "description_vi": "nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính ngồi trước máy tính",
-        "attributes": [
-          "glasses",
-          "light blue shirt"
-        ],
-        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "screen_0"
       },
       {
         "subject_id": "screen_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -5700,16 +5874,14 @@
   },
   {
     "frame_id": "L25_V052_f0093",
-    "visual_source_frame_id": "L25_V052_f0077",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A digital screen displays a math problem about complex numbers with multiple-choice options.",
-    "detailed_caption": "A close-up shot focuses on a digital presentation screen showing a math exercise labeled 'Ví dụ 1' involving complex numbers. The question text and four options A, B, C, and D are clearly legible on a light yellow lined background.",
-    "caption_vi": "Màn hình kỹ thuật số hiển thị bài toán về số phức kèm theo các lựa chọn trắc nghiệm.",
-    "detailed_caption_vi": "Cận cảnh màn hình trình chiếu hiển thị bài tập toán mang nhãn 'Ví dụ 1' về số phức. Nội dung câu hỏi và bốn đáp án A, B, C, D hiển thị rõ ràng trên nền giấy kẻ vàng.",
-    "ocr_text": "Ví dụ 1. Số phức z thỏa mãn z + 2z = (1 + 5i)² có phần ảo là A -8. B -8i. C -10 D -10i.",
+    "visual_source_frame_id": "L25_V052_f0093",
+    "ocr_source_frame_id": "L25_V052_f0093",
+    "quality_flags": [],
+    "caption": "A projector screen displays a math problem solution with equations and text steps.",
+    "detailed_caption": "A close-up shot shows a projector screen displaying a detailed math solution for a complex numbers problem. The slide includes the problem statement, solution steps with algebraic substitutions, and the final answer.",
+    "caption_vi": "Màn hình chiếu hiển thị chi tiết bài giải toán số phức với các bước biến đổi đại số.",
+    "detailed_caption_vi": "Ảnh chụp cận cảnh toàn bộ màn hình chiếu trình bày lời giải chi tiết cho một bài toán về số phức. Nội dung bao gồm đề bài, các bước biến đổi phương trình và kết quả cuối cùng.",
+    "ocr_text": "Ví dụ 1. Số phức z thỏa mãn z + 2z = (1 + 5i)² có phần ảo là A -8. B -8i. C -10 D -10i. Lời giải. Đặt z = x + yi, (x, y ∈ R). z + 2z = (1 + 5i)² x + yi + 2(x - yi) = -24 + 10i 3x - yi = -24 + 10i { 3x = -24 { -y = 10 { x = -8 { y = -10. Vậy phần ảo của z bằng -10.",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5717,15 +5889,16 @@
         "label": "screen",
         "bbox": [
           0.0,
-          0.051,
+          0.048,
           1.0,
-          0.948
+          0.9510000000000001
         ],
-        "description": "digital screen displaying math problem and multiple choice options",
-        "description_vi": "màn hình hiển thị bài toán và các lựa chọn trắc nghiệm",
+        "description": "projector screen showing math solution slide",
+        "description_vi": "màn hình chiếu slide lời giải toán",
         "attributes": [
-          "digital",
-          "screen"
+          "yellowish background",
+          "text",
+          "equations"
         ],
         "action": ""
       }
@@ -9109,10 +9282,10 @@
     "visual_source_frame_id": "L25_V052_f0175",
     "ocr_source_frame_id": "L25_V052_f0175",
     "quality_flags": [],
-    "caption": "A young boy in a school uniform and cap walks through a bright hallway with colorful glass panels in the background.",
-    "detailed_caption": "A close-up shot of a young boy wearing a white polo shirt, a maroon cap, and blue backpack straps, walking through an indoor hallway. In the blurred background, another student holds a book near blue and red transparent dividers.",
-    "caption_vi": "Một học sinh nam mặc áo đồng phục trắng đội mũ ca lô đỏ đang đi tới trong hành lang.",
-    "detailed_caption_vi": "Khung hình cận cảnh một nam sinh mặc áo polo trắng, đội mũ ca lô đỏ và đeo quai balo xanh đang đi trong hành lang trong nhà. Phía sau làm mờ có một học sinh khác đang cầm sách gần các vách ngăn kính màu.",
+    "caption": "A young boy wearing a school uniform and a red cap with a backpack walks forward indoors.",
+    "detailed_caption": "A close-up shot captures a young boy with dark hair wearing a white polo shirt, a maroon cap with text, and a blue backpack, walking indoors. In the blurred background, another child holds a book near colorful panels.",
+    "caption_vi": "Một cậu bé đội mũ đỏ mặc đồng phục học sinh đeo ba lô đang bước đi trong nhà.",
+    "detailed_caption_vi": "Ảnh chụp cận cảnh một cậu bé tóc tối màu mặc áo polo trắng, đội mũ màu đỏ và đeo ba lô xanh đang di chuyển. Phía sau mờ ảo là một học sinh khác đang cầm sách gần vách ngăn nhiều màu sắc.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -9120,22 +9293,50 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.361,
+          0.05600000000000001,
+          0.647,
+          0.183,
+          0.999
+        ],
+        "description": "young child holding book in background",
+        "description_vi": "trẻ em cầm sách ở hậu cảnh",
+        "attributes": [
+          "child",
+          "uniform"
+        ],
+        "action": "holding book"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.36,
           0.0,
           0.977,
           1.0
         ],
-        "description": "a young boy wearing a white shirt and a maroon cap",
-        "description_vi": "một nam sinh mặc áo trắng đội mũ ca lô đỏ",
+        "description": "young boy wearing white polo shirt, red cap, and backpack",
+        "description_vi": "cậu bé mặc áo polo trắng đội mũ đỏ đeo ba lô",
         "attributes": [
           "white shirt",
-          "maroon cap",
+          "red cap",
           "backpack"
         ],
         "action": "walking"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0176",
@@ -9759,10 +9960,10 @@
     "visual_source_frame_id": "L25_V052_f0188",
     "ocr_source_frame_id": "L25_V052_f0188",
     "quality_flags": [],
-    "caption": "A hand browsing through a book with a cover depicting a snowy landscape and text.",
-    "detailed_caption": "A close-up shot shows a hand turning the pages of a book. The book cover features a snowy mountain scene with blue and red details. Additional text is visible on the edge of the cover.",
-    "caption_vi": "Một bàn tay đang lật qua các trang của một cuốn sách có bìa in phong cảnh tuyết.",
-    "detailed_caption_vi": "Cận cảnh một bàn tay đang lật sách trong khung hình. Bìa sách hiển thị khung cảnh núi tuyết cùng các chi tiết màu xanh và đỏ.",
+    "caption": "A close-up view of a hand holding and turning a book with a blue and red cover.",
+    "detailed_caption": "A close-up shot shows a hand turning the pages of an illustrated book. The book features a blue and red cover with graphic designs. The background is a plain surface.",
+    "caption_vi": "Cận cảnh một bàn tay đang lật một cuốn sách có bìa màu xanh và đỏ.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang lật các trang của một cuốn sách minh họa. Cuốn sách có bìa màu xanh và đỏ với các chi tiết đồ họa. Phối cảnh là một bề mặt phẳng.",
     "ocr_text": "CORNERSTONE",
     "news_ticker_text": "",
     "detections": [
@@ -9772,47 +9973,20 @@
         "bbox": [
           0.0,
           0.0,
-          0.67,
+          0.9720000000000001,
           1.0
         ],
-        "description": "book with snowy cover",
-        "description_vi": "cuốn sách có bìa tuyết",
+        "description": "an illustrated book with a blue and red cover",
+        "description_vi": "một cuốn sách minh họa có bìa màu xanh và đỏ",
         "attributes": [
-          "book",
+          "blue",
           "red",
-          "blue"
+          "illustrated"
         ],
-        "action": "turning"
-      },
-      {
-        "object_id": "hand_0",
-        "label": "hand",
-        "bbox": [
-          0.593,
-          0.0,
-          0.96,
-          1.0
-        ],
-        "description": "human hand turning a book page",
-        "description_vi": "bàn tay người đang lật trang sách",
-        "attributes": [
-          "skin"
-        ],
-        "action": "turning"
+        "action": "being turned"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "book_0",
-        "predicate": "overlapping",
-        "object_id": "hand_0"
-      },
-      {
-        "subject_id": "hand_0",
-        "predicate": "overlapping",
-        "object_id": "book_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V052_f0189",
@@ -9974,97 +10148,32 @@
     "visual_source_frame_id": "L25_V052_f0191",
     "ocr_source_frame_id": "L25_V052_f0191",
     "quality_flags": [],
-    "caption": "A student in a red cap walking past a sign while holding an open book.",
-    "detailed_caption": "A close-up shot shows a young student with long dark hair, wearing a white uniform and red cap, walking in a library while holding an open colorful book. In the background, other students are visible near bookshelves and a wall sign.",
-    "caption_vi": "Một học sinh đội mũ đỏ đang đi ngang qua biển hiệu trong khi cầm cuốn sách mở.",
-    "detailed_caption_vi": "Cận cảnh một học sinh tóc dài sẫm màu, mặc đồng phục trắng và đội mũ đỏ, đang đi trong thư viện tay cầm cuốn sách màu sắc mở. Phía sau là các học sinh khác gần kệ sách và biển hiệu tường.",
-    "ocr_text": "to ew",
+    "caption": "Three children in white uniforms and red caps are browsing books in a library.",
+    "detailed_caption": "A medium shot displays three children in a library setting, wearing white uniforms and red caps. From left to right, a girl in the foreground holds a book, another girl stands behind her reading, and a boy reaches for a book on a shelf in the background. Bookshelves line the walls.",
+    "caption_vi": "Ba em nhỏ mặc đồng phục trắng và đội mũ đỏ đang xem sách trong thư viện.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị ba em nhỏ trong thư viện, mặc đồng phục trắng và đội mũ đỏ. Từ trái sang phải, một bé gái ở tiền cảnh đang cầm sách, bé gái thứ hai đứng phía sau đọc sách, và một cậu bé đang với lấy cuốn sách trên kệ ở hậu cảnh. Các kệ sách được xếp dọc theo tường.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "book_0",
-        "label": "book",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.655,
-          0.697,
-          0.908,
+          0.236,
+          0.0,
+          0.833,
           1.0
         ],
-        "description": "colorful open book held by student",
-        "description_vi": "cuốn sách mở nhiều màu sắc trên tay học sinh",
+        "description": "a girl in a white uniform and red cap holding a book",
+        "description_vi": "một bé gái mặc đồng phục trắng và đội mũ đỏ đang cầm sách",
         "attributes": [
-          "colorful",
-          "open"
+          "white uniform",
+          "red cap"
         ],
-        "action": "holding"
-      },
-      {
-        "object_id": "bookshelf_0",
-        "label": "bookshelf",
-        "bbox": [
-          0.0,
-          0.0,
-          0.068,
-          1.0
-        ],
-        "description": "bookshelf lined with books",
-        "description_vi": "kệ sách xếp đầy sách",
-        "attributes": [
-          "wooden"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "student_0",
-        "label": "student",
-        "bbox": [
-          0.233,
-          0.0,
-          0.8310000000000001,
-          1.0
-        ],
-        "description": "student with long hair wearing red cap and white shirt",
-        "description_vi": "học sinh tóc dài đội mũ đỏ mặc áo trắng",
-        "attributes": [
-          "white",
-          "red",
-          "long hair"
-        ],
-        "action": "walking"
+        "action": "holding book"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "left_of",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "right_of",
-        "object_id": "bookshelf_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "overlapping",
-        "object_id": "student_0"
-      },
-      {
-        "subject_id": "student_0",
-        "predicate": "overlapping",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "left_of",
-        "object_id": "student_0"
-      },
-      {
-        "subject_id": "student_0",
-        "predicate": "right_of",
-        "object_id": "bookshelf_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V052_f0192",
@@ -11521,10 +11630,10 @@
     "visual_source_frame_id": "L25_V052_f0211",
     "ocr_source_frame_id": "L25_V052_f0211",
     "quality_flags": [],
-    "caption": "Students perform music on a stage with a piano, violins, and a translucent face overlay.",
-    "detailed_caption": "A wide shot shows students performing on a stage decorated with colorful balloons against brown curtains. A student sits playing an upright piano on the left, followed by a student playing a wind instrument and three violinists. A faint translucent image of a person's face is superimposed over the background. A student walks in the foreground from right to left.",
-    "caption_vi": "Học sinh biểu diễn âm nhạc trên sân khấu với piano, violin và hình ảnh mờ trên nền.",
-    "detailed_caption_vi": "Ảnh toàn cảnh cho thấy học sinh biểu diễn trên sân khấu trang trí bóng bay đầy màu sắc trước phông rèm nâu. Một học sinh ngồi chơi đàn piano ở bên trái, tiếp theo là học sinh chơi kèn và ba người chơi violin. Hình ảnh khuôn mặt mờ ảo được chồng lên phông nền. Một học sinh đang đi ở tiền cảnh từ phải sang trái.",
+    "caption": "Several students in school uniforms are performing on a stage with musical instruments.",
+    "detailed_caption": "A wide shot shows several students performing on a stage in front of a curtain backdrop. On the left, a student plays the piano, followed by another student playing a wind instrument at a music stand. Three students in the center and right play violins. A girl in a white shirt and red skirt walks across the foreground from right to left.",
+    "caption_vi": "Nhiều học sinh mặc đồng phục đang biểu diễn trên sân khấu với các nhạc cụ.",
+    "detailed_caption_vi": "Toàn cảnh ghi lại nhiều học sinh đang biểu diễn trên sân khấu trước phông rèm. Ở bên trái, một học sinh chơi piano, tiếp theo là học sinh khác thổi kèn cạnh giá nhạc. Ba học sinh ở giữa và bên phải đang chơi violin. Một nữ sinh mặc áo trắng váy đỏ đang bước đi ở tiền cảnh từ phải sang trái.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -11532,81 +11641,45 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.604,
-          0.297,
-          0.783,
+          0.6,
+          0.303,
+          0.78,
           1.0
         ],
-        "description": "student walking in the foreground",
-        "description_vi": "học sinh đang đi ở tiền cảnh",
+        "description": "a girl in a white shirt and red skirt walking",
+        "description_vi": "một nữ sinh mặc áo trắng váy đỏ đang đi bộ",
         "attributes": [
-          "white",
-          "red"
+          "white shirt",
+          "red skirt"
         ],
         "action": "walking"
-      },
-      {
-        "object_id": "person_1",
-        "label": "person",
-        "bbox": [
-          0.725,
-          0.126,
-          0.808,
-          0.574
-        ],
-        "description": "student playing violin on stage",
-        "description_vi": "học sinh chơi violin trên sân khấu",
-        "attributes": [
-          "white",
-          "red"
-        ],
-        "action": "playing violin"
       },
       {
         "object_id": "piano_0",
         "label": "piano",
         "bbox": [
-          0.072,
-          0.247,
-          0.252,
-          0.597
+          0.075,
+          0.245,
+          0.25,
+          0.589
         ],
-        "description": "black upright piano",
-        "description_vi": "đàn piano đứng màu đen",
+        "description": "an upright black piano on the stage",
+        "description_vi": "một cây đàn piano màu đen trên sân khấu",
         "attributes": [
-          "black"
+          "black",
+          "upright"
         ],
-        "action": "playing"
+        "action": "being played"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
         "subject_id": "piano_0",
         "predicate": "left_of",
         "object_id": "person_0"
       },
       {
         "subject_id": "person_0",
-        "predicate": "right_of",
-        "object_id": "piano_0"
-      },
-      {
-        "subject_id": "piano_0",
-        "predicate": "left_of",
-        "object_id": "person_1"
-      },
-      {
-        "subject_id": "person_1",
         "predicate": "right_of",
         "object_id": "piano_0"
       }
@@ -11802,11 +11875,11 @@
     "visual_source_frame_id": "L25_V052_f0216",
     "ocr_source_frame_id": "L25_V052_f0216",
     "quality_flags": [],
-    "caption": "A male teacher in a light blue shirt looks forward while sitting at a desk with a laptop.",
-    "detailed_caption": "A medium shot shows a young male teacher wearing glasses and a light blue button-down shirt sitting behind a laptop. A monitor to the right displays an online math problem and its solution. The background features a dark chalkboard with faint educational diagrams.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt nhìn về phía trước khi ngồi bên máy tính.",
-    "detailed_caption_vi": "Ảnh trung cảnh cho thấy một nam giáo viên trẻ đeo kính và mặc áo sơ mi xanh nhạt ngồi sau máy tính xách tay. Màn hình bên phải hiển thị một bài toán trực tuyến và lời giải. Phía sau là bảng đen với các sơ đồ giáo dục mờ.",
-    "ocr_text": "THÀNH NIÊN Ví dụ 3. Cho số phức z thỏa mãn z - 4 = (i + 1)|z| - (3z + 4)i. Mệnh đề nào dưới đây đúng? (A) |z| \\in (6;9). (B) |z| \\in (4;6). (C) |z| \\in (1;4) (D) |z| \\in (0;1). Lời giải. Ta có z - 4 = (i + 1)|z| - (3z + 4)i \\iff z - 4 = i|z| + |z| - 3zi - 4i. \\iff z + 3zi = i|z| + |z| - 4i + 4. \\iff (1 + 3i)z = (4 + |z|) + (|z| - 4)i. Lấy mô-đun hai vế, ta được |1 + 3i| . |z| = \\sqrt{(4 + |z|)^2 + (|z| - 4)^2} \\iff \\sqrt{10}|z| = \\sqrt{2|z|^2 + 32} \\iff 10|z|^2 = 2|z|^2 + 32 \\iff |z|^2 = 4 \\iff |z| = 2. Chọn đáp án C ASUS",
+    "caption": "A male teacher in a light blue shirt and glasses sits at a desk with a laptop, beside a digital math lesson screen.",
+    "detailed_caption": "A medium shot shows a male teacher wearing glasses and a light blue long-sleeve shirt seated behind a grey laptop on a white desk. To his right, a digital screen displays a math problem and solution text in Vietnamese. The background consists of a dark chalkboard covered in mathematical formulas and diagrams.",
+    "caption_vi": "Một nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính đang ngồi bên máy tính xách tay cạnh màn hình bài giảng toán.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một nam giáo viên đeo kính và mặc áo sơ mi dài tay màu xanh nhạt, đang ngồi sau máy tính xách tay màu xám trên bàn trắng. Phía bên phải anh là một màn hình hiển thị bài toán và lời giải bằng tiếng Việt. Phía sau là bảng đen với các công thức toán học và hình vẽ.",
+    "ocr_text": "THANH NIÊN Ví dụ 3. Cho số phức z thỏa mãn z - 4 = (i + 1)|z| - (3z + 4)i. Mệnh đề nào dưới đây đúng? A z E (6; 9). B |z| ∈ (4; 6). C z ∈ (1; 4) D |z| ∈ (0; 1). Lời giải. Ta có z-4 = (i+1)|z| (3z+4)i z-4 = i|z| + |z|- 3zi-4i. z+3zi i|z| + |z| - 4i + 4. (1+3i)z = (4+|z|) + (iz - 4)i. Lấy mô-dun hai vế, ta được |1 + 3i|-|z| = √(4+|z|)² + (|z| - 4)² √10|z| = √2|z|² + 32 10|z|² = 2|z|² + 32 → |z|² = 4 = |z| = 2. Chọn đáp án C ASUS",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11814,30 +11887,15 @@
         "label": "laptop",
         "bbox": [
           0.11699999999999999,
-          0.7979999999999999,
+          0.8,
           0.368,
-          0.992
+          0.995
         ],
-        "description": "grey Asus laptop",
-        "description_vi": "máy tính xách tay Asus màu xám",
+        "description": "a grey laptop computer on the desk",
+        "description_vi": "một máy tính xách tay màu xám trên bàn",
         "attributes": [
-          "grey"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "monitor_0",
-        "label": "monitor",
-        "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.999,
-          0.513
-        ],
-        "description": "monitor displaying math equations",
-        "description_vi": "màn hình hiển thị các phương trình toán học",
-        "attributes": [
-          "screen"
+          "grey",
+          "laptop"
         ],
         "action": ""
       },
@@ -11845,18 +11903,36 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06899999999999999,
+          0.068,
           0.201,
-          0.399,
-          0.963
+          0.396,
+          0.9329999999999999
         ],
-        "description": "young male teacher wearing glasses and light blue shirt",
-        "description_vi": "nam giáo viên trẻ đeo kính và áo sơ mi xanh nhạt",
+        "description": "a male teacher with glasses and a light blue shirt",
+        "description_vi": "một nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
-          "light blue shirt"
+          "light blue shirt",
+          "male"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.521
+        ],
+        "description": "a digital monitor displaying math formulas and problems",
+        "description_vi": "màn hình hiển thị các công thức và bài toán",
+        "attributes": [
+          "digital",
+          "rectangular"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -11873,10 +11949,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "monitor_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "monitor_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -11884,16 +11960,14 @@
   },
   {
     "frame_id": "L25_V052_f0217",
-    "visual_source_frame_id": "L25_V052_f0216",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher in a light blue shirt looks forward while sitting at a desk with a laptop.",
-    "detailed_caption": "A medium shot shows a young male teacher wearing glasses and a light blue button-down shirt sitting behind a laptop. A monitor to the right displays an online math problem and its solution. The background features a dark chalkboard with faint educational diagrams.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt nhìn về phía trước khi ngồi bên máy tính.",
-    "detailed_caption_vi": "Ảnh trung cảnh cho thấy một nam giáo viên trẻ đeo kính và mặc áo sơ mi xanh nhạt ngồi sau máy tính xách tay. Màn hình bên phải hiển thị một bài toán trực tuyến và lời giải. Phía sau là bảng đen với các sơ đồ giáo dục mờ.",
-    "ocr_text": "THÀNH NIÊN Ví dụ 3. Cho số phức z thỏa mãn z - 4 = (i + 1)|z| - (3z + 4)i. Mệnh đề nào dưới đây đúng? (A) |z| \\in (6;9). (B) |z| \\in (4;6). (C) |z| \\in (1;4) (D) |z| \\in (0;1). Lời giải. Ta có z - 4 = (i + 1)|z| - (3z + 4)i \\iff z - 4 = i|z| + |z| - 3zi - 4i. \\iff z + 3zi = i|z| + |z| - 4i + 4. \\iff (1 + 3i)z = (4 + |z|) + (|z| - 4)i. Lấy mô-đun hai vế, ta được |1 + 3i| . |z| = \\sqrt{(4 + |z|)^2 + (|z| - 4)^2} \\iff \\sqrt{10}|z| = \\sqrt{2|z|^2 + 32} \\iff 10|z|^2 = 2|z|^2 + 32 \\iff |z|^2 = 4 \\iff |z| = 2. Chọn đáp án C ASUS",
+    "visual_source_frame_id": "L25_V052_f0217",
+    "ocr_source_frame_id": "L25_V052_f0217",
+    "quality_flags": [],
+    "caption": "A male teacher in a light blue shirt sits at a desk with a laptop next to a digital math lesson screen.",
+    "detailed_caption": "A medium shot captures the male teacher in a light blue shirt seated at a white desk with a grey laptop in front of him. A digital screen to the right displays a Vietnamese math problem about complex numbers. A lower-third graphic with teacher information is displayed at the bottom right.",
+    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bàn làm việc với máy tính xách tay cạnh màn hình bài giảng toán.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại nam giáo viên mặc áo sơ mi xanh nhạt ngồi bên bàn trắng với máy tính xách tay màu xám phía trước. Màn hình kỹ thuật số bên phải hiển thị một bài toán số phức bằng tiếng Việt. Bảng thông tin giáo viên xuất hiện ở góc dưới bên phải.",
+    "ocr_text": "THANH NIÊN Ví dụ 4. Cho z và w là hai số phức liên hợp thỏa mãn z/w² là số thực và |z - w| = 2√3. Mệnh đề nào sau đây là đúng? A |z| < 1. B 3 < |z| < 4. C |z| > 4. D 1 < |z| < 3 Thầy LÊ MINH HUY Giáo viên môn Toán Trường THPT Nguyễn Hiền (Q.11, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11901,30 +11975,14 @@
         "label": "laptop",
         "bbox": [
           0.11699999999999999,
-          0.7979999999999999,
+          0.8,
           0.368,
-          0.992
+          0.995
         ],
-        "description": "grey Asus laptop",
-        "description_vi": "máy tính xách tay Asus màu xám",
+        "description": "a grey laptop on the desk",
+        "description_vi": "máy tính xách tay màu xám trên bàn",
         "attributes": [
           "grey"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "monitor_0",
-        "label": "monitor",
-        "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.999,
-          0.513
-        ],
-        "description": "monitor displaying math equations",
-        "description_vi": "màn hình hiển thị các phương trình toán học",
-        "attributes": [
-          "screen"
         ],
         "action": ""
       },
@@ -11932,18 +11990,35 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06899999999999999,
-          0.201,
-          0.399,
-          0.963
+          0.071,
+          0.18699999999999997,
+          0.392,
+          0.9380000000000001
         ],
-        "description": "young male teacher wearing glasses and light blue shirt",
-        "description_vi": "nam giáo viên trẻ đeo kính và áo sơ mi xanh nhạt",
+        "description": "a male teacher wearing a light blue shirt and glasses",
+        "description_vi": "nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính",
         "attributes": [
           "glasses",
           "light blue shirt"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.521
+        ],
+        "description": "a display screen showing mathematical text in Vietnamese",
+        "description_vi": "màn hình hiển thị nội dung toán học bằng tiếng Việt",
+        "attributes": [
+          "digital",
+          "display"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -11960,10 +12035,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "monitor_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "monitor_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -11971,16 +12046,14 @@
   },
   {
     "frame_id": "L25_V052_f0218",
-    "visual_source_frame_id": "L25_V052_f0216",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher in a light blue shirt looks forward while sitting at a desk with a laptop.",
-    "detailed_caption": "A medium shot shows a young male teacher wearing glasses and a light blue button-down shirt sitting behind a laptop. A monitor to the right displays an online math problem and its solution. The background features a dark chalkboard with faint educational diagrams.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt nhìn về phía trước khi ngồi bên máy tính.",
-    "detailed_caption_vi": "Ảnh trung cảnh cho thấy một nam giáo viên trẻ đeo kính và mặc áo sơ mi xanh nhạt ngồi sau máy tính xách tay. Màn hình bên phải hiển thị một bài toán trực tuyến và lời giải. Phía sau là bảng đen với các sơ đồ giáo dục mờ.",
-    "ocr_text": "THÀNH NIÊN Ví dụ 3. Cho số phức z thỏa mãn z - 4 = (i + 1)|z| - (3z + 4)i. Mệnh đề nào dưới đây đúng? (A) |z| \\in (6;9). (B) |z| \\in (4;6). (C) |z| \\in (1;4) (D) |z| \\in (0;1). Lời giải. Ta có z - 4 = (i + 1)|z| - (3z + 4)i \\iff z - 4 = i|z| + |z| - 3zi - 4i. \\iff z + 3zi = i|z| + |z| - 4i + 4. \\iff (1 + 3i)z = (4 + |z|) + (|z| - 4)i. Lấy mô-đun hai vế, ta được |1 + 3i| . |z| = \\sqrt{(4 + |z|)^2 + (|z| - 4)^2} \\iff \\sqrt{10}|z| = \\sqrt{2|z|^2 + 32} \\iff 10|z|^2 = 2|z|^2 + 32 \\iff |z|^2 = 4 \\iff |z| = 2. Chọn đáp án C ASUS",
+    "visual_source_frame_id": "L25_V052_f0218",
+    "ocr_source_frame_id": "L25_V052_f0218",
+    "quality_flags": [],
+    "caption": "A male teacher in a light blue shirt sits at a desk with a laptop next to a digital math lesson screen.",
+    "detailed_caption": "A medium shot shows the male teacher in a light blue shirt and glasses sitting at a white desk with a laptop. A digital display screen to the right shows a math problem in Vietnamese against a lined background. The background features a dark chalkboard.",
+    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bên máy tính xách tay cạnh màn hình bài toán.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính đang ngồi tại bàn làm việc màu trắng có máy tính xách tay. Màn hình hiển thị bên phải trình bày bài toán tiếng Việt trên nền giấy kẻ ô. Phía sau là bảng đen.",
+    "ocr_text": "THANH NIÊN Ví dụ 4. Cho z và w là hai số phức liên hợp thỏa mãn z/w² là số thực và |z - w| = 2√3. Mệnh đề nào sau đây là đúng? A |z| < 1. B 3 < |z| < 4. C |z| > 4. D 1 < |z| < 3",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11988,30 +12061,14 @@
         "label": "laptop",
         "bbox": [
           0.11699999999999999,
-          0.7979999999999999,
+          0.8,
           0.368,
-          0.992
+          0.995
         ],
-        "description": "grey Asus laptop",
-        "description_vi": "máy tính xách tay Asus màu xám",
+        "description": "a grey laptop on the white desk",
+        "description_vi": "máy tính xách tay màu xám trên bàn trắng",
         "attributes": [
           "grey"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "monitor_0",
-        "label": "monitor",
-        "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.999,
-          0.513
-        ],
-        "description": "monitor displaying math equations",
-        "description_vi": "màn hình hiển thị các phương trình toán học",
-        "attributes": [
-          "screen"
         ],
         "action": ""
       },
@@ -12019,18 +12076,34 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06899999999999999,
-          0.201,
-          0.399,
-          0.963
+          0.08299999999999999,
+          0.18699999999999997,
+          0.396,
+          0.9590000000000001
         ],
-        "description": "young male teacher wearing glasses and light blue shirt",
-        "description_vi": "nam giáo viên trẻ đeo kính và áo sơ mi xanh nhạt",
+        "description": "a male teacher with glasses and a light blue shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
           "light blue shirt"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.521
+        ],
+        "description": "a monitor displaying a math problem",
+        "description_vi": "màn hình hiển thị bài toán",
+        "attributes": [
+          "digital"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -12047,10 +12120,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "monitor_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "monitor_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -12058,16 +12131,14 @@
   },
   {
     "frame_id": "L25_V052_f0219",
-    "visual_source_frame_id": "L25_V052_f0216",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher in a light blue shirt looks forward while sitting at a desk with a laptop.",
-    "detailed_caption": "A medium shot shows a young male teacher wearing glasses and a light blue button-down shirt sitting behind a laptop. A monitor to the right displays an online math problem and its solution. The background features a dark chalkboard with faint educational diagrams.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt nhìn về phía trước khi ngồi bên máy tính.",
-    "detailed_caption_vi": "Ảnh trung cảnh cho thấy một nam giáo viên trẻ đeo kính và mặc áo sơ mi xanh nhạt ngồi sau máy tính xách tay. Màn hình bên phải hiển thị một bài toán trực tuyến và lời giải. Phía sau là bảng đen với các sơ đồ giáo dục mờ.",
-    "ocr_text": "THÀNH NIÊN Ví dụ 3. Cho số phức z thỏa mãn z - 4 = (i + 1)|z| - (3z + 4)i. Mệnh đề nào dưới đây đúng? (A) |z| \\in (6;9). (B) |z| \\in (4;6). (C) |z| \\in (1;4) (D) |z| \\in (0;1). Lời giải. Ta có z - 4 = (i + 1)|z| - (3z + 4)i \\iff z - 4 = i|z| + |z| - 3zi - 4i. \\iff z + 3zi = i|z| + |z| - 4i + 4. \\iff (1 + 3i)z = (4 + |z|) + (|z| - 4)i. Lấy mô-đun hai vế, ta được |1 + 3i| . |z| = \\sqrt{(4 + |z|)^2 + (|z| - 4)^2} \\iff \\sqrt{10}|z| = \\sqrt{2|z|^2 + 32} \\iff 10|z|^2 = 2|z|^2 + 32 \\iff |z|^2 = 4 \\iff |z| = 2. Chọn đáp án C ASUS",
+    "visual_source_frame_id": "L25_V052_f0219",
+    "ocr_source_frame_id": "L25_V052_f0219",
+    "quality_flags": [],
+    "caption": "A male teacher in a light blue shirt sits at a desk with a laptop in front of a math lesson screen.",
+    "detailed_caption": "A medium shot captures the male teacher wearing a light blue shirt and glasses, seated behind a laptop on a white desk. A digital screen on the right displays a Vietnamese math problem regarding complex numbers. The background is a dark chalkboard with chalk diagrams.",
+    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bên máy tính xách tay trước màn hình bài toán.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi nhận nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính đang ngồi sau máy tính xách tay trên bàn trắng. Màn hình bên phải hiển thị bài toán số phức bằng tiếng Việt. Phía sau là bảng đen với các hình vẽ phấn trắng.",
+    "ocr_text": "THANH NIÊN Ví dụ 4. Cho z và w là hai số phức liên hợp thỏa mãn z/w² là số thực và |z - w| = 2√3. Mệnh đề nào sau đây là đúng? A |z| < 1. B 3 < |z| < 4. C |z| > 4. D 1 < |z| < 3",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12075,30 +12146,14 @@
         "label": "laptop",
         "bbox": [
           0.11699999999999999,
-          0.7979999999999999,
+          0.8,
           0.368,
-          0.992
+          0.995
         ],
-        "description": "grey Asus laptop",
-        "description_vi": "máy tính xách tay Asus màu xám",
+        "description": "a grey laptop computer",
+        "description_vi": "máy tính xách tay màu xám",
         "attributes": [
           "grey"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "monitor_0",
-        "label": "monitor",
-        "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.999,
-          0.513
-        ],
-        "description": "monitor displaying math equations",
-        "description_vi": "màn hình hiển thị các phương trình toán học",
-        "attributes": [
-          "screen"
         ],
         "action": ""
       },
@@ -12106,18 +12161,34 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06899999999999999,
+          0.08299999999999999,
           0.201,
-          0.399,
-          0.963
+          0.396,
+          0.9590000000000001
         ],
-        "description": "young male teacher wearing glasses and light blue shirt",
-        "description_vi": "nam giáo viên trẻ đeo kính và áo sơ mi xanh nhạt",
+        "description": "a male teacher with glasses and a light blue shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
           "light blue shirt"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.521
+        ],
+        "description": "a display screen showing a math question",
+        "description_vi": "màn hình hiển thị câu hỏi toán",
+        "attributes": [
+          "digital"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -12134,10 +12205,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "monitor_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "monitor_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -12145,16 +12216,14 @@
   },
   {
     "frame_id": "L25_V052_f0220",
-    "visual_source_frame_id": "L25_V052_f0216",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A male teacher in a light blue shirt looks forward while sitting at a desk with a laptop.",
-    "detailed_caption": "A medium shot shows a young male teacher wearing glasses and a light blue button-down shirt sitting behind a laptop. A monitor to the right displays an online math problem and its solution. The background features a dark chalkboard with faint educational diagrams.",
-    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt nhìn về phía trước khi ngồi bên máy tính.",
-    "detailed_caption_vi": "Ảnh trung cảnh cho thấy một nam giáo viên trẻ đeo kính và mặc áo sơ mi xanh nhạt ngồi sau máy tính xách tay. Màn hình bên phải hiển thị một bài toán trực tuyến và lời giải. Phía sau là bảng đen với các sơ đồ giáo dục mờ.",
-    "ocr_text": "THÀNH NIÊN Ví dụ 3. Cho số phức z thỏa mãn z - 4 = (i + 1)|z| - (3z + 4)i. Mệnh đề nào dưới đây đúng? (A) |z| \\in (6;9). (B) |z| \\in (4;6). (C) |z| \\in (1;4) (D) |z| \\in (0;1). Lời giải. Ta có z - 4 = (i + 1)|z| - (3z + 4)i \\iff z - 4 = i|z| + |z| - 3zi - 4i. \\iff z + 3zi = i|z| + |z| - 4i + 4. \\iff (1 + 3i)z = (4 + |z|) + (|z| - 4)i. Lấy mô-đun hai vế, ta được |1 + 3i| . |z| = \\sqrt{(4 + |z|)^2 + (|z| - 4)^2} \\iff \\sqrt{10}|z| = \\sqrt{2|z|^2 + 32} \\iff 10|z|^2 = 2|z|^2 + 32 \\iff |z|^2 = 4 \\iff |z| = 2. Chọn đáp án C ASUS",
+    "visual_source_frame_id": "L25_V052_f0220",
+    "ocr_source_frame_id": "L25_V052_f0220",
+    "quality_flags": [],
+    "caption": "A male teacher in a light blue shirt sits at a desk with a laptop next to a digital math screen.",
+    "detailed_caption": "A medium shot features the male teacher in a light blue shirt and glasses seated at a white desk with a laptop. To his right, a digital screen displays a math problem in Vietnamese. The background is a dark chalkboard with mathematical drawings.",
+    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bàn làm việc với máy tính xách tay cạnh màn hình toán học.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính đang ngồi tại bàn trắng có máy tính xách tay. Phía bên phải là màn hình kỹ thuật số hiển thị bài toán tiếng Việt. Phía sau là bảng đen với các hình vẽ toán học.",
+    "ocr_text": "THANH NIÊN Ví dụ 4. Cho z và w là hai số phức liên hợp thỏa mãn z/w² là số thực và |z - w| = 2√3. Mệnh đề nào sau đây là đúng? A |z| < 1. B 3 < |z| < 4. C |z| > 4. D 1 < |z| < 3",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12162,30 +12231,14 @@
         "label": "laptop",
         "bbox": [
           0.11699999999999999,
-          0.7979999999999999,
+          0.8,
           0.368,
-          0.992
+          0.995
         ],
-        "description": "grey Asus laptop",
-        "description_vi": "máy tính xách tay Asus màu xám",
+        "description": "a grey laptop on the desk",
+        "description_vi": "máy tính xách tay màu xám trên bàn",
         "attributes": [
           "grey"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "monitor_0",
-        "label": "monitor",
-        "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.999,
-          0.513
-        ],
-        "description": "monitor displaying math equations",
-        "description_vi": "màn hình hiển thị các phương trình toán học",
-        "attributes": [
-          "screen"
         ],
         "action": ""
       },
@@ -12193,18 +12246,34 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06899999999999999,
+          0.078,
           0.201,
-          0.399,
-          0.963
+          0.4,
+          0.9590000000000001
         ],
-        "description": "young male teacher wearing glasses and light blue shirt",
-        "description_vi": "nam giáo viên trẻ đeo kính và áo sơ mi xanh nhạt",
+        "description": "a male teacher with glasses and a light blue shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
           "light blue shirt"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.521
+        ],
+        "description": "a digital screen showing a math lesson",
+        "description_vi": "màn hình kỹ thuật số hiển thị bài học toán",
+        "attributes": [
+          "digital"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -12221,10 +12290,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "monitor_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "monitor_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -15824,11 +15893,11 @@
     "visual_source_frame_id": "L25_V052_f0313",
     "ocr_source_frame_id": "L25_V052_f0313",
     "quality_flags": [],
-    "caption": "A male teacher looks down at his laptop while a monitor displays a math problem.",
-    "detailed_caption": "A medium shot shows a young male teacher wearing glasses and a light blue shirt looking down while sitting behind a laptop. To his right, a screen displays a math problem about complex numbers. The background consists of a dark chalkboard with faint geometric drawings.",
-    "caption_vi": "Nam giáo viên nhìn xuống máy tính trong khi màn hình hiển thị bài toán.",
-    "detailed_caption_vi": "Ảnh trung cảnh cho thấy nam giáo viên trẻ đeo kính và mặc áo sơ mi xanh nhạt đang nhìn xuống khi ngồi sau máy tính xách tay. Bên phải, màn hình hiển thị bài toán về số phức. Phía sau là bảng đen tối màu với các hình vẽ hình học mờ.",
-    "ocr_text": "THÀNH NIÊN Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô-đun của số phức w - z bằng A 4\\sqrt{2} B 2 C 4 D 2\\sqrt{2} Lời giải. ASUS",
+    "caption": "A male teacher in a light blue shirt sits at a desk with a laptop next to a digital math screen.",
+    "detailed_caption": "A medium shot displays the male teacher in a light blue shirt and glasses sitting behind a laptop on a white desk. A digital screen on the right presents a Vietnamese math problem about complex numbers. A dark chalkboard with diagrams forms the background.",
+    "caption_vi": "Nam giáo viên mặc áo sơ mi xanh nhạt ngồi bên máy tính xách tay cạnh màn hình bài toán.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị nam giáo viên mặc áo sơ mi xanh nhạt và đeo kính đang ngồi sau máy tính xách tay trên bàn trắng. Màn hình bên phải trình bày bài toán số phức bằng tiếng Việt. Bảng đen với các hình vẽ tạo nên hậu cảnh.",
+    "ocr_text": "THANH NIÊN Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A 4√2. B 2. C 4 D 2√2. Lời giải.",
     "news_ticker_text": "",
     "detections": [
       {
@@ -15836,30 +15905,14 @@
         "label": "laptop",
         "bbox": [
           0.11699999999999999,
-          0.7979999999999999,
+          0.8,
           0.368,
-          0.992
+          0.995
         ],
-        "description": "grey Asus laptop",
-        "description_vi": "máy tính xách tay Asus màu xám",
+        "description": "a grey laptop on the desk",
+        "description_vi": "máy tính xách tay màu xám trên bàn",
         "attributes": [
           "grey"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "monitor_0",
-        "label": "monitor",
-        "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.999,
-          0.513
-        ],
-        "description": "screen displaying a math problem",
-        "description_vi": "màn hình hiển thị bài toán",
-        "attributes": [
-          "screen"
         ],
         "action": ""
       },
@@ -15867,18 +15920,34 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.076,
-          0.20299999999999999,
-          0.403,
-          0.963
+          0.078,
+          0.201,
+          0.4,
+          0.9590000000000001
         ],
-        "description": "young male teacher wearing glasses and a light blue shirt",
-        "description_vi": "nam giáo viên trẻ đeo kính và mặc áo sơ mi xanh nhạt",
+        "description": "a male teacher with glasses and a light blue shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi xanh nhạt",
         "attributes": [
           "glasses",
           "light blue shirt"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.45199999999999996,
+          0.011,
+          0.993,
+          0.521
+        ],
+        "description": "a display screen showing math problem text",
+        "description_vi": "màn hình hiển thị nội dung bài toán",
+        "attributes": [
+          "digital"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -15895,10 +15964,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "monitor_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "monitor_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -16705,27 +16774,27 @@
     "visual_source_frame_id": "L25_V052_f0334",
     "ocr_source_frame_id": "L25_V052_f0334",
     "quality_flags": [],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "caption": "A close-up of a digital math lesson screen displaying a geometry problem and solution.",
+    "detailed_caption": "A close-up shot shows a digital screen displaying a math lesson with text and a geometric triangle diagram on the right. The text includes problem statements, formulas, and step-by-step solutions in Vietnamese. The screen has a pale yellow lined background.",
+    "caption_vi": "Cận cảnh màn hình bài giảng toán kỹ thuật số hiển thị đề bài hình học và lời giải.",
+    "detailed_caption_vi": "Cận cảnh màn hình hiển thị bài học toán với văn bản và hình vẽ tam giác hình học ở bên phải. Phần văn bản bao gồm đề bài, công thức và các bước giải chi tiết bằng tiếng Việt. Màn hình có nền giấy kẻ ô màu vàng nhạt.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A 4√2. B 2. C 4 D 2√2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = √2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên ∆OAB vuông cân tại A. A |z| /z/ √2|z| O B",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.737,
-          0.28800000000000003,
-          0.9359999999999999,
-          0.521
+          0.738,
+          0.3,
+          0.931,
+          0.515
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a geometric triangle diagram with labeled vertices and sides",
+        "description_vi": "sơ đồ hình học tam giác với các đỉnh và cạnh được chú thích",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangle"
         ],
         "action": ""
       }
@@ -16737,27 +16806,27 @@
     "visual_source_frame_id": "L25_V052_f0335",
     "ocr_source_frame_id": "L25_V052_f0335",
     "quality_flags": [],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "caption": "A close-up of a digital math lesson screen displaying a geometry problem and solution steps.",
+    "detailed_caption": "A close-up shot shows a digital screen displaying a math lesson with text and a geometric triangle diagram on the right. The text details the solution steps for a complex number geometry problem in Vietnamese. The screen background is pale yellow with horizontal lines.",
+    "caption_vi": "Cận cảnh màn hình bài giảng toán hiển thị đề bài hình học và các bước giải.",
+    "detailed_caption_vi": "Cận cảnh màn hình hiển thị bài học toán với văn bản và sơ đồ tam giác hình học bên phải. Văn bản trình bày chi tiết các bước giải bài toán hình học số phức bằng tiếng Việt. Nền màn hình có màu vàng nhạt với các đường kẻ ngang.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A 4√2. B 2. C 4 D 2√2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = √2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên ∆OAB vuông cân tại A. A |z| /z/ √2|z| O B",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
-          0.287,
-          0.9369999999999999,
-          0.52
+          0.738,
+          0.3,
+          0.931,
+          0.515
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a geometric triangle diagram with labeled vertices",
+        "description_vi": "sơ đồ hình học tam giác với các đỉnh được chú thích",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangle"
         ],
         "action": ""
       }
@@ -16766,32 +16835,30 @@
   },
   {
     "frame_id": "L25_V052_f0336",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0336",
+    "ocr_source_frame_id": "L25_V052_f0336",
+    "quality_flags": [],
+    "caption": "A close-up of a digital math lesson screen displaying a geometry problem and solution steps.",
+    "detailed_caption": "A close-up shot shows a digital screen displaying a math lesson with text and a geometric triangle diagram on the right. The text details the solution steps for a complex number geometry problem in Vietnamese. The screen background is pale yellow with horizontal lines.",
+    "caption_vi": "Cận cảnh màn hình bài giảng toán hiển thị đề bài hình học và các bước giải.",
+    "detailed_caption_vi": "Cận cảnh màn hình hiển thị bài học toán với văn bản và sơ đồ tam giác hình học bên phải. Văn bản trình bày chi tiết các bước giải bài toán hình học số phức bằng tiếng Việt. Nền màn hình có màu vàng nhạt với các đường kẻ ngang.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A 4√2. B 2. C 4 D 2√2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = √2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên ∆OAB vuông cân tại A. A |z| /z/ √2|z| O B",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
-          0.287,
-          0.9369999999999999,
-          0.52
+          0.738,
+          0.3,
+          0.931,
+          0.515
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a geometric triangle diagram with labeled vertices",
+        "description_vi": "sơ đồ hình học tam giác với các đỉnh được chú thích",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangle"
         ],
         "action": ""
       }
@@ -16800,32 +16867,30 @@
   },
   {
     "frame_id": "L25_V052_f0337",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0337",
+    "ocr_source_frame_id": "L25_V052_f0337",
+    "quality_flags": [],
+    "caption": "A close-up of a digital math lesson screen showing step-by-step solutions for a complex number geometry problem.",
+    "detailed_caption": "A close-up shot displays a digital screen with mathematical formulas and a triangle diagram on the right. The text presents the continuation of a geometry solution in Vietnamese, including area formulas. The background is a lined yellow digital page.",
+    "caption_vi": "Cận cảnh màn hình bài giảng toán hiển thị các bước giải tiếp theo cho bài toán hình học số phức.",
+    "detailed_caption_vi": "Cận cảnh màn hình hiển thị các công thức toán học và sơ đồ tam giác ở bên phải. Phần văn bản trình bày tiếp theo của lời giải hình học bằng tiếng Việt, bao gồm cả công thức tính diện tích. Nền màn hình là trang giấy vàng có kẻ dòng.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A 4√2. B 2. C 4 D 2√2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = √2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên ∆OAB vuông cân tại A. Mặt khác S_ABC = 8 ⇔ 1/2 OA . AB = 8 A |z| /z/ √2|z| O B",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
-          0.287,
-          0.9369999999999999,
-          0.52
+          0.738,
+          0.3,
+          0.931,
+          0.515
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a geometric triangle diagram with labeled vertices and side lengths",
+        "description_vi": "sơ đồ hình học tam giác với các đỉnh và độ dài cạnh được chú thích",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangle"
         ],
         "action": ""
       }
@@ -16834,32 +16899,30 @@
   },
   {
     "frame_id": "L25_V052_f0338",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0338",
+    "ocr_source_frame_id": "L25_V052_f0338",
+    "quality_flags": [],
+    "caption": "A close-up of a digital math lesson screen showing step-by-step solutions for a complex number geometry problem.",
+    "detailed_caption": "A close-up shot displays a digital screen with mathematical formulas and a triangle diagram on the right. The text presents the continuation of a geometry solution in Vietnamese, including area formulas and substitution steps. The background is a lined yellow digital page.",
+    "caption_vi": "Cận cảnh màn hình bài giảng toán hiển thị các bước giải tiếp theo cho bài toán hình học số phức.",
+    "detailed_caption_vi": "Cận cảnh màn hình hiển thị các công thức toán học và sơ đồ tam giác ở bên phải. Phần văn bản trình bày tiếp theo của lời giải hình học bằng tiếng Việt, bao gồm công thức diện tích và bước thay thế. Nền màn hình là trang giấy vàng có kẻ dòng.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A 4√2. B 2. C 4 D 2√2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = √2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên ∆OAB vuông cân tại A. Mặt khác S_ABC = 8 ⇔ 1/2 OA . AB = 8 ⇔ 1/2 |z| . |z| = 8 A |z| /z/ √2|z| O B",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
-          0.287,
-          0.9369999999999999,
-          0.52
+          0.738,
+          0.3,
+          0.931,
+          0.515
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a geometric triangle diagram with labeled vertices and side lengths",
+        "description_vi": "sơ đồ hình học tam giác với các đỉnh và độ dài cạnh được chú thích",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangle"
         ],
         "action": ""
       }
@@ -16868,32 +16931,30 @@
   },
   {
     "frame_id": "L25_V052_f0339",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0339",
+    "ocr_source_frame_id": "L25_V052_f0339",
+    "quality_flags": [],
+    "caption": "A close-up of a digital math lesson screen showing the final calculation steps for a complex number problem.",
+    "detailed_caption": "A close-up shot displays a digital screen showing the concluding steps of a math problem solution in Vietnamese. Formulas and calculations lead to the final result. A geometric triangle diagram is shown on the right against a pale yellow lined background.",
+    "caption_vi": "Cận cảnh màn hình bài giảng toán hiển thị các bước tính toán cuối cùng cho bài toán số phức.",
+    "detailed_caption_vi": "Cận cảnh màn hình hiển thị các bước kết luận của lời giải bài toán bằng tiếng Việt. Các công thức và phép tính dẫn đến kết quả cuối cùng. Sơ đồ tam giác hình học được đặt ở bên phải trên nền giấy vàng kẻ ô nhạt.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A 4√2. B 2. C 4 D 2√2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = √2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên ∆OAB vuông cân tại A. Mặt khác S_ABC = 8 ⇔ 1/2 OA . AB = 8 ⇔ 1/2 |z| . |z| = 8 ⇔ |z| = 4. A |z| /z/ √2|z| O B",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
-          0.287,
-          0.9369999999999999,
-          0.52
+          0.738,
+          0.3,
+          0.931,
+          0.515
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a geometric triangle diagram with labeled vertices and side lengths",
+        "description_vi": "sơ đồ hình học tam giác với các đỉnh và độ dài cạnh được chú thích",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangle"
         ],
         "action": ""
       }
@@ -16902,173 +16963,303 @@
   },
   {
     "frame_id": "L25_V052_f0340",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0340",
+    "ocr_source_frame_id": "L25_V052_f0340",
+    "quality_flags": [],
+    "caption": "A mathematical slide showing a complex numbers problem and its geometric solution with a triangle diagram on a light background.",
+    "detailed_caption": "A slide displays a math problem labeled Ví dụ 5 involving complex numbers in the Oxy coordinate plane. Below the problem text, step-by-step algebraic and geometric derivations are shown in purple text. On the right, a right-angled triangle diagram labeled with vertices O, A, and B illustrates the geometric relationship.",
+    "caption_vi": "Slide toán học trình bày bài tập số phức và hình vẽ tam giác vuông minh họa trên nền sáng.",
+    "detailed_caption_vi": "Slide hiển thị bài toán ví dụ 5 về số phức trong mặt phẳng tọa độ Oxy. Phía dưới là các bước giải chi tiết bằng chữ màu tím. Bên phải là hình vẽ tam giác vuông OAB minh họa cho lời giải.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng (A) 4c2. (B) 2. (C) 4 (D) 2c2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = −2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB^2 = OA^2 + AB^2 và OA = AB nên ┳OAB vuông cân tại A. Mặt khác S_ABC = 8 ↔ 1/2 OA * AB = 8 ↔ 1/2 |z| * |z| = 8 ↔ |z| = 4.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
+          0.735,
           0.287,
           0.9369999999999999,
-          0.52
+          0.517
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a right-angled triangle diagram with vertices O, A, and B",
+        "description_vi": "hình vẽ tam giác vuông với các đỉnh O, A và B",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.023,
+          0.075,
+          0.977,
+          0.9109999999999999
+        ],
+        "description": "a math problem slide with structured text and formulas",
+        "description_vi": "slide bài tập toán với văn bản và công thức",
+        "attributes": [
+          "textual",
+          "educational"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "diagram_0",
+        "predicate": "overlapping",
+        "object_id": "document_0"
+      },
+      {
+        "subject_id": "document_0",
+        "predicate": "overlapping",
+        "object_id": "diagram_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0341",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0341",
+    "ocr_source_frame_id": "L25_V052_f0341",
+    "quality_flags": [],
+    "caption": "A mathematical slide showing a complex numbers problem and its geometric solution with a triangle diagram on a light background.",
+    "detailed_caption": "A slide displays a math problem labeled Ví dụ 5 involving complex numbers in the Oxy coordinate plane. Below the problem text, step-by-step algebraic and geometric derivations are shown in purple text. On the right, a right-angled triangle diagram labeled with vertices O, A, and B illustrates the geometric relationship.",
+    "caption_vi": "Slide toán học trình bày bài tập số phức và hình vẽ tam giác vuông minh họa trên nền sáng.",
+    "detailed_caption_vi": "Slide hiển thị bài toán ví dụ 5 về số phức trong mặt phẳng tọa độ Oxy. Phía dưới là các bước giải chi tiết bằng chữ màu tím. Bên phải là hình vẽ tam giác vuông OAB minh họa cho lời giải.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng (A) 4c2. (B) 2. (C) 4 (D) 2c2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = −2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB^2 = OA^2 + AB^2 và OA = AB nên ┳OAB vuông cân tại A. Mặt khác S_ABC = 8 ↔ 1/2 OA * AB = 8 ↔ 1/2 |z| * |z| = 8 ↔ |z| = 4.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
+          0.735,
           0.287,
           0.9369999999999999,
-          0.52
+          0.517
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a right-angled triangle diagram with vertices O, A, and B",
+        "description_vi": "hình vẽ tam giác vuông với các đỉnh O, A và B",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.023,
+          0.075,
+          0.977,
+          0.9109999999999999
+        ],
+        "description": "a math problem slide with structured text and formulas",
+        "description_vi": "slide bài tập toán với văn bản và công thức",
+        "attributes": [
+          "textual",
+          "educational"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "diagram_0",
+        "predicate": "overlapping",
+        "object_id": "document_0"
+      },
+      {
+        "subject_id": "document_0",
+        "predicate": "overlapping",
+        "object_id": "diagram_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0342",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0342",
+    "ocr_source_frame_id": "L25_V052_f0342",
+    "quality_flags": [],
+    "caption": "A mathematical slide showing a complex numbers problem and its geometric solution with a triangle diagram on a light background.",
+    "detailed_caption": "A slide displays a math problem labeled Ví dụ 5 involving complex numbers in the Oxy coordinate plane. Below the problem text, step-by-step algebraic and geometric derivations are shown in purple text, concluding with the final result. On the right, a right-angled triangle diagram labeled with vertices O, A, and B illustrates the geometric relationship.",
+    "caption_vi": "Slide toán học trình bày bài tập số phức và kết quả giải toán với hình vẽ tam giác vuông.",
+    "detailed_caption_vi": "Slide hiển thị bài toán ví dụ 5 về số phức trong mặt phẳng tọa độ Oxy cùng các bước giải chi tiết. Dòng cuối cùng hiển thị kết luận của bài toán. Bên phải là hình vẽ tam giác vuông OAB.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng (A) 4c2. (B) 2. (C) 4 (D) 2c2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = −2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB^2 = OA^2 + AB^2 và OA = AB nên ┳OAB vuông cân tại A. Mặt khác S_ABC = 8 ↔ 1/2 OA * AB = 8 ↔ 1/2 |z| * |z| = 8 ↔ |z| = 4. Vậy |w - z| = |z| = 4.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
+          0.735,
           0.287,
           0.9369999999999999,
-          0.52
+          0.517
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a right-angled triangle diagram with vertices O, A, and B",
+        "description_vi": "hình vẽ tam giác vuông với các đỉnh O, A và B",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.023,
+          0.075,
+          0.977,
+          0.9109999999999999
+        ],
+        "description": "a math problem slide with structured text and formulas",
+        "description_vi": "slide bài tập toán với văn bản và công thức",
+        "attributes": [
+          "textual",
+          "educational"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "diagram_0",
+        "predicate": "overlapping",
+        "object_id": "document_0"
+      },
+      {
+        "subject_id": "document_0",
+        "predicate": "overlapping",
+        "object_id": "diagram_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0343",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0343",
+    "ocr_source_frame_id": "L25_V052_f0343",
+    "quality_flags": [],
+    "caption": "A mathematical slide showing a complex numbers problem and its geometric solution with a triangle diagram on a light background.",
+    "detailed_caption": "A slide displays a math problem labeled Ví dụ 5 involving complex numbers in the Oxy coordinate plane. Below the problem text, step-by-step algebraic and geometric derivations are shown in purple text, concluding with the final result. On the right, a right-angled triangle diagram labeled with vertices O, A, and B illustrates the geometric relationship.",
+    "caption_vi": "Slide toán học trình bày bài tập số phức và kết quả giải toán với hình vẽ tam giác vuông.",
+    "detailed_caption_vi": "Slide hiển thị bài toán ví dụ 5 về số phức trong mặt phẳng tọa độ Oxy cùng các bước giải chi tiết. Dòng cuối cùng hiển thị kết luận của bài toán. Bên phải là hình vẽ tam giác vuông OAB.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng (A) 4c2. (B) 2. (C) 4 (D) 2c2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = −2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB^2 = OA^2 + AB^2 và OA = AB nên ┳OAB vuông cân tại A. Mặt khác S_ABC = 8 ↔ 1/2 OA * AB = 8 ↔ 1/2 |z| * |z| = 8 ↔ |z| = 4. Vậy |w - z| = |z| = 4.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
+          0.735,
           0.287,
           0.9369999999999999,
-          0.52
+          0.517
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a right-angled triangle diagram with vertices O, A, and B",
+        "description_vi": "hình vẽ tam giác vuông với các đỉnh O, A và B",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.023,
+          0.075,
+          0.977,
+          0.9109999999999999
+        ],
+        "description": "a math problem slide with structured text and formulas",
+        "description_vi": "slide bài tập toán với văn bản và công thức",
+        "attributes": [
+          "textual",
+          "educational"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "diagram_0",
+        "predicate": "overlapping",
+        "object_id": "document_0"
+      },
+      {
+        "subject_id": "document_0",
+        "predicate": "overlapping",
+        "object_id": "diagram_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0344",
-    "visual_source_frame_id": "L25_V052_f0335",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A math slide displaying algebraic steps and a right-angled triangle diagram.",
-    "detailed_caption": "This medium shot displays a math slide with detailed algebraic formulas on the left and a geometric triangle diagram on the right. The text provides step-by-step calculations for complex numbers modulus. The right side shows triangle OAB with labeled vertices and sides.",
-    "caption_vi": "Một slide toán học hiển thị các bước biến đổi đại số và hình vẽ tam giác vuông.",
-    "detailed_caption_vi": "Khung hình hiển thị slide toán học với các công thức đại số chi tiết ở bên trái và sơ đồ tam giác hình học ở bên phải. Phần văn bản trình bày các bước tính toán môđun số phức. Phía bên phải là tam giác OAB với các đỉnh và cạnh được chú thích.",
-    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng A) 4\\sqrt{2}. B) 2. C) 4 D) 2\\sqrt{2}. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = \\sqrt{2}|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB² = OA² + AB² và OA = AB nên \\triangle OAB vuông cân tại A.",
+    "visual_source_frame_id": "L25_V052_f0344",
+    "ocr_source_frame_id": "L25_V052_f0344",
+    "quality_flags": [],
+    "caption": "A mathematical slide showing a complex numbers problem and its geometric solution with a triangle diagram on a light background.",
+    "detailed_caption": "A slide displays a math problem labeled Ví dụ 5 involving complex numbers in the Oxy coordinate plane. Below the problem text, step-by-step algebraic and geometric derivations are shown in purple text, concluding with the final result. On the right, a right-angled triangle diagram labeled with vertices O, A, and B illustrates the geometric relationship.",
+    "caption_vi": "Slide toán học trình bày bài tập số phức và kết quả giải toán với hình vẽ tam giác vuông.",
+    "detailed_caption_vi": "Slide hiển thị bài toán ví dụ 5 về số phức trong mặt phẳng tọa độ Oxy cùng các bước giải chi tiết. Dòng cuối cùng hiển thị kết luận của bài toán. Bên phải là hình vẽ tam giác vuông OAB.",
+    "ocr_text": "Ví dụ 5. Trong mặt phẳng Oxy, cho hai điểm A, B là điểm biểu diễn các số phức z và w = (1 + i)z. Biết tam giác OAB có diện tích bằng 8. Mô đun của số phức w - z bằng (A) 4c2. (B) 2. (C) 4 (D) 2c2. Lời giải. Ta có OA = |z|, OB = |w| = |(1 + i)z| = −2|z|, AB = |w - z| = |(1 + i)z - z| = |iz| = |z|. Ta lại có OB^2 = OA^2 + AB^2 và OA = AB nên ┳OAB vuông cân tại A. Mặt khác S_ABC = 8 ↔ 1/2 OA * AB = 8 ↔ 1/2 |z| * |z| = 8 ↔ |z| = 4. Vậy |w - z| = |z| = 4.",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "diagram_0",
         "label": "diagram",
         "bbox": [
-          0.739,
+          0.735,
           0.287,
           0.9369999999999999,
-          0.52
+          0.517
         ],
-        "description": "a geometric diagram of a right-angled triangle OAB",
-        "description_vi": "sơ đồ hình học của tam giác vuông OAB",
+        "description": "a right-angled triangle diagram with vertices O, A, and B",
+        "description_vi": "hình vẽ tam giác vuông với các đỉnh O, A và B",
         "attributes": [
-          "triangle",
-          "geometric"
+          "geometric",
+          "triangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.023,
+          0.075,
+          0.977,
+          0.9109999999999999
+        ],
+        "description": "a math problem slide with structured text and formulas",
+        "description_vi": "slide bài tập toán với văn bản và công thức",
+        "attributes": [
+          "textual",
+          "educational"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "diagram_0",
+        "predicate": "overlapping",
+        "object_id": "document_0"
+      },
+      {
+        "subject_id": "document_0",
+        "predicate": "overlapping",
+        "object_id": "diagram_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0345",
@@ -22223,68 +22414,154 @@
     "frame_id": "L25_V052_f0466",
     "visual_source_frame_id": "L25_V052_f0466",
     "ocr_source_frame_id": "L25_V052_f0466",
-    "quality_flags": [],
-    "caption": "A man wearing glasses and a light blue shirt sits in front of a laptop with a digital screen behind him.",
-    "detailed_caption": "This medium shot shows a man with dark hair and glasses, wearing a light blue button-down shirt, sitting behind a dark gray laptop. A large digital screen with math equations is mounted on the dark wall behind him.",
-    "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi xanh nhạt ngồi trước máy tính xách tay với màn hình kỹ thuật số phía sau.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông tóc tối màu đeo kính, mặc áo sơ mi cài khuy màu xanh nhạt, ngồi đằng sau máy tính xách tay màu xám tối. Một màn hình kỹ thuật số lớn có các phương trình toán học được treo trên bức tường tối phía sau anh ấy.",
-    "ocr_text": "THANH NIÊN Ví dụ 6. Cho hai số phức z1, z2 thuộc tập hợp S = {z \\in C : |iz - 2 - 3i| = 2} và thỏa mãn z1 + z2 = 4 - 2i. Tính A = |z1|2 + |z2|2. (A) A = 6. (B) A = 14. (C) A = 8. (D) A = 12. Lời giải. Ta có E(2; -1) và tâm I(3; -2) \\Rightarrow \\vec{EI} = (1; -1) \\Rightarrow EI = \\sqrt{2} \\Rightarrow MN = 2ME = 2\\sqrt{IM^2 - IE^2} = 2\\sqrt{2}. Trong \\Delta OMN, ta có OE^2 = \\frac{OM^2 + ON^2}{2} - \\frac{MN^2}{4} \\Rightarrow \\sqrt{2^2 + (-1)^2} = \\frac{OM^2 + ON^2}{2} - \\frac{(2\\sqrt{2})^2}{4}. \\Rightarrow OM^2 + ON^2 = 14.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A young male teacher wearing a light-colored shirt sits at a desk with a laptop in front of a dark chalkboard, with a math slide displayed on a screen above.",
+    "detailed_caption": "A with short dark hair and glasses, wearing a light blue button-down shirt, sits behind a desk facing forward. A gray laptop with an ASUS logo sits on the desk in front of him. In the background, a dark chalkboard features mathematical chalk formulas. A monitor screen in the upper right displays a geometry problem slide with a coordinate plane and circle diagram.",
+    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi sáng màu ngồi trước bàn làm việc với laptop, phía sau là bảng đen và màn hình hiển thị bài giảng toán.",
+    "detailed_caption_vi": "Một nam giáo viên trẻ tóc ngắn đeo kính, mặc áo sơ mi xanh nhạt ngồi trước bàn làm việc. Trên bàn đặt một chiếc laptop màu xám có logo ASUS. Phía sau là bảng đen viết công thức phấn trắng và màn hình phía trên hiển thị slide bài giảng toán hình học.",
+    "ocr_text": "THANH NIEN Ví dụ 6. Cho hai số phức z1, z2 thuộc tập hợp S = {z ∈ C : |iz - 2 - 3i| = 2} và thỏa mãn z1 + z2 = 4 - 2i. Tính A = |z1|^2 + |z2|^2. (A) A = 6. (B) A = 14 (C) A = 8. (D) A = 12. Lời giải. Ta có E(2; -1) và tâm I(3, -2) → EI = (1; -1) → EI = −2 → MN - 2ME = 2−IM^2 - II^2 = 2−2. Trong ┳OMN, ta có OE^2 = (OM^2 + ON^2)/2 - MN^2/4 → −2^2 + (-1)^2 = (OM^2 + ON^2)/2 - (2−2)^2/4 → OM^2 + ON^2 = 14.",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.9359999999999999
+        ],
+        "description": "a dark chalkboard background with faint white chalk writings",
+        "description_vi": "phông nền bảng đen tối màu có chữ phấn trắng mờ",
+        "attributes": [
+          "dark",
+          "textured"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.0,
+          0.929,
+          0.6719999999999999,
+          0.9939999999999999
+        ],
+        "description": "a white desk surface where the laptop is placed",
+        "description_vi": "mặt bàn màu trắng đặt máy tính xách tay",
+        "attributes": [
+          "white",
+          "flat"
+        ],
+        "action": ""
+      },
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.118,
-          0.7989999999999999,
+          0.11499999999999999,
+          0.7939999999999999,
           0.368,
-          0.992
+          0.9939999999999999
         ],
-        "description": "a dark gray laptop on a white desk",
-        "description_vi": "một máy tính xách tay màu xám tối trên bàn trắng",
+        "description": "a gray laptop computer with an ASUS logo on the lid",
+        "description_vi": "máy tính xách tay màu xám có logo ASUS",
         "attributes": [
-          "dark",
-          "gray"
+          "gray",
+          "electronic"
         ],
-        "action": "sitting"
+        "action": ""
       },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.075,
-          0.196,
+          0.072,
+          0.197,
           0.41200000000000003,
-          0.961
+          0.946
         ],
-        "description": "a man wearing glasses and a light blue button-down shirt",
-        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi cài khuy màu xanh nhạt",
+        "description": "a wearing a light-colored button-down shirt and glasses",
+        "description_vi": "nam thanh niên mặc áo sơ mi sáng màu và đeo kính",
         "attributes": [
-          "glasses",
-          "shirt",
-          "long-sleeve"
+          "wearing glasses",
+          "short hair",
+          "light-colored shirt"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.993,
-          0.518
+          0.449,
+          0.01,
+          0.9949999999999999,
+          0.52
         ],
-        "description": "a digital screen displaying a math problem",
-        "description_vi": "một màn hình kỹ thuật số hiển thị bài toán",
+        "description": "a display screen showing a mathematical geometry problem and diagram",
+        "description_vi": "màn hình hiển thị bài toán hình học và hình vẽ",
         "attributes": [
-          "digital",
-          "screen"
+          "electronic",
+          "educational"
         ],
         "action": ""
       }
     ],
     "spatial_relations": [
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "screen_0"
+      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -22298,10 +22575,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "slide_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "slide_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -22575,68 +22852,154 @@
     "frame_id": "L25_V052_f0470",
     "visual_source_frame_id": "L25_V052_f0470",
     "ocr_source_frame_id": "L25_V052_f0470",
-    "quality_flags": [],
-    "caption": "A man wearing glasses and a light blue shirt sits in front of a laptop with a digital screen behind him.",
-    "detailed_caption": "This medium shot shows a man with dark hair and glasses, wearing a light blue button-down shirt, sitting behind a dark gray laptop. A large digital screen with math equations is mounted on the wall.",
-    "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi xanh nhạt ngồi trước máy tính xách tay với màn hình kỹ thuật số phía sau.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông tóc tối màu đeo kính, mặc áo sơ mi cài khuy màu xanh nhạt, ngồi đằng sau máy tính xách tay màu xám tối. Một màn hình kỹ thuật số lớn có các phương trình toán học được treo trên tường.",
-    "ocr_text": "THANH NIÊN Ví dụ 7. Xét các số phức z, w thỏa mãn |z| = 1 và |w| = \\sqrt{5}. Khi |z - w| = 2, giá trị |3z - 2w| bằng (A) \\sqrt{17} (B) \\sqrt{4} (C) \\frac{\\sqrt{17}}{2} (D) 2\\sqrt{5} Lời giải. Gọi A, B, C, D là điểm biểu diễn các số phức z, w, 3z, 2w.",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A young male teacher wearing a light-colored shirt sits at a desk with a laptop in front of a dark chalkboard, with a math slide displayed on a screen above.",
+    "detailed_caption": "A with short dark hair and glasses, wearing a light blue button-down shirt, sits behind a desk facing forward. A gray laptop with an ASUS logo sits on the desk in front of him. In the background, a dark chalkboard features mathematical chalk formulas. A monitor screen in the upper right displays a geometry problem slide with a coordinate diagram.",
+    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi sáng màu ngồi trước bàn làm việc với laptop, phía sau là bảng đen và màn hình hiển thị bài giảng toán.",
+    "detailed_caption_vi": "Một nam giáo viên trẻ tóc ngắn đeo kính, mặc áo sơ mi xanh nhạt ngồi trước bàn làm việc. Trên bàn đặt một chiếc laptop màu xám có logo ASUS. Phía sau là bảng đen viết công thức phấn trắng và màn hình phía trên hiển thị slide bài giảng toán hình học.",
+    "ocr_text": "THANH NIEN Ví dụ 7. Xét các số phức z, w thỏa mãn |z| = 1 và |w| = −5. Khi |z - w| = 2, giá trị |3z - 2w| bằng (A) −17. (B) −4. (C) −17/2. (D) 2−5. Lời giải. Gọi A, B, C, D là điểm biểu diễn các số phức z, w, 3z, 2w.",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.9359999999999999
+        ],
+        "description": "a dark chalkboard background with faint white chalk writings",
+        "description_vi": "phông nền bảng đen tối màu có chữ phấn trắng mờ",
+        "attributes": [
+          "dark",
+          "textured"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.0,
+          0.929,
+          0.6719999999999999,
+          0.9939999999999999
+        ],
+        "description": "a white desk surface where the laptop is placed",
+        "description_vi": "mặt bàn màu trắng đặt máy tính xách tay",
+        "attributes": [
+          "white",
+          "flat"
+        ],
+        "action": ""
+      },
       {
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.118,
-          0.7989999999999999,
+          0.11499999999999999,
+          0.7939999999999999,
           0.368,
-          0.992
+          0.9939999999999999
         ],
-        "description": "a dark gray laptop on a white desk",
-        "description_vi": "một máy tính xách tay màu xám tối trên bàn trắng",
+        "description": "a gray laptop computer with an ASUS logo on the lid",
+        "description_vi": "máy tính xách tay màu xám có logo ASUS",
         "attributes": [
-          "dark",
-          "gray"
+          "gray",
+          "electronic"
         ],
-        "action": "sitting"
+        "action": ""
       },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.08299999999999999,
-          0.196,
+          0.08499999999999999,
+          0.197,
           0.41200000000000003,
-          0.961
+          0.946
         ],
-        "description": "a man wearing glasses and a light blue button-down shirt",
-        "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi cài khuy màu xanh nhạt",
+        "description": "a wearing a light-colored button-down shirt and glasses",
+        "description_vi": "nam thanh niên mặc áo sơ mi sáng màu và đeo kính",
         "attributes": [
-          "glasses",
-          "shirt",
-          "long-sleeve"
+          "wearing glasses",
+          "short hair",
+          "light-colored shirt"
         ],
         "action": "sitting"
       },
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.45199999999999996,
-          0.008,
-          0.993,
-          0.518
+          0.449,
+          0.01,
+          0.9949999999999999,
+          0.52
         ],
-        "description": "a digital screen displaying a math problem",
-        "description_vi": "một màn hình kỹ thuật số hiển thị bài toán",
+        "description": "a display screen showing a mathematical geometry problem and diagram",
+        "description_vi": "màn hình hiển thị bài toán hình học và hình vẽ",
         "attributes": [
-          "digital",
-          "screen"
+          "electronic",
+          "educational"
         ],
         "action": ""
       }
     ],
     "spatial_relations": [
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "overlapping",
+        "object_id": "screen_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "overlapping",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "screen_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "screen_0"
+      },
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
@@ -22650,10 +23013,10 @@
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "slide_0"
+        "object_id": "screen_0"
       },
       {
-        "subject_id": "slide_0",
+        "subject_id": "screen_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -23536,38 +23899,63 @@
   },
   {
     "frame_id": "L25_V052_f0495",
-    "visual_source_frame_id": "L25_V052_f0494",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A mathematical slide displaying geometric theorem definitions and construction steps for point H.",
-    "detailed_caption": "A close-up shot of a digital instructional slide displaying mathematical solutions, including the definition of point H as the perpendicular projection of D onto OC, with a geometric diagram on the right.",
-    "caption_vi": "Một slide toán học hiển thị định nghĩa định lý hình học và các bước dựng điểm H.",
-    "detailed_caption_vi": "Cận cảnh màn hình bài giảng điện tử hiển thị các bước giải toán, bao gồm định nghĩa điểm H là hình chiếu vuông góc của D lên OC, kèm theo hình vẽ ở phía bên phải.",
-    "ocr_text": "Ví dụ 7. Xét các số phức z, w thỏa mãn |z| = 1 và |w| = ∕. Khi |z - w| = 2, giá trị |3z - 2w| bằng A) ∕17 B) ∕4. C) ∕17 / 2 D) 2∕5. Lời giải. Gọi A, B, C, D là điểm biểu diễn các số phức z, w, 3z, 2w. Ta có OA = 1, OB = ∕5 và AB = 2 nên tam giác OAB vuông tại A. Ta có OC = 3OA = 3, OD = 2OB = 2∕5. Bài toán yêu cầu tính CD. Gọi H là hình chiếu vuông góc của D lên OC.",
+    "visual_source_frame_id": "L25_V052_f0495",
+    "ocr_source_frame_id": "L25_V052_f0495",
+    "quality_flags": [],
+    "caption": "A mathematical slide showing a complex numbers problem and its geometric solution with a polygon diagram on a light background.",
+    "detailed_caption": "A slide displays a math problem labeled Ví dụ 7 involving complex numbers in the Oxy coordinate plane. Below the problem text, step-by-step algebraic derivations are shown in purple text, introducing points A, B, C, D, and H. On the right, a geometric polygon diagram with labeled vertices illustrates the vector relationships.",
+    "caption_vi": "Slide toán học trình bày bài tập số phức ví dụ 7 và hình vẽ hình học minh họa trên nền sáng.",
+    "detailed_caption_vi": "Slide hiển thị bài toán ví dụ 7 về số phức cùng các bước giải chi tiết bằng chữ màu tím, định nghĩa các điểm A, B, C, D và H. Bên phải là hình vẽ sơ đồ hình học với các đỉnh được đánh dấu.",
+    "ocr_text": "Ví dụ 7. Xét các số phức z, w thỏa mãn |z| = 1 và |w| = −5. Khi |z - w| = 2, giá trị |3z - 2w| bằng (A) −17. (B) −4. (C) −17/2. (D) 2−5. Lời giải. Gọi A, B, C, D là điểm biểu diễn các số phức z, w, 3z, 2w. Ta có OA = 1, OB = −5 và AB = 2 nên tam giác OAB vuông tại A. Ta có OC = 3OA = 3, OD = 2OB = 2−5. Bài toán yêu cầu tính CD. Gọi H là hình chiếu vuông góc của D lên OC.",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "diagram_0",
+        "label": "diagram",
+        "bbox": [
+          0.739,
+          0.29100000000000004,
+          0.9380000000000001,
+          0.7390000000000001
+        ],
+        "description": "a geometric diagram with vertices O, A, B, C, D, and H",
+        "description_vi": "sơ đồ hình học với các đỉnh O, A, B, C, D và H",
+        "attributes": [
+          "geometric",
+          "polygonal"
+        ],
+        "action": ""
+      },
       {
         "object_id": "document_0",
         "label": "document",
         "bbox": [
-          0.013000000000000001,
-          0.079,
+          0.023,
+          0.075,
           0.977,
-          0.9359999999999999
+          0.9109999999999999
         ],
-        "description": "a digital lesson display presenting mathematical theorems and geometric diagrams",
-        "description_vi": "màn hình bài giảng điện tử trình bày định lý toán học và hình vẽ hình học",
+        "description": "a math problem slide with structured text and formulas",
+        "description_vi": "slide bài tập toán với văn bản và công thức",
         "attributes": [
-          "digital",
-          "educational",
-          "textual"
+          "textual",
+          "educational"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "diagram_0",
+        "predicate": "overlapping",
+        "object_id": "document_0"
+      },
+      {
+        "subject_id": "document_0",
+        "predicate": "overlapping",
+        "object_id": "diagram_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V052_f0496",
@@ -24308,11 +24696,11 @@
     "visual_source_frame_id": "L25_V052_f0514",
     "ocr_source_frame_id": "L25_V052_f0514",
     "quality_flags": [],
-    "caption": "Teal block lettering reading THANH NIÊN centered on a light gray background.",
-    "detailed_caption": "This is a medium shot featuring bold teal lettering in the middle of a plain light gray setting. The letters spell THANH NIÊN, casting a faint shadow on the surface below.",
-    "caption_vi": "Chữ đậm màu xanh mòng két đọc là THANH NIÊN được căn giữa trên nền xám nhạt.",
-    "detailed_caption_vi": "Đây là một cảnh quay trung bình có chữ màu xanh mòng két đậm ở giữa bối cảnh màu xám nhạt đơn giản. Các chữ cái đánh vần là THANH NIÊN, đổ bóng mờ trên bề mặt bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "caption": "A light gray screen displaying the blue Thanh Nien logo in the center.",
+    "detailed_caption": "The frame shows a minimalist light gray studio background with a slight shadow at the bottom. In the center, the blue block letters spelling Thanh Nien form the station logo.",
+    "caption_vi": "Màn hình màu xám nhạt hiển thị logo Thanh Niên màu xanh ở chính giữa.",
+    "detailed_caption_vi": "Khung hình hiển thị phông nền phòng thu màu xám nhạt tối giản với một bóng đổ nhẹ ở phía dưới. Ở trung tâm là dòng chữ logo Thanh Niên màu xanh dương.",
+    "ocr_text": "THANH NIEN",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -24366,11 +24754,11 @@
     "visual_source_frame_id": "L25_V052_f0518",
     "ocr_source_frame_id": "L25_V052_f0518",
     "quality_flags": [],
-    "caption": "Teal logo reading THANH NIÊN with website URL on a light gray background.",
-    "detailed_caption": "This is a medium shot featuring the teal logo THANH NIÊN centered horizontally, accompanied by the website address thanhnien.vn right below it. The background is a clean light gray studio setting.",
-    "caption_vi": "Logo màu xanh mòng két đọc là THANH NIÊN kèm URL trang web trên nền xám nhạt.",
-    "detailed_caption_vi": "Đây là một cảnh quay trung bình có logo THANH NIÊN màu xanh mòng két được căn giữa theo chiều ngang, đi kèm với địa chỉ website thanhnien.vn ngay bên dưới. Nền là một bối cảnh phòng thu màu xám nhạt sạch sẽ.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "caption": "A light gray screen displaying the blue Thanh Nien logo and website URL in the center.",
+    "detailed_caption": "The frame shows a light gray studio background with a shadow effect at the base. In the center, the blue block letters spelling Thanh Nien appear alongside the smaller website address thanhnien.vn underneath.",
+    "caption_vi": "Màn hình màu xám nhạt hiển thị logo Thanh Niên màu xanh cùng địa chỉ website ở chính giữa.",
+    "detailed_caption_vi": "Khung hình hiển thị phông nền phòng thu màu xám nhạt với hiệu ứng bóng đổ ở phía dưới. Ở trung tâm là dòng chữ logo Thanh Niên màu xanh dương kèm theo địa chỉ trang web thanhnien.vn nhỏ hơn ở phía dưới.",
+    "ocr_text": "THANH NIEN thanhnien.vn",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -24380,11 +24768,11 @@
     "visual_source_frame_id": "L25_V052_f0519",
     "ocr_source_frame_id": "L25_V052_f0519",
     "quality_flags": [],
-    "caption": "Centered teal logo text THANH NIÊN with website URL on gray background.",
-    "detailed_caption": "This is a medium shot of a centered teal logo featuring the bold text THANH NIÊN, with the smaller secondary text thanhnien.vn underneath. A soft horizontal shadow lies on the solid gray studio floor.",
-    "caption_vi": "Văn bản logo màu xanh mòng két căn giữa THANH NIÊN kèm URL trang web trên nền xám.",
-    "detailed_caption_vi": "Đây là một cảnh quay trung bình của một logo màu xanh mòng két ở giữa có văn bản đậm THANH NIÊN, với văn bản phụ nhỏ hơn thanhnien.vn bên dưới. Một bóng ngang mềm mại nằm trên sàn phòng thu màu xám đồng nhất.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "caption": "A light gray screen displaying the blue Thanh Nien logo and website URL in the center.",
+    "detailed_caption": "The frame shows a light gray studio background with a shadow effect at the base. In the center, the blue block letters spelling Thanh Nien appear alongside the smaller website address thanhnien.vn underneath.",
+    "caption_vi": "Màn hình màu xám nhạt hiển thị logo Thanh Niên màu xanh cùng địa chỉ website ở chính giữa.",
+    "detailed_caption_vi": "Khung hình hiển thị phông nền phòng thu màu xám nhạt với hiệu ứng bóng đổ ở phía dưới. Ở trung tâm là dòng chữ logo Thanh Niên màu xanh dương kèm theo địa chỉ trang web thanhnien.vn nhỏ hơn ở phía dưới.",
+    "ocr_text": "THANH NIEN thanhnien.vn",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []

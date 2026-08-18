@@ -2683,27 +2683,46 @@
     "visual_source_frame_id": "L25_V068_f0054",
     "ocr_source_frame_id": "L25_V068_f0054",
     "quality_flags": [],
-    "caption": "A dimly lit scene shows a woman using a smartphone in front of an orange and white robot.",
-    "detailed_caption": "A medium shot captures a woman standing and holding a smartphone in a dimly lit room, facing an orange and white humanoid robot. Glass display cases and blue instructional wall graphics fill the background.",
-    "caption_vi": "Cảnh tối màu hiển thị người phụ nữ dùng điện thoại trước robot màu cam trắng.",
-    "detailed_caption_vi": "Cảnh trung ghi lại một phụ nữ đang đứng cầm điện thoại trong căn phòng hơi tối, đối diện với robot hình người màu cam trắng. Tủ kính trưng bày và đồ họa tường màu xanh hiển thị ở phía sau.",
-    "ocr_text": "ROBOTICS MACHINE LEARNING BIG DATA",
+    "caption": "A person standing in a dimly lit room with a humanoid robot and display cabinets.",
+    "detailed_caption": "A medium shot shows a person standing indoors next to a tall humanoid robot. The room features a dark wood floor, modern cabinets, and a glass display case with technical diagrams on the wall. The lighting is dim, casting soft shadows across the space.",
+    "caption_vi": "Một người đang đứng trong căn phòng tối mờ cạnh một robot hình người và các tủ trưng bày.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một người đang đứng trong phòng cạnh một robot hình người cao. Căn phòng có sàn gỗ tối màu, tủ hiện đại và tủ kính trưng bày với các sơ đồ kỹ thuật trên tường.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "display_case_0",
+        "label": "display case",
+        "bbox": [
+          0.622,
+          0.0,
+          0.9029999999999999,
+          0.819
+        ],
+        "description": "tall glass display case with technical illustrations inside",
+        "description_vi": "tủ trưng bày bằng kính cao có hình minh họa kỹ thuật bên trong",
+        "attributes": [
+          "glass",
+          "tall"
+        ],
+        "action": ""
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
           0.327,
-          0.199,
-          0.421,
-          0.8430000000000001
+          0.198,
+          0.417,
+          0.8390000000000001
         ],
-        "description": "woman wearing glasses and jeans holding smartphone",
-        "description_vi": "phụ nữ đeo kính và mặc quần jean đang cầm điện thoại",
+        "description": "person wearing a white short-sleeve shirt and blue jeans holding a smartphone",
+        "description_vi": "người mặc áo ngắn tay màu trắng và quần jean xanh đang cầm điện thoại thông minh",
         "attributes": [
-          "glasses",
-          "jeans"
+          "standing",
+          "holding phone",
+          "wearing white shirt",
+          "wearing jeans"
         ],
         "action": "holding phone"
       },
@@ -2711,21 +2730,42 @@
         "object_id": "robot_0",
         "label": "robot",
         "bbox": [
-          0.48200000000000004,
-          0.082,
+          0.485,
+          0.075,
           0.7150000000000001,
           0.9149999999999999
         ],
-        "description": "orange and white humanoid robot",
-        "description_vi": "robot hình người màu cam và trắng",
+        "description": "tall white and orange humanoid robot standing on a wheeled base",
+        "description_vi": "robot hình người màu trắng và cam cao đứng trên chân đế bánh xe",
         "attributes": [
-          "orange",
-          "white"
+          "tall",
+          "white and orange",
+          "wheeled base"
         ],
         "action": "standing"
       }
     ],
     "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "display_case_0"
+      },
+      {
+        "subject_id": "display_case_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "display_case_0",
+        "predicate": "overlapping",
+        "object_id": "robot_0"
+      },
+      {
+        "subject_id": "robot_0",
+        "predicate": "overlapping",
+        "object_id": "display_case_0"
+      },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
@@ -3895,43 +3935,46 @@
     "visual_source_frame_id": "L25_V068_f0071",
     "ocr_source_frame_id": "L25_V068_f0071",
     "quality_flags": [],
-    "caption": "A mock trial scene with students participating as secretary, judge, and assessor in a courtroom-like setting.",
-    "detailed_caption": "This medium shot shows a mock trial setup indoors. On the left, a female secretary in a black suit stands behind a desk with the SIU logo. In the center, a person stands facing the panel. On the right, two judges or assessors sit behind a raised desk with a large Vietnamese national emblem on the wall behind them.",
-    "caption_vi": "Cảnh phiên tòa giả định với học sinh tham gia làm thư ký, thẩm phán và hội thẩm trong không gian giống phòng xử án.",
-    "detailed_caption_vi": "Bức ảnh trung cảnh cho thấy một buổi phiên tòa giả định trong nhà. Ở bên trái, nữ thư ký mặc comple đen đứng sau bàn có logo SIU. Ở trung tâm, một người đứng quay mặt về phía ban hội thẩm. Bên phải, hai thẩm phán hoặc hội thẩm ngồi sau bàn nâng cao với quốc huy lớn treo trên tường.",
-    "ocr_text": "THƯ KÝ SIU Saigon International University du.vn THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
+    "caption": "A person stands at a podium in a courtroom while officials sit at desks under a Vietnamese national emblem.",
+    "detailed_caption": "A wide shot of a mock courtroom features a person standing at a podium on the left speaking into a microphone. Seated judges and officials in robes and suits sit behind red-draped tables facing the front. A large Vietnamese national emblem is projected on the back wall above them.",
+    "caption_vi": "Một người đứng tại bục trong phòng xử án trong khi các quan chức ngồi tại bàn dưới quốc huy Việt Nam.",
+    "detailed_caption_vi": "Cảnh rộng của một phiên tòa giả định có một người đứng tại bục bên trái đang nói vào micro. Các thẩm phán và quan chức mặc áo choàng và vest ngồi sau bàn phủ khăn đỏ hướng về phía trước. Quốc huy Việt Nam lớn được chiếu trên bức tường phía sau.",
+    "ocr_text": "THU KÝ SIU Saigon International UNIVERSITY .du.vn THAM PHÂN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.125,
-          0.317,
+          0.126,
+          0.316,
           0.231,
-          0.64
+          0.642
         ],
-        "description": "female secretary in black suit standing behind desk",
-        "description_vi": "nữ thư ký mặc comple đen đứng sau bàn",
+        "description": "person wearing a black blazer and glasses standing behind a podium",
+        "description_vi": "người mặc áo khoác blazer đen và đeo kính đang đứng sau bục",
         "attributes": [
-          "black suit",
-          "glasses"
+          "wearing black blazer",
+          "wearing glasses",
+          "standing"
         ],
-        "action": "standing"
+        "action": "speaking"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.397,
-          0.298,
-          0.588,
+          0.396,
+          0.296,
+          0.5860000000000001,
           1.0
         ],
-        "description": "person in black shirt standing viewed from behind",
-        "description_vi": "người mặc áo đen đứng nhìn từ phía sau",
+        "description": "person in a black polo shirt standing with back to camera",
+        "description_vi": "người mặc áo polo đen đang đứng quay lưng về phía máy ảnh",
         "attributes": [
-          "black shirt"
+          "standing",
+          "back turned",
+          "wearing black polo"
         ],
         "action": "standing"
       },
@@ -3939,15 +3982,17 @@
         "object_id": "person_2",
         "label": "person",
         "bbox": [
-          0.6599999999999999,
-          0.412,
-          0.786,
+          0.655,
+          0.414,
+          0.788,
           0.663
         ],
-        "description": "female judge sitting at the desk",
-        "description_vi": "nữ thẩm phán ngồi tại bàn",
+        "description": "person wearing judicial robes and a tie sitting at a table",
+        "description_vi": "người mặc áo choàng tư pháp và đeo cà vạt đang ngồi tại bàn",
         "attributes": [
-          "robes"
+          "sitting",
+          "wearing judicial robes",
+          "wearing tie"
         ],
         "action": "sitting"
       },
@@ -3956,15 +4001,16 @@
         "label": "person",
         "bbox": [
           0.866,
-          0.41700000000000004,
-          1.0,
-          0.6699999999999999
+          0.418,
+          0.999,
+          0.6679999999999999
         ],
-        "description": "female assessor sitting at the right desk",
-        "description_vi": "nữ hội thẩm ngồi ở bàn bên phải",
+        "description": "person wearing a dark suit and glasses sitting at a table",
+        "description_vi": "người mặc vest sẫm màu và đeo kính đang ngồi tại bàn",
         "attributes": [
-          "black suit",
-          "glasses"
+          "sitting",
+          "wearing suit",
+          "wearing glasses"
         ],
         "action": "sitting"
       }
@@ -4034,48 +4080,49 @@
   },
   {
     "frame_id": "L25_V068_f0072",
-    "visual_source_frame_id": "L25_V068_f0071",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A mock trial scene with students participating as secretary, judge, and assessor in a courtroom-like setting.",
-    "detailed_caption": "This medium shot shows a mock trial setup indoors. On the left, a female secretary in a black suit stands behind a desk with the SIU logo. In the center, a person stands facing the panel. On the right, two judges or assessors sit behind a raised desk with a large Vietnamese national emblem on the wall behind them.",
-    "caption_vi": "Cảnh phiên tòa giả định với học sinh tham gia làm thư ký, thẩm phán và hội thẩm trong không gian giống phòng xử án.",
-    "detailed_caption_vi": "Bức ảnh trung cảnh cho thấy một buổi phiên tòa giả định trong nhà. Ở bên trái, nữ thư ký mặc comple đen đứng sau bàn có logo SIU. Ở trung tâm, một người đứng quay mặt về phía ban hội thẩm. Bên phải, hai thẩm phán hoặc hội thẩm ngồi sau bàn nâng cao với quốc huy lớn treo trên tường.",
-    "ocr_text": "THƯ KÝ SIU Saigon International University du.vn THẨM PHÁN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
+    "visual_source_frame_id": "L25_V068_f0072",
+    "ocr_source_frame_id": "L25_V068_f0072",
+    "quality_flags": [],
+    "caption": "A person stands at a podium in a courtroom while officials sit at desks under a Vietnamese national emblem.",
+    "detailed_caption": "A wide shot of a mock courtroom features a person standing at a podium on the left speaking into a microphone. Seated judges and officials in robes and suits sit behind red-draped tables facing the front. A large Vietnamese national emblem is projected on the back wall above them.",
+    "caption_vi": "Một người đứng tại bục trong phòng xử án trong khi các quan chức ngồi tại bàn dưới quốc huy Việt Nam.",
+    "detailed_caption_vi": "Cảnh rộng của một phiên tòa giả định có một người đứng tại bục bên trái đang nói vào micro. Các thẩm phán và quan chức mặc áo choàng và vest ngồi sau bàn phủ khăn đỏ hướng về phía trước. Quốc huy Việt Nam lớn được chiếu trên bức tường phía sau.",
+    "ocr_text": "THU KÝ SIU Saigon International UNIVERSITY .du.vn THAM PHÂN CHỦ TỌA PHIÊN TÒA HỘI THẨM NHÂN DÂN",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.125,
-          0.317,
+          0.126,
+          0.311,
           0.231,
-          0.64
+          0.638
         ],
-        "description": "female secretary in black suit standing behind desk",
-        "description_vi": "nữ thư ký mặc comple đen đứng sau bàn",
+        "description": "person wearing a black blazer and glasses standing behind a podium",
+        "description_vi": "người mặc áo khoác blazer đen và đeo kính đang đứng sau bục",
         "attributes": [
-          "black suit",
-          "glasses"
+          "wearing black blazer",
+          "wearing glasses",
+          "standing"
         ],
-        "action": "standing"
+        "action": "speaking"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.397,
-          0.298,
-          0.588,
+          0.396,
+          0.29100000000000004,
+          0.585,
           1.0
         ],
-        "description": "person in black shirt standing viewed from behind",
-        "description_vi": "người mặc áo đen đứng nhìn từ phía sau",
+        "description": "person in a black polo shirt standing with back to camera",
+        "description_vi": "người mặc áo polo đen đang đứng quay lưng về phía máy ảnh",
         "attributes": [
-          "black shirt"
+          "standing",
+          "back turned",
+          "wearing black polo"
         ],
         "action": "standing"
       },
@@ -4083,15 +4130,17 @@
         "object_id": "person_2",
         "label": "person",
         "bbox": [
-          0.6599999999999999,
-          0.412,
-          0.786,
-          0.663
+          0.655,
+          0.40399999999999997,
+          0.788,
+          0.657
         ],
-        "description": "female judge sitting at the desk",
-        "description_vi": "nữ thẩm phán ngồi tại bàn",
+        "description": "person wearing judicial robes and a tie sitting at a table",
+        "description_vi": "người mặc áo choàng tư pháp và đeo cà vạt đang ngồi tại bàn",
         "attributes": [
-          "robes"
+          "sitting",
+          "wearing judicial robes",
+          "wearing tie"
         ],
         "action": "sitting"
       },
@@ -4100,15 +4149,16 @@
         "label": "person",
         "bbox": [
           0.866,
-          0.41700000000000004,
-          1.0,
-          0.6699999999999999
+          0.41,
+          0.999,
+          0.6679999999999999
         ],
-        "description": "female assessor sitting at the right desk",
-        "description_vi": "nữ hội thẩm ngồi ở bàn bên phải",
+        "description": "person wearing a dark suit and glasses sitting at a table",
+        "description_vi": "người mặc vest sẫm màu và đeo kính đang ngồi tại bàn",
         "attributes": [
-          "black suit",
-          "glasses"
+          "sitting",
+          "wearing suit",
+          "wearing glasses"
         ],
         "action": "sitting"
       }
@@ -5445,10 +5495,10 @@
     "visual_source_frame_id": "L25_V068_f0086",
     "ocr_source_frame_id": "L25_V068_f0086",
     "quality_flags": [],
-    "caption": "Two young women pull open wooden double doors to reveal an illuminated stage.",
-    "detailed_caption": "This medium shot captures two young women pulling open tall wooden double doors in a corridor. Both wear white long-sleeved shirts and dark skirts, with their hands gripping the metal door handles. As the doors part, an illuminated stage with figures and stage lighting becomes visible in the gap.",
-    "caption_vi": "Hai phụ nữ trẻ kéo mở đôi cửa gỗ để lộ ra sân khấu được chiếu sáng.",
-    "detailed_caption_vi": "Cảnh trung này ghi lại cảnh hai phụ nữ trẻ đang kéo mở đôi cửa gỗ cao ở hành lang. Cả hai mặc áo sơ mi trắng dài tay và váy tối màu, tay nắm chặt tay nắm cửa bằng kim loại. Khi cửa hé mở, một sân khấu sáng đèn với các nhân vật và hệ thống đèn sân khấu dần lộ ra ở khe giữa.",
+    "caption": "Two people in white shirts and dark skirts pulling open a pair of large wooden doors.",
+    "detailed_caption": "A medium shot captures two people from behind, each wearing a white button-down shirt and dark skirt, pulling open a set of double wooden doors. Their hands grip vertical silver handles as the doors part to reveal a brightly lit interior.",
+    "caption_vi": "Hai người mặc áo sơ mi trắng và chân váy tối màu đang kéo mở một cặp cửa gỗ lớn.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh hai người nhìn từ phía sau, mỗi người mặc áo sơ mi trắng và chân váy tối màu, đang kéo mở một bộ cửa đôi bằng gỗ. Tay họ nắm lấy tay nắm bằng bạc dọc khi cánh cửa hé mở để lộ khoảng sáng bên trong.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -5458,14 +5508,15 @@
         "bbox": [
           0.0,
           0.0,
-          0.851,
+          0.8640000000000001,
           1.0
         ],
-        "description": "wooden double doors being pulled open with a glowing gap in the center",
-        "description_vi": "cửa đôi bằng gỗ đang được kéo mở với khe hở sáng rực ở giữa",
+        "description": "pair of large light-colored wooden doors with vertical metal handles",
+        "description_vi": "cặp cửa gỗ màu sáng lớn với tay nắm kim loại dọc",
         "attributes": [
           "wooden",
-          "double door"
+          "double doors",
+          "metal handles"
         ],
         "action": "opening"
       },
@@ -5473,37 +5524,37 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.122,
-          0.26,
-          0.4,
-          1.0
+          0.126,
+          0.263,
+          0.40099999999999997,
+          0.999
         ],
-        "description": "on the left wearing a white shirt and dark skirt holding a door handle",
-        "description_vi": "phụ nữ trẻ bên trái mặc áo trắng và váy tối màu đang cầm tay nắm cửa",
+        "description": "person wearing a white blouse and dark skirt pulling a wooden door handle",
+        "description_vi": "người mặc áo blouse trắng và chân váy tối màu đang kéo tay nắm cửa gỗ",
         "attributes": [
-          "woman",
-          "white shirt",
-          "dark skirt"
+          "wearing white blouse",
+          "wearing dark skirt",
+          "pulling door"
         ],
-        "action": "pulling"
+        "action": "pulling door"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.491,
-          0.248,
-          0.8390000000000001,
-          1.0
+          0.489,
+          0.251,
+          0.843,
+          0.999
         ],
-        "description": "on the right wearing a white shirt and dark skirt holding a door handle",
-        "description_vi": "phụ nữ trẻ bên phải mặc áo trắng và váy tối màu đang cầm tay nắm cửa",
+        "description": "person wearing a white blouse and dark skirt pulling the other wooden door handle",
+        "description_vi": "người mặc áo blouse trắng và chân váy tối màu đang kéo tay nắm cửa gỗ khác",
         "attributes": [
-          "woman",
-          "white shirt",
-          "dark skirt"
+          "wearing white blouse",
+          "wearing dark skirt",
+          "pulling door"
         ],
-        "action": "pulling"
+        "action": "pulling door"
       }
     ],
     "spatial_relations": [
@@ -6384,44 +6435,27 @@
     "visual_source_frame_id": "L25_V068_f0094",
     "ocr_source_frame_id": "L25_V068_f0094",
     "quality_flags": [],
-    "caption": "An overhead view of people moving across a green athletic court.",
-    "detailed_caption": "This high-angle, top-down shot shows several individuals moving across a green athletic court marked with white and yellow lines. A basketball backboard stands on the left side of the court. The subjects are positioned in various locations across the playing surface.",
-    "caption_vi": "Góc nhìn từ trên cao cho thấy mọi người đang di chuyển trên sân thể thao màu xanh lá.",
-    "detailed_caption_vi": "Cảnh quay từ trên cao xuống này cho thấy một số cá nhân đang di chuyển trên sân thể thao màu xanh lá được đánh dấu bằng các đường màu trắng và vàng. Bảng rổ bóng rổ đứng ở phía bên trái của sân. Các đối tượng được bố trí ở nhiều vị trí khác nhau trên mặt sân.",
+    "caption": "An overhead view of multiple people in green athletic uniforms moving across a green outdoor sports court.",
+    "detailed_caption": "A high-angle aerial shot captures several people wearing green athletic uniforms moving dynamically across a green outdoor sports court marked with yellow and white lines. Some individuals appear to be running or participating in a game.",
+    "caption_vi": "Góc nhìn từ trên cao của nhiều người mặc đồng phục thể thao màu xanh đang di chuyển trên sân thể thao ngoài trời màu xanh.",
+    "detailed_caption_vi": "Cảnh quay góc cao từ trên không ghi lại nhiều người mặc đồng phục thể thao màu xanh đang di chuyển năng động trên sân thể thao ngoài trời màu xanh được kẻ các đường màu vàng và trắng.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "court_0",
-        "label": "court",
-        "bbox": [
-          0.0,
-          0.0,
-          1.0,
-          1.0
-        ],
-        "description": "green athletic court with white and yellow boundary lines",
-        "description_vi": "sân thể thao màu xanh lá với các vạch ranh giới trắng và vàng",
-        "attributes": [
-          "green",
-          "court"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.028000000000000004,
-          0.528,
-          0.133,
+          0.028999999999999998,
+          0.53,
+          0.134,
           0.65
         ],
-        "description": "person running on the left side of the court",
-        "description_vi": "người đang chạy ở phía bên trái của sân",
+        "description": "person in a green athletic uniform running on a sports court",
+        "description_vi": "người mặc đồng phục thể thao màu xanh đang chạy trên sân thể thao",
         "attributes": [
-          "person",
-          "running"
+          "running",
+          "wearing green uniform"
         ],
         "action": "running"
       },
@@ -6429,47 +6463,109 @@
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.425,
-          0.236,
-          0.514,
-          0.358
+          0.24300000000000002,
+          0.193,
+          0.321,
+          0.286
         ],
-        "description": "person running near the upper center of the court",
-        "description_vi": "người đang chạy gần khu vực trung tâm phía trên của sân",
+        "description": "person in a green athletic uniform near the top left",
+        "description_vi": "người mặc đồng phục thể thao màu xanh ở góc trên bên trái",
         "attributes": [
-          "person",
-          "running"
+          "wearing green uniform"
         ],
-        "action": "running"
+        "action": "moving"
       },
       {
         "object_id": "person_2",
         "label": "person",
         "bbox": [
-          0.655,
-          0.163,
-          0.702,
-          0.267
+          0.319,
+          0.512,
+          0.41200000000000003,
+          0.644
         ],
-        "description": "person running near the top right of the court",
-        "description_vi": "người đang chạy gần góc trên bên phải của sân",
+        "description": "person in a green athletic uniform moving across the court",
+        "description_vi": "người mặc đồng phục thể thao màu xanh đang di chuyển trên sân",
         "attributes": [
-          "person",
-          "running"
+          "moving",
+          "wearing green uniform"
+        ],
+        "action": "moving"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.42300000000000004,
+          0.23199999999999998,
+          0.513,
+          0.35900000000000004
+        ],
+        "description": "person in a green athletic uniform running near the center line",
+        "description_vi": "người mặc đồng phục thể thao màu xanh đang chạy gần đường giữa sân",
+        "attributes": [
+          "running",
+          "wearing green uniform"
         ],
         "action": "running"
+      },
+      {
+        "object_id": "person_4",
+        "label": "person",
+        "bbox": [
+          0.655,
+          0.162,
+          0.701,
+          0.269
+        ],
+        "description": "person in a green athletic uniform near the top right",
+        "description_vi": "người mặc đồng phục thể thao màu xanh ở góc trên bên phải",
+        "attributes": [
+          "wearing green uniform"
+        ],
+        "action": "moving"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_1",
+        "subject_id": "person_0",
         "predicate": "left_of",
         "object_id": "person_2"
       },
       {
         "subject_id": "person_2",
         "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
         "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "left_of",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "right_of",
+        "object_id": "person_3"
       }
     ]
   },
@@ -6542,64 +6638,148 @@
     "visual_source_frame_id": "L25_V068_f0096",
     "ocr_source_frame_id": "L25_V068_f0096",
     "quality_flags": [],
-    "caption": "An overhead view of people moving across a green sports court.",
-    "detailed_caption": "This high-angle, top-down shot shows several individuals moving on a green sports court marked with white and yellow boundary lines. A basketball hoop structure stands on the left edge. The subjects are scattered across the playing area.",
-    "caption_vi": "Góc nhìn từ trên cao cho thấy mọi người đang di chuyển trên sân thể thao màu xanh lá.",
-    "detailed_caption_vi": "Cảnh quay từ trên cao xuống này cho thấy một số cá nhân đang di chuyển trên sân thể thao màu xanh lá được đánh dấu bằng các vạch ranh giới trắng và vàng. Cấu trúc rổ bóng rổ nằm ở mép bên trái. Các đối tượng tản ra khắp khu vực sân đấu.",
+    "caption": "An overhead view of multiple people in green athletic uniforms moving across a green outdoor sports court.",
+    "detailed_caption": "A high-angle aerial shot captures several people wearing green athletic uniforms moving dynamically across a green outdoor sports court marked with yellow and white lines. Some individuals appear to be running or participating in a game.",
+    "caption_vi": "Góc nhìn từ trên cao của nhiều người mặc đồng phục thể thao màu xanh đang di chuyển trên sân thể thao ngoài trời màu xanh.",
+    "detailed_caption_vi": "Cảnh quay góc cao từ trên không ghi lại nhiều người mặc đồng phục thể thao màu xanh đang di chuyển năng động trên sân thể thao ngoài trời màu xanh được kẻ các đường màu vàng và trắng.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "court_0",
-        "label": "court",
-        "bbox": [
-          0.0,
-          0.0,
-          1.0,
-          1.0
-        ],
-        "description": "green sports court surface with white and yellow lines",
-        "description_vi": "mặt sân thể thao màu xanh lá với các đường kẻ trắng và vàng",
-        "attributes": [
-          "green",
-          "court"
-        ],
-        "action": ""
-      },
-      {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.417,
-          0.845,
-          0.48,
-          0.9470000000000001
+          0.048,
+          0.571,
+          0.154,
+          0.68
         ],
-        "description": "person near the bottom center of the court",
-        "description_vi": "người ở gần khu vực giữa phía dưới của sân",
+        "description": "person in a green athletic uniform running on a sports court",
+        "description_vi": "người mặc đồng phục thể thao màu xanh đang chạy trên sân thể thao",
         "attributes": [
-          "person"
+          "running",
+          "wearing green uniform"
         ],
-        "action": "moving"
+        "action": "running"
       },
       {
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.639,
-          0.192,
-          0.745,
-          0.303
+          0.161,
+          0.201,
+          0.23700000000000002,
+          0.305
         ],
-        "description": "person near the top right of the court",
-        "description_vi": "người ở gần góc trên bên phải của sân",
+        "description": "person in a green athletic uniform near the top left",
+        "description_vi": "người mặc đồng phục thể thao màu xanh ở góc trên bên trái",
         "attributes": [
-          "person"
+          "wearing green uniform"
+        ],
+        "action": "moving"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.343,
+          0.535,
+          0.42800000000000005,
+          0.642
+        ],
+        "description": "person in a green athletic uniform moving across the court",
+        "description_vi": "người mặc đồng phục thể thao màu xanh đang di chuyển trên sân",
+        "attributes": [
+          "moving",
+          "wearing green uniform"
+        ],
+        "action": "moving"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.403,
+          0.211,
+          0.477,
+          0.313
+        ],
+        "description": "person in a green athletic uniform near the top center",
+        "description_vi": "người mặc đồng phục thể thao màu xanh ở gần phía trên trung tâm",
+        "attributes": [
+          "wearing green uniform"
+        ],
+        "action": "moving"
+      },
+      {
+        "object_id": "person_4",
+        "label": "person",
+        "bbox": [
+          0.6990000000000001,
+          0.193,
+          0.747,
+          0.296
+        ],
+        "description": "person in a green athletic uniform near the top right",
+        "description_vi": "người mặc đồng phục thể thao màu xanh ở góc trên bên phải",
+        "attributes": [
+          "wearing green uniform"
         ],
         "action": "moving"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "above",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "below",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "left_of",
+        "object_id": "person_4"
+      },
+      {
+        "subject_id": "person_4",
+        "predicate": "right_of",
+        "object_id": "person_3"
+      }
+    ]
   },
   {
     "frame_id": "L25_V068_f0097",
@@ -12569,66 +12749,91 @@
   },
   {
     "frame_id": "L25_V068_f0177",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0177",
+    "ocr_source_frame_id": "L25_V068_f0177",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard with English grammar notes and a laptop.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying handwritten English grammar rules about inverted conditionals. A desk with an apple-shaped object and a pencil is visible on the left.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn ghi chú ngữ pháp tiếng Anh và máy tính xách tay.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị các quy tắc ngữ pháp tiếng Anh viết tay về câu điều kiện đảo ngữ.",
+    "ocr_text": "THANH NIÊN Inverted IF 2 If she found out the truth, she would be angry. If she were to find out the truth, she would be angry. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
+          0.051,
           0.775,
-          0.7270000000000001
+          0.755
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English text written on it",
+        "description_vi": "bảng đen lớn có chữ tiếng Anh viết trên đó",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.794,
+          0.36,
+          0.977,
+          0.792
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
@@ -12829,196 +13034,271 @@
   },
   {
     "frame_id": "L25_V068_f0181",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0181",
+    "ocr_source_frame_id": "L25_V068_f0181",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard with English grammar formulas.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying handwritten English grammar rules and transformation formulas. A desk with an apple-shaped object and a pencil is visible on the left.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn có các công thức ngữ pháp tiếng Anh.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị các quy tắc ngữ pháp tiếng Anh và công thức biến đổi viết tay.",
+    "ocr_text": "THANH NIÊN Inverted IF 2 If she found out the truth, she would be angry. If she were to find out the truth, she would be angry. Were she to find out the truth, she would be angry. S + V(past tense) ... -->> Were + S + to-V ... Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
-          0.775,
-          0.7270000000000001
+          0.051,
+          0.774,
+          0.755
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English text and formulas",
+        "description_vi": "bảng đen lớn có văn bản và công thức tiếng Anh",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.794,
+          0.36300000000000004,
+          0.974,
+          0.7859999999999999
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0182",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0182",
+    "ocr_source_frame_id": "L25_V068_f0182",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard with English grammar formulas inside a highlighted box.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying handwritten English grammar rules, with a specific formula enclosed in a white rectangular box.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn có công thức ngữ pháp tiếng Anh trong khung chữ nhật.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị các quy tắc ngữ pháp tiếng Anh viết tay, với một công thức cụ thể được đặt trong khung chữ nhật màu trắng.",
+    "ocr_text": "THANH NIÊN Inverted IF 2 If she found out the truth, she would be angry. If she were to find out the truth, she would be angry. Were she to find out the truth, she would be angry. S + V(past tense) ... -->> Were + S + to-V ... Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
-          0.775,
-          0.7270000000000001
+          0.051,
+          0.774,
+          0.755
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English text and formulas inside a box",
+        "description_vi": "bảng đen lớn có văn bản và công thức tiếng Anh bên trong khung",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.794,
+          0.36,
+          0.9730000000000001,
+          0.7859999999999999
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0183",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0183",
+    "ocr_source_frame_id": "L25_V068_f0183",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard displaying English conditional sentence rules.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying text about Inverted IF 3 and conditional sentence examples.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn hiển thị các quy tắc câu điều kiện tiếng Anh.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị văn bản về Inverted IF 3 và các ví dụ câu điều kiện.",
+    "ocr_text": "THANH NIÊN Inverted IF 3 If I had known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
+          0.051,
           0.775,
-          0.7270000000000001
+          0.753
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English grammar notes about inverted conditionals",
+        "description_vi": "bảng đen lớn có ghi chú ngữ pháp tiếng Anh về câu điều kiện đảo ngữ",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.7969999999999999,
+          0.358,
+          0.975,
+          0.788
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
@@ -13089,358 +13369,496 @@
   },
   {
     "frame_id": "L25_V068_f0185",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0185",
+    "ocr_source_frame_id": "L25_V068_f0185",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard displaying English conditional sentence rules.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying text about Inverted IF 3 and conditional sentence examples.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn hiển thị các quy tắc câu điều kiện tiếng Anh.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị văn bản về Inverted IF 3 và các ví dụ câu điều kiện.",
+    "ocr_text": "THANH NIÊN Inverted IF 3 If I had known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
-          0.775,
-          0.7270000000000001
+          0.051,
+          0.774,
+          0.753
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English grammar notes about inverted conditionals",
+        "description_vi": "bảng đen lớn có ghi chú ngữ pháp tiếng Anh về câu điều kiện đảo ngữ",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.7969999999999999,
+          0.36,
+          0.9730000000000001,
+          0.7859999999999999
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0186",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0186",
+    "ocr_source_frame_id": "L25_V068_f0186",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard displaying conditional sentence examples.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying handwritten English conditional sentences in white and green text.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn hiển thị các ví dụ câu điều kiện.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị các câu điều kiện tiếng Anh viết tay bằng chữ trắng và xanh.",
+    "ocr_text": "THANH NIÊN Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
-          0.775,
-          0.7270000000000001
+          0.051,
+          0.774,
+          0.753
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English conditional sentence examples",
+        "description_vi": "bảng đen lớn có các ví dụ câu điều kiện tiếng Anh",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.7969999999999999,
+          0.358,
+          0.9730000000000001,
+          0.7859999999999999
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0187",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0187",
+    "ocr_source_frame_id": "L25_V068_f0187",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard displaying conditional sentence examples.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying handwritten English conditional sentences in white and green text.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn hiển thị các ví dụ câu điều kiện.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị các câu điều kiện tiếng Anh viết tay bằng chữ trắng và xanh.",
+    "ocr_text": "THANH NIÊN Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
-          0.775,
-          0.7270000000000001
+          0.051,
+          0.774,
+          0.753
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English conditional sentence examples",
+        "description_vi": "bảng đen lớn có các ví dụ câu điều kiện tiếng Anh",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.7969999999999999,
+          0.36,
+          0.9730000000000001,
+          0.7859999999999999
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0188",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0188",
+    "ocr_source_frame_id": "L25_V068_f0188",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard displaying conditional sentence examples.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying handwritten English conditional sentences in white and green text.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn hiển thị các ví dụ câu điều kiện.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị các câu điều kiện tiếng Anh viết tay bằng chữ trắng và xanh.",
+    "ocr_text": "THANH NIÊN Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
-          0.775,
-          0.7270000000000001
+          0.051,
+          0.774,
+          0.753
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English conditional sentence examples",
+        "description_vi": "bảng đen lớn có các ví dụ câu điều kiện tiếng Anh",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.7969999999999999,
+          0.36,
+          0.9730000000000001,
+          0.7859999999999999
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0189",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0189",
+    "ocr_source_frame_id": "L25_V068_f0189",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt stands next to a green chalkboard displaying conditional sentence examples.",
+    "detailed_caption": "A medium shot shows a teacher wearing glasses and a pink shirt standing on the right side of the frame next to a desk holding a laptop. Behind her is a large green chalkboard displaying handwritten English conditional sentences in white and green text.",
+    "caption_vi": "Một giáo viên mặc áo hồng đứng cạnh bảng đen lớn hiển thị các ví dụ câu điều kiện.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên đeo kính và mặc áo hồng đứng bên phải khung hình cạnh một bàn có máy tính xách tay. Phía sau cô là một bảng đen lớn hiển thị các câu điều kiện tiếng Anh viết tay bằng chữ trắng và xanh.",
+    "ocr_text": "THANH NIÊN Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
           0.062,
-          0.091,
-          0.775,
-          0.7270000000000001
+          0.051,
+          0.774,
+          0.753
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "large green chalkboard with English conditional sentence examples",
+        "description_vi": "bảng đen lớn có các ví dụ câu điều kiện tiếng Anh",
         "attributes": [
           "green",
-          "mounted",
+          "chalkboard",
           "text"
         ],
         "action": ""
       },
       {
-        "object_id": "teacher_0",
-        "label": "teacher",
+        "object_id": "laptop_0",
+        "label": "laptop",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.7769999999999999,
+          0.693,
+          0.966,
+          0.804
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "white laptop sitting on a wooden desk",
+        "description_vi": "máy tính xách tay màu trắng đặt trên bàn gỗ",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "white",
+          "laptop"
         ],
-        "action": "sitting"
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.7969999999999999,
+          0.358,
+          0.9730000000000001,
+          0.7859999999999999
+        ],
+        "description": "teacher wearing glasses and a pink long-sleeve shirt standing at a desk",
+        "description_vi": "giáo viên đeo kính và mặc áo sơ mi dài tay màu hồng đứng tại bàn làm việc",
+        "attributes": [
+          "wearing glasses",
+          "wearing pink shirt",
+          "standing",
+          "teacher"
+        ],
+        "action": "teaching"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0190",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0190",
+    "ocr_source_frame_id": "L25_V068_f0190",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt sits in front of a green chalkboard showing English conditional grammar rules.",
+    "detailed_caption": "A medium shot displays a teacher wearing a pink long-sleeved shirt seated at a desk with a white laptop in front of a large green chalkboard. The chalkboard features handwritten English sentences about inverted conditionals in white and turquoise text. A brown wooden desk and a decorated classroom backdrop complete the scene.",
+    "caption_vi": "Một giáo viên mặc áo hồng ngồi trước bảng đen có ghi các quy tắc ngữ pháp tiếng Anh.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một giáo viên mặc áo dài tay màu hồng ngồi bên chiếc máy tính xách tay màu trắng trước một chiếc bảng đen lớn. Trên bảng ghi các câu ví dụ tiếng Anh về câu điều kiện đảo ngữ bằng phấn trắng và xanh.",
+    "ocr_text": "Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
-          0.062,
-          0.091,
+          0.057999999999999996,
+          0.089,
           0.775,
           0.7270000000000001
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "a large green chalkboard displaying English grammar text",
+        "description_vi": "bảng đen lớn hiển thị văn bản ngữ pháp tiếng Anh",
         "attributes": [
           "green",
-          "mounted",
-          "text"
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "laptop_0",
+        "label": "laptop",
+        "bbox": [
+          0.778,
+          0.6940000000000001,
+          0.9640000000000001,
+          0.8029999999999999
+        ],
+        "description": "a white laptop computer on the desk",
+        "description_vi": "máy tính xách tay màu trắng trên bàn",
+        "attributes": [
+          "white"
         ],
         "action": ""
       },
@@ -13448,64 +13866,69 @@
         "object_id": "teacher_0",
         "label": "teacher",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.794,
+          0.35700000000000004,
+          0.974,
+          0.7859999999999999
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "a teacher wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "giáo viên mặc áo dài tay màu hồng và đeo kính",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
+          "pink",
           "glasses",
-          "long hair"
+          "long-sleeved"
         ],
         "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
         "object_id": "teacher_0"
       },
       {
         "subject_id": "teacher_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "teacher_0"
+      },
+      {
+        "subject_id": "teacher_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0191",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0191",
+    "ocr_source_frame_id": "L25_V068_f0191",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt sits at a desk beside a green chalkboard with English text.",
+    "detailed_caption": "A medium shot presents a teacher in a pink long-sleeved top seated at a desk with a white laptop. To the left, a green chalkboard displays English sentence structures under a heading. The classroom setting is decorated with paper banners.",
+    "caption_vi": "Giáo viên mặc áo hồng ngồi bên bàn học cạnh bảng đen.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại hình ảnh giáo viên mặc áo hồng ngồi làm việc với máy tính xách tay đặt trên bàn. Bên cạnh là bảng đen màu xanh lá cây có chữ tiếng Anh.",
+    "ocr_text": "Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
-          0.062,
-          0.091,
+          0.061,
+          0.088,
           0.775,
-          0.7270000000000001
+          0.729
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "a large green chalkboard with white and turquoise text",
+        "description_vi": "bảng đen lớn với chữ màu trắng và xanh ngọc",
         "attributes": [
-          "green",
-          "mounted",
-          "text"
+          "green"
         ],
         "action": ""
       },
@@ -13514,63 +13937,57 @@
         "label": "teacher",
         "bbox": [
           0.795,
-          0.356,
-          0.97,
-          0.768
+          0.358,
+          0.9730000000000001,
+          0.7859999999999999
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "a teacher wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "giáo viên mặc áo dài tay màu hồng và đeo kính",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "pink",
+          "glasses"
         ],
         "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
         "object_id": "teacher_0"
       },
       {
         "subject_id": "teacher_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0192",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0192",
+    "ocr_source_frame_id": "L25_V068_f0192",
+    "quality_flags": [],
+    "caption": "A green chalkboard displays English grammar formulas alongside a seated teacher.",
+    "detailed_caption": "A medium shot shows a teacher seated on the right next to a green chalkboard. The chalkboard now displays an additional yellow formula line reading 'S + had + V(pp)' with a directional arrow. A white laptop sits on the desk in the foreground.",
+    "caption_vi": "Bảng đen hiển thị công thức ngữ pháp tiếng Anh bên cạnh giáo viên đang ngồi.",
+    "detailed_caption_vi": "Bức ảnh trung cảnh cho thấy bảng đen hiển thị thêm công thức ngữ pháp màu vàng kèm theo mũi tên hướng sang phải. Giáo viên mặc áo hồng ngồi phía bên phải khung hình.",
+    "ocr_text": "Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. S + had + V(pp) Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
-          0.062,
-          0.091,
+          0.061,
+          0.088,
           0.775,
-          0.7270000000000001
+          0.729
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "a green chalkboard with English sentences and a grammar formula",
+        "description_vi": "bảng đen với các câu tiếng Anh và công thức ngữ pháp",
         "attributes": [
-          "green",
-          "mounted",
-          "text"
+          "green"
         ],
         "action": ""
       },
@@ -13578,64 +13995,58 @@
         "object_id": "teacher_0",
         "label": "teacher",
         "bbox": [
-          0.795,
-          0.356,
-          0.97,
-          0.768
+          0.794,
+          0.358,
+          0.974,
+          0.7859999999999999
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "a teacher wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "giáo viên mặc áo dài tay màu hồng và đeo kính",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "pink",
+          "glasses"
         ],
         "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
         "object_id": "teacher_0"
       },
       {
         "subject_id": "teacher_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0193",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0193",
+    "ocr_source_frame_id": "L25_V068_f0193",
+    "quality_flags": [],
+    "caption": "A green chalkboard displays a boxed grammatical formula next to a seated teacher.",
+    "detailed_caption": "A medium shot shows a teacher seated on the right while a green chalkboard displays a highlighted formula box in the center. The formula illustrates an inversion structure with white and yellow text connected by an arrow. A laptop is placed on the desk below the teacher.",
+    "caption_vi": "Bảng đen hiển thị công thức ngữ pháp được đóng khung bên cạnh giáo viên.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh ghi lại công thức ngữ pháp được đặt trong khung trắng trên bảng đen. Giáo viên mặc áo hồng ngồi ở góc phải bên cạnh máy tính xách tay.",
+    "ocr_text": "Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. S + had + V(pp) Had + S + V (pp) Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
-          0.062,
-          0.091,
+          0.061,
+          0.088,
           0.775,
-          0.7270000000000001
+          0.729
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "a green chalkboard showing conditional formulas in white boxes",
+        "description_vi": "bảng đen hiển thị các công thức điều kiện trong khung trắng",
         "attributes": [
-          "green",
-          "mounted",
-          "text"
+          "green"
         ],
         "action": ""
       },
@@ -13644,63 +14055,57 @@
         "label": "teacher",
         "bbox": [
           0.795,
-          0.356,
-          0.97,
-          0.768
+          0.35700000000000004,
+          0.974,
+          0.785
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "a teacher wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "giáo viên mặc áo dài tay màu hồng và đeo kính",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "pink",
+          "glasses"
         ],
         "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
         "object_id": "teacher_0"
       },
       {
         "subject_id": "teacher_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0194",
-    "visual_source_frame_id": "L25_V068_f0113",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A female teacher in a pink ao dai sits at a desk beside a green chalkboard displaying English grammar.",
-    "detailed_caption": "A medium shot of a classroom set with a green chalkboard on the left displaying 'Third Conditional' and 'If + S'. On the right, a female teacher wearing a pink traditional Vietnamese ao dai and glasses sits at a desk with a white laptop. Festive paper decorations hang along the top border.",
-    "caption_vi": "Một nữ giáo viên mặc áo dài hồng ngồi bên bàn học cạnh bảng đen viết ngữ pháp tiếng Anh.",
-    "detailed_caption_vi": "Cảnh trung của một phòng học với bảng đen ở bên trái hiển thị nội dung ngữ pháp 'Third Conditional' và 'If + S'. Ở bên phải, một nữ giáo viên mặc áo dài hồng truyền thống và đeo kính đang ngồi làm việc bên chiếc máy tính xách tay màu trắng.",
-    "ocr_text": "Third Conditional If + S THANH NGUÉN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0194",
+    "ocr_source_frame_id": "L25_V068_f0194",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt sits beside a green chalkboard displaying a conditional formula.",
+    "detailed_caption": "A medium shot presents a teacher seated next to a green chalkboard showing inverted conditional structures. A white-bordered box in the center highlights the grammar rule. The foreground includes a desk with a white laptop.",
+    "caption_vi": "Giáo viên mặc áo hồng ngồi cạnh bảng đen hiển thị công thức câu điều kiện.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy giáo viên đang ngồi làm việc bên cạnh bảng đen có công thức ngữ pháp được đóng khung. Bàn học phía trước có đặt một máy tính xách tay.",
+    "ocr_text": "Inverted IF 3 If I had known her, I would have invited her to the party. Had I known her, I would have invited her to the party. S + had + V(pp) Had + S + V (pp) Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "blackboard_0",
-        "label": "blackboard",
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
         "bbox": [
-          0.062,
-          0.091,
+          0.061,
+          0.088,
           0.775,
-          0.7270000000000001
+          0.729
         ],
-        "description": "a large green chalkboard mounted on a wooden frame with English text",
-        "description_vi": "một chiếc bảng đen lớn gắn trên khung gỗ có chữ tiếng Anh",
+        "description": "a green chalkboard with instructional English grammar text",
+        "description_vi": "bảng đen với văn bản ngữ pháp tiếng Anh hướng dẫn",
         "attributes": [
-          "green",
-          "mounted",
-          "text"
+          "green"
         ],
         "action": ""
       },
@@ -13709,31 +14114,29 @@
         "label": "teacher",
         "bbox": [
           0.795,
-          0.356,
-          0.97,
-          0.768
+          0.35700000000000004,
+          0.974,
+          0.7859999999999999
         ],
-        "description": "a female teacher wearing a pink ao dai and glasses sitting at a desk",
-        "description_vi": "một nữ giáo viên mặc áo dài hồng và đeo kính đang ngồi tại bàn",
+        "description": "a teacher wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "giáo viên mặc áo dài tay màu hồng và đeo kính",
         "attributes": [
-          "seated",
-          "wearing pink ao dai",
-          "glasses",
-          "long hair"
+          "pink",
+          "glasses"
         ],
         "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "blackboard_0",
+        "subject_id": "chalkboard_0",
         "predicate": "left_of",
         "object_id": "teacher_0"
       },
       {
         "subject_id": "teacher_0",
         "predicate": "right_of",
-        "object_id": "blackboard_0"
+        "object_id": "chalkboard_0"
       }
     ]
   },
@@ -15133,34 +15536,61 @@
     "visual_source_frame_id": "L25_V068_f0217",
     "ocr_source_frame_id": "L25_V068_f0217",
     "quality_flags": [],
-    "caption": "A young schoolboy wearing a maroon cap and backpack looks forward in a brightly lit hallway.",
-    "detailed_caption": "A medium close-up of a young boy wearing a white polo shirt, a maroon school cap with a white logo, and a blue backpack with straps over his shoulders. He looks forward with a gentle smile in a brightly lit school hallway.",
-    "caption_vi": "Một nam sinh nhỏ tuổi đội mũ đỏ và đeo balo đang nhìn về phía trước trong hành lang sáng sủa.",
-    "detailed_caption_vi": "Cảnh cận trung của một nam sinh mặc áo polo trắng, đội mũ học sinh màu đỏ sậm có logo và đeo balo xanh trên vai. Cậu bé nhìn về phía trước với nụ cười nhẹ trong hành lang trường học sáng sủa.",
+    "caption": "A boy wearing a white polo shirt, maroon cap, and a backpack stands indoors near a doorway.",
+    "detailed_caption": "A medium close-up shot shows a young boy in the foreground wearing a white polo shirt with an emblem, a maroon service cap, and a blue backpack, looking toward the left. In the background, another younger boy in a white uniform shirt holds a book near colorful panels.",
+    "caption_vi": "Một cậu bé mặc áo thun trắng, đội mũ màu nâu đỏ và đeo balo đang đứng trong nhà.",
+    "detailed_caption_vi": "Bức ảnh cận cảnh trung bình ghi lại hình ảnh một cậu bé mặc áo polo trắng, đội mũ nồi đỏ và đeo balo xanh đang đứng nhìn sang bên trái. Phía sau bên trái là một cậu bé khác đang cầm sách trong không gian trường học.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "student_0",
-        "label": "student",
+        "object_id": "boy_0",
+        "label": "boy",
         "bbox": [
-          0.316,
-          0.106,
-          0.736,
+          0.034,
+          0.647,
+          0.186,
           1.0
         ],
-        "description": "a young boy wearing a white polo shirt, maroon cap, and backpack",
-        "description_vi": "một cậu bé mặc áo polo trắng, đội mũ đỏ sậm và đeo balo",
+        "description": "a younger boy in a white uniform holding a book",
+        "description_vi": "cậu bé nhỏ hơn mặc đồng phục trắng đang cầm sách",
         "attributes": [
-          "wearing cap",
-          "wearing white shirt",
-          "backpack",
-          "short hair"
+          "white",
+          "uniform"
         ],
-        "action": "smiling"
+        "action": "holding"
+      },
+      {
+        "object_id": "boy_1",
+        "label": "boy",
+        "bbox": [
+          0.316,
+          0.11,
+          0.738,
+          1.0
+        ],
+        "description": "a boy wearing a white polo shirt, maroon cap, and blue backpack",
+        "description_vi": "cậu bé mặc áo polo trắng, mũ nâu đỏ và đeo balo xanh",
+        "attributes": [
+          "white",
+          "maroon",
+          "backpack"
+        ],
+        "action": "standing"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "boy_0",
+        "predicate": "left_of",
+        "object_id": "boy_1"
+      },
+      {
+        "subject_id": "boy_1",
+        "predicate": "right_of",
+        "object_id": "boy_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V068_f0218",
@@ -25067,64 +25497,45 @@
   },
   {
     "frame_id": "L25_V068_f0337",
-    "visual_source_frame_id": "L25_V068_f0315",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher in a pink shirt sits beside a green chalkboard displaying a sentence transformation exercise.",
-    "detailed_caption": "This medium shot shows a female teacher in a pink shirt and glasses seated at a desk next to a green chalkboard. The chalkboard features a practice exercise about rewriting sentences using conditionals.",
-    "caption_vi": "Một giáo viên mặc áo hồng ngồi cạnh bảng đen hiển thị bài tập viết lại câu.",
-    "detailed_caption_vi": "Cảnh trung hiển thị một nữ giáo viên mặc áo hồng và đeo kính ngồi tại bàn cạnh bảng đen. Bảng hiển thị bài tập luyện tập về cách viết lại câu sử dụng câu điều kiện.",
-    "ocr_text": "1 PRACTICE 2 Rewrite the following sentence using conditionals: Because he didn't prepare for the interview, he didn't get the job. => If THÀNH NIÊN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0337",
+    "ocr_source_frame_id": "L25_V068_f0337",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt sits beside a green chalkboard showing practice sentences for conditionals.",
+    "detailed_caption": "A medium shot features a teacher seated on the right next to a green chalkboard. The chalkboard displays the title 'PRACTICE 2' and an exercise sentence instructing viewers to rewrite sentences using conditionals. A white laptop sits on the wooden desk.",
+    "caption_vi": "Giáo viên mặc áo hồng ngồi cạnh bảng đen hiển thị bài tập câu điều kiện.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy giáo viên ngồi bên phải cạnh bảng đen có dòng chữ 'PRACTICE 2' và bài tập viết lại câu. Bàn học phía trước có máy tính xách tay màu trắng.",
+    "ocr_text": "3 PRACTICE 2 Rewrite the following sentence using conditionals: Study harder, or you will fail the test. => If You don't study harder, you will fail the test. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "chalkboard_0",
         "label": "chalkboard",
         "bbox": [
-          0.063,
-          0.048,
-          0.776,
-          0.75
+          0.061,
+          0.088,
+          0.775,
+          0.729
         ],
-        "description": "green chalkboard with exercise text",
-        "description_vi": "bảng đen xanh lá có nội dung bài tập",
+        "description": "a green chalkboard with practice exercises written in white and yellow text",
+        "description_vi": "bảng đen với bài tập thực hành viết bằng chữ trắng và vàng",
         "attributes": [
-          "green",
-          "text"
+          "green"
         ],
         "action": ""
       },
       {
-        "object_id": "laptop_0",
-        "label": "laptop",
+        "object_id": "teacher_0",
+        "label": "teacher",
         "bbox": [
-          0.778,
-          0.693,
-          0.966,
-          0.8029999999999999
-        ],
-        "description": "white laptop computer on desk",
-        "description_vi": "máy tính xách tay màu trắng trên bàn",
-        "attributes": [
-          "white"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.799,
+          0.795,
           0.358,
-          0.9789999999999999,
-          0.802
+          0.974,
+          0.7859999999999999
         ],
-        "description": "female teacher wearing pink shirt and glasses",
-        "description_vi": "nữ giáo viên mặc áo hồng và đeo kính",
+        "description": "a teacher wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "giáo viên mặc áo dài tay màu hồng và đeo kính",
         "attributes": [
-          "pink shirt",
+          "pink",
           "glasses"
         ],
         "action": "sitting"
@@ -25134,85 +25545,56 @@
       {
         "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "right_of",
         "object_id": "chalkboard_0"
-      },
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
       }
     ]
   },
   {
     "frame_id": "L25_V068_f0338",
-    "visual_source_frame_id": "L25_V068_f0315",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "A teacher in a pink shirt sits beside a green chalkboard displaying a sentence transformation exercise.",
-    "detailed_caption": "This medium shot shows a female teacher in a pink shirt and glasses seated at a desk next to a green chalkboard. The chalkboard features a practice exercise about rewriting sentences using conditionals.",
-    "caption_vi": "Một giáo viên mặc áo hồng ngồi cạnh bảng đen hiển thị bài tập viết lại câu.",
-    "detailed_caption_vi": "Cảnh trung hiển thị một nữ giáo viên mặc áo hồng và đeo kính ngồi tại bàn cạnh bảng đen. Bảng hiển thị bài tập luyện tập về cách viết lại câu sử dụng câu điều kiện.",
-    "ocr_text": "1 PRACTICE 2 Rewrite the following sentence using conditionals: Because he didn't prepare for the interview, he didn't get the job. => If THÀNH NIÊN Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu",
+    "visual_source_frame_id": "L25_V068_f0338",
+    "ocr_source_frame_id": "L25_V068_f0338",
+    "quality_flags": [],
+    "caption": "A teacher in a pink shirt sits beside a green chalkboard with conditional practice exercises.",
+    "detailed_caption": "A medium shot displays a teacher seated at a desk on the right side of the frame next to a large green chalkboard. The chalkboard contains English exercises about rewriting sentences using conditionals, written in white and yellow chalk.",
+    "caption_vi": "Giáo viên mặc áo hồng ngồi bên cạnh bảng đen có bài tập thực hành.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh ghi lại giáo viên ngồi ở góc phải bên cạnh bảng đen lớn. Bảng đen hiển thị các bài tập viết lại câu điều kiện bằng phấn trắng và vàng.",
+    "ocr_text": "3 PRACTICE 2 Rewrite the following sentence using conditionals: Study harder, or you will fail the test. => If You don't study harder, you will fail the test. Giáo viên HỒNG NHUNG Trường Quốc tế Á Châu THANH NIÊN",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "chalkboard_0",
         "label": "chalkboard",
         "bbox": [
-          0.063,
-          0.048,
-          0.776,
-          0.75
+          0.061,
+          0.088,
+          0.775,
+          0.729
         ],
-        "description": "green chalkboard with exercise text",
-        "description_vi": "bảng đen xanh lá có nội dung bài tập",
+        "description": "a green chalkboard displaying English conditional exercises",
+        "description_vi": "bảng đen hiển thị các bài tập điều kiện tiếng Anh",
         "attributes": [
-          "green",
-          "text"
+          "green"
         ],
         "action": ""
       },
       {
-        "object_id": "laptop_0",
-        "label": "laptop",
+        "object_id": "teacher_0",
+        "label": "teacher",
         "bbox": [
-          0.778,
-          0.693,
-          0.966,
-          0.8029999999999999
-        ],
-        "description": "white laptop computer on desk",
-        "description_vi": "máy tính xách tay màu trắng trên bàn",
-        "attributes": [
-          "white"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.799,
+          0.794,
           0.358,
-          0.9789999999999999,
-          0.802
+          0.974,
+          0.7859999999999999
         ],
-        "description": "female teacher wearing pink shirt and glasses",
-        "description_vi": "nữ giáo viên mặc áo hồng và đeo kính",
+        "description": "a teacher wearing a pink long-sleeved shirt and glasses",
+        "description_vi": "giáo viên mặc áo dài tay màu hồng và đeo kính",
         "attributes": [
-          "pink shirt",
+          "pink",
           "glasses"
         ],
         "action": "sitting"
@@ -25222,22 +25604,12 @@
       {
         "subject_id": "chalkboard_0",
         "predicate": "left_of",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "right_of",
         "object_id": "chalkboard_0"
-      },
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "person_0"
-      },
-      {
-        "subject_id": "person_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
       }
     ]
   },
@@ -29207,273 +29579,199 @@
     "frame_id": "L25_V068_f0391",
     "visual_source_frame_id": "L25_V068_f0391",
     "ocr_source_frame_id": "L25_V068_f0391",
-    "quality_flags": [],
-    "caption": "A person reads a book at a table in a library.",
-    "detailed_caption": "A medium shot depicts a person sitting or standing at a table, opening and reading a large book. Several other books rest on the table in the foreground, with bookshelves visible in the background.",
-    "caption_vi": "Một người đọc sách tại bàn trong thư viện.",
-    "detailed_caption_vi": "Khung hình trung cảnh miêu tả một người đang đứng bên bàn, mở ra và đọc một cuốn sách lớn. Phía trước có thêm các cuốn sách khác trên bàn và các dãy kệ sách ở phía sau.",
-    "ocr_text": "MACROECONOMICS BUSINESS LAW Culture-Tourism PEARSON",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white collared shirt sits at a desk reading a book inside a brightly lit library.",
+    "detailed_caption": "A medium shot presents a in a light blue-tinted white button-down shirt sitting at a desk and reading an open book. Tall bookshelves filled with colorful books line the background in a modern library setting with recessed ceiling lights.",
+    "caption_vi": "Một thanh niên mặc áo sơ mi trắng ngồi đọc sách trong thư viện sáng sủa.",
+    "detailed_caption_vi": "Bức ảnh trung cảnh cho thấy một thanh niên mặc áo sơ mi trắng đang ngồi tại bàn đọc một cuốn sách mở. Phía sau là các dãy kệ sách cao chứa đầy sách trong không gian thư viện hiện đại.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "book_0",
-        "label": "book",
-        "bbox": [
-          0.545,
-          0.72,
-          0.8460000000000001,
-          0.9069999999999999
-        ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
-      },
       {
         "object_id": "bookshelf_0",
         "label": "bookshelf",
         "bbox": [
           0.126,
-          0.133,
-          0.46699999999999997,
-          0.997
+          0.132,
+          0.471,
+          0.987
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "tall metal bookshelves filled with colorful books",
+        "description_vi": "kệ sách kim loại cao đầy sách nhiều màu sắc",
+        "attributes": [
+          "tall",
+          "metal"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.44400000000000006,
-          0.179,
+          0.44000000000000006,
+          0.176,
           0.687,
-          0.792
+          0.7949999999999999
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a wearing a white button-down shirt reading a book",
+        "description_vi": "thanh niên mặc áo sơ mi trắng đang đọc sách",
+        "attributes": [
+          "white",
+          "button-down"
+        ],
+        "action": "reading"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "left_of",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "right_of",
-        "object_id": "bookshelf_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0392",
     "visual_source_frame_id": "L25_V068_f0392",
     "ocr_source_frame_id": "L25_V068_f0392",
-    "quality_flags": [],
-    "caption": "A person reads a book at a table inside a library.",
-    "detailed_caption": "A medium shot shows a person looking down at an open book on a table. The library interior features extensive bookshelves and bright overhead lighting.",
-    "caption_vi": "Một người đang đọc sách trên bàn bên trong thư viện.",
-    "detailed_caption_vi": "Khung hình trung cảnh ghi lại cảnh một người đang cúi đọc cuốn sách mở trên bàn. Không gian bên trong thư viện có nhiều kệ sách và hệ thống đèn chiếu sáng sáng sủa.",
-    "ocr_text": "Culture-Tourism MACROECONOMICS",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white shirt sits at a desk reading inside a library.",
+    "detailed_caption": "A medium shot shows a in a light-colored button-down shirt seated at a desk, looking down at an open book. Tall bookshelves packed with books fill the library background under recessed lighting.",
+    "caption_vi": "Thanh niên mặc áo sơ mi trắng ngồi đọc sách trong thư viện.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh ghi lại hình ảnh thanh niên mặc áo sơ mi sáng màu đang ngồi đọc sách tại bàn. Phía sau là các kệ sách cao trong thư viện.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "book_0",
-        "label": "book",
-        "bbox": [
-          0.5469999999999999,
-          0.719,
-          0.843,
-          0.9069999999999999
-        ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
-      },
       {
         "object_id": "bookshelf_0",
         "label": "bookshelf",
         "bbox": [
           0.126,
           0.133,
-          0.46699999999999997,
-          0.9979999999999999
+          0.471,
+          0.9890000000000001
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "tall bookshelves filled with books in a library",
+        "description_vi": "kệ sách cao đầy sách trong thư viện",
+        "attributes": [
+          "tall"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.44299999999999995,
+          0.442,
           0.178,
-          0.687,
-          0.793
+          0.686,
+          0.7949999999999999
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a wearing a white button-down shirt",
+        "description_vi": "thanh niên mặc áo sơ mi trắng",
+        "attributes": [
+          "white"
+        ],
+        "action": "reading"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "left_of",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "right_of",
-        "object_id": "bookshelf_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0393",
     "visual_source_frame_id": "L25_V068_f0393",
     "ocr_source_frame_id": "L25_V068_f0393",
-    "quality_flags": [],
-    "caption": "A person reads an open book at a table in a library.",
-    "detailed_caption": "A medium shot captures a person examining an open book on a table. Shelves filled with books are organized neatly in the background of the library setting.",
-    "caption_vi": "Một người đang xem cuốn sách mở trên bàn trong thư viện.",
-    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người đang xem xét cuốn sách được mở sẵn trên bàn. Phía sau là các kệ sách được sắp xếp ngăn nắp trong khung cảnh thư viện.",
-    "ocr_text": "Culture-Tourism MACROECONOMICS",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white shirt reads a book at a desk in a library.",
+    "detailed_caption": "A medium shot features a in a light-colored button-down shirt sitting at a table with books, turning the pages of an open book. Rows of bookshelves line the background of the library.",
+    "caption_vi": "Thanh niên mặc áo trắng đọc sách tại bàn trong thư viện.",
+    "detailed_caption_vi": "Bức ảnh trung cảnh cho thấy thanh niên mặc áo sơ mi sáng màu đang ngồi lật trang sách mở trên bàn. Phía sau là các dãy kệ sách trong thư viện.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "book_0",
-        "label": "book",
-        "bbox": [
-          0.5469999999999999,
-          0.719,
-          0.843,
-          0.9069999999999999
-        ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
-      },
       {
         "object_id": "bookshelf_0",
         "label": "bookshelf",
         "bbox": [
           0.126,
           0.133,
-          0.46699999999999997,
-          0.9979999999999999
+          0.471,
+          0.9890000000000001
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "tall shelves filled with books",
+        "description_vi": "kệ cao đầy sách",
+        "attributes": [
+          "tall"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
-          0.44299999999999995,
+          0.442,
           0.178,
-          0.687,
-          0.793
+          0.686,
+          0.7949999999999999
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a wearing a white button-down shirt",
+        "description_vi": "thanh niên mặc áo sơ mi trắng",
+        "attributes": [
+          "white"
+        ],
+        "action": "reading"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "left_of",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "right_of",
-        "object_id": "bookshelf_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0394",
     "visual_source_frame_id": "L25_V068_f0394",
     "ocr_source_frame_id": "L25_V068_f0394",
-    "quality_flags": [],
-    "caption": "A person reads a book at a table in a library.",
-    "detailed_caption": "A medium shot displays a person reading a book at a table. The background shows rows of bookshelves and bright interior lighting.",
-    "caption_vi": "Một người đọc sách bên bàn trong thư viện.",
-    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đang đọc sách tại bàn. Phía sau là các dãy kệ sách và ánh sáng nội thất sáng sủa.",
-    "ocr_text": "Culture-Tourism MACROECONOMICS",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white shirt reads a book at a desk inside a library.",
+    "detailed_caption": "A medium shot displays a in a light-colored shirt sitting at a desk, looking down at an open book. Background elements include tall library bookshelves under bright ceiling lights.",
+    "caption_vi": "Thanh niên mặc áo trắng ngồi đọc sách tại bàn trong thư viện.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh ghi lại thanh niên mặc áo sơ mi sáng màu đang ngồi đọc sách tại bàn trong thư viện sáng sủa với các dãy kệ sách xung quanh.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "book_0",
-        "label": "book",
-        "bbox": [
-          0.5469999999999999,
-          0.719,
-          0.843,
-          0.9069999999999999
-        ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
-      },
       {
         "object_id": "bookshelf_0",
         "label": "bookshelf",
         "bbox": [
           0.126,
           0.133,
-          0.46699999999999997,
-          0.9979999999999999
+          0.471,
+          0.9890000000000001
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "tall shelves filled with books",
+        "description_vi": "kệ cao đầy sách",
+        "attributes": [
+          "tall"
+        ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "man_0",
+        "label": "man",
         "bbox": [
           0.44299999999999995,
           0.178,
-          0.687,
-          0.793
+          0.686,
+          0.7949999999999999
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
-        "action": ""
+        "description": "a wearing a white button-down shirt",
+        "description_vi": "thanh niên mặc áo sơ mi trắng",
+        "attributes": [
+          "white"
+        ],
+        "action": "reading"
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "bookshelf_0",
-        "predicate": "left_of",
-        "object_id": "book_0"
-      },
-      {
-        "subject_id": "book_0",
-        "predicate": "right_of",
-        "object_id": "bookshelf_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0395",
@@ -29567,10 +29865,10 @@
     "visual_source_frame_id": "L25_V068_f0398",
     "ocr_source_frame_id": "L25_V068_f0398",
     "quality_flags": [],
-    "caption": "An exterior shot shows a multi-story building under a blue sky.",
-    "detailed_caption": "A motion blur exterior shot displays a multi-story building with a flagpole and cloudy blue sky. The fast-moving perspective distorts the architectural elements.",
-    "caption_vi": "Cảnh ngoại cảnh hiển thị tòa nhà nhiều tầng dưới bầu trời xanh.",
-    "detailed_caption_vi": "Khung hình ngoại cảnh nhòe chuyển động cho thấy tòa nhà nhiều tầng có cột cờ và bầu trời xanh có mây. Góc nhìn chuyển động nhanh làm méo mó các yếu tố kiến trúc.",
+    "caption": "An exterior view of a multi-story modern building under a blue sky with a motion blur effect.",
+    "detailed_caption": "A wide exterior shot shows a multi-story white building with large windows and architectural pillars against a bright blue sky with scattered clouds. A radial motion blur effect emanates from the center of the image.",
+    "caption_vi": "Góc nhìn bên ngoài tòa nhà hiện đại nhiều tầng dưới bầu trời xanh với hiệu ứng mờ chuyển động.",
+    "detailed_caption_vi": "Bức ảnh toàn cảnh bên ngoài ghi lại tòa nhà màu trắng nhiều tầng với các cửa sổ lớn dưới bầu trời xanh và mây trắng. Hiệu ứng làm mờ chuyển động tỏa ra từ tâm ảnh.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -29578,14 +29876,18 @@
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.377,
-          0.0,
-          1.0,
-          0.7220000000000001
+          0.368,
+          0.254,
+          0.9949999999999999,
+          0.732
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a multi-story modern white building with large windows",
+        "description_vi": "tòa nhà màu trắng hiện đại nhiều tầng với cửa sổ lớn",
+        "attributes": [
+          "white",
+          "modern",
+          "multi-story"
+        ],
         "action": ""
       }
     ],
@@ -29596,10 +29898,10 @@
     "visual_source_frame_id": "L25_V068_f0399",
     "ocr_source_frame_id": "L25_V068_f0399",
     "quality_flags": [],
-    "caption": "An exterior shot shows a large building with flags under a blue sky.",
-    "detailed_caption": "A motion blur exterior view shows a large building facade with visible windows and fluttering flags in the background. The bright sky is partially filled with clouds.",
-    "caption_vi": "Cảnh ngoại cảnh cho thấy tòa nhà lớn với các lá cờ dưới bầu trời xanh.",
-    "detailed_caption_vi": "Khung hình ngoại cảnh nhòe chuyển động hiển thị mặt tiền tòa nhà lớn với các cửa sổ và những lá cờ đang bay phía sau. Bầu trời sáng có rải rác mây trắng.",
+    "caption": "An exterior shot of a modern multi-story building under a blue sky with radial blur.",
+    "detailed_caption": "A wide shot displays a multi-story white institutional building with large windows against a blue sky. The image features a strong radial motion blur effect creating a zooming sensation.",
+    "caption_vi": "Cảnh bên ngoài tòa nhà hiện đại nhiều tầng dưới bầu trời xanh với hiệu ứng nhòe tâm.",
+    "detailed_caption_vi": "Bức ảnh toàn cảnh ghi lại mặt tiền tòa nhà màu trắng nhiều tầng dưới bầu trời xanh mây trắng với hiệu ứng mờ chuyển động tâm rõ rệt.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
@@ -29607,14 +29909,17 @@
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.355,
-          0.0,
-          1.0,
-          0.725
+          0.354,
+          0.22999999999999998,
+          0.9949999999999999,
+          0.716
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a multi-story white modern building",
+        "description_vi": "tòa nhà hiện đại màu trắng nhiều tầng",
+        "attributes": [
+          "white",
+          "modern"
+        ],
         "action": ""
       }
     ],
@@ -29625,25 +29930,28 @@
     "visual_source_frame_id": "L25_V068_f0400",
     "ocr_source_frame_id": "L25_V068_f0400",
     "quality_flags": [],
-    "caption": "An exterior shot displays the campus building under a bright blue sky.",
-    "detailed_caption": "A motion blur exterior shot captures the facade of a university building with flags and green foliage in front. The bright blue sky features scattered clouds.",
-    "caption_vi": "Cảnh ngoại cảnh hiển thị tòa nhà khuôn viên trường dưới bầu trời xanh sáng.",
-    "detailed_caption_vi": "Khung hình ngoại cảnh nhòe chuyển động ghi lại mặt tiền tòa nhà đại học với các lá cờ và cây cối xanh mát phía trước. Bầu trời xanh sáng có những đám mây trôi.",
-    "ocr_text": "IVERSITY",
+    "caption": "A modern multi-story building stands outdoors under a blue sky with motion blur.",
+    "detailed_caption": "A wide exterior shot presents a multi-story white building with glass windows and flagpoles under a clear blue sky. A radial motion blur effect distorts the edges of the image outward from the center.",
+    "caption_vi": "Tòa nhà hiện đại nhiều tầng đứng ngoài trời dưới bầu trời xanh với hiệu ứng mờ.",
+    "detailed_caption_vi": "Bức ảnh toàn cảnh bên ngoài cho thấy tòa nhà màu trắng nhiều tầng có các cột cờ phía trước dưới bầu trời xanh trong. Hiệu ứng mờ chuyển động bao trùm khung hình.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
         "object_id": "building_0",
         "label": "building",
         "bbox": [
-          0.34500000000000003,
-          0.0,
-          1.0,
-          0.728
+          0.34700000000000003,
+          0.181,
+          0.9949999999999999,
+          0.717
         ],
-        "description": "",
-        "description_vi": "",
-        "attributes": [],
+        "description": "a multi-story white building with glass windows",
+        "description_vi": "tòa nhà màu trắng nhiều tầng có cửa sổ kính",
+        "attributes": [
+          "white",
+          "multi-story"
+        ],
         "action": ""
       }
     ],
@@ -30770,33 +31078,62 @@
     "quality_flags": [
       "removed_inferred_demographic"
     ],
-    "caption": "A with long brown hair and black-rimmed glasses looks downward with a neutral expression.",
-    "detailed_caption": "A close-up shot captures a with long brown hair, bangs, and black-rimmed glasses. She is wearing a white collared shirt and has makeup on, looking down thoughtfully. The background is softly blurred.",
-    "caption_vi": "Một thiếu nữ tóc nâu dài và đeo kính gọng đen đang nhìn xuống với biểu cảm điềm tĩnh.",
-    "detailed_caption_vi": "Cảnh quay cận cảnh ghi lại một thiếu nữ có mái tóc nâu dài, tóc mái và đeo kính gọng đen. Cô mặc áo sơ mi trắng có cổ, trang điểm nhẹ và đang nhìn xuống đầy suy tư. Bối cảnh phía sau được làm mờ nhẹ nhàng.",
+    "caption": "A wearing black-rimmed glasses and a white collared shirt looks down intently.",
+    "detailed_caption": "This close-up shot features a wearing black-rimmed glasses and a white collared shirt. She has long brown hair and bangs, looking downward with a focused expression. A blurred person in a light shirt is visible in the background.",
+    "caption_vi": "Một phụ nữ trẻ đeo kính gọng đen và mặc áo sơ mi trắng đang cúi nhìn xuống.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ trẻ đeo kính gọng đen, mặc áo sơ mi cổ trắng với mái tóc dài. Cô ấy đang cúi đầu nhìn chăm chú với vẻ tập trung. Phía sau mờ ảo xuất hiện một người khác mặc áo sáng màu.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "student_0",
-        "label": "student",
+        "object_id": "glasses_0",
+        "label": "glasses",
+        "bbox": [
+          0.182,
+          0.273,
+          0.61,
+          0.501
+        ],
+        "description": "black-rimmed eyeglasses worn on face",
+        "description_vi": "kính gọng đen đeo trên mặt",
+        "attributes": [
+          "black frames",
+          "prescription glasses"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
           0.0,
           0.0,
-          0.907,
+          0.9109999999999999,
           1.0
         ],
-        "description": "a with long brown hair, bangs, and black-rimmed glasses looking down",
-        "description_vi": "một thiếu nữ tóc nâu dài, tóc mái và đeo kính gọng đen đang nhìn xuống",
+        "description": "a with long hair and black-rimmed glasses wearing a white collared shirt",
+        "description_vi": "một phụ nữ trẻ tóc dài đeo kính gọng đen mặc áo sơ mi trắng",
         "attributes": [
-          "long hair",
           "glasses",
-          "white shirt"
+          "white shirt",
+          "long hair",
+          "bangs"
         ],
         "action": "looking down"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "glasses_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "glasses_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V068_f0411",
@@ -30839,26 +31176,27 @@
     "quality_flags": [
       "removed_inferred_demographic"
     ],
-    "caption": "A motion-blurred close-up shot shows the smiling face of a behind glasses.",
-    "detailed_caption": "A radial zoom blur effect centers on the smiling face of a young person wearing glasses. The background and edges are heavily blurred with bright light streaks. Only the teeth and mouth remain slightly distinct.",
-    "caption_vi": "Cảnh cận cảnh bị nhòe chuyển động cho thấy khuôn mặt đang mỉm cười của một thiếu nữ sau lớp kính.",
-    "detailed_caption_vi": "Hiệu ứng mờ phóng đại hướng tâm tập trung vào khuôn mặt đang mỉm cười của một đeo kính. Phần nền và các cạnh bị mờ đi đáng kể với các vệt sáng chói. Chỉ có phần răng và miệng là còn hơi rõ nét.",
+    "caption": "A motion-blurred close-up of a smiling wearing glasses.",
+    "detailed_caption": "This close-up shot exhibits heavy radial motion blur centered on a smiling wearing glasses. Her teeth are visible as she smiles, and blurred figures flank her in the background.",
+    "caption_vi": "Cận cảnh mờ chuyển động của một phụ nữ trẻ đang cười và đeo kính.",
+    "detailed_caption_vi": "Khung hình cận cảnh với hiệu ứng mờ chuyển động tỏa tròn tập trung vào một phụ nữ trẻ đang mỉm cười đeo kính. Cô ấy lộ hàm răng khi cười, xung quanh là nền mờ ảo.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "student_0",
-        "label": "student",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
           0.0,
           0.0,
-          0.7769999999999999,
+          1.0,
           1.0
         ],
-        "description": "a motion-blurred close-up of a young person's smiling face",
-        "description_vi": "cảnh cận cảnh bị nhòe chuyển động của khuôn mặt đang cười của một",
+        "description": "a smiling wearing glasses with radial motion blur",
+        "description_vi": "một phụ nữ trẻ đeo kính đang cười với hiệu ứng mờ chuyển động",
         "attributes": [
-          "blurry",
+          "motion blur",
+          "glasses",
           "smiling"
         ],
         "action": "smiling"
@@ -31550,27 +31888,80 @@
     "visual_source_frame_id": "L25_V068_f0424",
     "ocr_source_frame_id": "L25_V068_f0424",
     "quality_flags": [],
-    "caption": "Three young men play acoustic guitars while seated on stools in a brightly lit room.",
-    "detailed_caption": "A medium shot shows three students in white shirts and dark pants playing acoustic guitars while seated on stools. Bright sunlight streams through the window blinds, partially washing out the right side of the image.",
-    "caption_vi": "Ba thanh niên chơi đàn guitar acoustic khi đang ngồi trên ghế đẩu trong căn phòng ngập tràn ánh sáng.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy ba học sinh mặc áo sơ mi trắng và quần tối màu đang chơi đàn guitar acoustic khi ngồi trên ghế đẩu. Ánh nắng rực rỡ chiếu qua rèm cửa sổ, làm mờ một phần bên phải bức ảnh.",
+    "caption": "Three young men in white shirts and dark pants sit in a row playing acoustic guitars.",
+    "detailed_caption": "This medium shot displays three young men sitting on stools in front of vertical blinds, each playing an acoustic guitar. The man on the left wears a white shirt and dark pants, strumming his guitar. The central and right men are seated similarly with guitars under strong lighting.",
+    "caption_vi": "Ba thanh niên mặc áo sơ mi trắng và quần tối màu đang ngồi chơi đàn guitar.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại ba thanh niên ngồi trên ghế đẩu trước rèm cửa, mỗi người cầm một cây đàn guitar acoustic. Người bên trái mặc áo sơ mi trắng và quần tối màu đang chơi đàn, trong khi hai người ở giữa và bên phải ngồi tương tự dưới ánh sáng chói.",
     "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "guitar_0",
+        "label": "guitar",
+        "bbox": [
+          0.0,
+          0.423,
+          0.442,
+          0.816
+        ],
+        "description": "light-colored acoustic guitar being played",
+        "description_vi": "đàn guitar acoustic màu sáng đang được chơi",
+        "attributes": [
+          "light wood",
+          "acoustic"
+        ],
+        "action": "being played"
+      },
+      {
+        "object_id": "guitar_1",
+        "label": "guitar",
+        "bbox": [
+          0.34700000000000003,
+          0.425,
+          0.755,
+          0.754
+        ],
+        "description": "acoustic guitar held by the central person",
+        "description_vi": "đàn guitar acoustic do người ở giữa cầm",
+        "attributes": [
+          "light wood",
+          "acoustic"
+        ],
+        "action": "being played"
+      },
+      {
+        "object_id": "guitar_2",
+        "label": "guitar",
+        "bbox": [
+          0.71,
+          0.41100000000000003,
+          0.9970000000000001,
+          0.691
+        ],
+        "description": "acoustic guitar held by the person on the right",
+        "description_vi": "đàn guitar acoustic do người bên phải cầm",
+        "attributes": [
+          "light wood",
+          "acoustic"
+        ],
+        "action": "being played"
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
           0.0,
-          0.105,
-          0.372,
+          0.104,
+          0.386,
           1.0
         ],
-        "description": "a in glasses and a white shirt playing a guitar",
-        "description_vi": "một thanh niên đeo kính và mặc áo sơ mi trắng đang chơi đàn guitar",
+        "description": "a wearing a white shirt and dark pants playing an acoustic guitar",
+        "description_vi": "một thanh niên mặc áo sơ mi trắng và quần tối màu đang chơi đàn guitar",
         "attributes": [
+          "white shirt",
+          "dark pants",
           "glasses",
-          "white shirt"
+          "seated"
         ],
         "action": "playing guitar"
       },
@@ -31578,57 +31969,71 @@
         "object_id": "person_1",
         "label": "person",
         "bbox": [
-          0.37,
-          0.102,
-          0.755,
+          0.381,
+          0.098,
+          0.759,
           1.0
         ],
-        "description": "a seated person playing an acoustic guitar",
-        "description_vi": "một người đang ngồi chơi đàn guitar acoustic",
+        "description": "a in a white shirt and dark pants sitting and holding a guitar",
+        "description_vi": "một thanh niên mặc áo sơ mi trắng quần tối màu đang ngồi cầm đàn guitar",
         "attributes": [
           "white shirt",
-          "playing guitar"
-        ],
-        "action": "playing guitar"
-      },
-      {
-        "object_id": "person_2",
-        "label": "person",
-        "bbox": [
-          0.792,
-          0.152,
-          0.998,
-          1.0
-        ],
-        "description": "a person seated and playing an acoustic guitar",
-        "description_vi": "một người đang ngồi chơi đàn guitar acoustic",
-        "attributes": [
-          "white shirt",
-          "playing guitar"
+          "dark pants",
+          "seated"
         ],
         "action": "playing guitar"
       }
     ],
     "spatial_relations": [
       {
-        "subject_id": "person_0",
-        "predicate": "left_of",
-        "object_id": "person_2"
+        "subject_id": "guitar_0",
+        "predicate": "overlapping",
+        "object_id": "guitar_1"
       },
       {
-        "subject_id": "person_2",
+        "subject_id": "guitar_1",
+        "predicate": "overlapping",
+        "object_id": "guitar_0"
+      },
+      {
+        "subject_id": "guitar_0",
+        "predicate": "left_of",
+        "object_id": "guitar_2"
+      },
+      {
+        "subject_id": "guitar_2",
         "predicate": "right_of",
+        "object_id": "guitar_0"
+      },
+      {
+        "subject_id": "guitar_0",
+        "predicate": "overlapping",
         "object_id": "person_0"
       },
       {
-        "subject_id": "person_1",
-        "predicate": "left_of",
-        "object_id": "person_2"
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "guitar_0"
       },
       {
-        "subject_id": "person_2",
-        "predicate": "right_of",
+        "subject_id": "guitar_1",
+        "predicate": "overlapping",
         "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "guitar_1"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "guitar_2"
+      },
+      {
+        "subject_id": "guitar_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
       }
     ]
   },
@@ -32323,14 +32728,183 @@
     "visual_source_frame_id": "L25_V068_f0432",
     "ocr_source_frame_id": "L25_V068_f0432",
     "quality_flags": [],
-    "caption": "An intensely bright overexposed scene inside a hotel room.",
-    "detailed_caption": "The frame is heavily overexposed with blinding light across the upper portion of the room. The silhouettes of four people and the hotel bed remain faintly visible through the bright glare.",
-    "caption_vi": "Cảnh bị lóa sáng mạnh bên trong phòng khách sạn.",
-    "detailed_caption_vi": "Khung hình bị lóa sáng nặng với ánh sáng chói lọi ở phần trên của căn phòng. Bóng của bốn người và chiếc giường khách sạn vẫn thấp thoáng hiện ra qua lớp ánh sáng chói.",
+    "caption": "Four people stand around a bed in a brightly lit modern bedroom.",
+    "detailed_caption": "This wide shot shows a brightly lit modern bedroom with a large bed in the foreground. Four people are positioned around the room: a woman in a white blouse and black skirt on the left, a man standing next to her, another person near the center of the bed, and a woman in a dark suit bending over the right side of the bed. A television and cabinet are visible along the left wall.",
+    "caption_vi": "Bốn người đứng quanh một chiếc giường trong phòng ngủ hiện đại đầy ánh sáng.",
+    "detailed_caption_vi": "Khung hình rộng hiển thị một phòng ngủ hiện đại tràn ngập ánh sáng với chiếc giường lớn ở tiền cảnh. Bốn người đứng xung quanh phòng: một phụ nữ mặc áo trắng chân váy đen ở bên trái, một nam thanh niên đứng cạnh cô ấy, một người ở giữa giường, và một phụ nữ mặc vest tối màu đang cúi bên phải giường.",
     "ocr_text": "",
     "news_ticker_text": "",
-    "detections": [],
-    "spatial_relations": []
+    "detections": [
+      {
+        "object_id": "bed_0",
+        "label": "bed",
+        "bbox": [
+          0.272,
+          0.507,
+          0.9029999999999999,
+          0.9930000000000001
+        ],
+        "description": "large white-sheeted bed in a bedroom",
+        "description_vi": "chiếc giường lớn trải ga trắng trong phòng ngủ",
+        "attributes": [
+          "white sheets",
+          "large",
+          "wooden frame"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.316,
+          0.33499999999999996,
+          0.383,
+          0.753
+        ],
+        "description": "a woman wearing a white blouse and a black skirt standing near the left",
+        "description_vi": "một phụ nữ mặc áo blouse trắng và chân váy đen đứng bên trái",
+        "attributes": [
+          "white blouse",
+          "black skirt",
+          "long hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.392,
+          0.306,
+          0.45499999999999996,
+          0.593
+        ],
+        "description": "a man standing near the center background",
+        "description_vi": "một người nam đứng ở khu vực hậu cảnh phía giữa",
+        "attributes": [
+          "light shirt",
+          "dark pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5660000000000001,
+          0.39899999999999997,
+          0.622,
+          0.589
+        ],
+        "description": "a woman wearing a dark suit jacket leaning over the bed",
+        "description_vi": "một phụ nữ mặc áo vest tối màu đang cúi người bên giường",
+        "attributes": [
+          "dark suit",
+          "formal attire"
+        ],
+        "action": "leaning"
+      },
+      {
+        "object_id": "television_0",
+        "label": "television",
+        "bbox": [
+          0.001,
+          0.24300000000000002,
+          0.128,
+          0.52
+        ],
+        "description": "flat-screen television mounted on the wall",
+        "description_vi": "tivi màn hình phẳng treo trên tường",
+        "attributes": [
+          "black frame",
+          "mounted"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bed_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bed_0"
+      },
+      {
+        "subject_id": "bed_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "bed_0"
+      },
+      {
+        "subject_id": "bed_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "bed_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "television_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "television_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "television_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "television_0"
+      },
+      {
+        "subject_id": "television_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "television_0"
+      }
+    ]
   },
   {
     "frame_id": "L25_V068_f0433",
@@ -32709,137 +33283,55 @@
     "visual_source_frame_id": "L25_V068_f0438",
     "ocr_source_frame_id": "L25_V068_f0438",
     "quality_flags": [],
-    "caption": "Teal text reading THANH NIÊN is centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal word 'THANH NIÊN' centered against a smooth, minimalist light gray background with a soft shadow cast underneath the lettering.",
-    "caption_vi": "Dòng chữ màu xanh mòng két THANH NIÊN nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị từ 'THANH NIÊN' màu xanh mòng két đậm ở chính giữa trên phông nền xám nhạt mượt mà, tối giản với một bóng mềm hắt ở bên dưới.",
+    "caption": "A blue text logo is centered on a minimalist gray background.",
+    "detailed_caption": "This centered medium shot displays a cyan typographic logo on a plain gray gradient studio background with a soft floor shadow.",
+    "caption_vi": "Một logo chữ màu xanh dương được đặt ở trung tâm trên nền xám tối giản.",
+    "detailed_caption_vi": "Khung hình trung cảnh tập trung hiển thị logo kiểu chữ màu xanh cyan trên nền phòng thu xám nhạt có hiệu ứng bóng mờ dưới sàn.",
     "ocr_text": "THANH NIÊN",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.333,
-          0.427,
-          0.669,
-          0.5599999999999999
-        ],
-        "description": "bold teal text reading THANH NIÊN",
-        "description_vi": "chữ màu xanh mòng két đậm đọc là THANH NIÊN",
-        "attributes": [
-          "teal",
-          "bold",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0439",
-    "visual_source_frame_id": "L25_V068_f0438",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN is centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal word 'THANH NIÊN' centered against a smooth, minimalist light gray background with a soft shadow cast underneath the lettering.",
-    "caption_vi": "Dòng chữ màu xanh mòng két THANH NIÊN nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị từ 'THANH NIÊN' màu xanh mòng két đậm ở chính giữa trên phông nền xám nhạt mượt mà, tối giản với một bóng mềm hắt ở bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V068_f0439",
+    "ocr_source_frame_id": "L25_V068_f0439",
+    "quality_flags": [],
+    "caption": "A cyan text logo is centered against a clean gray studio background.",
+    "detailed_caption": "This centered shot shows a blue stylized typographic logo against a plain gray studio background, featuring a subtle floor shadow beneath the text.",
+    "caption_vi": "Một logo chữ màu xanh dương được đặt ở chính giữa trên nền phòng thu xám sạch sẽ.",
+    "detailed_caption_vi": "Khung hình ở giữa hiển thị logo kiểu chữ màu xanh lam trên nền xám đơn giản, có bóng mờ tinh tế dưới chân chữ.",
+    "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.333,
-          0.427,
-          0.669,
-          0.5599999999999999
-        ],
-        "description": "bold teal text reading THANH NIÊN",
-        "description_vi": "chữ màu xanh mòng két đậm đọc là THANH NIÊN",
-        "attributes": [
-          "teal",
-          "bold",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0440",
-    "visual_source_frame_id": "L25_V068_f0438",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN is centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal word 'THANH NIÊN' centered against a smooth, minimalist light gray background with a soft shadow cast underneath the lettering.",
-    "caption_vi": "Dòng chữ màu xanh mòng két THANH NIÊN nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị từ 'THANH NIÊN' màu xanh mòng két đậm ở chính giữa trên phông nền xám nhạt mượt mà, tối giản với một bóng mềm hắt ở bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V068_f0440",
+    "ocr_source_frame_id": "L25_V068_f0440",
+    "quality_flags": [],
+    "caption": "A blue text logo with a website address is centered on a gray background.",
+    "detailed_caption": "This centered shot displays a cyan text logo with smaller website text underneath, positioned on a plain gray gradient studio background.",
+    "caption_vi": "Một logo chữ màu xanh lam kèm địa chỉ trang web ở trung tâm nền xám.",
+    "detailed_caption_vi": "Khung hình chính giữa hiển thị logo dạng chữ màu xanh cyan kèm dòng chữ tên miền nhỏ hơn bên dưới trên nền phông xám tối giản.",
+    "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.333,
-          0.427,
-          0.669,
-          0.5599999999999999
-        ],
-        "description": "bold teal text reading THANH NIÊN",
-        "description_vi": "chữ màu xanh mòng két đậm đọc là THANH NIÊN",
-        "attributes": [
-          "teal",
-          "bold",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0441",
-    "visual_source_frame_id": "L25_V068_f0438",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN is centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal word 'THANH NIÊN' centered against a smooth, minimalist light gray background with a soft shadow cast underneath the lettering.",
-    "caption_vi": "Dòng chữ màu xanh mòng két THANH NIÊN nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị từ 'THANH NIÊN' màu xanh mòng két đậm ở chính giữa trên phông nền xám nhạt mượt mà, tối giản với một bóng mềm hắt ở bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "visual_source_frame_id": "L25_V068_f0441",
+    "ocr_source_frame_id": "L25_V068_f0441",
+    "quality_flags": [],
+    "caption": "A cyan text logo and website address are centered on a gray background.",
+    "detailed_caption": "This centered studio shot displays a cyan typographic logo with a website URL underneath, set against a plain gray gradient background with a floor shadow.",
+    "caption_vi": "Một logo chữ màu xanh cyan và địa chỉ trang web ở giữa nền xám.",
+    "detailed_caption_vi": "Khung hình phòng thu trung tâm hiển thị logo chữ màu xanh cyan kèm địa chỉ website bên dưới trên nền phông xám trơn có bóng đổ nhẹ.",
+    "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.333,
-          0.427,
-          0.669,
-          0.5599999999999999
-        ],
-        "description": "bold teal text reading THANH NIÊN",
-        "description_vi": "chữ màu xanh mòng két đậm đọc là THANH NIÊN",
-        "attributes": [
-          "teal",
-          "bold",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -32847,31 +33339,13 @@
     "visual_source_frame_id": "L25_V068_f0442",
     "ocr_source_frame_id": "L25_V068_f0442",
     "quality_flags": [],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két ở chính giữa trên phông nền xám nhạt.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, được căn giữa trên phông nền phòng thu màu xám nhạt tối giản.",
+    "caption": "A cyan text logo with a website URL is centered on a minimalist gray background.",
+    "detailed_caption": "This centered shot displays a cyan typographic logo and a smaller website link beneath it against a plain gray studio background.",
+    "caption_vi": "Một logo chữ màu xanh cyan kèm URL trang web ở giữa nền xám tối giản.",
+    "detailed_caption_vi": "Khung hình chính giữa hiển thị logo dạng chữ màu xanh cyan và đường dẫn trang web nhỏ hơn bên dưới trên nền phông xám phòng thu đơn giản.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -32879,99 +33353,41 @@
     "visual_source_frame_id": "L25_V068_f0443",
     "ocr_source_frame_id": "L25_V068_f0443",
     "quality_flags": [],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background, identical to the previous frame.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền xám nhạt tối giản, giống hệt khung hình trước.",
+    "caption": "A cyan text logo and website address are centered on a gray background.",
+    "detailed_caption": "This centered shot shows a cyan typographic logo accompanied by a small website URL below it on a plain gray gradient studio background.",
+    "caption_vi": "Một logo chữ màu xanh cyan và địa chỉ trang web được đặt ở giữa nền xám.",
+    "detailed_caption_vi": "Khung hình trung tâm hiển thị logo kiểu chữ màu xanh cyan kèm theo một đường dẫn trang web nhỏ bên dưới trên nền phông xám đơn sắc.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0444",
-    "visual_source_frame_id": "L25_V068_f0443",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background, identical to the previous frame.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền xám nhạt tối giản, giống hệt khung hình trước.",
+    "visual_source_frame_id": "L25_V068_f0444",
+    "ocr_source_frame_id": "L25_V068_f0444",
+    "quality_flags": [],
+    "caption": "A cyan text logo with a website address is centered on a plain gray background.",
+    "detailed_caption": "This centered shot features a cyan typographic logo and a website link below, set against a simple gray studio background with a soft floor shadow.",
+    "caption_vi": "Một logo chữ màu xanh cyan kèm địa chỉ trang web ở giữa nền xám đơn giản.",
+    "detailed_caption_vi": "Khung hình chính giữa hiển thị logo dạng chữ màu xanh cyan và liên kết trang web bên dưới, đặt trên nền xám phòng thu đơn giản có bóng sàn nhẹ.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0445",
-    "visual_source_frame_id": "L25_V068_f0443",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background, identical to the previous frame.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền xám nhạt tối giản, giống hệt khung hình trước.",
+    "visual_source_frame_id": "L25_V068_f0445",
+    "ocr_source_frame_id": "L25_V068_f0445",
+    "quality_flags": [],
+    "caption": "A cyan text logo and website address are centered on a gray studio background.",
+    "detailed_caption": "This centered shot shows a cyan typographic logo and a smaller website link beneath it against a plain gray studio background.",
+    "caption_vi": "Một logo chữ màu xanh cyan và địa chỉ trang web ở giữa nền phòng thu xám.",
+    "detailed_caption_vi": "Khung hình trung tâm hiển thị logo kiểu chữ màu xanh cyan cùng một liên kết website nhỏ hơn bên dưới trên nền phông xám phòng thu.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -32979,167 +33395,69 @@
     "visual_source_frame_id": "L25_V068_f0446",
     "ocr_source_frame_id": "L25_V068_f0446",
     "quality_flags": [],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền phòng thu màu xám nhạt tối giản.",
+    "caption": "A cyan text logo with a website URL is centered on a plain gray background.",
+    "detailed_caption": "This centered studio shot displays a cyan typographic logo with a website address underneath, set against a plain gray gradient background with a soft floor shadow.",
+    "caption_vi": "Một logo chữ màu xanh cyan kèm URL trang web ở giữa nền xám trơn.",
+    "detailed_caption_vi": "Khung hình phòng thu trung tâm hiển thị logo chữ màu xanh cyan cùng địa chỉ trang web bên dưới, đặt trên nền xám trơn có bóng đổ nhẹ dưới sàn.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0447",
-    "visual_source_frame_id": "L25_V068_f0446",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền phòng thu màu xám nhạt tối giản.",
+    "visual_source_frame_id": "L25_V068_f0447",
+    "ocr_source_frame_id": "L25_V068_f0447",
+    "quality_flags": [],
+    "caption": "A cyan text logo and website URL are centered on a gray background.",
+    "detailed_caption": "This centered shot shows a cyan typographic logo accompanied by a small website URL below it on a plain gray gradient studio background.",
+    "caption_vi": "Một logo chữ màu xanh cyan và URL trang web được đặt ở giữa nền xám.",
+    "detailed_caption_vi": "Khung hình chính giữa hiển thị logo dạng chữ màu xanh cyan cùng một đường dẫn website nhỏ bên dưới trên nền phông xám phòng thu trơn.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0448",
-    "visual_source_frame_id": "L25_V068_f0446",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền phòng thu màu xám nhạt tối giản.",
+    "visual_source_frame_id": "L25_V068_f0448",
+    "ocr_source_frame_id": "L25_V068_f0448",
+    "quality_flags": [],
+    "caption": "A cyan text logo with a website address is centered on a minimalist gray background.",
+    "detailed_caption": "This centered shot displays a cyan typographic logo and a smaller website link beneath it against a plain gray studio background.",
+    "caption_vi": "Một logo chữ màu xanh cyan kèm địa chỉ trang web ở giữa nền xám tối giản.",
+    "detailed_caption_vi": "Khung hình trung tâm hiển thị logo kiểu chữ màu xanh cyan kèm liên kết website nhỏ hơn bên dưới trên nền phòng thu xám tối giản.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0449",
-    "visual_source_frame_id": "L25_V068_f0446",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền phòng thu màu xám nhạt tối giản.",
+    "visual_source_frame_id": "L25_V068_f0449",
+    "ocr_source_frame_id": "L25_V068_f0449",
+    "quality_flags": [],
+    "caption": "A dark title screen displaying the blue Thanh Nien logo on a plain background.",
+    "detailed_caption": "This is a dark transition title screen. Centered in the frame is the bold blue logo reading Thanh Nien with the website address below it. The background is a solid dark grey studio setting with subtle lighting.",
+    "caption_vi": "Màn hình tiêu đề tối màu hiển thị logo Thanh Niên màu xanh lam trên nền đơn sắc.",
+    "detailed_caption_vi": "Đây là màn hình tiêu đề chuyển cảnh tối màu. Ở trung tâm khung hình là logo Thanh Niên màu xanh lam đậm với địa chỉ trang web bên dưới. Phông nền là một bối cảnh studio màu xám tối đơn giản với ánh sáng nhẹ.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V068_f0450",
-    "visual_source_frame_id": "L25_V068_f0446",
-    "ocr_source_frame_id": "",
-    "quality_flags": [
-      "visual_metadata_copied"
-    ],
-    "caption": "Teal text reading THANH NIÊN and a website address are centered on a plain light gray studio background.",
-    "detailed_caption": "A medium shot displays the bold teal text 'THANH NIÊN' with the smaller website address 'thanhnien.vn' underneath, centered against a minimalist light gray studio background.",
-    "caption_vi": "Dòng chữ THANH NIÊN và địa chỉ website màu xanh mòng két nằm ở giữa trên phông nền xám nhạt đơn giản.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị dòng chữ đậm 'THANH NIÊN' màu xanh mòng két cùng địa chỉ website nhỏ 'thanhnien.vn' ở bên dưới, căn giữa trên phông nền phòng thu màu xám nhạt tối giản.",
+    "visual_source_frame_id": "L25_V068_f0450",
+    "ocr_source_frame_id": "L25_V068_f0450",
+    "quality_flags": [],
+    "caption": "A dark title screen displaying the blue Thanh Nien logo on a plain background.",
+    "detailed_caption": "This is a dark transition title screen. Centered in the frame is the bold blue logo reading Thanh Nien with the website address below it. The background is a solid dark grey studio setting with subtle lighting.",
+    "caption_vi": "Màn hình tiêu đề tối màu hiển thị logo Thanh Niên màu xanh lam trên nền đơn sắc.",
+    "detailed_caption_vi": "Đây là màn hình tiêu đề chuyển cảnh tối màu. Ở trung tâm khung hình là logo Thanh Niên màu xanh lam đậm với địa chỉ trang web bên dưới. Phông nền là một bối cảnh studio màu xám tối đơn giản với ánh sáng nhẹ.",
     "ocr_text": "THANH NIÊN thanhnien.vn",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "text_0",
-        "label": "text",
-        "bbox": [
-          0.322,
-          0.427,
-          0.679,
-          0.606
-        ],
-        "description": "teal text reading THANH NIÊN and thanhnien.vn",
-        "description_vi": "chữ màu xanh mòng két đọc là THANH NIÊN và thanhnien.vn",
-        "attributes": [
-          "teal",
-          "centered"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   }
 ]
