@@ -99,7 +99,7 @@ function App() {
 
   const runTemporalVideoSearch = async (
     query,
-    weights = { summaryWeight: 0.75, eventWeight: 0.25 },
+    weights = { summaryWeight: 0.75, kisWeight: 0.25 },
     filters = searchFilters,
   ) => {
     setIsLoading(true);

@@ -45,7 +45,7 @@ function TemporalVideoCandidates({ candidates = [], selectedVideoId = null, onSe
                 <p>{candidate.summary_vi || 'Chưa có mô tả video.'}</p>
                 <div className="temporal-video-score-row">
                   <span>Summary {formatScore(candidate.summary_score)}</span>
-                  <span>Event {formatScore(candidate.event_score)}</span>
+                  <span>KIS {formatScore(candidate.kis_score ?? candidate.event_score)}</span>
                 </div>
                 <button
                   type="button"

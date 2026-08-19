@@ -12,7 +12,7 @@ describe('TemporalVideoCandidates', () => {
       video_id: 'L24_V033',
       score: 0.91,
       summary_score: 0.95,
-      event_score: 0.72,
+      kis_score: 0.72,
       summary_vi: 'Múa lân trên hệ thống cột cao.',
     };
 

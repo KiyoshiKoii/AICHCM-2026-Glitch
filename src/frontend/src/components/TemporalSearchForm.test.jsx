@@ -5,7 +5,7 @@ import SearchBar from './SearchBar.jsx';
 
 
 describe('Temporal Events form', () => {
-  it('searches candidate videos first with configurable summary/event weights', async () => {
+  it('searches candidate videos first with configurable summary/KIS weights', async () => {
     const user = userEvent.setup();
     const onTemporalVideoSearch = vi.fn();
     const { container } = render(
@@ -23,7 +23,7 @@ describe('Temporal Events form', () => {
 
     expect(onTemporalVideoSearch).toHaveBeenCalledWith(
       'Video múa lân trên cột cao\nE1: Lân chào ban giám khảo',
-      { summaryWeight: 0.6, eventWeight: 0.4 },
+      { summaryWeight: 0.6, kisWeight: 0.4 },
       { batchIds: [], videoIds: [] },
     );
   });

@@ -62,7 +62,7 @@ function SearchBar({
           structuredQuery,
           {
             summaryWeight: summaryWeightPercent / 100,
-            eventWeight: (100 - summaryWeightPercent) / 100,
+            kisWeight: (100 - summaryWeightPercent) / 100,
           },
           filters,
         );
@@ -138,7 +138,7 @@ function SearchBar({
               <span>1</span>
               <div>
                 <strong>Tìm và kiểm tra video</strong>
-                <small>Summary + gợi ý sự kiện</small>
+                <small>Summary + KIS visual/caption</small>
               </div>
             </div>
             <div className={selectedTemporalVideo ? 'temporal-workflow-step active' : 'temporal-workflow-step'}>
@@ -228,7 +228,7 @@ function SearchBar({
               <div className="fusion-weight-header">
                 <span>Video ranking weight</span>
                 <span>
-                  Summary {summaryWeightPercent}% · Event {100 - summaryWeightPercent}%
+                  Summary {summaryWeightPercent}% · KIS {100 - summaryWeightPercent}%
                 </span>
               </div>
               <input
@@ -244,7 +244,7 @@ function SearchBar({
               />
               <div className="fusion-weight-scale" aria-hidden="true">
                 <span>Summary</span>
-                <span>Event evidence</span>
+                <span>KIS visual + caption</span>
               </div>
             </div>
           )}

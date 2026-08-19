@@ -111,7 +111,7 @@ export const searchTemporalEvents = async (
 
 export const searchTemporalVideos = async (
   query,
-  { summaryWeight = 0.75, eventWeight = 0.25 } = {},
+  { summaryWeight = 0.75, kisWeight = 0.25 } = {},
   { batchIds = [], videoIds = [], topKVideos = 20 } = {},
 ) => {
   const response = await fetch('/api/v1/search/temporal-videos', {
@@ -123,7 +123,7 @@ export const searchTemporalVideos = async (
       video_ids: videoIds,
       top_k_videos: topKVideos,
       summary_weight: summaryWeight,
-      event_weight: eventWeight,
+      kis_weight: kisWeight,
     }),
   });
   if (!response.ok) {
