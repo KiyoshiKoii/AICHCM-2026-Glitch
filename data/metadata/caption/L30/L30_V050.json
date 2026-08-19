@@ -1,0 +1,3230 @@
+[
+  {
+    "frame_id": "L30_V050_f0001",
+    "visual_source_frame_id": "L30_V050_f0001",
+    "ocr_source_frame_id": "L30_V050_f0001",
+    "quality_flags": [],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white gradient background fills the entire frame. The center is bright white, transitioning into a soft grey vignette towards the edges. No objects or people are present.",
+    "caption_vi": "Một nền chuyển sắc trắng trơn.",
+    "detailed_caption_vi": "Một nền chuyển sắc trắng trơn bao phủ toàn bộ khung hình. Phần trung tâm màu trắng sáng, chuyển dần sang màu xám nhẹ ở các cạnh. Không có đối tượng hoặc người nào xuất hiện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0002",
+    "visual_source_frame_id": "L30_V050_f0001",
+    "ocr_source_frame_id": "L30_V050_f0002",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white gradient background fills the entire frame. The center is bright white, transitioning into a soft grey vignette towards the edges. No objects or people are present.",
+    "caption_vi": "Một nền chuyển sắc trắng trơn.",
+    "detailed_caption_vi": "Một nền chuyển sắc trắng trơn bao phủ toàn bộ khung hình. Phần trung tâm màu trắng sáng, chuyển dần sang màu xám nhẹ ở các cạnh. Không có đối tượng hoặc người nào xuất hiện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0003",
+    "visual_source_frame_id": "L30_V050_f0001",
+    "ocr_source_frame_id": "L30_V050_f0003",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white gradient background fills the entire frame. The center is bright white, transitioning into a soft grey vignette towards the edges. No objects or people are present.",
+    "caption_vi": "Một nền chuyển sắc trắng trơn.",
+    "detailed_caption_vi": "Một nền chuyển sắc trắng trơn bao phủ toàn bộ khung hình. Phần trung tâm màu trắng sáng, chuyển dần sang màu xám nhẹ ở các cạnh. Không có đối tượng hoặc người nào xuất hiện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0004",
+    "visual_source_frame_id": "L30_V050_f0004",
+    "ocr_source_frame_id": "L30_V050_f0004",
+    "quality_flags": [],
+    "caption": "A teacher stands next to a student holding a pointer in front of a white board, while other students sit at desks in the background.",
+    "detailed_caption": "A medium shot captures a male teacher in a white short-sleeved shirt standing next to a female student holding a wooden pointer towards a board. Other students are seated at desks studying in the background under dim lighting.",
+    "caption_vi": "Một giáo viên đứng cạnh học sinh cầm thước chỉ bảng trước bảng trắng, trong khi các học sinh khác ngồi bàn học ở phía sau.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một giáo viên nam mặc áo sơ mi trắng ngắn tay đứng cạnh học sinh nữ đang cầm thanh thước gỗ chỉ vào bảng. Các học sinh khác đang ngồi học tại bàn ở phía sau dưới ánh sáng mờ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.45999999999999996,
+          0.17200000000000001,
+          0.627,
+          0.997
+        ],
+        "description": "male teacher in white short-sleeved shirt and grey trousers",
+        "description_vi": "giáo viên nam mặc áo sơ mi trắng ngắn tay và quần âu xám",
+        "attributes": [
+          "male",
+          "short-sleeved shirt",
+          "grey trousers"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.571,
+          0.29000000000000004,
+          0.738,
+          0.9939999999999999
+        ],
+        "description": "female student wearing striped cardigan and patterned skirt",
+        "description_vi": "nữ học sinh mặc áo khoác sọc và váy hoa văn",
+        "attributes": [
+          "female",
+          "striped cardigan",
+          "patterned skirt"
+        ],
+        "action": "pointing"
+      },
+      {
+        "object_id": "whiteboard_0",
+        "label": "whiteboard",
+        "bbox": [
+          0.0,
+          0.0,
+          0.44299999999999995,
+          0.999
+        ],
+        "description": "whiteboard displaying printed text",
+        "description_vi": "bảng trắng hiển thị văn bản in",
+        "attributes": [
+          "white",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "whiteboard_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "whiteboard_0"
+      },
+      {
+        "subject_id": "whiteboard_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "whiteboard_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0005",
+    "visual_source_frame_id": "L30_V050_f0005",
+    "ocr_source_frame_id": "L30_V050_f0005",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and gray trousers holding a pointer stands next to a woman in a striped cardigan in a classroom setting.",
+    "detailed_caption": "This medium shot shows a man wearing a white short-sleeve shirt and gray trousers holding a wooden pointer near a large board. To his right, a woman in a striped cardigan stands facing the board. In the background, several other students are seated at desks writing.",
+    "caption_vi": "Một người nam mặc áo trắng và quần xám cầm thước chỉ bảng đứng cạnh một người nữ mặc áo khoác sọc trong lớp học.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một người nam mặc áo sơ mi trắng ngắn tay và quần xám đang cầm thước gỗ gần một bảng lớn. Phía bên phải, một người nữ mặc áo khoác sọc đang đứng hướng về phía bảng. Ở phía sau, một số học sinh khác đang ngồi bàn viết bài.",
+    "ocr_text": "Lớp học đặc biệt giữa rừng",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "board_0",
+        "label": "board",
+        "bbox": [
+          0.0,
+          0.0,
+          0.43099999999999994,
+          1.0
+        ],
+        "description": "large vertical teaching board angled in the foreground",
+        "description_vi": "bảng dạy học lớn đặt nghiêng ở tiền cảnh",
+        "attributes": [
+          "large",
+          "vertical",
+          "teaching board"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.738,
+          0.6679999999999999,
+          0.9949999999999999,
+          1.0
+        ],
+        "description": "wooden school desk with books and writing materials",
+        "description_vi": "bàn học gỗ có sách vở và dụng cụ viết",
+        "attributes": [
+          "wooden",
+          "school desk"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.466,
+          0.181,
+          0.633,
+          0.995
+        ],
+        "description": "man wearing a white short-sleeve shirt and gray trousers",
+        "description_vi": "người nam mặc áo sơ mi trắng ngắn tay và quần xám",
+        "attributes": [
+          "man",
+          "white shirt",
+          "gray trousers",
+          "short hair"
+        ],
+        "action": "holding a pointer"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.577,
+          0.275,
+          0.734,
+          0.7859999999999999
+        ],
+        "description": "woman wearing a striped cardigan and dark top",
+        "description_vi": "người nữ mặc áo khoác sọc và áo tối màu",
+        "attributes": [
+          "woman",
+          "striped cardigan",
+          "dark hair",
+          "side view"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "board_0",
+        "predicate": "left_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "right_of",
+        "object_id": "board_0"
+      },
+      {
+        "subject_id": "board_0",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "board_0"
+      },
+      {
+        "subject_id": "board_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "board_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0006",
+    "visual_source_frame_id": "L30_V050_f0006",
+    "ocr_source_frame_id": "L30_V050_f0006",
+    "quality_flags": [],
+    "caption": "Two women stand in the foreground watching something, with other people in desks behind them.",
+    "detailed_caption": "A close-up shot shows two women standing side by side in the foreground, looking toward the right. The woman on the left wears a light blue cardigan, while the woman on the right wears a beige hooded jacket. Other students are visible seated at desks in the dimly lit background.",
+    "caption_vi": "Hai người phụ nữ đứng ở tiền cảnh đang nhìn về phía trước, với những người khác ngồi bàn học ở phía sau.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy hai người phụ nữ đứng cạnh nhau ở tiền cảnh, nhìn về phía bên phải. Người phụ nữ bên trái mặc áo cardigan xanh nhạt, trong khi người bên phải mặc áo khoác có mũ màu be. Những học sinh khác có thể thấy đang ngồi bàn học ở hậu cảnh thiếu sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.046,
+          0.171,
+          0.374,
+          0.997
+        ],
+        "description": "woman in light blue cardigan with arms crossed",
+        "description_vi": "người phụ nữ mặc áo cardigan xanh nhạt khoanh tay",
+        "attributes": [
+          "female",
+          "light blue cardigan"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.354,
+          0.25,
+          0.688,
+          0.997
+        ],
+        "description": "woman in beige hooded jacket with blue interior",
+        "description_vi": "người phụ nữ mặc áo khoác có mũ màu be lót xanh",
+        "attributes": [
+          "female",
+          "beige hooded jacket"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0007",
+    "visual_source_frame_id": "L30_V050_f0007",
+    "ocr_source_frame_id": "L30_V050_f0007",
+    "quality_flags": [],
+    "caption": "Several students sit at wooden desks writing in notebooks.",
+    "detailed_caption": "A medium shot shows students seated at wooden desks in a dimly lit room. In the foreground, a woman in a yellow and white top writes in a notebook. Next to her, another woman in an orange sweater writes diligently, while other students sit further back.",
+    "caption_vi": "Nhiều học sinh ngồi bên bàn gỗ đang viết vào vở.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy các học sinh ngồi bên bàn gỗ trong một căn phòng thiếu sáng. Ở tiền cảnh, một người phụ nữ mặc áo vàng trắng đang viết vào vở. Bên cạnh cô là một người phụ nữ khác mặc áo len cam đang chăm chú viết, trong khi các học sinh khác ngồi xa hơn phía sau.",
+    "ocr_text": "TNG VIET",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.6839999999999999,
+          0.7140000000000001,
+          0.826,
+          0.892
+        ],
+        "description": "textbook titled Tieng Viet on the wooden desk",
+        "description_vi": "sách giáo khoa Tiếng Việt trên bàn gỗ",
+        "attributes": [
+          "blue",
+          "textbook"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.036,
+          0.025,
+          0.55,
+          0.997
+        ],
+        "description": "woman in yellow and white top writing in notebook",
+        "description_vi": "người phụ nữ mặc áo vàng trắng đang viết vở",
+        "attributes": [
+          "female",
+          "yellow top",
+          "white sleeves"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.471,
+          0.223,
+          0.725,
+          0.7430000000000001
+        ],
+        "description": "woman in orange sweater writing with pencil",
+        "description_vi": "người phụ nữ mặc áo len màu cam đang viết bằng bút chì",
+        "attributes": [
+          "female",
+          "orange sweater",
+          "purple scarf"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "book_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0008",
+    "visual_source_frame_id": "L30_V050_f0007",
+    "ocr_source_frame_id": "L30_V050_f0008",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Several students sit at wooden desks writing in notebooks.",
+    "detailed_caption": "A medium shot shows students seated at wooden desks in a dimly lit room. In the foreground, a woman in a yellow and white top writes in a notebook. Next to her, another woman in an orange sweater writes diligently, while other students sit further back.",
+    "caption_vi": "Nhiều học sinh ngồi bên bàn gỗ đang viết vào vở.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy các học sinh ngồi bên bàn gỗ trong một căn phòng thiếu sáng. Ở tiền cảnh, một người phụ nữ mặc áo vàng trắng đang viết vào vở. Bên cạnh cô là một người phụ nữ khác mặc áo len cam đang chăm chú viết, trong khi các học sinh khác ngồi xa hơn phía sau.",
+    "ocr_text": "TIẾNG VIỆT",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.6839999999999999,
+          0.7140000000000001,
+          0.826,
+          0.892
+        ],
+        "description": "textbook titled Tieng Viet on the wooden desk",
+        "description_vi": "sách giáo khoa Tiếng Việt trên bàn gỗ",
+        "attributes": [
+          "blue",
+          "textbook"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.036,
+          0.025,
+          0.55,
+          0.997
+        ],
+        "description": "woman in yellow and white top writing in notebook",
+        "description_vi": "người phụ nữ mặc áo vàng trắng đang viết vở",
+        "attributes": [
+          "female",
+          "yellow top",
+          "white sleeves"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.471,
+          0.223,
+          0.725,
+          0.7430000000000001
+        ],
+        "description": "woman in orange sweater writing with pencil",
+        "description_vi": "người phụ nữ mặc áo len màu cam đang viết bằng bút chì",
+        "attributes": [
+          "female",
+          "orange sweater",
+          "purple scarf"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "book_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0009",
+    "visual_source_frame_id": "L30_V050_f0009",
+    "ocr_source_frame_id": "L30_V050_f0009",
+    "quality_flags": [],
+    "caption": "Students and a teacher are gathered inside a covered outdoor classroom at night.",
+    "detailed_caption": "A wide shot shows a covered outdoor classroom at night with fluorescent lighting illuminating students seated at desks and a teacher standing near a chalkboard. In the foreground, students face forward and write, while the teacher stands to the right holding a wooden pointer.",
+    "caption_vi": "Học sinh và giáo viên tập trung bên trong lớp học ngoài trời có mái che vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh cho thấy một lớp học ngoài trời có mái che vào ban đêm với ánh đèn huỳnh quang chiếu sáng học sinh ngồi bàn và giáo viên đứng gần bảng đen. Ở tiền cảnh, học sinh quay mặt về phía trước và viết, trong khi giáo viên đứng bên phải cầm cây thước gỗ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.5599999999999999,
+          0.328,
+          0.745,
+          0.593
+        ],
+        "description": "green chalkboard with handwritten text",
+        "description_vi": "bảng đen với chữ viết tay bằng phấn",
+        "attributes": [
+          "green",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.7190000000000001,
+          0.736,
+          0.994,
+          0.858
+        ],
+        "description": "wooden school desks with notebooks and books",
+        "description_vi": "bàn học bằng gỗ có vở và sách",
+        "attributes": [
+          "wooden",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.772,
+          0.326,
+          0.861,
+          0.661
+        ],
+        "description": "male teacher in white shirt and grey trousers standing near chalkboard",
+        "description_vi": "giáo viên nam mặc áo sơ mi trắng và quần âu xám đứng gần bảng đen",
+        "attributes": [
+          "male",
+          "white shirt",
+          "grey trousers"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0010",
+    "visual_source_frame_id": "L30_V050_f0010",
+    "ocr_source_frame_id": "L30_V050_f0010",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "An woman with grey hair sits at a wooden desk writing in a notebook in a classroom.",
+    "detailed_caption": "A medium close-up shot shows an woman with short grey hair wearing a blue cardigan over a white collared shirt, sitting at a wooden desk and writing in a notebook with a pink pencil. Other people are seated at desks in the background under dim lighting.",
+    "caption_vi": "Một phụ nữ lớn tuổi tóc bạc ngồi bên bàn gỗ viết vào vở trong lớp học.",
+    "detailed_caption_vi": "Cảnh quay trung cận cảnh cho thấy một phụ nữ lớn tuổi tóc bạc ngắn mặc áo cardigan xanh khoác ngoài áo sơ mi trắng cổ bẻ, đang ngồi bên bàn gỗ và viết vào vở bằng bút chì hồng. Những người khác ngồi bàn ở hậu cảnh dưới ánh sáng mờ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.181,
+          0.766,
+          0.44699999999999995,
+          0.97
+        ],
+        "description": "open lined notebook on wooden desk with handwritten text",
+        "description_vi": "quyển vở kẻ ô ly mở trên bàn gỗ có chữ viết tay",
+        "attributes": [
+          "white",
+          "lined"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pencil_0",
+        "label": "pencil",
+        "bbox": [
+          0.35,
+          0.624,
+          0.386,
+          0.838
+        ],
+        "description": "pink pencil held by the woman",
+        "description_vi": "bút chì màu hồng được cầm bởi người phụ nữ lớn tuổi",
+        "attributes": [
+          "pink",
+          "long"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.335,
+          0.011,
+          0.835,
+          0.999
+        ],
+        "description": "woman with grey hair wearing blue cardigan and white collared shirt",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc mặc áo cardigan xanh và áo sơ mi trắng cổ bẻ",
+        "attributes": [
+          "female",
+          "grey hair",
+          "blue cardigan",
+          "white collared shirt"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "pencil_0"
+      },
+      {
+        "subject_id": "pencil_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "pencil_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "pencil_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0011",
+    "visual_source_frame_id": "L30_V050_f0010",
+    "ocr_source_frame_id": "L30_V050_f0011",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "An woman with grey hair sits at a wooden desk writing in a notebook in a classroom.",
+    "detailed_caption": "A medium close-up shot shows an woman with short grey hair wearing a blue cardigan over a white collared shirt, sitting at a wooden desk and writing in a notebook with a pink pencil. Other people are seated at desks in the background under dim lighting.",
+    "caption_vi": "Một phụ nữ lớn tuổi tóc bạc ngồi bên bàn gỗ viết vào vở trong lớp học.",
+    "detailed_caption_vi": "Cảnh quay trung cận cảnh cho thấy một phụ nữ lớn tuổi tóc bạc ngắn mặc áo cardigan xanh khoác ngoài áo sơ mi trắng cổ bẻ, đang ngồi bên bàn gỗ và viết vào vở bằng bút chì hồng. Những người khác ngồi bàn ở hậu cảnh dưới ánh sáng mờ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.181,
+          0.766,
+          0.44699999999999995,
+          0.97
+        ],
+        "description": "open lined notebook on wooden desk with handwritten text",
+        "description_vi": "quyển vở kẻ ô ly mở trên bàn gỗ có chữ viết tay",
+        "attributes": [
+          "white",
+          "lined"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pencil_0",
+        "label": "pencil",
+        "bbox": [
+          0.35,
+          0.624,
+          0.386,
+          0.838
+        ],
+        "description": "pink pencil held by the woman",
+        "description_vi": "bút chì màu hồng được cầm bởi người phụ nữ lớn tuổi",
+        "attributes": [
+          "pink",
+          "long"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.335,
+          0.011,
+          0.835,
+          0.999
+        ],
+        "description": "woman with grey hair wearing blue cardigan and white collared shirt",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc mặc áo cardigan xanh và áo sơ mi trắng cổ bẻ",
+        "attributes": [
+          "female",
+          "grey hair",
+          "blue cardigan",
+          "white collared shirt"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "pencil_0"
+      },
+      {
+        "subject_id": "pencil_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "pencil_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "pencil_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0012",
+    "visual_source_frame_id": "L30_V050_f0012",
+    "ocr_source_frame_id": "L30_V050_f0012",
+    "quality_flags": [],
+    "caption": "Close-up of hands writing in a lined notebook with a pink pencil.",
+    "detailed_caption": "A close-up shot focuses on wrinkled hands holding a pink pencil and writing neatly in a lined notebook on a wooden desk. Part of a blue textbook is visible on the left side of the frame.",
+    "caption_vi": "Cận cảnh đôi tay đang viết vào vở ô ly bằng bút chì hồng.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh tập trung vào đôi tay nhăn nheo đang cầm bút chì hồng và viết cẩn thận vào vở kẻ ô ly trên bàn gỗ. Một phần sách giáo khoa màu xanh xuất hiện ở phía bên trái khung hình.",
+    "ocr_text": "HU",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.489,
+          0.43000000000000005,
+          0.851,
+          0.999
+        ],
+        "description": "wrinkled hands holding a pink pencil and writing",
+        "description_vi": "đôi tay nhăn nheo cầm bút chì hồng và viết",
+        "attributes": [
+          "wrinkled",
+          "aging"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.20099999999999998,
+          0.356,
+          0.786,
+          0.953
+        ],
+        "description": "lined notebook with handwritten Vietnamese cursive text",
+        "description_vi": "vở kẻ ô ly với chữ viết tay tiếng Việt",
+        "attributes": [
+          "white",
+          "lined"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pencil_0",
+        "label": "pencil",
+        "bbox": [
+          0.554,
+          0.259,
+          0.71,
+          0.74
+        ],
+        "description": "pink pencil with dark eraser tip",
+        "description_vi": "bút chì màu hồng có đầu tẩy tối màu",
+        "attributes": [
+          "pink",
+          "wooden"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "pencil_0"
+      },
+      {
+        "subject_id": "pencil_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "pencil_0"
+      },
+      {
+        "subject_id": "pencil_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0013",
+    "visual_source_frame_id": "L30_V050_f0013",
+    "ocr_source_frame_id": "L30_V050_f0013",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "Close-up of an woman with grey hair looking down thoughtfully.",
+    "detailed_caption": "A close-up shot focuses on the profile of an woman with grey hair tied back, wearing a blue cardigan over a white collared shirt with a red plaid trim. Another person is dimly visible in the blurry background.",
+    "caption_vi": "Cận cảnh người phụ nữ lớn tuổi tóc bạc đang cúi đầu suy tư.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh tập trung vào góc nghiêng của một phụ nữ lớn tuổi tóc bạc búi phía sau, mặc áo cardigan xanh khoác ngoài áo sơ mi trắng cổ bẻ có viền sọc đỏ. Một người khác mờ ảo ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.45999999999999996,
+          0.0,
+          1.0,
+          0.999
+        ],
+        "description": "woman with grey hair and blue cardigan",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc mặc áo cardigan xanh",
+        "attributes": [
+          "female",
+          "grey hair",
+          "blue cardigan"
+        ],
+        "action": "looking down"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0014",
+    "visual_source_frame_id": "L30_V050_f0014",
+    "ocr_source_frame_id": "L30_V050_f0014",
+    "quality_flags": [],
+    "caption": "A woman with a baby in a colorful sling sits at a wooden desk writing in a notebook.",
+    "detailed_caption": "A medium shot captures a woman with dark hair tied back, wearing a yellow cardigan and carrying a baby in a red sling on her chest, sitting at a wooden desk and writing in a lined notebook. Other students are seated at desks in the background.",
+    "caption_vi": "Một phụ nữ địu em bé bằng khăn đầy màu sắc ngồi bên bàn gỗ viết vào vở.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại người phụ nữ tóc tối màu buộc gọn, mặc áo cardigan vàng và địu em bé trong chiếc khăn màu đỏ trước ngực, đang ngồi bên bàn gỗ và viết vào vở ô ly. Các học sinh khác ngồi bàn ở hậu cảnh.",
+    "ocr_text": "TNG VIET",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.651,
+          0.7859999999999999,
+          0.959,
+          0.906
+        ],
+        "description": "textbook on the wooden desk with colorful cover",
+        "description_vi": "sách giáo khoa trên bàn gỗ có bìa nhiều màu sắc",
+        "attributes": [
+          "blue",
+          "textbook"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.028000000000000004,
+          0.008,
+          0.682,
+          0.997
+        ],
+        "description": "woman with yellow cardigan and red baby sling writing in notebook",
+        "description_vi": "phụ nữ mặc áo cardigan vàng và địu em bé đỏ đang viết vào vở",
+        "attributes": [
+          "female",
+          "yellow cardigan",
+          "red baby sling"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0015",
+    "visual_source_frame_id": "L30_V050_f0014",
+    "ocr_source_frame_id": "L30_V050_f0015",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman with a baby in a colorful sling sits at a wooden desk writing in a notebook.",
+    "detailed_caption": "A medium shot captures a woman with dark hair tied back, wearing a yellow cardigan and carrying a baby in a red sling on her chest, sitting at a wooden desk and writing in a lined notebook. Other students are seated at desks in the background.",
+    "caption_vi": "Một phụ nữ địu em bé bằng khăn đầy màu sắc ngồi bên bàn gỗ viết vào vở.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại người phụ nữ tóc tối màu buộc gọn, mặc áo cardigan vàng và địu em bé trong chiếc khăn màu đỏ trước ngực, đang ngồi bên bàn gỗ và viết vào vở ô ly. Các học sinh khác ngồi bàn ở hậu cảnh.",
+    "ocr_text": "TIẾNG VIỆT",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.651,
+          0.7859999999999999,
+          0.959,
+          0.906
+        ],
+        "description": "textbook on the wooden desk with colorful cover",
+        "description_vi": "sách giáo khoa trên bàn gỗ có bìa nhiều màu sắc",
+        "attributes": [
+          "blue",
+          "textbook"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.028000000000000004,
+          0.008,
+          0.682,
+          0.997
+        ],
+        "description": "woman with yellow cardigan and red baby sling writing in notebook",
+        "description_vi": "phụ nữ mặc áo cardigan vàng và địu em bé đỏ đang viết vào vở",
+        "attributes": [
+          "female",
+          "yellow cardigan",
+          "red baby sling"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0016",
+    "visual_source_frame_id": "L30_V050_f0016",
+    "ocr_source_frame_id": "L30_V050_f0016",
+    "quality_flags": [],
+    "caption": "A person writing in a notebook next to a textbook on a wooden desk.",
+    "detailed_caption": "This close-up shot shows a person's hands writing in a lined notebook with a pen. A Vietnamese language textbook is placed next to the notebook on the wooden desk. Part of a colorful wrapped bundle is visible on the left.",
+    "caption_vi": "Một người đang viết vào vở cạnh sách giáo khoa trên bàn gỗ.",
+    "detailed_caption_vi": "Cận cảnh bàn tay một người đang viết vào vở có dòng kẻ bằng bút mực. Một cuốn sách giáo khoa tiếng Việt được đặt cạnh vở trên bàn gỗ. Một phần bọc đồ màu sắc hiển thị ở bên trái.",
+    "ocr_text": "TIEG VIET KY1",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.504,
+          0.294,
+          0.8710000000000001,
+          0.606
+        ],
+        "description": "textbook titled Tieng Viet lying on the desk",
+        "description_vi": "sách giáo khoa Tiếng Việt đặt trên bàn",
+        "attributes": [
+          "textbook",
+          "blue cover"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.583,
+          0.571,
+          1.0,
+          1.0
+        ],
+        "description": "lined notebook with handwritten text",
+        "description_vi": "vở kẻ ô ly có chữ viết tay",
+        "attributes": [
+          "notebook",
+          "lined"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "pen_0",
+        "label": "pen",
+        "bbox": [
+          0.7230000000000001,
+          0.7030000000000001,
+          0.759,
+          0.819
+        ],
+        "description": "dark pen held in hand for writing",
+        "description_vi": "bút màu tối cầm trên tay để viết",
+        "attributes": [
+          "pen",
+          "dark"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "book_0",
+        "predicate": "above",
+        "object_id": "pen_0"
+      },
+      {
+        "subject_id": "pen_0",
+        "predicate": "below",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "pen_0"
+      },
+      {
+        "subject_id": "pen_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0017",
+    "visual_source_frame_id": "L30_V050_f0017",
+    "ocr_source_frame_id": "L30_V050_f0017",
+    "quality_flags": [],
+    "caption": "Close-up of a hand writing in a lined notebook with a pen next to a textbook.",
+    "detailed_caption": "A close-up shot shows a person's hands holding a pen and writing practice letters in a lined notebook. A blue Vietnamese textbook sits on the wooden desk in the upper right background.",
+    "caption_vi": "Cận cảnh bàn tay đang viết vào vở ô ly bằng bút mực cạnh sách giáo khoa.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy bàn tay của một người đang cầm bút và viết các chữ mẫu luyện tập vào vở ô ly. Sách giáo khoa Tiếng Việt màu xanh nằm trên bàn gỗ ở góc trên bên phải.",
+    "ocr_text": "TIENG VIET KY 1",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.351,
+          0.0,
+          0.951,
+          0.453
+        ],
+        "description": "blue Vietnamese textbook with colorful illustrations",
+        "description_vi": "sách giáo khoa Tiếng Việt màu xanh có hình minh họa đầy màu sắc",
+        "attributes": [
+          "blue",
+          "textbook"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.12,
+          0.075,
+          0.754,
+          0.999
+        ],
+        "description": "lined notebook with handwritten cursive text",
+        "description_vi": "vở kẻ ô ly với chữ viết tay nét chữ",
+        "attributes": [
+          "white",
+          "lined"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pen_0",
+        "label": "pen",
+        "bbox": [
+          0.20099999999999998,
+          0.48400000000000004,
+          0.32,
+          0.999
+        ],
+        "description": "dark pen held in hand writing on paper",
+        "description_vi": "bút tối màu cầm trên tay đang viết lên giấy",
+        "attributes": [
+          "dark",
+          "slim"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "book_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "book_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "pen_0"
+      },
+      {
+        "subject_id": "pen_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0018",
+    "visual_source_frame_id": "L30_V050_f0018",
+    "ocr_source_frame_id": "L30_V050_f0018",
+    "quality_flags": [],
+    "caption": "A woman speaks in front of a green corrugated metal wall at night.",
+    "detailed_caption": "A close-up shot shows a woman with dark hair tied back, wearing a grey jacket, speaking directly to someone off-camera. The background features a dark green corrugated metal wall under dim night lighting.",
+    "caption_vi": "Một phụ nữ đang nói chuyện trước bức tường tôn màu xanh lá cây vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một phụ nữ tóc tối màu buộc gọn, mặc áo khoác xám, đang nói chuyện trực tiếp với ai đó ngoài khung hình. Phối cảnh là bức tường tôn màu xanh lá cây đậm dưới ánh đèn đêm mờ ảo.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16,
+          0.104,
+          0.791,
+          0.997
+        ],
+        "description": "woman with dark hair wearing grey jacket speaking",
+        "description_vi": "phụ nữ tóc tối màu mặc áo khoác xám đang nói chuyện",
+        "attributes": [
+          "female",
+          "grey jacket"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0019",
+    "visual_source_frame_id": "L30_V050_f0018",
+    "ocr_source_frame_id": "L30_V050_f0019",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman speaks in front of a green corrugated metal wall at night.",
+    "detailed_caption": "A close-up shot shows a woman with dark hair tied back, wearing a grey jacket, speaking directly to someone off-camera. The background features a dark green corrugated metal wall under dim night lighting.",
+    "caption_vi": "Một phụ nữ đang nói chuyện trước bức tường tôn màu xanh lá cây vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một phụ nữ tóc tối màu buộc gọn, mặc áo khoác xám, đang nói chuyện trực tiếp với ai đó ngoài khung hình. Phối cảnh là bức tường tôn màu xanh lá cây đậm dưới ánh đèn đêm mờ ảo.",
+    "ocr_text": "Chị THỐT Làng Pral Sơmei, xã Đăk Sơmei, huyện Đăk Đoa, tỉnh Gia Lai",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16,
+          0.104,
+          0.791,
+          0.997
+        ],
+        "description": "woman with dark hair wearing grey jacket speaking",
+        "description_vi": "phụ nữ tóc tối màu mặc áo khoác xám đang nói chuyện",
+        "attributes": [
+          "female",
+          "grey jacket"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0020",
+    "visual_source_frame_id": "L30_V050_f0020",
+    "ocr_source_frame_id": "L30_V050_f0020",
+    "quality_flags": [],
+    "caption": "A woman in a blue and yellow jacket holds a wooden pointer near a chalkboard in a classroom.",
+    "detailed_caption": "A medium shot shows a woman wearing a blue and yellow jacket holding a wooden pointer, standing near a green chalkboard in an outdoor classroom at night. Another woman stands to her left, and students are seated at desks in the background.",
+    "caption_vi": "Một phụ nữ mặc áo khoác xanh vàng cầm thước gỗ gần bảng đen trong lớp học.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo khoác xanh và vàng cầm thanh thước gỗ, đứng gần bảng đen màu xanh trong lớp học ngoài trời vào ban đêm. Một phụ nữ khác đứng bên trái cô, và học sinh ngồi bàn ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.786,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "green chalkboard displaying handwritten text",
+        "description_vi": "bảng đen hiển thị chữ viết tay bằng phấn",
+        "attributes": [
+          "green",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.134,
+          0.248,
+          0.997
+        ],
+        "description": "woman in grey jacket standing on the left",
+        "description_vi": "phụ nữ mặc áo khoác xám đứng bên trái",
+        "attributes": [
+          "female",
+          "grey jacket"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.363,
+          0.191,
+          0.589,
+          0.997
+        ],
+        "description": "woman in blue and yellow jacket holding wooden pointer",
+        "description_vi": "phụ nữ mặc áo khoác xanh và vàng cầm thước gỗ",
+        "attributes": [
+          "female",
+          "blue and yellow jacket"
+        ],
+        "action": "holding pointer"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0021",
+    "visual_source_frame_id": "L30_V050_f0020",
+    "ocr_source_frame_id": "L30_V050_f0021",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a blue and yellow jacket holds a wooden pointer near a chalkboard in a classroom.",
+    "detailed_caption": "A medium shot shows a woman wearing a blue and yellow jacket holding a wooden pointer, standing near a green chalkboard in an outdoor classroom at night. Another woman stands to her left, and students are seated at desks in the background.",
+    "caption_vi": "Một phụ nữ mặc áo khoác xanh vàng cầm thước gỗ gần bảng đen trong lớp học.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo khoác xanh và vàng cầm thanh thước gỗ, đứng gần bảng đen màu xanh trong lớp học ngoài trời vào ban đêm. Một phụ nữ khác đứng bên trái cô, và học sinh ngồi bàn ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.786,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "green chalkboard displaying handwritten text",
+        "description_vi": "bảng đen hiển thị chữ viết tay bằng phấn",
+        "attributes": [
+          "green",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.134,
+          0.248,
+          0.997
+        ],
+        "description": "woman in grey jacket standing on the left",
+        "description_vi": "phụ nữ mặc áo khoác xám đứng bên trái",
+        "attributes": [
+          "female",
+          "grey jacket"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.363,
+          0.191,
+          0.589,
+          0.997
+        ],
+        "description": "woman in blue and yellow jacket holding wooden pointer",
+        "description_vi": "phụ nữ mặc áo khoác xanh và vàng cầm thước gỗ",
+        "attributes": [
+          "female",
+          "blue and yellow jacket"
+        ],
+        "action": "holding pointer"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0022",
+    "visual_source_frame_id": "L30_V050_f0022",
+    "ocr_source_frame_id": "L30_V050_f0022",
+    "quality_flags": [],
+    "caption": "Close-up of a woman talking with a serious expression at night.",
+    "detailed_caption": "A close-up shot captures a woman with dark hair tied back in a bun, wearing a grey jacket, talking in a dimly lit outdoor setting at night. Other people are blurred in the background.",
+    "caption_vi": "Cận cảnh một phụ nữ đang nói chuyện với vẻ mặt nghiêm nghị vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh ghi lại một phụ nữ tóc tối màu búi gọn, mặc áo khoác xám, đang nói chuyện trong khung cảnh ngoài trời thiếu sáng vào ban đêm. Những người khác bị mờ ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.077,
+          0.12100000000000001,
+          0.615,
+          0.997
+        ],
+        "description": "woman with dark hair tied in bun wearing grey jacket",
+        "description_vi": "phụ nữ tóc tối màu búi cao mặc áo khoác xám",
+        "attributes": [
+          "female",
+          "grey jacket",
+          "bun hairstyle"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0023",
+    "visual_source_frame_id": "L30_V050_f0023",
+    "ocr_source_frame_id": "L30_V050_f0023",
+    "quality_flags": [],
+    "caption": "Close-up of a smiling woman talking in a dimly lit setting.",
+    "detailed_caption": "A close-up shot shows the same woman with dark hair in a bun and grey jacket smiling brightly while speaking. The setting is dimly lit at night with indistinct figures in the background.",
+    "caption_vi": "Cận cảnh người phụ nữ đang cười tươi nói chuyện trong khung cảnh thiếu sáng.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy người phụ nữ tóc búi và áo khoác xám đang mỉm cười tươi tắn khi nói chuyện. Bối cảnh mờ ảo vào ban đêm với những bóng người không rõ ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.135,
+          0.15,
+          0.648,
+          0.997
+        ],
+        "description": "smiling woman with dark hair in bun and grey jacket",
+        "description_vi": "phụ nữ tóc búi mặc áo khoác xám đang mỉm cười",
+        "attributes": [
+          "female",
+          "smiling",
+          "grey jacket"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0024",
+    "visual_source_frame_id": "L30_V050_f0024",
+    "ocr_source_frame_id": "L30_V050_f0024",
+    "quality_flags": [],
+    "caption": "A woman in a blue and yellow jacket holds a wooden pointer in front of a chalkboard.",
+    "detailed_caption": "A medium shot captures a woman wearing a blue and yellow jacket holding a wooden pointer, standing in front of a green chalkboard in an outdoor classroom. Children are visible watching near desks in the background.",
+    "caption_vi": "Một phụ nữ mặc áo khoác xanh vàng cầm thước gỗ trước bảng đen.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại người phụ nữ mặc áo khoác xanh và vàng cầm thanh thước gỗ, đang đứng trước bảng đen màu xanh trong lớp học ngoài trời. Các em nhỏ có thể thấy đang quan sát gần bàn học ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.688,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "green chalkboard with handwritten text",
+        "description_vi": "bảng đen với chữ viết tay",
+        "attributes": [
+          "green",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.17099999999999999,
+          0.197,
+          0.45,
+          0.997
+        ],
+        "description": "woman in blue and yellow jacket holding wooden pointer",
+        "description_vi": "phụ nữ mặc áo khoác xanh và vàng cầm thước gỗ",
+        "attributes": [
+          "female",
+          "blue and yellow jacket"
+        ],
+        "action": "holding pointer"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.52,
+          0.528,
+          0.658,
+          0.997
+        ],
+        "description": "young child in yellow and black jersey standing in background",
+        "description_vi": "trẻ em mặc áo vàng đen đứng ở hậu cảnh",
+        "attributes": [
+          "child",
+          "yellow jersey"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0025",
+    "visual_source_frame_id": "L30_V050_f0024",
+    "ocr_source_frame_id": "L30_V050_f0025",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a blue and yellow jacket holds a wooden pointer in front of a chalkboard.",
+    "detailed_caption": "A medium shot captures a woman wearing a blue and yellow jacket holding a wooden pointer, standing in front of a green chalkboard in an outdoor classroom. Children are visible watching near desks in the background.",
+    "caption_vi": "Một phụ nữ mặc áo khoác xanh vàng cầm thước gỗ trước bảng đen.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại người phụ nữ mặc áo khoác xanh và vàng cầm thanh thước gỗ, đang đứng trước bảng đen màu xanh trong lớp học ngoài trời. Các em nhỏ có thể thấy đang quan sát gần bàn học ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.688,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "green chalkboard with handwritten text",
+        "description_vi": "bảng đen với chữ viết tay",
+        "attributes": [
+          "green",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.17099999999999999,
+          0.197,
+          0.45,
+          0.997
+        ],
+        "description": "woman in blue and yellow jacket holding wooden pointer",
+        "description_vi": "phụ nữ mặc áo khoác xanh và vàng cầm thước gỗ",
+        "attributes": [
+          "female",
+          "blue and yellow jacket"
+        ],
+        "action": "holding pointer"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.52,
+          0.528,
+          0.658,
+          0.997
+        ],
+        "description": "young child in yellow and black jersey standing in background",
+        "description_vi": "trẻ em mặc áo vàng đen đứng ở hậu cảnh",
+        "attributes": [
+          "child",
+          "yellow jersey"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "chalkboard_0"
+      },
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0026",
+    "visual_source_frame_id": "L30_V050_f0026",
+    "ocr_source_frame_id": "L30_V050_f0026",
+    "quality_flags": [],
+    "caption": "A close-up portrait of a woman speaking with a slight smile.",
+    "detailed_caption": "This close-up shot shows the face of a woman with dark hair and a light grey collar. She is speaking with her mouth open, showing her teeth, against a dark green corrugated metal background.",
+    "caption_vi": "Cận cảnh khuôn mặt một người phụ nữ đang nói chuyện với nụ cười nhẹ.",
+    "detailed_caption_vi": "Cận cảnh khuôn mặt người phụ nữ tóc đen mặc áo cổ xám. Chị đang nói chuyện với miệng mở, lộ răng, trên nền vách tôn xanh tối màu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.242,
+          0.163,
+          0.683,
+          1.0
+        ],
+        "description": "close-up of woman's face speaking with dark hair and grey collar",
+        "description_vi": "cận cảnh khuôn mặt người phụ nữ đang nói chuyện tóc đen và cổ áo xám",
+        "attributes": [
+          "woman",
+          "face",
+          "dark hair",
+          "grey collar"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0027",
+    "visual_source_frame_id": "L30_V050_f0027",
+    "ocr_source_frame_id": "L30_V050_f0027",
+    "quality_flags": [],
+    "caption": "A close-up portrait of a woman speaking with her mouth open.",
+    "detailed_caption": "This close-up shot captures the face of a woman speaking directly. She has dark hair, a grey collar, and visible skin texture under dim lighting against a corrugated background.",
+    "caption_vi": "Cận cảnh khuôn mặt một người phụ nữ đang nói chuyện với miệng mở.",
+    "detailed_caption_vi": "Cận cảnh khuôn mặt người phụ nữ đang nói chuyện trực diện. Chị có mái tóc đen, cổ áo xám và làn da lộ rõ dưới ánh sáng mờ trên nền vách tôn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.16399999999999998,
+          0.07200000000000001,
+          0.772,
+          1.0
+        ],
+        "description": "close-up of woman's face with open mouth and grey collar",
+        "description_vi": "cận cảnh khuôn mặt người phụ nữ miệng mở và cổ áo xám",
+        "attributes": [
+          "woman",
+          "face",
+          "open mouth"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0028",
+    "visual_source_frame_id": "L30_V050_f0028",
+    "ocr_source_frame_id": "L30_V050_f0028",
+    "quality_flags": [],
+    "caption": "A close-up portrait of a woman talking with a serious expression.",
+    "detailed_caption": "This close-up shot shows a woman's face as she speaks. She wears a grey collared garment, and her expression is focused against a dark green corrugated wall background.",
+    "caption_vi": "Cận cảnh khuôn mặt một người phụ nữ đang nói chuyện với biểu cảm nghiêm túc.",
+    "detailed_caption_vi": "Cận cảnh khuôn mặt người phụ nữ khi đang nói chuyện. Chị mặc trang phục cổ xám, biểu cảm tập trung trên nền vách tôn xanh tối.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.141,
+          0.089,
+          0.778,
+          1.0
+        ],
+        "description": "close-up of woman's face talking with grey collar",
+        "description_vi": "cận cảnh khuôn mặt người phụ nữ đang nói chuyện với cổ áo xám",
+        "attributes": [
+          "woman",
+          "face",
+          "grey collar"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0029",
+    "visual_source_frame_id": "L30_V050_f0029",
+    "ocr_source_frame_id": "L30_V050_f0029",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A teacher and students gather around a whiteboard while a woman points at it.",
+    "detailed_caption": "A medium shot captures a male teacher in a white shirt and grey trousers standing beside a whiteboard, while an woman and another woman in a grey hoodie point at the board. Several students are seated at desks studying in the background.",
+    "caption_vi": "Giáo viên và học sinh quây quần bên bảng trắng trong khi một phụ nữ chỉ tay vào bảng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại giáo viên nam mặc áo sơ mi trắng và quần âu xám đứng cạnh bảng trắng, trong khi một phụ nữ lớn tuổi và một phụ nữ khác mặc áo hoodie xám đang chỉ tay vào bảng. Nhiều học sinh đang ngồi bàn học ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.223,
+          0.109,
+          0.4,
+          0.966
+        ],
+        "description": "male teacher in white shirt and grey trousers",
+        "description_vi": "giáo viên nam mặc áo sơ mi trắng và quần âu xám",
+        "attributes": [
+          "male",
+          "white shirt",
+          "grey trousers"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.335,
+          0.386,
+          0.655,
+          0.8979999999999999
+        ],
+        "description": "woman with grey hair wearing blue cardigan",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc mặc áo cardigan xanh",
+        "attributes": [
+          "female",
+          "blue cardigan"
+        ],
+        "action": "looking at board"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.34500000000000003,
+          0.356,
+          0.868,
+          0.999
+        ],
+        "description": "woman in grey hoodie pointing at whiteboard",
+        "description_vi": "phụ nữ mặc áo hoodie xám đang chỉ tay vào bảng trắng",
+        "attributes": [
+          "female",
+          "grey hoodie"
+        ],
+        "action": "pointing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0030",
+    "visual_source_frame_id": "L30_V050_f0030",
+    "ocr_source_frame_id": "L30_V050_f0030",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A man in a white shirt and gray trousers stands near a blackboard while several students and a woman holding a child look on.",
+    "detailed_caption": "This medium shot shows a male teacher in a white shirt standing beside a blackboard on the left. In the center foreground, an woman in a blue cardigan and a woman carrying a young child in a grey hoodie stand looking at the board. In the background, students sit at desks inside a dimly lit classroom.",
+    "caption_vi": "Một nam giáo viên áo trắng quần xám đứng cạnh bảng đen trong khi nhiều học sinh và một phụ nữ bồng con đang quan sát.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một nam giáo viên mặc áo trắng đứng cạnh bảng đen bên trái. Ở giữa tiền cảnh, một phụ nữ lớn tuổi mặc áo len xanh và một phụ nữ địu trẻ nhỏ mặc áo xám đang đứng nhìn lên bảng. Phía sau là các học sinh ngồi bàn trong lớp học mờ tối.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "child_0",
+        "label": "child",
+        "bbox": [
+          0.606,
+          0.45,
+          0.712,
+          0.78
+        ],
+        "description": "young child being carried by a woman",
+        "description_vi": "trẻ nhỏ được phụ nữ bồng trên tay",
+        "attributes": [
+          "child",
+          "grey top"
+        ],
+        "action": "being held"
+      },
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.489,
+          0.331,
+          0.642,
+          0.997
+        ],
+        "description": "woman wearing a blue cardigan with star patterns",
+        "description_vi": "phụ nữ lớn tuổi mặc áo khoác len xanh có họa tiết ngôi sao",
+        "attributes": [
+          "woman",
+          "blue cardigan",
+          "white collar",
+          "grey hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.223,
+          0.069,
+          0.397,
+          0.9189999999999999
+        ],
+        "description": "man in white short-sleeve shirt and gray trousers",
+        "description_vi": "nam giới mặc áo sơ mi trắng ngắn tay và quần xám",
+        "attributes": [
+          "man",
+          "white shirt",
+          "gray trousers"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.611,
+          0.33299999999999996,
+          0.891,
+          1.0
+        ],
+        "description": "woman wearing a gray hoodie holding a child",
+        "description_vi": "phụ nữ mặc áo hoodie màu xám đang bồng trẻ nhỏ",
+        "attributes": [
+          "woman",
+          "gray hoodie",
+          "dark hair"
+        ],
+        "action": "holding a child"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "elderly_woman_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "child_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "elderly_woman_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "elderly_woman_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0031",
+    "visual_source_frame_id": "L30_V050_f0031",
+    "ocr_source_frame_id": "L30_V050_f0031",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "An woman and a woman holding a child look towards a whiteboard.",
+    "detailed_caption": "A medium shot shows an woman in a blue cardigan and a woman in a grey hoodie holding a child, both looking intently toward a whiteboard in an outdoor classroom. Wooden desks and students are visible in the background.",
+    "caption_vi": "Một phụ nữ lớn tuổi và một phụ nữ bồng con đang nhìn về phía bảng trắng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ lớn tuổi mặc áo cardigan xanh và một phụ nữ mặc áo hoodie xám đang bồng em bé, cả hai cùng chăm chú nhìn về phía bảng trắng trong lớp học ngoài trời. Bàn ghế gỗ và học sinh hiển thị ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.242,
+          0.24200000000000002,
+          0.791,
+          0.999
+        ],
+        "description": "woman in grey hoodie holding a child",
+        "description_vi": "phụ nữ mặc áo hoodie xám đang bồng một đứa trẻ",
+        "attributes": [
+          "female",
+          "grey hoodie"
+        ],
+        "action": "holding child"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.312,
+          0.398,
+          0.525,
+          0.8939999999999999
+        ],
+        "description": "woman in blue cardigan looking at whiteboard",
+        "description_vi": "phụ nữ lớn tuổi mặc áo cardigan xanh đang nhìn bảng trắng",
+        "attributes": [
+          "female",
+          "blue cardigan"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0032",
+    "visual_source_frame_id": "L30_V050_f0032",
+    "ocr_source_frame_id": "L30_V050_f0032",
+    "quality_flags": [],
+    "caption": "A wooden pointer rests on a green chalkboard with handwritten Vietnamese text.",
+    "detailed_caption": "A close-up shot focuses on a wooden pointer touching a green chalkboard. The chalkboard is filled with neatly written Vietnamese cursive letters and words in white and orange chalk.",
+    "caption_vi": "Một thanh thước gỗ đặt trên bảng đen màu xanh có viết chữ tiếng Việt bằng phấn.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh tập trung vào một thanh thước gỗ đang chạm vào bảng đen màu xanh. Bảng đen được viết đầy các chữ cái và từ vựng viết tay bằng phấn trắng và cam.",
+    "ocr_text": "đàn sóc vượt dóc hạt thóc chim chóc",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.27799999999999997,
+          0.0,
+          1.0,
+          0.999
+        ],
+        "description": "green chalkboard with handwritten cursive Vietnamese words",
+        "description_vi": "bảng đen màu xanh với chữ viết tay tiếng Việt nết nét",
+        "attributes": [
+          "green",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pointer_0",
+        "label": "pointer",
+        "bbox": [
+          0.145,
+          0.37800000000000006,
+          0.575,
+          0.999
+        ],
+        "description": "wooden pointer resting against the chalkboard",
+        "description_vi": "thước chỉ bảng bằng gỗ tì vào bảng đen",
+        "attributes": [
+          "wooden",
+          "long"
+        ],
+        "action": "pointing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chalkboard_0",
+        "predicate": "overlapping",
+        "object_id": "pointer_0"
+      },
+      {
+        "subject_id": "pointer_0",
+        "predicate": "overlapping",
+        "object_id": "chalkboard_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0033",
+    "visual_source_frame_id": "L30_V050_f0033",
+    "ocr_source_frame_id": "L30_V050_f0033",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "Three people stand indoors at night: an woman in a blue cardigan on the left, a child in the middle, and a woman in a grey zip-up hoodie on the right.",
+    "detailed_caption": "A medium shot captures three foreground individuals indoors at night. On the left, an woman with white hair wears a blue cardigan over a white collared shirt. In the middle, a small child wears a grey shirt and is held by a woman on the right who wears a grey zip-up hoodie with a white logo. The background is dimly lit.",
+    "caption_vi": "Ba người đứng trong nhà vào ban đêm: một phụ nữ lớn tuổi mặc áo khoác len xanh ở bên trái, một trẻ em ở giữa, và một phụ nữ mặc áo hoodie xám ở bên phải.",
+    "detailed_caption_vi": "Cận cảnh trung bình ghi lại ba người ở tiền cảnh trong nhà vào ban đêm. Bên trái, một phụ nữ lớn tuổi tóc bạc mặc áo khoác len xanh ngoài áo sơ mi trắng có cổ. Ở giữa, một đứa trẻ mặc áo xám được bế bởi người phụ nữ bên phải mặc áo hoodie xám có logo trắng. Phối cảnh nền tối tăm.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "child_0",
+        "label": "child",
+        "bbox": [
+          0.45099999999999996,
+          0.37399999999999994,
+          0.663,
+          0.99
+        ],
+        "description": "small child wearing a grey patterned shirt",
+        "description_vi": "đứa trẻ nhỏ mặc áo xám có họa tiết",
+        "attributes": [
+          "small child",
+          "grey shirt",
+          "patterned"
+        ],
+        "action": "being held"
+      },
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.21800000000000003,
+          0.257,
+          0.501,
+          0.9939999999999999
+        ],
+        "description": "woman with white hair wearing a blue cardigan and white collared shirt",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc mặc áo khoác len xanh và áo sơ mi cổ trắng",
+        "attributes": [
+          "white hair",
+          "blue cardigan",
+          "white shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.563,
+          0.026,
+          0.9890000000000001,
+          0.9939999999999999
+        ],
+        "description": "woman with dark hair wearing a grey zip-up hoodie with a logo",
+        "description_vi": "phụ nữ tóc tối màu mặc áo hoodie xám có khóa kéo và logo",
+        "attributes": [
+          "dark hair",
+          "grey hoodie",
+          "zipper"
+        ],
+        "action": "holding a child"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "elderly_woman_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "elderly_woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0034",
+    "visual_source_frame_id": "L30_V050_f0033",
+    "ocr_source_frame_id": "L30_V050_f0034",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "Three people stand indoors at night: an woman in a blue cardigan on the left, a child in the middle, and a woman in a grey zip-up hoodie on the right.",
+    "detailed_caption": "A medium shot captures three foreground individuals indoors at night. On the left, an woman with white hair wears a blue cardigan over a white collared shirt. In the middle, a small child wears a grey shirt and is held by a woman on the right who wears a grey zip-up hoodie with a white logo. The background is dimly lit.",
+    "caption_vi": "Ba người đứng trong nhà vào ban đêm: một phụ nữ lớn tuổi mặc áo khoác len xanh ở bên trái, một trẻ em ở giữa, và một phụ nữ mặc áo hoodie xám ở bên phải.",
+    "detailed_caption_vi": "Cận cảnh trung bình ghi lại ba người ở tiền cảnh trong nhà vào ban đêm. Bên trái, một phụ nữ lớn tuổi tóc bạc mặc áo khoác len xanh ngoài áo sơ mi trắng có cổ. Ở giữa, một đứa trẻ mặc áo xám được bế bởi người phụ nữ bên phải mặc áo hoodie xám có logo trắng. Phối cảnh nền tối tăm.",
+    "ocr_text": "NIKE",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "child_0",
+        "label": "child",
+        "bbox": [
+          0.45099999999999996,
+          0.37399999999999994,
+          0.663,
+          0.99
+        ],
+        "description": "small child wearing a grey patterned shirt",
+        "description_vi": "đứa trẻ nhỏ mặc áo xám có họa tiết",
+        "attributes": [
+          "small child",
+          "grey shirt",
+          "patterned"
+        ],
+        "action": "being held"
+      },
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.21800000000000003,
+          0.257,
+          0.501,
+          0.9939999999999999
+        ],
+        "description": "woman with white hair wearing a blue cardigan and white collared shirt",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc mặc áo khoác len xanh và áo sơ mi cổ trắng",
+        "attributes": [
+          "white hair",
+          "blue cardigan",
+          "white shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.563,
+          0.026,
+          0.9890000000000001,
+          0.9939999999999999
+        ],
+        "description": "woman with dark hair wearing a grey zip-up hoodie with a logo",
+        "description_vi": "phụ nữ tóc tối màu mặc áo hoodie xám có khóa kéo và logo",
+        "attributes": [
+          "dark hair",
+          "grey hoodie",
+          "zipper"
+        ],
+        "action": "holding a child"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "elderly_woman_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "elderly_woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0035",
+    "visual_source_frame_id": "L30_V050_f0035",
+    "ocr_source_frame_id": "L30_V050_f0035",
+    "quality_flags": [],
+    "caption": "A close-up portrait of a man in a white collared shirt speaking in a classroom.",
+    "detailed_caption": "This close-up shot shows a man with dark hair wearing a white collared shirt. He is speaking with a serious expression, with desks and students blurred in the background.",
+    "caption_vi": "Cận cảnh khuôn mặt một người nam mặc áo sơ mi trắng có cổ đang nói chuyện trong lớp học.",
+    "detailed_caption_vi": "Cận cảnh người nam tóc đen mặc áo sơ mi trắng có cổ. Anh đang nói chuyện với vẻ mặt nghiêm túc, phía sau là bàn ghế và học sinh bị mờ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.263,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "man with dark hair wearing a white collared shirt",
+        "description_vi": "người nam tóc đen mặc áo sơ mi trắng có cổ",
+        "attributes": [
+          "man",
+          "white shirt",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0036",
+    "visual_source_frame_id": "L30_V050_f0036",
+    "ocr_source_frame_id": "L30_V050_f0036",
+    "quality_flags": [],
+    "caption": "A close-up portrait of a man speaking with a green lower-third banner containing Vietnamese text.",
+    "detailed_caption": "This close-up shot features a man in a white collared shirt speaking directly. A green lower-third banner with white Vietnamese text overlays the bottom portion of the frame.",
+    "caption_vi": "Cận cảnh người nam đang nói chuyện với một banner chữ xanh lá ở phía dưới chứa văn bản tiếng Việt.",
+    "detailed_caption_vi": "Cận cảnh người nam mặc áo sơ mi trắng có cổ đang nói chuyện trực diện. Một dải thông tin màu xanh lá với chữ tiếng Việt màu trắng nằm ở phần dưới khung hình.",
+    "ocr_text": "Thầy ĐỖ HỮU QUẢNG Giáo viên Trường tiểu học Đăk Sơmei, xã Đăk Sơmei, huyện Đăk Đoa, tỉnh Gia Lai",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.24700000000000003,
+          0.067,
+          0.844,
+          1.0
+        ],
+        "description": "man in white collared shirt speaking",
+        "description_vi": "người nam mặc áo sơ mi trắng có cổ đang nói chuyện",
+        "attributes": [
+          "man",
+          "white shirt",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0037",
+    "visual_source_frame_id": "L30_V050_f0037",
+    "ocr_source_frame_id": "L30_V050_f0037",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "An woman in a blue cardigan and a woman holding a child look towards a blackboard.",
+    "detailed_caption": "This medium shot shows an woman in a blue cardigan with white stars standing on the left, next to a woman in a grey hoodie carrying a young child. They are looking towards a large board on the right under a covered shelter.",
+    "caption_vi": "Một phụ nữ lớn tuổi mặc áo len xanh và một phụ nữ bồng con đang hướng nhìn về phía bảng đen.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một phụ nữ lớn tuổi mặc áo len xanh có hình ngôi sao đứng bên trái, cạnh một phụ nữ mặc áo hoodie xám đang bồng trẻ nhỏ. Cả hai đang hướng mắt nhìn về phía bảng lớn ở bên phải dưới mái che.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "child_0",
+        "label": "child",
+        "bbox": [
+          0.259,
+          0.381,
+          0.392,
+          0.8810000000000001
+        ],
+        "description": "young child being carried by a woman",
+        "description_vi": "trẻ nhỏ được phụ nữ bồng trên tay",
+        "attributes": [
+          "child",
+          "grey shirt"
+        ],
+        "action": "being held"
+      },
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.057999999999999996,
+          0.11900000000000001,
+          0.32999999999999996,
+          1.0
+        ],
+        "description": "woman wearing blue cardigan with white stars",
+        "description_vi": "phụ nữ lớn tuổi mặc áo khoác len xanh có các ngôi sao trắng",
+        "attributes": [
+          "woman",
+          "blue cardigan",
+          "grey hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.323,
+          0.275,
+          0.644,
+          1.0
+        ],
+        "description": "woman wearing a grey hoodie holding a toddler",
+        "description_vi": "phụ nữ mặc áo hoodie màu xám đang bồng trẻ nhỏ",
+        "attributes": [
+          "woman",
+          "grey hoodie",
+          "dark hair"
+        ],
+        "action": "holding a child"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "elderly_woman_0"
+      },
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "child_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "child_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0038",
+    "visual_source_frame_id": "L30_V050_f0038",
+    "ocr_source_frame_id": "L30_V050_f0038",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "An woman with white hair and a child are shown in profile indoors at night.",
+    "detailed_caption": "A close-up shot focuses in profile on an woman with white hair wearing a blue cardigan with a red collar. To her right, a child is partially visible facing away. The background shows a dimly lit indoor setting.",
+    "caption_vi": "Một phụ nữ lớn tuổi tóc bạc và một trẻ em được nhìn nghiêng trong nhà vào ban đêm.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào góc nghiêng của một phụ nữ lớn tuổi tóc bạc mặc áo khoác len xanh có cổ áo đỏ. Bên phải cô, một đứa trẻ xuất hiện một phần quay mặt đi. Hậu cảnh cho thấy không gian trong nhà thiếu sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "child_0",
+        "label": "child",
+        "bbox": [
+          0.7889999999999999,
+          0.504,
+          0.994,
+          0.9939999999999999
+        ],
+        "description": "child partially visible on the right",
+        "description_vi": "đứa trẻ hiển thị một phần ở bên phải",
+        "attributes": [
+          "child",
+          "partial view"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.16499999999999998,
+          0.287,
+          0.58,
+          0.9939999999999999
+        ],
+        "description": "woman with white hair in profile wearing a blue cardigan",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc nhìn nghiêng mặc áo khoác len xanh",
+        "attributes": [
+          "white hair",
+          "profile",
+          "blue cardigan"
+        ],
+        "action": "looking up"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "left_of",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "child_0",
+        "predicate": "right_of",
+        "object_id": "elderly_woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0039",
+    "visual_source_frame_id": "L30_V050_f0038",
+    "ocr_source_frame_id": "L30_V050_f0039",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "An woman with white hair and a child are shown in profile indoors at night.",
+    "detailed_caption": "A close-up shot focuses in profile on an woman with white hair wearing a blue cardigan with a red collar. To her right, a child is partially visible facing away. The background shows a dimly lit indoor setting.",
+    "caption_vi": "Một phụ nữ lớn tuổi tóc bạc và một trẻ em được nhìn nghiêng trong nhà vào ban đêm.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào góc nghiêng của một phụ nữ lớn tuổi tóc bạc mặc áo khoác len xanh có cổ áo đỏ. Bên phải cô, một đứa trẻ xuất hiện một phần quay mặt đi. Hậu cảnh cho thấy không gian trong nhà thiếu sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "child_0",
+        "label": "child",
+        "bbox": [
+          0.7889999999999999,
+          0.504,
+          0.994,
+          0.9939999999999999
+        ],
+        "description": "child partially visible on the right",
+        "description_vi": "đứa trẻ hiển thị một phần ở bên phải",
+        "attributes": [
+          "child",
+          "partial view"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.16499999999999998,
+          0.287,
+          0.58,
+          0.9939999999999999
+        ],
+        "description": "woman with white hair in profile wearing a blue cardigan",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc nhìn nghiêng mặc áo khoác len xanh",
+        "attributes": [
+          "white hair",
+          "profile",
+          "blue cardigan"
+        ],
+        "action": "looking up"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "left_of",
+        "object_id": "child_0"
+      },
+      {
+        "subject_id": "child_0",
+        "predicate": "right_of",
+        "object_id": "elderly_woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0040",
+    "visual_source_frame_id": "L30_V050_f0040",
+    "ocr_source_frame_id": "L30_V050_f0040",
+    "quality_flags": [],
+    "caption": "A man in a white collared shirt speaks in the foreground, with seated individuals in the blurred background.",
+    "detailed_caption": "A close-up shot shows a man wearing a white button-down shirt speaking. In the blurred background, several people are seated at desks inside a dimly lit room.",
+    "caption_vi": "Một người đàn ông mặc áo sơ mi trắng có cổ đang nói ở tiền cảnh, với những người ngồi ở hậu cảnh mờ.",
+    "detailed_caption_vi": "Cận cảnh cho thấy một người đàn ông mặc áo sơ mi trắng cài nút đang nói chuyện. Ở hậu cảnh mờ, một số người đang ngồi tại bàn bên trong một căn phòng thiếu sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.244,
+          0.054000000000000006,
+          0.843,
+          0.9939999999999999
+        ],
+        "description": "man wearing a white collared shirt",
+        "description_vi": "người đàn ông mặc áo sơ mi trắng có cổ",
+        "attributes": [
+          "white shirt",
+          "collared",
+          "short hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0041",
+    "visual_source_frame_id": "L30_V050_f0041",
+    "ocr_source_frame_id": "L30_V050_f0041",
+    "quality_flags": [],
+    "caption": "A man in a white shirt and gray trousers holds a pointer near a blackboard while a woman in a striped cardigan stands beside him.",
+    "detailed_caption": "This medium shot features a man in a white short-sleeve shirt and gray trousers standing in front of a blackboard and holding a wooden pointer. To the right, a woman in a striped cardigan and dark top looks at the board. Another student is visible writing at a desk in the background.",
+    "caption_vi": "Một nam giáo viên áo trắng quần xám cầm thước chỉ bảng đứng cạnh một phụ nữ mặc áo khoác sọc.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một người nam mặc áo sơ mi trắng ngắn tay và quần xám đứng trước bảng đen, tay cầm thanh thước gỗ. Phía bên phải, một phụ nữ mặc áo khoác sọc và áo tối màu đang nhìn vào bảng. Một học sinh khác ngồi viết ở bàn phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "board_0",
+        "label": "board",
+        "bbox": [
+          0.092,
+          0.0,
+          0.309,
+          1.0
+        ],
+        "description": "large dark board tilted in the classroom",
+        "description_vi": "bảng đen lớn đặt nghiêng trong lớp học",
+        "attributes": [
+          "large",
+          "dark",
+          "board"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.33799999999999997,
+          0.075,
+          0.577,
+          1.0
+        ],
+        "description": "man in white short-sleeve shirt and gray trousers holding pointer",
+        "description_vi": "người nam mặc áo sơ mi trắng ngắn tay và quần xám đang cầm thước chỉ",
+        "attributes": [
+          "man",
+          "white shirt",
+          "gray trousers"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.5389999999999999,
+          0.091,
+          0.8640000000000001,
+          1.0
+        ],
+        "description": "woman wearing a striped cardigan and dark top",
+        "description_vi": "phụ nữ mặc áo khoác sọc và áo trong tối màu",
+        "attributes": [
+          "woman",
+          "striped cardigan",
+          "dark hair"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "board_0",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "board_0"
+      },
+      {
+        "subject_id": "board_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "board_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0042",
+    "visual_source_frame_id": "L30_V050_f0042",
+    "ocr_source_frame_id": "L30_V050_f0042",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "An woman wearing a floral shirt holds a pen near her mouth indoors at night.",
+    "detailed_caption": "A close-up shot focuses on an woman with dark hair wearing a black-and-white floral patterned blouse. She holds a pen close to her lips while looking downward in a dimly lit indoor setting.",
+    "caption_vi": "Một phụ nữ lớn tuổi mặc áo hoa cầm bút gần miệng trong nhà vào ban đêm.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào một phụ nữ lớn tuổi tóc tối màu mặc áo blouse họa tiết hoa đen trắng. Cô ấy cầm một cây bút gần môi trong khi nhìn xuống ở không gian trong nhà thiếu sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.0,
+          0.0,
+          0.735,
+          0.9939999999999999
+        ],
+        "description": "woman wearing a black-and-white floral blouse holding a pen",
+        "description_vi": "phụ nữ lớn tuổi mặc áo blouse họa tiết hoa đen trắng đang cầm bút",
+        "attributes": [
+          "floral shirt",
+          "dark hair",
+          "holding pen"
+        ],
+        "action": "holding pen"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0043",
+    "visual_source_frame_id": "L30_V050_f0042",
+    "ocr_source_frame_id": "L30_V050_f0043",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "An woman wearing a floral shirt holds a pen near her mouth indoors at night.",
+    "detailed_caption": "A close-up shot focuses on an woman with dark hair wearing a black-and-white floral patterned blouse. She holds a pen close to her lips while looking downward in a dimly lit indoor setting.",
+    "caption_vi": "Một phụ nữ lớn tuổi mặc áo hoa cầm bút gần miệng trong nhà vào ban đêm.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào một phụ nữ lớn tuổi tóc tối màu mặc áo blouse họa tiết hoa đen trắng. Cô ấy cầm một cây bút gần môi trong khi nhìn xuống ở không gian trong nhà thiếu sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.0,
+          0.0,
+          0.735,
+          0.9939999999999999
+        ],
+        "description": "woman wearing a black-and-white floral blouse holding a pen",
+        "description_vi": "phụ nữ lớn tuổi mặc áo blouse họa tiết hoa đen trắng đang cầm bút",
+        "attributes": [
+          "floral shirt",
+          "dark hair",
+          "holding pen"
+        ],
+        "action": "holding pen"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V050_f0044",
+    "visual_source_frame_id": "L30_V050_f0044",
+    "ocr_source_frame_id": "L30_V050_f0044",
+    "quality_flags": [],
+    "caption": "Several women sit at wooden desks writing in notebooks in a classroom setting at night.",
+    "detailed_caption": "A medium shot captures several women seated at wooden desks inside a classroom at night. In the foreground, a woman wearing a floral shirt writes in a notebook. Other women are seated at desks behind her, writing and studying books.",
+    "caption_vi": "Một số phụ nữ ngồi tại bàn gỗ viết vào vở trong không gian lớp học vào ban đêm.",
+    "detailed_caption_vi": "Cận cảnh trung bình ghi lại nhiều phụ nữ ngồi tại bàn gỗ bên trong lớp học vào ban đêm. Ở tiền cảnh, một phụ nữ mặc áo hoa đang viết vào vở. Những người phụ nữ khác ngồi ở bàn phía sau cô ấy, đang viết và học sách.",
+    "ocr_text": "tuoitreTV GỘP LIỆU HỌC XÓA MÙ CHỮ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.0,
+          0.14600000000000002,
+          0.46900000000000003,
+          0.9939999999999999
+        ],
+        "description": "woman wearing a black-and-white floral blouse writing at a desk",
+        "description_vi": "phụ nữ mặc áo blouse hoa đen trắng đang viết tại bàn",
+        "attributes": [
+          "floral shirt",
+          "sitting",
+          "writing"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "woman_1",
+        "label": "woman",
+        "bbox": [
+          0.368,
+          0.24300000000000002,
+          0.61,
+          0.819
+        ],
+        "description": "woman wearing a dark jacket writing in a notebook",
+        "description_vi": "phụ nữ mặc áo khoác tối màu đang viết vào vở",
+        "attributes": [
+          "dark jacket",
+          "sitting",
+          "writing"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "woman_2",
+        "label": "woman",
+        "bbox": [
+          0.529,
+          0.23800000000000002,
+          0.768,
+          0.7439999999999999
+        ],
+        "description": "woman wearing a black top with a necklace",
+        "description_vi": "phụ nữ mặc áo đen đeo dây chuyền",
+        "attributes": [
+          "black top",
+          "necklace",
+          "sitting"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "woman_3",
+        "label": "woman",
+        "bbox": [
+          0.712,
+          0.275,
+          0.915,
+          0.622
+        ],
+        "description": "woman wearing a green hoodie sitting at a desk",
+        "description_vi": "phụ nữ mặc áo hoodie xanh lá ngồi tại bàn",
+        "attributes": [
+          "green hoodie",
+          "sitting"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_3"
+      },
+      {
+        "subject_id": "woman_3",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "overlapping",
+        "object_id": "woman_2"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "overlapping",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "left_of",
+        "object_id": "woman_3"
+      },
+      {
+        "subject_id": "woman_3",
+        "predicate": "right_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_2",
+        "predicate": "overlapping",
+        "object_id": "woman_3"
+      },
+      {
+        "subject_id": "woman_3",
+        "predicate": "overlapping",
+        "object_id": "woman_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0045",
+    "visual_source_frame_id": "L30_V050_f0045",
+    "ocr_source_frame_id": "L30_V050_f0045",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "Three women sit at desks in a classroom, with a green lower-third banner displayed at the bottom.",
+    "detailed_caption": "A medium shot shows three women seated at wooden desks in a classroom setting at night. A woman in a blue cardigan is on the left, an woman with white hair is in the center, and a woman in a beige jacket is on the right. A green lower-third banner with white text is displayed across the bottom.",
+    "caption_vi": "Ba phụ nữ ngồi tại bàn trong lớp học, với biểu ngữ phía dưới màu xanh lá cây hiển thị ở đáy.",
+    "detailed_caption_vi": "Cận cảnh trung bình cho thấy ba phụ nữ ngồi tại bàn gỗ trong không gian lớp học vào ban đêm. Một phụ nữ mặc áo khoác xanh ở bên trái, phụ nữ lớn tuổi tóc bạc ở giữa, và phụ nữ mặc áo khoác be ở bên phải. Biểu ngữ phía dưới màu xanh lá cây với chữ trắng hiển thị ở đáy.",
+    "ocr_text": "tuoitreTV Herbalife Tác giả: TẤN LỰC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elderly_woman_0",
+        "label": "elderly woman",
+        "bbox": [
+          0.461,
+          0.41500000000000004,
+          0.626,
+          0.775
+        ],
+        "description": "woman with white hair wearing a blue cardigan",
+        "description_vi": "phụ nữ lớn tuổi tóc bạc mặc áo khoác len xanh",
+        "attributes": [
+          "white hair",
+          "blue cardigan"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.001,
+          0.159,
+          0.477,
+          0.878
+        ],
+        "description": "woman wearing a light blue zip-up jacket writing at a desk",
+        "description_vi": "phụ nữ mặc áo khoác xanh nhạt có khóa kéo đang viết tại bàn",
+        "attributes": [
+          "light blue jacket",
+          "sitting",
+          "writing"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "woman_1",
+        "label": "woman",
+        "bbox": [
+          0.584,
+          0.10700000000000001,
+          0.994,
+          0.917
+        ],
+        "description": "woman wearing a beige jacket and dark top resting her head on her hand",
+        "description_vi": "phụ nữ mặc áo khoác be và áo tối màu chống cằm lên tay",
+        "attributes": [
+          "beige jacket",
+          "dark top",
+          "resting head"
+        ],
+        "action": "resting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elderly_woman_0",
+        "predicate": "overlapping",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "overlapping",
+        "object_id": "elderly_woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V050_f0046",
+    "visual_source_frame_id": "L30_V050_f0046",
+    "ocr_source_frame_id": "L30_V050_f0046",
+    "quality_flags": [],
+    "caption": "A woman in a grey jacket stands in the foreground while a woman in a blue and yellow jacket points at a board in a classroom.",
+    "detailed_caption": "This medium shot shows a woman wearing a grey jacket standing in the foreground facing left. To her right, a woman in a blue and yellow jacket holds a pointer facing a whiteboard. In the background, several students sit at desks writing, with a green lower-third banner at the bottom.",
+    "caption_vi": "Một phụ nữ mặc áo khoác xám đứng ở tiền cảnh trong khi một phụ nữ mặc áo khoác xanh vàng đang chỉ bảng trong lớp học.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một phụ nữ mặc áo khoác xám đang đứng ở tiền cảnh quay mặt sang trái. Bên phải cô, một phụ nữ mặc áo khoác xanh dương phối vàng cầm thước chỉ vào bảng trắng. Phía sau, nhiều học sinh ngồi bàn viết bài, với dải băng màu xanh lá ở phía dưới.",
+    "ocr_text": "Tác giả: TẤN LỰC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.16699999999999998,
+          0.617,
+          0.28300000000000003,
+          0.7859999999999999
+        ],
+        "description": "wooden school desks where students are seated",
+        "description_vi": "bàn học gỗ nơi học sinh đang ngồi",
+        "attributes": [
+          "wooden",
+          "school desk"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.308,
+          0.358,
+          0.475,
+          1.0
+        ],
+        "description": "woman wearing a grey jacket standing in foreground",
+        "description_vi": "phụ nữ mặc áo khoác xám đang đứng ở tiền cảnh",
+        "attributes": [
+          "woman",
+          "grey jacket",
+          "dark hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "woman_1",
+        "label": "woman",
+        "bbox": [
+          0.616,
+          0.33,
+          0.82,
+          1.0
+        ],
+        "description": "woman wearing a blue and yellow jacket holding a pointer",
+        "description_vi": "phụ nữ mặc áo khoác xanh dương và vàng đang cầm thước",
+        "attributes": [
+          "woman",
+          "blue and yellow jacket",
+          "dark hair"
+        ],
+        "action": "pointing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "left_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "right_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "woman_1"
+      },
+      {
+        "subject_id": "woman_1",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      }
+    ]
+  }
+]

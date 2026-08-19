@@ -1,0 +1,2899 @@
+[
+  {
+    "frame_id": "L24_V040_f0001",
+    "visual_source_frame_id": "L24_V040_f0001",
+    "ocr_source_frame_id": "L24_V040_f0001",
+    "quality_flags": [],
+    "caption": "A white lion costume leaps across poles on stage in front of spectators.",
+    "detailed_caption": "A wide shot captures a white lion dance costume performing a dynamic leap across tall poles on an outdoor stage at night. Spectators are visible in the background seated near a table draped with a blue cloth.",
+    "caption_vi": "Đầu lân màu trắng nhảy qua các cột trên sân khấu trước khán giả.",
+    "detailed_caption_vi": "Cảnh quay rộng ghi lại một đầu lân màu trắng đang thực hiện cú nhảy động trên các cột cao trên sân khấu ngoài trời vào ban đêm. Khán giả có thể nhìn thấy ở hậu cảnh ngồi gần một chiếc bàn được phủ khăn màu xanh.",
+    "ocr_text": "4 6 8",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.5,
+          0.647,
+          0.9
+        ],
+        "description": "a white lion costume leaping across poles",
+        "description_vi": "một bộ trang phục lân màu trắng đang nhảy qua các cột",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "leaping"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.319,
+          0.7969999999999999,
+          0.423,
+          1.0
+        ],
+        "description": "a tall metal pole numbered four",
+        "description_vi": "một cột kim loại cao được đánh số bốn",
+        "attributes": [
+          "tall",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pole_1",
+        "label": "pole",
+        "bbox": [
+          0.566,
+          0.791,
+          0.661,
+          1.0
+        ],
+        "description": "a tall metal pole numbered six",
+        "description_vi": "một cột kim loại cao được đánh số sáu",
+        "attributes": [
+          "tall",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.0,
+          0.909,
+          0.22999999999999998,
+          1.0
+        ],
+        "description": "a table draped with blue cloth",
+        "description_vi": "một chiếc bàn được phủ vải xanh",
+        "attributes": [
+          "blue",
+          "draped"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_1"
+      },
+      {
+        "subject_id": "pole_1",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "left_of",
+        "object_id": "pole_1"
+      },
+      {
+        "subject_id": "pole_1",
+        "predicate": "right_of",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "pole_1"
+      },
+      {
+        "subject_id": "pole_1",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0002",
+    "visual_source_frame_id": "L24_V040_f0002",
+    "ocr_source_frame_id": "L24_V040_f0002",
+    "quality_flags": [],
+    "caption": "A white lion costume is suspended in mid-air above vertical poles.",
+    "detailed_caption": "A wide shot shows a white lion dance costume mid-leap above a series of vertical performance poles. Several spectators and a blue-covered table are visible in the background under night lighting.",
+    "caption_vi": "Đầu lân màu trắng đang lơ lửng giữa không trung phía trên các cột thẳng đứng.",
+    "detailed_caption_vi": "Cảnh quay rộng cho thấy một bộ trang phục múa lân màu trắng đang ở giữa không trung phía trên một loạt các cột biểu diễn thẳng đứng. Một số khán giả và một chiếc bàn được phủ màu xanh lam có thể nhìn thấy ở hậu cảnh dưới ánh đèn ban đêm.",
+    "ocr_text": "14 13 15 17",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.191,
+          0.187,
+          0.699,
+          0.591
+        ],
+        "description": "a white lion costume suspended in mid-air",
+        "description_vi": "một bộ trang phục lân màu trắng lơ lửng giữa không trung",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "jumping"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.061000000000000006,
+          0.61,
+          0.127,
+          0.961
+        ],
+        "description": "a vertical performance pole with a number tag",
+        "description_vi": "một cột biểu diễn thẳng đứng có biển số",
+        "attributes": [
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pole_1",
+        "label": "pole",
+        "bbox": [
+          0.308,
+          0.643,
+          0.368,
+          0.9480000000000001
+        ],
+        "description": "a vertical performance pole with number 13",
+        "description_vi": "một cột biểu diễn thẳng đứng có số 13",
+        "attributes": [
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "pole_1"
+      },
+      {
+        "subject_id": "pole_1",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "left_of",
+        "object_id": "pole_1"
+      },
+      {
+        "subject_id": "pole_1",
+        "predicate": "right_of",
+        "object_id": "pole_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0003",
+    "visual_source_frame_id": "L24_V040_f0003",
+    "ocr_source_frame_id": "L24_V040_f0003",
+    "quality_flags": [],
+    "caption": "A blurred white lion costume moves past stage decorations.",
+    "detailed_caption": "A close shot captures a white lion costume moving rapidly with motion blur across the stage. Colorful stage lights and blurred audience members are visible in the background.",
+    "caption_vi": "Đầu lân màu trắng bị mờ di chuyển qua các trang trí sân khấu.",
+    "detailed_caption_vi": "Cảnh cận cảnh ghi lại một bộ trang phục lân màu trắng di chuyển nhanh với hiệu ứng nhòe chuyển động trên sân khấu. Đèn sân khấu đầy màu sắc và khán giả mờ ảo có thể nhìn thấy ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.034,
+          0.316,
+          0.995,
+          0.746
+        ],
+        "description": "a white lion costume with motion blur",
+        "description_vi": "một bộ trang phục lân màu trắng bị nhòe chuyển động",
+        "attributes": [
+          "white",
+          "blurred"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0004",
+    "visual_source_frame_id": "L24_V040_f0004",
+    "ocr_source_frame_id": "L24_V040_f0004",
+    "quality_flags": [],
+    "caption": "A white lion costume performs an aerial leap on stage.",
+    "detailed_caption": "A medium shot displays a white lion dance costume performing a high jump through the air. The stage structure and blurred background lights are visible below.",
+    "caption_vi": "Đầu lân màu trắng thực hiện cú nhảy trên không trên sân khấu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục múa lân màu trắng đang thực hiện cú nhảy cao qua không trung. Cấu trúc sân khấu và ánh đèn nền mờ ảo có thể nhìn thấy bên dưới.",
+    "ocr_text": "88 8 8 8",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.05,
+          0.062,
+          0.8029999999999999,
+          0.64
+        ],
+        "description": "a white lion costume leaping in the air",
+        "description_vi": "một bộ trang phục lân màu trắng đang nhảy trên không",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "leaping"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0005",
+    "visual_source_frame_id": "L24_V040_f0005",
+    "ocr_source_frame_id": "L24_V040_f0005",
+    "quality_flags": [],
+    "caption": "A white lion costume is captured mid-air during a performance.",
+    "detailed_caption": "A medium shot shows a white lion costume suspended vertically during a jump. Stage rigging and glowing light bokeh are present in the dark background.",
+    "caption_vi": "Đầu lân màu trắng được chụp lại giữa không trung trong một buổi biểu diễn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một bộ trang phục lân màu trắng lơ lửng thẳng đứng trong một cú nhảy. Giàn giáo sân khấu và hiệu ứng bokeh ánh sáng phát sáng hiện diện ở hậu cảnh tối.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.18699999999999997,
+          0.11100000000000002,
+          0.656,
+          0.73
+        ],
+        "description": "a white lion costume suspended vertically",
+        "description_vi": "một bộ trang phục lân màu trắng lơ lửng theo chiều dọc",
+        "attributes": [
+          "white",
+          "vertical"
+        ],
+        "action": "jumping"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0006",
+    "visual_source_frame_id": "L24_V040_f0006",
+    "ocr_source_frame_id": "L24_V040_f0006",
+    "quality_flags": [],
+    "caption": "A white lion costume stands upright on a pole on stage.",
+    "detailed_caption": "A medium shot captures a white lion costume balanced vertically on top of a performance pole. A spectator in a yellow shirt stands near a blue table in the lower left background.",
+    "caption_vi": "Đầu lân màu trắng đứng thẳng trên một cột trên sân khấu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một bộ trang phục lân màu trắng thăng bằng theo chiều dọc trên đỉnh của một cột biểu diễn. Một khán giả mặc áo vàng đứng gần chiếc bàn màu xanh lam ở phía dưới bên trái hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.268,
+          0.17099999999999999,
+          0.725,
+          0.727
+        ],
+        "description": "a white lion costume balancing vertically",
+        "description_vi": "một bộ trang phục lân màu trắng thăng bằng theo chiều dọc",
+        "attributes": [
+          "white",
+          "tall"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.503,
+          0.724,
+          0.551,
+          1.0
+        ],
+        "description": "a vertical performance pole supporting the lion",
+        "description_vi": "một cột biểu diễn thẳng đứng đỡ con lân",
+        "attributes": [
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0007",
+    "visual_source_frame_id": "L24_V040_f0006",
+    "ocr_source_frame_id": "L24_V040_f0007",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A white lion costume stands upright on a pole on stage.",
+    "detailed_caption": "A medium shot captures a white lion costume balanced vertically on top of a performance pole. A spectator in a yellow shirt stands near a blue table in the lower left background.",
+    "caption_vi": "Đầu lân màu trắng đứng thẳng trên một cột trên sân khấu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một bộ trang phục lân màu trắng thăng bằng theo chiều dọc trên đỉnh của một cột biểu diễn. Một khán giả mặc áo vàng đứng gần chiếc bàn màu xanh lam ở phía dưới bên trái hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.268,
+          0.17099999999999999,
+          0.725,
+          0.727
+        ],
+        "description": "a white lion costume balancing vertically",
+        "description_vi": "một bộ trang phục lân màu trắng thăng bằng theo chiều dọc",
+        "attributes": [
+          "white",
+          "tall"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.503,
+          0.724,
+          0.551,
+          1.0
+        ],
+        "description": "a vertical performance pole supporting the lion",
+        "description_vi": "một cột biểu diễn thẳng đứng đỡ con lân",
+        "attributes": [
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0008",
+    "visual_source_frame_id": "L24_V040_f0008",
+    "ocr_source_frame_id": "L24_V040_f0008",
+    "quality_flags": [],
+    "caption": "A white lion costume performs on poles on stage.",
+    "detailed_caption": "A medium shot shows a white lion costume positioned on top of performance poles. A person in a yellow shirt stands near a table on the left side of the stage.",
+    "caption_vi": "Đầu lân màu trắng biểu diễn trên các cột trên sân khấu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng được đặt trên đỉnh các cột biểu diễn. Một người mặc áo vàng đứng gần bàn ở bên trái sân khấu.",
+    "ocr_text": "14 15 16 18",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.192,
+          0.205,
+          0.746,
+          0.744
+        ],
+        "description": "a white lion costume performing on poles",
+        "description_vi": "một bộ trang phục lân màu trắng đang biểu diễn trên các cột",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.455,
+          0.741,
+          0.512,
+          1.0
+        ],
+        "description": "a vertical performance pole numbered 15",
+        "description_vi": "một cột biểu diễn thẳng đứng mang số 15",
+        "attributes": [
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0009",
+    "visual_source_frame_id": "L24_V040_f0009",
+    "ocr_source_frame_id": "L24_V040_f0009",
+    "quality_flags": [],
+    "caption": "A white lion costume moves swiftly with motion blur.",
+    "detailed_caption": "A medium shot depicts a white lion dance costume in rapid motion with heavy blur. Stage lights and structural elements are visible in the background.",
+    "caption_vi": "Đầu lân màu trắng di chuyển nhanh với độ mờ chuyển động.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh mô tả bộ trang phục múa lân màu trắng chuyển động nhanh với độ mờ lớn. Đèn sân khấu và các yếu tố cấu trúc có thể nhìn thấy ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.113,
+          0.2,
+          0.7030000000000001,
+          0.748
+        ],
+        "description": "a white lion costume moving with heavy motion blur",
+        "description_vi": "một bộ trang phục lân màu trắng di chuyển với độ nhòe chuyển động lớn",
+        "attributes": [
+          "white",
+          "blurred"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0010",
+    "visual_source_frame_id": "L24_V040_f0010",
+    "ocr_source_frame_id": "L24_V040_f0010",
+    "quality_flags": [],
+    "caption": "A white lion costume is performed by acrobats during a leap.",
+    "detailed_caption": "A medium shot captures a white lion costume with performers visible inside, mid-leap across the stage. The background shows blurred stage equipment and spectators.",
+    "caption_vi": "Đầu lân màu trắng được biểu diễn bởi các nghệ sĩ nhào lộn trong một cú nhảy.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng có người biểu diễn bên trong, đang ở giữa cú nhảy băng qua sân khấu. Hậu cảnh cho thấy thiết bị sân khấu bị mờ và khán giả.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.038,
+          0.258,
+          0.663,
+          0.722
+        ],
+        "description": "a white lion costume with a performer visible",
+        "description_vi": "một bộ trang phục lân màu trắng có thể nhìn thấy người biểu diễn",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "leaping"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0011",
+    "visual_source_frame_id": "L24_V040_f0011",
+    "ocr_source_frame_id": "L24_V040_f0011",
+    "quality_flags": [],
+    "caption": "A white lion costume leaps across structures on stage.",
+    "detailed_caption": "A medium shot shows a white lion costume with a visible performer performing an aerial movement. The background is blurred with motion effects and stage lighting.",
+    "caption_vi": "Đầu lân màu trắng nhảy qua các cấu trúc trên sân khấu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng có người biểu diễn rõ ràng đang thực hiện động tác trên không. Hậu cảnh bị mờ với hiệu ứng chuyển động và ánh sáng sân khấu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.038,
+          0.387,
+          0.6809999999999999,
+          0.67
+        ],
+        "description": "a white lion costume moving rapidly across the stage",
+        "description_vi": "một bộ trang phục lân màu trắng di chuyển nhanh chóng trên sân khấu",
+        "attributes": [
+          "white",
+          "blurred"
+        ],
+        "action": "leaping"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0012",
+    "visual_source_frame_id": "L24_V040_f0012",
+    "ocr_source_frame_id": "L24_V040_f0012",
+    "quality_flags": [],
+    "caption": "A white lion costume balances on a pole during a performance.",
+    "detailed_caption": "A medium shot captures a white lion costume resting on top of a tall vertical pole. The background is heavily blurred with vertical motion lines.",
+    "caption_vi": "Đầu lân màu trắng thăng bằng trên cột trong buổi biểu diễn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng đang đậu trên đỉnh một cột thẳng đứng cao. Hậu cảnh bị mờ nhiều với các đường chuyển động thẳng đứng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.159,
+          0.371,
+          0.689,
+          0.7030000000000001
+        ],
+        "description": "a white lion costume balancing on a pole",
+        "description_vi": "một bộ trang phục lân màu trắng thăng bằng trên cột",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "balancing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0013",
+    "visual_source_frame_id": "L24_V040_f0013",
+    "ocr_source_frame_id": "L24_V040_f0013",
+    "quality_flags": [],
+    "caption": "A blurred figure and structure appear with heavy vertical motion lines.",
+    "detailed_caption": "A medium shot shows a heavily blurred scene with vertical motion lines distorting the performers and stage elements. Details are obscured by fast camera movement.",
+    "caption_vi": "Một hình dáng và cấu trúc bị mờ xuất hiện với các đường chuyển động thẳng đứng nặng nề.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một khung cảnh bị mờ nhiều với các đường chuyển động thẳng đứng làm biến dạng người biểu diễn và các yếu tố sân khấu. Các chi tiết bị che khuất bởi chuyển động máy ảnh nhanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.163,
+          0.21000000000000002,
+          0.78,
+          0.9949999999999999
+        ],
+        "description": "a blurred figure of a performer",
+        "description_vi": "hình dáng mờ ảo của một nghệ sĩ biểu diễn",
+        "attributes": [
+          "blurred",
+          "vertical"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0014",
+    "visual_source_frame_id": "L24_V040_f0014",
+    "ocr_source_frame_id": "L24_V040_f0014",
+    "quality_flags": [],
+    "caption": "A heavily blurred motion shot of a performer in a white lion costume on elevated poles.",
+    "detailed_caption": "This is a heavily motion-blurred medium shot showing a performer in a white lion costume atop vertical poles. The figure is indistinct due to motion blur, with vertical streaks obscuring the details of the costume and performance. The background shows dark architectural elements and a hazy atmosphere.",
+    "caption_vi": "Một khung hình chuyển động mờ nhòe của người biểu diễn trang phục lân trắng trên cột cao.",
+    "detailed_caption_vi": "Đây là một cảnh quay trung trung bị mờ nhòe do chuyển động cho thấy một người biểu diễn mặc trang phục lân trắng trên đỉnh các cột thẳng đứng. Hình dáng bị mờ đi do hiệu ứng chuyển động, với các vệt dọc che khuất chi tiết trang phục.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.159,
+          0.202,
+          0.745,
+          0.8160000000000001
+        ],
+        "description": "a heavily blurred white lion costume",
+        "description_vi": "trang phục lân trắng bị mờ nhòe",
+        "attributes": [
+          "white",
+          "blurred",
+          "costume"
+        ],
+        "action": "performing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0015",
+    "visual_source_frame_id": "L24_V040_f0015",
+    "ocr_source_frame_id": "L24_V040_f0015",
+    "quality_flags": [],
+    "caption": "A white lion costume performs on elevated poles on stage.",
+    "detailed_caption": "A medium shot captures a white lion costume moving vertically across tall performance poles. Spectators and a table are visible in the lower background.",
+    "caption_vi": "Đầu lân màu trắng biểu diễn trên các cột cao trên sân khấu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng di chuyển theo chiều dọc qua các cột biểu diễn cao. Khán giả và một cái bàn có thể nhìn thấy ở hậu cảnh phía dưới.",
+    "ocr_text": "10 12 13 15",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.33,
+          0.181,
+          0.7430000000000001,
+          0.697
+        ],
+        "description": "a white lion costume performing on tall poles",
+        "description_vi": "một bộ trang phục lân màu trắng đang biểu diễn trên các cột cao",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.41500000000000004,
+          0.712,
+          0.47100000000000003,
+          1.0
+        ],
+        "description": "a tall metal pole numbered twelve",
+        "description_vi": "một cột kim loại cao được đánh số mười hai",
+        "attributes": [
+          "tall",
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0016",
+    "visual_source_frame_id": "L24_V040_f0016",
+    "ocr_source_frame_id": "L24_V040_f0016",
+    "quality_flags": [],
+    "caption": "A white lion costume leaps across vertical poles on stage.",
+    "detailed_caption": "A medium shot shows a white lion dance costume performing a jump between poles. Spectators are seated in the darkened background watching the performance.",
+    "caption_vi": "Đầu lân màu trắng nhảy qua các cột thẳng đứng trên sân khấu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục múa lân màu trắng đang thực hiện cú nhảy giữa các cột. Khán giả đang ngồi ở hậu cảnh tối để theo dõi buổi biểu diễn.",
+    "ocr_text": "13 15 17 18",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.422,
+          0.34500000000000003,
+          0.995,
+          0.759
+        ],
+        "description": "a white lion costume leaping between poles",
+        "description_vi": "một bộ trang phục lân màu trắng đang nhảy giữa các cột",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "jumping"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0017",
+    "visual_source_frame_id": "L24_V040_f0017",
+    "ocr_source_frame_id": "L24_V040_f0017",
+    "quality_flags": [],
+    "caption": "A white lion costume balances on a pole during a performance.",
+    "detailed_caption": "A medium shot captures a white lion costume balanced on top of a pole. A person is seated near a table marked with the number 17 in the foreground area below.",
+    "caption_vi": "Đầu lân màu trắng thăng bằng trên cột trong buổi biểu diễn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng thăng bằng trên đỉnh cột. Một người đang ngồi cạnh chiếc bàn được đánh số 17 ở khu vực phía trước bên dưới.",
+    "ocr_text": "14 17",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.348,
+          0.386,
+          0.987,
+          0.761
+        ],
+        "description": "a white lion costume balancing on a pole",
+        "description_vi": "một bộ trang phục lân màu trắng thăng bằng trên cột",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.5389999999999999,
+          0.759,
+          0.591,
+          1.0
+        ],
+        "description": "a vertical performance pole supporting the lion",
+        "description_vi": "một cột biểu diễn thẳng đứng đỡ con lân",
+        "attributes": [
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0018",
+    "visual_source_frame_id": "L24_V040_f0018",
+    "ocr_source_frame_id": "L24_V040_f0018",
+    "quality_flags": [],
+    "caption": "A blurred figure moves rapidly on stage with vertical motion lines.",
+    "detailed_caption": "A medium shot displays a heavily blurred scene with vertical motion streaks across the frame. The background is dark with indistinct stage lighting.",
+    "caption_vi": "Một hình dáng bị mờ di chuyển nhanh trên sân khấu với các đường chuyển động thẳng đứng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị một khung cảnh bị mờ nhiều với các vệt chuyển động thẳng đứng trên khung hình. Hậu cảnh tối với ánh sáng sân khấu không rõ ràng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.348,
+          0.181,
+          0.978,
+          0.7889999999999999
+        ],
+        "description": "a heavily blurred figure of a performer",
+        "description_vi": "hình dáng mờ nhòe của một nghệ sĩ biểu diễn",
+        "attributes": [
+          "blurred",
+          "vertical"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0019",
+    "visual_source_frame_id": "L24_V040_f0019",
+    "ocr_source_frame_id": "L24_V040_f0019",
+    "quality_flags": [],
+    "caption": "A blurred figure is captured with heavy vertical motion blur.",
+    "detailed_caption": "A close shot shows a fast-moving figure distorted by vertical motion blur. The background is dark and indistinct.",
+    "caption_vi": "Một hình dáng bị mờ được ghi lại với độ mờ chuyển động dọc lớn.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một hình dáng chuyển động nhanh bị biến dạng bởi độ mờ chuyển động dọc. Hậu cảnh tối và không rõ ràng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.348,
+          0.181,
+          0.978,
+          0.7889999999999999
+        ],
+        "description": "a fast-moving blurred figure",
+        "description_vi": "một hình dáng mờ ảo di chuyển nhanh",
+        "attributes": [
+          "blurred",
+          "vertical"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0020",
+    "visual_source_frame_id": "L24_V040_f0020",
+    "ocr_source_frame_id": "L24_V040_f0020",
+    "quality_flags": [],
+    "caption": "A blurred performer is visible amidst heavy motion lines.",
+    "detailed_caption": "A medium shot captures a blurred performer on stage against a dark background. Vertical streaks obscure the visual details.",
+    "caption_vi": "Một nghệ sĩ biểu diễn bị mờ có thể nhìn thấy giữa các đường chuyển động nặng nề.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một nghệ sĩ biểu diễn bị mờ trên sân khấu với hậu cảnh tối. Các vệt dọc làm lu mờ các chi tiết thị giác.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.329,
+          0.217,
+          0.9329999999999999,
+          0.762
+        ],
+        "description": "a blurred performer with vertical motion blur",
+        "description_vi": "một nghệ sĩ biểu diễn bị mờ với hiệu ứng nhòe chuyển động dọc",
+        "attributes": [
+          "blurred",
+          "vertical"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0021",
+    "visual_source_frame_id": "L24_V040_f0021",
+    "ocr_source_frame_id": "L24_V040_f0021",
+    "quality_flags": [],
+    "caption": "A blurred figure is seen performing on stage at night.",
+    "detailed_caption": "A medium shot shows a blurred figure moving quickly across stage poles. The background is dark with strong vertical motion distortion.",
+    "caption_vi": "Một hình dáng bị mờ được nhìn thấy đang biểu diễn trên sân khấu vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một hình dáng bị mờ di chuyển nhanh qua các cột sân khấu. Hậu cảnh tối với độ biến dạng chuyển động dọc mạnh mẽ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.33499999999999996,
+          0.23399999999999999,
+          0.9109999999999999,
+          0.736
+        ],
+        "description": "a blurred performer moving across stage poles",
+        "description_vi": "một nghệ sĩ biểu diễn bị mờ đang di chuyển qua các cột sân khấu",
+        "attributes": [
+          "blurred",
+          "vertical"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0022",
+    "visual_source_frame_id": "L24_V040_f0022",
+    "ocr_source_frame_id": "L24_V040_f0022",
+    "quality_flags": [],
+    "caption": "A blurry medium shot shows a white lion dance costume suspended mid-air in front of a dark outdoor stage setting.",
+    "detailed_caption": "A medium shot captures a white lion dance costume in mid-air against a dark background. The costume displays intricate white fluff and ring patterns. The blurred foreground and ambient colored lights indicate an outdoor performance setting.",
+    "caption_vi": "Cận cảnh một bộ trang phục múa lân màu trắng đang lơ lửng trên không trung trước phông nền sân khấu tối.",
+    "detailed_caption_vi": "Bức ảnh ghi lại một bộ trang phục múa lân màu trắng trong khung cảnh tối. Trang phục có nhiều chi tiết lông xù và hoa văn hình vòng tròn. Phông nền mờ ảo với ánh đèn màu sắc tạo nên không gian biểu diễn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.258,
+          0.217,
+          0.698,
+          0.737
+        ],
+        "description": "white lion dance costume with fluffy fur and ring patterns",
+        "description_vi": "trang phục múa lân màu trắng có lông xù và hoa văn hình vòng tròn",
+        "attributes": [
+          "white",
+          "fluffy",
+          "costume"
+        ],
+        "action": "hanging"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0023",
+    "visual_source_frame_id": "L24_V040_f0023",
+    "ocr_source_frame_id": "L24_V040_f0023",
+    "quality_flags": [],
+    "caption": "A heavily blurred motion shot shows a white and purple costume piece against a dark backdrop.",
+    "detailed_caption": "A motion-blurred shot depicts a white and purple costume piece moving rapidly against a dark background with colorful ambient lights. The details of the subject are obscured due to motion blur.",
+    "caption_vi": "Một bức ảnh bị mờ do chuyển động ghi lại mảnh trang phục màu trắng và tím trên nền tối.",
+    "detailed_caption_vi": "Khung hình bị mờ do chuyển động cho thấy một phần trang phục màu trắng và tím đang di chuyển nhanh trước phông nền tối với ánh sáng xung quanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "costume_0",
+        "label": "costume",
+        "bbox": [
+          0.253,
+          0.16399999999999998,
+          0.75,
+          0.755
+        ],
+        "description": "white and purple blurred costume element",
+        "description_vi": "chi tiết trang phục màu trắng và tím bị mờ",
+        "attributes": [
+          "blurred",
+          "white",
+          "purple"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0024",
+    "visual_source_frame_id": "L24_V040_f0024",
+    "ocr_source_frame_id": "L24_V040_f0024",
+    "quality_flags": [],
+    "caption": "A medium shot shows a white lion costume positioned on elevated poles, with spectators visible in the background.",
+    "detailed_caption": "A medium shot captures a white lion dance costume standing on tall poles on a stage. The costume features detailed white fur and a decorated head. In the background, spectators and a person in a yellow shirt are visible under stage lighting.",
+    "caption_vi": "Cảnh trung cho thấy bộ trang phục lân trắng đứng trên các cột cao, với khán giả ở phía sau.",
+    "detailed_caption_vi": "Khung hình trung hiển thị trang phục múa lân màu trắng đứng trên các cột cao trên sân khấu. Trang phục nổi bật với bộ lông trắng chi tiết và phần đầu được trang trí. Phía sau là khán giả và một người mặc áo vàng dưới ánh đèn sân khấu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.085,
+          0.426,
+          0.821,
+          0.8160000000000001
+        ],
+        "description": "white lion dance costume standing on elevated poles",
+        "description_vi": "bộ trang phục múa lân màu trắng đang đứng trên các cột cao",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.169,
+          0.852,
+          0.314,
+          0.994
+        ],
+        "description": "person in a yellow shirt standing near the performance area",
+        "description_vi": "người mặc áo vàng đứng gần khu vực biểu diễn",
+        "attributes": [
+          "yellow shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.10700000000000001,
+          0.732,
+          0.17200000000000001,
+          0.9880000000000001
+        ],
+        "description": "tall vertical pole used for lion dance performance",
+        "description_vi": "cột thẳng đứng cao dùng cho biểu diễn múa lân",
+        "attributes": [
+          "tall",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0025",
+    "visual_source_frame_id": "L24_V040_f0025",
+    "ocr_source_frame_id": "L24_V040_f0025",
+    "quality_flags": [],
+    "caption": "A heavily blurred motion shot shows vertical streaks of white and pink against a dark stage background.",
+    "detailed_caption": "A motion-blurred shot captures vertical streaks of white and pink tones against a dark background. The scene is heavily distorted by movement, obscuring any specific shapes or objects.",
+    "caption_vi": "Bức ảnh bị mờ do chuyển động cho thấy các vệt dọc màu trắng và hồng trên nền sân khấu tối.",
+    "detailed_caption_vi": "Khung hình mờ chuyển động ghi lại các vệt màu trắng và hồng dọc theo phông nền tối. Cảnh quay bị biến dạng mạnh do chuyển động, làm mờ các hình khối cụ thể.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0026",
+    "visual_source_frame_id": "L24_V040_f0026",
+    "ocr_source_frame_id": "L24_V040_f0026",
+    "quality_flags": [],
+    "caption": "A blurred motion shot shows vertical light streaks in white and pink against a dark background.",
+    "detailed_caption": "A motion-blurred shot displays vertical streaks of white and pink light against a dark background. The image is significantly distorted by rapid movement, leaving no distinct subjects visible.",
+    "caption_vi": "Bức ảnh mờ chuyển động hiển thị các vệt sáng dọc màu trắng và hồng trên nền tối.",
+    "detailed_caption_vi": "Khung hình mờ do chuyển động cho thấy các vệt sáng màu trắng và hồng theo chiều dọc trên nền tối. Hình ảnh bị biến dạng đáng kể do chuyển động nhanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0027",
+    "visual_source_frame_id": "L24_V040_f0027",
+    "ocr_source_frame_id": "L24_V040_f0027",
+    "quality_flags": [],
+    "caption": "A medium shot shows a white lion dance costume standing atop a tall pole on a stage.",
+    "detailed_caption": "A medium shot captures a white lion dance costume positioned on a tall vertical pole. The costume features a decorated head and white furry body. In the background, audience members and a person in a yellow shirt are visible.",
+    "caption_vi": "Cảnh trung ghi lại bộ trang phục múa lân màu trắng đứng trên đỉnh một cột cao trên sân khấu.",
+    "detailed_caption_vi": "Khung hình trung ghi lại trang phục múa lân màu trắng đặt trên một cột thẳng đứng cao. Trang phục có phần đầu trang trí và thân lông trắng. Phía sau là khán giả và người mặc áo vàng.",
+    "ocr_text": "11 10 12 13 15 17",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.188,
+          0.35700000000000004,
+          0.747
+        ],
+        "description": "white lion dance costume standing on a pole",
+        "description_vi": "trang phục múa lân màu trắng đứng trên cột",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.8039999999999999,
+          0.49899999999999994,
+          0.9949999999999999
+        ],
+        "description": "person wearing a yellow shirt standing near tables",
+        "description_vi": "người mặc áo vàng đứng gần các bàn",
+        "attributes": [
+          "yellow shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.29000000000000004,
+          0.705,
+          0.41700000000000004,
+          0.9890000000000001
+        ],
+        "description": "tall vertical pole with numbered marker",
+        "description_vi": "cột thẳng đứng cao có biển đánh số",
+        "attributes": [
+          "tall",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0028",
+    "visual_source_frame_id": "L24_V040_f0028",
+    "ocr_source_frame_id": "L24_V040_f0028",
+    "quality_flags": [],
+    "caption": "A close-up shot shows a white lion dance costume balanced vertically on a single thin pole.",
+    "detailed_caption": "A close-up shot displays a white lion dance costume balancing upright on a single tall, thin pole against a dark night background. The costume features elaborate white fur and patterned decorations along its length.",
+    "caption_vi": "Cận cảnh bộ trang phục múa lân màu trắng đang thăng bằng thẳng đứng trên một cây cột mảnh.",
+    "detailed_caption_vi": "Cận cảnh bộ trang phục múa lân màu trắng giữ thăng bằng thẳng đứng trên một cây cột cao và mảnh trước phông nền ban đêm tối. Trang phục có bộ lông trắng tinh xảo và các hoa văn trang trí dọc theo thân.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.159,
+          0.0,
+          0.626,
+          0.86
+        ],
+        "description": "white lion dance costume balanced on a pole",
+        "description_vi": "trang phục múa lân màu trắng thăng bằng trên cột",
+        "attributes": [
+          "white",
+          "furry"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.385,
+          0.8630000000000001,
+          0.461,
+          0.998
+        ],
+        "description": "thin vertical pole supporting the lion costume",
+        "description_vi": "cột thẳng đứng mảnh đỡ trang phục múa lân",
+        "attributes": [
+          "thin",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0029",
+    "visual_source_frame_id": "L24_V040_f0029",
+    "ocr_source_frame_id": "L24_V040_f0029",
+    "quality_flags": [],
+    "caption": "A motion-blurred shot shows vertical streaks of white and purple tones against a dark background.",
+    "detailed_caption": "A motion-blurred frame displays vertical streaks of white and purple colors against a dark background. The rapid motion completely obscures any distinct subjects or background structures.",
+    "caption_vi": "Khung hình mờ do chuyển động hiển thị các vệt dọc màu trắng và tím trên nền tối.",
+    "detailed_caption_vi": "Khung hình bị mờ do chuyển động hiển thị các vệt màu trắng và tím theo chiều dọc trên phông nền tối. Chuyển động nhanh làm mờ hoàn toàn các chủ thể hoặc cấu trúc nền.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0030",
+    "visual_source_frame_id": "L24_V040_f0030",
+    "ocr_source_frame_id": "L24_V040_f0030",
+    "quality_flags": [],
+    "caption": "A solid light gray frame with no visible subjects or details.",
+    "detailed_caption": "A plain, solid light gray frame shows no subjects, objects, or distinguishing features.",
+    "caption_vi": "Một khung hình màu xám nhạt đồng nhất không có chủ thể hoặc chi tiết nào hiển thị.",
+    "detailed_caption_vi": "Khung hình màu xám nhạt trơn không hiển thị chủ thể, vật thể hay đặc điểm nhận dạng nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0031",
+    "visual_source_frame_id": "L24_V040_f0031",
+    "ocr_source_frame_id": "L24_V040_f0031",
+    "quality_flags": [],
+    "caption": "A solid light gray frame with no visible subjects or details.",
+    "detailed_caption": "A plain, solid light gray frame shows no subjects, objects, or distinguishing features.",
+    "caption_vi": "Một khung hình màu xám nhạt đồng nhất không có chủ thể hoặc chi tiết nào hiển thị.",
+    "detailed_caption_vi": "Khung hình màu xám nhạt trơn không hiển thị chủ thể, vật thể hay đặc điểm nhận dạng nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0032",
+    "visual_source_frame_id": "L24_V040_f0032",
+    "ocr_source_frame_id": "L24_V040_f0032",
+    "quality_flags": [],
+    "caption": "A solid light gray frame with no visible subjects or details.",
+    "detailed_caption": "A plain, solid light gray frame shows no subjects, objects, or distinguishing features.",
+    "caption_vi": "Một khung hình màu xám nhạt đồng nhất không có chủ thể hoặc chi tiết nào hiển thị.",
+    "detailed_caption_vi": "Khung hình màu xám nhạt trơn không hiển thị chủ thể, vật thể hay đặc điểm nhận dạng nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0033",
+    "visual_source_frame_id": "L24_V040_f0033",
+    "ocr_source_frame_id": "L24_V040_f0033",
+    "quality_flags": [],
+    "caption": "A solid light gray frame with no visible subjects or details.",
+    "detailed_caption": "A plain, solid light gray frame shows no subjects, objects, or distinguishing features.",
+    "caption_vi": "Một khung hình màu xám nhạt đồng nhất không có chủ thể hoặc chi tiết nào hiển thị.",
+    "detailed_caption_vi": "Khung hình màu xám nhạt trơn không hiển thị chủ thể, vật thể hay đặc điểm nhận dạng nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0034",
+    "visual_source_frame_id": "L24_V040_f0034",
+    "ocr_source_frame_id": "L24_V040_f0034",
+    "quality_flags": [],
+    "caption": "A medium shot shows a white lion dance costume perched atop a performer against a dark background.",
+    "detailed_caption": "A medium shot captures a white lion dance costume with a decorated head being supported or worn by a performer standing on a structure. The performer wears white and red attire. The background is dark with a ledge visible at the bottom.",
+    "caption_vi": "Cảnh trung hiển thị trang phục múa lân màu trắng được đỡ bởi người biểu diễn trên nền tối.",
+    "detailed_caption_vi": "Khung hình trung ghi lại bộ trang phục múa lân màu trắng có đầu trang trí được người biểu diễn đứng trên cấu trúc hỗ trợ. Người biểu diễn mặc trang phục màu trắng và đỏ. Phông nền tối với một gờ tường ở phía dưới.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.431,
+          0.007000000000000001,
+          1.0,
+          1.0
+        ],
+        "description": "white lion dance costume with a decorated head",
+        "description_vi": "trang phục múa lân màu trắng có đầu được trang trí",
+        "attributes": [
+          "white",
+          "decorated"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0035",
+    "visual_source_frame_id": "L24_V040_f0035",
+    "ocr_source_frame_id": "L24_V040_f0035",
+    "quality_flags": [],
+    "caption": "A medium shot captures a white lion dance costume performing on stage at night.",
+    "detailed_caption": "A medium shot shows a white lion dance costume with a decorated head and performers in white and red attire on a stage. Bright stage lights shine from above against the dark night sky, with metal scaffolding visible to the right.",
+    "caption_vi": "Cảnh trung ghi lại bộ trang phục múa lân màu trắng đang biểu diễn trên sân khấu vào ban đêm.",
+    "detailed_caption_vi": "Khung hình trung hiển thị bộ trang phục múa lân màu trắng với phần đầu được trang trí và các nghệ sĩ biểu diễn trong trang phục trắng đỏ trên sân khấu. Đèn sân khấu sáng rực chiếu từ phía trên trên nền trời đêm, bên phải có khung giàn giáo kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.18699999999999997,
+          0.182,
+          1.0,
+          0.959
+        ],
+        "description": "white lion dance costume with a decorated head",
+        "description_vi": "trang phục múa lân màu trắng có đầu trang trí",
+        "attributes": [
+          "white",
+          "decorated"
+        ],
+        "action": "performing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0036",
+    "visual_source_frame_id": "L24_V040_f0036",
+    "ocr_source_frame_id": "L24_V040_f0036",
+    "quality_flags": [],
+    "caption": "A medium shot shows a white lion dance costume and performers on an outdoor stage at night.",
+    "detailed_caption": "A medium shot captures a white lion dance costume with a detailed head and a performer in white and red clothing during a night performance. Bright stage lights illuminate the scene from above, with scaffolding visible in the upper right.",
+    "caption_vi": "Cảnh trung hiển thị trang phục múa lân màu trắng và người biểu diễn trên sân khấu ngoài trời ban đêm.",
+    "detailed_caption_vi": "Khung hình trung ghi lại bộ trang phục múa lân màu trắng có phần đầu chi tiết cùng người biểu diễn mặc trang phục trắng và đỏ trong buổi biểu diễn ban đêm. Đèn sân khấu sáng chiếu rọi từ trên cao, giàn giáo hiển thị ở góc trên bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.194,
+          0.19,
+          1.0,
+          0.96
+        ],
+        "description": "white lion dance costume with a detailed head",
+        "description_vi": "trang phục múa lân màu trắng có phần đầu chi tiết",
+        "attributes": [
+          "white",
+          "detailed"
+        ],
+        "action": "performing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0037",
+    "visual_source_frame_id": "L24_V040_f0037",
+    "ocr_source_frame_id": "L24_V040_f0037",
+    "quality_flags": [],
+    "caption": "A medium shot captures a white lion dance costume and a performer on stage at night.",
+    "detailed_caption": "A medium shot displays a white lion dance costume with a decorated head and a performer in white and red attire on a stage. Bright stage lights glow from above against the dark background, and a decorative banner stands to the right.",
+    "caption_vi": "Cảnh trung ghi lại trang phục múa lân màu trắng và người biểu diễn trên sân khấu ban đêm.",
+    "detailed_caption_vi": "Khung hình trung cho thấy bộ trang phục múa lân màu trắng có đầu trang trí cùng người biểu diễn mặc đồ trắng đỏ trên sân khấu. Đèn sân khấu sáng rực chiếu từ trên cao trên nền tối, bên phải có một biểu ngữ trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.20299999999999999,
+          0.41100000000000003,
+          1.0,
+          0.982
+        ],
+        "description": "white lion dance costume with a decorated head",
+        "description_vi": "trang phục múa lân màu trắng có đầu trang trí",
+        "attributes": [
+          "white",
+          "decorated"
+        ],
+        "action": "performing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0038",
+    "visual_source_frame_id": "L24_V040_f0038",
+    "ocr_source_frame_id": "L24_V040_f0038",
+    "quality_flags": [],
+    "caption": "A close-up shot shows the head and upper body of a white lion dance costume on poles.",
+    "detailed_caption": "A close-up shot captures the decorated head and upper section of a white lion dance costume positioned above vertical poles on a stage. A decorative banner is visible on the right against a dark night background.",
+    "caption_vi": "Cận cảnh phần đầu và thân trên của bộ trang phục múa lân màu trắng trên các cột.",
+    "detailed_caption_vi": "Cận cảnh phần đầu được trang trí và phần trên của bộ trang phục múa lân màu trắng đặt phía trên các cột thẳng đứng trên sân khấu. Một biểu ngữ trang trí hiển thị ở bên phải trên phông nền ban đêm tối.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.351,
+          0.39,
+          1.0,
+          0.901
+        ],
+        "description": "white lion dance costume head and upper body",
+        "description_vi": "phần đầu và thân trên của trang phục múa lân màu trắng",
+        "attributes": [
+          "white",
+          "decorated"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0039",
+    "visual_source_frame_id": "L24_V040_f0039",
+    "ocr_source_frame_id": "L24_V040_f0039",
+    "quality_flags": [],
+    "caption": "A close-up shot shows a white lion dance costume's head and body against a dark background.",
+    "detailed_caption": "A close-up shot captures the detailed head and upper body of a white lion dance costume on a stage. The background is dark, showing a structure with railings below the costume.",
+    "caption_vi": "Cận cảnh phần đầu và thân của bộ trang phục múa lân màu trắng trên nền tối.",
+    "detailed_caption_vi": "Cận cảnh phần đầu chi tiết và thân trên của bộ trang phục múa lân màu trắng trên sân khấu. Phông nền tối, hiển thị một cấu trúc có lan can phía dưới trang phục.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.506,
+          0.0,
+          1.0,
+          0.9359999999999999
+        ],
+        "description": "white lion dance costume head and upper body",
+        "description_vi": "phần đầu và thân trên của trang phục múa lân màu trắng",
+        "attributes": [
+          "white",
+          "detailed"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0040",
+    "visual_source_frame_id": "L24_V040_f0040",
+    "ocr_source_frame_id": "L24_V040_f0040",
+    "quality_flags": [],
+    "caption": "A medium shot captures a performer holding a white lion dance costume head on stage.",
+    "detailed_caption": "A medium shot shows a performer wearing white and red attire while holding up a large white lion dance costume head on an outdoor stage at night. The background is dark with architectural elements.",
+    "caption_vi": "Cảnh trung ghi lại người biểu diễn đang nâng phần đầu trang phục múa lân màu trắng trên sân khấu.",
+    "detailed_caption_vi": "Khung hình trung hiển thị người biểu diễn mặc trang phục trắng và đỏ đang nâng cao đầu lân màu trắng trên sân khấu ngoài trời vào ban đêm. Phông nền tối với các yếu tố kiến trúc.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.287,
+          0.057999999999999996,
+          0.99,
+          1.0
+        ],
+        "description": "white lion dance costume held by a performer",
+        "description_vi": "trang phục múa lân màu trắng được người biểu diễn cầm",
+        "attributes": [
+          "white",
+          "large"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "performer_0",
+        "label": "performer",
+        "bbox": [
+          0.439,
+          0.558,
+          0.715,
+          1.0
+        ],
+        "description": "performer wearing white and red clothing holding a lion head",
+        "description_vi": "người biểu diễn mặc đồ trắng và đỏ đang cầm đầu lân",
+        "attributes": [
+          "white and red clothing"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "performer_0"
+      },
+      {
+        "subject_id": "performer_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0041",
+    "visual_source_frame_id": "L24_V040_f0041",
+    "ocr_source_frame_id": "L24_V040_f0041",
+    "quality_flags": [],
+    "caption": "A medium shot captures a performer holding a white lion dance costume on an outdoor stage.",
+    "detailed_caption": "A medium shot shows a performer in white and red attire lifting a large white lion dance costume with a decorated head on a stage at night. The background features dark structures and ambient lighting.",
+    "caption_vi": "Cảnh trung ghi lại người biểu diễn mặc đồ trắng đỏ đang nhấc bộ trang phục múa lân trên sân khấu.",
+    "detailed_caption_vi": "Khung hình trung hiển thị một người biểu diễn mặc trang phục trắng và đỏ đang nâng bộ trang phục múa lân màu trắng lớn với phần đầu được trang trí trên sân khấu vào ban đêm. Phông nền gồm các cấu trúc tối và ánh sáng xung quanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.118,
+          0.024,
+          0.846,
+          1.0
+        ],
+        "description": "white lion dance costume with decorated head",
+        "description_vi": "trang phục múa lân màu trắng với phần đầu được trang trí",
+        "attributes": [
+          "white",
+          "decorated"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "performer_0",
+        "label": "performer",
+        "bbox": [
+          0.319,
+          0.53,
+          0.574,
+          1.0
+        ],
+        "description": "performer in white and red uniform lifting a lion costume",
+        "description_vi": "người biểu diễn mặc đồng phục trắng và đỏ đang nâng trang phục múa lân",
+        "attributes": [
+          "white and red uniform"
+        ],
+        "action": "lifting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "performer_0"
+      },
+      {
+        "subject_id": "performer_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0042",
+    "visual_source_frame_id": "L24_V040_f0042",
+    "ocr_source_frame_id": "L24_V040_f0042",
+    "quality_flags": [],
+    "caption": "A white lion costume with a performer standing on a narrow pole outdoors at night.",
+    "detailed_caption": "A medium shot captures a white lion costume atop a tall, thin pole during a nighttime performance. The lion dancer wears white pants and a white uniform shirt with red accents, operating the white-furred lion head decorated with black and red markings. The background shows dark silhouettes and structural elements under artificial lighting.",
+    "caption_vi": "Đầu lân màu trắng trên cây cột cao vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một bộ trang phục lân trắng ở trên cao trong buổi biểu diễn ban đêm. Người biểu diễn mặc trang phục trắng phối sắc đỏ, đang điều khiển đầu lân lông trắng có trang trí đen và đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.003,
+          0.002,
+          0.8130000000000001,
+          1.0
+        ],
+        "description": "white lion costume with black and red markings",
+        "description_vi": "trang phục lân màu trắng có trang trí đen và đỏ",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.0,
+          0.969,
+          0.23299999999999998,
+          1.0
+        ],
+        "description": "narrow tall pole used for acrobatic performance",
+        "description_vi": "cột cao hẹp dùng để biểu diễn nhào lộn",
+        "attributes": [
+          "tall",
+          "thin"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0043",
+    "visual_source_frame_id": "L24_V040_f0043",
+    "ocr_source_frame_id": "L24_V040_f0043",
+    "quality_flags": [],
+    "caption": "A white lion costume standing on a thin pole during a night performance.",
+    "detailed_caption": "A medium shot shows a white lion costume balanced on a narrow pole outdoors at night. The performer inside wears white trousers and a white shirt with red details. Bright stage lights create lens flare in the background.",
+    "caption_vi": "Trang phục lân màu trắng đứng trên cột nhỏ vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy bộ trang phục lân màu trắng đang đứng thăng bằng trên một chiếc cột nhỏ ngoài trời vào ban đêm. Ánh đèn sân khấu tạo hiệu ứng lóa sáng ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.223,
+          0.041999999999999996,
+          0.9590000000000001,
+          0.978
+        ],
+        "description": "white lion costume with detailed head",
+        "description_vi": "trang phục lân màu trắng có đầu lân chi tiết",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.295,
+          0.922,
+          0.54,
+          1.0
+        ],
+        "description": "thin blue-topped pole",
+        "description_vi": "cột mảnh có phần đầu màu xanh",
+        "attributes": [
+          "thin",
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0044",
+    "visual_source_frame_id": "L24_V040_f0044",
+    "ocr_source_frame_id": "L24_V040_f0044",
+    "quality_flags": [],
+    "caption": "A white lion costume posed on an elevated pole at night.",
+    "detailed_caption": "A medium shot captures a white lion costume balanced on a tall pole outdoors at night. A bright light source flares behind the pole, illuminating the lower backdrop. The performance area is dimly lit.",
+    "caption_vi": "Đầu lân trắng trên cột cao trong khung cảnh tối.",
+    "detailed_caption_vi": "Cảnh trung cảnh ghi lại bộ trang phục lân màu trắng thăng bằng trên cột cao ngoài trời vào ban đêm. Nguồn sáng mạnh tạo hiệu ứng lóe sáng phía sau cột.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.37800000000000006,
+          0.094,
+          1.0,
+          0.9470000000000001
+        ],
+        "description": "white lion costume with intricate fur pattern",
+        "description_vi": "trang phục lân màu trắng có họa tiết lông phức tạp",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.512,
+          0.8939999999999999,
+          0.75,
+          1.0
+        ],
+        "description": "thin metal pole with blue top",
+        "description_vi": "cột kim loại mảnh có đầu màu xanh",
+        "attributes": [
+          "thin",
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0045",
+    "visual_source_frame_id": "L24_V040_f0045",
+    "ocr_source_frame_id": "L24_V040_f0045",
+    "quality_flags": [],
+    "caption": "A white lion costume balancing on a thin pole during a night show.",
+    "detailed_caption": "A medium shot displays a white lion costume performing on an elevated pole at night. The performer is poised atop the pole against a dark background with bright stage lighting.",
+    "caption_vi": "Trang phục lân màu trắng thăng bằng trên cột nhỏ ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng đang biểu diễn trên một chiếc cột cao vào ban đêm. Người biểu diễn đứng vững trên cột trước nền tối và ánh đèn sân khấu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.35900000000000004,
+          0.142,
+          1.0,
+          0.898
+        ],
+        "description": "white lion costume with furry body",
+        "description_vi": "trang phục lân màu trắng có thân lông xù",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.5389999999999999,
+          0.8880000000000001,
+          0.78,
+          1.0
+        ],
+        "description": "narrow pole with blue platform",
+        "description_vi": "cột hẹp có bệ màu xanh",
+        "attributes": [
+          "narrow",
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0046",
+    "visual_source_frame_id": "L24_V040_f0045",
+    "ocr_source_frame_id": "L24_V040_f0046",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A white lion costume balancing on a thin pole during a night show.",
+    "detailed_caption": "A medium shot displays a white lion costume performing on an elevated pole at night. The performer is poised atop the pole against a dark background with bright stage lighting.",
+    "caption_vi": "Trang phục lân màu trắng thăng bằng trên cột nhỏ ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng đang biểu diễn trên một chiếc cột cao vào ban đêm. Người biểu diễn đứng vững trên cột trước nền tối và ánh đèn sân khấu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.35900000000000004,
+          0.142,
+          1.0,
+          0.898
+        ],
+        "description": "white lion costume with furry body",
+        "description_vi": "trang phục lân màu trắng có thân lông xù",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.5389999999999999,
+          0.8880000000000001,
+          0.78,
+          1.0
+        ],
+        "description": "narrow pole with blue platform",
+        "description_vi": "cột hẹp có bệ màu xanh",
+        "attributes": [
+          "narrow",
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0047",
+    "visual_source_frame_id": "L24_V040_f0047",
+    "ocr_source_frame_id": "L24_V040_f0047",
+    "quality_flags": [],
+    "caption": "A white lion costume performing on a tall pole at night.",
+    "detailed_caption": "A medium shot shows a white lion costume balanced on a pole during an outdoor night performance. Bright stage lights create lens flare behind the pole and backdrop.",
+    "caption_vi": "Trang phục lân màu trắng biểu diễn trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị bộ trang phục lân trắng thăng bằng trên cột trong buổi biểu diễn ngoài trời ban đêm. Đèn sân khấu sáng rực tạo hiệu ứng lóe sáng phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.264,
+          0.025,
+          1.0,
+          0.9109999999999999
+        ],
+        "description": "white lion costume standing on elevated pole",
+        "description_vi": "trang phục lân màu trắng đứng trên cột cao",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.517,
+          0.853,
+          0.758,
+          1.0
+        ],
+        "description": "thin vertical pole with blue top",
+        "description_vi": "cột đứng mảnh có đầu màu xanh",
+        "attributes": [
+          "thin",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0048",
+    "visual_source_frame_id": "L24_V040_f0048",
+    "ocr_source_frame_id": "L24_V040_f0048",
+    "quality_flags": [],
+    "caption": "A white lion costume with two performers on elevated poles at night.",
+    "detailed_caption": "A medium shot captures two performers in a white lion costume balanced across multiple poles during a night performance. The performer in the rear is visible inside the costume torso. The background features spectators in low light.",
+    "caption_vi": "Trang phục lân trắng với hai người biểu diễn trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hai người biểu diễn trong bộ trang phục lân trắng thăng bằng trên nhiều cột trong buổi biểu diễn ban đêm. Người biểu diễn phía sau lộ rõ phần thân trong trang phục.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.28900000000000003,
+          1.0,
+          0.82
+        ],
+        "description": "large white lion costume spanning two poles",
+        "description_vi": "trang phục lân màu trắng lớn trải dài trên hai cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.553,
+          0.755,
+          0.7909999999999999,
+          1.0
+        ],
+        "description": "metal pole with blue top supporting performer",
+        "description_vi": "cột kim loại có đầu màu xanh đỡ người biểu diễn",
+        "attributes": [
+          "metal",
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0049",
+    "visual_source_frame_id": "L24_V040_f0049",
+    "ocr_source_frame_id": "L24_V040_f0049",
+    "quality_flags": [],
+    "caption": "A white lion costume performing on elevated poles at night.",
+    "detailed_caption": "A medium shot shows a white lion costume positioned on tall poles during a night show. The background features an audience watching the performance under dim lighting.",
+    "caption_vi": "Trang phục lân màu trắng biểu diễn trên các cột cao vào ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng định vị trên các cột cao trong buổi biểu diễn ban đêm. Khán giả ở nền phía sau theo dõi tiết mục trong ánh sáng mờ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.148,
+          0.018,
+          0.8109999999999999,
+          0.748
+        ],
+        "description": "white lion costume standing upright",
+        "description_vi": "trang phục lân màu trắng đứng thẳng",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.609,
+          0.7030000000000001,
+          0.85,
+          1.0
+        ],
+        "description": "tall vertical pole with blue platform",
+        "description_vi": "cột đứng cao có bệ màu xanh",
+        "attributes": [
+          "tall",
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0050",
+    "visual_source_frame_id": "L24_V040_f0050",
+    "ocr_source_frame_id": "L24_V040_f0050",
+    "quality_flags": [],
+    "caption": "A white lion costume moving across elevated poles at night.",
+    "detailed_caption": "A medium shot captures a white lion costume traversing across multiple poles during a night performance. The background shows spectators gathered below the performance structure.",
+    "caption_vi": "Trang phục lân trắng di chuyển trên các cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng đang di chuyển qua nhiều cột trong buổi biểu diễn ban đêm. Phía sau là khán giả tập trung bên dưới cấu trúc biểu diễn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.098,
+          0.85,
+          0.791
+        ],
+        "description": "white lion costume moving across poles",
+        "description_vi": "trang phục lân màu trắng di chuyển qua các cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "jumping"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.37199999999999994,
+          0.717,
+          0.614,
+          1.0
+        ],
+        "description": "metal pole supporting the performance",
+        "description_vi": "cột kim loại đỡ buổi biểu diễn",
+        "attributes": [
+          "metal",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0051",
+    "visual_source_frame_id": "L24_V040_f0051",
+    "ocr_source_frame_id": "L24_V040_f0051",
+    "quality_flags": [],
+    "caption": "A white lion costume on elevated poles with a spectator below at night.",
+    "detailed_caption": "A medium shot shows a white lion costume perched on a tall pole while a person in a yellow shirt watches from below. The background is dark with visible audience members.",
+    "caption_vi": "Trang phục lân trắng trên cột cao với khán giả ở phía dưới.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị bộ trang phục lân màu trắng đậu trên cột cao trong khi một người mặc áo vàng quan sát từ bên dưới. Khung cảnh tối với khán giả xung quanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.223,
+          0.444,
+          0.759
+        ],
+        "description": "white lion costume standing on pole",
+        "description_vi": "trang phục lân màu trắng đứng trên cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29200000000000004,
+          0.875,
+          0.489,
+          1.0
+        ],
+        "description": "person in yellow shirt watching the performance",
+        "description_vi": "người mặc áo vàng theo dõi buổi biểu diễn",
+        "attributes": [
+          "yellow shirt"
+        ],
+        "action": "watching"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0052",
+    "visual_source_frame_id": "L24_V040_f0052",
+    "ocr_source_frame_id": "L24_V040_f0052",
+    "quality_flags": [],
+    "caption": "A white lion costume performing on elevated poles at night.",
+    "detailed_caption": "A medium shot displays a white lion costume on a tall pole, with a person in a yellow shirt visible below. An audience sits in the shadowed background.",
+    "caption_vi": "Trang phục lân màu trắng biểu diễn trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng trên cột cao, bên dưới có người mặc áo vàng. Khán giả ngồi ở khu vực phía sau tối màu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.317,
+          0.38899999999999996,
+          0.7030000000000001
+        ],
+        "description": "white lion costume near top of pole",
+        "description_vi": "trang phục lân màu trắng gần đỉnh cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.283,
+          0.861,
+          0.483,
+          1.0
+        ],
+        "description": "person wearing yellow shirt",
+        "description_vi": "người mặc áo vàng",
+        "attributes": [
+          "yellow shirt"
+        ],
+        "action": "watching"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0053",
+    "visual_source_frame_id": "L24_V040_f0053",
+    "ocr_source_frame_id": "L24_V040_f0053",
+    "quality_flags": [],
+    "caption": "A white lion costume standing on elevated poles with spectators below at night.",
+    "detailed_caption": "A medium shot captures a white lion costume perched on a tall pole during a nighttime event. A person in a yellow shirt stands below observing, surrounded by an audience.",
+    "caption_vi": "Trang phục lân trắng đứng trên cột cao với khán giả phía dưới.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng đậu trên cột cao trong sự kiện ban đêm. Một người mặc áo vàng đứng bên dưới quan sát xung quanh là khán giả.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.067,
+          0.767,
+          0.731
+        ],
+        "description": "white lion costume standing on pole",
+        "description_vi": "trang phục lân màu trắng đứng trên cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.622,
+          0.844,
+          0.8109999999999999,
+          1.0
+        ],
+        "description": "person in yellow shirt holding a phone",
+        "description_vi": "người mặc áo vàng cầm điện thoại",
+        "attributes": [
+          "yellow shirt"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0054",
+    "visual_source_frame_id": "L24_V040_f0054",
+    "ocr_source_frame_id": "L24_V040_f0054",
+    "quality_flags": [],
+    "caption": "A white lion costume with two performers on elevated poles at night.",
+    "detailed_caption": "A medium shot shows two performers in a white lion costume moving across tall poles during a night performance. Spectators are visible in the background seating area.",
+    "caption_vi": "Trang phục lân trắng với hai người biểu diễn trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị hai người biểu diễn trong trang phục lân trắng di chuyển qua các cột cao trong buổi biểu diễn ban đêm. Khán giả ngồi ở khu vực phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.247,
+          0.13899999999999998,
+          0.997,
+          0.7230000000000001
+        ],
+        "description": "white lion costume spanning across poles",
+        "description_vi": "trang phục lân màu trắng trải qua các cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.759,
+          0.817,
+          0.931,
+          1.0
+        ],
+        "description": "person in yellow shirt watching",
+        "description_vi": "người mặc áo vàng theo dõi",
+        "attributes": [
+          "yellow shirt"
+        ],
+        "action": "watching"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0055",
+    "visual_source_frame_id": "L24_V040_f0055",
+    "ocr_source_frame_id": "L24_V040_f0055",
+    "quality_flags": [],
+    "caption": "A white lion costume leaping between elevated poles at night.",
+    "detailed_caption": "A medium shot captures a white lion costume jumping in mid-air between tall poles during a night performance. The audience and stage structure are visible below.",
+    "caption_vi": "Trang phục lân trắng nhảy giữa các cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng đang nhảy giữa không trung giữa các cột cao trong buổi biểu diễn ban đêm. Khán giả và cấu trúc sân khấu ở phía dưới.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.11699999999999999,
+          0.0,
+          1.0,
+          0.642
+        ],
+        "description": "white lion costume leaping in the air",
+        "description_vi": "trang phục lân màu trắng đang nhảy trên không",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "jumping"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.625,
+          0.67,
+          0.883,
+          1.0
+        ],
+        "description": "tall metal pole with blue top",
+        "description_vi": "cột kim loại cao có đầu màu xanh",
+        "attributes": [
+          "tall",
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0056",
+    "visual_source_frame_id": "L24_V040_f0056",
+    "ocr_source_frame_id": "L24_V040_f0056",
+    "quality_flags": [],
+    "caption": "A white lion costume with performers on poles during a night show.",
+    "detailed_caption": "A medium shot displays a white lion costume suspended in the air during an acrobatic performance at night. Below, stage crew members in green uniforms stand near structural equipment.",
+    "caption_vi": "Trang phục lân trắng với người biểu diễn trên cột ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng lơ lửng trên không trong buổi biểu diễn nhào lộn ban đêm. Bên dưới, nhân viên sân khấu mặc đồng phục xanh đứng cạnh thiết bị.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.053000000000000005,
+          0.9,
+          0.6809999999999999
+        ],
+        "description": "white lion costume with performers",
+        "description_vi": "trang phục lân màu trắng có người biểu diễn",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.717,
+          0.753,
+          0.872,
+          1.0
+        ],
+        "description": "person in green uniform standing below",
+        "description_vi": "người mặc đồng phục xanh đứng bên dưới",
+        "attributes": [
+          "green uniform"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "above",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "below",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0057",
+    "visual_source_frame_id": "L24_V040_f0057",
+    "ocr_source_frame_id": "L24_V040_f0057",
+    "quality_flags": [],
+    "caption": "A completely dark frame.",
+    "detailed_caption": "A full shot showing a completely black image with no visible subjects, objects, or lighting.",
+    "caption_vi": "Khung hình tối hoàn toàn.",
+    "detailed_caption_vi": "Cảnh toàn hiển thị một hình ảnh hoàn toàn đen không có đối tượng hay ánh sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0058",
+    "visual_source_frame_id": "L24_V040_f0058",
+    "ocr_source_frame_id": "L24_V040_f0058",
+    "quality_flags": [],
+    "caption": "A white lion costume performing on tall poles at night.",
+    "detailed_caption": "A medium shot captures a white lion costume balanced on vertical poles outdoors at night. Flags and spectators are visible in the background under bright lighting.",
+    "caption_vi": "Trang phục lân màu trắng biểu diễn trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng thăng bằng trên các cột thẳng đứng ngoài trời vào ban đêm. Cờ và khán giả xuất hiện ở hậu cảnh dưới ánh đèn sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.0,
+          0.7140000000000001,
+          0.756
+        ],
+        "description": "white lion costume balanced on elevated poles",
+        "description_vi": "trang phục lân màu trắng thăng bằng trên cột cao",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.272,
+          0.759,
+          0.381,
+          1.0
+        ],
+        "description": "tall clear pole supporting the performance",
+        "description_vi": "cột trong suốt cao đỡ buổi biểu diễn",
+        "attributes": [
+          "tall",
+          "clear"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0059",
+    "visual_source_frame_id": "L24_V040_f0059",
+    "ocr_source_frame_id": "L24_V040_f0059",
+    "quality_flags": [],
+    "caption": "A white lion costume standing on elevated poles at night.",
+    "detailed_caption": "A medium shot shows a white lion costume balanced on a tall pole during a night performance. Banners and spectators are visible in the illuminated background.",
+    "caption_vi": "Trang phục lân màu trắng đứng trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị bộ trang phục lân màu trắng thăng bằng trên cột cao trong buổi biểu diễn ban đêm. Biểu ngữ và khán giả ở hậu cảnh được chiếu sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.0,
+          0.597,
+          0.842
+        ],
+        "description": "white lion costume standing vertically on pole",
+        "description_vi": "trang phục lân màu trắng đứng thẳng trên cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.323,
+          0.8380000000000001,
+          0.431,
+          1.0
+        ],
+        "description": "tall transparent pole with blue top",
+        "description_vi": "cột trong suốt cao có đầu màu xanh",
+        "attributes": [
+          "tall",
+          "transparent"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0060",
+    "visual_source_frame_id": "L24_V040_f0060",
+    "ocr_source_frame_id": "L24_V040_f0060",
+    "quality_flags": [],
+    "caption": "A white lion costume balanced on a tall pole at night.",
+    "detailed_caption": "A medium shot captures a white lion costume positioned upright on an elevated pole during an outdoor night event. Flags and stage lights are visible in the background.",
+    "caption_vi": "Trang phục lân màu trắng thăng bằng trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại bộ trang phục lân màu trắng đứng thẳng trên cột cao trong sự kiện ngoài trời ban đêm. Cờ và đèn sân khấu xuất hiện ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.0,
+          0.5780000000000001,
+          0.853
+        ],
+        "description": "white lion costume standing on pole",
+        "description_vi": "trang phục lân màu trắng đứng trên cột",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.331,
+          0.8470000000000001,
+          0.442,
+          1.0
+        ],
+        "description": "tall pole supporting the lion costume",
+        "description_vi": "cột cao đỡ trang phục lân",
+        "attributes": [
+          "tall",
+          "transparent"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0061",
+    "visual_source_frame_id": "L24_V040_f0061",
+    "ocr_source_frame_id": "L24_V040_f0061",
+    "quality_flags": [],
+    "caption": "A white lion costume positioned vertically on a tall pole at night.",
+    "detailed_caption": "A medium shot shows a white lion costume standing on an elevated pole during a night performance. Another lion costume is partially visible in the lower left corner.",
+    "caption_vi": "Trang phục lân màu trắng đứng thẳng trên cột cao ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy bộ trang phục lân màu trắng đứng trên cột cao trong buổi biểu diễn ban đêm. Một bộ trang phục lân khác xuất hiện một phần ở góc dưới bên trái.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.0,
+          0.6809999999999999,
+          0.9109999999999999
+        ],
+        "description": "white lion costume standing on tall pole",
+        "description_vi": "trang phục lân màu trắng đứng trên cột cao",
+        "attributes": [
+          "white",
+          "furred"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.553,
+          0.908,
+          0.658,
+          1.0
+        ],
+        "description": "tall pole supporting the performance",
+        "description_vi": "cột cao đỡ buổi biểu diễn",
+        "attributes": [
+          "tall",
+          "transparent"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V040_f0062",
+    "visual_source_frame_id": "L24_V040_f0062",
+    "ocr_source_frame_id": "L24_V040_f0062",
+    "quality_flags": [],
+    "caption": "Multiple lion and dragon costumes on a stage at night.",
+    "detailed_caption": "A medium shot captures several lion and dragon costumes on a stage during a nighttime event. A truss tower stands in the background under artificial lighting.",
+    "caption_vi": "Nhiều trang phục lân và rồng trên sân khấu ban đêm.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại nhiều bộ trang phục lân và rồng trên sân khấu trong sự kiện ban đêm. Tháp giàn giáo đứng ở phía sau dưới ánh đèn nhân tạo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "dragon_costume_0",
+        "label": "dragon costume",
+        "bbox": [
+          0.0,
+          0.356,
+          0.225,
+          0.597
+        ],
+        "description": "yellow dragon costume segment",
+        "description_vi": "phân đoạn trang phục rồng màu vàng",
+        "attributes": [
+          "yellow",
+          "scaled"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.575,
+          0.5579999999999999,
+          0.8939999999999999
+        ],
+        "description": "white and blue lion costume",
+        "description_vi": "trang phục lân màu trắng và xanh",
+        "attributes": [
+          "white",
+          "blue"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "lion_costume_1",
+        "label": "lion costume",
+        "bbox": [
+          0.667,
+          0.747,
+          0.908,
+          0.859
+        ],
+        "description": "yellow and red lion costume",
+        "description_vi": "trang phục lân màu vàng và đỏ",
+        "attributes": [
+          "yellow",
+          "red"
+        ],
+        "action": "performing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "left_of",
+        "object_id": "lion_costume_1"
+      },
+      {
+        "subject_id": "lion_costume_1",
+        "predicate": "right_of",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0063",
+    "visual_source_frame_id": "L24_V040_f0063",
+    "ocr_source_frame_id": "L24_V040_f0063",
+    "quality_flags": [],
+    "caption": "A white lion costume performing on a pole with a person in a green uniform nearby during an outdoor event.",
+    "detailed_caption": "A medium shot shows a white lion dance costume perched on a pole on stage. Below the lion, a person wearing a green uniform stands facing forward. In the background, a dragon prop and structural lighting towers are visible under an evening sky.",
+    "caption_vi": "Đầu lân màu trắng biểu diễn trên cột cùng một người mặc quân phục xanh lá trong sự kiện ngoài trời.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một đầu lân màu trắng đang đứng trên cột ở sân khấu. Phía dưới, một người mặc quân phục xanh lá đang đứng hướng về phía trước. Phía sau là đạo cụ rồng và giàn khung ánh sáng dưới bầu trời tối.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.421,
+          1.0,
+          0.9480000000000001
+        ],
+        "description": "white lion dance costume with fluffy fur",
+        "description_vi": "trang phục lân màu trắng lông xù",
+        "attributes": [
+          "white",
+          "fluffy"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.283,
+          0.759,
+          0.506,
+          1.0
+        ],
+        "description": "person wearing a green military-style uniform and cap",
+        "description_vi": "người mặc quân phục xanh lá và đội mũ kepi",
+        "attributes": [
+          "green",
+          "uniform"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0064",
+    "visual_source_frame_id": "L24_V040_f0064",
+    "ocr_source_frame_id": "L24_V040_f0064",
+    "quality_flags": [],
+    "caption": "A white lion costume performing upright on a pole on stage with a person in a green uniform standing below.",
+    "detailed_caption": "A medium shot features a white lion dance costume balancing upright on a pole. Below the lion, a person in a green uniform and cap stands facing the stage. In the background, seated spectators and a red backdrop are visible.",
+    "caption_vi": "Đầu lân màu trắng đang đứng thẳng trên cột biểu diễn trên sân khấu cùng một người mặc quân phục xanh bên dưới.",
+    "detailed_caption_vi": "Cảnh trung ghi lại đầu lân màu trắng đang thăng bằng thẳng đứng trên cột. Bên dưới, một người mặc quân phục xanh đội mũ đứng hướng về sân khấu. Phía sau có khán giả ngồi ghế và phông nền đỏ.",
+    "ocr_text": "1 3",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.201,
+          0.16399999999999998,
+          0.917,
+          0.843
+        ],
+        "description": "white lion costume standing upright",
+        "description_vi": "trang phục lân màu trắng đứng thẳng",
+        "attributes": [
+          "white"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.403,
+          0.6809999999999999,
+          0.663,
+          1.0
+        ],
+        "description": "person in a green uniform and green cap",
+        "description_vi": "người mặc quân phục xanh lá và đội mũ xanh",
+        "attributes": [
+          "green",
+          "uniform"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V040_f0065",
+    "visual_source_frame_id": "L24_V040_f0065",
+    "ocr_source_frame_id": "L24_V040_f0065",
+    "quality_flags": [],
+    "caption": "A completely black frame with no visible content.",
+    "detailed_caption": "A solid black frame containing no visible objects or illumination.",
+    "caption_vi": "Một khung hình màu đen hoàn toàn không có nội dung.",
+    "detailed_caption_vi": "Khung hình màu đen tuyền không hiển thị vật thể hay ánh sáng nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  }
+]

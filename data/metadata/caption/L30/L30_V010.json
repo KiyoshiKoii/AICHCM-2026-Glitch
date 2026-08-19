@@ -1,0 +1,4748 @@
+[
+  {
+    "frame_id": "L30_V010_f0001",
+    "visual_source_frame_id": "L30_V010_f0001",
+    "ocr_source_frame_id": "L30_V010_f0001",
+    "quality_flags": [],
+    "caption": "A plain white screen with a television logo in the top right corner.",
+    "detailed_caption": "A solid light gray and white blank screen fills the frame. The Tuoi Tre TV logo is visible in the upper right corner.",
+    "caption_vi": "Một màn hình màu trắng trơn với logo truyền hình ở góc trên bên phải.",
+    "detailed_caption_vi": "Khung hình hiển thị một màn hình màu trắng xám trơn. Logo Tuổi Trẻ TV xuất hiện ở góc trên bên phải.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0002",
+    "visual_source_frame_id": "L30_V010_f0002",
+    "ocr_source_frame_id": "L30_V010_f0002",
+    "quality_flags": [],
+    "caption": "A green circular logo featuring a large number one and Vietnamese text on a white background.",
+    "detailed_caption": "A medium shot displays a green circular logo on a white background. Inside the circle, a large dark green number one with a hashtag symbol stands next to Vietnamese text and a small Herbalife leaf icon. The entire logo is enclosed in multiple green circular borders.",
+    "caption_vi": "Một logo hình tròn màu xanh lá cây có số một lớn và chữ tiếng Việt trên nền trắng.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị một logo hình tròn màu xanh lá cây trên nền trắng. Bên trong vòng tròn, một số một màu xanh đậm lớn kèm theo ký hiệu thăng đứng cạnh chữ tiếng Việt và biểu tượng lá cây nhỏ. Toàn bộ logo được bao bọc bởi nhiều viền tròn màu xanh.",
+    "ocr_text": "Herbalife # 1 thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0003",
+    "visual_source_frame_id": "L30_V010_f0003",
+    "ocr_source_frame_id": "L30_V010_f0003",
+    "quality_flags": [],
+    "caption": "A person riding a motorcycle on a paved street in front of an elaborate gate and buildings.",
+    "detailed_caption": "An outdoor medium shot shows a person on a motorcycle driving away on a paved road. On the left is a large ornate red and gold gate with Vietnamese inscriptions. On the right, a large leafy tree stands beside a concrete wall and buildings.",
+    "caption_vi": "Một người đang lái xe máy trên đường phố trải nhựa trước một cổng chào và các tòa nhà.",
+    "detailed_caption_vi": "Góc quay trung cảnh ngoài trời cho thấy một người đang điều khiển xe máy chạy đi trên đường nhựa. Phía bên trái là một cổng chào lớn màu đỏ và vàng có chữ tiếng Việt. Phía bên phải, một cây lớn có tán lá rậm rạp đứng cạnh bức tường bê tông và các tòa nhà.",
+    "ocr_text": "CHÙA LONG CÁT ĐẠI LỄ VU LAN BÁO HIẾU CHÙA LONG CÁT tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "gate_0",
+        "label": "gate",
+        "bbox": [
+          0.0,
+          0.0,
+          0.335,
+          0.552
+        ],
+        "description": "an ornate red and gold temple gate with intricate carvings and text",
+        "description_vi": "cổng chùa màu đỏ và vàng trang trí hoa văn chạm trổ tinh xảo và có chữ",
+        "attributes": [
+          "ornate",
+          "red",
+          "gold",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.438,
+          0.41100000000000003,
+          0.583,
+          0.9329999999999999
+        ],
+        "description": "a dark motorcycle being driven on the road",
+        "description_vi": "một chiếc xe máy tối màu đang chạy trên đường",
+        "attributes": [
+          "dark",
+          "moving"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "gate_0",
+        "predicate": "left_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "right_of",
+        "object_id": "gate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0004",
+    "visual_source_frame_id": "L30_V010_f0004",
+    "ocr_source_frame_id": "L30_V010_f0004",
+    "quality_flags": [],
+    "caption": "A view of an ornate temple gate with red pillars and golden doors.",
+    "detailed_caption": "An outdoor medium shot captures a grand temple entrance featuring tall red pillars, traditional multi-tiered roofs, and elaborate golden doors. Inscriptions are visible on the pillars and walls, with mountains seen in the background under an overcast sky.",
+    "caption_vi": "Cảnh một cổng chùa trang trí lộng lẫy với các cột màu đỏ và cửa bằng vàng.",
+    "detailed_caption_vi": "Góc quay trung cảnh ngoài trời ghi lại lối vào một ngôi đền lớn với các cột đỏ cao, mái nhiều tầng truyền thống và cửa vàng chạm trổ. Các câu chữ được khắc trên cột và tường, phía xa là dãy núi mờ ảo dưới bầu trời u ám.",
+    "ocr_text": "CHÙA LONG CÁT ĐẠI LỄ VU LAN BÁO HIẾU CHÙA LONG CÁT VĂN PHÒNG BAN TRỊ SỰ tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "gate_0",
+        "label": "gate",
+        "bbox": [
+          0.0,
+          0.0,
+          0.67,
+          0.78
+        ],
+        "description": "a grand temple gate with red pillars and golden doors",
+        "description_vi": "cổng chùa lớn với cột đỏ và cửa vàng",
+        "attributes": [
+          "red",
+          "golden",
+          "traditional",
+          "large"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0005",
+    "visual_source_frame_id": "L30_V010_f0005",
+    "ocr_source_frame_id": "L30_V010_f0005",
+    "quality_flags": [],
+    "caption": "Children and an adult near a motorcycle outdoors next to a large banyan tree.",
+    "detailed_caption": "An outdoor medium shot shows several children and an adult on a motorcycle near a massive banyan tree with exposed aerial roots. A boy in a dark shirt stands on the left, while another boy in a striped shirt and a woman on a motorcycle are positioned on the right.",
+    "caption_vi": "Trẻ em và người lớn đứng gần một chiếc xe máy ngoài trời cạnh một gốc cây đa lớn.",
+    "detailed_caption_vi": "Góc quay trung cảnh ngoài trời cho thấy một số trẻ em và một người lớn ngồi trên xe máy gần một gốc cây đa lớn với rễ phụ xù xì. Một cậu bé mặc áo tối màu đứng bên trái, trong khi một cậu bé áo kẻ sọc và người phụ nữ ngồi trên xe máy ở bên phải.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.7,
+          0.517,
+          0.9189999999999999,
+          0.85
+        ],
+        "description": "a white scooter with a seated adult",
+        "description_vi": "chiếc xe tay ga màu trắng có người lớn ngồi lên",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.322,
+          0.5239999999999999,
+          0.372,
+          0.8300000000000001
+        ],
+        "description": "a boy in a black t-shirt and black pants standing near the tree",
+        "description_vi": "một cậu bé mặc áo thun đen và quần đen đứng gần gốc cây",
+        "attributes": [
+          "black clothing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.708,
+          0.52,
+          0.775,
+          0.888
+        ],
+        "description": "a boy in a striped shirt and dark pants standing near a motorcycle",
+        "description_vi": "một cậu bé mặc áo sọc ngang và quần tối màu đứng gần xe máy",
+        "attributes": [
+          "striped shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.908,
+          0.465,
+          0.9970000000000001,
+          0.9239999999999999
+        ],
+        "description": "a child in a green shirt and blue cap standing beside a motorcycle",
+        "description_vi": "một trẻ em mặc áo xanh lá và đội nón xanh dương đứng cạnh xe máy",
+        "attributes": [
+          "green shirt",
+          "blue cap"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.0,
+          0.0,
+          0.5389999999999999,
+          0.995
+        ],
+        "description": "a large banyan tree with thick tangled roots and green foliage",
+        "description_vi": "một cây đa lớn với bộ rễ cuồn cuộn và tán lá xanh",
+        "attributes": [
+          "large",
+          "leafy",
+          "tangled"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "tree_0",
+        "predicate": "left_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "right_of",
+        "object_id": "tree_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "tree_0"
+      },
+      {
+        "subject_id": "tree_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "tree_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "tree_0"
+      },
+      {
+        "subject_id": "tree_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "tree_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0006",
+    "visual_source_frame_id": "L30_V010_f0006",
+    "ocr_source_frame_id": "L30_V010_f0006",
+    "quality_flags": [],
+    "caption": "A group of children walking outdoors holding bags containing items near a large tree.",
+    "detailed_caption": "An outdoor medium shot captures a group of children walking across an open area with gravel and concrete paths. In the foreground, two young children carry plastic bags with goods, while other children stand and walk near a large banyan tree and a bench in the background.",
+    "caption_vi": "Một nhóm trẻ em đang đi bộ ngoài trời tay cầm túi đựng đồ gần một gốc cây lớn.",
+    "detailed_caption_vi": "Góc quay trung cảnh ngoài trời ghi lại nhóm trẻ em đang di chuyển trên khu vực sân trải sỏi và nền bê tông. Ở phía trước, hai em nhỏ cầm túi nhựa đựng đồ, trong khi những đứa trẻ khác đang đứng và đi lại gần gốc cây đa lớn và ghế đá phía sau.",
+    "ocr_text": "Kính tặng tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bench_0",
+        "label": "bench",
+        "bbox": [
+          0.41200000000000003,
+          0.356,
+          0.5820000000000001,
+          0.5599999999999999
+        ],
+        "description": "a dark park bench situated near a tree",
+        "description_vi": "một chiếc ghế đá công viên tối màu đặt gần gốc cây",
+        "attributes": [
+          "dark",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.199,
+          0.512,
+          0.27999999999999997,
+          0.978
+        ],
+        "description": "a young girl in a yellow shirt and pink pants carrying a plastic bag",
+        "description_vi": "một bé gái mặc áo vàng và quần hồng đang cầm túi nhựa",
+        "attributes": [
+          "yellow shirt",
+          "pink pants",
+          "holding bag"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29500000000000004,
+          0.423,
+          0.4,
+          0.945
+        ],
+        "description": "a young girl in a yellow and blue shirt and yellow shorts holding a bag",
+        "description_vi": "một bé gái mặc áo vàng viền xanh và quần đùi vàng đang cầm túi",
+        "attributes": [
+          "yellow shirt",
+          "yellow shorts",
+          "holding bag"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.541,
+          0.29200000000000004,
+          0.642,
+          0.737
+        ],
+        "description": "a child in a red jersey and grey pants holding an ice pop",
+        "description_vi": "một trẻ em mặc áo thể thao đỏ và quần xám đang cầm kem",
+        "attributes": [
+          "red jersey",
+          "grey pants"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.674,
+          0.34,
+          0.7929999999999999,
+          0.7479999999999999
+        ],
+        "description": "a child in a black shirt and dark pants holding an ice pop",
+        "description_vi": "một trẻ em mặc áo đen và quần tối màu đang cầm kem",
+        "attributes": [
+          "black shirt"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bench_0"
+      },
+      {
+        "subject_id": "bench_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "bench_0"
+      },
+      {
+        "subject_id": "bench_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "bench_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "bench_0"
+      },
+      {
+        "subject_id": "bench_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "bench_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0007",
+    "visual_source_frame_id": "L30_V010_f0007",
+    "ocr_source_frame_id": "L30_V010_f0007",
+    "quality_flags": [],
+    "caption": "A person wearing a yellow shirt and yellow pants holding a patterned plastic bag containing goods.",
+    "detailed_caption": "A close-up shot focuses on the lower body and torso of a person wearing a bright yellow t-shirt with a red adidas logo and yellow trousers. The person is holding a patterned plastic bag filled with boxed items and a blue object.",
+    "caption_vi": "Một người mặc áo vàng và quần vàng đang cầm túi nhựa hoa văn đựng đồ.",
+    "detailed_caption_vi": "Góc quay cận cảnh tập trung vào phần thân và nửa dưới cơ thể của một người mặc áo thun màu vàng sáng có logo adidas màu đỏ cùng quần dài vàng. Người này đang cầm một chiếc túi nhựa có hoa văn bên trong chứa các hộp quà và vật dụng màu xanh.",
+    "ocr_text": "tuoitreTV adidas",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.156,
+          0.0,
+          0.528,
+          0.995
+        ],
+        "description": "a person wearing a yellow t-shirt and yellow pants",
+        "description_vi": "một người mặc áo thun vàng và quần vàng",
+        "attributes": [
+          "yellow clothing"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.41200000000000003,
+          0.0,
+          0.851,
+          0.8140000000000001
+        ],
+        "description": "a transparent plastic bag with red hearts containing blue boxes",
+        "description_vi": "túi nhựa trong suốt có họa tiết trái tim đỏ chứa các hộp màu xanh",
+        "attributes": [
+          "transparent",
+          "patterned",
+          "holding items"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_0"
+      },
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0008",
+    "visual_source_frame_id": "L30_V010_f0008",
+    "ocr_source_frame_id": "L30_V010_f0008",
+    "quality_flags": [],
+    "caption": "Several children walking and playing in front of a green and white building.",
+    "detailed_caption": "An outdoor medium shot shows children walking, standing, and playing in a gravel courtyard in front of a long green and white single-story building with multiple windows and doors. A person stands near the entrance on the right while children interact in groups across the courtyard.",
+    "caption_vi": "Nhiều trẻ em đang đi bộ và vui chơi trước một tòa nhà màu xanh lá và trắng.",
+    "detailed_caption_vi": "Góc quay trung cảnh ngoài trời cho thấy các em nhỏ đang đi bộ, đứng và chơi đùa trên sân rải sỏi trước một tòa nhà một tầng dài màu xanh lá và trắng có nhiều cửa sổ và cửa ra vào. Một người đứng gần lối ra vào bên phía phải trong khi các em nhỏ tụ tập chơi đùa khắp sân.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.097,
+          0.0,
+          1.0,
+          0.583
+        ],
+        "description": "a long green and white building with windows and doors",
+        "description_vi": "một tòa nhà dài sơn màu xanh lá và trắng có nhiều cửa sổ và cửa ra vào",
+        "attributes": [
+          "green",
+          "white",
+          "long"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.197,
+          0.47100000000000003,
+          0.275,
+          0.737
+        ],
+        "description": "two children walking closely together with arms around each other",
+        "description_vi": "hai trẻ em đang đi sát nhau choàng tay qua vai nhau",
+        "attributes": [
+          "blue shirt",
+          "green shirt"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.471,
+          0.48400000000000004,
+          0.5389999999999999,
+          0.8140000000000001
+        ],
+        "description": "a child wearing a yellow hat and yellow jacket walking in the courtyard",
+        "description_vi": "một trẻ em đội mũ vàng và mặc áo khoác vàng đang đi bộ trên sân",
+        "attributes": [
+          "yellow hat",
+          "yellow jacket"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.688,
+          0.472,
+          0.757,
+          0.708
+        ],
+        "description": "a child wearing a grey shirt with number 10 walking in the courtyard",
+        "description_vi": "một trẻ em mặc áo xám in số 10 đang đi bộ trong sân",
+        "attributes": [
+          "grey shirt",
+          "number 10"
+        ],
+        "action": "walking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0009",
+    "visual_source_frame_id": "L30_V010_f0009",
+    "ocr_source_frame_id": "L30_V010_f0009",
+    "quality_flags": [],
+    "caption": "A close-up of a smiling child peering out from behind a white wall.",
+    "detailed_caption": "A close-up shot shows the smiling face of a child with dark hair, looking directly at the camera while peeking out from behind a white vertical structure. The background is blurred, showing greenery and outdoor terrain.",
+    "caption_vi": "Cận cảnh một đứa trẻ đang cười mỉm ngó ra từ phía sau bức tường trắng.",
+    "detailed_caption_vi": "Góc quay cận cảnh ghi lại khuôn mặt đang cười của một em nhỏ tóc đen, nhìn thẳng vào máy ảnh khi đang nép người nhìn ra từ sau một cấu trúc màu trắng thẳng đứng. Phía nền mờ nhạt, hiển thị thảm thực vật và cảnh quan ngoài trời.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.492,
+          0.0,
+          0.778,
+          0.995
+        ],
+        "description": "a child with dark hair and a smiling face looking from behind a wall",
+        "description_vi": "một đứa trẻ tóc đen có khuôn mặt mỉm cười đang nhìn từ sau tường ra",
+        "attributes": [
+          "smiling",
+          "dark hair"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0010",
+    "visual_source_frame_id": "L30_V010_f0009",
+    "ocr_source_frame_id": "L30_V010_f0010",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up of a smiling child peering out from behind a white wall.",
+    "detailed_caption": "A close-up shot shows the smiling face of a child with dark hair, looking directly at the camera while peeking out from behind a white vertical structure. The background is blurred, showing greenery and outdoor terrain.",
+    "caption_vi": "Cận cảnh một đứa trẻ đang cười mỉm ngó ra từ phía sau bức tường trắng.",
+    "detailed_caption_vi": "Góc quay cận cảnh ghi lại khuôn mặt đang cười của một em nhỏ tóc đen, nhìn thẳng vào máy ảnh khi đang nép người nhìn ra từ sau một cấu trúc màu trắng thẳng đứng. Phía nền mờ nhạt, hiển thị thảm thực vật và cảnh quan ngoài trời.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.492,
+          0.0,
+          0.778,
+          0.995
+        ],
+        "description": "a child with dark hair and a smiling face looking from behind a wall",
+        "description_vi": "một đứa trẻ tóc đen có khuôn mặt mỉm cười đang nhìn từ sau tường ra",
+        "attributes": [
+          "smiling",
+          "dark hair"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0011",
+    "visual_source_frame_id": "L30_V010_f0011",
+    "ocr_source_frame_id": "L30_V010_f0011",
+    "quality_flags": [],
+    "caption": "A young girl in a pink shirt holds a plastic bag filled with items inside a classroom.",
+    "detailed_caption": "An indoor medium shot in a classroom setting features a young girl in the foreground wearing a pink shirt and a beaded necklace, holding a patterned plastic bag containing goods and a bottle. Other children are seated at wooden desks behind her, writing or looking forward.",
+    "caption_vi": "Một bé gái mặc áo hồng cầm túi nhựa đựng đồ bên trong lớp học.",
+    "detailed_caption_vi": "Góc quay trung cảnh trong phòng học ghi lại hình ảnh một bé gái ở tiền cảnh mặc áo hồng đeo vòng cổ chuỗi hạt, đang cầm một chiếc túi nhựa có hoa văn đựng đồ đạc và chai nước. Những đứa trẻ khác ngồi ở các bàn gỗ phía sau đang viết bài hoặc nhìn về phía trước.",
+    "ocr_text": "Wake-up tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.0,
+          0.588,
+          0.659,
+          0.995
+        ],
+        "description": "a wooden school desk with notebooks placed on top",
+        "description_vi": "bàn học bằng gỗ có đặt tập vở phía trên",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.534,
+          0.0,
+          0.7809999999999999,
+          0.322
+        ],
+        "description": "a boy in a green shirt sitting at a desk with a black bag",
+        "description_vi": "một cậu bé mặc áo xanh lá ngồi bên bàn học có túi đen",
+        "attributes": [
+          "green shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.6559999999999999,
+          0.23299999999999998,
+          0.959,
+          0.995
+        ],
+        "description": "a young girl in a pink shirt holding a transparent plastic bag with items",
+        "description_vi": "một bé gái mặc áo hồng đang cầm túi nhựa trong suốt chứa đồ",
+        "attributes": [
+          "pink shirt",
+          "holding bag"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.319,
+          0.382,
+          0.713,
+          0.957
+        ],
+        "description": "a patterned transparent plastic bag containing notebooks and a bottle",
+        "description_vi": "túi nhựa trong suốt có họa tiết chứa vở và chai nước",
+        "attributes": [
+          "transparent",
+          "patterned",
+          "holding items"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_0"
+      },
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "plastic_bag_0"
+      },
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0012",
+    "visual_source_frame_id": "L30_V010_f0012",
+    "ocr_source_frame_id": "L30_V010_f0012",
+    "quality_flags": [],
+    "caption": "An open notebook with handwritten practice letters on lined paper.",
+    "detailed_caption": "A close-up indoor shot shows an open exercise notebook placed on a dark wooden surface. The pages feature lined paper filled with handwritten repetitive cursive letters, and a hand is visible touching the corner of the page.",
+    "caption_vi": "Một cuốn tập mở ra với các chữ cái tập viết bằng tay trên giấy kẻ ô ly.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà hiển thị một cuốn vở tập viết được mở ra trên bề mặt gỗ tối màu. Các trang giấy có đường kẻ ô ly đầy những chữ viết tay lặp đi lặp lại, và một bàn tay đang chạm vào góc trang sách.",
+    "ocr_text": "ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.669,
+          0.653,
+          0.844,
+          1.0
+        ],
+        "description": "a hand touching the edge of an open notebook page",
+        "description_vi": "bàn tay đang chạm vào mép trang vở đang mở",
+        "attributes": [
+          "skin"
+        ],
+        "action": "touching"
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.08499999999999999,
+          0.0,
+          0.998,
+          1.0
+        ],
+        "description": "an open notebook with handwritten practice letters on lined pages",
+        "description_vi": "một cuốn vở mở ra có các chữ cái tập viết tay trên trang giấy kẻ ô",
+        "attributes": [
+          "open",
+          "lined paper",
+          "handwritten"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0013",
+    "visual_source_frame_id": "L30_V010_f0012",
+    "ocr_source_frame_id": "L30_V010_f0013",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An open notebook with handwritten practice letters on lined paper.",
+    "detailed_caption": "A close-up indoor shot shows an open exercise notebook placed on a dark wooden surface. The pages feature lined paper filled with handwritten repetitive cursive letters, and a hand is visible touching the corner of the page.",
+    "caption_vi": "Một cuốn tập mở ra với các chữ cái tập viết bằng tay trên giấy kẻ ô ly.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà hiển thị một cuốn vở tập viết được mở ra trên bề mặt gỗ tối màu. Các trang giấy có đường kẻ ô ly đầy những chữ viết tay lặp đi lặp lại, và một bàn tay đang chạm vào góc trang sách.",
+    "ocr_text": "C ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca ca",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.669,
+          0.653,
+          0.844,
+          1.0
+        ],
+        "description": "a hand touching the edge of an open notebook page",
+        "description_vi": "bàn tay đang chạm vào mép trang vở đang mở",
+        "attributes": [
+          "skin"
+        ],
+        "action": "touching"
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.08499999999999999,
+          0.0,
+          0.998,
+          1.0
+        ],
+        "description": "an open notebook with handwritten practice letters on lined pages",
+        "description_vi": "một cuốn vở mở ra có các chữ cái tập viết tay trên trang giấy kẻ ô",
+        "attributes": [
+          "open",
+          "lined paper",
+          "handwritten"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0014",
+    "visual_source_frame_id": "L30_V010_f0014",
+    "ocr_source_frame_id": "L30_V010_f0014",
+    "quality_flags": [],
+    "caption": "Children sitting at wooden desks in a classroom writing in notebooks with pencils.",
+    "detailed_caption": "An indoor medium shot in a classroom captures multiple children sitting at long wooden desks. In the foreground, two young girls in pink shirts are focused on writing in their notebooks using yellow pencils, while other children are seated behind them.",
+    "caption_vi": "Trẻ em ngồi tại bàn học bằng gỗ trong lớp học đang viết vào vở bằng bút chì.",
+    "detailed_caption_vi": "Góc quay trung cảnh trong phòng học ghi lại nhiều em nhỏ đang ngồi tại các bàn học bằng gỗ dài. Ở tiền cảnh, hai bé gái mặc áo hồng đang tập trung viết bài vào vở bằng bút chì vàng, trong khi những đứa trẻ khác ngồi ở phía sau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.0,
+          0.4,
+          1.0,
+          0.7270000000000001
+        ],
+        "description": "a long wooden school desk with notebooks and books",
+        "description_vi": "bàn học bằng gỗ dài có sách vở phía trên",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.051000000000000004,
+          0.102,
+          0.497,
+          0.9329999999999999
+        ],
+        "description": "a young girl in a pink sleeveless shirt writing in a notebook",
+        "description_vi": "một bé gái mặc áo hồng không tay đang viết bài vào vở",
+        "attributes": [
+          "pink shirt",
+          "holding pencil"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.41500000000000004,
+          0.039,
+          0.678,
+          0.419
+        ],
+        "description": "a young girl in a pink shirt sitting at a desk in the middle row",
+        "description_vi": "một bé gái mặc áo hồng ngồi bàn học ở hàng giữa",
+        "attributes": [
+          "pink shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.418,
+          0.308,
+          1.0,
+          0.992
+        ],
+        "description": "a young girl in a pink shirt writing in a notebook with a pencil",
+        "description_vi": "một bé gái mặc áo hồng đang viết vào vở bằng bút chì",
+        "attributes": [
+          "pink shirt",
+          "holding pencil"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0015",
+    "visual_source_frame_id": "L30_V010_f0015",
+    "ocr_source_frame_id": "L30_V010_f0015",
+    "quality_flags": [],
+    "caption": "A close-up of a hand writing words in cursive on lined notebook paper.",
+    "detailed_caption": "A close-up indoor shot shows a person's hand holding a yellow pencil and writing words in cursive on a lined notebook page. The notebook is placed on a dark wooden surface with visible marks.",
+    "caption_vi": "Cận cảnh một bàn tay đang viết chữ bằng bút mực trên giấy kẻ ô ly.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà ghi lại bàn tay của một người đang cầm bút chì vàng và viết các từ bằng nét chữ uốn lượn trên trang vở có đường kẻ ô ly. Cuốn vở được đặt trên mặt bàn gỗ tối màu có các vết xước hiển thị rõ.",
+    "ocr_text": "chú Ba n tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.43099999999999994,
+          0.0,
+          0.648,
+          0.386
+        ],
+        "description": "a hand holding a pencil and writing on a notebook page",
+        "description_vi": "bàn tay đang cầm bút chì và viết lên trang vở",
+        "attributes": [
+          "holding pencil"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.215,
+          0.261,
+          0.883,
+          1.0
+        ],
+        "description": "an open notebook with handwritten cursive text on lined paper",
+        "description_vi": "một cuốn vở mở có chữ viết tay uốn lượn trên giấy kẻ ô",
+        "attributes": [
+          "open",
+          "lined paper",
+          "handwritten"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0016",
+    "visual_source_frame_id": "L30_V010_f0016",
+    "ocr_source_frame_id": "L30_V010_f0016",
+    "quality_flags": [],
+    "caption": "A close-up view of a hand writing on lined paper with a pencil.",
+    "detailed_caption": "A close-up indoor shot captures a hand holding a yellow pencil, writing script on lined notebook paper placed on a dark wooden table. The composition focuses tightly on the writing activity.",
+    "caption_vi": "Cận cảnh bàn tay đang viết lên giấy kẻ ô bằng bút chì.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà ghi lại bàn tay đang cầm bút chì vàng, viết chữ viết tay lên trang vở kẻ ô đặt trên bàn gỗ tối màu. Bố cục tập trung chặt chẽ vào hoạt động viết bài.",
+    "ocr_text": "chú Ba na tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.42300000000000004,
+          0.0,
+          0.644,
+          0.39699999999999996
+        ],
+        "description": "a hand holding a pencil while writing on paper",
+        "description_vi": "bàn tay đang cầm bút chì khi đang viết trên giấy",
+        "attributes": [
+          "holding pencil"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.225,
+          0.271,
+          0.8800000000000001,
+          1.0
+        ],
+        "description": "an open notebook with handwritten text on lined paper",
+        "description_vi": "cuốn vở mở có chữ viết tay trên giấy kẻ ô",
+        "attributes": [
+          "open",
+          "lined paper"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0017",
+    "visual_source_frame_id": "L30_V010_f0017",
+    "ocr_source_frame_id": "L30_V010_f0017",
+    "quality_flags": [],
+    "caption": "Children sitting at desks in a classroom viewed through a white grid window frame.",
+    "detailed_caption": "An indoor medium shot in a classroom shows children seated at wooden desks facing a green chalkboard, viewed partly through a white grid structure in the foreground. Students in blue and green shirts are visible writing and looking forward.",
+    "caption_vi": "Trẻ em ngồi tại bàn học trong lớp học được nhìn qua khung cửa sổ lưới trắng.",
+    "detailed_caption_vi": "Góc quay trung cảnh trong phòng học ghi lại hình ảnh học sinh ngồi tại các bàn gỗ hướng về phía bảng đen màu xanh lá, được nhìn qua cấu trúc lưới màu trắng ở tiền cảnh. Các học sinh mặc áo xanh dương và xanh lá đang ngồi viết bài và nhìn về phía trước.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.45499999999999996,
+          0.629,
+          0.737,
+          0.997
+        ],
+        "description": "a long wooden school desk with books and bottles",
+        "description_vi": "bàn học bằng gỗ dài có sách vở và chai nước",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.538,
+          0.44800000000000006,
+          0.941
+        ],
+        "description": "a boy in a blue patterned shirt sitting at a school desk",
+        "description_vi": "một cậu bé mặc áo họa tiết xanh dương đang ngồi bàn học",
+        "attributes": [
+          "blue patterned shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.516,
+          0.477,
+          0.583,
+          0.7520000000000001
+        ],
+        "description": "a boy in a green shirt with the name RONALDO printed on the back",
+        "description_vi": "một cậu bé mặc áo xanh lá in chữ RONALDO ở mặt sau",
+        "attributes": [
+          "green shirt",
+          "text on back"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.713,
+          0.573,
+          0.853,
+          0.997
+        ],
+        "description": "a young boy sitting at a wooden desk holding a water bottle",
+        "description_vi": "một cậu bé ngồi tại bàn học bằng gỗ đang cầm chai nước",
+        "attributes": [
+          "blue shirt",
+          "holding bottle"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0018",
+    "visual_source_frame_id": "L30_V010_f0018",
+    "ocr_source_frame_id": "L30_V010_f0018",
+    "quality_flags": [],
+    "caption": "An adult in a grey monastic robe stands next to a child at a desk in a classroom.",
+    "detailed_caption": "An indoor medium shot shows an adult wearing a light grey monastic robe standing beside a child seated at a wooden desk in a classroom. The adult is looking down at an open book on the desk while children around them sit at their desks with books and notebooks.",
+    "caption_vi": "Một người lớn mặc áo tu sĩ xám đứng cạnh một đứa trẻ tại bàn học trong lớp.",
+    "detailed_caption_vi": "Góc quay trung cảnh trong phòng học ghi lại hình ảnh một người lớn mặc áo tràng tu sĩ màu xám nhạt đang đứng bên cạnh một em nhỏ ngồi ở bàn gỗ. Người lớn đang cúi nhìn cuốn sách mở trên bàn trong khi những đứa trẻ xung quanh ngồi ở bàn học với sách vở.",
+    "ocr_text": "Cương lớp 3 tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.134,
+          0.656,
+          0.7889999999999999,
+          0.995
+        ],
+        "description": "a wooden school desk with books, notebooks, and a green water bottle",
+        "description_vi": "bàn học bằng gỗ có sách vở và bình nước xanh lá",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.134,
+          0.362,
+          0.381,
+          0.8310000000000001
+        ],
+        "description": "a child in a grey and black shirt sitting at a desk with an open notebook",
+        "description_vi": "một trẻ em mặc áo xám đen ngồi bàn học có vở mở",
+        "attributes": [
+          "grey and black shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.461,
+          0.29000000000000004,
+          0.644,
+          0.995
+        ],
+        "description": "a child in a green shirt sitting at a desk writing or reading",
+        "description_vi": "một trẻ em mặc áo xanh lá ngồi bàn học đang viết hoặc đọc sách",
+        "attributes": [
+          "green shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.648,
+          0.027000000000000003,
+          0.892,
+          1.0
+        ],
+        "description": "an adult wearing a light grey monastic robe standing and looking down at a book",
+        "description_vi": "một người lớn mặc áo tràng tu sĩ xám nhạt đang đứng và cúi nhìn sách",
+        "attributes": [
+          "grey monastic robe",
+          "bald"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0019",
+    "visual_source_frame_id": "L30_V010_f0018",
+    "ocr_source_frame_id": "L30_V010_f0019",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An adult in a grey monastic robe stands next to a child at a desk in a classroom.",
+    "detailed_caption": "An indoor medium shot shows an adult wearing a light grey monastic robe standing beside a child seated at a wooden desk in a classroom. The adult is looking down at an open book on the desk while children around them sit at their desks with books and notebooks.",
+    "caption_vi": "Một người lớn mặc áo tu sĩ xám đứng cạnh một đứa trẻ tại bàn học trong lớp.",
+    "detailed_caption_vi": "Góc quay trung cảnh trong phòng học ghi lại hình ảnh một người lớn mặc áo tràng tu sĩ màu xám nhạt đang đứng bên cạnh một em nhỏ ngồi ở bàn gỗ. Người lớn đang cúi nhìn cuốn sách mở trên bàn trong khi những đứa trẻ xung quanh ngồi ở bàn học với sách vở.",
+    "ocr_text": "TO HELP PROJECT",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.134,
+          0.656,
+          0.7889999999999999,
+          0.995
+        ],
+        "description": "a wooden school desk with books, notebooks, and a green water bottle",
+        "description_vi": "bàn học bằng gỗ có sách vở và bình nước xanh lá",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.134,
+          0.362,
+          0.381,
+          0.8310000000000001
+        ],
+        "description": "a child in a grey and black shirt sitting at a desk with an open notebook",
+        "description_vi": "một trẻ em mặc áo xám đen ngồi bàn học có vở mở",
+        "attributes": [
+          "grey and black shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.461,
+          0.29000000000000004,
+          0.644,
+          0.995
+        ],
+        "description": "a child in a green shirt sitting at a desk writing or reading",
+        "description_vi": "một trẻ em mặc áo xanh lá ngồi bàn học đang viết hoặc đọc sách",
+        "attributes": [
+          "green shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.648,
+          0.027000000000000003,
+          0.892,
+          1.0
+        ],
+        "description": "an adult wearing a light grey monastic robe standing and looking down at a book",
+        "description_vi": "một người lớn mặc áo tràng tu sĩ xám nhạt đang đứng và cúi nhìn sách",
+        "attributes": [
+          "grey monastic robe",
+          "bald"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0020",
+    "visual_source_frame_id": "L30_V010_f0020",
+    "ocr_source_frame_id": "L30_V010_f0020",
+    "quality_flags": [],
+    "caption": "A child writing in a notebook at a desk while an adult in a grey robe stands nearby.",
+    "detailed_caption": "A close-up indoor shot shows a child wearing a green shirt sitting at a wooden desk and writing in a notebook with a green pen. An adult wearing a light grey monastic robe stands next to the child, looking over their work.",
+    "caption_vi": "Một trẻ em đang viết vào vở ở bàn học trong khi người lớn mặc áo xám đứng cạnh.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà ghi lại hình ảnh một trẻ em mặc áo xanh lá đang ngồi bàn gỗ viết bài vào vở bằng bút bi xanh. Một người lớn mặc áo tràng tu sĩ màu xám đứng ngay bên cạnh, quan sát công việc của đứa trẻ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.316,
+          0.775,
+          0.8029999999999999,
+          1.0
+        ],
+        "description": "an open notebook with handwritten text on lined paper placed on a desk",
+        "description_vi": "cuốn vở mở có chữ viết tay trên giấy kẻ ô đặt trên bàn",
+        "attributes": [
+          "open",
+          "lined paper"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.144,
+          0.006,
+          0.713,
+          0.889
+        ],
+        "description": "a child in a green shirt sitting at a desk and writing with a green pen",
+        "description_vi": "một trẻ em mặc áo xanh lá ngồi bàn học đang viết bằng bút xanh",
+        "attributes": [
+          "green shirt",
+          "holding pen"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.644,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "an adult wearing a light grey monastic robe standing beside the desk",
+        "description_vi": "một người lớn mặc áo tu sĩ xám nhạt đang đứng bên cạnh bàn học",
+        "attributes": [
+          "grey monastic robe"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0021",
+    "visual_source_frame_id": "L30_V010_f0020",
+    "ocr_source_frame_id": "L30_V010_f0021",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A child writing in a notebook at a desk while an adult in a grey robe stands nearby.",
+    "detailed_caption": "A close-up indoor shot shows a child wearing a green shirt sitting at a wooden desk and writing in a notebook with a green pen. An adult wearing a light grey monastic robe stands next to the child, looking over their work.",
+    "caption_vi": "Một trẻ em đang viết vào vở ở bàn học trong khi người lớn mặc áo xám đứng cạnh.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà ghi lại hình ảnh một trẻ em mặc áo xanh lá đang ngồi bàn gỗ viết bài vào vở bằng bút bi xanh. Một người lớn mặc áo tràng tu sĩ màu xám đứng ngay bên cạnh, quan sát công việc của đứa trẻ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.316,
+          0.775,
+          0.8029999999999999,
+          1.0
+        ],
+        "description": "an open notebook with handwritten text on lined paper placed on a desk",
+        "description_vi": "cuốn vở mở có chữ viết tay trên giấy kẻ ô đặt trên bàn",
+        "attributes": [
+          "open",
+          "lined paper"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.144,
+          0.006,
+          0.713,
+          0.889
+        ],
+        "description": "a child in a green shirt sitting at a desk and writing with a green pen",
+        "description_vi": "một trẻ em mặc áo xanh lá ngồi bàn học đang viết bằng bút xanh",
+        "attributes": [
+          "green shirt",
+          "holding pen"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.644,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "an adult wearing a light grey monastic robe standing beside the desk",
+        "description_vi": "một người lớn mặc áo tu sĩ xám nhạt đang đứng bên cạnh bàn học",
+        "attributes": [
+          "grey monastic robe"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0022",
+    "visual_source_frame_id": "L30_V010_f0022",
+    "ocr_source_frame_id": "L30_V010_f0022",
+    "quality_flags": [],
+    "caption": "A close-up of an adult wearing a light grey monastic robe.",
+    "detailed_caption": "A close-up indoor shot captures the upper body and face of an adult wearing a light grey monastic robe. The person is looking downward with a neutral expression against a plain light-colored background.",
+    "caption_vi": "Cận cảnh một người lớn mặc áo tu sĩ màu xám nhạt.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà ghi lại phần thân trên và khuôn mặt của một người lớn mặc áo tràng tu sĩ màu xám nhạt. Người này đang nhìn xuống với biểu cảm trung tính trên nền tường sáng đơn giản.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.059,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "an adult with a shaved head wearing a light grey monastic robe looking down",
+        "description_vi": "một người lớn đầu cọc mặc áo tràng tu sĩ xám nhạt đang nhìn xuống",
+        "attributes": [
+          "grey monastic robe",
+          "shaved head"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0023",
+    "visual_source_frame_id": "L30_V010_f0023",
+    "ocr_source_frame_id": "L30_V010_f0023",
+    "quality_flags": [],
+    "caption": "An adult in a grey monastic robe holds an open notebook in front of a classroom of children.",
+    "detailed_caption": "An indoor medium shot shows an adult from behind, wearing a light grey monastic robe and holding an open notebook. Facing them is a classroom filled with children seated at wooden desks with books and notebooks.",
+    "caption_vi": "Một người lớn mặc áo tu sĩ xám cầm cuốn vở mở trước lớp học có nhiều trẻ em.",
+    "detailed_caption_vi": "Góc quay trung cảnh trong phòng học ghi lại hình ảnh một người lớn từ phía sau, mặc áo tràng tu sĩ xám và đang cầm cuốn vở mở trên tay. Đối diện với người này là một lớp học đông các em nhỏ đang ngồi tại các bàn gỗ có sách vở.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.413,
+          0.491,
+          0.634,
+          0.708
+        ],
+        "description": "an open notebook held up by a person",
+        "description_vi": "cuốn vở mở được cầm trên tay một người",
+        "attributes": [
+          "open"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.197,
+          0.5239999999999999,
+          0.403,
+          0.9189999999999999
+        ],
+        "description": "a child in a grey and black shirt sitting at a desk in the foreground",
+        "description_vi": "một trẻ em mặc áo xám đen ngồi bàn học ở tiền cảnh",
+        "attributes": [
+          "grey and black shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.442,
+          0.141,
+          0.967,
+          1.0
+        ],
+        "description": "an adult from behind wearing a light grey monastic robe holding an open notebook",
+        "description_vi": "một người lớn nhìn từ phía sau mặc áo tu sĩ xám đang cầm cuốn vở mở",
+        "attributes": [
+          "grey monastic robe",
+          "holding notebook"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "notebook_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "notebook_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0024",
+    "visual_source_frame_id": "L30_V010_f0024",
+    "ocr_source_frame_id": "L30_V010_f0024",
+    "quality_flags": [],
+    "caption": "An adult in a grey monastic robe stands near seated children in a classroom.",
+    "detailed_caption": "An indoor medium shot shows an adult wearing a light grey monastic robe standing near the doorway of a classroom. Several children are seated at desks in the foreground, facing forward and engaged in their studies.",
+    "caption_vi": "Một người lớn mặc áo tu sĩ xám đứng gần trẻ em đang ngồi trong lớp học.",
+    "detailed_caption_vi": "Góc quay trung cảnh trong phòng học ghi lại hình ảnh một người lớn mặc áo tràng tu sĩ màu xám đang đứng gần cửa ra vào của lớp học. Một số em nhỏ đang ngồi ở các bàn học phía trước, hướng về phía trước và tập trung học tập.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.192,
+          0.5619999999999999,
+          0.386,
+          1.0
+        ],
+        "description": "a young girl in a black zip-up jacket with white stripes",
+        "description_vi": "một bé gái mặc áo khoác đen kéo khóa có sọc trắng",
+        "attributes": [
+          "black jacket",
+          "white stripes"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.325,
+          0.184,
+          0.558,
+          0.883
+        ],
+        "description": "an adult wearing a light grey monastic robe standing near a doorway",
+        "description_vi": "một người lớn mặc áo tu sĩ xám nhạt đang đứng gần cửa ra vào",
+        "attributes": [
+          "grey monastic robe",
+          "shaved head"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.697,
+          0.573,
+          0.9029999999999999,
+          1.0
+        ],
+        "description": "a young girl in a black shirt with a flower hair clip",
+        "description_vi": "một bé gái mặc áo đen có kẹp tóc hình hoa",
+        "attributes": [
+          "black shirt",
+          "flower hair clip"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0025",
+    "visual_source_frame_id": "L30_V010_f0025",
+    "ocr_source_frame_id": "L30_V010_f0025",
+    "quality_flags": [],
+    "caption": "A close-up of a young girl with dark hair speaking in a classroom setting.",
+    "detailed_caption": "A close-up indoor shot shows a young girl with dark wavy hair wearing a light yellow shirt with pink trim, speaking or opening her mouth. Other students and desks are visible in the blurred background of the classroom.",
+    "caption_vi": "Cận cảnh một bé gái tóc tối màu đang nói chuyện trong không gian lớp học.",
+    "detailed_caption_vi": "Góc quay cận cảnh trong nhà ghi lại hình ảnh một bé gái tóc xoăn tối màu mặc áo màu vàng nhạt viền hồng, đang nói chuyện hoặc há miệng. Những học sinh khác và bàn học xuất hiện mờ ảo ở phía nền lớp học.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.202,
+          0.111,
+          0.8480000000000001,
+          1.0
+        ],
+        "description": "a young girl with dark hair wearing a light yellow shirt with pink trim",
+        "description_vi": "một bé gái tóc tối màu mặc áo vàng nhạt viền hồng",
+        "attributes": [
+          "yellow shirt",
+          "pink trim",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0026",
+    "visual_source_frame_id": "L30_V010_f0026",
+    "ocr_source_frame_id": "L30_V010_f0026",
+    "quality_flags": [],
+    "caption": "A young student wearing a light-colored top speaks in a classroom setting with other students visible in the background.",
+    "detailed_caption": "A close-up shot shows a young student wearing a light-colored shirt talking indoors. In the background, several other students are seated at desks within a brightly lit classroom.",
+    "caption_vi": "Một học sinh mặc áo sáng màu đang nói chuyện trong phòng học có nhiều học sinh khác ở phía sau.",
+    "detailed_caption_vi": "Cận cảnh một học sinh mặc áo sáng màu đang phát biểu trong lớp học. Phía sau là không gian lớp học với nhiều học sinh đang ngồi học tại bàn.",
+    "ocr_text": "Em Chamaléa Thị Mai Trang Học sinh lớp 5, lớp học tình thương chùa Long Cát",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.20299999999999999,
+          0.114,
+          0.8560000000000001,
+          1.0
+        ],
+        "description": "young student in a light-colored top",
+        "description_vi": "học sinh trẻ mặc áo sáng màu",
+        "attributes": [
+          "light-colored top",
+          "short hair",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0027",
+    "visual_source_frame_id": "L30_V010_f0026",
+    "ocr_source_frame_id": "L30_V010_f0027",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A young student wearing a light-colored top speaks in a classroom setting with other students visible in the background.",
+    "detailed_caption": "A close-up shot shows a young student wearing a light-colored shirt talking indoors. In the background, several other students are seated at desks within a brightly lit classroom.",
+    "caption_vi": "Một học sinh mặc áo sáng màu đang nói chuyện trong phòng học có nhiều học sinh khác ở phía sau.",
+    "detailed_caption_vi": "Cận cảnh một học sinh mặc áo sáng màu đang phát biểu trong lớp học. Phía sau là không gian lớp học với nhiều học sinh đang ngồi học tại bàn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.20299999999999999,
+          0.114,
+          0.8560000000000001,
+          1.0
+        ],
+        "description": "young student in a light-colored top",
+        "description_vi": "học sinh trẻ mặc áo sáng màu",
+        "attributes": [
+          "light-colored top",
+          "short hair",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0028",
+    "visual_source_frame_id": "L30_V010_f0028",
+    "ocr_source_frame_id": "L30_V010_f0028",
+    "quality_flags": [],
+    "caption": "Many students are seated at green wooden desks writing in notebooks inside a brightly lit classroom.",
+    "detailed_caption": "A medium shot shows a classroom filled with rows of students sitting at light green wooden desks. The students are focused on writing in their notebooks with pens. In the foreground, a student in a yellow polo shirt looks toward the front.",
+    "caption_vi": "Nhiều học sinh ngồi học tại các bàn gỗ màu xanh lá cây trong một lớp học sáng sủa.",
+    "detailed_caption_vi": "Góc nhìn trung cảnh cho thấy một lớp học đông học sinh đang ngồi tập trung viết bài tại các bàn gỗ xanh. Phía trước, một học sinh mặc áo polo vàng đang nhìn về phía trước.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.18,
+          0.5559999999999999,
+          0.442,
+          1.0
+        ],
+        "description": "light green wooden school desk",
+        "description_vi": "bàn học bằng gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.329,
+          0.47600000000000003,
+          0.471,
+          0.99
+        ],
+        "description": "student in dark shirt with green pattern writing",
+        "description_vi": "học sinh mặc áo tối màu họa tiết xanh đang viết",
+        "attributes": [
+          "dark shirt",
+          "green pattern"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "student_1",
+        "label": "student",
+        "bbox": [
+          0.663,
+          0.465,
+          0.9289999999999999,
+          0.893
+        ],
+        "description": "student in yellow polo shirt writing at desk",
+        "description_vi": "học sinh mặc áo polo vàng đang ngồi viết bài",
+        "attributes": [
+          "yellow polo shirt",
+          "short hair"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "left_of",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "right_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "left_of",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "right_of",
+        "object_id": "student_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0029",
+    "visual_source_frame_id": "L30_V010_f0029",
+    "ocr_source_frame_id": "L30_V010_f0029",
+    "quality_flags": [],
+    "caption": "Students sit at green desks writing in their notebooks inside a classroom.",
+    "detailed_caption": "A medium shot captures children sitting at wooden desks painted light green, intently writing in open notebooks. The students wear casual shirts, and the room has plain light walls with barred windows.",
+    "caption_vi": "Các học sinh ngồi tại bàn xanh viết vào vở trong lớp học.",
+    "detailed_caption_vi": "Trung cảnh ghi lại cảnh các em nhỏ ngồi tại bàn học gỗ sơn xanh, chăm chú viết bài vào vở mở sẵn. Lớp học có tường sáng màu và cửa sổ có song sắt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.24300000000000002,
+          0.7030000000000001,
+          0.893,
+          1.0
+        ],
+        "description": "light green school desk with open notebook and pen",
+        "description_vi": "bàn học xanh nhạt có mở vở và bút",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.369,
+          0.421,
+          0.592,
+          0.992
+        ],
+        "description": "student in yellow polo shirt writing",
+        "description_vi": "học sinh mặc áo polo vàng đang viết",
+        "attributes": [
+          "yellow polo shirt",
+          "short hair"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "student_1",
+        "label": "student",
+        "bbox": [
+          0.595,
+          0.46799999999999997,
+          0.836,
+          0.8220000000000001
+        ],
+        "description": "student in yellow and black jersey writing",
+        "description_vi": "học sinh mặc áo thể thao vàng đen đang viết",
+        "attributes": [
+          "yellow and black jersey",
+          "short hair"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0030",
+    "visual_source_frame_id": "L30_V010_f0030",
+    "ocr_source_frame_id": "L30_V010_f0030",
+    "quality_flags": [],
+    "caption": "A young student in a yellow polo shirt writes in an open notebook at a school desk.",
+    "detailed_caption": "A close-up shot shows a young student wearing a yellow polo shirt with a black collar, sitting at a pale green desk and writing with a blue pen in an open notebook. The background shows part of another desk and stool.",
+    "caption_vi": "Một học sinh mặc áo polo vàng đang cặm cụi viết bài vào vở mở trên bàn học.",
+    "detailed_caption_vi": "Cận cảnh một học sinh mặc áo polo vàng cổ đen, đang ngồi tại chiếc bàn màu xanh nhạt và cầm bút bi xanh viết vào vở. Phía sau là góc bàn và ghế đẩu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.0,
+          0.5760000000000001,
+          1.0,
+          1.0
+        ],
+        "description": "pale green wooden school desk",
+        "description_vi": "bàn học gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.21200000000000002,
+          0.0,
+          0.9359999999999999,
+          1.0
+        ],
+        "description": "young student in yellow polo shirt writing",
+        "description_vi": "học sinh mặc áo polo vàng đang viết bài",
+        "attributes": [
+          "yellow polo shirt",
+          "black collar"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0031",
+    "visual_source_frame_id": "L30_V010_f0031",
+    "ocr_source_frame_id": "L30_V010_f0031",
+    "quality_flags": [],
+    "caption": "A close-up shows hands holding a pen and writing in a lined notebook.",
+    "detailed_caption": "A macro shot focuses on hands holding a ballpoint pen and carefully writing Vietnamese text inside a lined school notebook. The pages display handwritten cursive practice letters.",
+    "caption_vi": "Cận cảnh bàn tay đang cầm bút viết chữ lên trang vở ô ly.",
+    "detailed_caption_vi": "Góc quay cận cảnh tập trung vào đôi bàn tay đang cầm bút bi viết các dòng chữ tập viết tiếng Việt vào vở ô ly.",
+    "ocr_text": "Thú hai ngày 9-... Tieng Viẹt Bài 1: Điêu Kỳ Di Thứ ba ngày 9-...",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.33499999999999996
+        ],
+        "description": "hands holding a pen and writing",
+        "description_vi": "bàn tay đang cầm bút viết",
+        "attributes": [
+          "fingers",
+          "holding pen"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "lined school notebook with handwritten text",
+        "description_vi": "vở ô ly có chữ viết tay",
+        "attributes": [
+          "lined",
+          "paper"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0032",
+    "visual_source_frame_id": "L30_V010_f0031",
+    "ocr_source_frame_id": "L30_V010_f0032",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up shows hands holding a pen and writing in a lined notebook.",
+    "detailed_caption": "A macro shot focuses on hands holding a ballpoint pen and carefully writing Vietnamese text inside a lined school notebook. The pages display handwritten cursive practice letters.",
+    "caption_vi": "Cận cảnh bàn tay đang cầm bút viết chữ lên trang vở ô ly.",
+    "detailed_caption_vi": "Góc quay cận cảnh tập trung vào đôi bàn tay đang cầm bút bi viết các dòng chữ tập viết tiếng Việt vào vở ô ly.",
+    "ocr_text": "chú Ba nga ChuBa nga Tiếng Viết Bài 1: Điền Ki D",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.33499999999999996
+        ],
+        "description": "hands holding a pen and writing",
+        "description_vi": "bàn tay đang cầm bút viết",
+        "attributes": [
+          "fingers",
+          "holding pen"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "lined school notebook with handwritten text",
+        "description_vi": "vở ô ly có chữ viết tay",
+        "attributes": [
+          "lined",
+          "paper"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0033",
+    "visual_source_frame_id": "L30_V010_f0033",
+    "ocr_source_frame_id": "L30_V010_f0033",
+    "quality_flags": [],
+    "caption": "Two students sit at a green desk writing in notebooks in a classroom.",
+    "detailed_caption": "A medium shot shows two young students sitting side-by-side at a light green desk, focused on writing in their open notebooks. Other students are visible in the rows behind them in the brightly lit classroom.",
+    "caption_vi": "Hai học sinh ngồi cùng bàn xanh chăm chú viết bài trong lớp học.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh hai học sinh ngồi cạnh nhau tại bàn học màu xanh, tập trung viết vào vở. Xung quanh là các học sinh khác trong phòng học sáng sủa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.0,
+          0.591,
+          0.9119999999999999,
+          1.0
+        ],
+        "description": "light green wooden school desk with open books",
+        "description_vi": "bàn học gỗ xanh nhạt có sách vở mở",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.101,
+          0.27999999999999997,
+          0.41100000000000003,
+          0.712
+        ],
+        "description": "student in yellow shirt writing",
+        "description_vi": "học sinh mặc áo vàng đang viết",
+        "attributes": [
+          "yellow shirt",
+          "black collar"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "student_1",
+        "label": "student",
+        "bbox": [
+          0.488,
+          0.27799999999999997,
+          0.85,
+          0.725
+        ],
+        "description": "student in yellow and black jersey writing",
+        "description_vi": "học sinh mặc áo thể thao vàng đen đang viết",
+        "attributes": [
+          "yellow and black jersey",
+          "short hair"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "left_of",
+        "object_id": "student_1"
+      },
+      {
+        "subject_id": "student_1",
+        "predicate": "right_of",
+        "object_id": "student_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0034",
+    "visual_source_frame_id": "L30_V010_f0034",
+    "ocr_source_frame_id": "L30_V010_f0034",
+    "quality_flags": [],
+    "caption": "A male teacher stands holding a book while students sit at desks in a classroom.",
+    "detailed_caption": "A wide shot shows a male teacher standing on the left side of a classroom, wearing a white short-sleeve shirt and dark trousers while holding an open book. Rows of students sit at light green wooden desks, facing forward and reading.",
+    "caption_vi": "Nam giáo viên đứng cầm sách giảng bài trước lớp học có đông học sinh ngồi tại bàn.",
+    "detailed_caption_vi": "Góc nhìn toàn cảnh ghi lại nam giáo viên mặc áo sơ mi trắng ngắn tay và quần tối màu đang đứng cầm sách mở ở bên trái lớp học. Các học sinh ngồi ngay ngắn tại bàn học màu xanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.403,
+          0.5489999999999999,
+          0.65,
+          0.9979999999999999
+        ],
+        "description": "light green wooden school desk",
+        "description_vi": "bàn học gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.5740000000000001,
+          0.435,
+          0.6839999999999999,
+          0.8029999999999999
+        ],
+        "description": "student in yellow and black jersey writing",
+        "description_vi": "học sinh mặc áo thể thao vàng đen đang viết",
+        "attributes": [
+          "yellow and black jersey"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.145,
+          0.10800000000000001,
+          0.311,
+          0.9930000000000001
+        ],
+        "description": "male teacher in white shirt and dark trousers standing",
+        "description_vi": "nam giáo viên mặc sơ mi trắng và quần tối màu đang đứng",
+        "attributes": [
+          "white short-sleeve shirt",
+          "dark trousers",
+          "standing"
+        ],
+        "action": "holding book"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "teacher_0",
+        "predicate": "left_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "right_of",
+        "object_id": "teacher_0"
+      },
+      {
+        "subject_id": "teacher_0",
+        "predicate": "left_of",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "right_of",
+        "object_id": "teacher_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0035",
+    "visual_source_frame_id": "L30_V010_f0035",
+    "ocr_source_frame_id": "L30_V010_f0035",
+    "quality_flags": [],
+    "caption": "A male teacher stands holding a book in front of students sitting at desks.",
+    "detailed_caption": "A wide shot shows a teacher standing on the left wearing a white shirt and dark pants, holding a book. Students are seated at pale green wooden desks throughout the classroom.",
+    "caption_vi": "Thầy giáo đứng cầm sách trong lớp học khi các học sinh ngồi học tại bàn.",
+    "detailed_caption_vi": "Góc quay toàn cảnh cho thấy thầy giáo đứng bên trái mặc sơ mi trắng và quần tối màu, tay cầm quyển sách. Các học sinh đang ngồi học tại bàn gỗ màu xanh nhạt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.40099999999999997,
+          0.548,
+          0.6559999999999999,
+          0.9979999999999999
+        ],
+        "description": "pale green wooden school desk",
+        "description_vi": "bàn học gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.147,
+          0.10700000000000001,
+          0.314,
+          0.9930000000000001
+        ],
+        "description": "male teacher in white shirt and dark pants",
+        "description_vi": "nam giáo viên mặc áo trắng và quần tối màu",
+        "attributes": [
+          "white shirt",
+          "dark pants",
+          "standing"
+        ],
+        "action": "holding book"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "teacher_0",
+        "predicate": "left_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "right_of",
+        "object_id": "teacher_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0036",
+    "visual_source_frame_id": "L30_V010_f0036",
+    "ocr_source_frame_id": "L30_V010_f0036",
+    "quality_flags": [],
+    "caption": "An open textbook page displays Vietnamese text with lesson headings and illustrations.",
+    "detailed_caption": "A close-up shot shows an open Vietnamese textbook titled 'CÁNH ĐỒNG HOA' with printed lesson text, questions, and small cartoon illustrations of children on the page.",
+    "caption_vi": "Trang sách giáo khoa mở hiển thị văn bản tiếng Việt và tiêu đề bài học.",
+    "detailed_caption_vi": "Cận cảnh trang sách giáo khoa Tiếng Việt mở ra với tiêu đề 'CÁNH ĐỒNG HOA', bao gồm các đoạn văn bản, câu hỏi thảo luận và hình minh họa nhỏ.",
+    "ocr_text": "Bài 2 CÁNH ĐỒNG HOA ĐỌC Trao đổi với bạn: Em có thể làm gì để góp phần làm cho khu phố hay thôn xóm của em thêm sạch đẹp? CÁNH ĐỒNG HOA Ở đầu làng, có một đồng cỏ khá rộng...",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "open textbook with printed text and illustrations",
+        "description_vi": "sách giáo khoa mở có chữ in và hình minh họa",
+        "attributes": [
+          "open",
+          "paper",
+          "printed text"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0037",
+    "visual_source_frame_id": "L30_V010_f0037",
+    "ocr_source_frame_id": "L30_V010_f0037",
+    "quality_flags": [],
+    "caption": "A teacher in a white shirt stands at the front of a classroom of seated students reading books.",
+    "detailed_caption": "A medium shot shows a male teacher wearing a white shirt and lanyard standing in front of a blackboard in a classroom, holding a book. Numerous seated students at wooden desks face forward, many looking at their books or toward the teacher. The classroom has pale green walls and a large blackboard with writing in white chalk.",
+    "caption_vi": "Một giáo viên mặc áo trắng đứng trước lớp học có nhiều học sinh đang ngồi đọc sách.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một giáo viên nam mặc áo sơ mi trắng và đeo thẻ đứng trước bảng đen trong lớp học, tay cầm một cuốn sách. Nhiều học sinh ngồi tại các bàn ghế gỗ hướng về phía trước, nhiều em đang nhìn sách hoặc hướng về giáo viên. Lớp học có tường màu xanh nhạt và bảng đen lớn viết chữ phấn trắng.",
+    "ocr_text": "Thứ Ba ngày 10 tháng 9 năm 2024 Tập đọc Tiết 1 Chữ nhạc",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blackboard_0",
+        "label": "blackboard",
+        "bbox": [
+          0.364,
+          0.193,
+          0.659,
+          0.467
+        ],
+        "description": "large black chalkboard with white chalk writing",
+        "description_vi": "bảng đen lớn viết phấn trắng",
+        "attributes": [
+          "black",
+          "rectangular",
+          "mounted"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.148,
+          0.669,
+          0.311,
+          0.9590000000000001
+        ],
+        "description": "wooden classroom desk with books",
+        "description_vi": "bàn học bằng gỗ trong lớp có sách vở",
+        "attributes": [
+          "wooden",
+          "blue frame"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.08299999999999999,
+          0.5800000000000001,
+          0.269,
+          0.8979999999999999
+        ],
+        "description": "young student in pink shirt sitting at desk",
+        "description_vi": "học sinh mặc áo hồng ngồi ở bàn học",
+        "attributes": [
+          "pink shirt",
+          "sitting"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.22599999999999998,
+          0.496,
+          0.33199999999999996,
+          0.755
+        ],
+        "description": "student in yellow shirt sitting at desk",
+        "description_vi": "học sinh mặc áo vàng ngồi ở bàn học",
+        "attributes": [
+          "yellow shirt",
+          "sitting"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5599999999999999,
+          0.267,
+          0.651,
+          0.574
+        ],
+        "description": "male teacher in white shirt and lanyard holding a book",
+        "description_vi": "giáo viên nam mặc áo sơ mi trắng và đeo thẻ đang cầm sách",
+        "attributes": [
+          "white shirt",
+          "lanyard",
+          "standing"
+        ],
+        "action": "holding book"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0038",
+    "visual_source_frame_id": "L30_V010_f0037",
+    "ocr_source_frame_id": "L30_V010_f0038",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male teacher stands in front of a blackboard while students sit at desks in a classroom.",
+    "detailed_caption": "A wide shot shows a male teacher standing near the blackboard at the front of a classroom, holding a book. Students are seated at light green desks, facing the front.",
+    "caption_vi": "Nam giáo viên đứng trước bảng đen trong lớp học khi học sinh ngồi phía dưới.",
+    "detailed_caption_vi": "Góc nhìn toàn cảnh ghi lại nam giáo viên đang đứng cầm sách trước tấm bảng đen treo trên tường lớp học. Các học sinh đang ngồi ngay ngắn tại các bàn học.",
+    "ocr_text": "\"Chủ Ba ngày 10 tháng 9 năm 2024 Tiếng Việt Đọc Chủ nhật Tiếng Việt Tập Cánh đồng hoa TO HELP PROJECT",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blackboard_0",
+        "label": "blackboard",
+        "bbox": [
+          0.365,
+          0.18800000000000003,
+          0.659,
+          0.47100000000000003
+        ],
+        "description": "blackboard mounted on the classroom wall with writing",
+        "description_vi": "bảng đen gắn trên tường lớp học có chữ viết",
+        "attributes": [
+          "black",
+          "mounted",
+          "written text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.5599999999999999,
+          0.267,
+          0.651,
+          0.577
+        ],
+        "description": "male teacher standing near blackboard",
+        "description_vi": "nam giáo viên đang đứng gần bảng đen",
+        "attributes": [
+          "white shirt",
+          "dark trousers"
+        ],
+        "action": "holding book"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "overlapping",
+        "object_id": "teacher_0"
+      },
+      {
+        "subject_id": "teacher_0",
+        "predicate": "overlapping",
+        "object_id": "blackboard_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0039",
+    "visual_source_frame_id": "L30_V010_f0039",
+    "ocr_source_frame_id": "L30_V010_f0039",
+    "quality_flags": [],
+    "caption": "A male teacher stands holding and reading an open book in front of a blackboard.",
+    "detailed_caption": "A medium close-up shot shows a male teacher wearing a white button-down shirt and a blue lanyard, holding an open textbook and reading from it in front of a dark blackboard.",
+    "caption_vi": "Nam giáo viên mặc áo trắng đeo thẻ đang đứng đọc sách trước bảng đen.",
+    "detailed_caption_vi": "Cận cảnh trung bình nam giáo viên mặc áo sơ mi trắng, đeo dây đeo thẻ màu xanh, đang cầm sách mở đọc bài trước bảng đen.",
+    "ocr_text": "Đọc Cánh đồng hoa",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.21400000000000002,
+          0.037,
+          0.77,
+          1.0
+        ],
+        "description": "male teacher in white shirt reading from open book",
+        "description_vi": "nam giáo viên mặc áo trắng đang đọc sách",
+        "attributes": [
+          "white shirt",
+          "blue lanyard",
+          "holding book"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0040",
+    "visual_source_frame_id": "L30_V010_f0040",
+    "ocr_source_frame_id": "L30_V010_f0040",
+    "quality_flags": [],
+    "caption": "A young female student stands holding a book while reading aloud in a classroom.",
+    "detailed_caption": "A medium shot shows a young student wearing a yellow shirt standing up at her desk, holding an open book and reading to the class. Other students sit at their desks in the background.",
+    "caption_vi": "Một nữ sinh mặc áo vàng đứng tại bàn học để đọc sách trước lớp.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh một học sinh nữ mặc áo vàng đang đứng lên tại chỗ, tay cầm sách mở để đọc bài. Các bạn học sinh khác ngồi xung quanh trong lớp.",
+    "ocr_text": "NEED MORE SLEEP",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.175,
+          0.7350000000000001,
+          0.8099999999999999,
+          1.0
+        ],
+        "description": "light green wooden school desk",
+        "description_vi": "bàn học gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.426,
+          0.21700000000000003,
+          0.592,
+          0.988
+        ],
+        "description": "young student in yellow shirt standing and reading",
+        "description_vi": "học sinh mặc áo vàng đang đứng đọc sách",
+        "attributes": [
+          "yellow shirt",
+          "standing",
+          "holding book"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0041",
+    "visual_source_frame_id": "L30_V010_f0040",
+    "ocr_source_frame_id": "L30_V010_f0041",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A young female student stands holding a book while reading aloud in a classroom.",
+    "detailed_caption": "A medium shot shows a young student wearing a yellow shirt standing up at her desk, holding an open book and reading to the class. Other students sit at their desks in the background.",
+    "caption_vi": "Một nữ sinh mặc áo vàng đứng tại bàn học để đọc sách trước lớp.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh một học sinh nữ mặc áo vàng đang đứng lên tại chỗ, tay cầm sách mở để đọc bài. Các bạn học sinh khác ngồi xung quanh trong lớp.",
+    "ocr_text": "NEED MORE SLEEP",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.175,
+          0.7350000000000001,
+          0.8099999999999999,
+          1.0
+        ],
+        "description": "light green wooden school desk",
+        "description_vi": "bàn học gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.426,
+          0.21700000000000003,
+          0.592,
+          0.988
+        ],
+        "description": "young student in yellow shirt standing and reading",
+        "description_vi": "học sinh mặc áo vàng đang đứng đọc sách",
+        "attributes": [
+          "yellow shirt",
+          "standing",
+          "holding book"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0042",
+    "visual_source_frame_id": "L30_V010_f0042",
+    "ocr_source_frame_id": "L30_V010_f0042",
+    "quality_flags": [],
+    "caption": "A male teacher speaks while facing forward in a classroom setting.",
+    "detailed_caption": "A medium close-up shot shows a male teacher in a white short-sleeve shirt with a blue lanyard speaking directly toward the camera inside a classroom, with desks and students visible in the background.",
+    "caption_vi": "Nam giáo viên mặc sơ mi trắng phát biểu trong phòng học.",
+    "detailed_caption_vi": "Cận cảnh trung bình nam giáo viên mặc áo sơ mi trắng ngắn tay có đeo dây thẻ đang nói chuyện hướng về phía trước, phía sau là không gian lớp học.",
+    "ocr_text": "THANG LOI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.34700000000000003,
+          0.056,
+          0.9359999999999999,
+          1.0
+        ],
+        "description": "male teacher in white shirt speaking",
+        "description_vi": "nam giáo viên mặc áo trắng đang nói chuyện",
+        "attributes": [
+          "white short-sleeve shirt",
+          "blue lanyard",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0043",
+    "visual_source_frame_id": "L30_V010_f0043",
+    "ocr_source_frame_id": "L30_V010_f0043",
+    "quality_flags": [],
+    "caption": "A male teacher wearing a white shirt and lanyard speaks directly to the camera in a classroom.",
+    "detailed_caption": "A close-up shot shows a smiling male teacher with short black hair, wearing a white button-down shirt and a blue lanyard. He is speaking directly to the camera inside a classroom, with students seated at desks visible in the background near a window. A green lower-third banner with white text appears at the bottom.",
+    "caption_vi": "Một giáo viên nam mặc áo sơ mi trắng và đeo thẻ đang nói chuyện trực tiếp với máy quay trong lớp học.",
+    "detailed_caption_vi": "Khung hình cận cảnh cho thấy một giáo viên nam cười tươi tóc đen ngắn, mặc áo sơ mi trắng có cổ và đeo dây đeo màu xanh dương. Thầy đang nói chuyện trực tiếp với máy quay bên trong lớp học, phía sau là các học sinh ngồi học gần cửa sổ. Một thanh tiêu đề màu xanh lá cây có chữ trắng xuất hiện ở phía dưới.",
+    "ocr_text": "Thầy giáo Tưởng Văn Vui Giáo viên Trường Tiểu học Công Hải",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.33799999999999997,
+          0.057999999999999996,
+          0.9279999999999999,
+          1.0
+        ],
+        "description": "male teacher with short black hair wearing white shirt and blue lanyard",
+        "description_vi": "giáo viên nam tóc đen ngắn mặc áo sơ mi trắng và dây đeo xanh",
+        "attributes": [
+          "white shirt",
+          "blue lanyard",
+          "smiling"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0044",
+    "visual_source_frame_id": "L30_V010_f0044",
+    "ocr_source_frame_id": "L30_V010_f0044",
+    "quality_flags": [],
+    "caption": "A young female student reads from an open textbook in a classroom.",
+    "detailed_caption": "A close-up shot shows a young student wearing a yellow top holding an open textbook and reading. Other students are seated in rows behind her in the classroom.",
+    "caption_vi": "Một nữ sinh mặc áo vàng đang chăm chú đọc sách giáo khoa mở.",
+    "detailed_caption_vi": "Cận cảnh một học sinh nữ mặc áo vàng đang cầm quyển sách giáo khoa mở để đọc. Phía sau là các học sinh khác ngồi học trong lớp.",
+    "ocr_text": "Z G VIỆT",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.217,
+          0.028999999999999998,
+          0.7150000000000001,
+          1.0
+        ],
+        "description": "young student in yellow shirt reading book",
+        "description_vi": "học sinh mặc áo vàng đang đọc sách",
+        "attributes": [
+          "yellow top",
+          "holding book"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0045",
+    "visual_source_frame_id": "L30_V010_f0044",
+    "ocr_source_frame_id": "L30_V010_f0045",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A young female student reads from an open textbook in a classroom.",
+    "detailed_caption": "A close-up shot shows a young student wearing a yellow top holding an open textbook and reading. Other students are seated in rows behind her in the classroom.",
+    "caption_vi": "Một nữ sinh mặc áo vàng đang chăm chú đọc sách giáo khoa mở.",
+    "detailed_caption_vi": "Cận cảnh một học sinh nữ mặc áo vàng đang cầm quyển sách giáo khoa mở để đọc. Phía sau là các học sinh khác ngồi học trong lớp.",
+    "ocr_text": "NG VIẾT",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.217,
+          0.028999999999999998,
+          0.7150000000000001,
+          1.0
+        ],
+        "description": "young student in yellow shirt reading book",
+        "description_vi": "học sinh mặc áo vàng đang đọc sách",
+        "attributes": [
+          "yellow top",
+          "holding book"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0046",
+    "visual_source_frame_id": "L30_V010_f0046",
+    "ocr_source_frame_id": "L30_V010_f0046",
+    "quality_flags": [],
+    "caption": "An open textbook page displays Vietnamese reading exercises and illustrated stories.",
+    "detailed_caption": "A close-up shot shows an open textbook with Vietnamese text titled 'CÁNH ĐỒNG HOA', featuring reading comprehension questions and small colorful illustrations at the bottom.",
+    "caption_vi": "Trang sách giáo khoa mở giới thiệu bài đọc và câu hỏi tiếng Việt.",
+    "detailed_caption_vi": "Góc quay cận cảnh trang sách giáo khoa mở với tiêu đề 'CÁNH ĐỒNG HOA', hiển thị các đoạn văn bản đọc hiểu và hình minh họa đầy màu sắc ở góc dưới.",
+    "ocr_text": "Bài 2 CÁNH ĐỒNG HOA ĐỌC Trao đổi với bạn: Em có thể làm gì để góp phần làm cho khu phố hay thôn xóm của em thêm sạch đẹp? CÁNH ĐỒNG HOA Ở đầu làng, có một đồng cỏ khá rộng...",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "open textbook showing printed text and illustrations",
+        "description_vi": "sách giáo khoa mở hiển thị văn bản và hình minh họa",
+        "attributes": [
+          "open",
+          "paper",
+          "printed text"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0047",
+    "visual_source_frame_id": "L30_V010_f0047",
+    "ocr_source_frame_id": "L30_V010_f0047",
+    "quality_flags": [],
+    "caption": "An open textbook displays Vietnamese language lessons and reading text.",
+    "detailed_caption": "A close-up shot focuses on an open textbook page with Vietnamese lesson content, titled 'CÁNH ĐỒNG HOA', showing printed paragraphs and exercise prompts.",
+    "caption_vi": "Trang sách giáo khoa mở hiển thị bài học tiếng Việt.",
+    "detailed_caption_vi": "Cận cảnh trang sách giáo khoa mở có nội dung bài học tiếng Việt với tiêu đề 'CÁNH ĐỒNG HOA' cùng các đoạn văn và bài tập in.",
+    "ocr_text": "Bài 2 CÁNH ĐỒNG HOA ĐỌC Trao đổi với bạn: Em có thể làm gì để góp phần làm cho khu phố hay thôn xóm của em thêm sạch đẹp? CÁNH ĐỒNG HOA Ở đầu làng, có một đồng cỏ khá rộng...",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "book_0",
+        "label": "book",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "open textbook with lesson text",
+        "description_vi": "sách giáo khoa mở có nội dung bài học",
+        "attributes": [
+          "open",
+          "paper",
+          "printed text"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0048",
+    "visual_source_frame_id": "L30_V010_f0048",
+    "ocr_source_frame_id": "L30_V010_f0048",
+    "quality_flags": [],
+    "caption": "A male teacher and a standing student hold books in a classroom.",
+    "detailed_caption": "A medium shot shows a male teacher standing on the left holding a book, while a female student in a yellow shirt stands on the right reading from an open book. Other students sit at desks in the background.",
+    "caption_vi": "Thầy giáo đứng cầm sách bên cạnh học sinh nữ đang đứng đọc bài trong lớp.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh thầy giáo đứng bên trái cầm sách, trong khi học sinh nữ mặc áo vàng đứng bên phải đang cầm sách đọc. Phía sau là các học sinh ngồi học tại bàn.",
+    "ocr_text": "NEED MORE SLEEP",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.5740000000000001,
+          0.311,
+          0.8140000000000001,
+          0.9930000000000001
+        ],
+        "description": "female student in yellow shirt standing and reading",
+        "description_vi": "học sinh nữ mặc áo vàng đang đứng đọc sách",
+        "attributes": [
+          "yellow shirt",
+          "standing",
+          "holding book"
+        ],
+        "action": "reading"
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.073,
+          0.056,
+          0.43899999999999995,
+          0.9979999999999999
+        ],
+        "description": "male teacher in white shirt holding book",
+        "description_vi": "nam giáo viên mặc áo trắng đang cầm sách",
+        "attributes": [
+          "white shirt",
+          "blue lanyard",
+          "holding book"
+        ],
+        "action": "holding book"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "teacher_0",
+        "predicate": "left_of",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "right_of",
+        "object_id": "teacher_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0049",
+    "visual_source_frame_id": "L30_V010_f0049",
+    "ocr_source_frame_id": "L30_V010_f0049",
+    "quality_flags": [],
+    "caption": "A male teacher speaks directly in a classroom setting.",
+    "detailed_caption": "A medium close-up shot shows a male teacher wearing a white shirt and blue lanyard speaking in a classroom, with students seated at desks in the blurred background.",
+    "caption_vi": "Nam giáo viên mặc sơ mi trắng đang nói chuyện trong lớp học.",
+    "detailed_caption_vi": "Cận cảnh trung bình nam giáo viên mặc sơ mi trắng và đeo dây thẻ đang phát biểu ở lớp học, phía sau là học sinh mờ ảo ngồi tại bàn.",
+    "ocr_text": "THANG LOI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.343,
+          0.056,
+          0.9339999999999999,
+          1.0
+        ],
+        "description": "male teacher in white shirt speaking",
+        "description_vi": "nam giáo viên mặc áo trắng đang nói chuyện",
+        "attributes": [
+          "white short-sleeve shirt",
+          "blue lanyard",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0050",
+    "visual_source_frame_id": "L30_V010_f0049",
+    "ocr_source_frame_id": "L30_V010_f0050",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male teacher speaks directly in a classroom setting.",
+    "detailed_caption": "A medium close-up shot shows a male teacher wearing a white shirt and blue lanyard speaking in a classroom, with students seated at desks in the blurred background.",
+    "caption_vi": "Nam giáo viên mặc sơ mi trắng đang nói chuyện trong lớp học.",
+    "detailed_caption_vi": "Cận cảnh trung bình nam giáo viên mặc sơ mi trắng và đeo dây thẻ đang phát biểu ở lớp học, phía sau là học sinh mờ ảo ngồi tại bàn.",
+    "ocr_text": "THANG LOI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.343,
+          0.056,
+          0.9339999999999999,
+          1.0
+        ],
+        "description": "male teacher in white shirt speaking",
+        "description_vi": "nam giáo viên mặc áo trắng đang nói chuyện",
+        "attributes": [
+          "white short-sleeve shirt",
+          "blue lanyard",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0051",
+    "visual_source_frame_id": "L30_V010_f0049",
+    "ocr_source_frame_id": "L30_V010_f0051",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male teacher speaks directly in a classroom setting.",
+    "detailed_caption": "A medium close-up shot shows a male teacher wearing a white shirt and blue lanyard speaking in a classroom, with students seated at desks in the blurred background.",
+    "caption_vi": "Nam giáo viên mặc sơ mi trắng đang nói chuyện trong lớp học.",
+    "detailed_caption_vi": "Cận cảnh trung bình nam giáo viên mặc sơ mi trắng và đeo dây thẻ đang phát biểu ở lớp học, phía sau là học sinh mờ ảo ngồi tại bàn.",
+    "ocr_text": "THANG LOI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.343,
+          0.056,
+          0.9339999999999999,
+          1.0
+        ],
+        "description": "male teacher in white shirt speaking",
+        "description_vi": "nam giáo viên mặc áo trắng đang nói chuyện",
+        "attributes": [
+          "white short-sleeve shirt",
+          "blue lanyard",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0052",
+    "visual_source_frame_id": "L30_V010_f0052",
+    "ocr_source_frame_id": "L30_V010_f0052",
+    "quality_flags": [],
+    "caption": "A person in monastic robes helps a young student write at a desk.",
+    "detailed_caption": "A medium shot shows an individual in grey monastic robes leaning over a desk to assist a young student in a green shirt who is writing in a notebook. Other students sit nearby at desks.",
+    "caption_vi": "Người mặc áo tu sĩ đang hướng dẫn học sinh viết bài tại bàn học.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh người mặc pháp phục màu xám đang cúi người bên bàn để hướng dẫn học sinh áo xanh viết bài vào vở. Các học sinh khác ngồi bên cạnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.056999999999999995,
+          0.8310000000000001,
+          0.999,
+          1.0
+        ],
+        "description": "light green school desk with open notebook",
+        "description_vi": "bàn học xanh nhạt có mở vở",
+        "attributes": [
+          "wooden",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.24300000000000002,
+          0.11599999999999999,
+          0.519,
+          0.917
+        ],
+        "description": "person in grey monastic robes standing at desk",
+        "description_vi": "người mặc pháp phục xám đang đứng bên bàn học",
+        "attributes": [
+          "grey robes",
+          "shaved head",
+          "leaning over"
+        ],
+        "action": "assisting"
+      },
+      {
+        "object_id": "student_0",
+        "label": "student",
+        "bbox": [
+          0.426,
+          0.448,
+          0.73,
+          0.988
+        ],
+        "description": "young student in green shirt writing at desk",
+        "description_vi": "học sinh mặc áo xanh đang viết bài tại bàn",
+        "attributes": [
+          "green shirt",
+          "short hair"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "student_0"
+      },
+      {
+        "subject_id": "student_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0053",
+    "visual_source_frame_id": "L30_V010_f0053",
+    "ocr_source_frame_id": "L30_V010_f0053",
+    "quality_flags": [],
+    "caption": "A close-up shows a person wearing grey monastic robes looking down.",
+    "detailed_caption": "A medium close-up shot focuses on an individual with a shaved head wearing grey monastic robes, looking downwards with a gentle expression inside a room with a barred window in the background.",
+    "caption_vi": "Cận cảnh người mặc áo tu sĩ mặc sắc phục xám đang cúi nhìn xuống.",
+    "detailed_caption_vi": "Góc quay cận cảnh trung bình tập trung vào một người đầu trọc mặc áo tu sĩ màu xám đang nhìn cúi xuống với biểu cảm ôn hòa, phía sau là khung cửa sổ có song sắt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16299999999999998,
+          0.027000000000000003,
+          0.71,
+          1.0
+        ],
+        "description": "person in grey monastic robes looking down",
+        "description_vi": "người mặc áo tu sĩ màu xám đang cúi nhìn",
+        "attributes": [
+          "grey robes",
+          "shaved head"
+        ],
+        "action": "looking down"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0054",
+    "visual_source_frame_id": "L30_V010_f0054",
+    "ocr_source_frame_id": "L30_V010_f0054",
+    "quality_flags": [],
+    "caption": "A person holding a pen writes math problems on lined notebook paper.",
+    "detailed_caption": "A close-up shot shows a person's hand holding a pen and writing mathematical exercises on a grid-lined notebook. The written text includes numbers and arithmetic equations in blue ink. The background is simple and out of focus.",
+    "caption_vi": "Một người cầm bút viết các bài tập toán lên trang giấy vở kẻ ô.",
+    "detailed_caption_vi": "Cận cảnh bàn tay một người đang cầm bút viết các phép tính toán học bằng mực xanh lên cuốn vở ô ly. Phông nền xung quanh mờ và đơn giản.",
+    "ocr_text": "Giai quyết 10 tháng 9 năm 2024 On tap ve phep cong phap tru có nho trong pham vi 100 1.Binh 10+3= 14-4=",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "notebook_0",
+        "label": "notebook",
+        "bbox": [
+          0.004,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "grid-lined notebook with handwritten math equations in blue ink",
+        "description_vi": "cuốn vở kẻ ô ly có viết tay các phép tính toán học bằng mực xanh",
+        "attributes": [
+          "grid-lined",
+          "handwritten"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0055",
+    "visual_source_frame_id": "L30_V010_f0055",
+    "ocr_source_frame_id": "L30_V010_f0055",
+    "quality_flags": [],
+    "caption": "A teacher sits at a desk in front of a chalkboard while students sit at desks facing her in a classroom.",
+    "detailed_caption": "A medium shot of a classroom shows a female teacher in a pink jacket sitting at a desk with stacked books in front of a large chalkboard. Several children sit at wooden desks facing the chalkboard, seen from behind. The classroom walls are pale green with a metal cabinet on the left.",
+    "caption_vi": "Một giáo viên ngồi ở bàn trước bảng đen trong lớp học khi học sinh ngồi quay lưng hướng về phía cô.",
+    "detailed_caption_vi": "Khung cảnh lớp học cho thấy một cô giáo mặc áo khoác hồng đang ngồi bên bàn làm việc có chồng sách trước tấm bảng đen lớn. Nhiều học sinh ngồi ở các bàn ghế gỗ quay lưng lại camera. Tường lớp học màu xanh nhạt với một tủ sắt ở bên trái.",
+    "ocr_text": "THE CARE TO HELP PRO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.393,
+          0.060000000000000005,
+          0.8560000000000001,
+          0.49
+        ],
+        "description": "large black chalkboard with handwritten math formulas",
+        "description_vi": "tấm bảng đen lớn có ghi các công thức toán học viết phấn trắng",
+        "attributes": [
+          "black",
+          "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.314,
+          0.308,
+          0.40700000000000003,
+          0.762
+        ],
+        "description": "woman in pink jacket sitting at a desk",
+        "description_vi": "nữ giáo viên mặc áo khoác màu hồng ngồi tại bàn làm việc",
+        "attributes": [
+          "sitting",
+          "pink jacket"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0056",
+    "visual_source_frame_id": "L30_V010_f0056",
+    "ocr_source_frame_id": "L30_V010_f0056",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A sits indoors wearing a pink zip-up hoodie with text on the pocket.",
+    "detailed_caption": "A medium close-up shows a sitting indoors against a pale green wall and a blackboard. She is wearing a pink zip-up hoodie over a pink shirt, with her dark hair tied back. Text is visible on the lower pocket of her hoodie.",
+    "caption_vi": "Một phụ nữ trẻ ngồi trong nhà mặc áo hoodie kéo khóa màu hồng có chữ trên túi áo.",
+    "detailed_caption_vi": "Cận cảnh trung bình một phụ nữ trẻ đang ngồi trong phòng với tường xanh nhạt và bảng đen phía sau. Cô mặc áo khoác hoodie màu hồng bên ngoài áo phông hồng, tóc buộc gọn gàng phía sau.",
+    "ocr_text": "BELEF REMARKAV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.221,
+          0.283,
+          0.693,
+          1.0
+        ],
+        "description": "wearing a pink zip-up hoodie",
+        "description_vi": "phụ nữ trẻ mặc áo khoác hoodie màu hồng có khóa kéo",
+        "attributes": [
+          "pink hoodie",
+          "dark hair"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0057",
+    "visual_source_frame_id": "L30_V010_f0057",
+    "ocr_source_frame_id": "L30_V010_f0057",
+    "quality_flags": [],
+    "caption": "Students sit at wooden desks in a classroom while a woman stands near a blackboard and another person stands on the right.",
+    "detailed_caption": "A wide shot shows a classroom with multiple students seated at light-blue wooden desks facing a blackboard. A woman in a pink long-sleeve shirt stands near the blackboard holding papers, while a person in grey robes stands near the right doorway. The walls are pale green with windows on the left and a blackboard in the center.",
+    "caption_vi": "Học sinh ngồi tại các bàn gỗ trong lớp học trong khi một phụ nữ đứng cạnh bảng đen và một người khác đứng bên phải.",
+    "detailed_caption_vi": "Khung hình toàn cảnh cho thấy một lớp học với nhiều học sinh ngồi tại các bàn gỗ màu xanh nhạt hướng về bảng đen. Một phụ nữ mặc áo dài tay màu hồng đang đứng cạnh bảng đen cầm giấy tờ, trong khi một người mặc áo tu sĩ màu xám đứng gần cửa ra vào bên phải. Các bức tường màu xanh nhạt với cửa sổ bên trái và bảng đen ở giữa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blackboard_0",
+        "label": "blackboard",
+        "bbox": [
+          0.366,
+          0.178,
+          0.618,
+          0.41500000000000004
+        ],
+        "description": "large black chalkboard with writing on it",
+        "description_vi": "bảng đen lớn có chữ viết trên đó",
+        "attributes": [
+          "black",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.20400000000000001,
+          0.607,
+          0.5660000000000001,
+          1.0
+        ],
+        "description": "light blue wooden classroom desk",
+        "description_vi": "bàn học lớp học bằng gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "blue"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.325,
+          0.27,
+          0.382,
+          0.421
+        ],
+        "description": "woman in pink long-sleeve shirt standing near blackboard",
+        "description_vi": "phụ nữ mặc áo hồng dài tay đang đứng gần bảng đen",
+        "attributes": [
+          "pink shirt",
+          "standing"
+        ],
+        "action": "holding papers"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.434,
+          0.431,
+          0.537,
+          0.792
+        ],
+        "description": "student in blue t-shirt sitting at desk",
+        "description_vi": "học sinh mặc áo thun xanh ngồi ở bàn",
+        "attributes": [
+          "blue t-shirt",
+          "sitting"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.8029999999999999,
+          0.27799999999999997,
+          0.89,
+          0.523
+        ],
+        "description": "person in grey robes standing near doorway",
+        "description_vi": "người mặc áo choàng xám đứng gần cửa ra vào",
+        "attributes": [
+          "grey robes",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "above",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "below",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0058",
+    "visual_source_frame_id": "L30_V010_f0058",
+    "ocr_source_frame_id": "L30_V010_f0058",
+    "quality_flags": [],
+    "caption": "A woman writes on a blackboard in a classroom filled with students sitting at desks.",
+    "detailed_caption": "A wide shot of a classroom shows a woman in a pink shirt writing on a large black chalkboard at the front. Students are seated at rows of light-blue wooden desks facing forward. A person in grey robes stands near the doorway on the right, watching the class.",
+    "caption_vi": "Một phụ nữ viết lên bảng đen trong lớp học đầy học sinh ngồi ở bàn.",
+    "detailed_caption_vi": "Khung hình toàn cảnh của lớp học cho thấy một phụ nữ mặc áo hồng đang viết lên bảng đen lớn ở phía trước. Các học sinh ngồi theo hàng ghế bàn gỗ màu xanh nhạt hướng về phía trước. Một người mặc áo tu sĩ màu xám đứng gần cửa ra vào bên phải, quan sát lớp học.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blackboard_0",
+        "label": "blackboard",
+        "bbox": [
+          0.363,
+          0.171,
+          0.619,
+          0.41100000000000003
+        ],
+        "description": "large black chalkboard mounted on wall",
+        "description_vi": "bảng đen lớn gắn trên tường",
+        "attributes": [
+          "black",
+          "mounted"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.20299999999999999,
+          0.602,
+          0.5690000000000001,
+          1.0
+        ],
+        "description": "light blue wooden classroom desk",
+        "description_vi": "bàn học lớp học bằng gỗ màu xanh nhạt",
+        "attributes": [
+          "wooden",
+          "blue"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.356,
+          0.263,
+          0.417,
+          0.40399999999999997
+        ],
+        "description": "woman in pink shirt writing on blackboard",
+        "description_vi": "phụ nữ mặc áo hồng đang viết lên bảng đen",
+        "attributes": [
+          "pink shirt",
+          "standing"
+        ],
+        "action": "writing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.437,
+          0.421,
+          0.532,
+          0.617
+        ],
+        "description": "student in blue t-shirt sitting at desk",
+        "description_vi": "học sinh mặc áo thun xanh ngồi ở bàn học",
+        "attributes": [
+          "blue t-shirt",
+          "sitting"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.808,
+          0.257,
+          0.89,
+          0.513
+        ],
+        "description": "person in grey robes standing near doorway",
+        "description_vi": "người mặc áo choàng xám đứng gần cửa ra vào",
+        "attributes": [
+          "grey robes",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "blackboard_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "blackboard_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0059",
+    "visual_source_frame_id": "L30_V010_f0059",
+    "ocr_source_frame_id": "L30_V010_f0059",
+    "quality_flags": [],
+    "caption": "A teacher writes math problems on a large blackboard using white chalk.",
+    "detailed_caption": "A close-up shot shows a teacher writing numbers and equations on a black chalkboard with white chalk. The teacher, seen from behind with dark hair tied in a ponytail, wears a light pink zip-up jacket. The chalkboard is filled with handwritten arithmetic problems.",
+    "caption_vi": "Một giáo viên đang viết các bài toán lên bảng đen lớn bằng phấn trắng.",
+    "detailed_caption_vi": "Cận cảnh một giáo viên đang cầm phấn trắng viết các con số và phép tính lên bảng đen. Giáo viên được nhìn từ phía sau với mái tóc buộc đuôi ngựa, mặc áo khoác màu hồng nhạt. Bảng đen chi chít các bài tập toán viết bằng phấn.",
+    "ocr_text": "1. Tính a. 10+3= 14-4= 10+9= 17-7= 19-9= 19-4= 12+3= 18-5= 3+12= rồi tính :",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chalkboard_0",
+        "label": "chalkboard",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "blackboard covered in handwritten math problems",
+        "description_vi": "bảng đen đầy các bài tập toán viết tay bằng phấn",
+        "attributes": [
+          "black",
+          "chalk text"
+        ],
+        "action": "writing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0060",
+    "visual_source_frame_id": "L30_V010_f0060",
+    "ocr_source_frame_id": "L30_V010_f0060",
+    "quality_flags": [],
+    "caption": "A monk stands behind students seated at wooden desks in a classroom.",
+    "detailed_caption": "A medium shot captures a monk standing behind several students seated at wooden school desks. On the left, a boy in a blue t-shirt gesticulates with his arms. In the foreground and center, two boys sit at desks with notebooks and pens.",
+    "caption_vi": "Một người mặc áo tu hành đứng phía sau các học sinh đang ngồi học tại bàn gỗ trong lớp.",
+    "detailed_caption_vi": "Khung cảnh trong lớp học ghi lại hình ảnh một người mặc áo tu hành đứng phía sau nhóm học sinh ngồi bàn ghế gỗ. Bên trái, một cậu bé mặc áo xanh đang cử động tay. Ở góc nhìn chính diện là hai cậu bé ngồi tập trung bên sách vở.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "boy_0",
+        "label": "boy",
+        "bbox": [
+          0.10300000000000001,
+          0.151,
+          0.305,
+          0.755
+        ],
+        "description": "boy in blue t-shirt gesturing with hands",
+        "description_vi": "cậu bé mặc áo thun xanh đang cử chỉ tay",
+        "attributes": [
+          "blue t-shirt"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "boy_1",
+        "label": "boy",
+        "bbox": [
+          0.26,
+          0.37600000000000006,
+          0.541,
+          0.9550000000000001
+        ],
+        "description": "boy sitting at desk wearing a dark patterned shirt",
+        "description_vi": "cậu bé ngồi bàn học mặc áo tối màu có hoa văn",
+        "attributes": [
+          "dark shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.28700000000000003,
+          0.0,
+          0.523,
+          0.638
+        ],
+        "description": "monk standing behind students",
+        "description_vi": "người mặc áo tu hành đứng phía sau học sinh",
+        "attributes": [
+          "grey robes",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "boy_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "boy_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0061",
+    "visual_source_frame_id": "L30_V010_f0060",
+    "ocr_source_frame_id": "L30_V010_f0061",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A monk stands behind students seated at wooden desks in a classroom.",
+    "detailed_caption": "A medium shot captures a monk standing behind several students seated at wooden school desks. On the left, a boy in a blue t-shirt gesticulates with his arms. In the foreground and center, two boys sit at desks with notebooks and pens.",
+    "caption_vi": "Một người mặc áo tu hành đứng phía sau các học sinh đang ngồi học tại bàn gỗ trong lớp.",
+    "detailed_caption_vi": "Khung cảnh trong lớp học ghi lại hình ảnh một người mặc áo tu hành đứng phía sau nhóm học sinh ngồi bàn ghế gỗ. Bên trái, một cậu bé mặc áo xanh đang cử động tay. Ở góc nhìn chính diện là hai cậu bé ngồi tập trung bên sách vở.",
+    "ocr_text": "QATARI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "boy_0",
+        "label": "boy",
+        "bbox": [
+          0.10300000000000001,
+          0.151,
+          0.305,
+          0.755
+        ],
+        "description": "boy in blue t-shirt gesturing with hands",
+        "description_vi": "cậu bé mặc áo thun xanh đang cử chỉ tay",
+        "attributes": [
+          "blue t-shirt"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "boy_1",
+        "label": "boy",
+        "bbox": [
+          0.26,
+          0.37600000000000006,
+          0.541,
+          0.9550000000000001
+        ],
+        "description": "boy sitting at desk wearing a dark patterned shirt",
+        "description_vi": "cậu bé ngồi bàn học mặc áo tối màu có hoa văn",
+        "attributes": [
+          "dark shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.28700000000000003,
+          0.0,
+          0.523,
+          0.638
+        ],
+        "description": "monk standing behind students",
+        "description_vi": "người mặc áo tu hành đứng phía sau học sinh",
+        "attributes": [
+          "grey robes",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "boy_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "boy_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0062",
+    "visual_source_frame_id": "L30_V010_f0062",
+    "ocr_source_frame_id": "L30_V010_f0062",
+    "quality_flags": [],
+    "caption": "A teacher stands near a desk while students sit at wooden desks in a classroom.",
+    "detailed_caption": "A wide shot of a classroom shows a male teacher standing on the left near a desk, facing rows of students seated at green wooden desks. The children are reading open textbooks and notebooks. The walls are pale green with barred windows and metal cabinets.",
+    "caption_vi": "Một giáo viên đứng gần bàn trong khi học sinh ngồi học ở các bàn gỗ trong lớp.",
+    "detailed_caption_vi": "Toàn cảnh phòng học cho thấy một thầy giáo đang đứng bên trái gần chiếc bàn, nhìn về phía các dãy học sinh ngồi ở bàn ghế gỗ màu xanh. Các em học sinh đang đọc sách vở mở trên bàn. Tường lớp màu xanh nhạt có cửa sổ song sắt.",
+    "ocr_text": "ARE TO HELP",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "desk_0",
+        "label": "desk",
+        "bbox": [
+          0.483,
+          0.624,
+          0.706,
+          0.999
+        ],
+        "description": "green wooden school desk with books",
+        "description_vi": "bàn học sinh bằng gỗ màu xanh có sách vở",
+        "attributes": [
+          "green wood"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.099,
+          0.283,
+          0.22200000000000003,
+          0.9810000000000001
+        ],
+        "description": "man standing near desk on the left",
+        "description_vi": "nam giáo viên đứng cạnh bàn ở bên trái",
+        "attributes": [
+          "white shirt",
+          "grey pants",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "teacher_0",
+        "predicate": "left_of",
+        "object_id": "desk_0"
+      },
+      {
+        "subject_id": "desk_0",
+        "predicate": "right_of",
+        "object_id": "teacher_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0063",
+    "visual_source_frame_id": "L30_V010_f0063",
+    "ocr_source_frame_id": "L30_V010_f0063",
+    "quality_flags": [],
+    "caption": "Two young boys sit together at a desk reading an open book in a classroom.",
+    "detailed_caption": "A medium close-up shot shows two young boys sitting side by side at a wooden school desk, looking down at an open book. The boy on the left wears a black and red sports jersey, while the boy on the right wears a black and green shirt and rests his chin on his hand. Other students are visible in the background.",
+    "caption_vi": "Hai cậu bé ngồi cạnh nhau tại bàn học cùng đọc một cuốn sách mở trong lớp.",
+    "detailed_caption_vi": "Cận cảnh trung bình hai cậu bé đang ngồi cạnh nhau tại bàn học bằng gỗ, cúi đầu nhìn vào cuốn sách đang mở. Cậu bé bên trái mặc áo thể thao đen đỏ, trong khi cậu bé bên phải mặc áo đen xanh lá cây và chống cằm. Các học sinh khác ngồi phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "boy_0",
+        "label": "boy",
+        "bbox": [
+          0.23700000000000002,
+          0.272,
+          0.545,
+          0.8680000000000001
+        ],
+        "description": "boy in black and red sports jersey reading a book",
+        "description_vi": "cậu bé mặc áo thể thao đen đỏ đang đọc sách",
+        "attributes": [
+          "black and red jersey",
+          "short hair"
+        ],
+        "action": "reading"
+      },
+      {
+        "object_id": "boy_1",
+        "label": "boy",
+        "bbox": [
+          0.563,
+          0.303,
+          0.779,
+          0.8430000000000001
+        ],
+        "description": "boy in black and green shirt resting chin on hand",
+        "description_vi": "cậu bé mặc áo đen xanh lá cây đang chống cằm",
+        "attributes": [
+          "black and green shirt",
+          "short hair"
+        ],
+        "action": "resting chin"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "boy_0",
+        "predicate": "left_of",
+        "object_id": "boy_1"
+      },
+      {
+        "subject_id": "boy_1",
+        "predicate": "right_of",
+        "object_id": "boy_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0064",
+    "visual_source_frame_id": "L30_V010_f0063",
+    "ocr_source_frame_id": "L30_V010_f0064",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two young boys sit together at a desk reading an open book in a classroom.",
+    "detailed_caption": "A medium close-up shot shows two young boys sitting side by side at a wooden school desk, looking down at an open book. The boy on the left wears a black and red sports jersey, while the boy on the right wears a black and green shirt and rests his chin on his hand. Other students are visible in the background.",
+    "caption_vi": "Hai cậu bé ngồi cạnh nhau tại bàn học cùng đọc một cuốn sách mở trong lớp.",
+    "detailed_caption_vi": "Cận cảnh trung bình hai cậu bé đang ngồi cạnh nhau tại bàn học bằng gỗ, cúi đầu nhìn vào cuốn sách đang mở. Cậu bé bên trái mặc áo thể thao đen đỏ, trong khi cậu bé bên phải mặc áo đen xanh lá cây và chống cằm. Các học sinh khác ngồi phía sau.",
+    "ocr_text": "ten SOCCER",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "boy_0",
+        "label": "boy",
+        "bbox": [
+          0.23700000000000002,
+          0.272,
+          0.545,
+          0.8680000000000001
+        ],
+        "description": "boy in black and red sports jersey reading a book",
+        "description_vi": "cậu bé mặc áo thể thao đen đỏ đang đọc sách",
+        "attributes": [
+          "black and red jersey",
+          "short hair"
+        ],
+        "action": "reading"
+      },
+      {
+        "object_id": "boy_1",
+        "label": "boy",
+        "bbox": [
+          0.563,
+          0.303,
+          0.779,
+          0.8430000000000001
+        ],
+        "description": "boy in black and green shirt resting chin on hand",
+        "description_vi": "cậu bé mặc áo đen xanh lá cây đang chống cằm",
+        "attributes": [
+          "black and green shirt",
+          "short hair"
+        ],
+        "action": "resting chin"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "boy_0",
+        "predicate": "left_of",
+        "object_id": "boy_1"
+      },
+      {
+        "subject_id": "boy_1",
+        "predicate": "right_of",
+        "object_id": "boy_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0065",
+    "visual_source_frame_id": "L30_V010_f0065",
+    "ocr_source_frame_id": "L30_V010_f0065",
+    "quality_flags": [],
+    "caption": "A young boy with short hair speaks while looking down at a book at a desk.",
+    "detailed_caption": "A close-up shot focuses on a young boy with short black hair wearing a black and red patterned shirt. He is opening his mouth to speak while looking down at a book on his desk. Other students are blurred in the background.",
+    "caption_vi": "Một cậu bé tóc ngắn đang nói chuyện khi cúi nhìn xuống cuốn sách trên bàn.",
+    "detailed_caption_vi": "Cận cảnh một cậu bé tóc đen ngắn mặc áo thể thao đen đỏ. Cậu đang mở miệng nói và nhìn xuống cuốn sách để trên bàn học. Phía sau là hình ảnh mờ của các học sinh khác.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "boy_0",
+        "label": "boy",
+        "bbox": [
+          0.08499999999999999,
+          0.012,
+          0.762,
+          0.999
+        ],
+        "description": "young boy with short hair wearing a black and red shirt",
+        "description_vi": "cậu bé tóc ngắn mặc áo thể thao đen đỏ",
+        "attributes": [
+          "short hair",
+          "black and red shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0066",
+    "visual_source_frame_id": "L30_V010_f0066",
+    "ocr_source_frame_id": "L30_V010_f0066",
+    "quality_flags": [],
+    "caption": "A young girl with dark hair wearing a pink shirt is looking down at a book while sitting at a desk.",
+    "detailed_caption": "A close-up shot focuses on a young girl with dark hair and gold earrings, wearing a light pink shirt, sitting at a wooden desk. She is looking downward with a focused expression. In the background, another person's hands and arm are visible near books on the desk.",
+    "caption_vi": "Một bé gái tóc tối màu mặc áo hồng đang cúi nhìn sách khi ngồi tại bàn học.",
+    "detailed_caption_vi": "Khung hình cận cảnh tập trung vào một bé gái tóc tối màu đeo khuyên tai vàng, mặc áo sơ mi hồng nhạt, đang ngồi tại bàn gỗ. Em đang nhìn xuống với vẻ mặt tập trung. Phía sau, tay và cánh tay của một người khác xuất hiện gần những cuốn sách trên bàn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.031,
+          0.0,
+          0.47300000000000003,
+          0.6719999999999999
+        ],
+        "description": "person wearing pink shirt with hands over books",
+        "description_vi": "người mặc áo hồng có tay đặt trên sách",
+        "attributes": [
+          "pink shirt",
+          "sitting"
+        ],
+        "action": "reading"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.149,
+          0.0,
+          0.994,
+          1.0
+        ],
+        "description": "young girl with dark hair and gold earrings wearing pink shirt",
+        "description_vi": "bé gái tóc tối màu đeo khuyên tai vàng mặc áo hồng",
+        "attributes": [
+          "pink shirt",
+          "dark hair",
+          "earrings",
+          "sitting"
+        ],
+        "action": "looking down"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0067",
+    "visual_source_frame_id": "L30_V010_f0067",
+    "ocr_source_frame_id": "L30_V010_f0067",
+    "quality_flags": [],
+    "caption": "A young girl wearing a pink shirt looks downward with her eyes closed.",
+    "detailed_caption": "A close-up shot focuses on a young girl with dark hair and earrings, dressed in a pink shirt. Her eyes are closed and her mouth is slightly open as if she is speaking or reading aloud. Another person's hand holding a book is visible behind her.",
+    "caption_vi": "Một cô bé mặc áo hồng đang nhắm mắt và cúi nhìn xuống.",
+    "detailed_caption_vi": "Cận cảnh một cô bé tóc đen đeo khuyên tai mặc áo hồng. Đôi mắt cô khép hờ và miệng hơi mở như đang đọc to hoặc nói chuyện. Tay của một người khác cầm sách xuất hiện mờ ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "girl_0",
+        "label": "girl",
+        "bbox": [
+          0.16899999999999998,
+          0.0,
+          0.9960000000000001,
+          0.999
+        ],
+        "description": "young girl with dark hair wearing a pink shirt",
+        "description_vi": "cô bé tóc đen mặc áo màu hồng",
+        "attributes": [
+          "pink shirt",
+          "dark hair"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V010_f0068",
+    "visual_source_frame_id": "L30_V010_f0068",
+    "ocr_source_frame_id": "L30_V010_f0068",
+    "quality_flags": [],
+    "caption": "Several students sit at wooden desks in a classroom reading open books.",
+    "detailed_caption": "A medium shot captures several children sitting at green wooden desks in a classroom, reading open textbooks and notebooks. From left to right, a girl in a green shirt, a girl in a yellow shirt, and other students are focused on their materials. The background shows a pale wall with a window.",
+    "caption_vi": "Nhiều học sinh ngồi ở các bàn gỗ trong lớp học đang đọc sách mở.",
+    "detailed_caption_vi": "Khung cảnh trung bình ghi lại nhiều học sinh đang ngồi tại các bàn học bằng gỗ màu xanh, tập trung đọc sách vở mở trước mặt. Từ trái sang phải gồm bé gái mặc áo xanh lá, bé gái mặc áo vàng và các học sinh khác. Phía sau là bức tường nhạt và cửa sổ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "girl_0",
+        "label": "girl",
+        "bbox": [
+          0.012,
+          0.23199999999999998,
+          0.273,
+          0.999
+        ],
+        "description": "girl in green shirt sitting at desk reading a book",
+        "description_vi": "bé gái mặc áo xanh lá ngồi bàn học đọc sách",
+        "attributes": [
+          "green shirt",
+          "long hair"
+        ],
+        "action": "reading"
+      },
+      {
+        "object_id": "girl_1",
+        "label": "girl",
+        "bbox": [
+          0.175,
+          0.23800000000000002,
+          0.45199999999999996,
+          0.755
+        ],
+        "description": "girl in yellow shirt sitting at desk reading a book",
+        "description_vi": "bé gái mặc áo vàng ngồi bàn học đọc sách",
+        "attributes": [
+          "yellow shirt",
+          "long hair"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "girl_0",
+        "predicate": "overlapping",
+        "object_id": "girl_1"
+      },
+      {
+        "subject_id": "girl_1",
+        "predicate": "overlapping",
+        "object_id": "girl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0069",
+    "visual_source_frame_id": "L30_V010_f0069",
+    "ocr_source_frame_id": "L30_V010_f0069",
+    "quality_flags": [],
+    "caption": "Students sit at wooden desks in a classroom, looking at open books.",
+    "detailed_caption": "A medium shot shows students seated at green wooden desks in a classroom. On the left, a girl in a green shirt and another in a yellow shirt sit side by side reading. Other children sit at desks further back in the room, focusing on their schoolwork.",
+    "caption_vi": "Các học sinh ngồi tại bàn học bằng gỗ trong lớp, đang nhìn vào sách mở.",
+    "detailed_caption_vi": "Khung cảnh ghi lại các học sinh ngồi học tại bàn gỗ màu xanh trong lớp. Phía bên trái, một bé gái mặc áo xanh lá và một bé gái mặc áo vàng ngồi cạnh nhau đọc sách. Các em học sinh khác ngồi ở các bàn phía sau đang tập trung học tập.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "girl_0",
+        "label": "girl",
+        "bbox": [
+          0.05600000000000001,
+          0.29300000000000004,
+          0.277,
+          0.991
+        ],
+        "description": "girl in green shirt reading an open book",
+        "description_vi": "bé gái mặc áo xanh lá đang đọc sách mở",
+        "attributes": [
+          "green shirt"
+        ],
+        "action": "reading"
+      },
+      {
+        "object_id": "girl_1",
+        "label": "girl",
+        "bbox": [
+          0.192,
+          0.29300000000000004,
+          0.46699999999999997,
+          0.804
+        ],
+        "description": "girl in yellow shirt sitting at desk",
+        "description_vi": "bé gái mặc áo màu vàng ngồi tại bàn học",
+        "attributes": [
+          "yellow shirt"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "girl_0",
+        "predicate": "overlapping",
+        "object_id": "girl_1"
+      },
+      {
+        "subject_id": "girl_1",
+        "predicate": "overlapping",
+        "object_id": "girl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V010_f0070",
+    "visual_source_frame_id": "L30_V010_f0070",
+    "ocr_source_frame_id": "L30_V010_f0070",
+    "quality_flags": [],
+    "caption": "Two young girls sit at a wooden desk reading open books in a classroom.",
+    "detailed_caption": "A close-up shot shows two young girls seated at a green wooden desk. The girl on the left wears a pink shirt and has dark hair, resting her hand near her chin while looking at a book. The girl on the right, also in a pink shirt with grey sleeves, reads intently from an open textbook.",
+    "caption_vi": "Hai cô bé ngồi tại bàn gỗ cùng đọc sách mở trong lớp học.",
+    "detailed_caption_vi": "Cận cảnh hai bé gái đang ngồi tại bàn học bằng gỗ màu xanh. Bé gái bên trái mặc áo hồng, tay chống cằm nhìn vào sách. Bé gái bên phía phải, mặc áo hồng tay xám, đang chăm chú đọc sách giáo khoa mở trước mặt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "girl_0",
+        "label": "girl",
+        "bbox": [
+          0.0,
+          0.13899999999999998,
+          0.386,
+          0.7779999999999999
+        ],
+        "description": "girl on the left in a pink shirt reading a book",
+        "description_vi": "bé gái bên trái mặc áo hồng đang đọc sách",
+        "attributes": [
+          "pink shirt",
+          "long hair"
+        ],
+        "action": "reading"
+      },
+      {
+        "object_id": "girl_1",
+        "label": "girl",
+        "bbox": [
+          0.38,
+          0.133,
+          0.907,
+          0.922
+        ],
+        "description": "girl on the right in a pink and grey shirt reading a book",
+        "description_vi": "bé gái bên phải mặc áo hồng tay xám đang đọc sách",
+        "attributes": [
+          "pink and grey shirt",
+          "long hair"
+        ],
+        "action": "reading"
+      }
+    ],
+    "spatial_relations": []
+  }
+]

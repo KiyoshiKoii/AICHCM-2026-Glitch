@@ -1,0 +1,2070 @@
+[
+  {
+    "frame_id": "L30_V011_f0001",
+    "visual_source_frame_id": "L30_V011_f0001",
+    "ocr_source_frame_id": "L30_V011_f0001",
+    "quality_flags": [],
+    "caption": "A plain light gray background with a subtle vignette.",
+    "detailed_caption": "A minimalist plain light gray background with smooth gradient shading fading darker toward the edges.",
+    "caption_vi": "Nền màu xám nhạt trơn có hiệu ứng tối dần ở các viền.",
+    "detailed_caption_vi": "Một phông nền màu xám nhạt tối giản với hiệu ứng chuyển màu mịn màng tối dần về phía các cạnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0002",
+    "visual_source_frame_id": "L30_V011_f0002",
+    "ocr_source_frame_id": "L30_V011_f0002",
+    "quality_flags": [],
+    "caption": "A green circular graphic with a number one and text in Vietnamese.",
+    "detailed_caption": "A circular green and white graphic features a large dark green number one on the left side with a hashtag symbol next to it. To the right of the number, several lines of green Vietnamese text and a small leaf icon at the top are displayed.",
+    "caption_vi": "Một biểu đồ hình tròn màu xanh lá cây chứa số một lớn và văn bản tiếng Việt.",
+    "detailed_caption_vi": "Biểu đồ hình tròn màu xanh lá và trắng hiển thị một số một màu xanh đậm lớn ở phía bên trái cùng với ký hiệu thăng. Bên phải số một là các dòng chữ tiếng Việt màu xanh lá và một biểu tượng chiếc lá nhỏ ở phía trên.",
+    "ocr_text": "Herbalife thương hiệu quản lý cân nặng & sức khỏe trên thế giới #1",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0003",
+    "visual_source_frame_id": "L30_V011_f0003",
+    "ocr_source_frame_id": "L30_V011_f0003",
+    "quality_flags": [],
+    "caption": "A green circular graphic with a number one and text in Vietnamese.",
+    "detailed_caption": "A circular green and white graphic features a large dark green number one on the left side with a hashtag symbol next to it. To the right of the number, several lines of green Vietnamese text and a small leaf icon at the top are displayed.",
+    "caption_vi": "Một biểu đồ hình tròn màu xanh lá cây chứa số một lớn và văn bản tiếng Việt.",
+    "detailed_caption_vi": "Biểu đồ hình tròn màu xanh lá và trắng hiển thị một số một màu xanh đậm lớn ở phía bên trái cùng với ký hiệu thăng. Bên phải số một là các dòng chữ tiếng Việt màu xanh lá và một biểu tượng chiếc lá nhỏ ở phía trên.",
+    "ocr_text": "Herbalife thương hiệu quản lý cân nặng & sức khỏe trên thế giới #1",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0004",
+    "visual_source_frame_id": "L30_V011_f0004",
+    "ocr_source_frame_id": "L30_V011_f0004",
+    "quality_flags": [],
+    "caption": "A flock of pink flamingos standing in and around a pond.",
+    "detailed_caption": "A medium shot shows a large flock of pink flamingos standing in shallow water and on rocks. Several flamingos are clustered in the middle of the pond, while others stand near rocky banks surrounded by lush green foliage.",
+    "caption_vi": "Đàn hồng hạc đứng dưới ao nước và trên các mỏm đá xung quanh.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một đàn hồng hạc lớn đứng dưới vùng nước nông và trên các mỏm đá. Nhiều con tụ tập ở giữa ao, trong khi những con khác đứng gần bờ đá xung quanh có nhiều tán lá xanh tươi.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flamingo_0",
+        "label": "flamingo",
+        "bbox": [
+          0.5389999999999999,
+          0.098,
+          0.658,
+          0.77
+        ],
+        "description": "pink flamingo standing upright on a rock",
+        "description_vi": "chim hồng hạc hồng đứng thẳng trên tảng đá",
+        "attributes": [
+          "pink",
+          "tall"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "flamingo_1",
+        "label": "flamingo",
+        "bbox": [
+          0.655,
+          0.29000000000000004,
+          0.892,
+          0.995
+        ],
+        "description": "pink flamingo standing in shallow water",
+        "description_vi": "chim hồng hạc hồng đứng dưới vùng nước nông",
+        "attributes": [
+          "pink",
+          "feathered"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "water_0",
+        "label": "water",
+        "bbox": [
+          0.0,
+          0.418,
+          0.571,
+          0.8510000000000001
+        ],
+        "description": "shallow pond water reflecting surroundings",
+        "description_vi": "nước ao nông phản chiếu cảnh vật xung quanh",
+        "attributes": [
+          "shallow",
+          "reflective"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "water_0",
+        "predicate": "left_of",
+        "object_id": "flamingo_1"
+      },
+      {
+        "subject_id": "flamingo_1",
+        "predicate": "right_of",
+        "object_id": "water_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0005",
+    "visual_source_frame_id": "L30_V011_f0005",
+    "ocr_source_frame_id": "L30_V011_f0005",
+    "quality_flags": [],
+    "caption": "A person wearing a face mask and tan clothing working near a pond.",
+    "detailed_caption": "A medium shot shows a person wearing a light tan shirt, trousers, face mask, and dark cap, bending over near the edge of a pond. The individual holds a clear plastic bag and a metal bucket, with lush green foliage and stone walls surrounding the water.",
+    "caption_vi": "Một người mặc quần áo màu kaki và đeo khẩu trang đang làm việc cạnh ao.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người mặc áo sơ mi màu kaki nhạt, quần dài, khẩu trang và đội mũ tối màu, đang cúi người ở bờ ao. Người đó cầm một túi nilon trong suốt và một chiếc xô kim loại, xung quanh là cây cối xanh tươi và tường đá.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.757,
+          0.706,
+          0.952,
+          0.9029999999999999
+        ],
+        "description": "metal bucket sitting on the ground near the water",
+        "description_vi": "xô kim loại đặt trên mặt đất gần nguồn nước",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.5509999999999999,
+          0.091,
+          0.8630000000000001,
+          0.78
+        ],
+        "description": "person wearing tan clothing and a face mask bending over near a pond",
+        "description_vi": "người mặc đồ màu kaki và đeo khẩu trang đang cúi người gần ao",
+        "attributes": [
+          "tan clothing",
+          "masked"
+        ],
+        "action": "bending over"
+      },
+      {
+        "object_id": "water_0",
+        "label": "water",
+        "bbox": [
+          0.0,
+          0.369,
+          0.541,
+          0.7819999999999999
+        ],
+        "description": "rippling pond water",
+        "description_vi": "mặt nước ao gợn sóng",
+        "attributes": [
+          "rippling",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bucket_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bucket_0"
+      },
+      {
+        "subject_id": "water_0",
+        "predicate": "left_of",
+        "object_id": "bucket_0"
+      },
+      {
+        "subject_id": "bucket_0",
+        "predicate": "right_of",
+        "object_id": "water_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0006",
+    "visual_source_frame_id": "L30_V011_f0006",
+    "ocr_source_frame_id": "L30_V011_f0006",
+    "quality_flags": [],
+    "caption": "A person wearing a light green shirt and blue face mask stands in a shallow pond near a large flock of flamingos.",
+    "detailed_caption": "A person wearing a light green collared shirt, khaki pants, boots, and a blue face mask stands in a shallow pond holding a plastic bag. To the left, a large flock of pink flamingos wades through the water. The pond is surrounded by lush green foliage, trees, and rock formations.",
+    "caption_vi": "Một người mặc áo xanh nhạt và đeo khẩu trang y tế đứng dưới ao cạn gần một đàn hồng hạc.",
+    "detailed_caption_vi": "Một người mặc áo sơ mi màu xanh nhạt, quần kaki, ủng và đeo khẩu trang y tế màu xanh đang đứng dưới ao cạn cầm một túi ni lông. Phía bên trái, một đàn hồng hạc lớn đang lội nước trong ao. Xung quanh ao là cây cối xanh tươi và các khối đá.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.638,
+          0.776,
+          0.73,
+          0.929
+        ],
+        "description": "a metal bucket sitting in the water",
+        "description_vi": "một chiếc xô kim loại đặt dưới nước",
+        "attributes": [
+          "metal",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "flamingo_0",
+        "label": "flamingo",
+        "bbox": [
+          0.043,
+          0.308,
+          0.182,
+          0.859
+        ],
+        "description": "a pink flamingo standing in the water",
+        "description_vi": "một con hồng hạc màu hồng đứng dưới nước",
+        "attributes": [
+          "pink",
+          "long legs"
+        ],
+        "action": "wading"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.731,
+          0.226,
+          0.843,
+          0.874
+        ],
+        "description": "a person wearing a light green shirt, khaki pants, and blue face mask",
+        "description_vi": "một người mặc áo màu xanh nhạt, quần kaki và đeo khẩu trang y tế màu xanh",
+        "attributes": [
+          "light green shirt",
+          "khaki pants",
+          "blue face mask",
+          "boots"
+        ],
+        "action": "standing in water"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "flamingo_0",
+        "predicate": "left_of",
+        "object_id": "bucket_0"
+      },
+      {
+        "subject_id": "bucket_0",
+        "predicate": "right_of",
+        "object_id": "flamingo_0"
+      },
+      {
+        "subject_id": "flamingo_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "flamingo_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0007",
+    "visual_source_frame_id": "L30_V011_f0007",
+    "ocr_source_frame_id": "L30_V011_f0007",
+    "quality_flags": [],
+    "caption": "A person wearing a light green shirt and blue mask stands in a shallow pond next to a large group of flamingos.",
+    "detailed_caption": "A person in a light green shirt, khaki pants, and a blue face mask bends over near a metal bucket in shallow water. A flock of pink flamingos wades in the pond to the left. The background features green trees and rocky formations.",
+    "caption_vi": "Một người mặc áo xanh nhạt và đeo khẩu trang đứng dưới ao cạn bên cạnh một đàn hồng hạc lớn.",
+    "detailed_caption_vi": "Một người mặc áo xanh nhạt, quần kaki và đeo khẩu trang y tế đang cúi xuống gần chiếc xô kim loại ở vùng nước cạn. Một đàn hồng hạc hồng đang lội nước trong ao ở bên trái. Phía sau là cây xanh và các khối đá.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.636,
+          0.7350000000000001,
+          0.724,
+          0.891
+        ],
+        "description": "a metal bucket on the water surface",
+        "description_vi": "một chiếc xô kim loại trên mặt nước",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "flamingo_0",
+        "label": "flamingo",
+        "bbox": [
+          0.08399999999999999,
+          0.306,
+          0.20600000000000002,
+          0.725
+        ],
+        "description": "a pink flamingo wading in the shallow water",
+        "description_vi": "một con hồng hạc màu hồng đang lội trong nước nông",
+        "attributes": [
+          "pink",
+          "long legs"
+        ],
+        "action": "wading"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.601,
+          0.44899999999999995,
+          0.845,
+          0.8819999999999999
+        ],
+        "description": "a person wearing a light green shirt, khaki pants, and blue face mask",
+        "description_vi": "một người mặc áo màu xanh nhạt, quần kaki và đeo khẩu trang màu xanh",
+        "attributes": [
+          "light green shirt",
+          "khaki pants",
+          "blue face mask"
+        ],
+        "action": "bending over"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bucket_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bucket_0"
+      },
+      {
+        "subject_id": "flamingo_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "flamingo_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0008",
+    "visual_source_frame_id": "L30_V011_f0008",
+    "ocr_source_frame_id": "L30_V011_f0008",
+    "quality_flags": [],
+    "caption": "Elephants in an enclosure with wooden pillars and a fence.",
+    "detailed_caption": "A medium shot shows two elephants inside an enclosure. One elephant stands near the left side under foliage, while another larger elephant stands beneath a covered structure supported by wooden pillars, with a wooden fence in the background.",
+    "caption_vi": "Những con voi trong chuồng có các cột gỗ và hàng rào.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị hai con voi ở bên trong chuồng. Một con voi đứng ở bên trái dưới tán lá, trong khi một con voi lớn hơn đứng dưới cấu trúc có mái che được hỗ trợ bằng các cột gỗ, phía sau là hàng rào gỗ.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elephant_0",
+        "label": "elephant",
+        "bbox": [
+          0.11599999999999999,
+          0.388,
+          0.385,
+          0.7180000000000001
+        ],
+        "description": "elephant standing near the left under foliage",
+        "description_vi": "con voi đứng gần phía bên trái dưới tán lá",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "elephant_1",
+        "label": "elephant",
+        "bbox": [
+          0.491,
+          0.33499999999999996,
+          0.906,
+          0.7859999999999999
+        ],
+        "description": "larger elephant standing under a covered pavilion structure",
+        "description_vi": "con voi lớn hơn đứng dưới cấu trúc nhà chòi có mái che",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "fence_0",
+        "label": "fence",
+        "bbox": [
+          0.10400000000000001,
+          0.267,
+          1.0,
+          0.676
+        ],
+        "description": "wooden fence enclosing the animal habitat",
+        "description_vi": "hàng rào gỗ bao quanh khu vực nuôi nhốt động vật",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elephant_0",
+        "predicate": "left_of",
+        "object_id": "elephant_1"
+      },
+      {
+        "subject_id": "elephant_1",
+        "predicate": "right_of",
+        "object_id": "elephant_0"
+      },
+      {
+        "subject_id": "elephant_0",
+        "predicate": "overlapping",
+        "object_id": "fence_0"
+      },
+      {
+        "subject_id": "fence_0",
+        "predicate": "overlapping",
+        "object_id": "elephant_0"
+      },
+      {
+        "subject_id": "elephant_1",
+        "predicate": "overlapping",
+        "object_id": "fence_0"
+      },
+      {
+        "subject_id": "fence_0",
+        "predicate": "overlapping",
+        "object_id": "elephant_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0009",
+    "visual_source_frame_id": "L30_V011_f0009",
+    "ocr_source_frame_id": "L30_V011_f0009",
+    "quality_flags": [],
+    "caption": "A large group of goats and sheep resting on a concrete ground.",
+    "detailed_caption": "A wide shot shows a large herd of various goats and sheep resting and standing on a concrete ground. A colorful slatted fence with red, yellow, blue, and white panels forms the background.",
+    "caption_vi": "Một đàn dê và cừu lớn đang nằm nghỉ trên mặt sân bê tông.",
+    "detailed_caption_vi": "Cảnh quay rộng cho thấy một đàn dê và cừu đa dạng đang nằm nghỉ và đứng trên nền bê tông. Hàng rào các thanh nan nhiều màu sắc với các tấm màu đỏ, vàng, xanh dương và trắng làm nền ở phía sau.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "fence_0",
+        "label": "fence",
+        "bbox": [
+          0.061,
+          0.018000000000000002,
+          1.0,
+          0.24300000000000002
+        ],
+        "description": "colorful slatted fence in the background",
+        "description_vi": "hàng rào nan hoa nhiều màu sắc ở phía sau",
+        "attributes": [
+          "colorful",
+          "slatted"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "goat_0",
+        "label": "goat",
+        "bbox": [
+          0.098,
+          0.591,
+          0.397,
+          0.8979999999999999
+        ],
+        "description": "black goat lying down in the foreground",
+        "description_vi": "dê đen đang nằm ở tiền cảnh",
+        "attributes": [
+          "black",
+          "horned"
+        ],
+        "action": "lying down"
+      },
+      {
+        "object_id": "goat_1",
+        "label": "goat",
+        "bbox": [
+          0.489,
+          0.5559999999999999,
+          0.786,
+          0.885
+        ],
+        "description": "black goat resting on the concrete floor",
+        "description_vi": "dê đen đang nghỉ ngơi trên sàn bê tông",
+        "attributes": [
+          "black",
+          "horned"
+        ],
+        "action": "resting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "fence_0",
+        "predicate": "above",
+        "object_id": "goat_0"
+      },
+      {
+        "subject_id": "goat_0",
+        "predicate": "below",
+        "object_id": "fence_0"
+      },
+      {
+        "subject_id": "fence_0",
+        "predicate": "above",
+        "object_id": "goat_1"
+      },
+      {
+        "subject_id": "goat_1",
+        "predicate": "below",
+        "object_id": "fence_0"
+      },
+      {
+        "subject_id": "goat_0",
+        "predicate": "left_of",
+        "object_id": "goat_1"
+      },
+      {
+        "subject_id": "goat_1",
+        "predicate": "right_of",
+        "object_id": "goat_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0010",
+    "visual_source_frame_id": "L30_V011_f0010",
+    "ocr_source_frame_id": "L30_V011_f0010",
+    "quality_flags": [],
+    "caption": "A person wearing a face mask and tan uniform stands next to peacocks.",
+    "detailed_caption": "A medium shot shows a person standing on the right wearing a tan shirt, trousers, green rubber boots, a blue face mask, and holding a clear bag. In the foreground, several peacocks with vibrant green and blue plumage walk on the ground.",
+    "caption_vi": "Một người mặc đồng phục màu kaki và đeo khẩu trang đứng cạnh những con công.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đứng bên phải mặc áo sơ mi kaki, quần dài, đi ủng cao su màu xanh lá, đeo khẩu trang xanh và cầm một chiếc túi trong suốt. Ở tiền cảnh, một số con công có bộ lông xanh lá và xanh dương rực rỡ đang đi trên mặt đất.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.583,
+          0.7310000000000001,
+          0.674,
+          0.8600000000000001
+        ],
+        "description": "metal bucket sitting on the ground near the person",
+        "description_vi": "xô kim loại đặt trên mặt đất gần người",
+        "attributes": [
+          "metal",
+          "grey"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "peacock_0",
+        "label": "peacock",
+        "bbox": [
+          0.0,
+          0.627,
+          0.679,
+          1.0
+        ],
+        "description": "peacock with prominent green and blue iridescent feathers",
+        "description_vi": "con công với bộ lông óng ánh màu xanh lá và xanh dương nổi bật",
+        "attributes": [
+          "green",
+          "blue",
+          "feathered"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.64,
+          0.005,
+          0.7889999999999999,
+          0.969
+        ],
+        "description": "person wearing tan uniform, blue mask, and green boots holding a bag",
+        "description_vi": "người mặc đồng phục kaki, đeo khẩu trang xanh và đi ủng xanh đang cầm túi",
+        "attributes": [
+          "tan uniform",
+          "masked",
+          "boots"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bucket_0",
+        "predicate": "overlapping",
+        "object_id": "peacock_0"
+      },
+      {
+        "subject_id": "peacock_0",
+        "predicate": "overlapping",
+        "object_id": "bucket_0"
+      },
+      {
+        "subject_id": "bucket_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bucket_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0011",
+    "visual_source_frame_id": "L30_V011_f0011",
+    "ocr_source_frame_id": "L30_V011_f0011",
+    "quality_flags": [],
+    "caption": "A person wearing a face mask and tan shirt holds a plastic bag among peacocks.",
+    "detailed_caption": "A medium shot shows a person on the right wearing a light tan shirt, face mask, and dark cap while handling a pink plastic bag. Several peacocks walk around on the concrete ground in an outdoor enclosure.",
+    "caption_vi": "Một người mặc áo màu kaki và đeo khẩu trang cầm túi nilon giữa những con công.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người ở bên phải mặc áo sơ mi màu kaki nhạt, đeo khẩu trang và đội mũ tối màu đang cầm túi nilon màu hồng. Một số con công đang đi lại trên nền bê tông trong một khu vực chuồng ngoài trời.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.42300000000000004,
+          0.863,
+          0.5,
+          1.0
+        ],
+        "description": "bucket on the ground near the person",
+        "description_vi": "xô trên mặt đất gần người",
+        "attributes": [
+          "metallic",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "peacock_0",
+        "label": "peacock",
+        "bbox": [
+          0.275,
+          0.589,
+          0.382,
+          1.0
+        ],
+        "description": "peacock with green and blue feathers foraging on the ground",
+        "description_vi": "con công có lông xanh lá và xanh dương đang kiếm ăn trên mặt đất",
+        "attributes": [
+          "green",
+          "blue"
+        ],
+        "action": "foraging"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.487,
+          0.059,
+          0.853,
+          1.0
+        ],
+        "description": "person wearing tan shirt and face mask holding a plastic bag",
+        "description_vi": "người mặc áo sơ mi kaki và đeo khẩu trang đang cầm túi nilon",
+        "attributes": [
+          "tan shirt",
+          "masked"
+        ],
+        "action": "handling bag"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "peacock_0",
+        "predicate": "left_of",
+        "object_id": "bucket_0"
+      },
+      {
+        "subject_id": "bucket_0",
+        "predicate": "right_of",
+        "object_id": "peacock_0"
+      },
+      {
+        "subject_id": "peacock_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "peacock_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0012",
+    "visual_source_frame_id": "L30_V011_f0012",
+    "ocr_source_frame_id": "L30_V011_f0012",
+    "quality_flags": [],
+    "caption": "Peacocks walking across concrete ground outdoors.",
+    "detailed_caption": "A wide shot shows multiple peacocks with vibrant blue and green plumage walking on a concrete path outdoors. Lush trees and a wire mesh fence form the background.",
+    "caption_vi": "Những con công đang đi trên lối đi bê tông ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay rộng cho thấy nhiều con công với bộ lông màu xanh dương và xanh lá rực rỡ đang đi trên lối đi bằng bê tông ngoài trời. Những hàng cây xanh tốt và hàng rào lưới thép tạo thành phông nền phía sau.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "peacock_0",
+        "label": "peacock",
+        "bbox": [
+          0.0,
+          0.457,
+          0.503,
+          0.995
+        ],
+        "description": "peacock with large green and blue tail feathers walking left",
+        "description_vi": "con công có lông đuôi lớn màu xanh lá và xanh dương đang đi sang trái",
+        "attributes": [
+          "green",
+          "blue",
+          "feathered"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "peacock_1",
+        "label": "peacock",
+        "bbox": [
+          0.579,
+          0.517,
+          0.943,
+          0.9329999999999999
+        ],
+        "description": "peacock with blue neck and green tail feathers walking right",
+        "description_vi": "con công có cổ xanh và lông đuôi xanh lá đang đi sang phải",
+        "attributes": [
+          "blue",
+          "green"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.898,
+          0.37800000000000006,
+          1.0,
+          0.512
+        ],
+        "description": "warning sign mounted on a post on the right",
+        "description_vi": "biển báo gắn trên cột ở bên phải",
+        "attributes": [
+          "white",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "peacock_0",
+        "predicate": "left_of",
+        "object_id": "peacock_1"
+      },
+      {
+        "subject_id": "peacock_1",
+        "predicate": "right_of",
+        "object_id": "peacock_0"
+      },
+      {
+        "subject_id": "peacock_0",
+        "predicate": "left_of",
+        "object_id": "sign_0"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "right_of",
+        "object_id": "peacock_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0013",
+    "visual_source_frame_id": "L30_V011_f0012",
+    "ocr_source_frame_id": "L30_V011_f0013",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Peacocks walking across concrete ground outdoors.",
+    "detailed_caption": "A wide shot shows multiple peacocks with vibrant blue and green plumage walking on a concrete path outdoors. Lush trees and a wire mesh fence form the background.",
+    "caption_vi": "Những con công đang đi trên lối đi bê tông ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay rộng cho thấy nhiều con công với bộ lông màu xanh dương và xanh lá rực rỡ đang đi trên lối đi bằng bê tông ngoài trời. Những hàng cây xanh tốt và hàng rào lưới thép tạo thành phông nền phía sau.",
+    "ocr_text": "KHÔNG VƯỢT QUA RÀO PLEASE DO NOT CLIMBING",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "peacock_0",
+        "label": "peacock",
+        "bbox": [
+          0.0,
+          0.457,
+          0.503,
+          0.995
+        ],
+        "description": "peacock with large green and blue tail feathers walking left",
+        "description_vi": "con công có lông đuôi lớn màu xanh lá và xanh dương đang đi sang trái",
+        "attributes": [
+          "green",
+          "blue",
+          "feathered"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "peacock_1",
+        "label": "peacock",
+        "bbox": [
+          0.579,
+          0.517,
+          0.943,
+          0.9329999999999999
+        ],
+        "description": "peacock with blue neck and green tail feathers walking right",
+        "description_vi": "con công có cổ xanh và lông đuôi xanh lá đang đi sang phải",
+        "attributes": [
+          "blue",
+          "green"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.898,
+          0.37800000000000006,
+          1.0,
+          0.512
+        ],
+        "description": "warning sign mounted on a post on the right",
+        "description_vi": "biển báo gắn trên cột ở bên phải",
+        "attributes": [
+          "white",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "peacock_0",
+        "predicate": "left_of",
+        "object_id": "peacock_1"
+      },
+      {
+        "subject_id": "peacock_1",
+        "predicate": "right_of",
+        "object_id": "peacock_0"
+      },
+      {
+        "subject_id": "peacock_0",
+        "predicate": "left_of",
+        "object_id": "sign_0"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "right_of",
+        "object_id": "peacock_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0014",
+    "visual_source_frame_id": "L30_V011_f0014",
+    "ocr_source_frame_id": "L30_V011_f0014",
+    "quality_flags": [],
+    "caption": "A person in a light green shirt tends to a pond filled with flamingos, framed by green leaves in the foreground.",
+    "detailed_caption": "A person wearing a light green shirt and khaki pants stands in shallow pond water near a metal bucket. In the middle ground, a group of pink flamingos stands and wades in the water. Lush green foliage and tree branches partially frame the foreground.",
+    "caption_vi": "Một người mặc áo xanh nhạt chăm sóc ao có hồng hạc, được khung cảnh lá xanh phía trước che khuất một phần.",
+    "detailed_caption_vi": "Một người mặc áo sơ mi xanh nhạt và quần kaki đang đứng dưới ao nước cạn gần chiếc xô kim loại. Ở khung cảnh giữa, một nhóm hồng hạc màu hồng đang đứng và lội nước. Lá cây xanh tươi và cành cây che khuất một phần khung hình phía trước.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.843,
+          0.719,
+          0.922,
+          0.853
+        ],
+        "description": "a metal bucket in the shallow water",
+        "description_vi": "một chiếc xô kim loại dưới vùng nước cạn",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "flamingo_0",
+        "label": "flamingo",
+        "bbox": [
+          0.388,
+          0.308,
+          0.426,
+          0.506
+        ],
+        "description": "a pink flamingo standing in the pond",
+        "description_vi": "một con hồng hạc màu hồng đứng trong ao",
+        "attributes": [
+          "pink",
+          "long legs"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.73,
+          0.465,
+          0.8630000000000001,
+          0.755
+        ],
+        "description": "a person wearing a light green shirt and khaki pants",
+        "description_vi": "một người mặc áo màu xanh nhạt và quần kaki",
+        "attributes": [
+          "light green shirt",
+          "khaki pants"
+        ],
+        "action": "working in water"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "flamingo_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "flamingo_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0015",
+    "visual_source_frame_id": "L30_V011_f0015",
+    "ocr_source_frame_id": "L30_V011_f0015",
+    "quality_flags": [],
+    "caption": "A person working near a pond with flamingos and a peacock.",
+    "detailed_caption": "A medium shot shows a person partially visible on the right wearing a light shirt and working near a pond. A flock of pink and white flamingos stands in the water and on the bank, with a peacock in the foreground.",
+    "caption_vi": "Một người đang làm việc cạnh ao có đàn hồng hạc và một con công.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người hiển thị một phần ở bên phải mặc áo sáng màu và đang làm việc cạnh ao. Một đàn hồng hạc hồng và trắng đứng dưới nước và trên bờ, cùng với một con công ở tiền cảnh.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flamingo_0",
+        "label": "flamingo",
+        "bbox": [
+          0.593,
+          0.26,
+          0.622,
+          0.455
+        ],
+        "description": "flamingo standing in the water",
+        "description_vi": "chim hồng hạc đứng dưới nước",
+        "attributes": [
+          "pink",
+          "white"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "peacock_0",
+        "label": "peacock",
+        "bbox": [
+          0.621,
+          0.863,
+          0.689,
+          1.0
+        ],
+        "description": "peacock with blue neck visible in the foreground",
+        "description_vi": "con công có cổ màu xanh dương nhìn thấy ở tiền cảnh",
+        "attributes": [
+          "blue",
+          "dark"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.9390000000000001,
+          0.44699999999999995,
+          1.0,
+          0.8130000000000001
+        ],
+        "description": "person wearing a light-colored shirt working by the water",
+        "description_vi": "người mặc áo sáng màu đang làm việc bên mép nước",
+        "attributes": [
+          "light shirt"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0016",
+    "visual_source_frame_id": "L30_V011_f0016",
+    "ocr_source_frame_id": "L30_V011_f0016",
+    "quality_flags": [],
+    "caption": "A person feeding a hippopotamus with a carrot through a metal gate.",
+    "detailed_caption": "A medium shot shows a person wearing a cap, face mask, and uniform standing behind a green metal gate, holding a carrot to feed a large hippopotamus. The hippo has its mouth open wide to receive the food, while another hippo stands nearby.",
+    "caption_vi": "Một người đang cho hà mã ăn cà rốt qua cổng sắt.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đội mũ, đeo khẩu trang và mặc đồng phục đang đứng sau cửa cổng bằng kim loại màu xanh, cầm một củ cà rốt để cho một con hà mã lớn ăn. Con hà mã há miệng lớn để nhận thức ăn, trong khi một con hà mã khác đứng gần đó.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "gate_0",
+        "label": "gate",
+        "bbox": [
+          0.0,
+          0.33499999999999996,
+          0.42699999999999994,
+          1.0
+        ],
+        "description": "green metal railing gate enclosing the enclosure",
+        "description_vi": "cổng rào kim loại màu xanh bao quanh khu vực chuồng",
+        "attributes": [
+          "metal",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hippopotamus_0",
+        "label": "hippopotamus",
+        "bbox": [
+          0.41900000000000004,
+          0.201,
+          0.954,
+          0.995
+        ],
+        "description": "large hippopotamus with mouth open wide",
+        "description_vi": "con hà mã lớn đang há to miệng",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "feeding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.223,
+          0.42699999999999994,
+          0.368
+        ],
+        "description": "person wearing uniform and face mask feeding an animal",
+        "description_vi": "người mặc đồng phục và đeo khẩu trang đang cho động vật ăn",
+        "attributes": [
+          "masked",
+          "uniform"
+        ],
+        "action": "feeding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "gate_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "gate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0017",
+    "visual_source_frame_id": "L30_V011_f0016",
+    "ocr_source_frame_id": "L30_V011_f0017",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person feeding a hippopotamus with a carrot through a metal gate.",
+    "detailed_caption": "A medium shot shows a person wearing a cap, face mask, and uniform standing behind a green metal gate, holding a carrot to feed a large hippopotamus. The hippo has its mouth open wide to receive the food, while another hippo stands nearby.",
+    "caption_vi": "Một người đang cho hà mã ăn cà rốt qua cổng sắt.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đội mũ, đeo khẩu trang và mặc đồng phục đang đứng sau cửa cổng bằng kim loại màu xanh, cầm một củ cà rốt để cho một con hà mã lớn ăn. Con hà mã há miệng lớn để nhận thức ăn, trong khi một con hà mã khác đứng gần đó.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "gate_0",
+        "label": "gate",
+        "bbox": [
+          0.0,
+          0.33499999999999996,
+          0.42699999999999994,
+          1.0
+        ],
+        "description": "green metal railing gate enclosing the enclosure",
+        "description_vi": "cổng rào kim loại màu xanh bao quanh khu vực chuồng",
+        "attributes": [
+          "metal",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hippopotamus_0",
+        "label": "hippopotamus",
+        "bbox": [
+          0.41900000000000004,
+          0.201,
+          0.954,
+          0.995
+        ],
+        "description": "large hippopotamus with mouth open wide",
+        "description_vi": "con hà mã lớn đang há to miệng",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "feeding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.223,
+          0.42699999999999994,
+          0.368
+        ],
+        "description": "person wearing uniform and face mask feeding an animal",
+        "description_vi": "người mặc đồng phục và đeo khẩu trang đang cho động vật ăn",
+        "attributes": [
+          "masked",
+          "uniform"
+        ],
+        "action": "feeding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "gate_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "gate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0018",
+    "visual_source_frame_id": "L30_V011_f0018",
+    "ocr_source_frame_id": "L30_V011_f0018",
+    "quality_flags": [],
+    "caption": "A person feeding a hippopotamus a carrot through a metal barrier.",
+    "detailed_caption": "A close-up shot shows a person wearing a cap, face mask, and uniform standing behind a metal barrier, holding a carrot for a large hippopotamus. The hippo is reaching toward the carrot with its mouth open near the green foliage.",
+    "caption_vi": "Một người đang cho hà mã ăn cà rốt qua rào chắn kim loại.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một người đội mũ, đeo khẩu trang và mặc đồng phục đứng phía sau rào chắn kim loại, cầm củ cà rốt cho con hà mã lớn. Con hà mã đang vươn tới chỗ củ cà rốt với miệng mở gần tán lá xanh.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "fence_0",
+        "label": "fence",
+        "bbox": [
+          0.0,
+          0.35,
+          0.382,
+          1.0
+        ],
+        "description": "green metal slatted fence structure",
+        "description_vi": "cấu trúc hàng rào nan kim loại màu xanh",
+        "attributes": [
+          "metal",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hippopotamus_0",
+        "label": "hippopotamus",
+        "bbox": [
+          0.34700000000000003,
+          0.11,
+          1.0,
+          1.0
+        ],
+        "description": "large hippopotamus opening its mouth near a metal fence",
+        "description_vi": "con hà mã lớn đang mở miệng gần hàng rào kim loại",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "eating"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.096,
+          0.16799999999999998,
+          0.313,
+          0.4
+        ],
+        "description": "person wearing cap and face mask holding food",
+        "description_vi": "người đội mũ và đeo khẩu trang đang cầm thức ăn",
+        "attributes": [
+          "masked",
+          "cap"
+        ],
+        "action": "holding food"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "fence_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "fence_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "hippopotamus_0"
+      },
+      {
+        "subject_id": "hippopotamus_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0019",
+    "visual_source_frame_id": "L30_V011_f0019",
+    "ocr_source_frame_id": "L30_V011_f0019",
+    "quality_flags": [],
+    "caption": "A person wearing a face mask and cap sitting and preparing food outdoors.",
+    "detailed_caption": "A medium shot shows a person wearing a tan shirt, trousers, blue face mask, and dark cap sitting on the ground outdoors. The individual is holding and preparing items near a large white bag with green markings, with bamboo stalks in the background.",
+    "caption_vi": "Một người đeo khẩu trang và đội mũ đang ngồi chuẩn bị thức ăn ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người mặc áo sơ mi màu kaki, quần dài, đeo khẩu trang xanh và đội mũ tối màu đang ngồi trên mặt đất ngoài trời. Người đó đang cầm và chuẩn bị các vật dụng gần một túi trắng lớn có ký hiệu xanh lá, phía sau có những khóm tre.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.12,
+          0.37199999999999994,
+          0.3,
+          0.978
+        ],
+        "description": "large white sack with green branding on the ground",
+        "description_vi": "bao tải trắng lớn có nhãn hiệu màu xanh lá cây trên mặt đất",
+        "attributes": [
+          "white",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.209,
+          0.102,
+          0.6,
+          0.978
+        ],
+        "description": "person wearing tan uniform, blue mask, and cap sitting on the ground",
+        "description_vi": "người mặc đồng phục kaki, đeo khẩu trang xanh và đội mũ đang ngồi trên đất",
+        "attributes": [
+          "masked",
+          "uniform"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0020",
+    "visual_source_frame_id": "L30_V011_f0020",
+    "ocr_source_frame_id": "L30_V011_f0020",
+    "quality_flags": [],
+    "caption": "A close-up of a person wearing a dark cap, light green shirt, and a blue face mask.",
+    "detailed_caption": "A close-up shot shows the upper body and head of a person wearing a dark baseball cap with white lettering, a light green collared shirt, and a light blue medical face mask covering their nose and mouth. The background features blurred bamboo stalks.",
+    "caption_vi": "Cận cảnh một người đội mũ tối màu, mặc áo xanh nhạt và đeo khẩu trang y tế màu xanh.",
+    "detailed_caption_vi": "Cận cảnh phần thân trên và đầu của một người đội mũ bóng chày màu tối có chữ màu trắng, mặc áo sơ mi xanh nhạt và đeo khẩu trang y tế màu xanh nhạt che mũi và miệng. Phía sau là những thân cây tre bị mờ.",
+    "ocr_text": "tuoitre TV nclaga",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.296,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a person wearing a dark cap, light green shirt, and blue face mask",
+        "description_vi": "một người đội mũ tối màu, mặc áo xanh nhạt và đeo khẩu trang màu xanh",
+        "attributes": [
+          "dark cap",
+          "light green shirt",
+          "blue face mask"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0021",
+    "visual_source_frame_id": "L30_V011_f0021",
+    "ocr_source_frame_id": "L30_V011_f0021",
+    "quality_flags": [],
+    "caption": "An elephant and a person standing near each other in an enclosure.",
+    "detailed_caption": "A medium shot shows a large elephant standing in the center with its trunk extended downward. To the right, a person wearing a tan shirt stands observing the animal in an outdoor enclosure with a wooden fence and greenery.",
+    "caption_vi": "Một con voi và một người đứng cạnh nhau trong khu vực chuồng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một con voi lớn đứng ở trung tâm với vòi hướng xuống dưới. Ở bên phải, một người mặc áo màu kaki đứng quan sát con vật trong một khu chuồng ngoài trời có hàng rào gỗ và cây xanh.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elephant_0",
+        "label": "elephant",
+        "bbox": [
+          0.366,
+          0.036000000000000004,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "large elephant standing with trunk pointing downward",
+        "description_vi": "con voi lớn đang đứng với chiếc vòi chúc xuống đất",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "fence_0",
+        "label": "fence",
+        "bbox": [
+          0.6759999999999999,
+          0.13899999999999998,
+          1.0,
+          0.491
+        ],
+        "description": "wooden post and rail fence enclosing the animal habitat",
+        "description_vi": "hàng rào cột và thanh gỗ bao quanh nơi ở của động vật",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.775,
+          0.396,
+          0.892,
+          0.995
+        ],
+        "description": "person wearing a tan shirt standing and watching the elephant",
+        "description_vi": "người mặc áo sơ mi kaki đang đứng quan sát con voi",
+        "attributes": [
+          "tan shirt",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elephant_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "elephant_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0022",
+    "visual_source_frame_id": "L30_V011_f0021",
+    "ocr_source_frame_id": "L30_V011_f0022",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An elephant and a person standing near each other in an enclosure.",
+    "detailed_caption": "A medium shot shows a large elephant standing in the center with its trunk extended downward. To the right, a person wearing a tan shirt stands observing the animal in an outdoor enclosure with a wooden fence and greenery.",
+    "caption_vi": "Một con voi và một người đứng cạnh nhau trong khu vực chuồng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một con voi lớn đứng ở trung tâm với vòi hướng xuống dưới. Ở bên phải, một người mặc áo màu kaki đứng quan sát con vật trong một khu chuồng ngoài trời có hàng rào gỗ và cây xanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elephant_0",
+        "label": "elephant",
+        "bbox": [
+          0.366,
+          0.036000000000000004,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "large elephant standing with trunk pointing downward",
+        "description_vi": "con voi lớn đang đứng với chiếc vòi chúc xuống đất",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "fence_0",
+        "label": "fence",
+        "bbox": [
+          0.6759999999999999,
+          0.13899999999999998,
+          1.0,
+          0.491
+        ],
+        "description": "wooden post and rail fence enclosing the animal habitat",
+        "description_vi": "hàng rào cột và thanh gỗ bao quanh nơi ở của động vật",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.775,
+          0.396,
+          0.892,
+          0.995
+        ],
+        "description": "person wearing a tan shirt standing and watching the elephant",
+        "description_vi": "người mặc áo sơ mi kaki đang đứng quan sát con voi",
+        "attributes": [
+          "tan shirt",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elephant_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "elephant_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0023",
+    "visual_source_frame_id": "L30_V011_f0023",
+    "ocr_source_frame_id": "L30_V011_f0023",
+    "quality_flags": [],
+    "caption": "Close-up of an elephant interacting with a person.",
+    "detailed_caption": "A close-up shot shows the head of a large elephant with its trunk raised near a person's face on the right. The elephant's textured skin and prominent ear are clearly visible in the outdoor setting.",
+    "caption_vi": "Cận cảnh một con voi đang tương tác với một người.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy phần đầu của một con voi lớn với chiếc vòi giơ lên gần khuôn mặt của một người ở bên phải. Làn da nhăn nheo và đôi tai lớn của con voi hiển thị rõ ràng trong bối cảnh ngoài trời.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elephant_0",
+        "label": "elephant",
+        "bbox": [
+          0.0,
+          0.0,
+          0.877,
+          1.0
+        ],
+        "description": "large elephant head with trunk lifted near a person",
+        "description_vi": "đầu con voi lớn với chiếc vòi nâng lên gần một người",
+        "attributes": [
+          "large",
+          "wrinkled"
+        ],
+        "action": "lifting trunk"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.922,
+          0.423,
+          1.0,
+          1.0
+        ],
+        "description": "person standing near the elephant's head",
+        "description_vi": "người đứng gần đầu con voi",
+        "attributes": [
+          "side profile"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elephant_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "elephant_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0024",
+    "visual_source_frame_id": "L30_V011_f0024",
+    "ocr_source_frame_id": "L30_V011_f0024",
+    "quality_flags": [],
+    "caption": "A person wearing a face mask and cap reaching out toward a giraffe.",
+    "detailed_caption": "A medium shot shows a person on the right wearing a tan shirt, blue face mask, and dark cap, extending their hand toward the head of a giraffe. The giraffe stands near a metal railing and stone wall in an outdoor enclosure.",
+    "caption_vi": "Một người đeo khẩu trang và đội mũ đang vươn tay về phía con hươu cao cổ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người ở bên phải mặc áo kaki, đeo khẩu trang xanh và đội mũ tối màu, đang giơ tay về phía đầu của một con hươu cao cổ. Hươu cao cổ đứng gần lan can kim loại và tường đá trong một khu vực chuồng ngoài trời.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "giraffe_0",
+        "label": "giraffe",
+        "bbox": [
+          0.0,
+          0.0,
+          0.47800000000000004,
+          0.883
+        ],
+        "description": "giraffe head and neck visible on the left side",
+        "description_vi": "đầu và cổ hươu cao cổ nhìn thấy ở phía bên trái",
+        "attributes": [
+          "spotted",
+          "tall"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.38,
+          0.09299999999999999,
+          0.9810000000000001,
+          1.0
+        ],
+        "description": "person wearing tan uniform and face mask reaching out with hand",
+        "description_vi": "người mặc đồng phục kaki và đeo khẩu trang đang giơ tay ra",
+        "attributes": [
+          "tan shirt",
+          "masked"
+        ],
+        "action": "reaching out"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0025",
+    "visual_source_frame_id": "L30_V011_f0024",
+    "ocr_source_frame_id": "L30_V011_f0025",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person wearing a face mask and cap reaching out toward a giraffe.",
+    "detailed_caption": "A medium shot shows a person on the right wearing a tan shirt, blue face mask, and dark cap, extending their hand toward the head of a giraffe. The giraffe stands near a metal railing and stone wall in an outdoor enclosure.",
+    "caption_vi": "Một người đeo khẩu trang và đội mũ đang vươn tay về phía con hươu cao cổ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người ở bên phải mặc áo kaki, đeo khẩu trang xanh và đội mũ tối màu, đang giơ tay về phía đầu của một con hươu cao cổ. Hươu cao cổ đứng gần lan can kim loại và tường đá trong một khu vực chuồng ngoài trời.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "giraffe_0",
+        "label": "giraffe",
+        "bbox": [
+          0.0,
+          0.0,
+          0.47800000000000004,
+          0.883
+        ],
+        "description": "giraffe head and neck visible on the left side",
+        "description_vi": "đầu và cổ hươu cao cổ nhìn thấy ở phía bên trái",
+        "attributes": [
+          "spotted",
+          "tall"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.38,
+          0.09299999999999999,
+          0.9810000000000001,
+          1.0
+        ],
+        "description": "person wearing tan uniform and face mask reaching out with hand",
+        "description_vi": "người mặc đồng phục kaki và đeo khẩu trang đang giơ tay ra",
+        "attributes": [
+          "tan shirt",
+          "masked"
+        ],
+        "action": "reaching out"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0026",
+    "visual_source_frame_id": "L30_V011_f0026",
+    "ocr_source_frame_id": "L30_V011_f0026",
+    "quality_flags": [],
+    "caption": "An elephant walks through an enclosure with a decorated fence and concrete pillars.",
+    "detailed_caption": "A large dark elephant walks across an enclosure from left to right, partially obscured by concrete pillars and green leaves in the foreground. Another elephant's leg is visible on the far left. The enclosure features a decorative wooden and concrete fence in the background.",
+    "caption_vi": "Một con voi đi qua chuồng nuôi có hàng rào trang trí và các trụ bê tông.",
+    "detailed_caption_vi": "Một con voi lớn màu sẫm đang di chuyển qua khu vực chuồng từ trái sang phải, bị che khuất một phần bởi các cột bê tông và lá cây ở phía trước. Chân của một con voi khác có thể thấy ở phía bên trái. Phía sau là hàng rào trang trí bằng gỗ và bê tông.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elephant_0",
+        "label": "elephant",
+        "bbox": [
+          0.151,
+          0.11599999999999999,
+          0.762,
+          0.897
+        ],
+        "description": "a large dark elephant walking in an enclosure",
+        "description_vi": "một con voi lớn màu tối đang đi trong chuồng",
+        "attributes": [
+          "dark",
+          "large"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "fence_0",
+        "label": "fence",
+        "bbox": [
+          0.0,
+          0.02,
+          0.999,
+          0.617
+        ],
+        "description": "a decorative wooden and concrete enclosure fence",
+        "description_vi": "hàng rào chuồng trang trí bằng gỗ và bê tông",
+        "attributes": [
+          "wooden",
+          "concrete"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "elephant_0",
+        "predicate": "overlapping",
+        "object_id": "fence_0"
+      },
+      {
+        "subject_id": "fence_0",
+        "predicate": "overlapping",
+        "object_id": "elephant_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0027",
+    "visual_source_frame_id": "L30_V011_f0027",
+    "ocr_source_frame_id": "L30_V011_f0027",
+    "quality_flags": [],
+    "caption": "Elephants and a person standing in an outdoor enclosure.",
+    "detailed_caption": "A medium shot shows two elephants standing in an outdoor enclosure with wooden support pillars. A person wearing a tan shirt stands on the left near the first elephant, while another elephant stands in the center with a second person visible near the right pillar.",
+    "caption_vi": "Những con voi và một người đang đứng trong khu chuồng ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy hai con voi đứng trong khu chuồng ngoài trời có các cột trụ bằng gỗ. Một người mặc áo sơ mi kaki đứng ở bên phải con voi thứ nhất, trong khi con voi thứ hai đứng ở trung tâm và một người khác xuất hiện ở gần cột trụ bên phải.",
+    "ocr_text": "TUOI TRE TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "elephant_0",
+        "label": "elephant",
+        "bbox": [
+          0.219,
+          0.109,
+          0.697,
+          0.922
+        ],
+        "description": "large elephant standing centrally between pillars",
+        "description_vi": "con voi lớn đang đứng ở trung tâm giữa các cột trụ",
+        "attributes": [
+          "large",
+          "grey"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.453,
+          0.08399999999999999,
+          0.9329999999999999
+        ],
+        "description": "person wearing a tan shirt standing on the left",
+        "description_vi": "người mặc áo sơ mi kaki đang đứng ở bên trái",
+        "attributes": [
+          "tan shirt",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.648,
+          0.40900000000000003,
+          0.788,
+          0.766
+        ],
+        "description": "person wearing a tan shirt standing near the right pillar",
+        "description_vi": "người mặc áo sơ mi kaki đứng gần cột trụ bên phải",
+        "attributes": [
+          "tan shirt",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "elephant_0"
+      },
+      {
+        "subject_id": "elephant_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "elephant_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "elephant_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0028",
+    "visual_source_frame_id": "L30_V011_f0028",
+    "ocr_source_frame_id": "L30_V011_f0028",
+    "quality_flags": [],
+    "caption": "A person wearing a light green jacket and face mask carries freshly cut green grass in an outdoor setting.",
+    "detailed_caption": "A close-up shot shows a person wearing a light green work jacket, a blue t-shirt, and a face mask walking past a railing. The person is carrying a bundle of fresh green grass in an outdoor setting with leafy green foliage in the background.",
+    "caption_vi": "Một người mặc áo khoác màu xanh nhạt và đeo khẩu trang đang mang cỏ tươi ở ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh một người mặc áo khoác bảo hộ màu xanh nhạt, áo thun xanh và đeo khẩu trang đang di chuyển gần lan can. Người này đang ôm một bó cỏ xanh tươi trong khung cảnh ngoài trời với nhiều cây cối phía sau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "grass_0",
+        "label": "grass",
+        "bbox": [
+          0.0,
+          0.604,
+          0.597,
+          1.0
+        ],
+        "description": "a large bundle of fresh green grass",
+        "description_vi": "một bó cỏ xanh tươi lớn",
+        "attributes": [
+          "green",
+          "freshly cut"
+        ],
+        "action": "being carried"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V011_f0029",
+    "visual_source_frame_id": "L30_V011_f0029",
+    "ocr_source_frame_id": "L30_V011_f0029",
+    "quality_flags": [],
+    "caption": "A person stands near a large blue water tank and a pile of green grass outdoors.",
+    "detailed_caption": "A medium shot displays an outdoor work area with a large blue water tank on a red metal frame to the left and a large pile of freshly cut green grass in the center. In the background, people work near green garbage bins.",
+    "caption_vi": "Một người đứng ngoài trời cạnh bồn nước màu xanh lớn và đống cỏ.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy khu vực làm việc ngoài trời với một bồn nước nhựa xanh lớn đặt trên khung sắt đỏ bên trái và đống cỏ tươi ở trung tâm. Phía xa là một số người đang làm việc gần thùng rác xanh.",
+    "ocr_text": "tuoitreTV Tác giả: Ngọc Lan #thương hiệu quản lý cân nặng số một trên thế giới",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "grass_0",
+        "label": "grass",
+        "bbox": [
+          0.458,
+          0.316,
+          0.9289999999999999,
+          1.0
+        ],
+        "description": "a large pile of freshly cut green grass",
+        "description_vi": "một đống cỏ xanh tươi cắt sẵn lớn",
+        "attributes": [
+          "green",
+          "piled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.8460000000000001,
+          0.18,
+          0.9359999999999999,
+          0.41700000000000004
+        ],
+        "description": "a person sitting in the background",
+        "description_vi": "một người đang ngồi ở phía xa",
+        "attributes": [
+          "sitting"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "water_tank_0",
+        "label": "water tank",
+        "bbox": [
+          0.0,
+          0.0,
+          0.335,
+          0.431
+        ],
+        "description": "a large blue cylindrical water tank on a red frame",
+        "description_vi": "một bồn nước hình trụ màu xanh lớn trên khung màu đỏ",
+        "attributes": [
+          "blue",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "grass_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "grass_0"
+      },
+      {
+        "subject_id": "water_tank_0",
+        "predicate": "left_of",
+        "object_id": "grass_0"
+      },
+      {
+        "subject_id": "grass_0",
+        "predicate": "right_of",
+        "object_id": "water_tank_0"
+      },
+      {
+        "subject_id": "water_tank_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "water_tank_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V011_f0030",
+    "visual_source_frame_id": "L30_V011_f0030",
+    "ocr_source_frame_id": "L30_V011_f0030",
+    "quality_flags": [],
+    "caption": "A large pile of dry brown grass fills the foreground with people working in the background.",
+    "detailed_caption": "A medium shot shows a large pile of dry, brownish-green plant stalks dominating the foreground. In the background, people work outdoors near green foliage and structures under bright daylight.",
+    "caption_vi": "Đống cỏ khô lớn ở tiền cảnh với mọi người đang làm việc phía sau.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một đống thân cây và cỏ khô lớn chiếm phần lớn tiền cảnh. Ở phía sau, mọi người đang làm việc ngoài trời dưới ánh nắng sáng.",
+    "ocr_text": "tuoitreTV Tác giả: Ngọc Lan #thương hiệu quản lý cân nặng số một trên thế giới",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "grass_0",
+        "label": "grass",
+        "bbox": [
+          0.0,
+          0.164,
+          0.9369999999999999,
+          1.0
+        ],
+        "description": "a large messy pile of dry brown plant stalks and grass",
+        "description_vi": "một đống lớn thân cây và cỏ khô màu nâu",
+        "attributes": [
+          "dry",
+          "brown",
+          "piled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.638,
+          0.051,
+          0.749,
+          0.311
+        ],
+        "description": "a person wearing a blue shirt and face mask working in the background",
+        "description_vi": "một người mặc áo xanh và đeo khẩu trang đang làm việc ở phía sau",
+        "attributes": [
+          "wearing blue shirt",
+          "wearing face mask"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "grass_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "grass_0"
+      }
+    ]
+  }
+]

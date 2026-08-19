@@ -1,0 +1,1244 @@
+[
+  {
+    "frame_id": "L30_V041_f0001",
+    "visual_source_frame_id": "L30_V041_f0001",
+    "ocr_source_frame_id": "L30_V041_f0001",
+    "quality_flags": [],
+    "caption": "A plain white blank frame.",
+    "detailed_caption": "A solid white frame with a subtle vignette effect at the edges. No objects, text, or people are visible.",
+    "caption_vi": "Một khung hình màu trắng trơn.",
+    "detailed_caption_vi": "Khung hình màu trắng đồng nhất với hiệu ứng tối dần nhẹ ở các cạnh. Không có đối tượng, văn bản hay con người nào hiển thị.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0002",
+    "visual_source_frame_id": "L30_V041_f0002",
+    "ocr_source_frame_id": "L30_V041_f0002",
+    "quality_flags": [],
+    "caption": "A round logo with a green circle border featuring a large number one and Vietnamese text on a white background.",
+    "detailed_caption": "A circular logo is centered on a plain white background, featuring a thin green inner ring and a thicker dark green outer ring. Inside the circle, a large dark green number one is positioned to the left alongside a small hashtag symbol. To the right of the number, several lines of green Vietnamese text are arranged vertically, topped with a small Herbalife leaf icon.",
+    "caption_vi": "Một logo hình tròn có viền xanh lá chứa số một lớn và chữ tiếng Việt trên nền trắng.",
+    "detailed_caption_vi": "Một logo hình tròn nằm ở trung tâm trên nền trắng, nổi bật với các vòng tròn màu xanh lá cây đậm nhạt. Bên trong chứa chữ số một lớn màu ký hiệu thăng ở bên trái và các dòng chữ tiếng Việt xếp dọc ở bên phải, phía trên cùng có biểu tượng lá cây nhỏ.",
+    "ocr_text": "Herbalife # thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0003",
+    "visual_source_frame_id": "L30_V041_f0003",
+    "ocr_source_frame_id": "L30_V041_f0003",
+    "quality_flags": [],
+    "caption": "A round logo with a green circle border featuring a large number one and Vietnamese text on a white background.",
+    "detailed_caption": "A circular logo is centered on a plain white background, featuring a thin green inner ring and a thicker dark green outer ring. Inside the circle, a large dark green number one is positioned to the left alongside a small hashtag symbol. To the right of the number, several lines of green Vietnamese text are arranged vertically, topped with a small Herbalife leaf icon.",
+    "caption_vi": "Một logo hình tròn có viền xanh lá chứa số một lớn và chữ tiếng Việt trên nền trắng.",
+    "detailed_caption_vi": "Một logo hình tròn nằm ở trung tâm trên nền trắng, nổi bật với các vòng tròn màu xanh lá cây đậm nhạt. Bên trong chứa chữ số một lớn màu ký hiệu thăng ở bên trái và các dòng chữ tiếng Việt xếp dọc ở bên phải, phía trên cùng có biểu tượng lá cây nhỏ.",
+    "ocr_text": "Herbalife # thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0004",
+    "visual_source_frame_id": "L30_V041_f0004",
+    "ocr_source_frame_id": "L30_V041_f0004",
+    "quality_flags": [],
+    "caption": "A dimly lit nighttime outdoor setting with a small lit oil lamp on a bamboo table.",
+    "detailed_caption": "A small lit glass oil lamp sits on a slatted bamboo table in a very dark outdoor setting. Dimly visible figures sit around the table, and distant lights twinkle across dark water in the background.",
+    "caption_vi": "Một khung cảnh ngoài trời ban đêm tối mờ với một chiếc đèn dầu nhỏ đang cháy trên bàn tre.",
+    "detailed_caption_vi": "Một chiếc đèn dầu bằng thủy tinh nhỏ đang cháy sáng đặt trên chiếc bàn tre nan trong không gian ngoài trời rất tối. Những bóng người mờ ảo ngồi xung quanh bàn, phía xa có ánh đèn lấp lánh trên mặt nước.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lamp_0",
+        "label": "lamp",
+        "bbox": [
+          0.352,
+          0.716,
+          0.396,
+          0.8340000000000001
+        ],
+        "description": "a small glass oil lamp with a glowing flame on a table",
+        "description_vi": "một ngọn đèn dầu thủy tinh nhỏ đang phát sáng trên bàn",
+        "attributes": [
+          "small",
+          "glass",
+          "lit",
+          "glowing"
+        ],
+        "action": "burning"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.161,
+          0.7859999999999999,
+          0.5589999999999999,
+          0.995
+        ],
+        "description": "a slatted bamboo table holding a lamp and foliage",
+        "description_vi": "một chiếc bàn tre nan đựng đèn và lá cây",
+        "attributes": [
+          "bamboo",
+          "slatted",
+          "wooden"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lamp_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "lamp_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V041_f0005",
+    "visual_source_frame_id": "L30_V041_f0005",
+    "ocr_source_frame_id": "L30_V041_f0005",
+    "quality_flags": [],
+    "caption": "A dark night scene with water reflections and a green title banner at the bottom.",
+    "detailed_caption": "A night landscape showing dark water with faint light reflections from distant buildings. A green banner with white text is displayed across the lower portion of the frame. The Tuoi Tre TV logo appears in the top right corner.",
+    "caption_vi": "Cảnh đêm tối với mặt nước phản chiếu ánh đèn và biểu ngữ màu xanh ở phía dưới.",
+    "detailed_caption_vi": "Cảnh quan ban đêm hiển thị mặt nước tối với phản chiếu ánh sáng mờ từ các tòa nhà phía xa. Một biểu ngữ màu xanh lá cây có chữ trắng hiển thị ở phần dưới của khung hình. Biểu ngữ kênh xuất hiện ở góc trên bên phải.",
+    "ocr_text": "thương hiệu quản lý cân nặng số một thế giới Cuộc thi Lan tỏa năng lượng tích cực 2024: Tìm về hồi ức tuổi thơ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "banner_0",
+        "label": "banner",
+        "bbox": [
+          0.28300000000000003,
+          0.775,
+          0.8220000000000001,
+          0.912
+        ],
+        "description": "a green rectangular news banner with white text",
+        "description_vi": "một biểu ngữ tin tức màu xanh lá cây hình chữ nhật với chữ trắng",
+        "attributes": [
+          "green",
+          "rectangular",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0006",
+    "visual_source_frame_id": "L30_V041_f0006",
+    "ocr_source_frame_id": "L30_V041_f0006",
+    "quality_flags": [],
+    "caption": "A dark tree at night illuminated by scattered glowing fireflies among its leaves.",
+    "detailed_caption": "A large dark leafy tree stands against a deep blue night sky. Numerous small glowing yellow fireflies are scattered throughout the foliage, creating bright points of light across the branches.",
+    "caption_vi": "Một cái cây tối vào ban đêm được thắp sáng bởi những đom đóm phát sáng rải rác giữa các tán lá.",
+    "detailed_caption_vi": "Một cái cây lớn nhiều lá sẫm màu đứng trước bầu trời đêm xanh thẳm. Nhiều đom đóm vàng phát sáng nhỏ nằm rải rác khắp tán lá, tạo ra những điểm sáng rực rỡ trên các cành cây.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.016,
+          0.0,
+          0.959,
+          0.987
+        ],
+        "description": "a large dark leafy tree with glowing fireflies in foliage",
+        "description_vi": "một cái cây lớn nhiều lá sẫm màu với đom đóm phát sáng trong tán lá",
+        "attributes": [
+          "dark",
+          "leafy",
+          "large"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0007",
+    "visual_source_frame_id": "L30_V041_f0007",
+    "ocr_source_frame_id": "L30_V041_f0007",
+    "quality_flags": [],
+    "caption": "A dark leafy tree at night with glowing fireflies scattered in the foliage.",
+    "detailed_caption": "A large leafy tree stands against a dark blue evening sky. Multiple small bright fireflies glow softly amongst the green leaves distributed across the branches.",
+    "caption_vi": "Một cái cây nhiều lá tối màu vào ban đêm với những con đom đóm phát sáng rải rác trong tán lá.",
+    "detailed_caption_vi": "Một cái cây lớn nhiều lá đứng trước bầu trời tối màu. Nhiều đom đóm nhỏ sáng rực rỡ phát sáng dịu dàng giữa những chiếc lá xanh phân bố khắp các cành cây.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.014000000000000002,
+          0.0,
+          0.959,
+          0.9890000000000001
+        ],
+        "description": "a dark leafy tree with scattered glowing fireflies",
+        "description_vi": "một cái cây nhiều lá tối màu với những đom đóm phát sáng rải rác",
+        "attributes": [
+          "dark",
+          "leafy",
+          "large"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0008",
+    "visual_source_frame_id": "L30_V041_f0007",
+    "ocr_source_frame_id": "L30_V041_f0008",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A dark leafy tree at night with glowing fireflies scattered in the foliage.",
+    "detailed_caption": "A large leafy tree stands against a dark blue evening sky. Multiple small bright fireflies glow softly amongst the green leaves distributed across the branches.",
+    "caption_vi": "Một cái cây nhiều lá tối màu vào ban đêm với những con đom đóm phát sáng rải rác trong tán lá.",
+    "detailed_caption_vi": "Một cái cây lớn nhiều lá đứng trước bầu trời tối màu. Nhiều đom đóm nhỏ sáng rực rỡ phát sáng dịu dàng giữa những chiếc lá xanh phân bố khắp các cành cây.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.014000000000000002,
+          0.0,
+          0.959,
+          0.9890000000000001
+        ],
+        "description": "a dark leafy tree with scattered glowing fireflies",
+        "description_vi": "một cái cây nhiều lá tối màu với những đom đóm phát sáng rải rác",
+        "attributes": [
+          "dark",
+          "leafy",
+          "large"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0009",
+    "visual_source_frame_id": "L30_V041_f0009",
+    "ocr_source_frame_id": "L30_V041_f0009",
+    "quality_flags": [],
+    "caption": "Several people seated on a boat at night, with tables holding fruits and flowers, and a lighted bridge in the background.",
+    "detailed_caption": "A medium shot inside a passenger boat at night with people seated facing both sides. In the center, a man in a beige polo shirt stands speaking into a microphone. Two low bamboo tables in the foreground hold arrangements of coconuts, tropical fruit, and white flowers. Along the sides of the boat, orange life jackets are stored overhead. In the background through the open sides of the boat, a brightly lit bridge glows over dark water.",
+    "caption_vi": "Nhiều người ngồi trên thuyền vào ban đêm, với các bàn bày trái cây và hoa, và một cây cầu sáng đèn ở phía sau.",
+    "detailed_caption_vi": "Cảnh trung bên trong một chiếc thuyền chở khách vào ban đêm với mọi người ngồi hướng về hai phía. Ở giữa, một người đàn ông mặc áo polo màu be đứng nói vào micro. Hai chiếc bàn tre thấp ở tiền cảnh bày dừa, trái cây nhiệt đới và hoa trắng. Dọc hai bên mạn thuyền, áo phao màu cam được cất ở trên cao. Phía sau qua hai bên thuyền mở, một cây cầu sáng rực rỡ phát sáng trên mặt nước tối.",
+    "ocr_text": "THÀNH PHỐ BẾN TRE",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.446,
+          0.183,
+          0.512,
+          0.33499999999999996
+        ],
+        "description": "a man in beige polo shirt standing and speaking into microphone",
+        "description_vi": "một người đàn ông mặc áo polo màu be đang đứng và nói vào micro",
+        "attributes": [
+          "beige",
+          "standing",
+          "wearing glasses"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.667,
+          0.396,
+          0.954,
+          0.995
+        ],
+        "description": "a person in a black shirt seated on the right side",
+        "description_vi": "một người mặc áo đen ngồi ở phía bên phải",
+        "attributes": [
+          "black shirt",
+          "seated"
+        ],
+        "action": "using smartphone"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.504,
+          0.622,
+          0.67,
+          0.872
+        ],
+        "description": "a low bamboo table holding tropical fruits and coconuts",
+        "description_vi": "một chiếc bàn tre thấp bày trái cây nhiệt đới và dừa",
+        "attributes": [
+          "bamboo",
+          "low",
+          "laden with fruit"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.26,
+          0.39099999999999996,
+          0.484,
+          0.918
+        ],
+        "description": "a woman in a green patterned dress seated on the left",
+        "description_vi": "một phụ nữ mặc váy họa tiết màu xanh lá cây ngồi bên trái",
+        "attributes": [
+          "green patterned dress",
+          "long hair",
+          "seated"
+        ],
+        "action": "holding phone"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "above",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "below",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V041_f0010",
+    "visual_source_frame_id": "L30_V041_f0010",
+    "ocr_source_frame_id": "L30_V041_f0010",
+    "quality_flags": [],
+    "caption": "A close-up of white frangipani flowers arranged on a table with fruit.",
+    "detailed_caption": "A close-up shot focusing on a cluster of white frangipani flowers with yellow centers. The flowers are arranged on a bamboo tray alongside other tropical items, with blurred figures and objects in the background.",
+    "caption_vi": "Cận cảnh những bông hoa sứ trắng được xếp trên bàn cùng với trái cây.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào chùm hoa sứ trắng có nhị màu vàng. Những bông hoa được sắp xếp trên khay tre bên cạnh các vật phẩm nhiệt đới khác, với những hình người và đồ vật mờ ảo ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flower_0",
+        "label": "flower",
+        "bbox": [
+          0.153,
+          0.0,
+          0.6559999999999999,
+          0.997
+        ],
+        "description": "white frangipani flowers with bright yellow centers",
+        "description_vi": "hoa sứ trắng với nhị màu vàng rực",
+        "attributes": [
+          "white",
+          "yellow center",
+          "fresh"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0011",
+    "visual_source_frame_id": "L30_V041_f0010",
+    "ocr_source_frame_id": "L30_V041_f0011",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up of white frangipani flowers arranged on a table with fruit.",
+    "detailed_caption": "A close-up shot focusing on a cluster of white frangipani flowers with yellow centers. The flowers are arranged on a bamboo tray alongside other tropical items, with blurred figures and objects in the background.",
+    "caption_vi": "Cận cảnh những bông hoa sứ trắng được xếp trên bàn cùng với trái cây.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào chùm hoa sứ trắng có nhị màu vàng. Những bông hoa được sắp xếp trên khay tre bên cạnh các vật phẩm nhiệt đới khác, với những hình người và đồ vật mờ ảo ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flower_0",
+        "label": "flower",
+        "bbox": [
+          0.153,
+          0.0,
+          0.6559999999999999,
+          0.997
+        ],
+        "description": "white frangipani flowers with bright yellow centers",
+        "description_vi": "hoa sứ trắng với nhị màu vàng rực",
+        "attributes": [
+          "white",
+          "yellow center",
+          "fresh"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0012",
+    "visual_source_frame_id": "L30_V041_f0012",
+    "ocr_source_frame_id": "L30_V041_f0012",
+    "quality_flags": [],
+    "caption": "A wide nighttime view of a multi-arched bridge illuminated with purple and white lights over a body of water.",
+    "detailed_caption": "A large concrete bridge spans across dark water at night, illuminated by bright purple underglow lighting along its arches and numerous lampposts along the roadway. The lights create vivid purple and yellow reflections on the rippling surface of the water below.",
+    "caption_vi": "Cảnh đêm rộng của một cây cầu nhiều nhịp được thắp sáng bằng ánh đèn tím và trắng bắc qua mặt nước.",
+    "detailed_caption_vi": "Một cây cầu bê tông lớn bắc qua mặt nước tối vào ban đêm, được chiếu sáng rực rỡ bởi dải đèn tím dọc theo các vòm cầu và nhiều cột đèn đường. Ánh đèn tạo ra những vệt phản chiếu màu tím và vàng rực rỡ trên mặt nước gợn sóng bên dưới.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bridge_0",
+        "label": "bridge",
+        "bbox": [
+          0.0,
+          0.302,
+          0.7230000000000001,
+          0.6880000000000001
+        ],
+        "description": "a large arched concrete bridge illuminated with purple lights",
+        "description_vi": "một cây cầu bê tông vòm lớn được chiếu sáng bằng đèn tím",
+        "attributes": [
+          "arched",
+          "concrete",
+          "illuminated",
+          "purple"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "water_0",
+        "label": "water",
+        "bbox": [
+          0.0,
+          0.6829999999999999,
+          1.0,
+          0.997
+        ],
+        "description": "dark rippling water reflecting purple and yellow lights",
+        "description_vi": "mặt nước tối gợn sóng phản chiếu ánh đèn tím và vàng",
+        "attributes": [
+          "dark",
+          "reflective",
+          "rippling"
+        ],
+        "action": "rippling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0013",
+    "visual_source_frame_id": "L30_V041_f0013",
+    "ocr_source_frame_id": "L30_V041_f0013",
+    "quality_flags": [],
+    "caption": "A boat wake churning water at night under a bridge with purple lights.",
+    "detailed_caption": "A low-angle shot showing the side of a boat as it churns foamy white water in a river at night. The underside of a bridge with purple illumination is visible in the upper background, casting colorful reflections on the water.",
+    "caption_vi": "Vệt nước thuyền khuấy động vào ban đêm dưới gầm cầu có ánh đèn tím.",
+    "detailed_caption_vi": "Cảnh góc thấp hiển thị mạn thuyền khi nó khuấy động dòng nước trắng xóa bọt trên sông vào ban đêm. Mặt dưới của cây cầu chiếu sáng màu tím hiển thị ở hậu cảnh phía trên, tạo ra những phản chiếu đầy màu sắc trên mặt nước.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "water_0",
+        "label": "water",
+        "bbox": [
+          0.067,
+          0.245,
+          1.0,
+          1.0
+        ],
+        "description": "churning foamy water with purple and gold light reflections",
+        "description_vi": "nước bọt sủi bọt khuấy động với phản chiếu ánh sáng tím và vàng",
+        "attributes": [
+          "foamy",
+          "churning",
+          "reflective"
+        ],
+        "action": "flowing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0014",
+    "visual_source_frame_id": "L30_V041_f0014",
+    "ocr_source_frame_id": "L30_V041_f0014",
+    "quality_flags": [],
+    "caption": "A lit bridge over a river at night with a small boat navigating underneath.",
+    "detailed_caption": "A wide shot of a bridge illuminated with green and yellow lights at night, crossing a dark river. A small boat travels under the bridge arches, leaving a bright green reflection on the water's surface. A multi-story hotel building stands on the right bank.",
+    "caption_vi": "Một cây cầu sáng đèn bắc qua sông vào ban đêm với một chiếc thuyền nhỏ di chuyển phía dưới.",
+    "detailed_caption_vi": "Cảnh rộng của một cây cầu được chiếu sáng bằng đèn xanh lá cây và vàng vào ban đêm, bắc qua dòng sông tối. Một chiếc thuyền nhỏ di chuyển dưới các vòm cầu, để lại một vệt phản chiếu màu xanh sáng trên mặt nước. Một tòa nhà khách sạn nhiều tầng đứng ở bờ bên phải.",
+    "ocr_text": "THÀNH PHỐ BẾN TRE",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bridge_0",
+        "label": "bridge",
+        "bbox": [
+          0.0,
+          0.577,
+          0.9949999999999999,
+          0.793
+        ],
+        "description": "an arched bridge illuminated with green lights over a river",
+        "description_vi": "một cây cầu vòm được chiếu sáng bằng đèn xanh lá cây bắc qua sông",
+        "attributes": [
+          "green lights",
+          "arched",
+          "illuminated"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.775,
+          0.201,
+          0.992,
+          0.598
+        ],
+        "description": "a tall multi-story illuminated hotel building on the right",
+        "description_vi": "một tòa nhà khách sạn cao nhiều tầng được thắp sáng ở bên phải",
+        "attributes": [
+          "tall",
+          "multi-story",
+          "illuminated"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0015",
+    "visual_source_frame_id": "L30_V041_f0015",
+    "ocr_source_frame_id": "L30_V041_f0015",
+    "quality_flags": [],
+    "caption": "A brightly lit bridge spanning a dark river at night next to a tall building.",
+    "detailed_caption": "A wide angle night view of an arched bridge decorated with green lights crossing a dark river. A large modern multi-story building stands on the right riverbank with illuminated windows. A small boat creates a bright green reflection on the water below.",
+    "caption_vi": "Một cây cầu sáng rực rỡ bắc qua dòng sông tối vào ban đêm cạnh một tòa nhà cao tầng.",
+    "detailed_caption_vi": "Cảnh đêm góc rộng của một cây cầu vòm trang trí đèn xanh lá cây bắc qua dòng sông tối. Một tòa nhà hiện đại nhiều tầng lớn đứng ở bờ sông bên phải với các cửa sổ được thắp sáng. Một chiếc thuyền nhỏ tạo ra vệt phản chiếu màu xanh sáng trên mặt nước bên dưới.",
+    "ocr_text": "THÀNH PHỐ BẾN TRE",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bridge_0",
+        "label": "bridge",
+        "bbox": [
+          0.0,
+          0.583,
+          0.9949999999999999,
+          0.7909999999999999
+        ],
+        "description": "an illuminated arched bridge crossing a river at night",
+        "description_vi": "một cây cầu vòm được chiếu sáng bắc qua sông vào ban đêm",
+        "attributes": [
+          "illuminated",
+          "green lights",
+          "arched"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.769,
+          0.205,
+          0.992,
+          0.599
+        ],
+        "description": "a tall illuminated multi-story building with lit windows",
+        "description_vi": "một tòa nhà cao tầng được thắp sáng với các cửa sổ sáng đèn",
+        "attributes": [
+          "tall",
+          "multi-story",
+          "lit windows"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0016",
+    "visual_source_frame_id": "L30_V041_f0016",
+    "ocr_source_frame_id": "L30_V041_f0016",
+    "quality_flags": [],
+    "caption": "People seated inside a passenger boat at night while a man speaks at the front.",
+    "detailed_caption": "A medium shot inside a covered boat at night with rows of passengers seated on both sides. In the front center, a man in a beige shirt stands holding a microphone. Passengers are engaged in conversation and taking photos with phones. Low tables with fruits and flower arrangements sit between the rows.",
+    "caption_vi": "Mọi người ngồi bên trong thuyền chở khách vào ban đêm trong khi một người đàn ông phát biểu ở phía trước.",
+    "detailed_caption_vi": "Cảnh trung bên trong một chiếc thuyền có mái che vào ban đêm với các hàng hành khách ngồi ở hai bên. Ở phía trước trung tâm, một người đàn ông mặc áo be đứng cầm micro. Hành khách đang trò chuyện và chụp ảnh bằng điện thoại. Các bàn thấp bày trái cây và hoa đặt giữa các hàng ghế.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.438,
+          0.39099999999999996,
+          0.503,
+          0.693
+        ],
+        "description": "a man in a beige shirt standing and speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo be đang đứng và nói vào micro",
+        "attributes": [
+          "beige shirt",
+          "standing",
+          "holding microphone"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.512,
+          0.573,
+          0.683,
+          0.987
+        ],
+        "description": "a person in a black shirt seated on the right",
+        "description_vi": "một người mặc áo đen ngồi bên phải",
+        "attributes": [
+          "black shirt",
+          "seated"
+        ],
+        "action": "seated"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.366,
+          0.8390000000000001,
+          0.55,
+          0.995
+        ],
+        "description": "a low wooden table laden with fruit and flower arrangements",
+        "description_vi": "một chiếc bàn gỗ thấp bày trái cây và các lẵng hoa",
+        "attributes": [
+          "low",
+          "wooden",
+          "laden with fruit"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "above",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "below",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V041_f0017",
+    "visual_source_frame_id": "L30_V041_f0017",
+    "ocr_source_frame_id": "L30_V041_f0017",
+    "quality_flags": [],
+    "caption": "A man speaking into a microphone on a boat surrounded by seated passengers.",
+    "detailed_caption": "A close medium shot on a boat at night featuring a man in a light beige polo shirt and black pants standing centrally and holding a microphone. Passengers seated along both sides look toward him, with some holding up smartphones to record or take photos.",
+    "caption_vi": "Một người đàn ông nói vào micro trên thuyền xung quanh là các hành khách ngồi.",
+    "detailed_caption_vi": "Cảnh cận trung trên thuyền vào ban đêm có một người đàn ông mặc áo polo màu be nhạt và quần đen đứng ở trung tâm và cầm micro. Hành khách ngồi dọc hai bên nhìn về phía anh ấy, một số cầm điện thoại thông minh lên để quay phim hoặc chụp ảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.33999999999999997,
+          0.21400000000000002,
+          0.466,
+          0.9590000000000001
+        ],
+        "description": "a man in a light beige polo shirt and glasses standing and holding a microphone",
+        "description_vi": "một người đàn ông mặc áo polo màu be nhạt và đeo kính đang đứng cầm micro",
+        "attributes": [
+          "light beige polo",
+          "glasses",
+          "standing"
+        ],
+        "action": "speaking into microphone"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.617,
+          0.742,
+          0.6990000000000001,
+          0.9770000000000001
+        ],
+        "description": "a person holding a smartphone to record video",
+        "description_vi": "một người đang cầm điện thoại thông minh để quay video",
+        "attributes": [
+          "holding phone",
+          "seated"
+        ],
+        "action": "recording video"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.378,
+          0.865,
+          0.562,
+          1.0
+        ],
+        "description": "a low table with coconuts and fruit arrangements",
+        "description_vi": "một chiếc bàn thấp có dừa và các sắp xếp trái cây",
+        "attributes": [
+          "low table",
+          "food arrangement"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V041_f0018",
+    "visual_source_frame_id": "L30_V041_f0018",
+    "ocr_source_frame_id": "L30_V041_f0018",
+    "quality_flags": [],
+    "caption": "A man wearing a light beige polo shirt and glasses stands holding a microphone inside a covered boat at night, surrounded by seated passengers.",
+    "detailed_caption": "A medium shot captures a man in a light beige polo shirt and dark trousers standing inside a covered boat at night, holding a microphone and addressing seated passengers. In the foreground left, a woman in a floral blouse is partially visible, while several other people sit on both sides of the boat aisle facing forward. A small table holds various fruits and a small white flower arrangement in front of the standing man.",
+    "caption_vi": "Một người đàn ông mặc áo polo màu be sáng và đeo kính đứng cầm micro bên trong một chiếc thuyền có mái che vào ban đêm, xung quanh là các hành khách đang ngồi.",
+    "detailed_caption_vi": "Khung cảnh ghi lại một người đàn ông mặc áo polo màu be và quần tối màu đang đứng giữa khoang thuyền tối vào ban đêm, tay cầm micro phát biểu. Phía trước bên trái, một phụ nữ mặc áo hoa ngồi quay lưng, trong khi nhiều hành khách khác ngồi dọc hai bên mạn thuyền hướng về phía trước. Trên bàn giữa khoang bày nhiều loại trái cây và một bông hoa trắng nhỏ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.32599999999999996,
+          0.22899999999999998,
+          0.466,
+          0.9430000000000001
+        ],
+        "description": "a man wearing a light beige polo shirt, glasses, and dark trousers holding a microphone",
+        "description_vi": "một người đàn ông mặc áo polo màu be, đeo kính và cầm micro",
+        "attributes": [
+          "beige",
+          "polo",
+          "glasses",
+          "standing"
+        ],
+        "action": "holding a microphone"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.724,
+          0.553,
+          0.9869999999999999,
+          0.997
+        ],
+        "description": "a person seen from behind with dark hair sitting on the right side of the boat",
+        "description_vi": "một người ngồi quay lưng ở bên phải thuyền",
+        "attributes": [
+          "dark hair",
+          "seated"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.368,
+          0.859,
+          0.5589999999999999,
+          1.0
+        ],
+        "description": "a low wooden table stacked with various fruits and a small white flower",
+        "description_vi": "một chiếc bàn thấp bày nhiều trái cây và một bông hoa trắng nhỏ",
+        "attributes": [
+          "wooden",
+          "low",
+          "fruit-filled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.088,
+          0.509,
+          0.319,
+          0.9979999999999999
+        ],
+        "description": "a woman in the foreground wearing a pink floral blouse with dark tied-back hair",
+        "description_vi": "một người phụ nữ mặc áo hoa hồng với mái tóc buộc phía trước",
+        "attributes": [
+          "floral",
+          "pink",
+          "seated"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V041_f0019",
+    "visual_source_frame_id": "L30_V041_f0019",
+    "ocr_source_frame_id": "L30_V041_f0019",
+    "quality_flags": [],
+    "caption": "A very dark night scene with a single glowing lantern on a small table.",
+    "detailed_caption": "A low-light night shot inside a boat where almost the entire scene is in shadow. A small lit lantern on a low bamboo table provides the only significant warm light source, illuminating surrounding food items and a person seated nearby.",
+    "caption_vi": "Cảnh đêm rất tối với một chiếc đèn lồng phát sáng duy nhất trên một chiếc bàn nhỏ.",
+    "detailed_caption_vi": "Cảnh ban đêm ánh sáng yếu bên trong thuyền nơi hầu hết toàn bộ khung cảnh nằm trong bóng tối. Một chiếc đèn lồng nhỏ được thắp sáng trên chiếc bàn tre thấp cung cấp nguồn sáng ấm duy nhất, làm sáng các món ăn xung quanh và một người ngồi gần đó.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lantern_0",
+        "label": "lantern",
+        "bbox": [
+          0.501,
+          0.7390000000000001,
+          0.5269999999999999,
+          0.797
+        ],
+        "description": "a small glowing lantern emitting warm light on a table",
+        "description_vi": "một chiếc đèn lồng phát sáng nhỏ phát ra ánh sáng ấm áp trên bàn",
+        "attributes": [
+          "small",
+          "glowing",
+          "warm light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.37,
+          0.793,
+          0.628,
+          1.0
+        ],
+        "description": "a low bamboo table with food and a lantern",
+        "description_vi": "một chiếc bàn tre thấp có thức ăn và đèn lồng",
+        "attributes": [
+          "low",
+          "bamboo",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0020",
+    "visual_source_frame_id": "L30_V041_f0019",
+    "ocr_source_frame_id": "L30_V041_f0020",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A very dark night scene with a single glowing lantern on a small table.",
+    "detailed_caption": "A low-light night shot inside a boat where almost the entire scene is in shadow. A small lit lantern on a low bamboo table provides the only significant warm light source, illuminating surrounding food items and a person seated nearby.",
+    "caption_vi": "Cảnh đêm rất tối với một chiếc đèn lồng phát sáng duy nhất trên một chiếc bàn nhỏ.",
+    "detailed_caption_vi": "Cảnh ban đêm ánh sáng yếu bên trong thuyền nơi hầu hết toàn bộ khung cảnh nằm trong bóng tối. Một chiếc đèn lồng nhỏ được thắp sáng trên chiếc bàn tre thấp cung cấp nguồn sáng ấm duy nhất, làm sáng các món ăn xung quanh và một người ngồi gần đó.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lantern_0",
+        "label": "lantern",
+        "bbox": [
+          0.501,
+          0.7390000000000001,
+          0.5269999999999999,
+          0.797
+        ],
+        "description": "a small glowing lantern emitting warm light on a table",
+        "description_vi": "một chiếc đèn lồng phát sáng nhỏ phát ra ánh sáng ấm áp trên bàn",
+        "attributes": [
+          "small",
+          "glowing",
+          "warm light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.37,
+          0.793,
+          0.628,
+          1.0
+        ],
+        "description": "a low bamboo table with food and a lantern",
+        "description_vi": "một chiếc bàn tre thấp có thức ăn và đèn lồng",
+        "attributes": [
+          "low",
+          "bamboo",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0021",
+    "visual_source_frame_id": "L30_V041_f0019",
+    "ocr_source_frame_id": "L30_V041_f0021",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A very dark night scene with a single glowing lantern on a small table.",
+    "detailed_caption": "A low-light night shot inside a boat where almost the entire scene is in shadow. A small lit lantern on a low bamboo table provides the only significant warm light source, illuminating surrounding food items and a person seated nearby.",
+    "caption_vi": "Cảnh đêm rất tối với một chiếc đèn lồng phát sáng duy nhất trên một chiếc bàn nhỏ.",
+    "detailed_caption_vi": "Cảnh ban đêm ánh sáng yếu bên trong thuyền nơi hầu hết toàn bộ khung cảnh nằm trong bóng tối. Một chiếc đèn lồng nhỏ được thắp sáng trên chiếc bàn tre thấp cung cấp nguồn sáng ấm duy nhất, làm sáng các món ăn xung quanh và một người ngồi gần đó.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lantern_0",
+        "label": "lantern",
+        "bbox": [
+          0.501,
+          0.7390000000000001,
+          0.5269999999999999,
+          0.797
+        ],
+        "description": "a small glowing lantern emitting warm light on a table",
+        "description_vi": "một chiếc đèn lồng phát sáng nhỏ phát ra ánh sáng ấm áp trên bàn",
+        "attributes": [
+          "small",
+          "glowing",
+          "warm light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.37,
+          0.793,
+          0.628,
+          1.0
+        ],
+        "description": "a low bamboo table with food and a lantern",
+        "description_vi": "một chiếc bàn tre thấp có thức ăn và đèn lồng",
+        "attributes": [
+          "low",
+          "bamboo",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0022",
+    "visual_source_frame_id": "L30_V041_f0019",
+    "ocr_source_frame_id": "L30_V041_f0022",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A very dark night scene with a single glowing lantern on a small table.",
+    "detailed_caption": "A low-light night shot inside a boat where almost the entire scene is in shadow. A small lit lantern on a low bamboo table provides the only significant warm light source, illuminating surrounding food items and a person seated nearby.",
+    "caption_vi": "Cảnh đêm rất tối với một chiếc đèn lồng phát sáng duy nhất trên một chiếc bàn nhỏ.",
+    "detailed_caption_vi": "Cảnh ban đêm ánh sáng yếu bên trong thuyền nơi hầu hết toàn bộ khung cảnh nằm trong bóng tối. Một chiếc đèn lồng nhỏ được thắp sáng trên chiếc bàn tre thấp cung cấp nguồn sáng ấm duy nhất, làm sáng các món ăn xung quanh và một người ngồi gần đó.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lantern_0",
+        "label": "lantern",
+        "bbox": [
+          0.501,
+          0.7390000000000001,
+          0.5269999999999999,
+          0.797
+        ],
+        "description": "a small glowing lantern emitting warm light on a table",
+        "description_vi": "một chiếc đèn lồng phát sáng nhỏ phát ra ánh sáng ấm áp trên bàn",
+        "attributes": [
+          "small",
+          "glowing",
+          "warm light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.37,
+          0.793,
+          0.628,
+          1.0
+        ],
+        "description": "a low bamboo table with food and a lantern",
+        "description_vi": "một chiếc bàn tre thấp có thức ăn và đèn lồng",
+        "attributes": [
+          "low",
+          "bamboo",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0023",
+    "visual_source_frame_id": "L30_V041_f0019",
+    "ocr_source_frame_id": "L30_V041_f0023",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A very dark night scene with a single glowing lantern on a small table.",
+    "detailed_caption": "A low-light night shot inside a boat where almost the entire scene is in shadow. A small lit lantern on a low bamboo table provides the only significant warm light source, illuminating surrounding food items and a person seated nearby.",
+    "caption_vi": "Cảnh đêm rất tối với một chiếc đèn lồng phát sáng duy nhất trên một chiếc bàn nhỏ.",
+    "detailed_caption_vi": "Cảnh ban đêm ánh sáng yếu bên trong thuyền nơi hầu hết toàn bộ khung cảnh nằm trong bóng tối. Một chiếc đèn lồng nhỏ được thắp sáng trên chiếc bàn tre thấp cung cấp nguồn sáng ấm duy nhất, làm sáng các món ăn xung quanh và một người ngồi gần đó.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lantern_0",
+        "label": "lantern",
+        "bbox": [
+          0.501,
+          0.7390000000000001,
+          0.5269999999999999,
+          0.797
+        ],
+        "description": "a small glowing lantern emitting warm light on a table",
+        "description_vi": "một chiếc đèn lồng phát sáng nhỏ phát ra ánh sáng ấm áp trên bàn",
+        "attributes": [
+          "small",
+          "glowing",
+          "warm light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.37,
+          0.793,
+          0.628,
+          1.0
+        ],
+        "description": "a low bamboo table with food and a lantern",
+        "description_vi": "một chiếc bàn tre thấp có thức ăn và đèn lồng",
+        "attributes": [
+          "low",
+          "bamboo",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V041_f0024",
+    "visual_source_frame_id": "L30_V041_f0019",
+    "ocr_source_frame_id": "L30_V041_f0024",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A very dark night scene with a single glowing lantern on a small table.",
+    "detailed_caption": "A low-light night shot inside a boat where almost the entire scene is in shadow. A small lit lantern on a low bamboo table provides the only significant warm light source, illuminating surrounding food items and a person seated nearby.",
+    "caption_vi": "Cảnh đêm rất tối với một chiếc đèn lồng phát sáng duy nhất trên một chiếc bàn nhỏ.",
+    "detailed_caption_vi": "Cảnh ban đêm ánh sáng yếu bên trong thuyền nơi hầu hết toàn bộ khung cảnh nằm trong bóng tối. Một chiếc đèn lồng nhỏ được thắp sáng trên chiếc bàn tre thấp cung cấp nguồn sáng ấm duy nhất, làm sáng các món ăn xung quanh và một người ngồi gần đó.",
+    "ocr_text": "Tác giả: Nguyễn Thị Ngọc Ánh",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lantern_0",
+        "label": "lantern",
+        "bbox": [
+          0.501,
+          0.7390000000000001,
+          0.5269999999999999,
+          0.797
+        ],
+        "description": "a small glowing lantern emitting warm light on a table",
+        "description_vi": "một chiếc đèn lồng phát sáng nhỏ phát ra ánh sáng ấm áp trên bàn",
+        "attributes": [
+          "small",
+          "glowing",
+          "warm light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.37,
+          0.793,
+          0.628,
+          1.0
+        ],
+        "description": "a low bamboo table with food and a lantern",
+        "description_vi": "một chiếc bàn tre thấp có thức ăn và đèn lồng",
+        "attributes": [
+          "low",
+          "bamboo",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  }
+]

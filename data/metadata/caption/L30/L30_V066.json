@@ -1,0 +1,5506 @@
+[
+  {
+    "frame_id": "L30_V066_f0001",
+    "visual_source_frame_id": "L30_V066_f0001",
+    "ocr_source_frame_id": "L30_V066_f0001",
+    "quality_flags": [],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A blank white screen features a smooth gradient from bright center to darker edges. No subjects or objects are visible.",
+    "caption_vi": "Một phông nền chuyển sắc màu trắng đơn giản.",
+    "detailed_caption_vi": "Một màn hình trắng trống có hiệu ứng chuyển màu mượt mà từ tâm sáng sang các cạnh tối hơn. Không có chủ thể hay đối tượng nào hiển thị.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0002",
+    "visual_source_frame_id": "L30_V066_f0001",
+    "ocr_source_frame_id": "L30_V066_f0002",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A blank white screen features a smooth gradient from bright center to darker edges. No subjects or objects are visible.",
+    "caption_vi": "Một phông nền chuyển sắc màu trắng đơn giản.",
+    "detailed_caption_vi": "Một màn hình trắng trống có hiệu ứng chuyển màu mượt mà từ tâm sáng sang các cạnh tối hơn. Không có chủ thể hay đối tượng nào hiển thị.",
+    "ocr_text": "Herbalife",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0003",
+    "visual_source_frame_id": "L30_V066_f0001",
+    "ocr_source_frame_id": "L30_V066_f0003",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A blank white screen features a smooth gradient from bright center to darker edges. No subjects or objects are visible.",
+    "caption_vi": "Một phông nền chuyển sắc màu trắng đơn giản.",
+    "detailed_caption_vi": "Một màn hình trắng trống có hiệu ứng chuyển màu mượt mà từ tâm sáng sang các cạnh tối hơn. Không có chủ thể hay đối tượng nào hiển thị.",
+    "ocr_text": "Clip bạn đọc dự thi cuộc thi: Lan tỏa năng lượng tích cực 2024",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0004",
+    "visual_source_frame_id": "L30_V066_f0004",
+    "ocr_source_frame_id": "L30_V066_f0004",
+    "quality_flags": [],
+    "caption": "An older man in a red polo shirt on the left looks toward a smiling man holding a cabbage in an indoor produce sorting area.",
+    "detailed_caption": "An older man wearing a red polo shirt stands on the left, looking toward the center while placing a hand on another man's shoulder. In the center, a smiling man wearing a red polo shirt with a red cross logo holds a head of cabbage and a knife. Crates of cabbages and other vegetables fill the foreground and background shelves inside a brightly lit room.",
+    "caption_vi": "Một người đàn ông lớn tuổi mặc áo polo đỏ ở bên trái đang nhìn về phía một người đàn ông mỉm cười cầm bắp cải trong khu vực phân loại nông sản trong nhà.",
+    "detailed_caption_vi": "Một người đàn ông lớn tuổi mặc áo polo đỏ đứng ở bên trái, hướng mắt về phía trung tâm trong khi đặt tay lên vai một người đàn ông khác. Ở giữa, một người đàn ông đang mỉm cười mặc áo polo đỏ có logo chữ thập đỏ đang cầm một bắp cải và một con dao. Các sọt đựng bắp cải và rau củ khác lấp đầy phía trước và các kệ phía sau bên trong một căn phòng sáng sủa.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.583,
+          0.746,
+          0.999,
+          0.997
+        ],
+        "description": "heads of cabbage stacked in black plastic crates",
+        "description_vi": "những bắp cải được xếp trong các sọt nhựa màu đen",
+        "attributes": [
+          "green",
+          "stacked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.11299999999999999,
+          0.11699999999999999,
+          0.461,
+          0.995
+        ],
+        "description": "older man in red polo shirt standing on the left",
+        "description_vi": "người đàn ông lớn tuổi mặc áo polo đỏ đứng bên trái",
+        "attributes": [
+          "older",
+          "short hair",
+          "red polo shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "man_1",
+        "label": "man",
+        "bbox": [
+          0.417,
+          0.114,
+          0.682,
+          0.945
+        ],
+        "description": "smiling man in red polo shirt holding cabbage and knife",
+        "description_vi": "người đàn ông mỉm cười mặc áo polo đỏ đang cầm bắp cải và dao",
+        "attributes": [
+          "smiling",
+          "short hair",
+          "red polo shirt",
+          "red cross logo"
+        ],
+        "action": "holding cabbage"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "cabbage_0"
+      },
+      {
+        "subject_id": "cabbage_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0005",
+    "visual_source_frame_id": "L30_V066_f0005",
+    "ocr_source_frame_id": "L30_V066_f0005",
+    "quality_flags": [],
+    "caption": "A man in a red polo shirt stands in a brightly lit room next to stacked crates of cabbage.",
+    "detailed_caption": "A man wearing a red polo shirt with a red cross emblem stands in the center of an indoor produce sorting room. Crates filled with cabbages and green vegetables are stacked around him. Other people are seated in the background.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đứng trong căn phòng sáng sủa cạnh các sọt bắp cải được xếp chồng lên nhau.",
+    "detailed_caption_vi": "Một người đàn ông mặc áo polo đỏ có huy hiệu chữ thập đỏ đứng ở trung tâm của một phòng phân loại nông sản trong nhà. Các sọt đựng bắp cải và rau xanh được xếp xung quanh anh ấy. Những người khác đang ngồi ở phía sau.",
+    "ocr_text": "tuoitreTV Cuộc thi Lan tỏa năng lượng tích cực 2024: Lan tỏa tinh thần sống đẹp",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.546,
+          0.7030000000000001,
+          0.8310000000000001,
+          0.9979999999999999
+        ],
+        "description": "heads of cabbage in crates",
+        "description_vi": "những bắp cải trong sọt",
+        "attributes": [
+          "green",
+          "stacked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.12,
+          0.049,
+          0.471,
+          0.996
+        ],
+        "description": "man in red polo shirt with red cross emblem",
+        "description_vi": "người đàn ông mặc áo polo đỏ có huy hiệu chữ thập đỏ",
+        "attributes": [
+          "short hair",
+          "red polo shirt",
+          "red cross emblem"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "cabbage_0"
+      },
+      {
+        "subject_id": "cabbage_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0006",
+    "visual_source_frame_id": "L30_V066_f0006",
+    "ocr_source_frame_id": "L30_V066_f0006",
+    "quality_flags": [],
+    "caption": "An older man in a red polo shirt speaks indoors with another person blurred in the background.",
+    "detailed_caption": "A close-up shot focuses on an older man with white hair wearing a red polo shirt with a red cross logo, who is speaking. Another person with dark hair is visible in the background, partially out of focus.",
+    "caption_vi": "Một người đàn ông lớn tuổi mặc áo polo đỏ đang nói chuyện trong nhà với một người khác bị mờ ở hậu cảnh.",
+    "detailed_caption_vi": "Cảnh cận cảnh tập trung vào một người đàn ông lớn tuổi tóc bạc mặc áo polo đỏ có logo chữ thập đỏ đang nói chuyện. Một người khác tóc tối màu hiển thị ở hậu cảnh, hơi mờ đi.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.073,
+          0.068,
+          0.702,
+          1.0
+        ],
+        "description": "older man with white hair wearing a red polo shirt",
+        "description_vi": "người đàn ông lớn tuổi tóc bạc mặc áo polo đỏ",
+        "attributes": [
+          "older",
+          "white hair",
+          "red polo shirt",
+          "red cross logo"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0007",
+    "visual_source_frame_id": "L30_V066_f0007",
+    "ocr_source_frame_id": "L30_V066_f0007",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "An older man in a red polo stands beside a younger man in red sorting cabbages inside a brightly lit room.",
+    "detailed_caption": "Medium shot of two men in red polo shirts working in a brightly lit indoor space filled with boxes of cabbages. An older man stands with his hands at his sides near a doorway, while a younger man wearing a red polo is actively handling vegetables in the foreground. Several black crates and stacks of large cabbages fill the lower portion of the frame, with white walls and a door visible in the background.",
+    "caption_vi": "Hai người đàn ông mặc áo polo đỏ đang chọn rau bắp cải trong một căn phòng sáng sủa.",
+    "detailed_caption_vi": "Cảnh trung hiển thị hai người đàn ông mặc áo thun polo đỏ đang làm việc trong một không gian nội thất sáng sủa ngập tràn bắp cải. Người lớn tuổi hơn đứng cạnh cửa ra vào, trong khi hơn đang bận rộn xử lý rau củ ở khu vực phía trước. Nhiều thùng nhựa đen và những cuộn bắp cải lớn chất đầy phía trước, với bức tường trắng ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.053000000000000005,
+          0.682,
+          0.8160000000000001,
+          1.0
+        ],
+        "description": "large white cabbages in crates",
+        "description_vi": "những củ cải bắp lớn trong thùng",
+        "attributes": [
+          "white",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.371,
+          0.195,
+          0.571,
+          0.7859999999999999
+        ],
+        "description": "older man wearing a red polo shirt",
+        "description_vi": "người đàn ông lớn tuổi mặc áo polo đỏ",
+        "attributes": [
+          "older",
+          "red",
+          "polo"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.64,
+          0.12000000000000001,
+          0.924,
+          0.833
+        ],
+        "description": "younger man wearing a red polo shirt",
+        "description_vi": "người đàn ông trẻ mặc áo polo đỏ",
+        "attributes": [
+          "younger",
+          "red",
+          "polo"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0008",
+    "visual_source_frame_id": "L30_V066_f0007",
+    "ocr_source_frame_id": "L30_V066_f0008",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An older man and a younger man in matching red polo shirts stand near crates of cabbage indoors.",
+    "detailed_caption": "An older man with white hair stands on the left wearing a red polo shirt, looking downward. To his right, another man in a red polo shirt handles cabbages. Crates filled with cabbages are arranged in the foreground.",
+    "caption_vi": "Một người đàn ông lớn tuổi và một người đàn ông trẻ hơn mặc áo polo đỏ đồng bộ đứng gần các sọt bắp cải trong nhà.",
+    "detailed_caption_vi": "Một người đàn ông lớn tuổi tóc bạc đứng ở bên trái mặc áo polo đỏ, đang nhìn xuống. Bên phải anh là một người đàn ông khác mặc áo polo đỏ đang xử lý bắp cải. Các sọt đựng bắp cải được bố trí ở phía trước.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.484,
+          0.699,
+          0.747,
+          1.0
+        ],
+        "description": "large heads of fresh cabbage in black crates",
+        "description_vi": "những bắp cải tươi lớn trong sọt đen",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.372,
+          0.195,
+          0.571,
+          0.7859999999999999
+        ],
+        "description": "older man with white hair in red polo shirt standing",
+        "description_vi": "người đàn ông lớn tuổi tóc bạc mặc áo polo đỏ đang đứng",
+        "attributes": [
+          "older",
+          "white hair",
+          "red polo shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "man_1",
+        "label": "man",
+        "bbox": [
+          0.64,
+          0.124,
+          0.922,
+          0.832
+        ],
+        "description": "man in red polo shirt handling cabbages",
+        "description_vi": "người đàn ông mặc áo polo đỏ đang cầm bắp cải",
+        "attributes": [
+          "short hair",
+          "red polo shirt"
+        ],
+        "action": "sorting cabbage"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0009",
+    "visual_source_frame_id": "L30_V066_f0009",
+    "ocr_source_frame_id": "L30_V066_f0009",
+    "quality_flags": [],
+    "caption": "A person holds a head of cabbage while another person cuts it with a knife.",
+    "detailed_caption": "A close-up shot shows hands holding a large head of cabbage. A hand wielding a knife is visible on the left, poised to cut the cabbage.",
+    "caption_vi": "Một người đang cầm một bắp cải trong khi người khác dùng dao cắt nó.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy đôi tay đang cầm một bắp cải lớn. Một bàn tay cầm dao xuất hiện ở bên trái, sẵn sàng cắt bắp cải.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.24300000000000002,
+          0.31,
+          0.7969999999999999,
+          1.0
+        ],
+        "description": "large head of cabbage held by hands",
+        "description_vi": "bắp cải lớn được cầm bởi đôi tay",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0010",
+    "visual_source_frame_id": "L30_V066_f0009",
+    "ocr_source_frame_id": "L30_V066_f0010",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person holds a head of cabbage while another person cuts it with a knife.",
+    "detailed_caption": "A close-up shot shows hands holding a large head of cabbage. A hand wielding a knife is visible on the left, poised to cut the cabbage.",
+    "caption_vi": "Một người đang cầm một bắp cải trong khi người khác dùng dao cắt nó.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy đôi tay đang cầm một bắp cải lớn. Một bàn tay cầm dao xuất hiện ở bên trái, sẵn sàng cắt bắp cải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.24300000000000002,
+          0.31,
+          0.7969999999999999,
+          1.0
+        ],
+        "description": "large head of cabbage held by hands",
+        "description_vi": "bắp cải lớn được cầm bởi đôi tay",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0011",
+    "visual_source_frame_id": "L30_V066_f0011",
+    "ocr_source_frame_id": "L30_V066_f0011",
+    "quality_flags": [],
+    "caption": "A person uses a knife to slice a head of cabbage.",
+    "detailed_caption": "A close-up shot shows a pair of hands holding a head of cabbage while another hand uses a long knife to cut it. A second cabbage is partially visible in the right foreground.",
+    "caption_vi": "Một người dùng dao cắt một bắp cải.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy đôi tay đang giữ bắp cải trong khi tay khác dùng dao dài để cắt. Một bắp cải thứ hai xuất hiện một phần ở phía trước bên phải.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.308,
+          0.351,
+          0.696,
+          1.0
+        ],
+        "description": "head of cabbage being sliced",
+        "description_vi": "bắp cải đang được cắt",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "knife_0",
+        "label": "knife",
+        "bbox": [
+          0.0,
+          0.503,
+          0.335,
+          0.698
+        ],
+        "description": "long metal knife slicing cabbage",
+        "description_vi": "con dao kim loại dài đang cắt bắp cải",
+        "attributes": [
+          "metal",
+          "long"
+        ],
+        "action": "cutting"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0012",
+    "visual_source_frame_id": "L30_V066_f0012",
+    "ocr_source_frame_id": "L30_V066_f0012",
+    "quality_flags": [],
+    "caption": "A cleaver cuts into a head of cabbage held by a person's hands.",
+    "detailed_caption": "A close-up view displays a person's hands holding a cabbage being cut with a cleaver. The cleaver features visible lettering near the handle.",
+    "caption_vi": "Một con dao phay đang cắt vào bắp cải được cầm trên tay một người.",
+    "detailed_caption_vi": "Cảnh cận cảnh hiển thị đôi tay của một người đang giữ bắp cải bị cắt bằng dao phay. Con dao có chữ in hiển thị gần phần cán.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabbage_0",
+        "label": "cabbage",
+        "bbox": [
+          0.20099999999999998,
+          0.383,
+          0.64,
+          1.0
+        ],
+        "description": "head of cabbage being cut",
+        "description_vi": "bắp cải đang được cắt",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "knife_0",
+        "label": "knife",
+        "bbox": [
+          0.16399999999999998,
+          0.165,
+          0.46699999999999997,
+          0.46199999999999997
+        ],
+        "description": "metal cleaver with text markings",
+        "description_vi": "dao phay kim loại có ký hiệu chữ",
+        "attributes": [
+          "metal",
+          "cleaver"
+        ],
+        "action": "cutting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cabbage_0",
+        "predicate": "overlapping",
+        "object_id": "knife_0"
+      },
+      {
+        "subject_id": "knife_0",
+        "predicate": "overlapping",
+        "object_id": "cabbage_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0013",
+    "visual_source_frame_id": "L30_V066_f0013",
+    "ocr_source_frame_id": "L30_V066_f0013",
+    "quality_flags": [],
+    "caption": "A white sign with red and blue Vietnamese text detailing an organization's board members.",
+    "detailed_caption": "A close-up shot of an informational sign mounted on a pale wall. The sign displays organizational titles, leadership names, and committee positions in red and blue Vietnamese typography.",
+    "caption_vi": "Một biển hiệu nền trắng với chữ tiếng Việt màu đỏ và xanh lam chi tiết về các thành viên ban điều hành của một tổ chức.",
+    "detailed_caption_vi": "Cảnh cận cảnh một biển hiệu thông tin được gắn trên bức tường nhạt màu. Biển hiệu hiển thị các chức vụ tổ chức, tên lãnh đạo và vị trí ủy ban bằng chữ tiếng Việt màu đỏ và xanh lam.",
+    "ocr_text": "TỔ TỪ THIỆN BVĐK SA ĐÉC BAN ĐIỀU HÀNH TRƯỞNG BAN Ô. NGUYỄN VĂN MỐT PHÓ TRƯỞNG BAN I Ô. PHẠM ĐÔNG GIANG THƯ KÝ Ô. TRẦN VĂN LẮM CÁC ỦY VIÊN ĐƯỢC PHÂN CÔNG THỦ QUỸ B. LÊ THỊ ÁNH THỦ KHO + TÀI XẾ Ô. LÊ ĐÌNH LỢI PHÓ TRƯỞNG BAN II Ô. HUỲNH VĂN BÉ ỦY VIÊN THƯỜNG TRỰC Ô. VÕ VĂN BÁNH KẾ TOÁN BÙI THỊ LIÊN BẾP TRƯỞNG Ô. VÕ PHƯỚC LỢI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.162,
+          0.018000000000000002,
+          0.8630000000000001,
+          1.0
+        ],
+        "description": "white informational sign with red and blue text",
+        "description_vi": "biển hiệu thông tin màu trắng với chữ đỏ và xanh",
+        "attributes": [
+          "white",
+          "text",
+          "framed"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0014",
+    "visual_source_frame_id": "L30_V066_f0013",
+    "ocr_source_frame_id": "L30_V066_f0014",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A white sign with red and blue Vietnamese text detailing an organization's board members.",
+    "detailed_caption": "A close-up shot of an informational sign mounted on a pale wall. The sign displays organizational titles, leadership names, and committee positions in red and blue Vietnamese typography.",
+    "caption_vi": "Một biển hiệu nền trắng với chữ tiếng Việt màu đỏ và xanh lam chi tiết về các thành viên ban điều hành của một tổ chức.",
+    "detailed_caption_vi": "Cảnh cận cảnh một biển hiệu thông tin được gắn trên bức tường nhạt màu. Biển hiệu hiển thị các chức vụ tổ chức, tên lãnh đạo và vị trí ủy ban bằng chữ tiếng Việt màu đỏ và xanh lam.",
+    "ocr_text": "TRƯỞNG BAN Ô. NGUYỄN VĂN MỐT PHÓ TRƯỞNG BAN I Ô. PHẠM ĐÔNG GIANG THƯ KÝ Ô. TRẦN VĂN LẮM PHÓ TRƯỞNG BAN II Ô. HUỲNH VĂN BÉ ỦY VIÊN THƯỜNG TRỰC Ô. VÕ VĂN BÁNH CÁC ỦY VIÊN ĐƯỢC PHÂN CÔNG THỦ QUỸ B. LÊ THỊ ÁNH THỦ KHO + TÀI XẾ Ô. LÊ ĐÌNH LỢI TÀI XẾ Ô. LẠI BÙI TRƯỜNG GIANG TÀI XẾ Ô. HUỲNH VĂN SƠN KẾ TOÁN B. BÙI THỊ LIÊN BẾP TRƯỞNG Ô. VÕ PHƯỚC LỢI KIỂM TRA THỰC PHẨM B. CAO THỊ DUNG UVPT CẤT NHÀ TT Ô. PHAN VĂN TÁM TỔ HẬU CẦN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.162,
+          0.018000000000000002,
+          0.8630000000000001,
+          1.0
+        ],
+        "description": "white informational sign with red and blue text",
+        "description_vi": "biển hiệu thông tin màu trắng với chữ đỏ và xanh",
+        "attributes": [
+          "white",
+          "text",
+          "framed"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0015",
+    "visual_source_frame_id": "L30_V066_f0015",
+    "ocr_source_frame_id": "L30_V066_f0015",
+    "quality_flags": [],
+    "caption": "Two men unload vegetables from a blue truck under a metal shelter.",
+    "detailed_caption": "Medium shot of two men working under an outdoor metal shelter next to a blue truck loaded with produce. A man in an orange shirt and black pants reaches into the truck bed, while another man in a blue shirt with white lettering unloads yellow-netted bags. In the background, a person on a motorbike is visible near parked vehicles and a building structure.",
+    "caption_vi": "Hai người đàn ông đang bốc dỡ rau củ từ một chiếc xe tải màu xanh dưới mái che.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hai người đàn ông đang làm việc dưới mái che kim loại bên cạnh chiếc xe tải chở đầy nông sản. Một người mặc áo cam với quần đen đang vươn người vào thùng xe, trong khi người khác mặc áo xanh dương in chữ đang dỡ các bao lưới màu vàng. Phía sau là một người lái xe máy gần khu vực đỗ xe.",
+    "ocr_text": "VAN PHAT XE VÂN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.354,
+          0.34500000000000003,
+          0.5599999999999999,
+          1.0
+        ],
+        "description": "man wearing an orange shirt and black pants",
+        "description_vi": "người đàn ông mặc áo cam và quần đen",
+        "attributes": [
+          "orange",
+          "black"
+        ],
+        "action": "unloading"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.45499999999999996,
+          0.314,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "man wearing a blue shirt with white lettering",
+        "description_vi": "người đàn ông mặc áo xanh dương có chữ trắng",
+        "attributes": [
+          "blue",
+          "white"
+        ],
+        "action": "unloading"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.643,
+          0.463,
+          0.9949999999999999,
+          1.0
+        ],
+        "description": "blue truck filled with bags of vegetables",
+        "description_vi": "xe tải màu xanh chở đầy các bao rau củ",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0016",
+    "visual_source_frame_id": "L30_V066_f0016",
+    "ocr_source_frame_id": "L30_V066_f0016",
+    "quality_flags": [],
+    "caption": "A person in a red shirt walks past a blue truck loaded with sacks of vegetables under a shelter.",
+    "detailed_caption": "A person in a red shirt and blue shorts walks past the rear of a blue truck loaded with sacks of produce. Other workers are visible near the truck and under a covered shelter area.",
+    "caption_vi": "Một người mặc áo đỏ đi ngang qua chiếc xe tải màu xanh chở đầy các bao rau củ dưới mái che.",
+    "detailed_caption_vi": "Một người mặc áo đỏ và quần đùi xanh đi ngang qua phía sau chiếc xe tải màu xanh chất đầy bao nông sản. Các công nhân khác xuất hiện gần xe tải và dưới khu vực mái che.",
+    "ocr_text": "tuoitreTV VAN PHAT XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.40800000000000003,
+          0.295,
+          0.6769999999999999,
+          1.0
+        ],
+        "description": "man in blue shirt loading goods",
+        "description_vi": "người đàn ông mặc áo xanh đang bốc hàng",
+        "attributes": [
+          "blue shirt",
+          "grey pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "man_1",
+        "label": "man",
+        "bbox": [
+          0.8640000000000001,
+          0.551,
+          0.982,
+          1.0
+        ],
+        "description": "man in red shirt and blue shorts walking",
+        "description_vi": "người đàn ông mặc áo đỏ và quần đùi xanh đang đi bộ",
+        "attributes": [
+          "red shirt",
+          "blue shorts"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.627,
+          0.49699999999999994,
+          0.883,
+          1.0
+        ],
+        "description": "blue truck with sacks of vegetables",
+        "description_vi": "xe tải màu xanh chở bao rau củ",
+        "attributes": [
+          "blue",
+          "truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0017",
+    "visual_source_frame_id": "L30_V066_f0017",
+    "ocr_source_frame_id": "L30_V066_f0017",
+    "quality_flags": [],
+    "caption": "A woman in orange stands near a man carrying bagged produce indoors, with other people working nearby.",
+    "detailed_caption": "A woman wearing orange clothing stands on the left observing as a man in a red polo shirt carries bags of produce. Another person walks past in the foreground, and other individuals are seated in the background.",
+    "caption_vi": "Một người phụ nữ mặc đồ cam đứng gần một người đàn ông xách các túi nông sản trong nhà, với những người khác đang làm việc ở gần đó.",
+    "detailed_caption_vi": "Một người phụ nữ mặc trang phục màu cam đứng bên trái quan sát khi một người đàn ông mặc áo polo đỏ xách các túi nông sản. Một người khác đi ngang qua ở phía trước, và những người khác đang ngồi ở phía sau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.31,
+          0.07200000000000001,
+          0.446,
+          1.0
+        ],
+        "description": "man in red shirt carrying bags of vegetables",
+        "description_vi": "người đàn ông mặc áo đỏ xách túi rau củ",
+        "attributes": [
+          "red shirt",
+          "carrying bags"
+        ],
+        "action": "carrying"
+      },
+      {
+        "object_id": "man_1",
+        "label": "man",
+        "bbox": [
+          0.5389999999999999,
+          0.0,
+          0.833,
+          1.0
+        ],
+        "description": "man in orange shirt walking away",
+        "description_vi": "người đàn ông mặc áo cam đang đi ra xa",
+        "attributes": [
+          "orange shirt",
+          "black pants"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.183,
+          0.16799999999999998,
+          0.322,
+          0.997
+        ],
+        "description": "woman wearing orange clothes standing",
+        "description_vi": "người phụ nữ mặc đồ cam đang đứng",
+        "attributes": [
+          "orange clothes",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0018",
+    "visual_source_frame_id": "L30_V066_f0018",
+    "ocr_source_frame_id": "L30_V066_f0018",
+    "quality_flags": [],
+    "caption": "A man in a red polo carries two bags of vegetables inside a room with other workers.",
+    "detailed_caption": "Medium shot inside a brightly lit room where a man in a red polo shirt and dark pants is walking towards the foreground, carrying two large plastic bags filled with green vegetables. A woman in orange traditional clothing stands near the background wall, while another man in a blue shirt and a man in an orange shirt are seen facing away near vegetable crates.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đang cầm hai túi rau đi trong phòng.",
+    "detailed_caption_vi": "Cảnh trung bên trong căn phòng sáng sủa cho thấy một người đàn ông mặc áo polo đỏ và quần tối màu đang đi về phía trước, xách hai túi nhựa lớn đựng rau xanh. Một người phụ nữ mặc trang phục cam đứng gần tường phía sau, trong khi một người mặc áo xanh và một người mặc áo cam đang đứng quay lưng gần các sọt rau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.147,
+          0.7030000000000001,
+          0.321,
+          0.987
+        ],
+        "description": "plastic bag filled with green gourds",
+        "description_vi": "túi nilon đựng bầu xanh",
+        "attributes": [
+          "plastic",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.181,
+          0.174,
+          0.322,
+          0.737
+        ],
+        "description": "woman wearing orange clothes standing",
+        "description_vi": "phụ nữ mặc đồ màu cam đang đứng",
+        "attributes": [
+          "orange"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.20600000000000002,
+          0.046,
+          0.475,
+          1.0
+        ],
+        "description": "man wearing a red polo shirt carrying bags",
+        "description_vi": "người đàn ông mặc áo polo đỏ xách túi",
+        "attributes": [
+          "red",
+          "polo"
+        ],
+        "action": "walking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0019",
+    "visual_source_frame_id": "L30_V066_f0019",
+    "ocr_source_frame_id": "L30_V066_f0019",
+    "quality_flags": [],
+    "caption": "A man in a red polo shirt reaches into the back of a truck laden with bags of produce.",
+    "detailed_caption": "Medium shot of a man wearing a red polo shirt and dark pants leaning into the open bed of a blue truck under a corrugated roof. The truck is piled high with yellow-netted bags of cabbages and red-netted sacks. In the background, leafy trees and building structures are partially visible.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đang với tay vào thùng xe tải chở đầy rau củ.",
+    "detailed_caption_vi": "Cảnh trung chụp một người đàn ông mặc áo polo đỏ và quần tối màu đang cúi người vào thùng xe tải màu xanh dưới mái nhà tôn. Chiếc xe tải chất đầy các bao lưới màu vàng đựng bắp cải và các bao lưới màu đỏ. Phía sau là cây cối và cấu trúc tòa nhà mờ ảo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.067,
+          0.392,
+          0.5589999999999999,
+          0.978
+        ],
+        "description": "man wearing a red polo shirt",
+        "description_vi": "người đàn ông mặc áo polo đỏ",
+        "attributes": [
+          "red",
+          "polo"
+        ],
+        "action": "reaching"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.471,
+          0.18900000000000003,
+          1.0,
+          0.8520000000000001
+        ],
+        "description": "blue truck filled with sacks of vegetables",
+        "description_vi": "xe tải màu xanh chứa đầy bao rau củ",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0020",
+    "visual_source_frame_id": "L30_V066_f0020",
+    "ocr_source_frame_id": "L30_V066_f0020",
+    "quality_flags": [],
+    "caption": "A man in an orange shirt and a man in a red shirt carry bags of produce indoors.",
+    "detailed_caption": "A man wearing an orange shirt walks forward carrying a bag of produce, while another man in a red shirt reaches for items in the foreground. A woman stands in the background near a doorway.",
+    "caption_vi": "Một người đàn ông mặc áo cam và một người đàn ông mặc áo đỏ xách các túi nông sản trong nhà.",
+    "detailed_caption_vi": "Một người đàn ông mặc áo cam bước tới đang xách túi nông sản, trong khi một người đàn ông khác mặc áo đỏ với lấy các món đồ ở phía trước. Một người phụ nữ đứng ở hậu cảnh gần cửa ra vào.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.0,
+          0.025,
+          0.265,
+          1.0
+        ],
+        "description": "man in orange shirt carrying bag of vegetables",
+        "description_vi": "người đàn ông mặc áo cam xách túi rau củ",
+        "attributes": [
+          "orange shirt",
+          "black pants"
+        ],
+        "action": "carrying"
+      },
+      {
+        "object_id": "man_1",
+        "label": "man",
+        "bbox": [
+          0.20099999999999998,
+          0.0,
+          0.759,
+          1.0
+        ],
+        "description": "man in red shirt reaching forward",
+        "description_vi": "người đàn ông mặc áo đỏ đang với tay về phía trước",
+        "attributes": [
+          "red shirt",
+          "red cross logo"
+        ],
+        "action": "reaching"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.263,
+          0.29000000000000004,
+          0.45499999999999996,
+          0.9430000000000001
+        ],
+        "description": "woman in orange clothes standing in background",
+        "description_vi": "người phụ nữ mặc đồ cam đứng ở hậu cảnh",
+        "attributes": [
+          "orange outfit"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "man_1"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_1",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "man_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0021",
+    "visual_source_frame_id": "L30_V066_f0021",
+    "ocr_source_frame_id": "L30_V066_f0021",
+    "quality_flags": [],
+    "caption": "A man in a red polo shirt stands beside a blue truck with a sign.",
+    "detailed_caption": "A man wearing a red polo shirt with a red cross logo stands beside a blue truck. A sign with Vietnamese text is attached to the side of the truck bed, and bags of produce sit inside.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đứng bên cạnh xe tải màu xanh có biển hiệu.",
+    "detailed_caption_vi": "Một người đàn ông mặc áo polo đỏ có logo chữ thập đỏ đứng cạnh chiếc xe tải màu xanh. Biển hiệu có chữ tiếng Việt gắn bên hông thùng xe tải, bên trong có các túi nông sản.",
+    "ocr_text": "tuoitreTV XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.0,
+          0.124,
+          0.492,
+          1.0
+        ],
+        "description": "man in red polo shirt standing by truck",
+        "description_vi": "người đàn ông mặc áo polo đỏ đứng cạnh xe tải",
+        "attributes": [
+          "red shirt",
+          "red cross logo",
+          "short hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.322,
+          0.041999999999999996,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck with sign and bagged produce",
+        "description_vi": "xe tải màu xanh có biển hiệu và rau củ đóng túi",
+        "attributes": [
+          "blue",
+          "truck",
+          "sign"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0022",
+    "visual_source_frame_id": "L30_V066_f0021",
+    "ocr_source_frame_id": "L30_V066_f0022",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red polo shirt stands beside a blue truck with a sign.",
+    "detailed_caption": "A man wearing a red polo shirt with a red cross logo stands beside a blue truck. A sign with Vietnamese text is attached to the side of the truck bed, and bags of produce sit inside.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đứng bên cạnh xe tải màu xanh có biển hiệu.",
+    "detailed_caption_vi": "Một người đàn ông mặc áo polo đỏ có logo chữ thập đỏ đứng cạnh chiếc xe tải màu xanh. Biển hiệu có chữ tiếng Việt gắn bên hông thùng xe tải, bên trong có các túi nông sản.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.0,
+          0.124,
+          0.492,
+          1.0
+        ],
+        "description": "man in red polo shirt standing by truck",
+        "description_vi": "người đàn ông mặc áo polo đỏ đứng cạnh xe tải",
+        "attributes": [
+          "red shirt",
+          "red cross logo",
+          "short hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.322,
+          0.041999999999999996,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck with sign and bagged produce",
+        "description_vi": "xe tải màu xanh có biển hiệu và rau củ đóng túi",
+        "attributes": [
+          "blue",
+          "truck",
+          "sign"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0023",
+    "visual_source_frame_id": "L30_V066_f0023",
+    "ocr_source_frame_id": "L30_V066_f0023",
+    "quality_flags": [],
+    "caption": "A man in a red polo shirt stands in front of a blue truck carrying vegetables.",
+    "detailed_caption": "Medium shot of a man wearing a red polo shirt with an emblem on the chest, standing outdoors in front of a blue truck. The truck is loaded with bags of vegetables and features a white sign with Vietnamese red text on its side. A red brick wall forms the background behind the man.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đứng trước xe tải chở rau củ.",
+    "detailed_caption_vi": "Cảnh trung ghi lại một người đàn ông mặc áo polo đỏ có logo trên ngực, đứng ngoài trời trước một chiếc xe tải màu xanh. Thùng xe chất đầy các bao rau củ và có gắn một biển trắng chữ đỏ tiếng Việt bên hông. Bức tường gạch đỏ phía sau làm nổi bật nhân vật.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.002,
+          0.12200000000000001,
+          0.49000000000000005,
+          1.0
+        ],
+        "description": "man wearing a red polo shirt",
+        "description_vi": "người đàn ông mặc áo polo đỏ",
+        "attributes": [
+          "red",
+          "polo"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.32599999999999996,
+          0.025,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck with a sign and bags of vegetables",
+        "description_vi": "xe tải màu xanh có biển hiệu và các bao rau",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0024",
+    "visual_source_frame_id": "L30_V066_f0024",
+    "ocr_source_frame_id": "L30_V066_f0024",
+    "quality_flags": [],
+    "caption": "A man in a red polo shirt speaks while standing in front of a truck carrying vegetables.",
+    "detailed_caption": "Medium shot of a man wearing a red polo shirt with an emblem talking outdoors next to a blue truck bed. The truck is filled with bags of vegetables and displays a white sign with red Vietnamese lettering. A red brick wall is visible in the background.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đang nói chuyện trước thùng xe tải chứa rau củ.",
+    "detailed_caption_vi": "Cảnh trung chụp một người đàn ông mặc áo polo đỏ có đính huy hiệu đang nói chuyện ngoài trời cạnh thùng xe tải màu xanh. Phía sau xe chở nhiều bao rau củ và có tấm biển trắng chữ đỏ nổi bật. Phông nền phía sau là bức tường gạch đỏ.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.004,
+          0.12200000000000001,
+          0.485,
+          1.0
+        ],
+        "description": "man wearing a red polo shirt",
+        "description_vi": "người đàn ông mặc áo polo đỏ",
+        "attributes": [
+          "red",
+          "polo"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.32599999999999996,
+          0.025,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck with a sign and bags of vegetables",
+        "description_vi": "xe tải màu xanh có biển chữ và bao rau",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0025",
+    "visual_source_frame_id": "L30_V066_f0025",
+    "ocr_source_frame_id": "L30_V066_f0025",
+    "quality_flags": [],
+    "caption": "A man in a red polo shirt speaks outdoors in front of a truck loaded with vegetables.",
+    "detailed_caption": "Medium shot of a man in a red polo shirt talking while standing in front of a blue truck. Bags of produce are stacked in the truck bed behind him, alongside a white sign with red Vietnamese text. A brick wall provides a rustic background.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đang phát biểu trước xe tải chở rau củ ngoài trời.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một người đàn ông mặc áo polo đỏ đang nói chuyện khi đứng trước chiếc xe tải màu xanh. Phía sau là các bao nông sản chất đầy trên xe cùng một tấm biển trắng chữ đỏ. Tường gạch mộc tạo nên phông nền phía sau.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.004,
+          0.12200000000000001,
+          0.485,
+          1.0
+        ],
+        "description": "man wearing a red polo shirt",
+        "description_vi": "người đàn ông mặc áo polo đỏ",
+        "attributes": [
+          "red",
+          "polo"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.32599999999999996,
+          0.025,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck loaded with bags of vegetables",
+        "description_vi": "xe tải màu xanh chở đầy các bao rau củ",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0026",
+    "visual_source_frame_id": "L30_V066_f0026",
+    "ocr_source_frame_id": "L30_V066_f0026",
+    "quality_flags": [],
+    "caption": "A woman in orange stands near a blue truck while men work on loading produce.",
+    "detailed_caption": "Medium shot of a woman in orange traditional clothing standing by a doorway next to a blue truck. Two men are loading bags of vegetables into the back of the truck under a metal shelter. Black trash bags are stacked on the floor near the woman.",
+    "caption_vi": "Một phụ nữ mặc đồ cam đứng cạnh xe tải màu xanh trong khi những người đàn ông đang bốc hàng.",
+    "detailed_caption_vi": "Cảnh trung ghi lại một người phụ nữ mặc trang phục cam truyền thống đang đứng gần cửa ra vào cạnh chiếc xe tải màu xanh. Hai người đàn ông đang xếp các bao rau củ lên thùng xe dưới mái che kim loại. Những túi rác đen được xếp dưới sàn nhà gần chỗ người phụ nữ.",
+    "ocr_text": "C SÔI XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.315,
+          0.295,
+          0.418,
+          0.8729999999999999
+        ],
+        "description": "woman wearing orange clothes",
+        "description_vi": "phụ nữ mặc trang phục màu cam",
+        "attributes": [
+          "orange"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.399,
+          0.18599999999999997,
+          0.5589999999999999,
+          0.571
+        ],
+        "description": "man wearing an orange shirt and black pants",
+        "description_vi": "người đàn ông mặc áo cam và quần đen",
+        "attributes": [
+          "orange",
+          "black"
+        ],
+        "action": "loading"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.42300000000000004,
+          0.34700000000000003,
+          0.969,
+          1.0
+        ],
+        "description": "blue truck with a sign filled with vegetable sacks",
+        "description_vi": "xe tải màu xanh có biển hiệu chở đầy bao rau",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0027",
+    "visual_source_frame_id": "L30_V066_f0027",
+    "ocr_source_frame_id": "L30_V066_f0027",
+    "quality_flags": [],
+    "caption": "A woman in orange stands near a blue truck being loaded with vegetables.",
+    "detailed_caption": "Medium shot of a woman in orange traditional clothes standing indoors near a doorway, looking toward a blue truck. A worker in an orange shirt is reaching into the back of the truck, which is piled with bags of vegetables. Black bags lie on the floor near the doorway.",
+    "caption_vi": "Một phụ nữ mặc đồ cam đứng gần cửa ra vào cạnh xe tải chở rau củ.",
+    "detailed_caption_vi": "Cảnh trung ghi lại người phụ nữ mặc đồ cam đang đứng trong nhà gần cửa ra vào, nhìn về phía chiếc xe tải màu xanh. Một công nhân mặc áo cam đang vươn người vào thùng xe chở đầy các bao rau củ. Các túi màu đen nằm trên sàn nhà gần cửa.",
+    "ocr_text": "SÔI XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.20099999999999998,
+          0.277,
+          0.358,
+          0.978
+        ],
+        "description": "woman wearing orange clothes",
+        "description_vi": "phụ nữ mặc trang phục màu cam",
+        "attributes": [
+          "orange"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.503,
+          0.159,
+          0.67,
+          0.564
+        ],
+        "description": "man wearing an orange shirt",
+        "description_vi": "người đàn ông mặc áo cam",
+        "attributes": [
+          "orange"
+        ],
+        "action": "loading"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.41100000000000003,
+          0.365,
+          0.96,
+          1.0
+        ],
+        "description": "blue truck loaded with sacks of vegetables",
+        "description_vi": "xe tải màu xanh chở đầy các bao rau củ",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0028",
+    "visual_source_frame_id": "L30_V066_f0028",
+    "ocr_source_frame_id": "L30_V066_f0028",
+    "quality_flags": [],
+    "caption": "Close-up of clear plastic bags filled with green bitter melons.",
+    "detailed_caption": "Close-up shot of several large clear plastic bags tightly packed with fresh green bitter melons. The bags are placed closely together in what appears to be a cargo area, showing the textured skin and details of the vegetables through the transparent plastic.",
+    "caption_vi": "Cảnh cận các túi nhựa trong suốt đựng đầy khổ qua xanh tươi.",
+    "detailed_caption_vi": "Cảnh cận ghi lại một số túi nhựa trong suốt lớn được đóng gói chặt chẽ với nhiều trái khổ qua xanh tươi bên trong. Các túi được đặt sát nhau trong khu vực chứa hàng, làm nổi bật lớp vỏ sần sùi của rau quả qua lớp nhựa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.0,
+          0.028,
+          0.528,
+          0.995
+        ],
+        "description": "clear plastic bag filled with green bitter melons",
+        "description_vi": "túi nhựa trong suốt chứa đầy khổ qua xanh",
+        "attributes": [
+          "plastic",
+          "transparent",
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bag_1",
+        "label": "bag",
+        "bbox": [
+          0.511,
+          0.04700000000000001,
+          0.9869999999999999,
+          0.912
+        ],
+        "description": "clear plastic bag filled with green bitter melons",
+        "description_vi": "túi nhựa trong suốt chứa đầy khổ qua xanh",
+        "attributes": [
+          "plastic",
+          "transparent",
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0029",
+    "visual_source_frame_id": "L30_V066_f0029",
+    "ocr_source_frame_id": "L30_V066_f0029",
+    "quality_flags": [],
+    "caption": "A man in a red polo shirt stands in front of a blue truck loaded with produce.",
+    "detailed_caption": "A man wearing a red polo shirt with a red cross logo stands in the foreground on the left. Behind him is a blue truck with a sign attached to the side and sacks of produce stacked in the back.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đứng trước xe tải màu xanh chở nông sản.",
+    "detailed_caption_vi": "Một người đàn ông mặc áo polo đỏ có logo chữ thập đỏ đứng ở phía trước bên trái. Phía sau anh là chiếc xe tải màu xanh có biển hiệu gắn ở bên hông và các bao nông sản chất đống ở thùng sau.",
+    "ocr_text": "tuoitreTV XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.0,
+          0.124,
+          0.484,
+          1.0
+        ],
+        "description": "man in red polo shirt standing",
+        "description_vi": "người đàn ông mặc áo polo đỏ đang đứng",
+        "attributes": [
+          "red shirt",
+          "red cross logo",
+          "short hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.321,
+          0.02,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck loaded with sacks of produce",
+        "description_vi": "xe tải màu xanh chở đầy bao nông sản",
+        "attributes": [
+          "blue",
+          "truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0030",
+    "visual_source_frame_id": "L30_V066_f0029",
+    "ocr_source_frame_id": "L30_V066_f0030",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red polo shirt stands in front of a blue truck loaded with produce.",
+    "detailed_caption": "A man wearing a red polo shirt with a red cross logo stands in the foreground on the left. Behind him is a blue truck with a sign attached to the side and sacks of produce stacked in the back.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ đứng trước xe tải màu xanh chở nông sản.",
+    "detailed_caption_vi": "Một người đàn ông mặc áo polo đỏ có logo chữ thập đỏ đứng ở phía trước bên trái. Phía sau anh là chiếc xe tải màu xanh có biển hiệu gắn ở bên hông và các bao nông sản chất đống ở thùng sau.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.0,
+          0.124,
+          0.484,
+          1.0
+        ],
+        "description": "man in red polo shirt standing",
+        "description_vi": "người đàn ông mặc áo polo đỏ đang đứng",
+        "attributes": [
+          "red shirt",
+          "red cross logo",
+          "short hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.321,
+          0.02,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck loaded with sacks of produce",
+        "description_vi": "xe tải màu xanh chở đầy bao nông sản",
+        "attributes": [
+          "blue",
+          "truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0031",
+    "visual_source_frame_id": "L30_V066_f0031",
+    "ocr_source_frame_id": "L30_V066_f0031",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A man in a red polo shirt with a red cross emblem stands inside a bright room with blue water jugs.",
+    "detailed_caption": "A medium shot shows a man with short graying hair wearing a red polo shirt featuring a red cross emblem on the chest. He stands in a brightly lit indoor space with white walls and windows in the background. Several blue water jugs and stacked crates of cabbage are visible around the room.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ có huy hiệu chữ thập đỏ đang đứng trong phòng sáng sủa.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một người đàn ông tóc hoa râm mặc áo polo màu đỏ có gắn huy hiệu chữ thập đỏ trên ngực. Ông đang đứng trong một căn phòng có tường trắng và cửa sổ phía sau. Xung quanh phòng có một số bình nước màu xanh và các sọt đựng bắp cải xếp chồng lên nhau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.492,
+          0.051,
+          0.8880000000000001,
+          0.996
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "gray hair",
+          "red polo shirt"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "water_jug_0",
+        "label": "water jug",
+        "bbox": [
+          0.312,
+          0.669,
+          0.38,
+          0.8310000000000001
+        ],
+        "description": "blue plastic water jug on metal stand",
+        "description_vi": "bình nước nhựa màu xanh trên giá kim loại",
+        "attributes": [
+          "blue",
+          "plastic",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "water_jug_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "water_jug_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0032",
+    "visual_source_frame_id": "L30_V066_f0031",
+    "ocr_source_frame_id": "L30_V066_f0032",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red polo shirt with a red cross emblem stands inside a bright room with blue water jugs.",
+    "detailed_caption": "A medium shot shows a man with short graying hair wearing a red polo shirt featuring a red cross emblem on the chest. He stands in a brightly lit indoor space with white walls and windows in the background. Several blue water jugs and stacked crates of cabbage are visible around the room.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ có huy hiệu chữ thập đỏ đang đứng trong phòng sáng sủa.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một người đàn ông tóc hoa râm mặc áo polo màu đỏ có gắn huy hiệu chữ thập đỏ trên ngực. Ông đang đứng trong một căn phòng có tường trắng và cửa sổ phía sau. Xung quanh phòng có một số bình nước màu xanh và các sọt đựng bắp cải xếp chồng lên nhau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.492,
+          0.051,
+          0.8880000000000001,
+          0.996
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "gray hair",
+          "red polo shirt"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "water_jug_0",
+        "label": "water jug",
+        "bbox": [
+          0.312,
+          0.669,
+          0.38,
+          0.8310000000000001
+        ],
+        "description": "blue plastic water jug on metal stand",
+        "description_vi": "bình nước nhựa màu xanh trên giá kim loại",
+        "attributes": [
+          "blue",
+          "plastic",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "water_jug_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "water_jug_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0033",
+    "visual_source_frame_id": "L30_V066_f0031",
+    "ocr_source_frame_id": "L30_V066_f0033",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red polo shirt with a red cross emblem stands inside a bright room with blue water jugs.",
+    "detailed_caption": "A medium shot shows a man with short graying hair wearing a red polo shirt featuring a red cross emblem on the chest. He stands in a brightly lit indoor space with white walls and windows in the background. Several blue water jugs and stacked crates of cabbage are visible around the room.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ có huy hiệu chữ thập đỏ đang đứng trong phòng sáng sủa.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một người đàn ông tóc hoa râm mặc áo polo màu đỏ có gắn huy hiệu chữ thập đỏ trên ngực. Ông đang đứng trong một căn phòng có tường trắng và cửa sổ phía sau. Xung quanh phòng có một số bình nước màu xanh và các sọt đựng bắp cải xếp chồng lên nhau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.492,
+          0.051,
+          0.8880000000000001,
+          0.996
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "gray hair",
+          "red polo shirt"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "water_jug_0",
+        "label": "water jug",
+        "bbox": [
+          0.312,
+          0.669,
+          0.38,
+          0.8310000000000001
+        ],
+        "description": "blue plastic water jug on metal stand",
+        "description_vi": "bình nước nhựa màu xanh trên giá kim loại",
+        "attributes": [
+          "blue",
+          "plastic",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "water_jug_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "water_jug_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0034",
+    "visual_source_frame_id": "L30_V066_f0031",
+    "ocr_source_frame_id": "L30_V066_f0034",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red polo shirt with a red cross emblem stands inside a bright room with blue water jugs.",
+    "detailed_caption": "A medium shot shows a man with short graying hair wearing a red polo shirt featuring a red cross emblem on the chest. He stands in a brightly lit indoor space with white walls and windows in the background. Several blue water jugs and stacked crates of cabbage are visible around the room.",
+    "caption_vi": "Một người đàn ông mặc áo polo đỏ có huy hiệu chữ thập đỏ đang đứng trong phòng sáng sủa.",
+    "detailed_caption_vi": "Khung cảnh trung cảnh cho thấy một người đàn ông tóc hoa râm mặc áo polo màu đỏ có gắn huy hiệu chữ thập đỏ trên ngực. Ông đang đứng trong một căn phòng có tường trắng và cửa sổ phía sau. Xung quanh phòng có một số bình nước màu xanh và các sọt đựng bắp cải xếp chồng lên nhau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.492,
+          0.051,
+          0.8880000000000001,
+          0.996
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "gray hair",
+          "red polo shirt"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "water_jug_0",
+        "label": "water jug",
+        "bbox": [
+          0.312,
+          0.669,
+          0.38,
+          0.8310000000000001
+        ],
+        "description": "blue plastic water jug on metal stand",
+        "description_vi": "bình nước nhựa màu xanh trên giá kim loại",
+        "attributes": [
+          "blue",
+          "plastic",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "water_jug_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "water_jug_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0035",
+    "visual_source_frame_id": "L30_V066_f0035",
+    "ocr_source_frame_id": "L30_V066_f0035",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "Several women gather around a table preparing vegetables inside a community kitchen.",
+    "detailed_caption": "A wide indoor shot shows a group of women gathered around a long metal table preparing vegetables. In the foreground left, a woman in a floral blouse cuts vegetables with a knife. Next to her, an woman in a plaid shirt and another woman in a dark tunic are also busy processing produce. Additional women are seated further back along the table, and baskets of fresh green vegetables and bags fill the foreground and workspace.",
+    "caption_vi": "Nhiều phụ nữ quây quần quanh bàn chuẩn bị rau củ trong căn bếp cộng đồng.",
+    "detailed_caption_vi": "Cảnh quay rộng trong nhà cho thấy một nhóm phụ nữ đang quây quần bên chiếc bàn dài bằng kim loại để sơ chế rau củ. Ở góc trái phía trước, một phụ nữ mặc áo hoa đang cắt rau bằng dao. Ngay cạnh bà, một phụ nữ lớn tuổi mặc áo sơ mi kẻ caro và một phụ nữ khác mặc áo tối màu cũng đang bận rộn làm việc. Những người phụ nữ khác ngồi ở phía sau bàn, xung quanh có các giỏ rau xanh tươi và túi đựng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.044,
+          0.36300000000000004,
+          0.335,
+          0.853
+        ],
+        "description": "woman in floral print blouse cutting vegetables",
+        "description_vi": "phụ nữ mặc áo hoa đang cắt rau củ",
+        "attributes": [
+          "floral blouse",
+          "short hair"
+        ],
+        "action": "cutting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.315,
+          0.343,
+          0.502,
+          0.8430000000000001
+        ],
+        "description": "woman in plaid shirt working at table",
+        "description_vi": "phụ nữ lớn tuổi mặc áo kẻ caro làm việc ở bàn",
+        "attributes": [
+          "plaid shirt",
+          "short gray hair"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5,
+          0.296,
+          0.7150000000000001,
+          0.804
+        ],
+        "description": "woman in dark shirt sitting at table",
+        "description_vi": "phụ nữ mặc áo tối màu ngồi ở bàn",
+        "attributes": [
+          "dark shirt",
+          "long hair tied back"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0036",
+    "visual_source_frame_id": "L30_V066_f0036",
+    "ocr_source_frame_id": "L30_V066_f0036",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "Two women process vegetables at a table in a food preparation area.",
+    "detailed_caption": "A close-up shot focuses on two women working at a metal table. On the left, a woman wearing a patterned floral top uses a knife to process vegetables. Beside her on the right, an woman with short gray hair wearing a dark plaid button-down shirt carefully handles produce. A green basket filled with trimmed vegetables sits in the foreground.",
+    "caption_vi": "Hai người phụ nữ sơ chế rau củ tại bàn trong khu vực chuẩn bị thực phẩm.",
+    "detailed_caption_vi": "Cảnh cận cảnh tập trung vào hai người phụ nữ đang làm việc tại chiếc bàn kim loại. Ở bên trái, một người phụ nữ mặc áo họa tiết hoa đang dùng dao sơ chế rau. Bên cạnh bà ở phía bên phải, một phụ nữ lớn tuổi tóc ngắn màu xám mặc áo sơ mi kẻ caro tối màu đang cẩn thận xử lý nông sản. Một giỏ màu xanh đựng rau đã cắt tỉa nằm ở phía trước.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.075,
+          0.081,
+          0.599,
+          0.988
+        ],
+        "description": "woman in floral top holding knife",
+        "description_vi": "phụ nữ mặc áo hoa cầm dao",
+        "attributes": [
+          "floral top",
+          "short hair"
+        ],
+        "action": "holding knife"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.5940000000000001,
+          0.075,
+          0.977,
+          0.9890000000000001
+        ],
+        "description": "woman in plaid shirt working with vegetables",
+        "description_vi": "phụ nữ lớn tuổi mặc áo sơ mi kẻ caro làm việc với rau",
+        "attributes": [
+          "plaid shirt",
+          "short gray hair"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0037",
+    "visual_source_frame_id": "L30_V066_f0037",
+    "ocr_source_frame_id": "L30_V066_f0037",
+    "quality_flags": [],
+    "caption": "Hands process vegetables near a green basket filled with squash blossoms.",
+    "detailed_caption": "A close-up shot shows hands of a person wearing a plaid shirt handling and sorting squash blossoms. A bright green plastic basket filled with yellow and green squash blossoms is positioned in the lower right foreground. Another person's hands are visible on the left side near plastic packaging.",
+    "caption_vi": "Bàn tay đang sơ chế rau củ cạnh giỏ nhựa màu xanh đựng hoa bí.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy bàn tay của một người mặc áo sơ mi kẻ caro đang cầm và phân loại hoa bí. Một giỏ nhựa màu xanh tươi chứa đầy hoa bí màu vàng và xanh nằm ở góc dưới bên phải. Bàn tay của một người khác cũng xuất hiện ở phía bên trái gần bao bì nhựa.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "basket_0",
+        "label": "basket",
+        "bbox": [
+          0.425,
+          0.526,
+          1.0,
+          0.995
+        ],
+        "description": "green plastic basket filled with squash blossoms",
+        "description_vi": "giỏ nhựa màu xanh đựng đầy hoa bí",
+        "attributes": [
+          "green",
+          "plastic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0038",
+    "visual_source_frame_id": "L30_V066_f0038",
+    "ocr_source_frame_id": "L30_V066_f0038",
+    "quality_flags": [],
+    "caption": "Hands process vegetables by a green basket of squash blossoms.",
+    "detailed_caption": "A close-up shot captures hands sorting and preparing vegetables. A green basket filled with squash blossoms sits in the foreground. The person wears a plaid long-sleeved shirt with a green bracelet on their wrist.",
+    "caption_vi": "Bàn tay đang sơ chế rau củ bên cạnh giỏ hoa bí màu xanh.",
+    "detailed_caption_vi": "Cảnh cận cảnh ghi lại đôi tay đang phân loại và chuẩn bị rau củ. Một giỏ màu xanh lá cây chứa đầy hoa bí đặt ở phía trước. Người này mặc áo sơ mi dài tay kẻ caro và đeo vòng tay màu xanh lá trên cổ tay.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "basket_0",
+        "label": "basket",
+        "bbox": [
+          0.426,
+          0.57,
+          1.0,
+          0.995
+        ],
+        "description": "green plastic basket with squash blossoms",
+        "description_vi": "giỏ nhựa màu xanh lá có hoa bí",
+        "attributes": [
+          "green",
+          "plastic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0039",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0039",
+    "quality_flags": [],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0040",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0040",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0041",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0041",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0042",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0042",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0043",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0043",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0044",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0044",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0045",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0045",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0046",
+    "visual_source_frame_id": "L30_V066_f0046",
+    "ocr_source_frame_id": "L30_V066_f0046",
+    "quality_flags": [],
+    "caption": "An older man in a red polo shirt speaks while other people work in the background.",
+    "detailed_caption": "Medium close-up shot of an older man with gray hair wearing a red polo shirt with a Red Cross emblem, speaking directly to the camera. In the background, other people are seen working in a brightly lit indoor space, including a man in a gray button-down shirt and another person in a red shirt.",
+    "caption_vi": "Một người đàn ông lớn tuổi mặc áo polo đỏ đang nói chuyện với mọi người làm việc ở phía sau.",
+    "detailed_caption_vi": "Cảnh cận trung ghi lại hình ảnh một người đàn ông lớn tuổi tóc bạc mặc áo polo đỏ có đính huy hiệu chữ thập đỏ đang phát biểu trước máy quay. Phía sau là những người khác đang làm việc trong một không gian trong nhà sáng sủa, bao gồm một người mặc áo sơ mi xám và người mặc áo đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.396,
+          0.21400000000000002,
+          1.0
+        ],
+        "description": "man wearing a red shirt",
+        "description_vi": "người đàn ông mặc áo đỏ",
+        "attributes": [
+          "red"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.135,
+          0.27799999999999997,
+          0.343,
+          1.0
+        ],
+        "description": "man wearing a gray button-down shirt",
+        "description_vi": "người đàn ông mặc áo sơ mi xám",
+        "attributes": [
+          "gray",
+          "button-down"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.277,
+          0.036000000000000004,
+          0.9029999999999999,
+          1.0
+        ],
+        "description": "older man with gray hair wearing a red polo shirt",
+        "description_vi": "người đàn ông lớn tuổi tóc bạc mặc áo polo đỏ",
+        "attributes": [
+          "older",
+          "gray",
+          "red",
+          "polo"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0047",
+    "visual_source_frame_id": "L30_V066_f0039",
+    "ocr_source_frame_id": "L30_V066_f0047",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three volunteers in red polo shirts work in a community food preparation facility.",
+    "detailed_caption": "A medium shot shows a volunteer in a red polo shirt speaking to the camera in the foreground. Behind him, two other men are working, one sorting cabbage at a black crate and another standing nearby. The indoor facility has white walls and metal cooking equipment.",
+    "caption_vi": "Ba tình nguyện viên mặc áo polo đỏ làm việc trong cơ sở chuẩn bị thực phẩm cộng đồng.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một tình nguyện viên mặc áo polo đỏ đang nói chuyện trước ống kính ở phía trước. Phía sau anh, hai người đàn ông khác đang làm việc, một người đang phân loại bắp cải tại thùng đen và một người khác đứng gần đó. Cơ sở trong nhà có tường trắng và thiết bị nấu nướng bằng kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.26199999999999996,
+          0.292,
+          0.9930000000000001
+        ],
+        "description": "man in red polo shirt sorting vegetables",
+        "description_vi": "nam thanh niên mặc áo polo đỏ đang phân loại rau",
+        "attributes": [
+          "red polo shirt",
+          "short dark hair"
+        ],
+        "action": "sorting vegetables"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.252,
+          0.461,
+          0.853
+        ],
+        "description": "man in gray shirt standing and working",
+        "description_vi": "người đàn ông mặc áo xám đứng làm việc",
+        "attributes": [
+          "gray shirt",
+          "bald"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.393,
+          0.075,
+          0.883,
+          0.995
+        ],
+        "description": "man with graying hair wearing a red polo shirt",
+        "description_vi": "người đàn ông tóc hoa râm mặc áo polo đỏ",
+        "attributes": [
+          "red polo shirt",
+          "gray hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0048",
+    "visual_source_frame_id": "L30_V066_f0048",
+    "ocr_source_frame_id": "L30_V066_f0048",
+    "quality_flags": [],
+    "caption": "A blue truck loaded with bags of produce drives down a road.",
+    "detailed_caption": "An outdoor daylight shot shows a blue truck piled high with bags of yellow and black produce. A white sign with red text is attached to the side of the truck. Buildings and parked vehicles line the street in the background.",
+    "caption_vi": "Một chiếc xe tải màu xanh chở đầy các bao nông sản đang chạy trên đường.",
+    "detailed_caption_vi": "Cảnh ngoài trời ban ngày cho thấy một chiếc xe tải màu xanh chất đầy các bao nông sản màu vàng và đen. Một bảng hiệu màu trắng có chữ màu đỏ gắn bên hông xe. Các tòa nhà và phương tiện đỗ dọc theo đường phố phía sau.",
+    "ocr_text": "XE VÂN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.28900000000000003,
+          0.521,
+          0.492,
+          0.691
+        ],
+        "description": "white sign with red text on truck",
+        "description_vi": "bảng hiệu trắng có chữ đỏ trên xe tải",
+        "attributes": [
+          "white",
+          "rectangular",
+          "red text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.233,
+          0.18800000000000003,
+          0.966,
+          0.995
+        ],
+        "description": "blue truck loaded with sacks of vegetables",
+        "description_vi": "xe tải màu xanh chở đầy bao tải rau củ",
+        "attributes": [
+          "blue",
+          "loaded"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "sign_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "sign_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0049",
+    "visual_source_frame_id": "L30_V066_f0049",
+    "ocr_source_frame_id": "L30_V066_f0049",
+    "quality_flags": [],
+    "caption": "A person wearing a red helmet and red shirt rides a motorcycle past a truck.",
+    "detailed_caption": "An outdoor action shot captures a person wearing a red and white helmet and a red shirt riding a blue motorcycle. A large blue truck with a canvas cover is parked on the left side of the street in the background.",
+    "caption_vi": "Một người đội mũ bảo hiểm đỏ mặc áo đỏ đang lái xe máy vượt qua xe tải.",
+    "detailed_caption_vi": "Cảnh quay hành động ngoài trời ghi lại hình ảnh một người đội mũ bảo hiểm đỏ trắng và mặc áo đỏ đang điều khiển xe máy màu xanh. Một chiếc xe tải màu xanh lớn có bạt phủ đỗ bên trái đường phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.316,
+          0.48800000000000004,
+          0.735,
+          0.995
+        ],
+        "description": "blue motorcycle in motion",
+        "description_vi": "xe máy màu xanh đang di chuyển",
+        "attributes": [
+          "blue",
+          "two-wheeled"
+        ],
+        "action": "moving"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.584,
+          0.05,
+          0.8949999999999999,
+          0.995
+        ],
+        "description": "person wearing a red shirt and helmet riding motorcycle",
+        "description_vi": "người mặc áo đỏ và đội mũ bảo hiểm đang lái xe máy",
+        "attributes": [
+          "red shirt",
+          "red helmet",
+          "black pants"
+        ],
+        "action": "riding motorcycle"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.0,
+          0.193,
+          0.6900000000000001,
+          0.8310000000000001
+        ],
+        "description": "blue truck with dark canvas cover",
+        "description_vi": "xe tải màu xanh có bạt phủ tối màu",
+        "attributes": [
+          "blue",
+          "covered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0050",
+    "visual_source_frame_id": "L30_V066_f0050",
+    "ocr_source_frame_id": "L30_V066_f0050",
+    "quality_flags": [],
+    "caption": "A person in a red shirt carries bags of vegetables past parked trucks.",
+    "detailed_caption": "An outdoor shot shows a person wearing a red shirt, black pants, and a red helmet carrying two large bags of green produce. The person is walking past the back of a parked gray truck. Other vehicles and a motorcycle are visible in the background.",
+    "caption_vi": "Một người mặc áo đỏ mang túi rau củ đi ngang qua xe tải đang đỗ.",
+    "detailed_caption_vi": "Cảnh ngoài trời cho thấy một người mặc áo đỏ, quần đen và đội mũ bảo hiểm đỏ đang xách hai túi rau xanh lớn. Người này đang đi ngang qua phần đuôi của chiếc xe tải màu xám đang đỗ. Các phương tiện khác và xe máy xuất hiện ở phía sau.",
+    "ocr_text": "67C-121.92",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.637,
+          0.23900000000000002,
+          0.755,
+          0.922
+        ],
+        "description": "person in red shirt and helmet carrying bags",
+        "description_vi": "người mặc áo đỏ và mũ bảo hiểm đang xách túi",
+        "attributes": [
+          "red shirt",
+          "red helmet",
+          "carrying bags"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.028999999999999998,
+          0.0,
+          0.577,
+          0.85
+        ],
+        "description": "gray cargo truck parked on street",
+        "description_vi": "xe tải chở hàng màu xám đỗ trên đường",
+        "attributes": [
+          "gray",
+          "cargo"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "truck_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "truck_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0051",
+    "visual_source_frame_id": "L30_V066_f0051",
+    "ocr_source_frame_id": "L30_V066_f0051",
+    "quality_flags": [],
+    "caption": "A motion-blurred shot shows a person in a red shirt and helmet walking next to a truck.",
+    "detailed_caption": "Medium shot with heavy motion blur showing a person wearing a red shirt and a red helmet walking near the side of a large truck. The surrounding background is streaked due to fast camera or subject movement.",
+    "caption_vi": "Cảnh mờ do chuyển động ghi lại một người mặc áo đỏ và đội mũ bảo hiểm đi cạnh xe tải.",
+    "detailed_caption_vi": "Cảnh trung với độ mờ chuyển động lớn cho thấy một người mặc áo đỏ và đội mũ bảo hiểm đỏ đang đi sát thân xe tải lớn. Phông nền xung quanh bị nhòe đi do chuyển động nhanh của máy ảnh hoặc chủ thể.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.644,
+          0.23399999999999999,
+          0.75,
+          0.639
+        ],
+        "description": "person wearing a red shirt and red helmet",
+        "description_vi": "người mặc áo đỏ và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "red",
+          "helmet"
+        ],
+        "action": "walking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0052",
+    "visual_source_frame_id": "L30_V066_f0052",
+    "ocr_source_frame_id": "L30_V066_f0052",
+    "quality_flags": [],
+    "caption": "A man in a red shirt and helmet walks past a blue truck loaded with vegetable bags.",
+    "detailed_caption": "Medium shot of a man wearing a red shirt, helmet, and carrying a blue bag, walking beside a blue truck parked in a gravel lot. The truck bed is stacked with yellow-netted bags of produce, and several large trucks are parked in the background.",
+    "caption_vi": "Một người đàn ông mặc áo đỏ đội mũ bảo hiểm đi ngang qua chiếc xe tải xanh chở rau.",
+    "detailed_caption_vi": "Cảnh trung ghi lại một người đàn ông mặc áo đỏ, đội mũ bảo hiểm và tay xách túi xanh đang đi bên cạnh chiếc xe tải màu xanh đỗ trên bãi đất sỏi. Thùng xe chất đầy các bao lưới vàng đựng nông sản, phía sau là một số xe tải lớn khác.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.5389999999999999,
+          0.651,
+          0.616,
+          0.772
+        ],
+        "description": "blue plastic bag carried by man",
+        "description_vi": "túi nhựa màu xanh người đàn ông đang xách",
+        "attributes": [
+          "blue",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.562,
+          0.34500000000000003,
+          0.662,
+          0.889
+        ],
+        "description": "man wearing a red shirt, red helmet, and carrying a blue bag",
+        "description_vi": "người đàn ông mặc áo đỏ, đội mũ bảo hiểm đỏ và xách túi xanh",
+        "attributes": [
+          "red",
+          "helmet"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.183,
+          0.306,
+          0.568,
+          0.8689999999999999
+        ],
+        "description": "blue truck with bags of vegetables",
+        "description_vi": "xe tải màu xanh có các bao rau củ",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0053",
+    "visual_source_frame_id": "L30_V066_f0053",
+    "ocr_source_frame_id": "L30_V066_f0053",
+    "quality_flags": [],
+    "caption": "A person in a red shirt and helmet rides a three-wheeled cargo motorcycle loaded with produce.",
+    "detailed_caption": "An outdoor daylight shot shows a person wearing a red shirt and helmet driving a blue three-wheeled motorcycle heavily loaded with yellow sacks of produce. The vehicle is on a paved road with trucks and a storefront visible in the background.",
+    "caption_vi": "Một người mặc áo đỏ và đội mũ bảo hiểm lái xe máy ba bánh chở rau củ.",
+    "detailed_caption_vi": "Cảnh ngoài trời ban ngày cho thấy một người mặc áo đỏ và đội mũ bảo hiểm đang điều khiển chiếc xe máy ba bánh màu xanh chở nặng các bao nông sản màu vàng. Phương tiện đang ở trên đường nhựa với xe tải và cửa hàng ở phía sau.",
+    "ocr_text": "Đ/C: ĐƯỜNG VÀNH ĐAI, ẤP PHÚ THUẬN, XÃ TÂN PHÚ ĐÔNG, TP. SA ĐÉC- ĐT ĐT: 0984.009.003 (THỦY) - 0392.071.393 (TUYẾN) - 0917.888.783 (KIỆT) XE VÂN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.3,
+          0.23800000000000002,
+          0.658,
+          0.8140000000000001
+        ],
+        "description": "blue three-wheeled cargo motorcycle loaded with yellow sacks",
+        "description_vi": "xe máy ba bánh màu xanh chở bao tải vàng",
+        "attributes": [
+          "blue",
+          "three-wheeled",
+          "loaded"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.256,
+          0.465,
+          0.715
+        ],
+        "description": "person in red shirt and helmet driving",
+        "description_vi": "người mặc áo đỏ và mũ bảo hiểm đang lái xe",
+        "attributes": [
+          "red shirt",
+          "red helmet"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "motorcycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0054",
+    "visual_source_frame_id": "L30_V066_f0053",
+    "ocr_source_frame_id": "L30_V066_f0054",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person in a red shirt and helmet rides a three-wheeled cargo motorcycle loaded with produce.",
+    "detailed_caption": "An outdoor daylight shot shows a person wearing a red shirt and helmet driving a blue three-wheeled motorcycle heavily loaded with yellow sacks of produce. The vehicle is on a paved road with trucks and a storefront visible in the background.",
+    "caption_vi": "Một người mặc áo đỏ và đội mũ bảo hiểm lái xe máy ba bánh chở rau củ.",
+    "detailed_caption_vi": "Cảnh ngoài trời ban ngày cho thấy một người mặc áo đỏ và đội mũ bảo hiểm đang điều khiển chiếc xe máy ba bánh màu xanh chở nặng các bao nông sản màu vàng. Phương tiện đang ở trên đường nhựa với xe tải và cửa hàng ở phía sau.",
+    "ocr_text": "Đ/C: ĐƯỜNG VÀNH ĐAI, ẤP PHÚ THUẬN, XÃ TÂN PHÚ ĐÔNG, TP SA ĐÉC ĐT: 0984.009.003 (THỦY) - 0392.071.393 (TUYÊN) - 0917.888.783 (KIỆT) XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.3,
+          0.23800000000000002,
+          0.658,
+          0.8140000000000001
+        ],
+        "description": "blue three-wheeled cargo motorcycle loaded with yellow sacks",
+        "description_vi": "xe máy ba bánh màu xanh chở bao tải vàng",
+        "attributes": [
+          "blue",
+          "three-wheeled",
+          "loaded"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.256,
+          0.465,
+          0.715
+        ],
+        "description": "person in red shirt and helmet driving",
+        "description_vi": "người mặc áo đỏ và mũ bảo hiểm đang lái xe",
+        "attributes": [
+          "red shirt",
+          "red helmet"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "motorcycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0055",
+    "visual_source_frame_id": "L30_V066_f0055",
+    "ocr_source_frame_id": "L30_V066_f0055",
+    "quality_flags": [],
+    "caption": "A person in a red shirt stands next to a blue truck while two people watch nearby.",
+    "detailed_caption": "Medium shot of a person in a red shirt and red helmet standing by a motorbike attached to a blue truck. In the background, an older man in a light shirt and a woman wearing a conical hat and patterned clothing stand observing. The truck is loaded with bags of vegetables.",
+    "caption_vi": "Một người mặc áo đỏ đứng cạnh xe tải màu xanh trong khi hai người khác đứng nhìn.",
+    "detailed_caption_vi": "Cảnh trung ghi lại một người mặc áo đỏ và đội mũ bảo hiểm đỏ đang đứng cạnh chiếc xe máy gắn với thùng xe tải màu xanh. Phía sau, một người lớn tuổi mặc áo sáng màu và một người phụ nữ đội nón lá đang đứng quan sát. Xe tải chở đầy các bao rau củ.",
+    "ocr_text": "CHÓN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.368,
+          0.124,
+          0.9640000000000001
+        ],
+        "description": "woman wearing a conical hat and gray clothes",
+        "description_vi": "phụ nữ đội nón lá mặc đồ xám",
+        "attributes": [
+          "conical hat",
+          "gray"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.10300000000000001,
+          0.264,
+          0.28300000000000003,
+          1.0
+        ],
+        "description": "older man wearing a light shirt",
+        "description_vi": "người đàn ông lớn tuổi mặc áo sáng màu",
+        "attributes": [
+          "light"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.6599999999999999,
+          0.25,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "man wearing a red shirt and red helmet",
+        "description_vi": "người đàn ông mặc áo đỏ và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "red",
+          "helmet"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.34700000000000003,
+          0.209,
+          0.844,
+          0.997
+        ],
+        "description": "blue truck loaded with sacks of vegetables",
+        "description_vi": "xe tải màu xanh chở đầy các bao rau củ",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0056",
+    "visual_source_frame_id": "L30_V066_f0056",
+    "ocr_source_frame_id": "L30_V066_f0056",
+    "quality_flags": [],
+    "caption": "A person in a red shirt walks past a blue truck filled with bags of vegetables.",
+    "detailed_caption": "Medium shot of a person in a red shirt and helmet walking past the rear of a blue truck. Two people stand watching in the background near a small shop setup. The blue truck is loaded with numerous yellow-netted bags of produce.",
+    "caption_vi": "Một người mặc áo đỏ đi ngang qua chiếc xe tải màu xanh chở đầy các bao rau củ.",
+    "detailed_caption_vi": "Cảnh trung ghi lại một người mặc áo đỏ và đội mũ bảo hiểm đang đi qua phía sau chiếc xe tải màu xanh. Hai người khác đang đứng quan sát phía sau gần một cửa hàng nhỏ. Xe tải chất đầy các bao nông sản bọc lưới màu vàng.",
+    "ocr_text": "CHÓN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.195,
+          0.322,
+          1.0
+        ],
+        "description": "person wearing a red shirt and red helmet",
+        "description_vi": "người mặc áo đỏ và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "red",
+          "helmet"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.156,
+          0.223,
+          0.268,
+          0.6699999999999999
+        ],
+        "description": "man wearing a light shirt",
+        "description_vi": "người đàn ông mặc áo sáng màu",
+        "attributes": [
+          "light"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.22200000000000003,
+          0.287,
+          0.316,
+          0.598
+        ],
+        "description": "man wearing a blue shirt",
+        "description_vi": "người đàn ông mặc áo xanh",
+        "attributes": [
+          "blue"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.421,
+          0.14500000000000002,
+          0.959,
+          0.995
+        ],
+        "description": "blue truck filled with bags of vegetables",
+        "description_vi": "xe tải màu xanh chứa đầy các bao rau củ",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0057",
+    "visual_source_frame_id": "L30_V066_f0057",
+    "ocr_source_frame_id": "L30_V066_f0057",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A woman in a striped shirt squats while speaking to an woman seated outdoors near bags of produce.",
+    "detailed_caption": "An outdoor medium shot shows a woman wearing glasses and a striped shirt squatting on the ground, holding a microphone while interviewing an woman. The seated woman wears a red plaid shirt and patterned pants, with white cabbages and bags surrounding them.",
+    "caption_vi": "Một phụ nữ mặc áo sọc ngồi xổm nói chuyện với cụ bà lớn tuổi ngồi ngoài trời cạnh các bao nông sản.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một phụ nữ đeo kính và mặc áo sơ mi kẻ sọc đang ngồi xổm trên mặt đất, cầm micro phỏng vấn một phụ nữ lớn tuổi. Người phụ nữ lớn tuổi ngồi mặc áo sơ mi kẻ caro đỏ và quần họa tiết, xung quanh có bắp cải trắng và các túi đựng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.137,
+          0.10800000000000001,
+          0.545,
+          0.9979999999999999
+        ],
+        "description": "woman in striped shirt and glasses holding microphone",
+        "description_vi": "phụ nữ mặc áo sọc đeo kính cầm micro",
+        "attributes": [
+          "glasses",
+          "striped shirt",
+          "black pants"
+        ],
+        "action": "holding microphone"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.5599999999999999,
+          0.13999999999999999,
+          0.825,
+          0.992
+        ],
+        "description": "woman in red plaid shirt seated outdoors",
+        "description_vi": "cụ bà mặc áo sơ mi kẻ caro đỏ ngồi ngoài trời",
+        "attributes": [
+          "red plaid shirt",
+          "patterned pants"
+        ],
+        "action": "sitting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0058",
+    "visual_source_frame_id": "L30_V066_f0058",
+    "ocr_source_frame_id": "L30_V066_f0058",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "An woman in a red plaid shirt sits outdoors being interviewed while another person works nearby.",
+    "detailed_caption": "A close-up outdoor shot shows an woman with dark hair tied back, wearing a red and black plaid shirt, speaking during an interview. Stacks of white sacks with green markings and yellow crates are visible in the background.",
+    "caption_vi": "Cụ bà mặc áo kẻ caro đỏ ngồi ngoài trời được phỏng vấn trong khi người khác làm việc gần đó.",
+    "detailed_caption_vi": "Cảnh cận cảnh ngoài trời cho thấy một phụ nữ lớn tuổi tóc buộc gọn, mặc áo sơ mi kẻ caro đỏ và đen, đang phát biểu trong một buổi phỏng vấn. Các chồng bao trắng có ký hiệu xanh và giỏ màu vàng ở phía sau.",
+    "ocr_text": "U30",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.235,
+          0.21000000000000002,
+          0.9930000000000001
+        ],
+        "description": "woman in patterned top working in background",
+        "description_vi": "phụ nữ mặc áo họa tiết làm việc ở phía sau",
+        "attributes": [
+          "patterned top",
+          "dark hair"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.055,
+          0.8949999999999999,
+          1.0
+        ],
+        "description": "woman in red plaid shirt speaking",
+        "description_vi": "cụ bà mặc áo sơ mi kẻ caro đỏ đang nói chuyện",
+        "attributes": [
+          "red plaid shirt",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0059",
+    "visual_source_frame_id": "L30_V066_f0059",
+    "ocr_source_frame_id": "L30_V066_f0059",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A woman wearing a red and black plaid shirt speaks outdoors near stacked white sacks and crates of produce.",
+    "detailed_caption": "A medium shot shows a woman speaking outdoors. She has dark hair tied back and wears a red and black plaid collared shirt. Behind her to the left are stacked white sacks, and to the right are yellow crates containing vegetables. A hand holding a microphone with a windscreen appears in the lower left foreground.",
+    "caption_vi": "Một phụ nữ mặc áo sơ mi ca rô đỏ đen đang nói chuyện ngoài trời gần các bao tải trắng và thùng rau củ.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại cảnh một phụ nữ đang phát biểu ngoài trời. Bà có mái tóc tối màu buộc gọn và mặc áo sơ mi cổ bẻ ca rô đỏ đen. Phía sau bà bên trái là các bao tải trắng xếp chồng lên nhau, bên phải là các thùng nhựa màu vàng đựng rau củ. Một bàn tay cầm micro xuất hiện ở góc dưới bên trái.",
+    "ocr_text": "TUỔI TRẺ TV USFEED",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "crate_0",
+        "label": "crate",
+        "bbox": [
+          0.683,
+          0.37800000000000006,
+          0.898,
+          0.863
+        ],
+        "description": "yellow plastic crates holding produce",
+        "description_vi": "thùng nhựa màu vàng đựng nông sản",
+        "attributes": [
+          "yellow",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "sack_0",
+        "label": "sack",
+        "bbox": [
+          0.0,
+          0.0,
+          0.484,
+          0.8390000000000001
+        ],
+        "description": "stacked white sacks with green labels",
+        "description_vi": "các bao tải màu trắng xếp chồng lên nhau có nhãn xanh",
+        "attributes": [
+          "white",
+          "stacked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.308,
+          0.078,
+          0.8230000000000001,
+          1.0
+        ],
+        "description": "woman wearing a red and black plaid shirt with hair tied back",
+        "description_vi": "người phụ nữ mặc áo sơ mi ca rô đỏ đen và buộc tóc gọn gàng",
+        "attributes": [
+          "female",
+          "plaid shirt",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "sack_0",
+        "predicate": "left_of",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "crate_0",
+        "predicate": "right_of",
+        "object_id": "sack_0"
+      },
+      {
+        "subject_id": "crate_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "sack_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "sack_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0060",
+    "visual_source_frame_id": "L30_V066_f0060",
+    "ocr_source_frame_id": "L30_V066_f0060",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A woman wearing a red and black plaid shirt speaks outdoors near stacked white sacks and crates of produce.",
+    "detailed_caption": "A medium shot captures a woman talking outdoors. She has dark hair in a ponytail and wears a red and black plaid button-up shirt. Stacked white sacks with green branding fill the background on the left, while yellow crates filled with vegetables sit on the right.",
+    "caption_vi": "Một phụ nữ mặc áo sơ mi ca rô đỏ đen đang nói chuyện ngoài trời gần các bao tải trắng và thùng nông sản.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại cảnh một phụ nữ đang nói chuyện ngoài trời. Bà có mái tóc tối màu buộc đuôi ngựa và mặc áo sơ mi cài nút ca rô đỏ đen. Các bao tải trắng in nhãn xanh xếp chồng ở phía sau bên trái, trong khi các thùng vàng đựng rau củ nằm bên phải.",
+    "ocr_text": "TUỔI TRẺ TV USFEED",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "crate_0",
+        "label": "crate",
+        "bbox": [
+          0.688,
+          0.39099999999999996,
+          0.892,
+          0.8770000000000001
+        ],
+        "description": "yellow plastic crates containing produce",
+        "description_vi": "thùng nhựa vàng đựng rau củ",
+        "attributes": [
+          "yellow",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "sack_0",
+        "label": "sack",
+        "bbox": [
+          0.0,
+          0.0,
+          0.475,
+          0.844
+        ],
+        "description": "stacked white sacks with green markings",
+        "description_vi": "các bao tải trắng xếp chồng có dấu hiệu màu xanh",
+        "attributes": [
+          "white",
+          "stacked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.31,
+          0.091,
+          0.8390000000000001,
+          1.0
+        ],
+        "description": "woman with dark hair in a ponytail wearing a red and black plaid shirt",
+        "description_vi": "người phụ nữ tóc buộc đuôi ngựa mặc áo ca rô đỏ đen",
+        "attributes": [
+          "female",
+          "plaid shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "sack_0",
+        "predicate": "left_of",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "crate_0",
+        "predicate": "right_of",
+        "object_id": "sack_0"
+      },
+      {
+        "subject_id": "crate_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "sack_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "sack_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0061",
+    "visual_source_frame_id": "L30_V066_f0061",
+    "ocr_source_frame_id": "L30_V066_f0061",
+    "quality_flags": [],
+    "caption": "A woman in a light purple shirt speaks to the camera outdoors with a food distribution stall in the background.",
+    "detailed_caption": "A medium outdoor shot shows a woman with short dark hair wearing a light purple button-down shirt speaking to the camera. In the background, a person in a red shirt stands near a small outdoor stall with a sign reading 'RAU, CỦ MIỄN PHÍ'.",
+    "caption_vi": "Một phụ nữ mặc áo tím nhạt nói chuyện trước ống kính ngoài trời với quầy phân phối thực phẩm phía sau.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một phụ nữ tóc ngắn sẫm màu mặc áo sơ mi cài nút màu tím nhạt đang nói chuyện trước ống kính. Ở phía sau, một người mặc áo đỏ đứng gần một quầy hàng ngoài trời nhỏ có biển ghi 'RAU, CỦ MIỄN PHÍ'.",
+    "ocr_text": "RAU, CỦ MIỄN PHÍ QUÁ KHÔNG DÒNG",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29300000000000004,
+          0.161,
+          0.45,
+          0.8819999999999999
+        ],
+        "description": "person in red shirt standing near stall",
+        "description_vi": "người mặc áo đỏ đứng gần quầy hàng",
+        "attributes": [
+          "red shirt",
+          "dark pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.417,
+          0.091,
+          0.9460000000000001,
+          1.0
+        ],
+        "description": "woman in light purple shirt speaking to camera",
+        "description_vi": "phụ nữ mặc áo tím nhạt nói chuyện trước máy quay",
+        "attributes": [
+          "light purple shirt",
+          "short dark hair",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0062",
+    "visual_source_frame_id": "L30_V066_f0061",
+    "ocr_source_frame_id": "L30_V066_f0062",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a light purple shirt speaks to the camera outdoors with a food distribution stall in the background.",
+    "detailed_caption": "A medium outdoor shot shows a woman with short dark hair wearing a light purple button-down shirt speaking to the camera. In the background, a person in a red shirt stands near a small outdoor stall with a sign reading 'RAU, CỦ MIỄN PHÍ'.",
+    "caption_vi": "Một phụ nữ mặc áo tím nhạt nói chuyện trước ống kính ngoài trời với quầy phân phối thực phẩm phía sau.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một phụ nữ tóc ngắn sẫm màu mặc áo sơ mi cài nút màu tím nhạt đang nói chuyện trước ống kính. Ở phía sau, một người mặc áo đỏ đứng gần một quầy hàng ngoài trời nhỏ có biển ghi 'RAU, CỦ MIỄN PHÍ'.",
+    "ocr_text": "GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ, QUẢ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29300000000000004,
+          0.161,
+          0.45,
+          0.8819999999999999
+        ],
+        "description": "person in red shirt standing near stall",
+        "description_vi": "người mặc áo đỏ đứng gần quầy hàng",
+        "attributes": [
+          "red shirt",
+          "dark pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.417,
+          0.091,
+          0.9460000000000001,
+          1.0
+        ],
+        "description": "woman in light purple shirt speaking to camera",
+        "description_vi": "phụ nữ mặc áo tím nhạt nói chuyện trước máy quay",
+        "attributes": [
+          "light purple shirt",
+          "short dark hair",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0063",
+    "visual_source_frame_id": "L30_V066_f0061",
+    "ocr_source_frame_id": "L30_V066_f0063",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a light purple shirt speaks to the camera outdoors with a food distribution stall in the background.",
+    "detailed_caption": "A medium outdoor shot shows a woman with short dark hair wearing a light purple button-down shirt speaking to the camera. In the background, a person in a red shirt stands near a small outdoor stall with a sign reading 'RAU, CỦ MIỄN PHÍ'.",
+    "caption_vi": "Một phụ nữ mặc áo tím nhạt nói chuyện trước ống kính ngoài trời với quầy phân phối thực phẩm phía sau.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một phụ nữ tóc ngắn sẫm màu mặc áo sơ mi cài nút màu tím nhạt đang nói chuyện trước ống kính. Ở phía sau, một người mặc áo đỏ đứng gần một quầy hàng ngoài trời nhỏ có biển ghi 'RAU, CỦ MIỄN PHÍ'.",
+    "ocr_text": "GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ, QUẢ RAU, CỦ MIỄN PHÍ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29300000000000004,
+          0.161,
+          0.45,
+          0.8819999999999999
+        ],
+        "description": "person in red shirt standing near stall",
+        "description_vi": "người mặc áo đỏ đứng gần quầy hàng",
+        "attributes": [
+          "red shirt",
+          "dark pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.417,
+          0.091,
+          0.9460000000000001,
+          1.0
+        ],
+        "description": "woman in light purple shirt speaking to camera",
+        "description_vi": "phụ nữ mặc áo tím nhạt nói chuyện trước máy quay",
+        "attributes": [
+          "light purple shirt",
+          "short dark hair",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0064",
+    "visual_source_frame_id": "L30_V066_f0061",
+    "ocr_source_frame_id": "L30_V066_f0064",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a light purple shirt speaks to the camera outdoors with a food distribution stall in the background.",
+    "detailed_caption": "A medium outdoor shot shows a woman with short dark hair wearing a light purple button-down shirt speaking to the camera. In the background, a person in a red shirt stands near a small outdoor stall with a sign reading 'RAU, CỦ MIỄN PHÍ'.",
+    "caption_vi": "Một phụ nữ mặc áo tím nhạt nói chuyện trước ống kính ngoài trời với quầy phân phối thực phẩm phía sau.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một phụ nữ tóc ngắn sẫm màu mặc áo sơ mi cài nút màu tím nhạt đang nói chuyện trước ống kính. Ở phía sau, một người mặc áo đỏ đứng gần một quầy hàng ngoài trời nhỏ có biển ghi 'RAU, CỦ MIỄN PHÍ'.",
+    "ocr_text": "GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ, QUẢ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29300000000000004,
+          0.161,
+          0.45,
+          0.8819999999999999
+        ],
+        "description": "person in red shirt standing near stall",
+        "description_vi": "người mặc áo đỏ đứng gần quầy hàng",
+        "attributes": [
+          "red shirt",
+          "dark pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.417,
+          0.091,
+          0.9460000000000001,
+          1.0
+        ],
+        "description": "woman in light purple shirt speaking to camera",
+        "description_vi": "phụ nữ mặc áo tím nhạt nói chuyện trước máy quay",
+        "attributes": [
+          "light purple shirt",
+          "short dark hair",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0065",
+    "visual_source_frame_id": "L30_V066_f0061",
+    "ocr_source_frame_id": "L30_V066_f0065",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a light purple shirt speaks to the camera outdoors with a food distribution stall in the background.",
+    "detailed_caption": "A medium outdoor shot shows a woman with short dark hair wearing a light purple button-down shirt speaking to the camera. In the background, a person in a red shirt stands near a small outdoor stall with a sign reading 'RAU, CỦ MIỄN PHÍ'.",
+    "caption_vi": "Một phụ nữ mặc áo tím nhạt nói chuyện trước ống kính ngoài trời với quầy phân phối thực phẩm phía sau.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một phụ nữ tóc ngắn sẫm màu mặc áo sơ mi cài nút màu tím nhạt đang nói chuyện trước ống kính. Ở phía sau, một người mặc áo đỏ đứng gần một quầy hàng ngoài trời nhỏ có biển ghi 'RAU, CỦ MIỄN PHÍ'.",
+    "ocr_text": "GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ, QUẢ RAU, CỦ MIỄN PHÍ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29300000000000004,
+          0.161,
+          0.45,
+          0.8819999999999999
+        ],
+        "description": "person in red shirt standing near stall",
+        "description_vi": "người mặc áo đỏ đứng gần quầy hàng",
+        "attributes": [
+          "red shirt",
+          "dark pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.417,
+          0.091,
+          0.9460000000000001,
+          1.0
+        ],
+        "description": "woman in light purple shirt speaking to camera",
+        "description_vi": "phụ nữ mặc áo tím nhạt nói chuyện trước máy quay",
+        "attributes": [
+          "light purple shirt",
+          "short dark hair",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0066",
+    "visual_source_frame_id": "L30_V066_f0061",
+    "ocr_source_frame_id": "L30_V066_f0066",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a light purple shirt speaks to the camera outdoors with a food distribution stall in the background.",
+    "detailed_caption": "A medium outdoor shot shows a woman with short dark hair wearing a light purple button-down shirt speaking to the camera. In the background, a person in a red shirt stands near a small outdoor stall with a sign reading 'RAU, CỦ MIỄN PHÍ'.",
+    "caption_vi": "Một phụ nữ mặc áo tím nhạt nói chuyện trước ống kính ngoài trời với quầy phân phối thực phẩm phía sau.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một phụ nữ tóc ngắn sẫm màu mặc áo sơ mi cài nút màu tím nhạt đang nói chuyện trước ống kính. Ở phía sau, một người mặc áo đỏ đứng gần một quầy hàng ngoài trời nhỏ có biển ghi 'RAU, CỦ MIỄN PHÍ'.",
+    "ocr_text": "GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ, QUẢ RAU, CỦ MIỄN PHÍ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29300000000000004,
+          0.161,
+          0.45,
+          0.8819999999999999
+        ],
+        "description": "person in red shirt standing near stall",
+        "description_vi": "người mặc áo đỏ đứng gần quầy hàng",
+        "attributes": [
+          "red shirt",
+          "dark pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.417,
+          0.091,
+          0.9460000000000001,
+          1.0
+        ],
+        "description": "woman in light purple shirt speaking to camera",
+        "description_vi": "phụ nữ mặc áo tím nhạt nói chuyện trước máy quay",
+        "attributes": [
+          "light purple shirt",
+          "short dark hair",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0067",
+    "visual_source_frame_id": "L30_V066_f0067",
+    "ocr_source_frame_id": "L30_V066_f0067",
+    "quality_flags": [],
+    "caption": "A smiling man in a red polo shirt stands in front of a blue truck loaded with produce.",
+    "detailed_caption": "A medium outdoor shot shows a smiling man with short dark hair wearing a red polo shirt with a red cross emblem. He stands next to a blue truck bed containing a large plastic bag filled with large green gourds. A white sign with red Vietnamese text is affixed to the truck.",
+    "caption_vi": "Người đàn ông cười mặc áo polo đỏ đứng trước chiếc xe tải màu xanh chở nông sản.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một người đàn ông mỉm cười tóc ngắn sẫm màu mặc áo polo đỏ có gắn huy hiệu chữ thập đỏ. Anh đứng cạnh thùng xe tải màu xanh chứa một túi nhựa lớn đựng đầy bầu xanh lớn. Một bảng hiệu màu trắng có chữ tiếng Việt màu đỏ được dán trên xe tải.",
+    "ocr_text": "XE VÂN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.012,
+          0.118,
+          0.49800000000000005,
+          1.0
+        ],
+        "description": "smiling man in red polo shirt with red cross emblem",
+        "description_vi": "người đàn ông mỉm cười mặc áo polo đỏ có huy hiệu chữ thập đỏ",
+        "attributes": [
+          "red polo shirt",
+          "smiling",
+          "short dark hair"
+        ],
+        "action": "smiling"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.331,
+          0.053,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck bed with bags of produce and text sign",
+        "description_vi": "thùng xe tải màu xanh chứa túi nông sản và bảng hiệu chữ",
+        "attributes": [
+          "blue",
+          "loaded"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0068",
+    "visual_source_frame_id": "L30_V066_f0067",
+    "ocr_source_frame_id": "L30_V066_f0068",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A smiling man in a red polo shirt stands in front of a blue truck loaded with produce.",
+    "detailed_caption": "A medium outdoor shot shows a smiling man with short dark hair wearing a red polo shirt with a red cross emblem. He stands next to a blue truck bed containing a large plastic bag filled with large green gourds. A white sign with red Vietnamese text is affixed to the truck.",
+    "caption_vi": "Người đàn ông cười mặc áo polo đỏ đứng trước chiếc xe tải màu xanh chở nông sản.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một người đàn ông mỉm cười tóc ngắn sẫm màu mặc áo polo đỏ có gắn huy hiệu chữ thập đỏ. Anh đứng cạnh thùng xe tải màu xanh chứa một túi nhựa lớn đựng đầy bầu xanh lớn. Một bảng hiệu màu trắng có chữ tiếng Việt màu đỏ được dán trên xe tải.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.012,
+          0.118,
+          0.49800000000000005,
+          1.0
+        ],
+        "description": "smiling man in red polo shirt with red cross emblem",
+        "description_vi": "người đàn ông mỉm cười mặc áo polo đỏ có huy hiệu chữ thập đỏ",
+        "attributes": [
+          "red polo shirt",
+          "smiling",
+          "short dark hair"
+        ],
+        "action": "smiling"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.331,
+          0.053,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck bed with bags of produce and text sign",
+        "description_vi": "thùng xe tải màu xanh chứa túi nông sản và bảng hiệu chữ",
+        "attributes": [
+          "blue",
+          "loaded"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0069",
+    "visual_source_frame_id": "L30_V066_f0067",
+    "ocr_source_frame_id": "L30_V066_f0069",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A smiling man in a red polo shirt stands in front of a blue truck loaded with produce.",
+    "detailed_caption": "A medium outdoor shot shows a smiling man with short dark hair wearing a red polo shirt with a red cross emblem. He stands next to a blue truck bed containing a large plastic bag filled with large green gourds. A white sign with red Vietnamese text is affixed to the truck.",
+    "caption_vi": "Người đàn ông cười mặc áo polo đỏ đứng trước chiếc xe tải màu xanh chở nông sản.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một người đàn ông mỉm cười tóc ngắn sẫm màu mặc áo polo đỏ có gắn huy hiệu chữ thập đỏ. Anh đứng cạnh thùng xe tải màu xanh chứa một túi nhựa lớn đựng đầy bầu xanh lớn. Một bảng hiệu màu trắng có chữ tiếng Việt màu đỏ được dán trên xe tải.",
+    "ocr_text": "XE VẬN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.012,
+          0.118,
+          0.49800000000000005,
+          1.0
+        ],
+        "description": "smiling man in red polo shirt with red cross emblem",
+        "description_vi": "người đàn ông mỉm cười mặc áo polo đỏ có huy hiệu chữ thập đỏ",
+        "attributes": [
+          "red polo shirt",
+          "smiling",
+          "short dark hair"
+        ],
+        "action": "smiling"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.331,
+          0.053,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck bed with bags of produce and text sign",
+        "description_vi": "thùng xe tải màu xanh chứa túi nông sản và bảng hiệu chữ",
+        "attributes": [
+          "blue",
+          "loaded"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0070",
+    "visual_source_frame_id": "L30_V066_f0070",
+    "ocr_source_frame_id": "L30_V066_f0070",
+    "quality_flags": [],
+    "caption": "A smiling man in a red polo shirt stands in front of a blue truck carrying produce.",
+    "detailed_caption": "A medium outdoor shot shows a smiling man with short dark hair, wearing a red polo shirt with a red cross emblem on the chest. He stands in front of the blue bed of a truck filled with large green squashes inside a plastic bag. A white sign with red Vietnamese lettering is attached to the truck.",
+    "caption_vi": "Người đàn ông mỉm cười mặc áo polo đỏ đứng trước xe tải chở rau củ màu xanh.",
+    "detailed_caption_vi": "Cảnh trung ngoài trời cho thấy một người đàn ông mỉm cười tóc ngắn sẫm màu mặc áo polo đỏ có huy hiệu chữ thập đỏ trên ngực. Anh đứng trước thùng xe tải màu xanh đầy những quả bí xanh lớn trong túi nhựa. Một bảng hiệu màu trắng có chữ tiếng Việt màu đỏ gắn trên xe tải.",
+    "ocr_text": "XE VÂN CHUYỂN RAU - CỦ - QUẢ TỔ TỪ THIỆN SA ĐÉC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.118,
+          0.479,
+          1.0
+        ],
+        "description": "smiling man in red polo shirt with red cross emblem",
+        "description_vi": "người đàn ông mỉm cười mặc áo polo đỏ có huy hiệu chữ thập đỏ",
+        "attributes": [
+          "red polo shirt",
+          "smiling",
+          "short dark hair"
+        ],
+        "action": "smiling"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.32999999999999996,
+          0.039,
+          1.0,
+          1.0
+        ],
+        "description": "blue truck bed loaded with produce and sign",
+        "description_vi": "thùng xe tải màu xanh chứa nông sản và bảng hiệu",
+        "attributes": [
+          "blue",
+          "loaded"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0071",
+    "visual_source_frame_id": "L30_V066_f0071",
+    "ocr_source_frame_id": "L30_V066_f0071",
+    "quality_flags": [],
+    "caption": "A blue banner featuring Vietnamese text and lotus illustrations hangs under a shelter.",
+    "detailed_caption": "A medium shot of a large blue promotional banner hanging outdoors under a simple corrugated metal roof. The banner displays large red Vietnamese text reading GIẠN HÀNG KHÔNG ĐỒNG RAU, CỦ QUẢ along with smaller text and a circular emblem at the top center. Pink lotus flowers and green leaves decorate the bottom border of the banner.",
+    "caption_vi": "Một tấm băng rôn màu xanh in chữ tiếng Việt và hình hoa sen được treo dưới mái che.",
+    "detailed_caption_vi": "Cận cảnh một tấm băng rôn quảng cáo lớn màu xanh dương được treo ngoài trời dưới mái che bằng tôn đơn sơ. Trên băng rôn có in dòng chữ tiếng Việt màu đỏ lớn GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ QUẢ cùng biểu tượng tròn ở phía trên. Viền dưới của băng rôn được trang trí bằng hình ảnh hoa sen hồng và lá xanh.",
+    "ocr_text": "HỘI NÔNG DÂN HUYỆN LAI VUNG HỘI NÔNG DÂN XÃ HÒA LONG GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ QUẢ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "banner_0",
+        "label": "banner",
+        "bbox": [
+          0.051000000000000004,
+          0.057999999999999996,
+          0.9029999999999999,
+          0.992
+        ],
+        "description": "blue banner with red Vietnamese text and lotus flowers",
+        "description_vi": "băng rôn màu xanh có chữ tiếng Việt màu đỏ và hoa sen",
+        "attributes": [
+          "blue",
+          "red text",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0072",
+    "visual_source_frame_id": "L30_V066_f0072",
+    "ocr_source_frame_id": "L30_V066_f0072",
+    "quality_flags": [],
+    "caption": "A person wearing dark trousers holds a green plastic bag containing vegetables near a wooden table.",
+    "detailed_caption": "A close-up shot focuses on a person wearing dark trousers standing next to a table and a crate filled with green produce. The person holds a translucent green plastic bag containing a long green vegetable. A blurred green leafy item appears in the foreground.",
+    "caption_vi": "Một người mặc quần tối màu cầm túi nhựa đựng rau củ màu xanh gần bàn gỗ.",
+    "detailed_caption_vi": "Cận cảnh một người mặc quần dài tối màu đang đứng cạnh chiếc bàn và một giỏ đựng rau củ màu xanh. Người này đang cầm một túi nhựa màu xanh đựng rau quả dài. Phía trước có một vật thể xanh mờ xuất hiện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "crate_0",
+        "label": "crate",
+        "bbox": [
+          0.5740000000000001,
+          0.435,
+          0.998,
+          0.988
+        ],
+        "description": "black crate containing green vegetables",
+        "description_vi": "sọt nhựa đen đựng rau xanh",
+        "attributes": [
+          "black",
+          "filled with vegetables"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.521,
+          0.0,
+          0.794,
+          0.9890000000000001
+        ],
+        "description": "person wearing dark trousers",
+        "description_vi": "người mặc quần tối màu",
+        "attributes": [
+          "dark trousers"
+        ],
+        "action": "holding a bag"
+      },
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.28700000000000003,
+          0.0,
+          0.686,
+          0.362
+        ],
+        "description": "translucent green plastic bag with vegetables",
+        "description_vi": "túi nhựa màu xanh mờ đựng rau củ",
+        "attributes": [
+          "green",
+          "translucent"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "crate_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "above",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "crate_0",
+        "predicate": "below",
+        "object_id": "plastic_bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_0"
+      },
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0073",
+    "visual_source_frame_id": "L30_V066_f0073",
+    "ocr_source_frame_id": "L30_V066_f0073",
+    "quality_flags": [],
+    "caption": "Multiple green plastic bags filled with vegetables sit on a concrete surface outdoors.",
+    "detailed_caption": "A close-up shot of several bright green plastic bags packed with vegetables arranged on a light-colored concrete surface. The bags are tied at the top and piled close together, with foliage and debris visible in the background.",
+    "caption_vi": "Nhiều túi nhựa màu xanh đựng rau củ được đặt trên nền bê tông ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh nhiều túi nhựa màu xanh lá sáng chứa đầy rau củ được xếp trên bề mặt bê tông sáng màu. Các túi được buộc túm ở phần miệng và xếp sát nhau, phía sau là cây cối và đất đá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.219,
+          0.219,
+          0.665,
+          0.638
+        ],
+        "description": "bright green plastic bag filled with vegetables",
+        "description_vi": "túi nhựa màu xanh lá sáng đựng rau củ",
+        "attributes": [
+          "green",
+          "tied"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_bag_1",
+        "label": "plastic bag",
+        "bbox": [
+          0.298,
+          0.553,
+          0.693,
+          0.9149999999999999
+        ],
+        "description": "green plastic bag filled with produce in foreground",
+        "description_vi": "túi nhựa màu xanh đựng rau củ ở tiền cảnh",
+        "attributes": [
+          "green",
+          "tied"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_bag_2",
+        "label": "plastic bag",
+        "bbox": [
+          0.562,
+          0.662,
+          1.0,
+          0.999
+        ],
+        "description": "green plastic bag filled with vegetables on the right",
+        "description_vi": "túi nhựa màu xanh đựng rau củ bên phải",
+        "attributes": [
+          "green",
+          "tied"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_1"
+      },
+      {
+        "subject_id": "plastic_bag_1",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_0"
+      },
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "above",
+        "object_id": "plastic_bag_2"
+      },
+      {
+        "subject_id": "plastic_bag_2",
+        "predicate": "below",
+        "object_id": "plastic_bag_0"
+      },
+      {
+        "subject_id": "plastic_bag_1",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_2"
+      },
+      {
+        "subject_id": "plastic_bag_2",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0074",
+    "visual_source_frame_id": "L30_V066_f0074",
+    "ocr_source_frame_id": "L30_V066_f0074",
+    "quality_flags": [],
+    "caption": "A person wearing a pink shirt stands beneath a roof structure.",
+    "detailed_caption": "A close-up shot shows a person wearing a pink collared shirt standing under a roof structure. Bright sunlight creates lens flare effects across the frame, partially obscuring the view of the person's upper body and face.",
+    "caption_vi": "Một người mặc áo hồng đứng dưới cấu trúc mái che.",
+    "detailed_caption_vi": "Cận cảnh một người mặc áo cổ bẻ màu hồng đang đứng dưới một mái che. Ánh nắng chói chang tạo ra hiệu ứng lóe sáng làm mờ một phần khuôn mặt và phần thân trên của người đó.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.679,
+          1.0
+        ],
+        "description": "person wearing a pink shirt",
+        "description_vi": "người mặc áo màu hồng",
+        "attributes": [
+          "pink shirt"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0075",
+    "visual_source_frame_id": "L30_V066_f0075",
+    "ocr_source_frame_id": "L30_V066_f0075",
+    "quality_flags": [],
+    "caption": "A woman wearing a black floral outfit carries produce while a man in a red shirt bends over a table under a shelter.",
+    "detailed_caption": "An outdoor medium shot shows two people at a small roadside produce stall under a corrugated roof. On the left, a woman with dark hair wearing a black floral top and matching pants carries green vegetables. On the right, a man wearing a red shirt and dark pants leans over a wooden table laden with green produce. A blue sign with Vietnamese text hangs from the shelter.",
+    "caption_vi": "Một phụ nữ mặc trang phục hoa đen đang xách rau trong khi một người đàn ông mặc áo đỏ cúi xuống bàn dưới mái che.",
+    "detailed_caption_vi": "Khung hình trung cảnh ngoài trời cho thấy hai người ở một quầy rau nhỏ ven đường dưới mái tôn. Bên trái, một phụ nữ tóc tối màu mặc áo hoa đen và quần đồng bộ đang xách rau xanh. Bên phía phải, một người đàn ông mặc áo đỏ và quần tối màu đang cúi người bên chiếc bàn gỗ đầy rau củ.",
+    "ocr_text": "TUỔI TRẺ TV GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ, QUẢ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.26,
+          0.34500000000000003,
+          0.8130000000000001,
+          1.0
+        ],
+        "description": "man wearing a red shirt and dark pants leaning over a table",
+        "description_vi": "người đàn ông mặc áo đỏ và quần tối màu đang cúi người trên bàn",
+        "attributes": [
+          "male",
+          "red shirt"
+        ],
+        "action": "leaning"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.221,
+          0.0,
+          0.461,
+          0.412
+        ],
+        "description": "blue sign with white and red lettering and floral graphics",
+        "description_vi": "tấm biển màu xanh có chữ trắng đỏ và họa tiết hoa",
+        "attributes": [
+          "blue",
+          "sign"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.0,
+          0.05,
+          0.195,
+          1.0
+        ],
+        "description": "woman wearing a black floral top and pants carrying produce",
+        "description_vi": "người phụ nữ mặc áo quần họa tiết hoa đen đang xách rau",
+        "attributes": [
+          "female",
+          "floral outfit"
+        ],
+        "action": "carrying"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "left_of",
+        "object_id": "sign_0"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "right_of",
+        "object_id": "woman_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0076",
+    "visual_source_frame_id": "L30_V066_f0076",
+    "ocr_source_frame_id": "L30_V066_f0076",
+    "quality_flags": [],
+    "caption": "Several bags filled with fresh vegetables and cucumbers rest on a surface.",
+    "detailed_caption": "A close-up shot of multiple plastic bags containing vegetables. In the foreground, a transparent bag is filled with green cucumbers, while behind it are bags containing pale pink and white produce, as well as a yellow-tied bag.",
+    "caption_vi": "Nhiều túi đựng rau củ tươi và dưa chuột được đặt trên một bề mặt.",
+    "detailed_caption_vi": "Cận cảnh một số túi ni-lông chứa rau củ. Ở tiền cảnh là một túi trong suốt đựng đầy dưa chuột màu xanh, phía sau là các túi chứa củ quả màu hồng nhạt và trắng, cùng một túi được buộc dây màu vàng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.16899999999999998,
+          0.34,
+          0.563,
+          1.0
+        ],
+        "description": "transparent bag filled with green cucumbers",
+        "description_vi": "túi trong suốt đựng đầy dưa chuột xanh",
+        "attributes": [
+          "transparent",
+          "filled with cucumbers"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_bag_1",
+        "label": "plastic bag",
+        "bbox": [
+          0.471,
+          0.028999999999999998,
+          0.921,
+          0.5800000000000001
+        ],
+        "description": "purple plastic bag containing vegetables",
+        "description_vi": "túi nhựa màu tím chứa rau củ",
+        "attributes": [
+          "purple",
+          "tied"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_bag_2",
+        "label": "plastic bag",
+        "bbox": [
+          0.521,
+          0.421,
+          0.9400000000000001,
+          1.0
+        ],
+        "description": "yellow-tied plastic bag with green produce",
+        "description_vi": "túi nhựa buộc dây vàng chứa rau xanh",
+        "attributes": [
+          "yellow tie",
+          "green produce"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plastic_bag_1",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_2"
+      },
+      {
+        "subject_id": "plastic_bag_2",
+        "predicate": "overlapping",
+        "object_id": "plastic_bag_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0077",
+    "visual_source_frame_id": "L30_V066_f0077",
+    "ocr_source_frame_id": "L30_V066_f0077",
+    "quality_flags": [],
+    "caption": "A close-up view shows bags of green produce and vegetables on a surface.",
+    "detailed_caption": "A motion-blurred close-up shot of various plastic bags filled with vegetables. A large green bag containing long gourds is prominent on the left, next to purple and transparent bags filled with produce.",
+    "caption_vi": "Cận cảnh các túi đựng rau củ màu xanh trên một bề mặt.",
+    "detailed_caption_vi": "Cận cảnh mờ nhòe do chuyển động của các túi nhựa đựng rau củ khác nhau. Một túi màu xanh lớn chứa bầu dài nằm nổi bật ở bên trái, bên cạnh các túi màu tím và trong suốt đựng rau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.11399999999999999,
+          0.044,
+          0.52,
+          0.8939999999999999
+        ],
+        "description": "green plastic bag containing long vegetables",
+        "description_vi": "túi nhựa màu xanh chứa rau quả dài",
+        "attributes": [
+          "green",
+          "transparent"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_bag_1",
+        "label": "plastic bag",
+        "bbox": [
+          0.524,
+          0.028,
+          0.9400000000000001,
+          0.7350000000000001
+        ],
+        "description": "purple plastic bag containing produce",
+        "description_vi": "túi nhựa màu tím chứa nông sản",
+        "attributes": [
+          "purple",
+          "tied"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V066_f0078",
+    "visual_source_frame_id": "L30_V066_f0078",
+    "ocr_source_frame_id": "L30_V066_f0078",
+    "quality_flags": [],
+    "caption": "A person in a purple shirt and red pants stands at a small roadside produce stall while a man walks past carrying a bag.",
+    "detailed_caption": "An outdoor medium shot shows a small roadside produce shelter with a blue sign. A person wearing a purple shirt, patterned red pants, and green boots stands facing the produce table under the shelter. To the right, a man wearing a white shirt, brown trousers, and a red helmet walks away while carrying a green bag.",
+    "caption_vi": "Một người mặc áo tím và quần đỏ đứng tại quầy rau ven đường trong khi người đàn ông đội mũ bảo hiểm đỏ đang đi ngang qua xách túi.",
+    "detailed_caption_vi": "Khung hình trung cảnh ngoài trời cho thấy một mái che bán rau củ ven đường có treo biển hiệu xanh. Một người mặc áo tím, quần đỏ họa tiết và ủng xanh đang đứng ở quầy hàng dưới mái che. Phía bên phải, một người đàn ông mặc áo trắng, quần nâu và đội mũ bảo hiểm đỏ đang bước đi tay xách túi xanh.",
+    "ocr_text": "TUỔI TRẺ TV GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ, QUẢ RAU, CỦ MIỄN PHÍ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.716,
+          0.065,
+          0.868,
+          0.995
+        ],
+        "description": "man wearing a white shirt, brown trousers, and a red helmet walking",
+        "description_vi": "người đàn ông mặc áo trắng, quần nâu và đội mũ bảo hiểm đỏ đang đi bộ",
+        "attributes": [
+          "male",
+          "white shirt",
+          "red helmet"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.5660000000000001,
+          0.423,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "person wearing a purple shirt, patterned red trousers, and green boots standing at a stall",
+        "description_vi": "người mặc áo tím, quần đỏ họa tiết và đi ủng xanh đang đứng ở quầy hàng",
+        "attributes": [
+          "purple shirt",
+          "red pants",
+          "boots"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.195,
+          0.318,
+          0.32599999999999996,
+          0.49699999999999994
+        ],
+        "description": "small white rectangular sign with black text hanging from a wooden post",
+        "description_vi": "tấm biển chữ nhật màu trắng nhỏ có chữ đen treo trên cột gỗ",
+        "attributes": [
+          "white",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "sign_1",
+        "label": "sign",
+        "bbox": [
+          0.343,
+          0.165,
+          0.61,
+          0.492
+        ],
+        "description": "blue sign with white and red Vietnamese text",
+        "description_vi": "tấm biển xanh có chữ tiếng Việt màu trắng và đỏ",
+        "attributes": [
+          "blue",
+          "sign"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "sign_0"
+      },
+      {
+        "subject_id": "sign_1",
+        "predicate": "left_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "right_of",
+        "object_id": "sign_1"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "sign_0"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "left_of",
+        "object_id": "sign_1"
+      },
+      {
+        "subject_id": "sign_1",
+        "predicate": "right_of",
+        "object_id": "sign_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0079",
+    "visual_source_frame_id": "L30_V066_f0079",
+    "ocr_source_frame_id": "L30_V066_f0079",
+    "quality_flags": [],
+    "caption": "A person in a purple shirt selects vegetables at an outdoor stall.",
+    "detailed_caption": "A medium shot of an outdoor vegetable stall under a simple wooden roof. A person wearing a purple shirt and patterned trousers stands bending over a table laden with bags of green vegetables. A white sign and a blue banner are attached to the shelter structure.",
+    "caption_vi": "Một người mặc áo tím chọn rau tại quầy hàng ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh một quầy rau ngoài trời dưới mái hiên gỗ đơn sơ. Một người mặc áo tím và quần hoa văn đang đứng cúi người bên chiếc bàn bày đầy các túi rau xanh. Một biển báo trắng và một băng rôn xanh được gắn vào khung mái che.",
+    "ocr_text": "RAU, CỦ MIỄN PHÍ GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ QUẢ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.449,
+          0.43000000000000005,
+          0.661,
+          1.0
+        ],
+        "description": "person wearing purple shirt and patterned trousers",
+        "description_vi": "người mặc áo tím và quần hoa văn",
+        "attributes": [
+          "purple shirt",
+          "patterned trousers"
+        ],
+        "action": "selecting vegetables"
+      },
+      {
+        "object_id": "stall_0",
+        "label": "stall",
+        "bbox": [
+          0.043,
+          0.11599999999999999,
+          0.8310000000000001,
+          0.999
+        ],
+        "description": "outdoor shelter stall with wooden pillars and roof",
+        "description_vi": "quầy hàng ngoài trời với trụ gỗ và mái che",
+        "attributes": [
+          "wooden",
+          "roofed"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "stall_0"
+      },
+      {
+        "subject_id": "stall_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0080",
+    "visual_source_frame_id": "L30_V066_f0080",
+    "ocr_source_frame_id": "L30_V066_f0080",
+    "quality_flags": [],
+    "caption": "A person wearing a conical hat and patterned jacket pushes a bicycle with a green bag in the basket.",
+    "detailed_caption": "A medium shot shows a person wearing a conical hat, face mask, and pink jacket pushing a bicycle along a path surrounded by bamboo trees. A green bag is placed in the front basket of the bicycle.",
+    "caption_vi": "Một người đội nón lá và mặc áo khoác họa tiết đang dắt xe đạp có giỏ đựng túi xanh.",
+    "detailed_caption_vi": "Cận cảnh một người đội nón lá, đeo khẩu trang và mặc áo khoác hồng đang dắt xe đạp đi dọc theo lối mòn xung quanh là rừng tre. Phía giỏ trước của xe đạp có đặt một túi màu xanh.",
+    "ocr_text": "Herbalife",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.187,
+          0.516,
+          0.649,
+          0.999
+        ],
+        "description": "bicycle with front basket containing a green bag",
+        "description_vi": "xe đạp có giỏ trước chứa túi màu xanh",
+        "attributes": [
+          "with basket",
+          "two-wheeled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.477,
+          0.063,
+          0.865,
+          0.999
+        ],
+        "description": "person wearing conical hat and pink jacket pushing bicycle",
+        "description_vi": "người đội nón lá và mặc áo khoác hồng đang dắt xe đạp",
+        "attributes": [
+          "conical hat",
+          "pink jacket",
+          "face mask"
+        ],
+        "action": "pushing bicycle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V066_f0081",
+    "visual_source_frame_id": "L30_V066_f0081",
+    "ocr_source_frame_id": "L30_V066_f0081",
+    "quality_flags": [],
+    "caption": "A person stands next to a red bicycle loaded with a basket of vegetables near an outdoor stall.",
+    "detailed_caption": "A medium shot captures two people near an outdoor community stall with a blue banner and a sign. A person wearing a grey t-shirt and shorts stands next to a red bicycle equipped with a front wire basket filled with green produce. Another person in a red shirt bends near the bicycle.",
+    "caption_vi": "Một người đứng cạnh chiếc xe đạp đỏ chở giỏ rau gần quầy hàng ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh hai người ở gần một quầy hàng cộng đồng ngoài trời có băng rôn xanh và biển báo. Một người mặc áo thun xám và quần đùi đang đứng cạnh chiếc xe đạp màu đỏ có giỏ lưới phía trước đựng rau xanh. Một người khác mặc áo đỏ đang cúi người bên chiếc xe đạp.",
+    "ocr_text": "RAU, CỦ MIỄN PHÍ GIAN HÀNG KHÔNG ĐỒNG RAU, CỦ QUẢ Herbalife Tác giả: Phúc Hiền",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.42300000000000004,
+          0.392,
+          0.9550000000000001,
+          0.999
+        ],
+        "description": "red bicycle with front basket containing vegetables",
+        "description_vi": "xe đạp màu đỏ có giỏ trước đựng rau củ",
+        "attributes": [
+          "red",
+          "with basket"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.513,
+          0.319,
+          0.696,
+          0.762
+        ],
+        "description": "person wearing a red shirt bending down",
+        "description_vi": "người mặc áo đỏ đang cúi người",
+        "attributes": [
+          "red shirt"
+        ],
+        "action": "bending"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.638,
+          0.078,
+          0.8140000000000001,
+          0.999
+        ],
+        "description": "person wearing grey t-shirt and shorts standing",
+        "description_vi": "người mặc áo thun xám và quần đùi đang đứng",
+        "attributes": [
+          "grey t-shirt",
+          "shorts"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  }
+]

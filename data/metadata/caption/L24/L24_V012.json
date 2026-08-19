@@ -1,0 +1,2670 @@
+[
+  {
+    "frame_id": "L24_V012_f0001",
+    "visual_source_frame_id": "L24_V012_f0001",
+    "ocr_source_frame_id": "L24_V012_f0001",
+    "quality_flags": [],
+    "caption": "A close-up view of a tree trunk with blurred display boards in the background.",
+    "detailed_caption": "A close-up shot focuses on the textured bark of a large tree trunk filling the foreground. In the blurred background, exhibition panels and posters stand on a paved outdoor area.",
+    "caption_vi": "Cận cảnh thân cây sần sùi với các bảng trưng bày mờ ở phía sau.",
+    "detailed_caption_vi": "Cận cảnh phần thân cây lớn với lớp vỏ xù xì chiếm trọn khung hình trước. Phía sau mờ ảo là các bảng trưng bày ngoài trời và khung cảnh đường phố.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tree_trunk_0",
+        "label": "tree trunk",
+        "bbox": [
+          0.21400000000000002,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a large tree trunk with rough, textured bark",
+        "description_vi": "thân cây lớn với lớp vỏ xù xì, thô ráp",
+        "attributes": [
+          "brown",
+          "textured",
+          "rough"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0002",
+    "visual_source_frame_id": "L24_V012_f0002",
+    "ocr_source_frame_id": "L24_V012_f0002",
+    "quality_flags": [],
+    "caption": "An outdoor park scene with banners, display panels, and lion dance decorations.",
+    "detailed_caption": "A wide shot shows an outdoor square or park with a paved path and trees along a street. Display boards, vertical yellow banners, and a lion dance graphic overlay appear in the scene.",
+    "caption_vi": "Cảnh công viên ngoài trời với các biểu ngữ, bảng trưng bày và đồ trang trí múa lân.",
+    "detailed_caption_vi": "Cảnh góc rộng khu vực công viên ngoài trời với lối đi lát gạch và hàng cây xanh dọc theo đường phố. Các bảng trưng bày, biểu ngữ vàng và đồ họa múa lân xuất hiện trong khung cảnh.",
+    "ocr_text": "QUÂN 5 Chợ Lớn HTV 2 NGÀY 1 ĐÊM",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "banner_0",
+        "label": "banner",
+        "bbox": [
+          0.385,
+          0.149,
+          0.477,
+          0.452
+        ],
+        "description": "a yellow vertical banner with text hanging near a lamppost",
+        "description_vi": "biểu ngữ dọc màu vàng có chữ treo gần cột đèn",
+        "attributes": [
+          "yellow",
+          "vertical",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0003",
+    "visual_source_frame_id": "L24_V012_f0003",
+    "ocr_source_frame_id": "L24_V012_f0003",
+    "quality_flags": [],
+    "caption": "A man in a white and black jersey speaks into an HTV microphone surrounded by people in red uniforms.",
+    "detailed_caption": "A medium close-up shot shows a man in the foreground wearing a white and black jersey, speaking while holding an HTV microphone. To his right, several people wearing red and yellow athletic uniforms stand outdoors with trees in the background.",
+    "caption_vi": "Một người đàn ông mặc áo trắng đen đang nói vào micro HTV xung quanh là những người mặc đồng phục đỏ.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông ở trung tâm mặc áo thể thao trắng đen, đang cầm micro của đài HTV để phát biểu. Phía sau và bên cạnh ông là nhiều người mặc đồng phục thể thao màu đỏ, vàng trong không gian ngoài trời có cây xanh.",
+    "ocr_text": "HTV HITASA XE ĐẠP - XE ĐẠP ĐIỆN THÂN TẶNG",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.523,
+          0.7569999999999999,
+          0.638,
+          0.996
+        ],
+        "description": "a handheld microphone with an HTV logo block",
+        "description_vi": "micro cầm tay có gắn hộp logo HTV",
+        "attributes": [
+          "black",
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.269,
+          0.14600000000000002,
+          0.75,
+          1.0
+        ],
+        "description": "a man in a white and black sleeveless jersey speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo thể thao trắng đen không tay đang nói vào micro",
+        "attributes": [
+          "white",
+          "black",
+          "sleeveless"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.7150000000000001,
+          0.40399999999999997,
+          0.977,
+          1.0
+        ],
+        "description": "a man in a red and yellow athletic uniform viewed from behind and side",
+        "description_vi": "một người đàn ông mặc đồng phục thể thao đỏ vàng nhìn từ phía sau và bên",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0004",
+    "visual_source_frame_id": "L24_V012_f0004",
+    "ocr_source_frame_id": "L24_V012_f0004",
+    "quality_flags": [],
+    "caption": "A man in a white and black jersey speaks into an HTV microphone amidst a crowd outdoors.",
+    "detailed_caption": "A medium close-up shot shows a man in a white and black jersey speaking into an HTV microphone with hand gestures. Surrounding him are several people in casual clothing and others in red athletic uniforms.",
+    "caption_vi": "Một người đàn ông mặc áo trắng đen nói vào micro HTV giữa đám đông ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa cho thấy người đàn ông mặc áo trắng đen đang phát biểu và ra hiệu tay cầm micro HTV. Xung quanh anh là những người mặc trang phục đời thường và đồng phục thể thao màu đỏ.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.219,
+          0.164,
+          0.725,
+          1.0
+        ],
+        "description": "a man in a white and black jersey speaking with hand raised",
+        "description_vi": "một người đàn ông mặc áo trắng đen đang nói chuyện và giơ tay",
+        "attributes": [
+          "white",
+          "black"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.737,
+          0.366,
+          0.966,
+          1.0
+        ],
+        "description": "a man in a red uniform looking towards the center",
+        "description_vi": "một người đàn ông mặc đồng phục đỏ đang nhìn về hướng trung tâm",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0005",
+    "visual_source_frame_id": "L24_V012_f0005",
+    "ocr_source_frame_id": "L24_V012_f0005",
+    "quality_flags": [],
+    "caption": "A man in a white outfit with a white cap speaks into an HTV microphone surrounded by people.",
+    "detailed_caption": "A medium shot captures a man in the center wearing a white outfit and a white cap, holding an HTV microphone while speaking. Beside him are other men wearing red and yellow athletic uniforms outdoors.",
+    "caption_vi": "Một người đàn ông mặc đồ trắng đội nón trắng đang phát biểu vào micro HTV giữa đám đông.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông ở trung tâm mặc trang phục trắng, đội mũ trắng và cầm micro của đài HTV. Xung quanh ông là những người đàn ông khác mặc đồng phục thể thao đỏ và vàng ngoài trời.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.156,
+          0.10700000000000001,
+          0.399,
+          0.9770000000000001
+        ],
+        "description": "a man in a red and yellow athletic uniform smiling",
+        "description_vi": "một người đàn ông mặc đồng phục thể thao đỏ vàng đang mỉm cười",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.233,
+          0.17200000000000001,
+          0.721,
+          1.0
+        ],
+        "description": "a man in a white outfit and white cap speaking into a microphone",
+        "description_vi": "một người đàn ông mặc trang phục trắng và đội mũ trắng đang nói vào micro",
+        "attributes": [
+          "white",
+          "cap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0006",
+    "visual_source_frame_id": "L24_V012_f0006",
+    "ocr_source_frame_id": "L24_V012_f0006",
+    "quality_flags": [],
+    "caption": "A man in a white outfit and cap speaks into an HTV microphone with people in red uniforms behind him.",
+    "detailed_caption": "A medium shot features a man wearing a white outfit and white cap speaking into an HTV microphone and gesturing with his hand. Several people in red and yellow athletic uniforms stand in the background.",
+    "caption_vi": "Một người đàn ông mặc đồ trắng và đội mũ trắng nói vào micro HTV cùng những người mặc đồng phục đỏ phía sau.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông mặc trang phục và mũ trắng đang nói chuyện vào micro HTV, tay giơ rộng sang bên. Phía sau anh là một số người mặc đồng phục thể thao màu đỏ.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.393,
+          0.73,
+          0.508,
+          0.996
+        ],
+        "description": "a handheld microphone with an HTV logo",
+        "description_vi": "micro cầm tay có gắn nhãn logo HTV",
+        "attributes": [
+          "black",
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16,
+          0.17300000000000001,
+          0.9109999999999999,
+          1.0
+        ],
+        "description": "a man in a white outfit and white cap speaking with arm raised",
+        "description_vi": "một người đàn ông mặc trang phục trắng và đội mũ trắng đang nói chuyện với cánh tay giơ lên",
+        "attributes": [
+          "white",
+          "cap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0007",
+    "visual_source_frame_id": "L24_V012_f0007",
+    "ocr_source_frame_id": "L24_V012_f0007",
+    "quality_flags": [],
+    "caption": "A man in a white outfit and white cap speaks into an HTV microphone amidst a crowd in red uniforms.",
+    "detailed_caption": "A medium close-up shot shows a man wearing a white outfit and white cap speaking into an HTV microphone. He is surrounded by team members wearing red and yellow athletic shirts outdoors.",
+    "caption_vi": "Một người đàn ông mặc đồ trắng đội mũ trắng đang nói vào micro HTV giữa đám đông mặc áo đỏ.",
+    "detailed_caption_vi": "Cận cảnh vừa cho thấy người đàn ông mặc trang phục trắng và đội mũ trắng đang phát biểu qua micro HTV. Xung quanh anh là các thành viên đội mặc áo thể thao màu đỏ và vàng ngoài trời.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.201,
+          0.329,
+          1.0
+        ],
+        "description": "a man in a white long-sleeve shirt in the foreground left",
+        "description_vi": "một người đàn ông mặc áo dài tay màu trắng ở phía trước bên trái",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.355,
+          0.219,
+          0.792,
+          1.0
+        ],
+        "description": "a man in a white outfit and white cap speaking into a microphone",
+        "description_vi": "một người đàn ông mặc trang phục trắng và đội mũ trắng đang nói vào micro",
+        "attributes": [
+          "white",
+          "cap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0008",
+    "visual_source_frame_id": "L24_V012_f0008",
+    "ocr_source_frame_id": "L24_V012_f0008",
+    "quality_flags": [],
+    "caption": "A man in a white and black jersey speaks into an HTV microphone with red-uniformed team members nearby.",
+    "detailed_caption": "A medium close-up shot features a man wearing a white and black jersey speaking and gesturing with his hand while holding an HTV microphone. Several people in red and yellow athletic uniforms stand in the background.",
+    "caption_vi": "Một người đàn ông mặc áo trắng đen nói vào micro HTV cùng các đồng đội mặc đồ đỏ ở gần.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông mặc áo trắng đen đang nói chuyện và ra hiệu tay khi cầm micro HTV. Phía sau anh là một số người mặc đồng phục thể thao màu đỏ.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.11699999999999999,
+          0.133,
+          0.706,
+          1.0
+        ],
+        "description": "a man in a white and black jersey speaking with hand raised",
+        "description_vi": "một người đàn ông mặc áo trắng đen đang nói chuyện với tay giơ lên",
+        "attributes": [
+          "white",
+          "black"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.739,
+          0.25,
+          0.999,
+          1.0
+        ],
+        "description": "a man in a red and yellow athletic uniform on the right",
+        "description_vi": "một người đàn ông mặc đồng phục thể thao đỏ vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0009",
+    "visual_source_frame_id": "L24_V012_f0009",
+    "ocr_source_frame_id": "L24_V012_f0009",
+    "quality_flags": [],
+    "caption": "A man in a white and black jersey speaks into an HTV microphone with a crowd in the background.",
+    "detailed_caption": "A medium close-up shot captures a man in a white and black jersey speaking into an HTV microphone with hand gestures. Other people in red uniforms and casual attire stand behind him in an outdoor setting.",
+    "caption_vi": "Một người đàn ông mặc áo trắng đen nói vào micro HTV với đám đông phía sau.",
+    "detailed_caption_vi": "Cận cảnh vừa cho thấy người đàn ông mặc áo thể thao trắng đen đang phát biểu qua micro HTV và ra hiệu tay. Xung quanh anh là những người khác mặc đồng phục đỏ và trang phục thường ngày ngoài trời.",
+    "ocr_text": "HTV HITASA",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16699999999999998,
+          0.155,
+          0.679,
+          1.0
+        ],
+        "description": "a man in a white and black jersey speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo trắng đen đang nói vào micro",
+        "attributes": [
+          "white",
+          "black"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.673,
+          0.267,
+          1.0,
+          1.0
+        ],
+        "description": "a man in a red and yellow athletic shirt on the right",
+        "description_vi": "một người đàn ông mặc áo thể thao đỏ vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0010",
+    "visual_source_frame_id": "L24_V012_f0010",
+    "ocr_source_frame_id": "L24_V012_f0010",
+    "quality_flags": [],
+    "caption": "Two men in white outfits stand side by side while speaking outdoors among people in red uniforms.",
+    "detailed_caption": "A medium close-up shot shows two men wearing white high-neck shirts standing together and speaking. One man on the right wears a white cap, and both are surrounded by team members in red uniforms outdoors.",
+    "caption_vi": "Hai người đàn ông mặc đồ trắng đứng cạnh nhau đang nói chuyện ngoài trời giữa những người mặc đồng phục đỏ.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại hai người đàn ông mặc áo cổ lọ màu trắng đứng cạnh nhau và đang nói chuyện. Người bên phải đội mũ trắng, xung quanh họ là các thành viên đội mặc áo đỏ ngoài trời.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.11000000000000001,
+          0.128,
+          0.562,
+          1.0
+        ],
+        "description": "a man in a white high-neck shirt speaking",
+        "description_vi": "một người đàn ông mặc áo cổ lọ màu trắng đang nói chuyện",
+        "attributes": [
+          "white"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.558,
+          0.177,
+          0.999,
+          1.0
+        ],
+        "description": "a man in a white outfit and white cap speaking",
+        "description_vi": "một người đàn ông mặc trang phục trắng và đội mũ trắng đang nói chuyện",
+        "attributes": [
+          "white",
+          "cap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0011",
+    "visual_source_frame_id": "L24_V012_f0011",
+    "ocr_source_frame_id": "L24_V012_f0011",
+    "quality_flags": [],
+    "caption": "A group of men in red and white athletic uniforms stand outdoors with trees in the background.",
+    "detailed_caption": "A medium shot captures a group of people outdoors, featuring a man in a white cap and white shirt on the right and several men in red and yellow team uniforms standing behind him.",
+    "caption_vi": "Một nhóm nam giới mặc đồng phục thể thao đỏ trắng đứng ngoài trời với cây xanh phía sau.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại nhóm người đứng ngoài trời, nổi bật là người đàn ông đội mũ trắng mặc áo trắng bên phải và những người nam mặc áo đồng phục đỏ vàng đứng phía sau.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.22999999999999998,
+          0.136,
+          0.523,
+          0.6940000000000001
+        ],
+        "description": "a man in a red and yellow athletic shirt",
+        "description_vi": "một người đàn ông mặc áo thể thao đỏ và vàng",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.638,
+          0.075,
+          1.0,
+          1.0
+        ],
+        "description": "a man in a white shirt and white cap looking down",
+        "description_vi": "một người đàn ông mặc áo trắng và đội mũ trắng đang cúi nhìn",
+        "attributes": [
+          "white",
+          "cap"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0012",
+    "visual_source_frame_id": "L24_V012_f0012",
+    "ocr_source_frame_id": "L24_V012_f0012",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white and black jersey speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot shows a in the foreground wearing a white and black jersey with a gold chain, speaking into an HTV microphone. In the background are upright training poles, lion dance props, and display panels in an outdoor park.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một thanh niên ở tiền cảnh mặc áo thể thao trắng đen và đeo dây chuyền vàng, đang nói vào micro HTV. Phía sau là các cột tập luyện, đạo cụ múa lân và bảng trưng bày trong công viên.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.5549999999999999,
+          0.638,
+          0.7030000000000001,
+          0.996
+        ],
+        "description": "a handheld microphone with an HTV logo box",
+        "description_vi": "micro cầm tay có gắn hộp logo HTV",
+        "attributes": [
+          "blue",
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16599999999999998,
+          0.063,
+          0.755,
+          1.0
+        ],
+        "description": "a in a white and black jersey wearing a gold chain",
+        "description_vi": "một thanh niên mặc áo trắng đen và đeo dây chuyền vàng",
+        "attributes": [
+          "white",
+          "black",
+          "sleeveless",
+          "gold chain"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0013",
+    "visual_source_frame_id": "L24_V012_f0012",
+    "ocr_source_frame_id": "L24_V012_f0013",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A in a white and black jersey speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot shows a in the foreground wearing a white and black jersey with a gold chain, speaking into an HTV microphone. In the background are upright training poles, lion dance props, and display panels in an outdoor park.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một thanh niên ở tiền cảnh mặc áo thể thao trắng đen và đeo dây chuyền vàng, đang nói vào micro HTV. Phía sau là các cột tập luyện, đạo cụ múa lân và bảng trưng bày trong công viên.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.5549999999999999,
+          0.638,
+          0.7030000000000001,
+          0.996
+        ],
+        "description": "a handheld microphone with an HTV logo box",
+        "description_vi": "micro cầm tay có gắn hộp logo HTV",
+        "attributes": [
+          "blue",
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16599999999999998,
+          0.063,
+          0.755,
+          1.0
+        ],
+        "description": "a in a white and black jersey wearing a gold chain",
+        "description_vi": "một thanh niên mặc áo trắng đen và đeo dây chuyền vàng",
+        "attributes": [
+          "white",
+          "black",
+          "sleeveless",
+          "gold chain"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0014",
+    "visual_source_frame_id": "L24_V012_f0014",
+    "ocr_source_frame_id": "L24_V012_f0014",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white and black jersey raises both fists while speaking into an HTV microphone.",
+    "detailed_caption": "A medium close-up shot shows a wearing a white and black jersey with a gold chain, holding both fists up near his shoulders while speaking into an HTV microphone. Another person in a red uniform stands in the background to the right.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen giơ cả hai nắm đấm khi đang nói vào micro HTV.",
+    "detailed_caption_vi": "Cận cảnh vừa cho thấy một thanh niên mặc áo thể thao trắng đen và đeo dây chuyền vàng, đang giơ hai tay nắm chặt cạnh vai trong lúc nói vào micro HTV. Một người mặc đồng phục đỏ đứng ở phía sau bên phải.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.126,
+          0.098,
+          0.8560000000000001,
+          1.0
+        ],
+        "description": "a in a white and black jersey with fists raised",
+        "description_vi": "một thanh niên mặc áo trắng đen với hai tay giơ nắm đấm",
+        "attributes": [
+          "white",
+          "black",
+          "gold chain"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.75,
+          0.297,
+          1.0,
+          0.996
+        ],
+        "description": "a in a red and yellow athletic shirt on the right",
+        "description_vi": "một thanh niên mặc áo thể thao đỏ và vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0015",
+    "visual_source_frame_id": "L24_V012_f0015",
+    "ocr_source_frame_id": "L24_V012_f0015",
+    "quality_flags": [],
+    "caption": "A man in a red and gold traditional robe speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot features a man in the center wearing a bright red and gold traditional costume, speaking into an HTV microphone. Surrounding him are several people in red athletic uniforms and team members in an outdoor park setting.",
+    "caption_vi": "Một người đàn ông mặc áo choàng truyền thống đỏ và vàng đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông ở trung tâm mặc trang phục truyền thống màu đỏ viền vàng, đang phát biểu qua micro HTV. Xung quanh ông là nhiều người mặc đồng phục thể thao màu đỏ trong không gian công viên.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.269,
+          0.089,
+          0.755,
+          1.0
+        ],
+        "description": "a man in a red and gold traditional robe speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo choàng đỏ viền vàng đang nói vào micro",
+        "attributes": [
+          "red",
+          "gold"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.891,
+          0.515,
+          1.0,
+          1.0
+        ],
+        "description": "a man in a black shirt holding a camera on the right",
+        "description_vi": "một người đàn ông mặc áo đen đang cầm máy quay ở bên phải",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0016",
+    "visual_source_frame_id": "L24_V012_f0015",
+    "ocr_source_frame_id": "L24_V012_f0016",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red and gold traditional robe speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot features a man in the center wearing a bright red and gold traditional costume, speaking into an HTV microphone. Surrounding him are several people in red athletic uniforms and team members in an outdoor park setting.",
+    "caption_vi": "Một người đàn ông mặc áo choàng truyền thống đỏ và vàng đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông ở trung tâm mặc trang phục truyền thống màu đỏ viền vàng, đang phát biểu qua micro HTV. Xung quanh ông là nhiều người mặc đồng phục thể thao màu đỏ trong không gian công viên.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.269,
+          0.089,
+          0.755,
+          1.0
+        ],
+        "description": "a man in a red and gold traditional robe speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo choàng đỏ viền vàng đang nói vào micro",
+        "attributes": [
+          "red",
+          "gold"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.891,
+          0.515,
+          1.0,
+          1.0
+        ],
+        "description": "a man in a black shirt holding a camera on the right",
+        "description_vi": "một người đàn ông mặc áo đen đang cầm máy quay ở bên phải",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0017",
+    "visual_source_frame_id": "L24_V012_f0017",
+    "ocr_source_frame_id": "L24_V012_f0017",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white and black jersey speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot shows a wearing a white and black jersey with a gold chain speaking into an HTV microphone. In the background are upright poles and people in red uniforms outdoors.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một thanh niên mặc áo thể thao trắng đen và đeo dây chuyền vàng đang phát biểu qua micro HTV. Phía sau là các cột đứng và những người mặc đồng phục đỏ ngoài trời.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.10600000000000001,
+          0.08299999999999999,
+          0.76,
+          1.0
+        ],
+        "description": "a in a white and black jersey with a gold chain",
+        "description_vi": "một thanh niên mặc áo thể thao trắng đen đeo dây chuyền vàng",
+        "attributes": [
+          "white",
+          "black",
+          "gold chain"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.642,
+          0.421,
+          0.8560000000000001,
+          0.996
+        ],
+        "description": "a in a red and yellow athletic shirt on the right",
+        "description_vi": "một thanh niên mặc áo thể thao đỏ vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0018",
+    "visual_source_frame_id": "L24_V012_f0017",
+    "ocr_source_frame_id": "L24_V012_f0018",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A in a white and black jersey speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot shows a wearing a white and black jersey with a gold chain speaking into an HTV microphone. In the background are upright poles and people in red uniforms outdoors.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một thanh niên mặc áo thể thao trắng đen và đeo dây chuyền vàng đang phát biểu qua micro HTV. Phía sau là các cột đứng và những người mặc đồng phục đỏ ngoài trời.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.10600000000000001,
+          0.08299999999999999,
+          0.76,
+          1.0
+        ],
+        "description": "a in a white and black jersey with a gold chain",
+        "description_vi": "một thanh niên mặc áo thể thao trắng đen đeo dây chuyền vàng",
+        "attributes": [
+          "white",
+          "black",
+          "gold chain"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.642,
+          0.421,
+          0.8560000000000001,
+          0.996
+        ],
+        "description": "a in a red and yellow athletic shirt on the right",
+        "description_vi": "một thanh niên mặc áo thể thao đỏ vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0019",
+    "visual_source_frame_id": "L24_V012_f0017",
+    "ocr_source_frame_id": "L24_V012_f0019",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A in a white and black jersey speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot shows a wearing a white and black jersey with a gold chain speaking into an HTV microphone. In the background are upright poles and people in red uniforms outdoors.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một thanh niên mặc áo thể thao trắng đen và đeo dây chuyền vàng đang phát biểu qua micro HTV. Phía sau là các cột đứng và những người mặc đồng phục đỏ ngoài trời.",
+    "ocr_text": "HITASA",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.10600000000000001,
+          0.08299999999999999,
+          0.76,
+          1.0
+        ],
+        "description": "a in a white and black jersey with a gold chain",
+        "description_vi": "một thanh niên mặc áo thể thao trắng đen đeo dây chuyền vàng",
+        "attributes": [
+          "white",
+          "black",
+          "gold chain"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.642,
+          0.421,
+          0.8560000000000001,
+          0.996
+        ],
+        "description": "a in a red and yellow athletic shirt on the right",
+        "description_vi": "một thanh niên mặc áo thể thao đỏ vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0020",
+    "visual_source_frame_id": "L24_V012_f0020",
+    "ocr_source_frame_id": "L24_V012_f0020",
+    "quality_flags": [],
+    "caption": "A man in a red and gold robe and yellow polo shirt speaks into an HTV microphone surrounded by people.",
+    "detailed_caption": "A medium close-up shot captures a man in the foreground wearing a red robe with gold trim and a yellow polo shirt, speaking into an HTV microphone. Other people in red uniforms and athletic shirts stand around him.",
+    "caption_vi": "Một người đàn ông mặc áo choàng đỏ vàng và áo polo vàng đang nói vào micro HTV giữa đám đông.",
+    "detailed_caption_vi": "Cận cảnh vừa cho thấy người đàn ông ở tiền cảnh mặc áo choàng đỏ viền vàng cùng áo polo vàng, đang phát biểu vào micro HTV. Xung quanh ông là những người khác mặc đồng phục thể thao màu đỏ.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.21500000000000002,
+          0.329,
+          1.0
+        ],
+        "description": "a man in a yellow and blue polo shirt on the left",
+        "description_vi": "một người đàn ông mặc áo polo vàng xanh ở bên trái",
+        "attributes": [
+          "yellow",
+          "blue"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.236,
+          0.098,
+          0.775,
+          1.0
+        ],
+        "description": "a man in a red and gold robe speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo choàng đỏ viền vàng đang nói vào micro",
+        "attributes": [
+          "red",
+          "gold"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0021",
+    "visual_source_frame_id": "L24_V012_f0020",
+    "ocr_source_frame_id": "L24_V012_f0021",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red and gold robe and yellow polo shirt speaks into an HTV microphone surrounded by people.",
+    "detailed_caption": "A medium close-up shot captures a man in the foreground wearing a red robe with gold trim and a yellow polo shirt, speaking into an HTV microphone. Other people in red uniforms and athletic shirts stand around him.",
+    "caption_vi": "Một người đàn ông mặc áo choàng đỏ vàng và áo polo vàng đang nói vào micro HTV giữa đám đông.",
+    "detailed_caption_vi": "Cận cảnh vừa cho thấy người đàn ông ở tiền cảnh mặc áo choàng đỏ viền vàng cùng áo polo vàng, đang phát biểu vào micro HTV. Xung quanh ông là những người khác mặc đồng phục thể thao màu đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.21500000000000002,
+          0.329,
+          1.0
+        ],
+        "description": "a man in a yellow and blue polo shirt on the left",
+        "description_vi": "một người đàn ông mặc áo polo vàng xanh ở bên trái",
+        "attributes": [
+          "yellow",
+          "blue"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.236,
+          0.098,
+          0.775,
+          1.0
+        ],
+        "description": "a man in a red and gold robe speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo choàng đỏ viền vàng đang nói vào micro",
+        "attributes": [
+          "red",
+          "gold"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0022",
+    "visual_source_frame_id": "L24_V012_f0022",
+    "ocr_source_frame_id": "L24_V012_f0022",
+    "quality_flags": [],
+    "caption": "Two men in white outfits speak into an HTV microphone in front of a crowd.",
+    "detailed_caption": "A medium close-up shot shows two men wearing white high-neck shirts standing together and speaking. One man on the left has brown hair, and the man on the right wears a white cap, surrounded by team members in red uniforms.",
+    "caption_vi": "Hai người đàn ông mặc đồ trắng đang nói vào micro HTV trước đám đông.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại hai người đàn ông mặc áo cổ lọ màu trắng đứng cạnh nhau và phát biểu. Người bên trái có mái tóc nâu, người bên phải đội mũ trắng, xung quanh là các thành viên mặc áo đỏ.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16899999999999998,
+          0.118,
+          0.623,
+          1.0
+        ],
+        "description": "a man with brown hair in a white high-neck shirt speaking",
+        "description_vi": "một người đàn ông tóc nâu mặc áo cổ lọ trắng đang nói chuyện",
+        "attributes": [
+          "white",
+          "brown hair"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.575,
+          0.14600000000000002,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "a man in a white outfit and white cap speaking",
+        "description_vi": "một người đàn ông mặc trang phục trắng đội mũ trắng đang nói chuyện",
+        "attributes": [
+          "white",
+          "cap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0023",
+    "visual_source_frame_id": "L24_V012_f0022",
+    "ocr_source_frame_id": "L24_V012_f0023",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two men in white outfits speak into an HTV microphone in front of a crowd.",
+    "detailed_caption": "A medium close-up shot shows two men wearing white high-neck shirts standing together and speaking. One man on the left has brown hair, and the man on the right wears a white cap, surrounded by team members in red uniforms.",
+    "caption_vi": "Hai người đàn ông mặc đồ trắng đang nói vào micro HTV trước đám đông.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại hai người đàn ông mặc áo cổ lọ màu trắng đứng cạnh nhau và phát biểu. Người bên trái có mái tóc nâu, người bên phải đội mũ trắng, xung quanh là các thành viên mặc áo đỏ.",
+    "ocr_text": "TINH ANH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16899999999999998,
+          0.118,
+          0.623,
+          1.0
+        ],
+        "description": "a man with brown hair in a white high-neck shirt speaking",
+        "description_vi": "một người đàn ông tóc nâu mặc áo cổ lọ trắng đang nói chuyện",
+        "attributes": [
+          "white",
+          "brown hair"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.575,
+          0.14600000000000002,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "a man in a white outfit and white cap speaking",
+        "description_vi": "một người đàn ông mặc trang phục trắng đội mũ trắng đang nói chuyện",
+        "attributes": [
+          "white",
+          "cap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0024",
+    "visual_source_frame_id": "L24_V012_f0024",
+    "ocr_source_frame_id": "L24_V012_f0024",
+    "quality_flags": [],
+    "caption": "A man in a red and gold robe speaks into an HTV microphone with a camera crew and crowd nearby.",
+    "detailed_caption": "A medium close-up shot features a man in the center wearing a bright red and gold traditional robe, speaking into an HTV microphone. To his left, a cameraman films the scene, and other people in red athletic shirts stand in the background.",
+    "caption_vi": "Một người đàn ông mặc áo choàng đỏ vàng đang nói vào micro HTV cùng ê-kíp quay phim và đám đông ở gần.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông ở trung tâm mặc áo choàng truyền thống đỏ viền vàng, đang nói vào micro HTV. Phía bên trái có người quay phim đang tác nghiệp và những người khác mặc áo đỏ ở phía sau.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.008,
+          0.504,
+          0.21400000000000002,
+          1.0
+        ],
+        "description": "a cameraman holding a video camera on the left",
+        "description_vi": "một quay phim đang cầm máy quay video ở bên trái",
+        "attributes": [
+          "black"
+        ],
+        "action": "filming"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.248,
+          0.11699999999999999,
+          0.72,
+          1.0
+        ],
+        "description": "a man in a red and gold traditional robe speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo choàng đỏ viền vàng đang nói vào micro",
+        "attributes": [
+          "red",
+          "gold"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.655,
+          0.421,
+          0.868,
+          0.996
+        ],
+        "description": "a man in a black and grey jacket on the right",
+        "description_vi": "một người đàn ông mặc áo khoác đen xám ở bên phải",
+        "attributes": [
+          "black",
+          "grey"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0025",
+    "visual_source_frame_id": "L24_V012_f0024",
+    "ocr_source_frame_id": "L24_V012_f0025",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a red and gold robe speaks into an HTV microphone with a camera crew and crowd nearby.",
+    "detailed_caption": "A medium close-up shot features a man in the center wearing a bright red and gold traditional robe, speaking into an HTV microphone. To his left, a cameraman films the scene, and other people in red athletic shirts stand in the background.",
+    "caption_vi": "Một người đàn ông mặc áo choàng đỏ vàng đang nói vào micro HTV cùng ê-kíp quay phim và đám đông ở gần.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại người đàn ông ở trung tâm mặc áo choàng truyền thống đỏ viền vàng, đang nói vào micro HTV. Phía bên trái có người quay phim đang tác nghiệp và những người khác mặc áo đỏ ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.008,
+          0.504,
+          0.21400000000000002,
+          1.0
+        ],
+        "description": "a cameraman holding a video camera on the left",
+        "description_vi": "một quay phim đang cầm máy quay video ở bên trái",
+        "attributes": [
+          "black"
+        ],
+        "action": "filming"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.248,
+          0.11699999999999999,
+          0.72,
+          1.0
+        ],
+        "description": "a man in a red and gold traditional robe speaking into a microphone",
+        "description_vi": "một người đàn ông mặc áo choàng đỏ viền vàng đang nói vào micro",
+        "attributes": [
+          "red",
+          "gold"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.655,
+          0.421,
+          0.868,
+          0.996
+        ],
+        "description": "a man in a black and grey jacket on the right",
+        "description_vi": "một người đàn ông mặc áo khoác đen xám ở bên phải",
+        "attributes": [
+          "black",
+          "grey"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0026",
+    "visual_source_frame_id": "L24_V012_f0026",
+    "ocr_source_frame_id": "L24_V012_f0026",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white and black jersey speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot shows a wearing a white and black jersey with a gold chain speaking into an HTV microphone. In the background are upright training poles, lion dance figures, and people in red uniforms outdoors.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một thanh niên mặc áo thể thao trắng đen và đeo dây chuyền vàng đang phát biểu vào micro HTV. Phía sau là các cột tập luyện, hình nhân múa lân và những người mặc đồng phục đỏ ngoài trời.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.28900000000000003,
+          0.112,
+          0.75,
+          1.0
+        ],
+        "description": "a in a white and black jersey with a gold chain",
+        "description_vi": "một thanh niên mặc áo thể thao trắng đen đeo dây chuyền vàng",
+        "attributes": [
+          "white",
+          "black",
+          "gold chain"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.622,
+          0.34700000000000003,
+          0.874,
+          0.996
+        ],
+        "description": "a man in a red and yellow athletic shirt on the right",
+        "description_vi": "một người đàn ông mặc áo thể thao đỏ vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0027",
+    "visual_source_frame_id": "L24_V012_f0027",
+    "ocr_source_frame_id": "L24_V012_f0027",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A in a white and black jersey speaks into an HTV microphone outdoors.",
+    "detailed_caption": "A medium close-up shot captures a in the foreground wearing a white and black jersey with a gold chain, speaking into an HTV microphone. In the background are upright blue-topped poles, lion dance heads, and people in red uniforms.",
+    "caption_vi": "Một thanh niên mặc áo trắng đen đang nói vào micro HTV ngoài trời.",
+    "detailed_caption_vi": "Cận cảnh vừa ghi lại một thanh niên ở tiền cảnh mặc áo thể thao trắng đen và đeo dây chuyền vàng đang phát biểu qua micro HTV. Phía sau là các cột tập luyện đầu xanh, đầu lân và những người mặc đồng phục đỏ.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.088,
+          0.081,
+          0.5650000000000001,
+          1.0
+        ],
+        "description": "a in a white and black jersey wearing a gold chain",
+        "description_vi": "một thanh niên mặc áo trắng đen và đeo dây chuyền vàng",
+        "attributes": [
+          "white",
+          "black",
+          "gold chain"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.644,
+          0.33699999999999997,
+          0.9890000000000001,
+          0.996
+        ],
+        "description": "a man in a red and yellow athletic shirt on the right",
+        "description_vi": "một người đàn ông mặc áo thể thao đỏ và vàng ở bên phải",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "prop_0",
+        "label": "prop",
+        "bbox": [
+          0.508,
+          0.37600000000000006,
+          0.5740000000000001,
+          0.663
+        ],
+        "description": "a yellow and red lion dance head prop",
+        "description_vi": "đầu lân biểu diễn màu vàng và đỏ",
+        "attributes": [
+          "yellow",
+          "red",
+          "decorative"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "prop_0"
+      },
+      {
+        "subject_id": "prop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "prop_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "prop_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0028",
+    "visual_source_frame_id": "L24_V012_f0028",
+    "ocr_source_frame_id": "L24_V012_f0028",
+    "quality_flags": [],
+    "caption": "Two men in white shirts with colorful graphics speak into microphones while flanked by people in red uniforms outdoors.",
+    "detailed_caption": "This medium shot features two men in white long-sleeved shirts standing prominently in the foreground, speaking into microphones. The man on the left has dark brown hair and a white turtleneck under a white shirt bearing colorful text and graphics. The man on the right wears a white beanie, a white turtleneck shirt, and a microphone clipped to his collar. Behind them stand several people wearing red shirts with yellow collars and lion graphics, outdoors with trees in the background.",
+    "caption_vi": "Hai người đàn ông mặc áo trắng có hình họa màu sắc đang nói vào micro, xung quanh là những người mặc đồng phục đỏ ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại hai người đàn ông mặc áo dài tay màu trắng đứng nổi bật ở tiền cảnh, đang cầm micro nói chuyện. Người đàn ông bên trái tóc nâu sẫm, mặc áo cổ lọ trắng bên trong áo có in hình đồ họa và chữ nhiều màu. Người đàn ông bên phải đội mũ len trắng, mặc áo trắng cổ lọ và có gắn micro nhỏ trên cổ áo. Phía sau họ là một nhóm người mặc áo đỏ viền vàng in hình sư tử, bối cảnh ngoài trời có cây xanh.",
+    "ocr_text": "2NGÀY 1ĐÊM HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.521,
+          0.7689999999999999,
+          0.631,
+          0.999
+        ],
+        "description": "black microphone with an HTV logo on the windscreen",
+        "description_vi": "micro màu đen có logo HTV trên mút lọc âm",
+        "attributes": [
+          "black",
+          "logo"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.088,
+          0.04700000000000001,
+          0.26,
+          0.555
+        ],
+        "description": "man in the background wearing glasses and a red shirt",
+        "description_vi": "người đàn ông đeo kính mặc áo đỏ ở phía sau",
+        "attributes": [
+          "glasses",
+          "red shirt"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.11000000000000001,
+          0.075,
+          0.55,
+          1.0
+        ],
+        "description": "man in a white shirt and turtleneck with multicolored graphic text talking into a microphone",
+        "description_vi": "nam thanh niên mặc áo trắng cổ lọ in chữ màu sắc đang nói chuyện",
+        "attributes": [
+          "white shirt",
+          "turtleneck",
+          "multicolored graphic"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5469999999999999,
+          0.174,
+          0.96,
+          1.0
+        ],
+        "description": "man in a white beanie and white turtleneck shirt holding a microphone",
+        "description_vi": "người đàn ông đội mũ len trắng và áo trắng cổ lọ",
+        "attributes": [
+          "white beanie",
+          "white turtleneck",
+          "white shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0029",
+    "visual_source_frame_id": "L24_V012_f0028",
+    "ocr_source_frame_id": "L24_V012_f0029",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two men in white shirts with colorful graphics speak into microphones while flanked by people in red uniforms outdoors.",
+    "detailed_caption": "This medium shot features two men in white long-sleeved shirts standing prominently in the foreground, speaking into microphones. The man on the left has dark brown hair and a white turtleneck under a white shirt bearing colorful text and graphics. The man on the right wears a white beanie, a white turtleneck shirt, and a microphone clipped to his collar. Behind them stand several people wearing red shirts with yellow collars and lion graphics, outdoors with trees in the background.",
+    "caption_vi": "Hai người đàn ông mặc áo trắng có hình họa màu sắc đang nói vào micro, xung quanh là những người mặc đồng phục đỏ ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại hai người đàn ông mặc áo dài tay màu trắng đứng nổi bật ở tiền cảnh, đang cầm micro nói chuyện. Người đàn ông bên trái tóc nâu sẫm, mặc áo cổ lọ trắng bên trong áo có in hình đồ họa và chữ nhiều màu. Người đàn ông bên phải đội mũ len trắng, mặc áo trắng cổ lọ và có gắn micro nhỏ trên cổ áo. Phía sau họ là một nhóm người mặc áo đỏ viền vàng in hình sư tử, bối cảnh ngoài trời có cây xanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.521,
+          0.7689999999999999,
+          0.631,
+          0.999
+        ],
+        "description": "black microphone with an HTV logo on the windscreen",
+        "description_vi": "micro màu đen có logo HTV trên mút lọc âm",
+        "attributes": [
+          "black",
+          "logo"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.088,
+          0.04700000000000001,
+          0.26,
+          0.555
+        ],
+        "description": "man in the background wearing glasses and a red shirt",
+        "description_vi": "người đàn ông đeo kính mặc áo đỏ ở phía sau",
+        "attributes": [
+          "glasses",
+          "red shirt"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.11000000000000001,
+          0.075,
+          0.55,
+          1.0
+        ],
+        "description": "man in a white shirt and turtleneck with multicolored graphic text talking into a microphone",
+        "description_vi": "nam thanh niên mặc áo trắng cổ lọ in chữ màu sắc đang nói chuyện",
+        "attributes": [
+          "white shirt",
+          "turtleneck",
+          "multicolored graphic"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5469999999999999,
+          0.174,
+          0.96,
+          1.0
+        ],
+        "description": "man in a white beanie and white turtleneck shirt holding a microphone",
+        "description_vi": "người đàn ông đội mũ len trắng và áo trắng cổ lọ",
+        "attributes": [
+          "white beanie",
+          "white turtleneck",
+          "white shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0030",
+    "visual_source_frame_id": "L24_V012_f0030",
+    "ocr_source_frame_id": "L24_V012_f0030",
+    "quality_flags": [],
+    "caption": "Two men in white shirts stand in the foreground speaking, surrounded by people in matching red and yellow uniforms.",
+    "detailed_caption": "This medium shot shows two men in white shirts talking outdoors. The man on the left has brown hair and a white turtleneck with colorful text. The man on the right wears a white beanie and a white shirt. They are surrounded by several other individuals in red shirts with yellow collars and lion graphics, set against an outdoor background with trees.",
+    "caption_vi": "Hai người đàn ông mặc áo trắng đứng ở tiền cảnh đang nói chuyện, xung quanh là những người mặc đồng phục đỏ vàng đồng bộ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hai người đàn ông mặc áo trắng đang nói chuyện ngoài trời. Người bên trái tóc nâu, mặc áo trắng cổ lọ có in chữ màu. Người bên phải đội mũ len trắng và mặc áo trắng. Xung quanh họ là nhiều người khác mặc áo đỏ viền vàng in hình sư tử, bối cảnh ngoài trời có cây xanh.",
+    "ocr_text": "2NGÀY 1ĐÊM HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.506,
+          0.833,
+          0.608,
+          1.0
+        ],
+        "description": "black microphone with HTV logo",
+        "description_vi": "micro màu đen có logo HTV",
+        "attributes": [
+          "black",
+          "logo"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16499999999999998,
+          0.2,
+          0.5740000000000001,
+          1.0
+        ],
+        "description": "man in white shirt and turtleneck talking into a microphone",
+        "description_vi": "nam thanh niên mặc áo trắng cổ lọ đang nói vào micro",
+        "attributes": [
+          "white shirt",
+          "turtleneck"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.21200000000000002,
+          0.162,
+          0.33599999999999997,
+          0.638
+        ],
+        "description": "man wearing glasses and red shirt in the background",
+        "description_vi": "người đàn ông đeo kính mặc áo đỏ ở nền sau",
+        "attributes": [
+          "glasses",
+          "red shirt"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.571,
+          0.198,
+          0.9630000000000001,
+          1.0
+        ],
+        "description": "man in white beanie and white shirt",
+        "description_vi": "người đàn ông đội mũ len trắng mặc áo trắng",
+        "attributes": [
+          "white beanie",
+          "white shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0031",
+    "visual_source_frame_id": "L24_V012_f0031",
+    "ocr_source_frame_id": "L24_V012_f0031",
+    "quality_flags": [],
+    "caption": "Three men in white and black sporty outfits stand outdoors on a blue mat, gesturing and talking.",
+    "detailed_caption": "This medium shot displays three men standing outdoors on a blue mat surface, with trees and poles in the background. The man on the left wears a white sleeveless shirt with black sleeves and a gold chain. The man in the middle wears a black turtleneck under a white sleeveless top with graphics. The man on the right wears a white long-sleeved shirt and holds a microphone. All three men are gesturing with their hands while speaking.",
+    "caption_vi": "Ba người đàn ông mặc trang phục thể thao trắng đen đứng ngoài trời trên thảm xanh đang ra hiệu và trò chuyện.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị ba người đàn ông đứng ngoài trời trên nền thảm xanh, phía sau là cây cối và các cột trụ. Người bên trái mặc áo không tay trắng phối tay áo đen đeo dây chuyền vàng. Người ở giữa mặc áo cổ lọ đen bên trong áo không tay trắng in hình. Người bên phải mặc áo dài tay trắng và cầm micro. Cả ba người đều đang cử động tay khi nói chuyện.",
+    "ocr_text": "2NGÀY 1ĐÊM HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.712,
+          0.858,
+          0.8,
+          1.0
+        ],
+        "description": "blue and white microphone with HTV logo",
+        "description_vi": "micro màu xanh trắng có logo HTV",
+        "attributes": [
+          "blue",
+          "white",
+          "logo"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.088,
+          0.17200000000000001,
+          0.362,
+          1.0
+        ],
+        "description": "man wearing black and white sleeveless athletic top with gold chain",
+        "description_vi": "nam thanh niên mặc áo thể thao không tay trắng đen đeo dây chuyền vàng",
+        "attributes": [
+          "white and black",
+          "sleeveless",
+          "gold chain"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.335,
+          0.26199999999999996,
+          0.58,
+          1.0
+        ],
+        "description": "man wearing black turtleneck and white graphic sleeveless shirt",
+        "description_vi": "người đàn ông mặc áo cổ lọ đen và áo không tay trắng in hình",
+        "attributes": [
+          "black turtleneck",
+          "white sleeveless shirt"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.61,
+          0.20299999999999999,
+          0.915,
+          1.0
+        ],
+        "description": "man wearing white long-sleeved shirt holding microphone",
+        "description_vi": "người đàn ông mặc áo dài tay trắng cầm micro",
+        "attributes": [
+          "white shirt",
+          "long sleeves"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0032",
+    "visual_source_frame_id": "L24_V012_f0031",
+    "ocr_source_frame_id": "L24_V012_f0032",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three men in white and black sporty outfits stand outdoors on a blue mat, gesturing and talking.",
+    "detailed_caption": "This medium shot displays three men standing outdoors on a blue mat surface, with trees and poles in the background. The man on the left wears a white sleeveless shirt with black sleeves and a gold chain. The man in the middle wears a black turtleneck under a white sleeveless top with graphics. The man on the right wears a white long-sleeved shirt and holds a microphone. All three men are gesturing with their hands while speaking.",
+    "caption_vi": "Ba người đàn ông mặc trang phục thể thao trắng đen đứng ngoài trời trên thảm xanh đang ra hiệu và trò chuyện.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị ba người đàn ông đứng ngoài trời trên nền thảm xanh, phía sau là cây cối và các cột trụ. Người bên trái mặc áo không tay trắng phối tay áo đen đeo dây chuyền vàng. Người ở giữa mặc áo cổ lọ đen bên trong áo không tay trắng in hình. Người bên phải mặc áo dài tay trắng và cầm micro. Cả ba người đều đang cử động tay khi nói chuyện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.712,
+          0.858,
+          0.8,
+          1.0
+        ],
+        "description": "blue and white microphone with HTV logo",
+        "description_vi": "micro màu xanh trắng có logo HTV",
+        "attributes": [
+          "blue",
+          "white",
+          "logo"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.088,
+          0.17200000000000001,
+          0.362,
+          1.0
+        ],
+        "description": "man wearing black and white sleeveless athletic top with gold chain",
+        "description_vi": "nam thanh niên mặc áo thể thao không tay trắng đen đeo dây chuyền vàng",
+        "attributes": [
+          "white and black",
+          "sleeveless",
+          "gold chain"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.335,
+          0.26199999999999996,
+          0.58,
+          1.0
+        ],
+        "description": "man wearing black turtleneck and white graphic sleeveless shirt",
+        "description_vi": "người đàn ông mặc áo cổ lọ đen và áo không tay trắng in hình",
+        "attributes": [
+          "black turtleneck",
+          "white sleeveless shirt"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.61,
+          0.20299999999999999,
+          0.915,
+          1.0
+        ],
+        "description": "man wearing white long-sleeved shirt holding microphone",
+        "description_vi": "người đàn ông mặc áo dài tay trắng cầm micro",
+        "attributes": [
+          "white shirt",
+          "long sleeves"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0033",
+    "visual_source_frame_id": "L24_V012_f0033",
+    "ocr_source_frame_id": "L24_V012_f0033",
+    "quality_flags": [],
+    "caption": "A heavily overexposed, washed-out outdoor scene showing several figures on a blue mat area.",
+    "detailed_caption": "This wide shot is severely overexposed and washed out with bright white light. Faint outlines of several people in athletic clothing and red uniforms are visible standing outdoors on a blue surface near vertical poles.",
+    "caption_vi": "Một cảnh ngoài trời bị phơi sáng nặng và mờ trắng, cho thấy một vài bóng người trên khu vực thảm xanh.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh này bị lóa sáng trắng và mất chi tiết nghiêm trọng do phơi sáng quá mức. Có thể thấy mờ ảo bóng dáng một số người mặc trang phục thể thao và đồng phục đỏ đang đứng ngoài trời trên nền xanh gần các cột thẳng đứng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.043,
+          0.23199999999999998,
+          0.281,
+          1.0
+        ],
+        "description": "faintly visible person in white sleeveless athletic shirt",
+        "description_vi": "người mờ nhạt mặc áo thể thao không tay màu trắng",
+        "attributes": [
+          "white shirt",
+          "sleeveless"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.43200000000000005,
+          0.37600000000000006,
+          0.617,
+          1.0
+        ],
+        "description": "faint outline of person in white shirt",
+        "description_vi": "bóng mờ của người mặc áo trắng",
+        "attributes": [
+          "white shirt"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0034",
+    "visual_source_frame_id": "L24_V012_f0034",
+    "ocr_source_frame_id": "L24_V012_f0034",
+    "quality_flags": [],
+    "caption": "An extremely overexposed and washed-out image showing faint figures outdoors.",
+    "detailed_caption": "This wide shot is heavily washed out by bright white light, obscuring most details. Faint figures of people standing on a blue mat outdoors are barely discernible through the glare.",
+    "caption_vi": "Một hình ảnh bị lóa sáng cực độ và mờ nhạt hiển thị những bóng người mờ ảo ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh này bị lóa trắng nặng nề bởi ánh sáng mạnh, làm mờ hầu hết các chi tiết. Những bóng người mờ nhạt đứng trên thảm xanh ngoài trời gần như không thể nhận diện rõ qua lớp ánh sáng chói.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.046,
+          0.247,
+          0.27799999999999997,
+          1.0
+        ],
+        "description": "faint figure of person in white athletic shirt",
+        "description_vi": "bóng mờ của người mặc áo thể thao trắng",
+        "attributes": [
+          "white shirt"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.438,
+          0.379,
+          0.626,
+          1.0
+        ],
+        "description": "faint outline of person in white shirt",
+        "description_vi": "bóng mờ của người mặc áo trắng",
+        "attributes": [
+          "white shirt"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V012_f0035",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0035",
+    "quality_flags": [],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0036",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0036",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0037",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0037",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0038",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0038",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0039",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0039",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0040",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0040",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0041",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0041",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0042",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0042",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0043",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0043",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0044",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0044",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0045",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0045",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0046",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0046",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V012_f0047",
+    "visual_source_frame_id": "L24_V012_f0035",
+    "ocr_source_frame_id": "L24_V012_f0047",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A nearly pure white and completely overexposed frame with no visible subjects.",
+    "detailed_caption": "This frame is almost entirely white due to severe overexposure. No discernible subjects, objects, or details are visible.",
+    "caption_vi": "Một khung hình gần như trắng hoàn toàn và bị phơi sáng quá mức không có đối tượng nào nhìn rõ.",
+    "detailed_caption_vi": "Khung hình này gần như toàn màu trắng do bị lóa sáng nặng. Không thể nhìn thấy rõ bất kỳ đối tượng, vật thể hay chi tiết nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  }
+]

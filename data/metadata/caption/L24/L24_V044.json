@@ -1,0 +1,2119 @@
+[
+  {
+    "frame_id": "L24_V044_f0001",
+    "visual_source_frame_id": "L24_V044_f0001",
+    "ocr_source_frame_id": "L24_V044_f0001",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume performs on poles near a decorated flag and lighting rig.",
+    "detailed_caption": "This medium shot shows a lion dance performance featuring a vibrant yellow and black lion costume on elevated poles. In the background, a large white flag with red trim and a circular emblem hangs beside a metal lighting truss. A drummer is partially visible on the right side.",
+    "caption_vi": "Đầu lân màu vàng đen biểu diễn trên các cột cao bên cạnh lá cờ trang trí và dàn đèn.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại màn biểu diễn múa lân với trang phục lân màu vàng đen trên các cột trụ. Phía sau là một lá cờ trắng viền đỏ có biểu tượng tròn và khung giàn đèn sân khấu. Một người đánh trống xuất hiện mờ ở góc phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "drum_0",
+        "label": "drum",
+        "bbox": [
+          0.844,
+          0.859,
+          0.9979999999999999,
+          0.9869999999999999
+        ],
+        "description": "green and yellow drum with a performer",
+        "description_vi": "trống màu xanh lá và vàng cùng người biểu diễn",
+        "attributes": [
+          "green",
+          "yellow",
+          "cylindrical"
+        ],
+        "action": "playing"
+      },
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.301,
+          0.127,
+          0.7569999999999999,
+          0.55
+        ],
+        "description": "large white flag with red patterned border and circular emblem",
+        "description_vi": "lá cờ trắng lớn có viền đỏ hoa văn và huy hiệu tròn",
+        "attributes": [
+          "white",
+          "red",
+          "triangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.42400000000000004,
+          1.0,
+          0.9869999999999999
+        ],
+        "description": "vibrant yellow and black lion costume",
+        "description_vi": "trang phục lân màu vàng đen rực rỡ",
+        "attributes": [
+          "yellow",
+          "black",
+          "furry"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.132,
+          0.718,
+          0.219,
+          0.993
+        ],
+        "description": "tall metal pole used for lion dance",
+        "description_vi": "cột kim loại cao dùng cho múa lân",
+        "attributes": [
+          "metal",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "drum_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "drum_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "left_of",
+        "object_id": "drum_0"
+      },
+      {
+        "subject_id": "drum_0",
+        "predicate": "right_of",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0002",
+    "visual_source_frame_id": "L24_V044_f0002",
+    "ocr_source_frame_id": "L24_V044_f0002",
+    "quality_flags": [],
+    "caption": "A blurred scene showing part of a yellow lion head at the top left and warm lighting effects.",
+    "detailed_caption": "This close-up shot is heavily blurred, displaying the edge of a yellow lion costume head in the upper left corner. The background features out-of-focus warm light bokeh and dark structural elements.",
+    "caption_vi": "Cảnh mờ nhòe hiển thị một phần đầu lân màu vàng ở góc trên bên trái cùng ánh sáng ấm.",
+    "detailed_caption_vi": "Cận cảnh mờ nhòe cho thấy phần viền của đầu lân màu vàng ở góc trên bên trái. Phía sau là các đốm sáng bokeh vàng ấm áp và các cấu trúc tối màu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.0,
+          0.474,
+          0.26
+        ],
+        "description": "blurred yellow lion costume head",
+        "description_vi": "đầu trang phục lân màu vàng bị mờ",
+        "attributes": [
+          "yellow",
+          "blurred"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0003",
+    "visual_source_frame_id": "L24_V044_f0003",
+    "ocr_source_frame_id": "L24_V044_f0003",
+    "quality_flags": [],
+    "caption": "A blurred shot featuring a yellow lion head in the upper left and warm bokeh lights.",
+    "detailed_caption": "This close-up image is out of focus, showing a portion of a yellow and green lion costume head on the left. The background consists of warm glowing bokeh lights and indistinct shapes.",
+    "caption_vi": "Khung hình mờ với đầu lân màu vàng ở góc trên bên trái và các đốm sáng bokeh.",
+    "detailed_caption_vi": "Bức ảnh cận cảnh bị mất nét, hiển thị một phần đầu lân vàng xanh ở phía bên trái. Nền xung quanh là ánh sáng bokeh rực rỡ và các khối mờ ảo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.0,
+          0.503,
+          0.24700000000000003
+        ],
+        "description": "blurred yellow and green lion head",
+        "description_vi": "đầu lân màu vàng và xanh lá bị mờ",
+        "attributes": [
+          "yellow",
+          "green",
+          "blurred"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0004",
+    "visual_source_frame_id": "L24_V044_f0004",
+    "ocr_source_frame_id": "L24_V044_f0004",
+    "quality_flags": [],
+    "caption": "A yellow lion head faces a white flag on poles during a performance.",
+    "detailed_caption": "This medium shot captures a yellow and green lion costume head positioned near a white flag with red edges. The background is dim with illuminated bokeh lights and structural elements.",
+    "caption_vi": "Đầu lân màu vàng đối mặt với lá cờ trắng trên các cột trong buổi biểu diễn.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại đầu lân màu vàng và xanh lá đặt gần lá cờ trắng viền đỏ. Bối cảnh xung quanh tối với các đèn bokeh và kết cấu kiến trúc.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.816,
+          0.209,
+          1.0,
+          0.661
+        ],
+        "description": "white triangular flag with red border",
+        "description_vi": "lá cờ tam giác màu trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.242,
+          0.634,
+          0.615
+        ],
+        "description": "yellow and green lion head facing right",
+        "description_vi": "đầu lân màu vàng và xanh lá hướng sang phải",
+        "attributes": [
+          "yellow",
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "left_of",
+        "object_id": "flag_0"
+      },
+      {
+        "subject_id": "flag_0",
+        "predicate": "right_of",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0005",
+    "visual_source_frame_id": "L24_V044_f0005",
+    "ocr_source_frame_id": "L24_V044_f0005",
+    "quality_flags": [],
+    "caption": "A yellow and green lion costume head stands beside a white flag and lighting structure.",
+    "detailed_caption": "This medium shot shows a detailed yellow and green lion costume head looking forward next to a white ceremonial flag. A bright metal lighting truss stands in the upper right corner.",
+    "caption_vi": "Đầu lân màu vàng và xanh lá đứng cạnh lá cờ trắng và giàn đèn.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị chi tiết đầu lân màu vàng và xanh lá đang hướng về phía trước cạnh lá cờ nghi thức màu trắng. Một giàn đèn kim loại sáng chói xuất hiện ở góc trên bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.504,
+          0.22999999999999998,
+          0.8989999999999999,
+          0.728
+        ],
+        "description": "white flag with red decorative border and circular emblem",
+        "description_vi": "lá cờ trắng với viền trang trí đỏ và huy hiệu tròn",
+        "attributes": [
+          "white",
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.21400000000000002,
+          0.627,
+          0.471
+        ],
+        "description": "detailed yellow and green lion head",
+        "description_vi": "đầu lân màu vàng và xanh lá chi tiết",
+        "attributes": [
+          "yellow",
+          "green",
+          "furry"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0006",
+    "visual_source_frame_id": "L24_V044_f0006",
+    "ocr_source_frame_id": "L24_V044_f0006",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume performs on elevated poles beneath stage lighting.",
+    "detailed_caption": "This medium shot captures a yellow and black lion costume moving dynamically on poles. A tall white flag hangs on the left next to a vertical lighting truss under bright overhead lights.",
+    "caption_vi": "Trang phục lân màu vàng đen biểu diễn trên các cột cao dưới ánh đèn sân khấu.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại trang phục lân màu vàng đen đang di chuyển linh hoạt trên các cột. Một lá cờ trắng cao treo bên trái cạnh giàn đèn đứng dưới ánh sáng mạnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.038,
+          0.098,
+          0.495,
+          0.591
+        ],
+        "description": "large white flag with red trim and circular logo",
+        "description_vi": "lá cờ trắng lớn có viền đỏ và logo tròn",
+        "attributes": [
+          "white",
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.245,
+          0.45,
+          0.7779999999999999,
+          0.772
+        ],
+        "description": "yellow and black lion costume in motion",
+        "description_vi": "trang phục lân màu vàng đen đang chuyển động",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "flag_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "flag_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0007",
+    "visual_source_frame_id": "L24_V044_f0007",
+    "ocr_source_frame_id": "L24_V044_f0007",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume dances near a white flag and metal rigging.",
+    "detailed_caption": "This medium shot shows a lion dance performer in a yellow and black costume performing on stage. A white flag with a red emblem hangs on the left, while stage lights illuminate the indoor venue.",
+    "caption_vi": "Trang phục lân màu vàng đen múa gần lá cờ trắng và giàn khung kim loại.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy người biểu diễn múa lân trong trang phục vàng đen đang biểu diễn trên sân khấu. Lá cờ trắng có huy hiệu đỏ treo bên trái, trong khi đèn sân khấu chiếu sáng không gian trong nhà.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.0,
+          0.08499999999999999,
+          0.44499999999999995,
+          0.571
+        ],
+        "description": "white triangular flag with red border",
+        "description_vi": "lá cờ tam giác màu trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.209,
+          0.453,
+          0.738,
+          0.721
+        ],
+        "description": "yellow and black lion costume head and body",
+        "description_vi": "đầu và thân trang phục lân màu vàng đen",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "dancing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0008",
+    "visual_source_frame_id": "L24_V044_f0008",
+    "ocr_source_frame_id": "L24_V044_f0008",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume moves during a stage performance.",
+    "detailed_caption": "This medium shot captures a yellow and black lion costume in motion. A white flag with a red emblem hangs on the left side near a metal lighting structure.",
+    "caption_vi": "Trang phục lân màu vàng đen di chuyển trong buổi biểu diễn trên sân khấu.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại trang phục lân màu vàng đen đang chuyển động. Một lá cờ trắng có huy hiệu đỏ treo ở phía bên trái gần cấu trúc đèn chiếu sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.0,
+          0.089,
+          0.412,
+          0.546
+        ],
+        "description": "white flag with red trim",
+        "description_vi": "lá cờ trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.16699999999999998,
+          0.453,
+          0.698,
+          0.722
+        ],
+        "description": "yellow and black lion costume head",
+        "description_vi": "đầu trang phục lân màu vàng đen",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0009",
+    "visual_source_frame_id": "L24_V044_f0009",
+    "ocr_source_frame_id": "L24_V044_f0009",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume performs near a white flag and lighting truss.",
+    "detailed_caption": "This medium shot shows a lion costume in yellow and black performing indoors. A white flag with a red emblem hangs vertically on the left beside a metal lighting tower.",
+    "caption_vi": "Trang phục lân màu vàng đen biểu diễn gần lá cờ trắng và giàn đèn.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị trang phục lân màu vàng và đen đang biểu diễn trong nhà. Lá cờ trắng có huy hiệu đỏ treo thẳng đứng bên trái cạnh tháp đèn chiếu sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "flag_0",
+        "label": "flag",
+        "bbox": [
+          0.0,
+          0.059,
+          0.33499999999999996,
+          0.484
+        ],
+        "description": "white flag with red border and circular emblem",
+        "description_vi": "lá cờ trắng viền đỏ và huy hiệu tròn",
+        "attributes": [
+          "white",
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.081,
+          0.471,
+          0.61,
+          0.724
+        ],
+        "description": "yellow and black lion costume head",
+        "description_vi": "đầu trang phục lân màu vàng đen",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "performing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0010",
+    "visual_source_frame_id": "L24_V044_f0010",
+    "ocr_source_frame_id": "L24_V044_f0010",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume performs on stage under dim lighting.",
+    "detailed_caption": "This medium shot captures a yellow and black lion costume head positioned lower in the frame during a performance. The background features a white flag on the left and a vertical metal truss.",
+    "caption_vi": "Trang phục lân màu vàng đen biểu diễn trên sân khấu dưới ánh sáng mờ.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại phần đầu của trang phục lân vàng đen nằm ở vị trí thấp hơn trong khung hình khi biểu diễn. Phía sau có lá cờ trắng bên trái và giàn khung kim loại đứng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.039,
+          0.46799999999999997,
+          0.559,
+          0.718
+        ],
+        "description": "yellow and black lion costume head",
+        "description_vi": "đầu trang phục lân màu vàng đen",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "performing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0011",
+    "visual_source_frame_id": "L24_V044_f0011",
+    "ocr_source_frame_id": "L24_V044_f0011",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume head is visible during an indoor stage performance.",
+    "detailed_caption": "This medium shot shows a yellow and black lion costume head positioned on the left side. The background is dimly lit with a metal truss structure and distant figures.",
+    "caption_vi": "Đầu trang phục lân màu vàng đen xuất hiện trong buổi biểu diễn sân khấu trong nhà.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị đầu trang phục lân màu vàng và đen ở phía bên trái. Bối cảnh xung quanh mờ tối với cấu trúc giàn khung kim loại và các nhân vật ở xa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.008,
+          0.453,
+          0.517,
+          0.688
+        ],
+        "description": "yellow and black lion costume head",
+        "description_vi": "đầu trang phục lân màu vàng đen",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0012",
+    "visual_source_frame_id": "L24_V044_f0012",
+    "ocr_source_frame_id": "L24_V044_f0012",
+    "quality_flags": [],
+    "caption": "A yellow and black lion costume is positioned on the left in a dimly lit venue.",
+    "detailed_caption": "This medium shot captures a yellow and black lion costume head on the left side of the frame. The background is dark with indistinct stage equipment and structure.",
+    "caption_vi": "Trang phục lân màu vàng đen nằm ở bên trái trong không gian thiếu sáng.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại đầu trang phục lân màu vàng đen ở phía bên trái khung hình. Phía sau tối màu với thiết bị và kết cấu sân khấu không rõ nét.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.001,
+          0.44000000000000006,
+          0.48400000000000004,
+          0.67
+        ],
+        "description": "yellow and black lion costume head",
+        "description_vi": "đầu trang phục lân màu vàng đen",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0013",
+    "visual_source_frame_id": "L24_V044_f0013",
+    "ocr_source_frame_id": "L24_V044_f0013",
+    "quality_flags": [],
+    "caption": "A dark, low-light shot showing part of a yellow and black lion costume on the left.",
+    "detailed_caption": "This medium shot is very dark, showing a portion of a yellow and black lion costume on the left side. The background is shadowy with faint outlines of stage rigging.",
+    "caption_vi": "Khung hình tối hiển thị một phần trang phục lân màu vàng đen ở bên trái.",
+    "detailed_caption_vi": "Khung hình trung cảnh rất tối, cho thấy một phần trang phục lân màu vàng và đen ở phía bên trái. Phía sau là bóng tối với các đường nét mờ của giàn giáo sân khấu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.43099999999999994,
+          0.412,
+          0.67
+        ],
+        "description": "darkly lit yellow and black lion costume",
+        "description_vi": "trang phục lân màu vàng đen trong ánh sáng tối",
+        "attributes": [
+          "yellow",
+          "black",
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0014",
+    "visual_source_frame_id": "L24_V044_f0014",
+    "ocr_source_frame_id": "L24_V044_f0014",
+    "quality_flags": [],
+    "caption": "A very dark and low-light view of a lion costume part on the left.",
+    "detailed_caption": "This low-light shot is extremely dark, revealing a faint glimpse of a lion costume on the left side. The background details are nearly invisible.",
+    "caption_vi": "Góc nhìn rất tối và thiếu sáng về một phần trang phục lân ở bên trái.",
+    "detailed_caption_vi": "Khung hình thiếu sáng cực kỳ tối, hé lộ một phần mờ nhạt của trang phục lân ở phía bên trái. Các chi tiết phía sau gần như không nhìn rõ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.43899999999999995,
+          0.272,
+          0.6559999999999999
+        ],
+        "description": "obscured lion costume part",
+        "description_vi": "phần trang phục lân bị che khuất",
+        "attributes": [
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0015",
+    "visual_source_frame_id": "L24_V044_f0015",
+    "ocr_source_frame_id": "L24_V044_f0015",
+    "quality_flags": [],
+    "caption": "A completely dark frame with almost no visible details.",
+    "detailed_caption": "This shot is pitch black, showing virtually no discernible content or subjects due to the lack of lighting.",
+    "caption_vi": "Khung hình hoàn toàn tối đen hầu như không có chi tiết nào hiển thị.",
+    "detailed_caption_vi": "Khung hình tối đen như mực, hầu như không thể phân biệt được nội dung hoặc đối tượng nào do thiếu ánh sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0016",
+    "visual_source_frame_id": "L24_V044_f0016",
+    "ocr_source_frame_id": "L24_V044_f0016",
+    "quality_flags": [],
+    "caption": "A very dark frame showing indistinct shadowed shapes.",
+    "detailed_caption": "This low-light shot is nearly black, displaying very faint silhouettes of trees or structures against a dark background.",
+    "caption_vi": "Khung hình rất tối hiển thị các hình bóng mờ ảo.",
+    "detailed_caption_vi": "Khung hình thiếu sáng gần như đen hoàn toàn, hiển thị bóng mờ rất nhạt của cây cối hoặc cấu trúc trên nền tối.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0017",
+    "visual_source_frame_id": "L24_V044_f0017",
+    "ocr_source_frame_id": "L24_V044_f0017",
+    "quality_flags": [],
+    "caption": "A dark outdoor scene showing a tall red structure and trees.",
+    "detailed_caption": "This medium shot is very dark, showing a tall red decorative structure or pole in the center. Trees and building outlines are faintly visible in the background under dim lighting.",
+    "caption_vi": "Cảnh ngoài trời tối hiển thị cấu trúc màu đỏ cao và cây cối.",
+    "detailed_caption_vi": "Khung hình trung cảnh rất tối, hiển thị một cấu trúc trang trí hoặc cột màu đỏ cao ở giữa. Cây cối và đường viền tòa nhà mờ ảo phía sau dưới ánh sáng yếu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.286,
+          0.018,
+          0.861,
+          0.791
+        ],
+        "description": "tall red decorative pole structure",
+        "description_vi": "cấu trúc cột trang trí màu đỏ cao",
+        "attributes": [
+          "red",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0018",
+    "visual_source_frame_id": "L24_V044_f0018",
+    "ocr_source_frame_id": "L24_V044_f0018",
+    "quality_flags": [],
+    "caption": "A dark outdoor scene featuring a tall red structure and trees.",
+    "detailed_caption": "This medium shot captures a tall red structure or pole standing vertically in the center against a dark background. Trees and buildings are dimly visible behind it.",
+    "caption_vi": "Cảnh ngoài trời tối với cấu trúc màu đỏ cao và cây cối.",
+    "detailed_caption_vi": "Khung hình trung cảnh ghi lại một cấu trúc hoặc cột màu đỏ cao đứng thẳng ở giữa trên nền tối. Cây cối và tòa nhà thấp thoáng phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.301,
+          0.018,
+          0.8979999999999999,
+          0.7969999999999999
+        ],
+        "description": "tall red vertical pole structure",
+        "description_vi": "cấu trúc cột thẳng đứng màu đỏ cao",
+        "attributes": [
+          "red",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0019",
+    "visual_source_frame_id": "L24_V044_f0019",
+    "ocr_source_frame_id": "L24_V044_f0019",
+    "quality_flags": [],
+    "caption": "A dark outdoor scene with a tall red structure and trees in the background.",
+    "detailed_caption": "This medium shot shows a tall red structure or pole standing vertically in the center. Trees and a building are visible in the background under daylight.",
+    "caption_vi": "Cảnh ngoài trời tối với cấu trúc màu đỏ cao và cây cối phía sau.",
+    "detailed_caption_vi": "Khung hình trung cảnh hiển thị cấu trúc hoặc cột màu đỏ cao đứng thẳng ở chính giữa. Cây cối và một tòa nhà xuất hiện ở phía sau dưới ánh sáng ban ngày.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.302,
+          0.014000000000000002,
+          0.9109999999999999,
+          0.7969999999999999
+        ],
+        "description": "tall red vertical pole",
+        "description_vi": "cột thẳng đứng màu đỏ cao",
+        "attributes": [
+          "red",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0020",
+    "visual_source_frame_id": "L24_V044_f0020",
+    "ocr_source_frame_id": "L24_V044_f0020",
+    "quality_flags": [],
+    "caption": "A red lion costume performs on a series of tall poles over a blue mat.",
+    "detailed_caption": "This wide shot shows a red lion costume standing on elevated metal poles arranged over a blue mat. In the background, there is a large video screen, a coiled yellow dragon structure, and colorful stage decorations.",
+    "caption_vi": "Trang phục lân màu đỏ biểu diễn trên hàng cột cao phía trên thảm xanh.",
+    "detailed_caption_vi": "Khung hình toàn cảnh ghi lại trang phục lân màu đỏ đang đứng trên các cột kim loại cao được bố trí trên tấm thảm màu xanh. Phía sau là màn hình lớn, cấu trúc rồng vàng cuộn tròn và các trang trí sân khấu đầy màu sắc.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "dragon_sculpture_0",
+        "label": "dragon sculpture",
+        "bbox": [
+          0.057,
+          0.13999999999999999,
+          0.325,
+          0.308
+        ],
+        "description": "coiled green dragon structure on a stand",
+        "description_vi": "cấu trúc rồng xanh cuộn tròn trên giá đỡ",
+        "attributes": [
+          "green",
+          "coiled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.418,
+          0.409,
+          0.78,
+          0.697
+        ],
+        "description": "vibrant red lion costume standing on a pole",
+        "description_vi": "trang phục lân màu đỏ rực rỡ đứng trên cột",
+        "attributes": [
+          "red",
+          "furry"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.423,
+          0.5519999999999999,
+          0.5559999999999999,
+          0.961
+        ],
+        "description": "tall metal pole with circular platform",
+        "description_vi": "cột kim loại cao có bệ tròn",
+        "attributes": [
+          "metal",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pole_1",
+        "label": "pole",
+        "bbox": [
+          0.6,
+          0.67,
+          0.7180000000000001,
+          1.0
+        ],
+        "description": "tall metal pole with platform supporting the lion",
+        "description_vi": "cột kim loại cao có bệ đỡ lân",
+        "attributes": [
+          "metal",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "left_of",
+        "object_id": "pole_1"
+      },
+      {
+        "subject_id": "pole_1",
+        "predicate": "right_of",
+        "object_id": "pole_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0021",
+    "visual_source_frame_id": "L24_V044_f0021",
+    "ocr_source_frame_id": "L24_V044_f0021",
+    "quality_flags": [],
+    "caption": "A lion dance performer in a red costume balances on a pole among high metal stilts.",
+    "detailed_caption": "A medium shot captures a lion dance performer inside a vibrant red costume, balancing precariously on a thin pole atop a course of tall metal stilts. The performer is centered amidst a series of ascending metal poles set against a backdrop with colorful theatrical decorations and a large screen. The background features stage lighting and structural elements of an outdoor performance arena.",
+    "caption_vi": "Một diễn viên múa lân trong trang phục đỏ đang thăng bằng trên cột giữa dàn mai hoa thung cao.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một diễn viên múa lân mặc trang phục đỏ rực, đang đứng thăng bằng trên một chiếc cột nhỏ thuộc dàn mai hoa thung cao. Xung quanh là hệ thống các cột trụ kim loại vươn cao trên nền sân khấu ngoài trời với các họa tiết trang trí sặc sỡ và màn hình lớn phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.272,
+          0.223,
+          0.588,
+          0.6719999999999999
+        ],
+        "description": "vibrant red lion costume with fluffy fur and intricate headpiece",
+        "description_vi": "trang phục lân màu đỏ rực rỡ với lông xù và đầu lân tinh xảo",
+        "attributes": [
+          "red",
+          "fluffy",
+          "costume"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.386,
+          0.61,
+          0.495,
+          0.9570000000000001
+        ],
+        "description": "tall narrow metal stilt pole supporting the performer",
+        "description_vi": "cột trụ kim loại cao mảnh hỗ trợ người biểu diễn",
+        "attributes": [
+          "metal",
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0022",
+    "visual_source_frame_id": "L24_V044_f0021",
+    "ocr_source_frame_id": "L24_V044_f0022",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A lion dance performer in a red costume balances on a pole among high metal stilts.",
+    "detailed_caption": "A medium shot captures a lion dance performer inside a vibrant red costume, balancing precariously on a thin pole atop a course of tall metal stilts. The performer is centered amidst a series of ascending metal poles set against a backdrop with colorful theatrical decorations and a large screen. The background features stage lighting and structural elements of an outdoor performance arena.",
+    "caption_vi": "Một diễn viên múa lân trong trang phục đỏ đang thăng bằng trên cột giữa dàn mai hoa thung cao.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một diễn viên múa lân mặc trang phục đỏ rực, đang đứng thăng bằng trên một chiếc cột nhỏ thuộc dàn mai hoa thung cao. Xung quanh là hệ thống các cột trụ kim loại vươn cao trên nền sân khấu ngoài trời với các họa tiết trang trí sặc sỡ và màn hình lớn phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.272,
+          0.223,
+          0.588,
+          0.6719999999999999
+        ],
+        "description": "vibrant red lion costume with fluffy fur and intricate headpiece",
+        "description_vi": "trang phục lân màu đỏ rực rỡ với lông xù và đầu lân tinh xảo",
+        "attributes": [
+          "red",
+          "fluffy",
+          "costume"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.386,
+          0.61,
+          0.495,
+          0.9570000000000001
+        ],
+        "description": "tall narrow metal stilt pole supporting the performer",
+        "description_vi": "cột trụ kim loại cao mảnh hỗ trợ người biểu diễn",
+        "attributes": [
+          "metal",
+          "tall",
+          "cylindrical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0023",
+    "visual_source_frame_id": "L24_V044_f0023",
+    "ocr_source_frame_id": "L24_V044_f0023",
+    "quality_flags": [],
+    "caption": "A lion dancer in orange clothing stands near a fallen red costume on a blue mat, with spectators seated in the background.",
+    "detailed_caption": "A medium shot displays a lion dancer wearing an orange uniform and head wrap standing upright on the left. In the foreground, a red lion costume lies on a blue protective mat. Spectators and judges are seated in rows along tiered seating in the background under a structure.",
+    "caption_vi": "Một diễn viên múa lân mặc đồ cam đứng cạnh bộ trang phục đỏ nằm trên thảm xanh, phía sau là khán giả ngồi xem.",
+    "detailed_caption_vi": "Cảnh trung ghi lại một diễn viên múa lân mặc bộ đồ màu cam đứng bên trái, hướng nhìn về phía trước. Ở góc gần, một bộ trang phục lân màu đỏ đang nằm trải trên thảm xanh. Phía xa là khu vực khán đài với nhiều khán giả đang theo dõi màn trình diễn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.21400000000000002,
+          0.768,
+          0.8520000000000001,
+          0.851
+        ],
+        "description": "fallen red lion costume lying on a blue mat",
+        "description_vi": "trang phục lân màu đỏ bị ngã nằm trên thảm xanh",
+        "attributes": [
+          "red",
+          "fallen"
+        ],
+        "action": "lying"
+      },
+      {
+        "object_id": "performer_0",
+        "label": "performer",
+        "bbox": [
+          0.078,
+          0.477,
+          0.23800000000000002,
+          0.8089999999999999
+        ],
+        "description": "person wearing orange uniform and head wrap",
+        "description_vi": "người mặc đồng phục màu cam và khăn quấn đầu",
+        "attributes": [
+          "orange",
+          "uniform"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0024",
+    "visual_source_frame_id": "L24_V044_f0024",
+    "ocr_source_frame_id": "L24_V044_f0024",
+    "quality_flags": [],
+    "caption": "A performer in a red uniform stands beside a fallen red lion costume on a performance stage.",
+    "detailed_caption": "A medium shot shows a performer dressed in a red uniform with gold lettering standing next to a discarded red lion costume lying on a blue mat. Several lion heads are displayed on a shelf in the background above a colorful stage backdrop. Spectators and judges sit in the background.",
+    "caption_vi": "Một diễn viên mặc đồng phục đỏ đứng cạnh bộ trang phục lân màu đỏ đang nằm trên sàn sân khấu.",
+    "detailed_caption_vi": "Cảnh trung ghi hình một diễn viên mặc bộ đồ đỏ có chữ vàng đang đứng bên cạnh bộ trang phục lân đỏ nằm ngổn ngang trên thảm xanh. Phía trên là hàng đầu lân được trưng bày trên bục với phông nền trang trí nhiều màu sắc và khán giả ở hậu cảnh.",
+    "ocr_text": "DAI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.012,
+          0.5,
+          0.995,
+          0.933
+        ],
+        "description": "red lion costume lying on the floor",
+        "description_vi": "trang phục lân màu đỏ nằm trên sàn",
+        "attributes": [
+          "red",
+          "fallen"
+        ],
+        "action": "lying"
+      },
+      {
+        "object_id": "performer_0",
+        "label": "performer",
+        "bbox": [
+          0.13999999999999999,
+          0.20600000000000002,
+          0.5650000000000001,
+          0.7929999999999999
+        ],
+        "description": "person in red uniform with gold trim standing near costume",
+        "description_vi": "người mặc đồng phục đỏ viền vàng đứng gần trang phục",
+        "attributes": [
+          "red",
+          "uniform"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "performer_0"
+      },
+      {
+        "subject_id": "performer_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0025",
+    "visual_source_frame_id": "L24_V044_f0025",
+    "ocr_source_frame_id": "L24_V044_f0025",
+    "quality_flags": [],
+    "caption": "A lion dancer with a yellow lion costume moves near a miniature boat prop on a stage.",
+    "detailed_caption": "A medium shot captures a lion dancer wearing a yellow costume and black clothing interacting with a blue miniature boat prop placed on a blue platform. High metal scaffolding and tall vertical poles frame the left side of the scene, with a seated audience visible in the background.",
+    "caption_vi": "Một vũ công múa lân với trang phục màu vàng di chuyển gần mô hình thuyền nhỏ trên sân khấu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại vũ công múa lân mặc bộ đồ đen và đầu lân vàng đang di chuyển cạnh mô hình chiếc thuyền nhỏ đặt trên bục xanh. Khung giàn giáo kim loại cao và các cột trụ đứng bên trái, phía sau là đông đảo khán giả đang theo dõi.",
+    "ocr_text": "TG-3333",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "boat_0",
+        "label": "boat",
+        "bbox": [
+          0.36300000000000004,
+          0.718,
+          0.995,
+          0.933
+        ],
+        "description": "blue miniature boat prop with a small flag on top",
+        "description_vi": "mô hình thuyền màu xanh dương nhỏ có cắm cờ nhỏ ở trên",
+        "attributes": [
+          "blue",
+          "miniature"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.012,
+          0.75,
+          0.386,
+          0.9960000000000001
+        ],
+        "description": "yellow and black lion costume being handled by a performer",
+        "description_vi": "trang phục lân màu vàng đen đang được người biểu diễn thao tác",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0026",
+    "visual_source_frame_id": "L24_V044_f0026",
+    "ocr_source_frame_id": "L24_V044_f0026",
+    "quality_flags": [],
+    "caption": "A judge in a yellow shirt stands among numbered stilt poles while seated officials watch from tables.",
+    "detailed_caption": "A medium shot shows a judge wearing a yellow polo shirt and dark pants standing between numbered vertical stilt poles on a stage. Two official tables with blue tablecloths and seated judges are positioned on either side. A crowd of spectators fills the darkened background.",
+    "caption_vi": "Một giám khảo mặc áo vàng đứng giữa các cột trụ có đánh số, phía sau là khán giả và bàn ban giám khảo.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một giám khảo mặc áo polo màu vàng và quần tối màu đang đứng giữa các cột trụ có dán nhãn số thứ tự trên sân khấu. Hai bên là bàn làm việc phủ khăn xanh của ban giám khảo với các quan chức ngồi phía sau, cùng đám đông khán giả ở hậu cảnh tối.",
+    "ocr_text": "10 12 14 13 15",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "judge_0",
+        "label": "judge",
+        "bbox": [
+          0.325,
+          0.619,
+          0.47100000000000003,
+          0.898
+        ],
+        "description": "man wearing a yellow polo shirt and dark trousers standing between poles",
+        "description_vi": "nam giám khảo mặc áo polo vàng và quần tối màu đứng giữa các cột",
+        "attributes": [
+          "yellow",
+          "polo"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.448,
+          0.546,
+          0.5239999999999999,
+          0.961
+        ],
+        "description": "vertical numbered stilt pole with white label",
+        "description_vi": "cột trụ thẳng đứng có đánh số thứ tự với nhãn trắng",
+        "attributes": [
+          "vertical",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "judge_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "judge_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0027",
+    "visual_source_frame_id": "L24_V044_f0027",
+    "ocr_source_frame_id": "L24_V044_f0027",
+    "quality_flags": [],
+    "caption": "A yellow lion costume rests near a blue table with judges, while a performer moves nearby on a blue mat.",
+    "detailed_caption": "A medium shot captures a yellow lion costume lying on a blue mat on the left side of the frame. In the background, officials are seated behind a blue-draped table in front of a decorated archway with red lanterns. A crowd of spectators fills the background.",
+    "caption_vi": "Bộ trang phục lân màu vàng nằm gần bàn giám khảo phủ khăn xanh, trong khi diễn viên di chuyển trên thảm.",
+    "detailed_caption_vi": "Cảnh trung ghi lại bộ trang phục lân màu vàng đang nằm trên thảm xanh ở bên trái khung hình. Phía sau là bàn của ban giám khảo trải khăn xanh đặt trước vòm trang trí có đèn lồng đỏ. Đám đông khán giả theo dõi sự kiện ở hậu cảnh.",
+    "ocr_text": "DAI TRUYEN HINH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.604,
+          0.5650000000000001,
+          0.982
+        ],
+        "description": "yellow and black lion costume lying on the floor",
+        "description_vi": "trang phục lân màu vàng đen nằm trên sàn",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "lying"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.16,
+          0.41500000000000004,
+          0.479,
+          0.558
+        ],
+        "description": "blue-skirted table with seated officials behind it",
+        "description_vi": "bàn phủ vải xanh với các quan chức ngồi phía sau",
+        "attributes": [
+          "blue",
+          "skirted"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "table_0",
+        "predicate": "above",
+        "object_id": "lion_costume_0"
+      },
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "below",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0028",
+    "visual_source_frame_id": "L24_V044_f0028",
+    "ocr_source_frame_id": "L24_V044_f0028",
+    "quality_flags": [],
+    "caption": "A white lion dancer performs an acrobatic movement on a metal pole while officials observe from a table.",
+    "detailed_caption": "A medium shot shows a white and purple lion dancer performing a dynamic leap across tall metal poles. In the background, judges sit at a table with a blue tablecloth, and tall green trees stand behind the outdoor stage area.",
+    "caption_vi": "Vũ công múa lân màu trắng thực hiện động tác nhào lộn trên cột sắt, phía sau là giám khảo ngồi bàn.",
+    "detailed_caption_vi": "Cảnh trung ghi lại màn biểu diễn nhào lộn của đoàn múa lân trắng và tím trên các cột kim loại cao. Phía sau là bàn làm việc có khăn trải xanh của ban giám khảo và hàng cây xanh phía xa trong không gian ngoài trời.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.5559999999999999,
+          0.6719999999999999,
+          1.0
+        ],
+        "description": "white and purple lion costume with long fur performing an action",
+        "description_vi": "trang phục lân màu trắng và tím có lông dài đang thực hiện động tác",
+        "attributes": [
+          "white",
+          "purple",
+          "furry"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.793,
+          0.528,
+          0.957,
+          1.0
+        ],
+        "description": "tall metal stilt pole supporting the performance",
+        "description_vi": "cột trụ kim loại cao hỗ trợ màn trình diễn",
+        "attributes": [
+          "metal",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "left_of",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "right_of",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0029",
+    "visual_source_frame_id": "L24_V044_f0028",
+    "ocr_source_frame_id": "L24_V044_f0029",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A white lion dancer performs an acrobatic movement on a metal pole while officials observe from a table.",
+    "detailed_caption": "A medium shot shows a white and purple lion dancer performing a dynamic leap across tall metal poles. In the background, judges sit at a table with a blue tablecloth, and tall green trees stand behind the outdoor stage area.",
+    "caption_vi": "Vũ công múa lân màu trắng thực hiện động tác nhào lộn trên cột sắt, phía sau là giám khảo ngồi bàn.",
+    "detailed_caption_vi": "Cảnh trung ghi lại màn biểu diễn nhào lộn của đoàn múa lân trắng và tím trên các cột kim loại cao. Phía sau là bàn làm việc có khăn trải xanh của ban giám khảo và hàng cây xanh phía xa trong không gian ngoài trời.",
+    "ocr_text": "4",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.5559999999999999,
+          0.6719999999999999,
+          1.0
+        ],
+        "description": "white and purple lion costume with long fur performing an action",
+        "description_vi": "trang phục lân màu trắng và tím có lông dài đang thực hiện động tác",
+        "attributes": [
+          "white",
+          "purple",
+          "furry"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.793,
+          0.528,
+          0.957,
+          1.0
+        ],
+        "description": "tall metal stilt pole supporting the performance",
+        "description_vi": "cột trụ kim loại cao hỗ trợ màn trình diễn",
+        "attributes": [
+          "metal",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "left_of",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "right_of",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0030",
+    "visual_source_frame_id": "L24_V044_f0030",
+    "ocr_source_frame_id": "L24_V044_f0030",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer balances atop tall metal poles on a blue performance stage.",
+    "detailed_caption": "A medium shot captures a yellow lion dancer standing steadily on top of two tall metal stilt poles. The stage features a blue protective mat, and in the background, several drums and tables are set up with people watching under a decorative backdrop.",
+    "caption_vi": "Lân vàng đang đứng thăng bằng trên các cột sắt cao tại khu vực sân khấu biểu diễn.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh đầu lân và người biểu diễn trong trang phục màu vàng đang đứng vững trên hai cột trụ kim loại cao. Sàn sân khấu lót thảm xanh, phía sau có các trống và bàn ghế cùng khán giả theo dõi trước phông nền trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.4,
+          0.29500000000000004,
+          0.75,
+          0.6
+        ],
+        "description": "bright yellow furry lion costume standing on poles",
+        "description_vi": "trang phục lân màu vàng tươi có lông xù đang đứng trên cột",
+        "attributes": [
+          "yellow",
+          "furry"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.5630000000000001,
+          0.567,
+          0.691,
+          0.877
+        ],
+        "description": "tall metal stilt pole supporting the lion dancer",
+        "description_vi": "cột trụ kim loại cao đỡ người múa lân",
+        "attributes": [
+          "metal",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0031",
+    "visual_source_frame_id": "L24_V044_f0031",
+    "ocr_source_frame_id": "L24_V044_f0031",
+    "quality_flags": [],
+    "caption": "A yellow lion costume performs a dynamic jump or acrobatic move over a metal pole.",
+    "detailed_caption": "A close-up shot shows a yellow lion costume in mid-air during an acrobatic jump over a vertical metal pole. Spectators are visible seated in the blurred background behind the stage structure.",
+    "caption_vi": "Trang phục lân màu vàng thực hiện cú nhảy nhào lộn trên không qua cột kim loại.",
+    "detailed_caption_vi": "Cảnh cận ghi lại khoảnh khắc trang phục lân màu vàng đang bay trên không trung khi thực hiện động tác nhảy qua cột trụ kim loại. Khán giả ngồi ở khu vực phía sau bị mờ nhẹ để làm nổi bật chủ thể.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.07200000000000001,
+          0.159,
+          0.996,
+          0.655
+        ],
+        "description": "fluffy yellow lion costume leaping across the frame",
+        "description_vi": "trang phục lân màu vàng xù lông đang bay nhảy qua khung hình",
+        "attributes": [
+          "yellow",
+          "furry"
+        ],
+        "action": "leaping"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.591,
+          0.5559999999999999,
+          0.691,
+          0.9960000000000001
+        ],
+        "description": "vertical metal pole used for the stunt",
+        "description_vi": "cột trụ kim loại thẳng đứng dùng cho động tác biểu diễn",
+        "attributes": [
+          "metal",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0032",
+    "visual_source_frame_id": "L24_V044_f0031",
+    "ocr_source_frame_id": "L24_V044_f0032",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A yellow lion costume performs a dynamic jump or acrobatic move over a metal pole.",
+    "detailed_caption": "A close-up shot shows a yellow lion costume in mid-air during an acrobatic jump over a vertical metal pole. Spectators are visible seated in the blurred background behind the stage structure.",
+    "caption_vi": "Trang phục lân màu vàng thực hiện cú nhảy nhào lộn trên không qua cột kim loại.",
+    "detailed_caption_vi": "Cảnh cận ghi lại khoảnh khắc trang phục lân màu vàng đang bay trên không trung khi thực hiện động tác nhảy qua cột trụ kim loại. Khán giả ngồi ở khu vực phía sau bị mờ nhẹ để làm nổi bật chủ thể.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.07200000000000001,
+          0.159,
+          0.996,
+          0.655
+        ],
+        "description": "fluffy yellow lion costume leaping across the frame",
+        "description_vi": "trang phục lân màu vàng xù lông đang bay nhảy qua khung hình",
+        "attributes": [
+          "yellow",
+          "furry"
+        ],
+        "action": "leaping"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.591,
+          0.5559999999999999,
+          0.691,
+          0.9960000000000001
+        ],
+        "description": "vertical metal pole used for the stunt",
+        "description_vi": "cột trụ kim loại thẳng đứng dùng cho động tác biểu diễn",
+        "attributes": [
+          "metal",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0033",
+    "visual_source_frame_id": "L24_V044_f0033",
+    "ocr_source_frame_id": "L24_V044_f0033",
+    "quality_flags": [],
+    "caption": "A judge in a yellow polo shirt stands between numbered metal poles on a stage.",
+    "detailed_caption": "A medium shot shows a judge wearing a yellow polo shirt and dark trousers standing amidst a row of numbered metal stilt poles. Seated judges at blue-covered tables and an audience are visible in the background under tent lighting.",
+    "caption_vi": "Giám khảo mặc áo polo vàng đứng giữa các cột sắt có đánh số trên sân khấu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại nam giám khảo mặc áo polo vàng và quần tối màu đang đứng giữa hàng cột trụ kim loại có đánh số. Xung quanh là bàn của giám khảo phủ khăn xanh và khán giả theo dõi dưới ánh đèn sân khấu.",
+    "ocr_text": "12 14 13 15 17",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "judge_0",
+        "label": "judge",
+        "bbox": [
+          0.267,
+          0.615,
+          0.41100000000000003,
+          0.8869999999999999
+        ],
+        "description": "man wearing a yellow polo shirt and dark pants standing near poles",
+        "description_vi": "nam giám khảo mặc áo polo màu vàng và quần tối màu đứng gần các cột",
+        "attributes": [
+          "yellow",
+          "polo"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.386,
+          0.528,
+          0.463,
+          0.9570000000000001
+        ],
+        "description": "tall metal stilt pole with number label",
+        "description_vi": "cột trụ kim loại cao có dán nhãn số thứ tự",
+        "attributes": [
+          "metal",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "judge_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "judge_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0034",
+    "visual_source_frame_id": "L24_V044_f0034",
+    "ocr_source_frame_id": "L24_V044_f0034",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer moves near a blue mat while officials watch from a table in the background.",
+    "detailed_caption": "A medium shot captures a yellow lion dancer moving on the right side next to a blue crash mat. In the background, officials are seated behind a blue-draped table in front of red lanterns and a decorative archway.",
+    "caption_vi": "Vũ công lân vàng di chuyển gần thảm xanh, phía sau là bàn giám khảo và đèn lồng trang trí.",
+    "detailed_caption_vi": "Cảnh trung ghi lại vũ công lân màu vàng đang di chuyển ở góc phải gần tấm thảm xanh bảo hộ. Phía sau là bàn làm việc phủ khăn xanh của ban giám khảo, đặt trước vòm trang trí treo đèn lồng đỏ và đông đảo khán giả.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.8560000000000001,
+          0.5559999999999999,
+          0.996,
+          0.901
+        ],
+        "description": "yellow lion costume with performer moving on the floor",
+        "description_vi": "trang phục lân màu vàng cùng người biểu diễn đang di chuyển trên sàn",
+        "attributes": [
+          "yellow",
+          "furry"
+        ],
+        "action": "moving"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.16,
+          0.41100000000000003,
+          0.419,
+          0.5509999999999999
+        ],
+        "description": "blue-skirted table with seated officials behind it",
+        "description_vi": "bàn phủ vải xanh với các quan chức ngồi phía sau",
+        "attributes": [
+          "blue",
+          "skirted"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0035",
+    "visual_source_frame_id": "L24_V044_f0034",
+    "ocr_source_frame_id": "L24_V044_f0035",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A yellow lion dancer moves near a blue mat while officials watch from a table in the background.",
+    "detailed_caption": "A medium shot captures a yellow lion dancer moving on the right side next to a blue crash mat. In the background, officials are seated behind a blue-draped table in front of red lanterns and a decorative archway.",
+    "caption_vi": "Vũ công lân vàng di chuyển gần thảm xanh, phía sau là bàn giám khảo và đèn lồng trang trí.",
+    "detailed_caption_vi": "Cảnh trung ghi lại vũ công lân màu vàng đang di chuyển ở góc phải gần tấm thảm xanh bảo hộ. Phía sau là bàn làm việc phủ khăn xanh của ban giám khảo, đặt trước vòm trang trí treo đèn lồng đỏ và đông đảo khán giả.",
+    "ocr_text": "DAI TRUYEN HINH TP. HỌ CHI MINH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.8560000000000001,
+          0.5559999999999999,
+          0.996,
+          0.901
+        ],
+        "description": "yellow lion costume with performer moving on the floor",
+        "description_vi": "trang phục lân màu vàng cùng người biểu diễn đang di chuyển trên sàn",
+        "attributes": [
+          "yellow",
+          "furry"
+        ],
+        "action": "moving"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.16,
+          0.41100000000000003,
+          0.419,
+          0.5509999999999999
+        ],
+        "description": "blue-skirted table with seated officials behind it",
+        "description_vi": "bàn phủ vải xanh với các quan chức ngồi phía sau",
+        "attributes": [
+          "blue",
+          "skirted"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0036",
+    "visual_source_frame_id": "L24_V044_f0036",
+    "ocr_source_frame_id": "L24_V044_f0036",
+    "quality_flags": [],
+    "caption": "An audience wearing face masks sits closely packed together watching an event.",
+    "detailed_caption": "A medium close-up shot shows a dense crowd of spectators in an audience, many wearing face masks and casual clothing. Individuals in the foreground are captured holding smartphones and applauding while watching a performance.",
+    "caption_vi": "Đông đảo khán giả đeo khẩu trang ngồi tập trung theo dõi sự kiện.",
+    "detailed_caption_vi": "Cảnh cận trung ghi lại hình ảnh đông đảo khán giả ngồi sát nhau trên khán đài, hầu hết đều đeo khẩu trang y tế và mặc trang phục thường ngày. Một số người ở hàng đầu đang giơ điện thoại quay phim hoặc vỗ tay theo dõi.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "spectator_0",
+        "label": "spectator",
+        "bbox": [
+          0.275,
+          0.546,
+          0.491,
+          0.667
+        ],
+        "description": "person in crowd wearing a pink face mask and glasses",
+        "description_vi": "khán giả trong đám đông đeo khẩu trang màu hồng và kính",
+        "attributes": [
+          "masked",
+          "glasses"
+        ],
+        "action": "watching"
+      },
+      {
+        "object_id": "spectator_1",
+        "label": "spectator",
+        "bbox": [
+          0.467,
+          0.311,
+          0.643,
+          0.42699999999999994
+        ],
+        "description": "person wearing a blue face mask and looking upwards",
+        "description_vi": "khán giả đeo khẩu trang y tế màu xanh đang nhìn lên trên",
+        "attributes": [
+          "masked",
+          "blue"
+        ],
+        "action": "watching"
+      },
+      {
+        "object_id": "spectator_2",
+        "label": "spectator",
+        "bbox": [
+          0.816,
+          0.319,
+          0.945,
+          0.4
+        ],
+        "description": "person wearing a light blue face mask in the audience",
+        "description_vi": "khán giả đeo khẩu trang màu xanh nhạt trong đám đông",
+        "attributes": [
+          "masked",
+          "blue"
+        ],
+        "action": "watching"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "spectator_1",
+        "predicate": "left_of",
+        "object_id": "spectator_2"
+      },
+      {
+        "subject_id": "spectator_2",
+        "predicate": "right_of",
+        "object_id": "spectator_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0037",
+    "visual_source_frame_id": "L24_V044_f0037",
+    "ocr_source_frame_id": "L24_V044_f0037",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer balances on a single metal pole on a stage.",
+    "detailed_caption": "A medium shot shows a yellow and green lion costume standing balanced on top of a single vertical metal stilt pole. In the background, judges sit at a blue-skirted table under an outdoor stage structure with trees visible.",
+    "caption_vi": "Lân vàng đứng thăng bằng trên một cột trụ kim loại duy nhất trên sân khấu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh đầu lân màu vàng và xanh đang đứng thăng bằng trên đỉnh một cột trụ kim loại đơn lẻ. Phía sau là bàn làm việc của ban giám khảo phủ khăn xanh, dưới mái che sân khấu và bóng cây ngoài trời.",
+    "ocr_text": "3",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.477,
+          0.588,
+          0.875
+        ],
+        "description": "yellow and green lion costume balancing on a pole",
+        "description_vi": "trang phục lân màu vàng và xanh đang thăng bằng trên cột",
+        "attributes": [
+          "yellow",
+          "green",
+          "furry"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.208,
+          0.8089999999999999,
+          0.282,
+          1.0
+        ],
+        "description": "tall metal stilt pole with number label three",
+        "description_vi": "cột trụ kim loại cao có dán nhãn số ba",
+        "attributes": [
+          "metal",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lion_costume_0",
+        "predicate": "overlapping",
+        "object_id": "pole_0"
+      },
+      {
+        "subject_id": "pole_0",
+        "predicate": "overlapping",
+        "object_id": "lion_costume_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L24_V044_f0038",
+    "visual_source_frame_id": "L24_V044_f0038",
+    "ocr_source_frame_id": "L24_V044_f0038",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer performs on top of vertical stilt poles on a stage.",
+    "detailed_caption": "A medium shot captures a yellow lion costume performing an acrobatic move while balancing on tall vertical metal poles. A seated judge and tables with blue tablecloths are visible in the background against a dimly lit setting.",
+    "caption_vi": "Vũ công lân màu vàng thực hiện động tác trên các cột trụ cao tại sân khấu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại đầu lân màu vàng đang thực hiện động tác biểu diễn trên đỉnh các cột trụ kim loại cao. Phía sau là bàn giám khảo trải khăn xanh và khán giả theo dõi trong không gian ánh sáng mờ.",
+    "ocr_text": "4 6",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.423,
+          0.323,
+          1.0,
+          0.875
+        ],
+        "description": "yellow and black lion costume performing on stilt poles",
+        "description_vi": "trang phục lân màu vàng đen đang biểu diễn trên các cột trụ",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "performing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.373,
+          0.7849999999999999,
+          0.455,
+          1.0
+        ],
+        "description": "vertical metal stilt pole with number label four",
+        "description_vi": "cột trụ kim loại thẳng đứng có dán nhãn số bốn",
+        "attributes": [
+          "metal",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0039",
+    "visual_source_frame_id": "L24_V044_f0039",
+    "ocr_source_frame_id": "L24_V044_f0039",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer balances on tall stilt poles during an evening performance.",
+    "detailed_caption": "A medium shot shows a yellow and green lion costume balanced across two tall metal stilt poles. In the background, seated judges at a blue-skirted table and audience members are visible under stage lighting.",
+    "caption_vi": "Lân vàng thăng bằng trên các cột trụ cao trong buổi biểu diễn buổi tối.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh đầu lân màu vàng xanh đang giữ thăng bằng trên hai cột trụ kim loại cao. Phía sau là bàn của ban giám khảo phủ vải xanh cùng khán giả đang theo dõi dưới ánh đèn sân khấu buổi tối.",
+    "ocr_text": "4 6",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.386,
+          0.992,
+          0.75
+        ],
+        "description": "yellow and black lion costume balancing on poles",
+        "description_vi": "trang phục lân màu vàng đen đang thăng bằng trên các cột",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.451,
+          0.742,
+          0.533,
+          1.0
+        ],
+        "description": "tall metal stilt pole with number four label",
+        "description_vi": "cột trụ kim loại cao có nhãn số bốn",
+        "attributes": [
+          "metal",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0040",
+    "visual_source_frame_id": "L24_V044_f0040",
+    "ocr_source_frame_id": "L24_V044_f0040",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer balances on vertical stilt poles on an outdoor stage.",
+    "detailed_caption": "A medium shot captures a yellow and green lion costume balanced horizontally on tall metal poles. Judges seated at a table with blue tablecloths and a small audience are visible in the background under evening lighting.",
+    "caption_vi": "Lân vàng đang thăng bằng ngang trên các cột trụ kim loại ngoài sân khấu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại bộ trang phục lân màu vàng và xanh đang giữ thăng bằng theo chiều ngang trên các cột trụ kim loại cao. Phía sau là bàn làm việc của ban giám khảo và khán giả dưới ánh đèn buổi tối.",
+    "ocr_text": "4 6",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.351,
+          1.0,
+          0.746
+        ],
+        "description": "yellow and black lion costume performing on stilt poles",
+        "description_vi": "trang phục lân màu vàng đen đang biểu diễn trên cột trụ",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.463,
+          0.742,
+          0.5409999999999999,
+          1.0
+        ],
+        "description": "tall metal stilt pole labeled with number four",
+        "description_vi": "cột trụ kim loại cao được dán nhãn số bốn",
+        "attributes": [
+          "metal",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0041",
+    "visual_source_frame_id": "L24_V044_f0041",
+    "ocr_source_frame_id": "L24_V044_f0041",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer balances horizontally on tall metal stilt poles.",
+    "detailed_caption": "A medium shot shows a yellow and green lion costume maintaining a horizontal balance across two vertical stilt poles. Judges and audience members are seated in the background under evening lighting.",
+    "caption_vi": "Lân vàng giữ thăng bằng theo chiều ngang trên các cột trụ kim loại cao.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh đầu lân màu vàng và xanh đang giữ thăng bằng nằm ngang trên hai cột trụ kim loại. Phía sau là khu vực bàn giám khảo và khán giả trong ánh đèn tối.",
+    "ocr_text": "4 6",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.335,
+          0.992,
+          0.746
+        ],
+        "description": "yellow and green lion costume in horizontal balance",
+        "description_vi": "trang phục lân màu vàng và xanh đang thăng bằng theo chiều ngang",
+        "attributes": [
+          "yellow",
+          "green"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.463,
+          0.742,
+          0.5409999999999999,
+          1.0
+        ],
+        "description": "tall metal stilt pole with number four label",
+        "description_vi": "cột trụ kim loại cao có nhãn số bốn",
+        "attributes": [
+          "metal",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L24_V044_f0042",
+    "visual_source_frame_id": "L24_V044_f0042",
+    "ocr_source_frame_id": "L24_V044_f0042",
+    "quality_flags": [],
+    "caption": "A yellow lion dancer performs a balanced pose across metal stilt poles.",
+    "detailed_caption": "A medium shot captures a yellow and green lion costume holding a balanced position on top of tall vertical metal poles. Judges seated at a table and an audience are visible in the background under stage lights.",
+    "caption_vi": "Lân vàng thực hiện tư thế thăng bằng trên các cột trụ kim loại.",
+    "detailed_caption_vi": "Cảnh trung ghi lại bộ trang phục lân màu vàng và xanh đang giữ tư thế thăng bằng trên đỉnh các cột trụ kim loại cao. Phía sau là ban giám khảo ngồi bàn và khán giả dưới ánh đèn sân khấu.",
+    "ocr_text": "4 6",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "lion_costume_0",
+        "label": "lion costume",
+        "bbox": [
+          0.0,
+          0.319,
+          1.0,
+          0.746
+        ],
+        "description": "yellow and green lion costume in a balanced pose on poles",
+        "description_vi": "trang phục lân màu vàng xanh trong tư thế thăng bằng trên cột",
+        "attributes": [
+          "yellow",
+          "green"
+        ],
+        "action": "balancing"
+      },
+      {
+        "object_id": "pole_0",
+        "label": "pole",
+        "bbox": [
+          0.463,
+          0.742,
+          0.5409999999999999,
+          1.0
+        ],
+        "description": "tall metal stilt pole with number four label",
+        "description_vi": "cột trụ kim loại cao có nhãn số bốn",
+        "attributes": [
+          "metal",
+          "numbered"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  }
+]

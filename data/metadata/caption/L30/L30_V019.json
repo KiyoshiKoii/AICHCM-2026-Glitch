@@ -1,0 +1,5835 @@
+[
+  {
+    "frame_id": "L30_V019_f0001",
+    "visual_source_frame_id": "L30_V019_f0001",
+    "ocr_source_frame_id": "L30_V019_f0001",
+    "quality_flags": [],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions smoothly into a lighter white at the center with a soft radial vignette at the corners.",
+    "caption_vi": "Một nền trắng trơn có hiệu ứng chuyển màu.",
+    "detailed_caption_vi": "Phông nền màu trắng trơn chuyển dần sang sáng hơn ở trung tâm với một khung mờ nhẹ ở các góc.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0002",
+    "visual_source_frame_id": "L30_V019_f0001",
+    "ocr_source_frame_id": "L30_V019_f0002",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions smoothly into a lighter white at the center with a soft radial vignette at the corners.",
+    "caption_vi": "Một nền trắng trơn có hiệu ứng chuyển màu.",
+    "detailed_caption_vi": "Phông nền màu trắng trơn chuyển dần sang sáng hơn ở trung tâm với một khung mờ nhẹ ở các góc.",
+    "ocr_text": "Herbalife #1 thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0003",
+    "visual_source_frame_id": "L30_V019_f0001",
+    "ocr_source_frame_id": "L30_V019_f0003",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions smoothly into a lighter white at the center with a soft radial vignette at the corners.",
+    "caption_vi": "Một nền trắng trơn có hiệu ứng chuyển màu.",
+    "detailed_caption_vi": "Phông nền màu trắng trơn chuyển dần sang sáng hơn ở trung tâm với một khung mờ nhẹ ở các góc.",
+    "ocr_text": "Herbalife #1 thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0004",
+    "visual_source_frame_id": "L30_V019_f0004",
+    "ocr_source_frame_id": "L30_V019_f0004",
+    "quality_flags": [],
+    "caption": "A woman in a red shirt stands in an indoor space with large cooking pots and a fan.",
+    "detailed_caption": "A medium shot of an indoor space showing a woman wearing a red shirt and dark pants standing near a red basin on the tiled floor. To her left, another person wears a dark red dress. Large aluminum cooking pots, stacked blue plastic bags, a green electric fan, and a motorcycle are visible in the room.",
+    "caption_vi": "Một phụ nữ mặc áo đỏ đứng trong không gian nhà với các nồi nấu lớn và quạt.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh bên trong một ngôi nhà, cho thấy một phụ nữ mặc áo đỏ và quần tối màu đang đứng cạnh chậu nhựa màu đỏ trên sàn lát gạch. Bên trái cô, một người khác mặc váy đỏ sẫm. Các nồi nấu bằng nhôm lớn, những túi nhựa màu xanh được xếp chồng lên nhau, một chiếc quạt điện màu xanh lá cây và một chiếc xe máy xuất hiện trong không gian.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "fan_0",
+        "label": "fan",
+        "bbox": [
+          0.28900000000000003,
+          0.37199999999999994,
+          0.371,
+          0.673
+        ],
+        "description": "green electric pedestal fan",
+        "description_vi": "quạt cây điện màu xanh lá cây",
+        "attributes": [
+          "green",
+          "electric",
+          "stand fan"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.409,
+          0.351,
+          0.484,
+          0.566
+        ],
+        "description": "woman wearing a red shirt and dark pants",
+        "description_vi": "người phụ nữ mặc áo đỏ và quần tối màu",
+        "attributes": [
+          "woman",
+          "red shirt",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.28300000000000003,
+          0.6699999999999999,
+          0.553,
+          1.0
+        ],
+        "description": "large aluminum cooking pot filled with liquid",
+        "description_vi": "nồi nấu bằng nhôm lớn chứa đầy chất lỏng",
+        "attributes": [
+          "large",
+          "aluminum",
+          "cooking pot"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "fan_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "fan_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0005",
+    "visual_source_frame_id": "L30_V019_f0005",
+    "ocr_source_frame_id": "L30_V019_f0005",
+    "quality_flags": [],
+    "caption": "A woman in a red shirt pours rice from a red basin into a large pot.",
+    "detailed_caption": "A close-up shot shows a woman in a red sleeveless top pouring white rice from a red washbasin into a large aluminum pot containing water. The kitchen setting features tiled flooring, a motorcycle, and stacked bags in the background.",
+    "caption_vi": "Một phụ nữ mặc áo đỏ đổ gạo từ chậu đỏ vào nồi lớn.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một phụ nữ mặc áo ba lỗ đỏ đang đổ gạo trắng từ một chiếc chậu nhựa màu đỏ vào một nồi nhôm lớn chứa nước. Bối cảnh nhà bếp có sàn lát gạch, xe máy và các túi đồ xếp phía sau.",
+    "ocr_text": "tuoitreTV Cuộc thi Lan tỏa năng lượng tích cực 2024: Lan tỏa tinh thần tương trợ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.258,
+          0.0,
+          0.606,
+          0.564
+        ],
+        "description": "woman in a red sleeveless top pouring rice",
+        "description_vi": "phụ nữ mặc áo không tay màu đỏ đang đổ gạo",
+        "attributes": [
+          "woman",
+          "red top",
+          "pouring"
+        ],
+        "action": "pouring rice"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.33999999999999997,
+          0.487,
+          0.6990000000000001,
+          1.0
+        ],
+        "description": "large aluminum pot being filled with rice",
+        "description_vi": "nồi nhôm lớn đang được đổ gạo vào",
+        "attributes": [
+          "large",
+          "aluminum",
+          "pot"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0006",
+    "visual_source_frame_id": "L30_V019_f0006",
+    "ocr_source_frame_id": "L30_V019_f0006",
+    "quality_flags": [],
+    "caption": "Two men sit cross-legged on a tiled floor preparing ingredients near a green wall.",
+    "detailed_caption": "A medium shot of two men sitting cross-legged on a patterned tiled floor. On the left, a man wears a pink striped button-down shirt. On the right, a man wears a blue polo shirt and dark shorts, holding a plastic bottle. A white bowl with small chopped pieces sits between them against a backdrop of a green paneled wall and wooden chairs.",
+    "caption_vi": "Hai người đàn ông ngồi khoanh chân trên sàn gạch chuẩn bị nguyên liệu gần bức tường xanh.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh của hai người đàn ông đang ngồi khoanh chân trên sàn lát gạch họa tiết. Bên trái, một người mặc áo sơ mi sọc hồng. Bên phải, một người mặc áo polo xanh và quần đùi tối màu, đang cầm một chai nhựa. Một chiếc bát trắng đựng hành cắt nhỏ nằm giữa họ trước phông nền tường gỗ xanh và ghế.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.06899999999999999,
+          0.098,
+          0.477,
+          0.997
+        ],
+        "description": "man in a pink striped shirt sitting cross-legged",
+        "description_vi": "người đàn ông mặc áo sọc hồng ngồi khoanh chân",
+        "attributes": [
+          "man",
+          "pink shirt",
+          "striped",
+          "sitting"
+        ],
+        "action": "preparing food"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.488,
+          0.165,
+          0.892,
+          0.9510000000000001
+        ],
+        "description": "man in a blue polo shirt holding a bottle",
+        "description_vi": "người đàn ông mặc áo polo xanh đang cầm chai nước",
+        "attributes": [
+          "man",
+          "blue shirt",
+          "sitting"
+        ],
+        "action": "holding bottle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0007",
+    "visual_source_frame_id": "L30_V019_f0007",
+    "ocr_source_frame_id": "L30_V019_f0007",
+    "quality_flags": [],
+    "caption": "Several people stand and work in a long covered hallway with motorbikes and tables.",
+    "detailed_caption": "A wide shot of a long covered hallway with multiple people standing and moving around. On the left, parked motorbikes and a yellow crate are visible. In the center, several individuals are gathered near red basins, and a metal table with packaged food sits on the right. Potted plants hang along the white walls under a corrugated metal roof.",
+    "caption_vi": "Nhiều người đang đứng và làm việc trong một hành lang dài có mái che với xe máy và bàn.",
+    "detailed_caption_vi": "Cảnh quay rộng của một hành lang dài có mái che với nhiều người đang đứng và di chuyển. Ở bên trái, xe máy đỗ và một thùng nhựa màu vàng có thể nhìn thấy. Ở trung tâm, một số cá nhân tụ tập gần các chậu đỏ, và một chiếc bàn kim loại với thức ăn đóng gói nằm ở bên phải. Chậu cây treo dọc theo các bức tường trắng dưới mái tôn.",
+    "ocr_text": "59-V1 408.03 68-P1 230.1 tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.007000000000000001,
+          0.534,
+          0.354,
+          0.995
+        ],
+        "description": "motorcycle parked with a yellow crate on top",
+        "description_vi": "xe máy đỗ có thùng nhựa vàng phía trên",
+        "attributes": [
+          "motorcycle",
+          "parked",
+          "yellow crate"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.43099999999999994,
+          0.613,
+          0.497,
+          0.875
+        ],
+        "description": "child standing in the hallway facing away",
+        "description_vi": "đứa trẻ đang đứng ở hành lang quay lưng",
+        "attributes": [
+          "child",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.487,
+          0.455,
+          0.5599999999999999,
+          0.878
+        ],
+        "description": "woman in a plaid shirt and dark trousers",
+        "description_vi": "phụ nữ mặc áo sơ mi kẻ caro và quần tối màu",
+        "attributes": [
+          "woman",
+          "plaid shirt",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5509999999999999,
+          0.47100000000000003,
+          0.634,
+          0.8939999999999999
+        ],
+        "description": "woman in a light yellow sweater and blue shorts",
+        "description_vi": "phụ nữ mặc áo len vàng nhạt và quần đùi xanh",
+        "attributes": [
+          "woman",
+          "yellow sweater",
+          "shorts"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.618,
+          0.697,
+          0.853,
+          0.9979999999999999
+        ],
+        "description": "metal round table with items on it",
+        "description_vi": "bàn tròn bằng kim loại có đồ vật trên mặt",
+        "attributes": [
+          "metal",
+          "table",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0008",
+    "visual_source_frame_id": "L30_V019_f0007",
+    "ocr_source_frame_id": "L30_V019_f0008",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Several people stand and work in a long covered hallway with motorbikes and tables.",
+    "detailed_caption": "A wide shot of a long covered hallway with multiple people standing and moving around. On the left, parked motorbikes and a yellow crate are visible. In the center, several individuals are gathered near red basins, and a metal table with packaged food sits on the right. Potted plants hang along the white walls under a corrugated metal roof.",
+    "caption_vi": "Nhiều người đang đứng và làm việc trong một hành lang dài có mái che với xe máy và bàn.",
+    "detailed_caption_vi": "Cảnh quay rộng của một hành lang dài có mái che với nhiều người đang đứng và di chuyển. Ở bên trái, xe máy đỗ và một thùng nhựa màu vàng có thể nhìn thấy. Ở trung tâm, một số cá nhân tụ tập gần các chậu đỏ, và một chiếc bàn kim loại với thức ăn đóng gói nằm ở bên phải. Chậu cây treo dọc theo các bức tường trắng dưới mái tôn.",
+    "ocr_text": "59 - V1 408.03 68-P1 230.11",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.007000000000000001,
+          0.534,
+          0.354,
+          0.995
+        ],
+        "description": "motorcycle parked with a yellow crate on top",
+        "description_vi": "xe máy đỗ có thùng nhựa vàng phía trên",
+        "attributes": [
+          "motorcycle",
+          "parked",
+          "yellow crate"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.43099999999999994,
+          0.613,
+          0.497,
+          0.875
+        ],
+        "description": "child standing in the hallway facing away",
+        "description_vi": "đứa trẻ đang đứng ở hành lang quay lưng",
+        "attributes": [
+          "child",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.487,
+          0.455,
+          0.5599999999999999,
+          0.878
+        ],
+        "description": "woman in a plaid shirt and dark trousers",
+        "description_vi": "phụ nữ mặc áo sơ mi kẻ caro và quần tối màu",
+        "attributes": [
+          "woman",
+          "plaid shirt",
+          "standing"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5509999999999999,
+          0.47100000000000003,
+          0.634,
+          0.8939999999999999
+        ],
+        "description": "woman in a light yellow sweater and blue shorts",
+        "description_vi": "phụ nữ mặc áo len vàng nhạt và quần đùi xanh",
+        "attributes": [
+          "woman",
+          "yellow sweater",
+          "shorts"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.618,
+          0.697,
+          0.853,
+          0.9979999999999999
+        ],
+        "description": "metal round table with items on it",
+        "description_vi": "bàn tròn bằng kim loại có đồ vật trên mặt",
+        "attributes": [
+          "metal",
+          "table",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0009",
+    "visual_source_frame_id": "L30_V019_f0009",
+    "ocr_source_frame_id": "L30_V019_f0009",
+    "quality_flags": [],
+    "caption": "A woman wearing an orange top and white gloves chops scallions on a wooden board next to vegetables and a basin of grated carrots.",
+    "detailed_caption": "A medium shot captures a woman on the right wearing an orange top, black beaded necklace, white gloves, and dark skirt, chopping green scallions on a wooden cutting board. To her left, a large plastic bag contains green scallions, and a metal colander holds chopped scallions. In the foreground left, a red basin is filled with shredded orange carrots. The background shows an outdoor covered area with a green wall and tiled flooring.",
+    "caption_vi": "Một phụ nữ mặc áo cam và đeo găng tay trắng đang thái hành lá trên thớt gỗ cạnh rau củ và thau cà rốt bào sợi.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một phụ nữ ở bên phải mặc áo cam, vòng cổ hạt đen, găng tay trắng và váy tối màu đang thái hành lá trên thớt gỗ. Phía bên trái cô là một bịch nilon lớn đựng hành lá và một rổ inox chứa hành đã cắt nhỏ. Ở góc trái phía trước là một thau đỏ đầy cà rốt bào sợi. Phía sau là khu vực có mái che với tường màu xanh và sàn lát gạch.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.17099999999999999,
+          0.47100000000000003,
+          0.445,
+          0.837
+        ],
+        "description": "a clear plastic bag filled with green scallions",
+        "description_vi": "một túi nilon trong suốt đựng đầy hành lá xanh",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "basin_0",
+        "label": "basin",
+        "bbox": [
+          0.0,
+          0.49,
+          0.302,
+          0.78
+        ],
+        "description": "a large red plastic basin filled with shredded orange carrots",
+        "description_vi": "một thau nhựa màu đỏ lớn đựng đầy cà rốt bào sợi",
+        "attributes": [
+          "red",
+          "plastic",
+          "filled with carrots"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "colander_0",
+        "label": "colander",
+        "bbox": [
+          0.202,
+          0.738,
+          0.42699999999999994,
+          0.995
+        ],
+        "description": "a metal colander containing chopped green scallions",
+        "description_vi": "một rổ inox chứa hành lá xanh đã cắt nhỏ",
+        "attributes": [
+          "metal",
+          "perforated"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.126,
+          0.7270000000000001,
+          0.655,
+          1.0
+        ],
+        "description": "a wooden cutting board with chopped scallions",
+        "description_vi": "một chiếc thớt gỗ có hành lá đã cắt",
+        "attributes": [
+          "wooden",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.418,
+          0.0,
+          0.6769999999999999,
+          1.0
+        ],
+        "description": "a woman wearing an orange top, white gloves, and a black beaded necklace chopping scallions",
+        "description_vi": "một phụ nữ mặc áo cam, găng tay trắng và vòng cổ hạt đen đang thái hành",
+        "attributes": [
+          "orange top",
+          "white gloves",
+          "black necklace"
+        ],
+        "action": "chopping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "basin_0"
+      },
+      {
+        "subject_id": "basin_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "colander_0"
+      },
+      {
+        "subject_id": "colander_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "basin_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "basin_0"
+      },
+      {
+        "subject_id": "colander_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "colander_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0010",
+    "visual_source_frame_id": "L30_V019_f0010",
+    "ocr_source_frame_id": "L30_V019_f0010",
+    "quality_flags": [],
+    "caption": "A person's hands wearing gloves chop green onions on a wooden cutting board.",
+    "detailed_caption": "A close-up shot focuses on hands wearing white gloves and beaded bracelets holding a knife to chop green onions on a wooden cutting board. A metal colander with cut green onions is positioned on the left.",
+    "caption_vi": "Đôi tay đeo găng tay đang thái hành lá trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh tập trung vào đôi tay đeo găng tay trắng và vòng hạt đang cầm dao thái hành lá trên thớt gỗ. Một chiếc rổ kim loại đựng hành lá cắt sẵn đặt ở bên trái.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.124,
+          0.201,
+          0.8630000000000001,
+          1.0
+        ],
+        "description": "wooden cutting board with chopped and fresh green onions",
+        "description_vi": "thớt gỗ với hành lá đã cắt và tươi",
+        "attributes": [
+          "wooden",
+          "cutting board"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hands_0",
+        "label": "hands",
+        "bbox": [
+          0.383,
+          0.0,
+          0.8550000000000001,
+          0.751
+        ],
+        "description": "hands wearing white gloves and bracelets chopping green onions",
+        "description_vi": "đôi tay đeo găng tay trắng và vòng tay đang thái hành lá",
+        "attributes": [
+          "gloved hands",
+          "bracelets"
+        ],
+        "action": "chopping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "hands_0"
+      },
+      {
+        "subject_id": "hands_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0011",
+    "visual_source_frame_id": "L30_V019_f0010",
+    "ocr_source_frame_id": "L30_V019_f0011",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person's hands wearing gloves chop green onions on a wooden cutting board.",
+    "detailed_caption": "A close-up shot focuses on hands wearing white gloves and beaded bracelets holding a knife to chop green onions on a wooden cutting board. A metal colander with cut green onions is positioned on the left.",
+    "caption_vi": "Đôi tay đeo găng tay đang thái hành lá trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh tập trung vào đôi tay đeo găng tay trắng và vòng hạt đang cầm dao thái hành lá trên thớt gỗ. Một chiếc rổ kim loại đựng hành lá cắt sẵn đặt ở bên trái.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.124,
+          0.201,
+          0.8630000000000001,
+          1.0
+        ],
+        "description": "wooden cutting board with chopped and fresh green onions",
+        "description_vi": "thớt gỗ với hành lá đã cắt và tươi",
+        "attributes": [
+          "wooden",
+          "cutting board"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hands_0",
+        "label": "hands",
+        "bbox": [
+          0.383,
+          0.0,
+          0.8550000000000001,
+          0.751
+        ],
+        "description": "hands wearing white gloves and bracelets chopping green onions",
+        "description_vi": "đôi tay đeo găng tay trắng và vòng tay đang thái hành lá",
+        "attributes": [
+          "gloved hands",
+          "bracelets"
+        ],
+        "action": "chopping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "hands_0"
+      },
+      {
+        "subject_id": "hands_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0012",
+    "visual_source_frame_id": "L30_V019_f0012",
+    "ocr_source_frame_id": "L30_V019_f0012",
+    "quality_flags": [],
+    "caption": "Two women prepare food with bowls and ladles, while other people stand in the background of an indoor tiled space.",
+    "detailed_caption": "A medium shot shows a woman on the left wearing a blue top with a white apron and polka dots, ladling food, and another woman on the right in a white top and dark apron holding a bowl and ladle. Multiple white bowls are arranged on a surface in the lower right. In the background, other individuals are visible standing near metal pots inside a tiled room.",
+    "caption_vi": "Hai người phụ nữ chuẩn bị thức ăn bằng tô và vá múc, trong khi những người khác đứng phía sau trong không gian lát gạch.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ bên trái mặc áo xanh với tạp dề trắng chấm bi đang múc thức ăn, và một phụ nữ bên phải mặc áo trắng với tạp dề tối màu đang cầm tô và vá. Nhiều tô trắng được xếp trên mặt bàn ở góc dưới bên phải. Phía sau, những người khác đứng gần các nồi kim loại trong phòng lát gạch.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.585,
+          0.783,
+          1.0,
+          1.0
+        ],
+        "description": "multiple white bowls arranged on a table",
+        "description_vi": "nhiều tô trắng được sắp xếp trên bàn",
+        "attributes": [
+          "white",
+          "ceramic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.1,
+          0.365,
+          1.0
+        ],
+        "description": "a woman on the left wearing a blue top and a white apron with polka dots",
+        "description_vi": "một phụ nữ bên trái mặc áo xanh và tạp dề trắng chấm bi",
+        "attributes": [
+          "blue top",
+          "polka dot apron"
+        ],
+        "action": "preparing food"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.356,
+          0.128,
+          0.42300000000000004,
+          0.422
+        ],
+        "description": "a person standing in the background wearing a dark shirt",
+        "description_vi": "một người đứng phía sau mặc áo tối màu",
+        "attributes": [
+          "dark shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.489,
+          0.10099999999999999,
+          0.76,
+          0.9390000000000001
+        ],
+        "description": "a woman on the right wearing a white top and dark apron",
+        "description_vi": "một phụ nữ bên phải mặc áo trắng và tạp dề tối màu",
+        "attributes": [
+          "white top",
+          "dark apron"
+        ],
+        "action": "ladling food"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.354,
+          0.42,
+          0.45499999999999996,
+          0.5409999999999999
+        ],
+        "description": "a large metal cooking pot in the background",
+        "description_vi": "một nồi nấu ăn bằng kim loại lớn ở phía sau",
+        "attributes": [
+          "metal",
+          "large"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "pot_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0013",
+    "visual_source_frame_id": "L30_V019_f0013",
+    "ocr_source_frame_id": "L30_V019_f0013",
+    "quality_flags": [],
+    "caption": "Two women prepare soup from a large pot in an indoor area.",
+    "detailed_caption": "A medium shot shows two women standing by a large cooking pot in an indoor space. On the left, a woman in a purple short-sleeve top and light blue pants uses a utensil in a large metal pot of soup. On the right, a woman in a light top and dark apron scoops food into a bowl.",
+    "caption_vi": "Hai người phụ nữ múc canh từ một nồi lớn trong không gian trong nhà.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy hai phụ nữ đứng cạnh một nồi nấu lớn trong không gian trong nhà. Bên trái, một phụ nữ mặc áo ngắn tay màu tím và quần xanh nhạt đang dùng dụng cụ khuấy nồi canh kim loại lớn. Bên phải, một phụ nữ mặc áo sáng màu và tạp dề tối màu đang múc thức ăn vào bát.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.176,
+          0.0,
+          0.357,
+          1.0
+        ],
+        "description": "woman in purple top and light blue pants stirring pot",
+        "description_vi": "phụ nữ mặc áo tím và quần xanh nhạt đang khuấy nồi",
+        "attributes": [
+          "woman",
+          "purple top",
+          "pants"
+        ],
+        "action": "stirring soup"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.52,
+          0.068,
+          0.799,
+          1.0
+        ],
+        "description": "woman in light top and dark apron scooping food",
+        "description_vi": "phụ nữ mặc áo sáng và tạp dề tối đang múc thức ăn",
+        "attributes": [
+          "woman",
+          "dark apron",
+          "scooping"
+        ],
+        "action": "scooping food"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.29500000000000004,
+          0.684,
+          0.617,
+          1.0
+        ],
+        "description": "large metal pot containing green soup",
+        "description_vi": "nồi kim loại lớn chứa canh màu xanh",
+        "attributes": [
+          "large",
+          "metal",
+          "pot"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0014",
+    "visual_source_frame_id": "L30_V019_f0013",
+    "ocr_source_frame_id": "L30_V019_f0014",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two women prepare soup from a large pot in an indoor area.",
+    "detailed_caption": "A medium shot shows two women standing by a large cooking pot in an indoor space. On the left, a woman in a purple short-sleeve top and light blue pants uses a utensil in a large metal pot of soup. On the right, a woman in a light top and dark apron scoops food into a bowl.",
+    "caption_vi": "Hai người phụ nữ múc canh từ một nồi lớn trong không gian trong nhà.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy hai phụ nữ đứng cạnh một nồi nấu lớn trong không gian trong nhà. Bên trái, một phụ nữ mặc áo ngắn tay màu tím và quần xanh nhạt đang dùng dụng cụ khuấy nồi canh kim loại lớn. Bên phải, một phụ nữ mặc áo sáng màu và tạp dề tối màu đang múc thức ăn vào bát.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.176,
+          0.0,
+          0.357,
+          1.0
+        ],
+        "description": "woman in purple top and light blue pants stirring pot",
+        "description_vi": "phụ nữ mặc áo tím và quần xanh nhạt đang khuấy nồi",
+        "attributes": [
+          "woman",
+          "purple top",
+          "pants"
+        ],
+        "action": "stirring soup"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.52,
+          0.068,
+          0.799,
+          1.0
+        ],
+        "description": "woman in light top and dark apron scooping food",
+        "description_vi": "phụ nữ mặc áo sáng và tạp dề tối đang múc thức ăn",
+        "attributes": [
+          "woman",
+          "dark apron",
+          "scooping"
+        ],
+        "action": "scooping food"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.29500000000000004,
+          0.684,
+          0.617,
+          1.0
+        ],
+        "description": "large metal pot containing green soup",
+        "description_vi": "nồi kim loại lớn chứa canh màu xanh",
+        "attributes": [
+          "large",
+          "metal",
+          "pot"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0015",
+    "visual_source_frame_id": "L30_V019_f0015",
+    "ocr_source_frame_id": "L30_V019_f0015",
+    "quality_flags": [],
+    "caption": "A smiling woman wearing a white t-shirt stands against a plain background.",
+    "detailed_caption": "A medium shot of a smiling woman with her hair clipped up, wearing a white t-shirt with a maroon letter graphic and a small microphone clipped to her collar. She stands against a light grey wall.",
+    "caption_vi": "Một phụ nữ mỉm cười mặc áo thun trắng đứng trước phông nền đơn giản.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh một phụ nữ mỉm cười với tóc kẹp gọn, mặc áo thun trắng có hình chữ cái màu nâu sẫm và gắn micro nhỏ ở cổ áo. Cô đứng trước bức tường màu xám nhạt.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.42699999999999994,
+          0.17200000000000001,
+          0.8029999999999999,
+          1.0
+        ],
+        "description": "smiling woman wearing a white t-shirt with a letter graphic",
+        "description_vi": "phụ nữ mỉm cười mặc áo thun trắng có hình chữ cái",
+        "attributes": [
+          "woman",
+          "white t-shirt",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0016",
+    "visual_source_frame_id": "L30_V019_f0015",
+    "ocr_source_frame_id": "L30_V019_f0016",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A smiling woman wearing a white t-shirt stands against a plain background.",
+    "detailed_caption": "A medium shot of a smiling woman with her hair clipped up, wearing a white t-shirt with a maroon letter graphic and a small microphone clipped to her collar. She stands against a light grey wall.",
+    "caption_vi": "Một phụ nữ mỉm cười mặc áo thun trắng đứng trước phông nền đơn giản.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh một phụ nữ mỉm cười với tóc kẹp gọn, mặc áo thun trắng có hình chữ cái màu nâu sẫm và gắn micro nhỏ ở cổ áo. Cô đứng trước bức tường màu xám nhạt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.42699999999999994,
+          0.17200000000000001,
+          0.8029999999999999,
+          1.0
+        ],
+        "description": "smiling woman wearing a white t-shirt with a letter graphic",
+        "description_vi": "phụ nữ mỉm cười mặc áo thun trắng có hình chữ cái",
+        "attributes": [
+          "woman",
+          "white t-shirt",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0017",
+    "visual_source_frame_id": "L30_V019_f0015",
+    "ocr_source_frame_id": "L30_V019_f0017",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A smiling woman wearing a white t-shirt stands against a plain background.",
+    "detailed_caption": "A medium shot of a smiling woman with her hair clipped up, wearing a white t-shirt with a maroon letter graphic and a small microphone clipped to her collar. She stands against a light grey wall.",
+    "caption_vi": "Một phụ nữ mỉm cười mặc áo thun trắng đứng trước phông nền đơn giản.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh một phụ nữ mỉm cười với tóc kẹp gọn, mặc áo thun trắng có hình chữ cái màu nâu sẫm và gắn micro nhỏ ở cổ áo. Cô đứng trước bức tường màu xám nhạt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.42699999999999994,
+          0.17200000000000001,
+          0.8029999999999999,
+          1.0
+        ],
+        "description": "smiling woman wearing a white t-shirt with a letter graphic",
+        "description_vi": "phụ nữ mỉm cười mặc áo thun trắng có hình chữ cái",
+        "attributes": [
+          "woman",
+          "white t-shirt",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0018",
+    "visual_source_frame_id": "L30_V019_f0015",
+    "ocr_source_frame_id": "L30_V019_f0018",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A smiling woman wearing a white t-shirt stands against a plain background.",
+    "detailed_caption": "A medium shot of a smiling woman with her hair clipped up, wearing a white t-shirt with a maroon letter graphic and a small microphone clipped to her collar. She stands against a light grey wall.",
+    "caption_vi": "Một phụ nữ mỉm cười mặc áo thun trắng đứng trước phông nền đơn giản.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh một phụ nữ mỉm cười với tóc kẹp gọn, mặc áo thun trắng có hình chữ cái màu nâu sẫm và gắn micro nhỏ ở cổ áo. Cô đứng trước bức tường màu xám nhạt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.42699999999999994,
+          0.17200000000000001,
+          0.8029999999999999,
+          1.0
+        ],
+        "description": "smiling woman wearing a white t-shirt with a letter graphic",
+        "description_vi": "phụ nữ mỉm cười mặc áo thun trắng có hình chữ cái",
+        "attributes": [
+          "woman",
+          "white t-shirt",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0019",
+    "visual_source_frame_id": "L30_V019_f0019",
+    "ocr_source_frame_id": "L30_V019_f0019",
+    "quality_flags": [],
+    "caption": "A woman in an orange top speaks in the foreground while another woman in a red shirt works behind her.",
+    "detailed_caption": "A medium shot shows a woman in the foreground wearing an orange top, beaded necklace, and a small microphone, speaking. In the background to the left, another woman wearing a red top and black pants stands by a wall.",
+    "caption_vi": "Một phụ nữ mặc áo cam đang nói chuyện ở phía trước trong khi phụ nữ mặc áo đỏ làm việc phía sau.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ ở tiền cảnh mặc áo cam, vòng cổ hạt và gắn micro nhỏ đang nói chuyện. Phía sau bên trái, một phụ nữ khác mặc áo đỏ và quần đen đứng cạnh tường.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.21000000000000002,
+          0.365,
+          0.381,
+          1.0
+        ],
+        "description": "woman in red top and black pants standing",
+        "description_vi": "phụ nữ mặc áo đỏ và quần đen đang đứng",
+        "attributes": [
+          "woman",
+          "red top",
+          "black pants"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.309,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "woman in orange top speaking with a necklace",
+        "description_vi": "phụ nữ mặc áo cam đang nói chuyện đeo vòng cổ",
+        "attributes": [
+          "woman",
+          "orange top",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0020",
+    "visual_source_frame_id": "L30_V019_f0019",
+    "ocr_source_frame_id": "L30_V019_f0020",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in an orange top speaks in the foreground while another woman in a red shirt works behind her.",
+    "detailed_caption": "A medium shot shows a woman in the foreground wearing an orange top, beaded necklace, and a small microphone, speaking. In the background to the left, another woman wearing a red top and black pants stands by a wall.",
+    "caption_vi": "Một phụ nữ mặc áo cam đang nói chuyện ở phía trước trong khi phụ nữ mặc áo đỏ làm việc phía sau.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ ở tiền cảnh mặc áo cam, vòng cổ hạt và gắn micro nhỏ đang nói chuyện. Phía sau bên trái, một phụ nữ khác mặc áo đỏ và quần đen đứng cạnh tường.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.21000000000000002,
+          0.365,
+          0.381,
+          1.0
+        ],
+        "description": "woman in red top and black pants standing",
+        "description_vi": "phụ nữ mặc áo đỏ và quần đen đang đứng",
+        "attributes": [
+          "woman",
+          "red top",
+          "black pants"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.309,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "woman in orange top speaking with a necklace",
+        "description_vi": "phụ nữ mặc áo cam đang nói chuyện đeo vòng cổ",
+        "attributes": [
+          "woman",
+          "orange top",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0021",
+    "visual_source_frame_id": "L30_V019_f0019",
+    "ocr_source_frame_id": "L30_V019_f0021",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in an orange top speaks in the foreground while another woman in a red shirt works behind her.",
+    "detailed_caption": "A medium shot shows a woman in the foreground wearing an orange top, beaded necklace, and a small microphone, speaking. In the background to the left, another woman wearing a red top and black pants stands by a wall.",
+    "caption_vi": "Một phụ nữ mặc áo cam đang nói chuyện ở phía trước trong khi phụ nữ mặc áo đỏ làm việc phía sau.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ ở tiền cảnh mặc áo cam, vòng cổ hạt và gắn micro nhỏ đang nói chuyện. Phía sau bên trái, một phụ nữ khác mặc áo đỏ và quần đen đứng cạnh tường.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.21000000000000002,
+          0.365,
+          0.381,
+          1.0
+        ],
+        "description": "woman in red top and black pants standing",
+        "description_vi": "phụ nữ mặc áo đỏ và quần đen đang đứng",
+        "attributes": [
+          "woman",
+          "red top",
+          "black pants"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.309,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "woman in orange top speaking with a necklace",
+        "description_vi": "phụ nữ mặc áo cam đang nói chuyện đeo vòng cổ",
+        "attributes": [
+          "woman",
+          "orange top",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0022",
+    "visual_source_frame_id": "L30_V019_f0019",
+    "ocr_source_frame_id": "L30_V019_f0022",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in an orange top speaks in the foreground while another woman in a red shirt works behind her.",
+    "detailed_caption": "A medium shot shows a woman in the foreground wearing an orange top, beaded necklace, and a small microphone, speaking. In the background to the left, another woman wearing a red top and black pants stands by a wall.",
+    "caption_vi": "Một phụ nữ mặc áo cam đang nói chuyện ở phía trước trong khi phụ nữ mặc áo đỏ làm việc phía sau.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ ở tiền cảnh mặc áo cam, vòng cổ hạt và gắn micro nhỏ đang nói chuyện. Phía sau bên trái, một phụ nữ khác mặc áo đỏ và quần đen đứng cạnh tường.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.21000000000000002,
+          0.365,
+          0.381,
+          1.0
+        ],
+        "description": "woman in red top and black pants standing",
+        "description_vi": "phụ nữ mặc áo đỏ và quần đen đang đứng",
+        "attributes": [
+          "woman",
+          "red top",
+          "black pants"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.309,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "woman in orange top speaking with a necklace",
+        "description_vi": "phụ nữ mặc áo cam đang nói chuyện đeo vòng cổ",
+        "attributes": [
+          "woman",
+          "orange top",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0023",
+    "visual_source_frame_id": "L30_V019_f0019",
+    "ocr_source_frame_id": "L30_V019_f0023",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in an orange top speaks in the foreground while another woman in a red shirt works behind her.",
+    "detailed_caption": "A medium shot shows a woman in the foreground wearing an orange top, beaded necklace, and a small microphone, speaking. In the background to the left, another woman wearing a red top and black pants stands by a wall.",
+    "caption_vi": "Một phụ nữ mặc áo cam đang nói chuyện ở phía trước trong khi phụ nữ mặc áo đỏ làm việc phía sau.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ ở tiền cảnh mặc áo cam, vòng cổ hạt và gắn micro nhỏ đang nói chuyện. Phía sau bên trái, một phụ nữ khác mặc áo đỏ và quần đen đứng cạnh tường.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.21000000000000002,
+          0.365,
+          0.381,
+          1.0
+        ],
+        "description": "woman in red top and black pants standing",
+        "description_vi": "phụ nữ mặc áo đỏ và quần đen đang đứng",
+        "attributes": [
+          "woman",
+          "red top",
+          "black pants"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.309,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "woman in orange top speaking with a necklace",
+        "description_vi": "phụ nữ mặc áo cam đang nói chuyện đeo vòng cổ",
+        "attributes": [
+          "woman",
+          "orange top",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0024",
+    "visual_source_frame_id": "L30_V019_f0019",
+    "ocr_source_frame_id": "L30_V019_f0024",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in an orange top speaks in the foreground while another woman in a red shirt works behind her.",
+    "detailed_caption": "A medium shot shows a woman in the foreground wearing an orange top, beaded necklace, and a small microphone, speaking. In the background to the left, another woman wearing a red top and black pants stands by a wall.",
+    "caption_vi": "Một phụ nữ mặc áo cam đang nói chuyện ở phía trước trong khi phụ nữ mặc áo đỏ làm việc phía sau.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ ở tiền cảnh mặc áo cam, vòng cổ hạt và gắn micro nhỏ đang nói chuyện. Phía sau bên trái, một phụ nữ khác mặc áo đỏ và quần đen đứng cạnh tường.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.21000000000000002,
+          0.365,
+          0.381,
+          1.0
+        ],
+        "description": "woman in red top and black pants standing",
+        "description_vi": "phụ nữ mặc áo đỏ và quần đen đang đứng",
+        "attributes": [
+          "woman",
+          "red top",
+          "black pants"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.381,
+          0.309,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "woman in orange top speaking with a necklace",
+        "description_vi": "phụ nữ mặc áo cam đang nói chuyện đeo vòng cổ",
+        "attributes": [
+          "woman",
+          "orange top",
+          "necklace"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0025",
+    "visual_source_frame_id": "L30_V019_f0025",
+    "ocr_source_frame_id": "L30_V019_f0025",
+    "quality_flags": [],
+    "caption": "People in raincoats and helmets walk along a narrow corridor with doors.",
+    "detailed_caption": "A medium shot of a narrow corridor where people wearing raincoats and helmets are interacting. A person in a blue raincoat walks forward, while another person in a dark shirt and shorts stands with hands on hips near a white door. Other individuals in pink raincoats are partially visible.",
+    "caption_vi": "Mọi người mặc áo mưa và đội mũ bảo hiểm đi dọc theo hành lang hẹp có cửa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh một hành lang hẹp nơi mọi người mặc áo mưa và đội mũ bảo hiểm đang tương tác. Một người mặc áo mưa xanh bước về phía trước, trong khi một người khác mặc áo tối màu và quần đùi đứng chống hông gần cửa trắng. Những cá nhân khác mặc áo mưa hồng xuất hiện một phần.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.11699999999999999,
+          0.272,
+          1.0
+        ],
+        "description": "person in pink raincoat",
+        "description_vi": "người mặc áo mưa hồng",
+        "attributes": [
+          "person",
+          "pink raincoat"
+        ],
+        "action": "holding bowl"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.223,
+          0.135,
+          0.503,
+          0.997
+        ],
+        "description": "person wearing a blue raincoat and helmet",
+        "description_vi": "người mặc áo mưa xanh và đội mũ bảo hiểm",
+        "attributes": [
+          "person",
+          "blue raincoat",
+          "helmet"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.63,
+          0.263,
+          0.8160000000000001,
+          1.0
+        ],
+        "description": "man in dark shirt and light shorts standing with hands on hips",
+        "description_vi": "nam giới mặc áo tối màu và quần sáng màu đứng chống hông",
+        "attributes": [
+          "man",
+          "dark shirt",
+          "shorts"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0026",
+    "visual_source_frame_id": "L30_V019_f0026",
+    "ocr_source_frame_id": "L30_V019_f0026",
+    "quality_flags": [],
+    "caption": "A person in a white shirt and cap stands in an alley holding food containers, surrounded by people in raincoats.",
+    "detailed_caption": "A medium shot captures a man in a white polo shirt and dark cap standing in an outdoor narrow alley, holding stacked white food containers. On the left, a person wears a pink raincoat and dark helmet. On the right, a person in a black polo shirt stands with hands on hips, and another person wears a red raincoat and black helmet.",
+    "caption_vi": "Một người mặc áo trắng và đội mũ đứng trong con hẻm cầm hộp đựng thức ăn, xung quanh là những người mặc áo mưa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người đàn ông mặc áo polo trắng và đội mũ tối màu đang đứng ở một con hẻm hẹp ngoài trời, tay cầm các hộp đựng thức ăn màu trắng chồng lên nhau. Bên trái, một người mặc áo mưa hồng và đội mũ bảo hiểm tối màu. Bên phải, một người mặc áo polo đen đứng chống hông, và một người khác mặc áo mưa đỏ đội mũ bảo hiểm đen.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "fire_extinguisher_0",
+        "label": "fire extinguisher",
+        "bbox": [
+          0.607,
+          0.12200000000000001,
+          0.67,
+          0.312
+        ],
+        "description": "red fire extinguishers mounted on the blue wall",
+        "description_vi": "bình chữa cháy màu đỏ gắn trên tường xanh",
+        "attributes": [
+          "red",
+          "cylindrical"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.11699999999999999,
+          0.281,
+          1.0
+        ],
+        "description": "a person in the foreground wearing a pink raincoat and dark helmet",
+        "description_vi": "một người ở tiền cảnh mặc áo mưa hồng và đội mũ bảo hiểm tối màu",
+        "attributes": [
+          "pink raincoat",
+          "dark helmet"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.348,
+          0.27899999999999997,
+          0.461,
+          1.0
+        ],
+        "description": "a man in a white polo shirt, dark cap, and shorts holding food containers",
+        "description_vi": "một người đàn ông mặc áo polo trắng, mũ tối màu và quần đùi đang cầm hộp đựng thức ăn",
+        "attributes": [
+          "white polo",
+          "dark cap",
+          "shorts"
+        ],
+        "action": "holding containers"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.602,
+          0.259,
+          0.787,
+          1.0
+        ],
+        "description": "a man wearing a black polo shirt and light shorts standing with hands on hips",
+        "description_vi": "một người đàn ông mặc áo polo đen và quần đùi sáng màu đang đứng chống hông",
+        "attributes": [
+          "black polo",
+          "light shorts"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.8380000000000001,
+          0.065,
+          1.0,
+          1.0
+        ],
+        "description": "a person on the right wearing a red raincoat and black helmet",
+        "description_vi": "một người ở bên phải mặc áo mưa đỏ và đội mũ bảo hiểm đen",
+        "attributes": [
+          "red raincoat",
+          "black helmet"
+        ],
+        "action": "holding food"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "fire_extinguisher_0"
+      },
+      {
+        "subject_id": "fire_extinguisher_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "fire_extinguisher_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "fire_extinguisher_0"
+      },
+      {
+        "subject_id": "fire_extinguisher_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "fire_extinguisher_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0027",
+    "visual_source_frame_id": "L30_V019_f0027",
+    "ocr_source_frame_id": "L30_V019_f0027",
+    "quality_flags": [],
+    "caption": "A group of people wearing raincoats stand near a vehicle and pass food containers.",
+    "detailed_caption": "A medium shot shows a person in a pink raincoat on the left holding a food container, a man standing behind a yellow crate, and a person in a blue raincoat gesturing with one arm. In the foreground right, another person in a green shirt holds a food container. A vehicle is parked in the background near a white door.",
+    "caption_vi": "Một nhóm người mặc áo mưa đứng gần xe và chuyền tay nhau các hộp đựng thức ăn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người mặc áo mưa hồng bên trái đang cầm hộp đựng thức ăn, một người đàn ông đứng sau thùng vàng, và một người mặc áo mưa xanh đang ra hiệu bằng một tay. Ở góc phải phía trước, một người mặc áo xanh lá cầm hộp đựng thức ăn. Một chiếc xe được đỗ phía sau gần cửa trắng.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "crate_0",
+        "label": "crate",
+        "bbox": [
+          0.322,
+          0.682,
+          0.5309999999999999,
+          0.885
+        ],
+        "description": "a yellow plastic crate holding packaged food items",
+        "description_vi": "một thùng nhựa màu vàng đựng thực phẩm đóng gói",
+        "attributes": [
+          "yellow",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.123,
+          0.438,
+          0.471,
+          1.0
+        ],
+        "description": "a person on the left wearing a pink raincoat and helmet holding a container",
+        "description_vi": "một người bên trái mặc áo mưa hồng và đội mũ bảo hiểm đang cầm hộp đựng",
+        "attributes": [
+          "pink raincoat",
+          "helmet"
+        ],
+        "action": "holding container"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.466,
+          0.622,
+          0.727,
+          1.0
+        ],
+        "description": "a person in the foreground right wearing a green shirt holding a food container",
+        "description_vi": "một người ở góc phải phía trước mặc áo xanh lá đang cầm hộp đựng thức ăn",
+        "attributes": [
+          "green shirt"
+        ],
+        "action": "holding food"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.46799999999999997,
+          0.071,
+          0.775,
+          0.8510000000000001
+        ],
+        "description": "a man wearing a blue raincoat and patterned shirt standing behind a crate",
+        "description_vi": "một người đàn ông mặc áo mưa xanh và áo họa tiết đứng sau thùng hàng",
+        "attributes": [
+          "blue raincoat",
+          "helmet"
+        ],
+        "action": "reaching"
+      },
+      {
+        "object_id": "vehicle_0",
+        "label": "vehicle",
+        "bbox": [
+          0.354,
+          0.44299999999999995,
+          0.487,
+          0.6869999999999999
+        ],
+        "description": "a dark vehicle parked in the background",
+        "description_vi": "một chiếc xe tối màu đậu phía sau",
+        "attributes": [
+          "dark"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "crate_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "crate_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "crate_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "crate_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "vehicle_0"
+      },
+      {
+        "subject_id": "vehicle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0028",
+    "visual_source_frame_id": "L30_V019_f0028",
+    "ocr_source_frame_id": "L30_V019_f0028",
+    "quality_flags": [],
+    "caption": "A young person in a yellow shirt holds their head while a person in a red raincoat stands nearby holding food.",
+    "detailed_caption": "A medium shot shows a young person on the left wearing a yellow t-shirt and holding their head with one hand. In the center, a person wears a red raincoat and a black helmet while holding a bag of food. On the right, another person in a pink shirt stands partially visible.",
+    "caption_vi": "Một bạn trẻ mặc áo vàng ôm đầu trong khi một người mặc áo mưa đỏ đứng gần đó cầm thức ăn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một bạn trẻ bên trái mặc áo thun vàng và đưa một tay ôm đầu. Ở trung tâm, một người mặc áo mưa đỏ và đội mũ bảo hiểm đen đang cầm túi thức ăn. Bên phải, một người khác mặc áo hồng đứng lộ một phần cơ thể.",
+    "ocr_text": "TIÊU LỆNH CHỮA CHÁY 1. 2. 3. tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.392,
+          0.6880000000000001,
+          0.47300000000000003,
+          0.884
+        ],
+        "description": "a clear plastic bag containing food items",
+        "description_vi": "một túi nilon trong suốt đựng thực phẩm",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.122,
+          0.245,
+          0.509,
+          1.0
+        ],
+        "description": "a young person wearing a yellow t-shirt holding their head with one hand",
+        "description_vi": "một bạn trẻ mặc áo thun vàng đang đưa một tay ôm đầu",
+        "attributes": [
+          "yellow t-shirt"
+        ],
+        "action": "touching head"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.45499999999999996,
+          0.07200000000000001,
+          0.8390000000000001,
+          1.0
+        ],
+        "description": "a person in the center wearing a red raincoat and black helmet holding a bag",
+        "description_vi": "một người ở giữa mặc áo mưa đỏ và đội mũ bảo hiểm đen đang cầm túi",
+        "attributes": [
+          "red raincoat",
+          "black helmet"
+        ],
+        "action": "holding bag"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.8029999999999999,
+          0.0,
+          0.9949999999999999,
+          0.501
+        ],
+        "description": "a person on the right wearing a pink shirt",
+        "description_vi": "một người bên phải mặc áo hồng",
+        "attributes": [
+          "pink shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.477,
+          0.0,
+          0.7889999999999999,
+          0.259
+        ],
+        "description": "a fire safety instruction sign mounted on the wall",
+        "description_vi": "bảng hướng dẫn tiêu lệnh chữa cháy gắn trên tường",
+        "attributes": [
+          "red and white",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "sign_0"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "sign_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0029",
+    "visual_source_frame_id": "L30_V019_f0029",
+    "ocr_source_frame_id": "L30_V019_f0029",
+    "quality_flags": [],
+    "caption": "People sit behind metal bars eating while another person in a pink shirt serves food.",
+    "detailed_caption": "A medium shot from behind metal bars showing people sitting at a table eating meals. In the foreground on the right, a person wearing a pink shirt labeled 'YOUNG PQC' reaches into a bag. Across the table, men in light-colored shirts eat from bowls.",
+    "caption_vi": "Mọi người ngồi sau song sắt ăn uống trong khi người mặc áo hồng phục vụ thức ăn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh qua các thanh chắn kim loại cho thấy những người ngồi vào bàn đang ăn uống. Ở tiền cảnh bên phải, một người mặc áo hồng có chữ 'YOUNG PQC' đang với tay vào túi đồ. Phía bên kia bàn, những người đàn ông mặc áo sáng màu đang ăn từ bát.",
+    "ocr_text": "YOUNG PQC tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.11699999999999999,
+          0.40700000000000003,
+          0.42000000000000004,
+          0.995
+        ],
+        "description": "man in light yellow shirt sitting and eating",
+        "description_vi": "nam giới mặc áo vàng nhạt đang ngồi ăn",
+        "attributes": [
+          "man",
+          "light yellow shirt",
+          "sitting"
+        ],
+        "action": "eating"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.5599999999999999,
+          0.183,
+          1.0,
+          1.0
+        ],
+        "description": "person wearing a pink shirt with text 'YOUNG PQC'",
+        "description_vi": "người mặc áo hồng in chữ 'YOUNG PQC'",
+        "attributes": [
+          "person",
+          "pink shirt",
+          "text"
+        ],
+        "action": "reaching into bag"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0030",
+    "visual_source_frame_id": "L30_V019_f0030",
+    "ocr_source_frame_id": "L30_V019_f0030",
+    "quality_flags": [],
+    "caption": "A person in a pink shirt hands food through metal bars to people sitting inside.",
+    "detailed_caption": "A medium shot through metal bars capturing a person in a pink shirt labeled 'YOUNG PQC' handing food items to seated men inside a covered area. The men seated at the table are eating from small bowls.",
+    "caption_vi": "Một người mặc áo hồng đưa thức ăn qua song sắt cho những người ngồi bên trong.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh qua các thanh sắt ghi lại hình ảnh một người mặc áo hồng in chữ 'YOUNG PQC' đang đưa thực phẩm cho những người đàn ông đang ngồi bên trong khu vực có mái che. Những người ngồi bàn đang ăn từ các bát nhỏ.",
+    "ocr_text": "YOUNG PQC tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.10700000000000001,
+          0.392,
+          0.517,
+          0.9939999999999999
+        ],
+        "description": "man in light yellow shirt sitting and reaching forward",
+        "description_vi": "nam giới mặc áo vàng nhạt đang ngồi và với tay về phía trước",
+        "attributes": [
+          "man",
+          "yellow shirt",
+          "sitting"
+        ],
+        "action": "reaching"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.46900000000000003,
+          0.21600000000000003,
+          1.0,
+          1.0
+        ],
+        "description": "person in a pink shirt with text 'YOUNG PQC' handing food",
+        "description_vi": "người mặc áo hồng in chữ 'YOUNG PQC' đang đưa thức ăn",
+        "attributes": [
+          "person",
+          "pink shirt",
+          "text"
+        ],
+        "action": "handing food"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0031",
+    "visual_source_frame_id": "L30_V019_f0031",
+    "ocr_source_frame_id": "L30_V019_f0031",
+    "quality_flags": [],
+    "caption": "A person in a red raincoat hands a bowl of food to a boy in a black graphic t-shirt.",
+    "detailed_caption": "A medium shot of an interaction in an indoor setting. On the right, a person in a red raincoat and helmet holds out bowls of food. In the center, a young boy in a black graphic t-shirt receives the food. On the left, a person in a blue raincoat looks on.",
+    "caption_vi": "Một người mặc áo mưa đỏ đưa bát thức ăn cho cậu bé mặc áo thun đen có hình.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh về một tương tác trong không gian trong nhà. Phía bên phải, một người mặc áo mưa đỏ và đội mũ bảo hiểm đang giơ các bát thức ăn ra. Ở giữa, một cậu bé mặc áo thun đen in hình đang nhận thức ăn. Phía bên trái, một người mặc áo mưa xanh đang quan sát.",
+    "ocr_text": "02 tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.52,
+          1.0
+        ],
+        "description": "person in blue raincoat and purple helmet",
+        "description_vi": "người mặc áo mưa xanh và đội mũ bảo hiểm tím",
+        "attributes": [
+          "person",
+          "blue raincoat",
+          "helmet"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.309,
+          0.219,
+          0.517,
+          0.9380000000000001
+        ],
+        "description": "boy in black graphic t-shirt receiving food",
+        "description_vi": "cậu bé mặc áo thun đen in hình đang nhận thức ăn",
+        "attributes": [
+          "boy",
+          "black t-shirt",
+          "graphic"
+        ],
+        "action": "receiving food"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.497,
+          0.10700000000000001,
+          0.9109999999999999,
+          1.0
+        ],
+        "description": "person in a red raincoat and helmet handing food",
+        "description_vi": "người mặc áo mưa đỏ và đội mũ bảo hiểm đang đưa thức ăn",
+        "attributes": [
+          "person",
+          "red raincoat",
+          "helmet"
+        ],
+        "action": "handing food"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0032",
+    "visual_source_frame_id": "L30_V019_f0032",
+    "ocr_source_frame_id": "L30_V019_f0032",
+    "quality_flags": [],
+    "caption": "A woman stands behind a metal gate talking while people in raincoats deliver food.",
+    "detailed_caption": "A medium shot shows a woman in a floral top and green pants standing behind a black metal gate, gesturing with her hands. Outside the gate, a person in a pink raincoat holds a bowl of food, accompanied by another person in a blue raincoat.",
+    "caption_vi": "Một phụ nữ đứng sau cổng sắt nói chuyện trong khi những người mặc áo mưa phát thức ăn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo hoa và quần xanh lá đứng phía sau cổng sắt đen, đang dùng tay ra hiệu. Bên ngoài cổng, một người mặc áo mưa hồng cầm một bát thức ăn, đi cùng một người mặc áo mưa xanh.",
+    "ocr_text": "B tuoitreTV RA VÀO NHỚ KHÓA CỔNG XIN CẢM ƠN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.187,
+          0.38899999999999996,
+          0.43099999999999994,
+          1.0
+        ],
+        "description": "woman in floral top and green pants gesturing behind gate",
+        "description_vi": "phụ nữ mặc áo hoa và quần xanh lá đang ra hiệu sau cổng",
+        "attributes": [
+          "woman",
+          "floral top",
+          "pants"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.497,
+          0.263,
+          0.6719999999999999,
+          0.802
+        ],
+        "description": "person in pink raincoat and helmet holding bowl",
+        "description_vi": "người mặc áo mưa hồng và đội mũ bảo hiểm cầm bát",
+        "attributes": [
+          "person",
+          "pink raincoat",
+          "helmet"
+        ],
+        "action": "delivering food"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.588,
+          0.0,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "person in blue dotted raincoat",
+        "description_vi": "người mặc áo mưa chấm bi xanh",
+        "attributes": [
+          "person",
+          "blue raincoat"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0033",
+    "visual_source_frame_id": "L30_V019_f0032",
+    "ocr_source_frame_id": "L30_V019_f0033",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman stands behind a metal gate talking while people in raincoats deliver food.",
+    "detailed_caption": "A medium shot shows a woman in a floral top and green pants standing behind a black metal gate, gesturing with her hands. Outside the gate, a person in a pink raincoat holds a bowl of food, accompanied by another person in a blue raincoat.",
+    "caption_vi": "Một phụ nữ đứng sau cổng sắt nói chuyện trong khi những người mặc áo mưa phát thức ăn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo hoa và quần xanh lá đứng phía sau cổng sắt đen, đang dùng tay ra hiệu. Bên ngoài cổng, một người mặc áo mưa hồng cầm một bát thức ăn, đi cùng một người mặc áo mưa xanh.",
+    "ocr_text": "B ÁO NHỚ A CÔNG AMON",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.187,
+          0.38899999999999996,
+          0.43099999999999994,
+          1.0
+        ],
+        "description": "woman in floral top and green pants gesturing behind gate",
+        "description_vi": "phụ nữ mặc áo hoa và quần xanh lá đang ra hiệu sau cổng",
+        "attributes": [
+          "woman",
+          "floral top",
+          "pants"
+        ],
+        "action": "gesturing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.497,
+          0.263,
+          0.6719999999999999,
+          0.802
+        ],
+        "description": "person in pink raincoat and helmet holding bowl",
+        "description_vi": "người mặc áo mưa hồng và đội mũ bảo hiểm cầm bát",
+        "attributes": [
+          "person",
+          "pink raincoat",
+          "helmet"
+        ],
+        "action": "delivering food"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.588,
+          0.0,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "person in blue dotted raincoat",
+        "description_vi": "người mặc áo mưa chấm bi xanh",
+        "attributes": [
+          "person",
+          "blue raincoat"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0034",
+    "visual_source_frame_id": "L30_V019_f0034",
+    "ocr_source_frame_id": "L30_V019_f0034",
+    "quality_flags": [],
+    "caption": "A woman in a patterned shirt receives food from a person in a pink raincoat.",
+    "detailed_caption": "A close-up shot captures a woman in a brown patterned blouse with black lace cuffs receiving a container from a person wearing a pink raincoat and helmet. Part of another person in a pink shirt is visible near a yellow crate on the right.",
+    "caption_vi": "Một phụ nữ mặc áo họa tiết nhận thức ăn từ người mặc áo mưa hồng.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh ghi lại hình ảnh một phụ nữ mặc áo blouse họa tiết nâu với viền ren đen đang nhận hộp đựng từ một người mặc áo mưa hồng và đội mũ bảo hiểm. Một phần người mặc áo hồng khác xuất hiện gần thùng nhựa vàng bên phải.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.126,
+          0.159,
+          0.528,
+          1.0
+        ],
+        "description": "woman in brown patterned blouse receiving food",
+        "description_vi": "phụ nữ mặc áo họa tiết nâu đang nhận thức ăn",
+        "attributes": [
+          "woman",
+          "patterned blouse",
+          "receiving"
+        ],
+        "action": "receiving food"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.43099999999999994,
+          0.091,
+          0.799,
+          1.0
+        ],
+        "description": "person in pink raincoat and helmet holding container",
+        "description_vi": "người mặc áo mưa hồng và đội mũ bảo hiểm đang cầm hộp",
+        "attributes": [
+          "person",
+          "pink raincoat",
+          "helmet"
+        ],
+        "action": "handing container"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0035",
+    "visual_source_frame_id": "L30_V019_f0035",
+    "ocr_source_frame_id": "L30_V019_f0035",
+    "quality_flags": [],
+    "caption": "Two people exchange food on a flooded street while wearing raincoats.",
+    "detailed_caption": "An outdoor medium shot shows two people interacting on a flooded street in the rain. On the left, a person wearing a conical hat, face mask, and purple raincoat extends a hand to pass food. On the right, a person wearing a white helmet and blue polka-dot raincoat reaches out from a truck bed to receive the items.",
+    "caption_vi": "Hai người trao nhau đồ ăn trên con đường ngập nước khi mặc áo mưa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ngoài trời ghi lại khoảnh khắc hai người đang trao đổi đồ ăn trên một con đường ngập nước dưới trời mưa. Bên trái, một người đội nón lá, đeo khẩu trang và mặc áo mưa tím đang đưa tay ra trao đồ. Bên phía phải, một người đội mũ bảo hiểm trắng và mặc áo mưa chấm bi xanh đang với tay từ thùng xe tải để nhận đồ.",
+    "ocr_text": "TUY HÒA TỰ NGHĨA TỰ HÀO BIA ĐÀ LÃNG",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.192,
+          0.308,
+          0.45499999999999996,
+          1.0
+        ],
+        "description": "person wearing a conical hat and purple raincoat",
+        "description_vi": "người đội nón lá mặc áo mưa màu tím",
+        "attributes": [
+          "person",
+          "conical hat",
+          "purple raincoat"
+        ],
+        "action": "reaching out"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.46900000000000003,
+          0.26,
+          0.9949999999999999,
+          1.0
+        ],
+        "description": "person wearing a white helmet and blue polka-dot raincoat",
+        "description_vi": "người đội mũ bảo hiểm trắng mặc áo mưa chấm bi xanh",
+        "attributes": [
+          "person",
+          "white helmet",
+          "blue raincoat"
+        ],
+        "action": "reaching out"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.331,
+          0.678,
+          0.589,
+          1.0
+        ],
+        "description": "blue truck bed holding supplies",
+        "description_vi": "thùng xe tải màu xanh chứa đồ đạc",
+        "attributes": [
+          "blue",
+          "truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0036",
+    "visual_source_frame_id": "L30_V019_f0035",
+    "ocr_source_frame_id": "L30_V019_f0036",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two people exchange food on a flooded street while wearing raincoats.",
+    "detailed_caption": "An outdoor medium shot shows two people interacting on a flooded street in the rain. On the left, a person wearing a conical hat, face mask, and purple raincoat extends a hand to pass food. On the right, a person wearing a white helmet and blue polka-dot raincoat reaches out from a truck bed to receive the items.",
+    "caption_vi": "Hai người trao nhau đồ ăn trên con đường ngập nước khi mặc áo mưa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ngoài trời ghi lại khoảnh khắc hai người đang trao đổi đồ ăn trên một con đường ngập nước dưới trời mưa. Bên trái, một người đội nón lá, đeo khẩu trang và mặc áo mưa tím đang đưa tay ra trao đồ. Bên phía phải, một người đội mũ bảo hiểm trắng và mặc áo mưa chấm bi xanh đang với tay từ thùng xe tải để nhận đồ.",
+    "ocr_text": "TỰ NGHĨA",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.192,
+          0.308,
+          0.45499999999999996,
+          1.0
+        ],
+        "description": "person wearing a conical hat and purple raincoat",
+        "description_vi": "người đội nón lá mặc áo mưa màu tím",
+        "attributes": [
+          "person",
+          "conical hat",
+          "purple raincoat"
+        ],
+        "action": "reaching out"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.46900000000000003,
+          0.26,
+          0.9949999999999999,
+          1.0
+        ],
+        "description": "person wearing a white helmet and blue polka-dot raincoat",
+        "description_vi": "người đội mũ bảo hiểm trắng mặc áo mưa chấm bi xanh",
+        "attributes": [
+          "person",
+          "white helmet",
+          "blue raincoat"
+        ],
+        "action": "reaching out"
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.331,
+          0.678,
+          0.589,
+          1.0
+        ],
+        "description": "blue truck bed holding supplies",
+        "description_vi": "thùng xe tải màu xanh chứa đồ đạc",
+        "attributes": [
+          "blue",
+          "truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0037",
+    "visual_source_frame_id": "L30_V019_f0037",
+    "ocr_source_frame_id": "L30_V019_f0037",
+    "quality_flags": [],
+    "caption": "A smiling woman stands near a yellow basin filled with bowls in a covered area.",
+    "detailed_caption": "A medium shot captures a woman smiling while standing next to a yellow basin on a bucket. The basin is stacked with white bowls. To her left, another person in a blue polka-dot raincoat stands near a red bucket.",
+    "caption_vi": "Một người phụ nữ mỉm cười đứng cạnh chậu vàng đựng bát đĩa trong khu vực có mái che.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hình ảnh một người phụ nữ đang mỉm cười đứng cạnh chiếc chậu màu vàng đặt trên một chiếc xô. Trong chậu có xếp đầy các bát trắng. Phía bên trái cô là một người khác mặc áo mưa chấm bi xanh đang đứng cạnh một chiếc xô đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "basin_0",
+        "label": "basin",
+        "bbox": [
+          0.584,
+          0.6920000000000001,
+          0.708,
+          0.809
+        ],
+        "description": "yellow basin filled with bowls on top of a bucket",
+        "description_vi": "chậu màu vàng đựng bát đặt trên xô",
+        "attributes": [
+          "yellow",
+          "basin"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.409,
+          0.741,
+          0.593,
+          1.0
+        ],
+        "description": "red bucket on the floor",
+        "description_vi": "xô màu đỏ đặt trên sàn",
+        "attributes": [
+          "red",
+          "bucket"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.481,
+          0.18699999999999997,
+          0.67,
+          0.762
+        ],
+        "description": "smiling woman in a black and white patterned dress",
+        "description_vi": "người phụ nữ cười mặc váy họa tiết đen trắng",
+        "attributes": [
+          "woman",
+          "smiling",
+          "black and white dress"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "basin_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "basin_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0038",
+    "visual_source_frame_id": "L30_V019_f0038",
+    "ocr_source_frame_id": "L30_V019_f0038",
+    "quality_flags": [],
+    "caption": "A smiling woman wearing a white helmet and purple hoodie speaks indoors.",
+    "detailed_caption": "A close-up shot features a smiling woman wearing a white helmet with a black brim and a purple hoodie. She has a microphone clipped to her collar. In the background, another person is partially visible near hanging plants.",
+    "caption_vi": "Một người phụ nữ mỉm cười đội mũ bảo hiểm trắng và mặc áo hoodie tím đang nói chuyện trong nhà.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh ghi lại hình ảnh một người phụ nữ đang cười, đội mũ bảo hiểm trắng viền đen và mặc áo hoodie màu tím. Cổ áo cô có gắn một micro nhỏ. Phía sau, một người khác xuất hiện mờ ảo bên cạnh các chậu cây treo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.242,
+          0.184,
+          0.7150000000000001,
+          1.0
+        ],
+        "description": "woman wearing a white helmet and purple hoodie",
+        "description_vi": "người phụ nữ đội mũ bảo hiểm trắng mặc áo hoodie tím",
+        "attributes": [
+          "woman",
+          "white helmet",
+          "purple hoodie",
+          "smiling"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0039",
+    "visual_source_frame_id": "L30_V019_f0038",
+    "ocr_source_frame_id": "L30_V019_f0039",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A smiling woman wearing a white helmet and purple hoodie speaks indoors.",
+    "detailed_caption": "A close-up shot features a smiling woman wearing a white helmet with a black brim and a purple hoodie. She has a microphone clipped to her collar. In the background, another person is partially visible near hanging plants.",
+    "caption_vi": "Một người phụ nữ mỉm cười đội mũ bảo hiểm trắng và mặc áo hoodie tím đang nói chuyện trong nhà.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh ghi lại hình ảnh một người phụ nữ đang cười, đội mũ bảo hiểm trắng viền đen và mặc áo hoodie màu tím. Cổ áo cô có gắn một micro nhỏ. Phía sau, một người khác xuất hiện mờ ảo bên cạnh các chậu cây treo.",
+    "ocr_text": "-katty-",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.242,
+          0.184,
+          0.7150000000000001,
+          1.0
+        ],
+        "description": "woman wearing a white helmet and purple hoodie",
+        "description_vi": "người phụ nữ đội mũ bảo hiểm trắng mặc áo hoodie tím",
+        "attributes": [
+          "woman",
+          "white helmet",
+          "purple hoodie",
+          "smiling"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0040",
+    "visual_source_frame_id": "L30_V019_f0040",
+    "ocr_source_frame_id": "L30_V019_f0040",
+    "quality_flags": [],
+    "caption": "A smiling woman wearing a white helmet and purple hoodie stands indoors.",
+    "detailed_caption": "A close-up shot shows a woman with a white helmet and purple hoodie looking forward with a slight smile. A microphone is clipped to her collar. Another person is visible in the background near a white wall and hanging plants.",
+    "caption_vi": "Một người phụ nữ mỉm cười đội mũ bảo hiểm trắng và mặc áo hoodie tím đứng trong nhà.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một người phụ nữ đội mũ bảo hiểm trắng và mặc áo hoodie tím đang nhìn về phía trước với nụ cười nhẹ. Micro nhỏ được cài trên cổ áo cô. Phía nền sau là một người khác gần bức tường trắng và cây treo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.26,
+          0.176,
+          0.727,
+          1.0
+        ],
+        "description": "woman wearing a white helmet and purple hoodie",
+        "description_vi": "người phụ nữ đội mũ bảo hiểm trắng mặc áo hoodie tím",
+        "attributes": [
+          "woman",
+          "white helmet",
+          "purple hoodie"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V019_f0041",
+    "visual_source_frame_id": "L30_V019_f0041",
+    "ocr_source_frame_id": "L30_V019_f0041",
+    "quality_flags": [],
+    "caption": "A woman wearing a black helmet and pink patterned shirt stands among other people.",
+    "detailed_caption": "A medium shot features a woman wearing a black helmet and a pink shirt with black patterns in the foreground. Several other people are visible behind her in an indoor setting with hanging plants and white walls.",
+    "caption_vi": "Một người phụ nữ đội mũ bảo hiểm đen và mặc áo hồng họa tiết đứng giữa những người khác.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh nổi bật hình ảnh một người phụ nữ đội mũ bảo hiểm đen và mặc áo sơ mi hồng họa tiết đen ở tiền cảnh. Một số người khác đứng phía sau cô trong không gian trong nhà có tường trắng và cây treo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.45199999999999996,
+          0.286,
+          0.851,
+          1.0
+        ],
+        "description": "woman wearing a black helmet and pink patterned shirt",
+        "description_vi": "người phụ nữ đội mũ bảo hiểm đen mặc áo hồng họa tiết",
+        "attributes": [
+          "woman",
+          "black helmet",
+          "pink shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.7969999999999999,
+          0.35,
+          0.999,
+          1.0
+        ],
+        "description": "woman wearing a black and white patterned top",
+        "description_vi": "người phụ nữ mặc áo họa tiết đen trắng",
+        "attributes": [
+          "woman",
+          "patterned top"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0042",
+    "visual_source_frame_id": "L30_V019_f0042",
+    "ocr_source_frame_id": "L30_V019_f0042",
+    "quality_flags": [],
+    "caption": "A woman in a black helmet and pink patterned shirt speaks in a brightly lit room.",
+    "detailed_caption": "A medium shot shows a woman wearing a black helmet and a pink patterned shirt speaking in the foreground. To her left, another woman in a blue shirt is packing items. Other people are visible in the background near a white wall with hanging plants.",
+    "caption_vi": "Một người phụ nữ đội mũ bảo hiểm đen và mặc áo hồng họa tiết đang nói chuyện trong phòng sáng sủa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hình ảnh một người phụ nữ đội mũ bảo hiểm đen và mặc áo sơ mi hồng họa tiết đang nói chuyện ở tiền cảnh. Bên trái cô, một người phụ nữ khác mặc áo xanh đang gói đồ. Những người khác xuất hiện ở hậu cảnh cạnh bức tường trắng treo cây.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.041999999999999996,
+          0.18900000000000003,
+          0.418,
+          1.0
+        ],
+        "description": "woman wearing a blue short-sleeve shirt",
+        "description_vi": "người phụ nữ mặc áo ngắn tay màu xanh",
+        "attributes": [
+          "woman",
+          "blue shirt"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.46799999999999997,
+          0.29300000000000004,
+          0.8640000000000001,
+          1.0
+        ],
+        "description": "woman wearing a black helmet and pink patterned shirt",
+        "description_vi": "người phụ nữ đội mũ bảo hiểm đen mặc áo hồng họa tiết",
+        "attributes": [
+          "woman",
+          "black helmet",
+          "pink shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0043",
+    "visual_source_frame_id": "L30_V019_f0042",
+    "ocr_source_frame_id": "L30_V019_f0043",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black helmet and pink patterned shirt speaks in a brightly lit room.",
+    "detailed_caption": "A medium shot shows a woman wearing a black helmet and a pink patterned shirt speaking in the foreground. To her left, another woman in a blue shirt is packing items. Other people are visible in the background near a white wall with hanging plants.",
+    "caption_vi": "Một người phụ nữ đội mũ bảo hiểm đen và mặc áo hồng họa tiết đang nói chuyện trong phòng sáng sủa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hình ảnh một người phụ nữ đội mũ bảo hiểm đen và mặc áo sơ mi hồng họa tiết đang nói chuyện ở tiền cảnh. Bên trái cô, một người phụ nữ khác mặc áo xanh đang gói đồ. Những người khác xuất hiện ở hậu cảnh cạnh bức tường trắng treo cây.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.041999999999999996,
+          0.18900000000000003,
+          0.418,
+          1.0
+        ],
+        "description": "woman wearing a blue short-sleeve shirt",
+        "description_vi": "người phụ nữ mặc áo ngắn tay màu xanh",
+        "attributes": [
+          "woman",
+          "blue shirt"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.46799999999999997,
+          0.29300000000000004,
+          0.8640000000000001,
+          1.0
+        ],
+        "description": "woman wearing a black helmet and pink patterned shirt",
+        "description_vi": "người phụ nữ đội mũ bảo hiểm đen mặc áo hồng họa tiết",
+        "attributes": [
+          "woman",
+          "black helmet",
+          "pink shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0044",
+    "visual_source_frame_id": "L30_V019_f0044",
+    "ocr_source_frame_id": "L30_V019_f0044",
+    "quality_flags": [],
+    "caption": "People gather around a table with food packages near a truck on a wet street.",
+    "detailed_caption": "An outdoor medium shot shows several people gathered around a metallic table with packaged food items. On the left, a person wears a conical hat and red jacket. In the center, a person in a plaid shirt stands near a parked motorbike. On the right, a person in a blue shirt loads goods into the back of a truck.",
+    "caption_vi": "Mọi người tụ tập quanh bàn để thực phẩm gói sẵn gần chiếc xe tải trên con đường ướt.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ngoài trời cho thấy nhiều người tụ tập xung quanh một chiếc bàn kim loại bày các túi thực phẩm gói sẵn. Bên trái, một người đội nón lá và mặc áo khoác đỏ. Ở giữa, một người mặc áo sơ mi kẻ sọc đứng cạnh chiếc xe máy đang đỗ. Bên phải, một người mặc áo xanh đang bốc hàng lên thùng xe tải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.11599999999999999,
+          0.354,
+          0.29,
+          1.0
+        ],
+        "description": "person wearing a conical hat and red jacket",
+        "description_vi": "người đội nón lá mặc áo khoác đỏ",
+        "attributes": [
+          "conical hat",
+          "red jacket"
+        ],
+        "action": "preparing food"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.44699999999999995,
+          0.304,
+          0.5730000000000001,
+          1.0
+        ],
+        "description": "person wearing a plaid shirt and light blue shorts",
+        "description_vi": "người mặc áo sơ mi kẻ sọc và quần đùi xanh nhạt",
+        "attributes": [
+          "plaid shirt",
+          "shorts"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.7110000000000001,
+          0.37199999999999994,
+          0.909,
+          0.9430000000000001
+        ],
+        "description": "person in a blue shirt loading a truck",
+        "description_vi": "người mặc áo xanh đang bốc hàng lên xe tải",
+        "attributes": [
+          "blue shirt"
+        ],
+        "action": "loading"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.022,
+          0.708,
+          0.43099999999999994,
+          1.0
+        ],
+        "description": "metal table with bags of food",
+        "description_vi": "bàn kim loại bày các túi đồ ăn",
+        "attributes": [
+          "metal",
+          "table"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.696,
+          0.041,
+          1.0,
+          0.917
+        ],
+        "description": "back of a truck with open doors",
+        "description_vi": "phía sau xe tải mở cửa",
+        "attributes": [
+          "truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0045",
+    "visual_source_frame_id": "L30_V019_f0044",
+    "ocr_source_frame_id": "L30_V019_f0045",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "People gather around a table with food packages near a truck on a wet street.",
+    "detailed_caption": "An outdoor medium shot shows several people gathered around a metallic table with packaged food items. On the left, a person wears a conical hat and red jacket. In the center, a person in a plaid shirt stands near a parked motorbike. On the right, a person in a blue shirt loads goods into the back of a truck.",
+    "caption_vi": "Mọi người tụ tập quanh bàn để thực phẩm gói sẵn gần chiếc xe tải trên con đường ướt.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ngoài trời cho thấy nhiều người tụ tập xung quanh một chiếc bàn kim loại bày các túi thực phẩm gói sẵn. Bên trái, một người đội nón lá và mặc áo khoác đỏ. Ở giữa, một người mặc áo sơ mi kẻ sọc đứng cạnh chiếc xe máy đang đỗ. Bên phải, một người mặc áo xanh đang bốc hàng lên thùng xe tải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.11599999999999999,
+          0.354,
+          0.29,
+          1.0
+        ],
+        "description": "person wearing a conical hat and red jacket",
+        "description_vi": "người đội nón lá mặc áo khoác đỏ",
+        "attributes": [
+          "conical hat",
+          "red jacket"
+        ],
+        "action": "preparing food"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.44699999999999995,
+          0.304,
+          0.5730000000000001,
+          1.0
+        ],
+        "description": "person wearing a plaid shirt and light blue shorts",
+        "description_vi": "người mặc áo sơ mi kẻ sọc và quần đùi xanh nhạt",
+        "attributes": [
+          "plaid shirt",
+          "shorts"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.7110000000000001,
+          0.37199999999999994,
+          0.909,
+          0.9430000000000001
+        ],
+        "description": "person in a blue shirt loading a truck",
+        "description_vi": "người mặc áo xanh đang bốc hàng lên xe tải",
+        "attributes": [
+          "blue shirt"
+        ],
+        "action": "loading"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.022,
+          0.708,
+          0.43099999999999994,
+          1.0
+        ],
+        "description": "metal table with bags of food",
+        "description_vi": "bàn kim loại bày các túi đồ ăn",
+        "attributes": [
+          "metal",
+          "table"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.696,
+          0.041,
+          1.0,
+          0.917
+        ],
+        "description": "back of a truck with open doors",
+        "description_vi": "phía sau xe tải mở cửa",
+        "attributes": [
+          "truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0046",
+    "visual_source_frame_id": "L30_V019_f0046",
+    "ocr_source_frame_id": "L30_V019_f0046",
+    "quality_flags": [],
+    "caption": "A person in a plaid shirt stands facing a table with packaged food bags, surrounded by people wearing helmets and raincoats.",
+    "detailed_caption": "A medium shot captures a man in a plaid shirt from behind, standing by a metal table loaded with bagged meals. Several people wearing helmets and face masks stand around the table waiting. On the far right, a person wears a bright yellow raincoat. Hanging vines decorate the background ceiling.",
+    "caption_vi": "Một người mặc áo sơ mi kẻ sọc đứng đối diện bàn bày các túi thức ăn đóng gói, xung quanh là những người đội mũ bảo hiểm và mặc áo mưa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người đàn ông mặc áo sơ mi kẻ sọc nhìn từ phía sau, đang đứng cạnh một chiếc bàn kim loại chất đầy các túi thức ăn được đóng gói. Một số người đội mũ bảo hiểm và đeo khẩu trang đứng xung quanh bàn chờ đợi. Ở góc xa bên phải, một người mặc áo mưa màu vàng sáng. Trần nhà phía sau được trang trí bằng dây leo.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.471,
+          0.602,
+          0.603,
+          0.8260000000000001
+        ],
+        "description": "clear plastic bags containing food containers on the table",
+        "description_vi": "các túi nilon trong suốt đựng hộp thức ăn trên bàn",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.156,
+          0.159,
+          0.44299999999999995,
+          1.0
+        ],
+        "description": "a man in the foreground wearing a plaid shirt and blue jeans",
+        "description_vi": "một người đàn ông ở tiền cảnh mặc áo sơ mi kẻ sọc và quần jeans xanh",
+        "attributes": [
+          "plaid shirt",
+          "blue jeans"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.731,
+          0.272,
+          0.859,
+          1.0
+        ],
+        "description": "a woman standing behind the table wearing a pink jacket and patterned pants",
+        "description_vi": "một phụ nữ đứng sau bàn mặc áo khoác hồng và quần họa tiết",
+        "attributes": [
+          "pink jacket",
+          "patterned pants"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.8310000000000001,
+          0.354,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "a person on the right wearing a yellow raincoat and face mask",
+        "description_vi": "một người ở bên phải mặc áo mưa màu vàng và đeo khẩu trang",
+        "attributes": [
+          "yellow raincoat",
+          "face mask"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.42800000000000005,
+          0.742,
+          0.741,
+          1.0
+        ],
+        "description": "a metal table holding multiple bags of packaged food",
+        "description_vi": "một chiếc bàn kim loại bày nhiều túi thức ăn đóng gói",
+        "attributes": [
+          "metal",
+          "long"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0047",
+    "visual_source_frame_id": "L30_V019_f0047",
+    "ocr_source_frame_id": "L30_V019_f0047",
+    "quality_flags": [],
+    "caption": "A person in a plaid shirt stands at a table with bagged food, facing a line of people wearing helmets and raincoats.",
+    "detailed_caption": "A medium shot shows a man in a plaid shirt standing with his back to the camera at a metal table filled with bagged food. Across the table, several people wearing white helmets, face masks, and jackets stand waiting. On the far right, a person wears a yellow raincoat. The background features hanging green vines.",
+    "caption_vi": "Một người mặc áo sơ mi kẻ sọc đứng tại bàn có thức ăn đóng túi, đối diện với hàng người đội mũ bảo hiểm và mặc áo mưa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông mặc áo sơ mi kẻ sọc quay lưng về phía máy quay, đứng tại một bàn kim loại đầy thức ăn đóng túi. Phía bên kia bàn, một số người đội mũ bảo hiểm trắng, đeo khẩu trang và mặc áo khoác đang đứng chờ. Ở góc xa bên phải, một người mặc áo mưa vàng. Phía sau trang trí các dây leo xanh.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.47800000000000004,
+          0.63,
+          0.602,
+          0.838
+        ],
+        "description": "a white plastic bag containing food containers on the table",
+        "description_vi": "một túi nilon trắng đựng hộp thức ăn trên bàn",
+        "attributes": [
+          "white",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16499999999999998,
+          0.17200000000000001,
+          0.46799999999999997,
+          1.0
+        ],
+        "description": "a man in the foreground wearing a plaid shirt and blue jeans",
+        "description_vi": "một người đàn ông ở tiền cảnh mặc áo sơ mi kẻ sọc và quần jeans xanh",
+        "attributes": [
+          "plaid shirt",
+          "blue jeans"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.731,
+          0.285,
+          0.8560000000000001,
+          1.0
+        ],
+        "description": "a woman behind the table wearing a pink jacket and patterned trousers",
+        "description_vi": "một phụ nữ đứng sau bàn mặc áo khoác hồng và quần hoa văn",
+        "attributes": [
+          "pink jacket",
+          "patterned trousers"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.8310000000000001,
+          0.37199999999999994,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "a person on the right wearing a yellow raincoat and face mask",
+        "description_vi": "một người ở bên phải mặc áo mưa vàng và đeo khẩu trang",
+        "attributes": [
+          "yellow raincoat",
+          "face mask"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.437,
+          0.753,
+          0.745,
+          1.0
+        ],
+        "description": "a metal table holding multiple white plastic bags of food",
+        "description_vi": "một chiếc bàn kim loại bày nhiều túi nilon trắng đựng thức ăn",
+        "attributes": [
+          "metal",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0048",
+    "visual_source_frame_id": "L30_V019_f0048",
+    "ocr_source_frame_id": "L30_V019_f0048",
+    "quality_flags": [],
+    "caption": "A woman wearing a conical hat and a red-and-black jacket packs food bags next to another woman in a patterned top.",
+    "detailed_caption": "A close-up shot shows a woman on the left wearing a conical hat and a red-and-black jacket, tying shut a plastic bag filled with food. Next to her, a woman wears a yellow top decorated with a dragon motif and arranges food bags. Other individuals stand in the background under an indoor overhang.",
+    "caption_vi": "Một phụ nữ đội nón lá và mặc áo khoác đỏ đen đang gói túi thức ăn cạnh một người phụ nữ khác mặc áo họa tiết.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một phụ nữ bên trái đội nón lá và mặc áo khoác đỏ đen, đang cột chặt túi nilon đựng thức ăn. Ngay cạnh cô, một người phụ nữ mặc áo vàng trang trí họa tiết rồng đang sắp xếp các túi thức ăn. Những người khác đứng phía sau dưới mái hiên trong nhà.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.517,
+          0.566,
+          0.766,
+          1.0
+        ],
+        "description": "a clear plastic bag filled with food containers",
+        "description_vi": "một túi nilon trong suốt đựng hộp thức ăn",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.049,
+          0.159,
+          0.861
+        ],
+        "description": "a person on the left wearing a pink patterned hoodie",
+        "description_vi": "một người bên trái mặc áo hoodie hồng họa tiết sọc",
+        "attributes": [
+          "pink hoodie",
+          "plaid pattern"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.124,
+          0.057,
+          0.475,
+          0.918
+        ],
+        "description": "a woman wearing a conical hat and a red-and-black jacket tying a plastic bag",
+        "description_vi": "một phụ nữ đội nón lá và mặc áo khoác đỏ đen đang cột túi nilon",
+        "attributes": [
+          "conical hat",
+          "red and black jacket"
+        ],
+        "action": "packing food"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5389999999999999,
+          0.0,
+          0.865,
+          0.995
+        ],
+        "description": "a woman wearing a yellow top with a dragon motif arranging bags",
+        "description_vi": "một phụ nữ mặc áo vàng họa tiết rồng đang sắp xếp các túi",
+        "attributes": [
+          "yellow top",
+          "dragon print"
+        ],
+        "action": "arranging bags"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.767,
+          0.071,
+          1.0,
+          0.997
+        ],
+        "description": "a person on the right wearing a grey hoodie and face mask",
+        "description_vi": "một người ở bên phải mặc áo hoodie xám và đeo khẩu trang",
+        "attributes": [
+          "grey hoodie",
+          "face mask"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0049",
+    "visual_source_frame_id": "L30_V019_f0049",
+    "ocr_source_frame_id": "L30_V019_f0049",
+    "quality_flags": [],
+    "caption": "A woman wearing a conical hat packs food into bags alongside a woman in a yellow top and another in a yellow raincoat.",
+    "detailed_caption": "A medium shot captures a woman on the left wearing a conical hat and red-and-black jacket packing items into plastic bags. In the center, a woman wears a yellow top with a dragon graphic. On the right, a person in a yellow raincoat and white helmet reaches toward the table. The setting is an indoor area with hanging vines.",
+    "caption_vi": "Một phụ nữ đội nón lá đang cho thức ăn vào túi cùng với một người mặc áo vàng và một người mặc áo mưa vàng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một phụ nữ bên trái đội nón lá và mặc áo khoác đỏ đen đang cho đồ vào túi nilon. Ở giữa, một phụ nữ mặc áo vàng có hình rồng. Ở bên phải, một người mặc áo mưa vàng và đội mũ bảo hiểm trắng đang với tay về phía bàn. Bối cảnh là khu vực trong nhà có trang trí dây leo.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.248,
+          0.72,
+          0.484,
+          1.0
+        ],
+        "description": "a clear plastic bag held by the woman in the red-and-black jacket",
+        "description_vi": "một túi nilon trong suốt được giữ bởi phụ nữ mặc áo khoác đỏ đen",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.05,
+          0.18699999999999997,
+          0.392,
+          1.0
+        ],
+        "description": "a woman wearing a conical hat and red-and-black jacket packing bags",
+        "description_vi": "một phụ nữ đội nón lá và mặc áo khoác đỏ đen đang đóng gói túi",
+        "attributes": [
+          "conical hat",
+          "red and black jacket"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.25,
+          0.404,
+          0.638
+        ],
+        "description": "a person in the background wearing a pink helmet and light top",
+        "description_vi": "một người ở phía sau đội mũ bảo hiểm hồng và mặc áo sáng màu",
+        "attributes": [
+          "pink helmet",
+          "light top"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.301,
+          0.149,
+          1.0,
+          1.0
+        ],
+        "description": "a person wearing a yellow raincoat, white helmet, and face mask",
+        "description_vi": "một người mặc áo mưa vàng, đội mũ bảo hiểm trắng và đeo khẩu trang",
+        "attributes": [
+          "yellow raincoat",
+          "white helmet",
+          "face mask"
+        ],
+        "action": "reaching"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.365,
+          0.171,
+          0.602,
+          0.885
+        ],
+        "description": "a woman wearing a yellow top with a dragon design",
+        "description_vi": "một phụ nữ mặc áo vàng có họa tiết hình rồng",
+        "attributes": [
+          "yellow top",
+          "dragon graphic"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "above",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "below",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0050",
+    "visual_source_frame_id": "L30_V019_f0049",
+    "ocr_source_frame_id": "L30_V019_f0050",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "People pack items into plastic bags near a table.",
+    "detailed_caption": "A medium shot features a person in a conical hat and red jacket packing items into plastic bags on the left. In the center, a woman in a colorful shirt with a dragon motif watches. On the right, a person in a yellow raincoat assists.",
+    "caption_vi": "Mọi người đóng gói đồ vật vào túi nhựa gần một chiếc bàn.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đội nón lá và mặc áo khoác đỏ đang cho đồ vào túi nhựa ở bên trái. Ở giữa, một phụ nữ mặc áo họa tiết rồng đang quan sát. Bên phải, một người mặc áo mưa vàng đang phụ giúp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.049,
+          0.18900000000000003,
+          0.396,
+          1.0
+        ],
+        "description": "person wearing a conical hat and red jacket",
+        "description_vi": "người đội nón lá mặc áo khoác đỏ",
+        "attributes": [
+          "conical hat",
+          "red jacket"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29500000000000004,
+          0.149,
+          1.0,
+          1.0
+        ],
+        "description": "person wearing a yellow raincoat and white helmet",
+        "description_vi": "người mặc áo mưa vàng đội mũ bảo hiểm trắng",
+        "attributes": [
+          "yellow raincoat",
+          "white helmet"
+        ],
+        "action": "assisting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.364,
+          0.179,
+          0.602,
+          0.8979999999999999
+        ],
+        "description": "woman wearing a colorful dragon shirt",
+        "description_vi": "người phụ nữ mặc áo họa tiết rồng đầy màu sắc",
+        "attributes": [
+          "woman",
+          "colorful shirt"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0051",
+    "visual_source_frame_id": "L30_V019_f0051",
+    "ocr_source_frame_id": "L30_V019_f0051",
+    "quality_flags": [],
+    "caption": "People pack and distribute goods in plastic bags.",
+    "detailed_caption": "A medium shot shows a person in a conical hat and red jacket preparing bags on the left. Beside them, a woman in a colorful dragon shirt assists. On the right, a person in a yellow raincoat and white helmet interacts with a man in a black polo shirt.",
+    "caption_vi": "Mọi người đóng gói và phân phát hàng hóa trong túi nhựa.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hình ảnh một người đội nón lá mặc áo đỏ đang chuẩn bị túi bên trái. Cạnh đó, phụ nữ mặc áo rồng đầy màu sắc đang phụ giúp. Bên phải, một người mặc áo mưa vàng đội mũ bảo hiểm trắng đang tương tác với người đàn ông mặc áo polo đen.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.003,
+          0.209,
+          0.38,
+          1.0
+        ],
+        "description": "person wearing a conical hat and red jacket",
+        "description_vi": "người đội nón lá mặc áo khoác đỏ",
+        "attributes": [
+          "conical hat",
+          "red jacket"
+        ],
+        "action": "preparing bags"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.286,
+          0.223,
+          0.418,
+          0.6699999999999999
+        ],
+        "description": "woman wearing a colorful dragon shirt",
+        "description_vi": "người phụ nữ mặc áo họa tiết rồng màu sắc",
+        "attributes": [
+          "woman",
+          "colorful shirt"
+        ],
+        "action": "assisting"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.471,
+          0.149,
+          0.778,
+          0.9329999999999999
+        ],
+        "description": "person wearing a yellow raincoat and white helmet",
+        "description_vi": "người mặc áo mưa vàng và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "yellow raincoat",
+          "white helmet"
+        ],
+        "action": "interacting"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.593,
+          0.209,
+          1.0,
+          1.0
+        ],
+        "description": "man wearing a black polo shirt with collar stripes",
+        "description_vi": "người đàn ông mặc áo polo đen viền cổ",
+        "attributes": [
+          "man",
+          "black polo shirt"
+        ],
+        "action": "interacting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0052",
+    "visual_source_frame_id": "L30_V019_f0052",
+    "ocr_source_frame_id": "L30_V019_f0052",
+    "quality_flags": [],
+    "caption": "A group of people gathers near a truck to pack and distribute food packages.",
+    "detailed_caption": "A wide shot shows several people gathered around a table and truck outdoors. On the left, a man in a yellow shirt and a boy in a sports jersey stand near a truck. In the center, a person in a conical hat and red jacket packs bags with others. On the right, a person in a yellow raincoat and white helmet interacts with volunteers.",
+    "caption_vi": "Một nhóm người tụ tập gần xe tải để đóng gói và phân phát các gói thực phẩm.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh cho thấy nhiều người tụ tập xung quanh một chiếc bàn và xe tải ở ngoài trời. Bên trái, một người đàn ông mặc áo vàng và một bé trai mặc áo thể thao đứng gần xe. Ở giữa, một người đội nón lá mặc áo đỏ đang gói đồ cùng những người khác. Bên phải, một người mặc áo mưa vàng đội mũ bảo hiểm trắng đang tương tác với các tình nguyện viên.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.05600000000000001,
+          0.437,
+          0.151,
+          0.875
+        ],
+        "description": "man wearing a yellow shirt",
+        "description_vi": "người đàn ông mặc áo sơ mi màu vàng",
+        "attributes": [
+          "man",
+          "yellow shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.11599999999999999,
+          0.479,
+          0.248,
+          0.929
+        ],
+        "description": "boy wearing a sports jersey",
+        "description_vi": "cậu bé mặc áo thể thao",
+        "attributes": [
+          "boy",
+          "sports jersey"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.404,
+          0.46900000000000003,
+          0.627,
+          1.0
+        ],
+        "description": "person wearing a conical hat and red jacket",
+        "description_vi": "người đội nón lá mặc áo khoác màu đỏ",
+        "attributes": [
+          "conical hat",
+          "red jacket"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.593,
+          0.41100000000000003,
+          0.6849999999999999,
+          0.682
+        ],
+        "description": "person wearing a yellow raincoat and white helmet",
+        "description_vi": "người mặc áo mưa vàng và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "yellow raincoat",
+          "white helmet"
+        ],
+        "action": "interacting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0053",
+    "visual_source_frame_id": "L30_V019_f0052",
+    "ocr_source_frame_id": "L30_V019_f0053",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A group of people gathers near a truck to pack and distribute food packages.",
+    "detailed_caption": "A wide shot shows several people gathered around a table and truck outdoors. On the left, a man in a yellow shirt and a boy in a sports jersey stand near a truck. In the center, a person in a conical hat and red jacket packs bags with others. On the right, a person in a yellow raincoat and white helmet interacts with volunteers.",
+    "caption_vi": "Một nhóm người tụ tập gần xe tải để đóng gói và phân phát các gói thực phẩm.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh cho thấy nhiều người tụ tập xung quanh một chiếc bàn và xe tải ở ngoài trời. Bên trái, một người đàn ông mặc áo vàng và một bé trai mặc áo thể thao đứng gần xe. Ở giữa, một người đội nón lá mặc áo đỏ đang gói đồ cùng những người khác. Bên phải, một người mặc áo mưa vàng đội mũ bảo hiểm trắng đang tương tác với các tình nguyện viên.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.05600000000000001,
+          0.437,
+          0.151,
+          0.875
+        ],
+        "description": "man wearing a yellow shirt",
+        "description_vi": "người đàn ông mặc áo sơ mi màu vàng",
+        "attributes": [
+          "man",
+          "yellow shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.11599999999999999,
+          0.479,
+          0.248,
+          0.929
+        ],
+        "description": "boy wearing a sports jersey",
+        "description_vi": "cậu bé mặc áo thể thao",
+        "attributes": [
+          "boy",
+          "sports jersey"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.404,
+          0.46900000000000003,
+          0.627,
+          1.0
+        ],
+        "description": "person wearing a conical hat and red jacket",
+        "description_vi": "người đội nón lá mặc áo khoác màu đỏ",
+        "attributes": [
+          "conical hat",
+          "red jacket"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.593,
+          0.41100000000000003,
+          0.6849999999999999,
+          0.682
+        ],
+        "description": "person wearing a yellow raincoat and white helmet",
+        "description_vi": "người mặc áo mưa vàng và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "yellow raincoat",
+          "white helmet"
+        ],
+        "action": "interacting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0054",
+    "visual_source_frame_id": "L30_V019_f0054",
+    "ocr_source_frame_id": "L30_V019_f0054",
+    "quality_flags": [],
+    "caption": "People walk through a rainy outdoor courtyard with stacked plastic bags of food in the foreground.",
+    "detailed_caption": "A wide shot shows numerous plastic bags filled with food arranged neatly on the floor in the foreground. In the background courtyard, several people are walking near a parked truck and motorcycles on a wet surface. Potted plants and hanging foliage decorate the structure.",
+    "caption_vi": "Mọi người đi lại trong sân trời mưa với các túi nilon đựng thức ăn được xếp chồng ở tiền cảnh.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh cho thấy nhiều túi nilon đựng thức ăn được xếp gọn gàng trên sàn ở khu vực tiền cảnh. Ở sân phía sau, một số người đang đi lại gần một chiếc xe tải và xe máy đậu trên mặt nước ướt. Cây cảnh trong chậu và tán lá treo trang trí cho công trình.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.186,
+          0.6639999999999999,
+          0.898,
+          1.0
+        ],
+        "description": "multiple clear plastic bags filled with food arranged on the tiled floor",
+        "description_vi": "nhiều túi nilon trong suốt đựng thức ăn được xếp trên sàn lát gạch",
+        "attributes": [
+          "clear",
+          "plastic",
+          "stacked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.20099999999999998,
+          0.39299999999999996,
+          0.359,
+          0.599
+        ],
+        "description": "a red and white motorcycle parked on the wet ground",
+        "description_vi": "một chiếc xe máy đỏ trắng đậu trên mặt đất ướt",
+        "attributes": [
+          "red and white",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.404,
+          0.319,
+          0.46299999999999997,
+          0.61
+        ],
+        "description": "a person walking carrying bags in the courtyard",
+        "description_vi": "một người đang đi bộ xách túi trong sân",
+        "attributes": [
+          "dark clothing"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "plant_0",
+        "label": "plant",
+        "bbox": [
+          0.786,
+          0.267,
+          0.9949999999999999,
+          0.9189999999999999
+        ],
+        "description": "large potted green plants on the right side",
+        "description_vi": "cây xanh lớn trong chậu ở phía bên phải",
+        "attributes": [
+          "green",
+          "potted"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "truck_0",
+        "label": "truck",
+        "bbox": [
+          0.34700000000000003,
+          0.253,
+          0.505,
+          0.5
+        ],
+        "description": "a small white delivery truck parked in the courtyard",
+        "description_vi": "một chiếc xe tải giao hàng màu trắng nhỏ đậu trong sân",
+        "attributes": [
+          "white",
+          "delivery truck"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "above",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "below",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "above",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "below",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "truck_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "truck_0",
+        "predicate": "left_of",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "right_of",
+        "object_id": "truck_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0055",
+    "visual_source_frame_id": "L30_V019_f0055",
+    "ocr_source_frame_id": "L30_V019_f0055",
+    "quality_flags": [],
+    "caption": "Many white plastic bags containing supplies cover a tiled floor.",
+    "detailed_caption": "A high-angle shot shows numerous white plastic bags filled with food or supplies packed tightly across a tiled floor. In the upper left, a person's legs and feet are visible as they walk past.",
+    "caption_vi": "Nhiều túi nhựa trắng chứa nhu yếu phẩm phủ kín sàn lát gạch.",
+    "detailed_caption_vi": "Cảnh quay góc cao cho thấy rất nhiều túi nhựa trắng chứa thực phẩm hoặc nhu yếu phẩm được xếp dày đặc trên sàn nhà lát gạch. Ở góc trên bên trái, chân và giày của một người xuất hiện khi đang đi qua.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.371,
+          0.609,
+          0.508,
+          0.913
+        ],
+        "description": "cluster of white plastic bags on tiled floor",
+        "description_vi": "cụm túi nhựa trắng trên sàn gạch",
+        "attributes": [
+          "white",
+          "plastic bag"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_bag_1",
+        "label": "plastic bag",
+        "bbox": [
+          0.741,
+          0.5559999999999999,
+          0.977,
+          0.8510000000000001
+        ],
+        "description": "white plastic bags filled with items on the floor",
+        "description_vi": "túi nhựa trắng chứa đầy đồ đặt trên sàn",
+        "attributes": [
+          "white",
+          "plastic bag"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "left_of",
+        "object_id": "plastic_bag_1"
+      },
+      {
+        "subject_id": "plastic_bag_1",
+        "predicate": "right_of",
+        "object_id": "plastic_bag_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0056",
+    "visual_source_frame_id": "L30_V019_f0055",
+    "ocr_source_frame_id": "L30_V019_f0056",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Many white plastic bags containing supplies cover a tiled floor.",
+    "detailed_caption": "A high-angle shot shows numerous white plastic bags filled with food or supplies packed tightly across a tiled floor. In the upper left, a person's legs and feet are visible as they walk past.",
+    "caption_vi": "Nhiều túi nhựa trắng chứa nhu yếu phẩm phủ kín sàn lát gạch.",
+    "detailed_caption_vi": "Cảnh quay góc cao cho thấy rất nhiều túi nhựa trắng chứa thực phẩm hoặc nhu yếu phẩm được xếp dày đặc trên sàn nhà lát gạch. Ở góc trên bên trái, chân và giày của một người xuất hiện khi đang đi qua.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plastic_bag_0",
+        "label": "plastic bag",
+        "bbox": [
+          0.371,
+          0.609,
+          0.508,
+          0.913
+        ],
+        "description": "cluster of white plastic bags on tiled floor",
+        "description_vi": "cụm túi nhựa trắng trên sàn gạch",
+        "attributes": [
+          "white",
+          "plastic bag"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_bag_1",
+        "label": "plastic bag",
+        "bbox": [
+          0.741,
+          0.5559999999999999,
+          0.977,
+          0.8510000000000001
+        ],
+        "description": "white plastic bags filled with items on the floor",
+        "description_vi": "túi nhựa trắng chứa đầy đồ đặt trên sàn",
+        "attributes": [
+          "white",
+          "plastic bag"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plastic_bag_0",
+        "predicate": "left_of",
+        "object_id": "plastic_bag_1"
+      },
+      {
+        "subject_id": "plastic_bag_1",
+        "predicate": "right_of",
+        "object_id": "plastic_bag_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0057",
+    "visual_source_frame_id": "L30_V019_f0057",
+    "ocr_source_frame_id": "L30_V019_f0057",
+    "quality_flags": [],
+    "caption": "A group of people stand around a table packing plastic bags of food in an open-air area.",
+    "detailed_caption": "A medium shot shows a woman on the right wearing a yellow top with a dragon print packing food into plastic bags. Next to her, a person wears a conical hat and red-and-black jacket. On the left, a man in a black polo shirt hands items across the table, and other individuals stand nearby.",
+    "caption_vi": "Một nhóm người đứng quanh bàn đóng gói các túi nilon đựng thức ăn ở khu vực ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ bên phải mặc áo vàng có in hình rồng đang đóng gói thức ăn vào túi nilon. Ngay cạnh cô, một người đội nón lá và mặc áo khoác đỏ đen. Phía bên trái, một người đàn ông mặc áo polo đen đang trao đồ qua bàn, và những người khác đứng gần đó.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.26,
+          0.608,
+          0.497,
+          0.969
+        ],
+        "description": "clear plastic bags filled with food items on the table",
+        "description_vi": "các túi nilon trong suốt đựng thực phẩm trên bàn",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.053000000000000005,
+          0.135,
+          0.339,
+          0.997
+        ],
+        "description": "a man wearing a black polo shirt handing items across the table",
+        "description_vi": "một người đàn ông mặc áo polo đen đang trao đồ qua bàn",
+        "attributes": [
+          "black polo shirt"
+        ],
+        "action": "handing items"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.462,
+          0.16699999999999998,
+          0.647,
+          0.745
+        ],
+        "description": "a person wearing a conical hat and red-and-black jacket",
+        "description_vi": "một người đội nón lá và mặc áo khoác đỏ đen",
+        "attributes": [
+          "conical hat",
+          "red and black jacket"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.52,
+          0.018000000000000002,
+          0.826,
+          1.0
+        ],
+        "description": "a woman wearing a yellow top with a dragon graphic packing bags",
+        "description_vi": "một phụ nữ mặc áo vàng có hình rồng đang đóng gói túi",
+        "attributes": [
+          "yellow top",
+          "dragon graphic"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.8140000000000001,
+          0.09,
+          1.0,
+          1.0
+        ],
+        "description": "a man wearing a plaid shirt and cap standing on the right",
+        "description_vi": "một người đàn ông mặc áo sơ mi kẻ sọc và đội mũ đứng bên phải",
+        "attributes": [
+          "plaid shirt",
+          "cap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0058",
+    "visual_source_frame_id": "L30_V019_f0058",
+    "ocr_source_frame_id": "L30_V019_f0058",
+    "quality_flags": [],
+    "caption": "A group of people stand around a table preparing and packing food bags outdoors.",
+    "detailed_caption": "A medium shot captures a man in a black polo shirt on the left handing food across a table, while a woman in a yellow top and another in a conical hat pack plastic bags in the center. A man in a plaid shirt stands in the right foreground with his back turned.",
+    "caption_vi": "Một nhóm người đứng quanh bàn chuẩn bị và đóng gói các túi thức ăn ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người đàn ông mặc áo polo đen bên trái đang trao thức ăn qua bàn, trong khi một phụ nữ mặc áo vàng và một người đội nón lá đang đóng gói túi nilon ở giữa. Một người đàn ông mặc áo sơ mi kẻ sọc đứng ở góc phải phía trước quay lưng lại.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.242,
+          0.656,
+          0.6,
+          0.995
+        ],
+        "description": "clear plastic bags filled with food on the table",
+        "description_vi": "các túi nilon trong suốt đựng thức ăn trên bàn",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.033,
+          0.13,
+          0.32999999999999996,
+          0.997
+        ],
+        "description": "a man wearing a black polo shirt handing food across the table",
+        "description_vi": "một người đàn ông mặc áo polo đen đang trao thức ăn qua bàn",
+        "attributes": [
+          "black polo shirt"
+        ],
+        "action": "handing food"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.44000000000000006,
+          0.15,
+          0.602,
+          0.6809999999999999
+        ],
+        "description": "a person wearing a conical hat and red-and-black jacket",
+        "description_vi": "một người đội nón lá và mặc áo khoác đỏ đen",
+        "attributes": [
+          "conical hat",
+          "red and black jacket"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.47800000000000004,
+          0.10099999999999999,
+          0.696,
+          0.76
+        ],
+        "description": "a woman wearing a yellow top packing plastic bags",
+        "description_vi": "một phụ nữ mặc áo vàng đang đóng gói túi nilon",
+        "attributes": [
+          "yellow top"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.491,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a man wearing a plaid shirt in the foreground on the right",
+        "description_vi": "một người đàn ông mặc áo sơ mi kẻ sọc ở tiền cảnh bên phải",
+        "attributes": [
+          "plaid shirt"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0059",
+    "visual_source_frame_id": "L30_V019_f0059",
+    "ocr_source_frame_id": "L30_V019_f0059",
+    "quality_flags": [],
+    "caption": "A takeout food container holds rice and fried fish next to a plastic bag.",
+    "detailed_caption": "A close-up shot shows an open white styrofoam takeout box containing white rice and pieces of fried fish, along with a small sauce packet. A hand reaches toward a clear plastic bag filled with food items next to the container.",
+    "caption_vi": "Hộp đựng đồ ăn mang đi chứa cơm và cá chiên nằm cạnh túi nhựa.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một hộp xốp trắng đựng đồ ăn mang đi đang mở, bên trong có cơm trắng và các miếng cá chiên, kèm theo một gói sốt nhỏ. Một tay đang với tới một túi nhựa trong suốt chứa đồ ăn đặt cạnh hộp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "food_container_0",
+        "label": "food container",
+        "bbox": [
+          0.051000000000000004,
+          0.0,
+          0.514,
+          0.875
+        ],
+        "description": "open styrofoam box with rice and fried fish",
+        "description_vi": "hộp xốp mở chứa cơm và cá rán",
+        "attributes": [
+          "styrofoam",
+          "container",
+          "food"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.6559999999999999,
+          0.254,
+          0.954,
+          1.0
+        ],
+        "description": "human hand reaching for a plastic bag",
+        "description_vi": "bàn tay người đang với lấy túi nhựa",
+        "attributes": [
+          "hand"
+        ],
+        "action": "reaching"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "food_container_0",
+        "predicate": "left_of",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "right_of",
+        "object_id": "food_container_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V019_f0060",
+    "visual_source_frame_id": "L30_V019_f0060",
+    "ocr_source_frame_id": "L30_V019_f0060",
+    "quality_flags": [],
+    "caption": "A group of people wearing helmets and raincoats pack food bags at a table under a covered outdoor area.",
+    "detailed_caption": "A medium shot shows a woman in a yellow top with a dragon graphic packing food into bags on the right. In the center, a woman in a conical hat and red-and-black jacket assists her alongside other people wearing raincoats and helmets. A green lower-third graphic with Vietnamese text is overlaid across the bottom.",
+    "caption_vi": "Một nhóm người đội mũ bảo hiểm và mặc áo mưa đóng gói các túi thức ăn tại bàn dưới khu vực có mái che ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một phụ nữ mặc áo vàng có hình rồng đang đóng gói thức ăn vào túi ở bên phải. Ở giữa, một phụ nữ đội nón lá và mặc áo khoác đỏ đen đang phụ giúp cùng những người khác mặc áo mưa và đội mũ bảo hiểm. Đồ họa hiển thị chữ tiếng Việt nằm ở phần dưới khung hình.",
+    "ocr_text": "Tác giả: Nguyễn Mi",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bag_0",
+        "label": "bag",
+        "bbox": [
+          0.47400000000000003,
+          0.656,
+          0.682,
+          0.982
+        ],
+        "description": "clear plastic bags filled with food containers on the table",
+        "description_vi": "các túi nilon trong suốt đựng hộp thức ăn trên bàn",
+        "attributes": [
+          "clear",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.049,
+          0.272,
+          0.288,
+          0.745
+        ],
+        "description": "a person wearing a blue raincoat and light blue helmet",
+        "description_vi": "một người mặc áo mưa xanh dương và đội mũ bảo hiểm xanh nhạt",
+        "attributes": [
+          "blue raincoat",
+          "light blue helmet"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.26,
+          0.228,
+          0.42699999999999994,
+          0.7030000000000001
+        ],
+        "description": "a person wearing a grey raincoat and yellow helmet",
+        "description_vi": "một người mặc áo mưa xám và đội mũ bảo hiểm vàng",
+        "attributes": [
+          "grey raincoat",
+          "yellow helmet"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.39,
+          0.223,
+          0.602,
+          0.775
+        ],
+        "description": "a woman wearing a conical hat and red-and-black jacket packing bags",
+        "description_vi": "một phụ nữ đội nón lá và mặc áo khoác đỏ đen đang đóng gói túi",
+        "attributes": [
+          "conical hat",
+          "red and black jacket"
+        ],
+        "action": "packing"
+      },
+      {
+        "object_id": "person_3",
+        "label": "person",
+        "bbox": [
+          0.7230000000000001,
+          0.10099999999999999,
+          0.978,
+          0.8029999999999999
+        ],
+        "description": "a woman wearing a yellow top with a dragon graphic packing food",
+        "description_vi": "một phụ nữ mặc áo vàng có hình rồng đang đóng gói thức ăn",
+        "attributes": [
+          "yellow top",
+          "dragon graphic"
+        ],
+        "action": "packing food"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "bag_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "bag_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "left_of",
+        "object_id": "person_3"
+      },
+      {
+        "subject_id": "person_3",
+        "predicate": "right_of",
+        "object_id": "person_2"
+      }
+    ]
+  }
+]

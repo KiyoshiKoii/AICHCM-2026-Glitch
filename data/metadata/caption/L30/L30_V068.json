@@ -1,0 +1,4078 @@
+[
+  {
+    "frame_id": "L30_V068_f0001",
+    "visual_source_frame_id": "L30_V068_f0001",
+    "ocr_source_frame_id": "L30_V068_f0001",
+    "quality_flags": [],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions smoothly into a lighter center with vignetting at the edges. No subjects or objects are present.",
+    "caption_vi": "Một phông nền chuyển màu trắng sáng trơn.",
+    "detailed_caption_vi": "Phông nền trắng đơn giản chuyển dần sang sáng hơn ở trung tâm với hiệu ứng tối dần ở các viền. Không có chủ thể hay vật thể nào xuất hiện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0002",
+    "visual_source_frame_id": "L30_V068_f0001",
+    "ocr_source_frame_id": "L30_V068_f0002",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions smoothly into a lighter center with vignetting at the edges. No subjects or objects are present.",
+    "caption_vi": "Một phông nền chuyển màu trắng sáng trơn.",
+    "detailed_caption_vi": "Phông nền trắng đơn giản chuyển dần sang sáng hơn ở trung tâm với hiệu ứng tối dần ở các viền. Không có chủ thể hay vật thể nào xuất hiện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0003",
+    "visual_source_frame_id": "L30_V068_f0001",
+    "ocr_source_frame_id": "L30_V068_f0003",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions smoothly into a lighter center with vignetting at the edges. No subjects or objects are present.",
+    "caption_vi": "Một phông nền chuyển màu trắng sáng trơn.",
+    "detailed_caption_vi": "Phông nền trắng đơn giản chuyển dần sang sáng hơn ở trung tâm với hiệu ứng tối dần ở các viền. Không có chủ thể hay vật thể nào xuất hiện.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0004",
+    "visual_source_frame_id": "L30_V068_f0001",
+    "ocr_source_frame_id": "L30_V068_f0004",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions smoothly into a lighter center with vignetting at the edges. No subjects or objects are present.",
+    "caption_vi": "Một phông nền chuyển màu trắng sáng trơn.",
+    "detailed_caption_vi": "Phông nền trắng đơn giản chuyển dần sang sáng hơn ở trung tâm với hiệu ứng tối dần ở các viền. Không có chủ thể hay vật thể nào xuất hiện.",
+    "ocr_text": "Clip bạn đọc dự thi cuộc thi: Lan tỏa năng lượng tích cực 2024",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0005",
+    "visual_source_frame_id": "L30_V068_f0005",
+    "ocr_source_frame_id": "L30_V068_f0005",
+    "quality_flags": [],
+    "caption": "A person wearing a conical hat and black clothing stands in the foreground, with another person riding a scooter on a stone path in a lush green forest.",
+    "detailed_caption": "In the foreground, a person wearing a traditional conical hat, a dark head covering, and black clothing is seen from behind, walking along a stone pathway. In the background, another person rides a small scooter down the paved path, surrounded by dense green trees and foliage.",
+    "caption_vi": "Một người đội nón lá và mặc đồ đen ở tiền cảnh, cùng một người đi xe máy trên đường lát đá giữa khu rừng xanh rậm rạp.",
+    "detailed_caption_vi": "Ở tiền cảnh, một người đội nón lá truyền thống, trùm khăn đen và mặc trang phục đen nhìn từ phía sau đang đi trên lối đi lát đá. Ở hậu cảnh, một người khác lái xe máy nhỏ trên con đường lát đá, xung quanh là cây cối và tán lá xanh rậm.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.497,
+          0.254,
+          0.786,
+          1.0
+        ],
+        "description": "person wearing a conical hat and black clothing",
+        "description_vi": "người đội nón lá và mặc đồ đen",
+        "attributes": [
+          "conical hat",
+          "black clothing",
+          "dark head covering",
+          "back view"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "scooter_0",
+        "label": "scooter",
+        "bbox": [
+          0.15,
+          0.577,
+          0.202,
+          0.746
+        ],
+        "description": "small scooter on a paved path",
+        "description_vi": "xe máy nhỏ trên đường lát đá",
+        "attributes": [
+          "small"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "scooter_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "scooter_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0006",
+    "visual_source_frame_id": "L30_V068_f0006",
+    "ocr_source_frame_id": "L30_V068_f0006",
+    "quality_flags": [],
+    "caption": "A stone paved path winds through a dense green forest with tall trees.",
+    "detailed_caption": "A stone-paved pathway curves through a dense forest filled with lush green foliage, ferns, and tall trees under dappled sunlight. Broadcaster graphics appear at the bottom and top right corners.",
+    "caption_vi": "Con đường lát đá uốn lượn qua khu rừng xanh rậm rạp với những hàng cây cao.",
+    "detailed_caption_vi": "Lối đi lát đá uốn lượn qua khu rừng rậm rạp tràn ngập cây dương xỉ, tán lá xanh và những thân cây cao dưới ánh nắng chiếu xuyên qua. Đồ họa phát sóng hiển thị ở góc dưới và góc trên bên phải.",
+    "ocr_text": "Tuổi trẻ TV Cuộc thi Lan tỏa năng lượng tích cực 2024: Bản làng hạnh phúc Herbalife",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pathway_0",
+        "label": "pathway",
+        "bbox": [
+          0.335,
+          0.651,
+          0.627,
+          0.772
+        ],
+        "description": "stone-paved pathway winding through trees",
+        "description_vi": "lối đi lát đá uốn lượn qua hàng cây",
+        "attributes": [
+          "stone-paved",
+          "winding"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0007",
+    "visual_source_frame_id": "L30_V068_f0007",
+    "ocr_source_frame_id": "L30_V068_f0007",
+    "quality_flags": [],
+    "caption": "A paved path winds through a dense green forest with bamboo and ferns.",
+    "detailed_caption": "A wide shot shows a paved walkway curving through a lush forest surrounded by tall bamboo trees and dense ferns. Green foliage fills both sides of the path under an overcast sky. A green text banner is overlaid at the bottom.",
+    "caption_vi": "Con đường lát đá uốn lượn xuyên qua khu rừng rậm rạp với tre và dương xỉ.",
+    "detailed_caption_vi": "Cảnh quay rộng cho thấy lối đi lát đá uốn lượn qua khu rừng tươi tốt được bao quanh bởi những rặng tre cao và dương xỉ dày đặc. Lá cây xanh tươi phủ kín hai bên lối đi dưới bầu trời u ám. Một dải banner chữ màu xanh lá cây được phủ ở phía dưới.",
+    "ocr_text": "tuoitreTV Herbalife Cuộc thi Lan tỏa năng lượng tích cực 2024: Bản làng hạnh phúc",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "forest_0",
+        "label": "forest",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.992
+        ],
+        "description": "dense green bamboo and fern vegetation",
+        "description_vi": "thảm thực vật tre và dương xỉ xanh rậm rạp",
+        "attributes": [
+          "green",
+          "dense",
+          "natural"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "path_0",
+        "label": "path",
+        "bbox": [
+          0.185,
+          0.68,
+          0.6799999999999999,
+          0.995
+        ],
+        "description": "a stone paved path winding through trees",
+        "description_vi": "một con đường lát đá uốn lượn qua hàng cây",
+        "attributes": [
+          "paved",
+          "stone",
+          "outdoor"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0008",
+    "visual_source_frame_id": "L30_V068_f0008",
+    "ocr_source_frame_id": "L30_V068_f0008",
+    "quality_flags": [],
+    "caption": "A person wearing a conical hat and black clothing stands under a thatched structure next to a hanging wooden log.",
+    "detailed_caption": "In the foreground, a person wearing a traditional conical hat, a dark head covering, and black clothing with beaded straps stands under a rustic thatched wooden structure. Next to them, a large vertical carved wooden log hangs. Lush greenery and a stone path are visible in the background.",
+    "caption_vi": "Một người đội nón lá và mặc đồ đen đứng dưới cấu trúc mái tranh cạnh một khúc gỗ treo.",
+    "detailed_caption_vi": "Ở tiền cảnh, một người đội nón lá truyền thống, trùm khăn đen và mặc trang phục đen có dây đeo đính hạt đứng dưới một công trình bằng gỗ lợp mái tranh mộc mạc. Bên cạnh họ là một khúc gỗ đục lỗ thẳng đứng lớn được treo lên. Thảm thực vật xanh và lối đi bằng đá xuất hiện ở hậu cảnh.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.219,
+          0.236,
+          0.591,
+          1.0
+        ],
+        "description": "person wearing a conical hat and black clothing",
+        "description_vi": "người đội nón lá và mặc đồ đen",
+        "attributes": [
+          "conical hat",
+          "black clothing",
+          "beaded straps"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "wooden_log_0",
+        "label": "wooden log",
+        "bbox": [
+          0.5589999999999999,
+          0.034999999999999996,
+          0.6519999999999999,
+          0.892
+        ],
+        "description": "large vertical carved wooden log hanging from a structure",
+        "description_vi": "khúc gỗ đục lỗ thẳng đứng lớn treo từ cấu trúc",
+        "attributes": [
+          "vertical",
+          "carved",
+          "wooden"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "wooden_log_0"
+      },
+      {
+        "subject_id": "wooden_log_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0009",
+    "visual_source_frame_id": "L30_V068_f0009",
+    "ocr_source_frame_id": "L30_V068_f0009",
+    "quality_flags": [],
+    "caption": "A close-up of a person wearing a conical hat, dark head covering, and black embroidered clothing speaking.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a large traditional conical hat, a dark head covering with colorful tassels, and a black top with silver embroidery and a patterned strap. The person is speaking with a neutral expression inside a rustic wooden structure, with green foliage blurred in the background.",
+    "caption_vi": "Cận cảnh một người đội nón lá, trùm khăn đen và mặc trang phục thêu đen đang nói chuyện.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình cho thấy một người đội chiếc nón lá truyền thống lớn, trùm khăn đen có tua rua sọc màu và mặc áo đen thêu bạc cùng dây đeo họa tiết. Người này đang nói chuyện với biểu cảm bình thản bên trong một công trình gỗ mộc mạc, với tán lá xanh mờ ở hậu cảnh.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.195,
+          0.032,
+          0.772,
+          1.0
+        ],
+        "description": "person wearing a conical hat and black embroidered clothing",
+        "description_vi": "người đội nón lá và mặc trang phục thêu đen",
+        "attributes": [
+          "conical hat",
+          "black clothing",
+          "silver embroidery",
+          "colorful tassels"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0010",
+    "visual_source_frame_id": "L30_V068_f0010",
+    "ocr_source_frame_id": "L30_V068_f0010",
+    "quality_flags": [],
+    "caption": "A person wearing a conical hat and black clothing strikes a large hanging wooden log with a mallet.",
+    "detailed_caption": "In a rustic wooden structure, a person wearing a conical hat, a dark head covering, and black clothing uses a wooden mallet to strike a large vertical hollowed wooden log hanging beside them. Green banana leaves and plants are visible in the background.",
+    "caption_vi": "Một người đội nón lá và mặc đồ đen dùng búa đánh vào khúc gỗ treo lớn.",
+    "detailed_caption_vi": "Bên trong một công trình gỗ mộc mạc, một người đội nón lá, trùm khăn đen và mặc trang phục đen dùng dùi gỗ đánh vào một khúc gỗ đục rỗng thẳng đứng lớn treo bên cạnh họ. Lá chuối và cây xanh xuất hiện ở hậu cảnh.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "mallet_0",
+        "label": "mallet",
+        "bbox": [
+          0.602,
+          0.455,
+          0.741,
+          0.684
+        ],
+        "description": "wooden mallet held by the person",
+        "description_vi": "búa gỗ do người đó cầm",
+        "attributes": [
+          "wooden"
+        ],
+        "action": "swinging"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.262,
+          0.18699999999999997,
+          0.682,
+          1.0
+        ],
+        "description": "person wearing a conical hat and black clothing",
+        "description_vi": "người đội nón lá và mặc đồ đen",
+        "attributes": [
+          "conical hat",
+          "black clothing"
+        ],
+        "action": "striking"
+      },
+      {
+        "object_id": "wooden_log_0",
+        "label": "wooden log",
+        "bbox": [
+          0.6519999999999999,
+          0.0,
+          0.774,
+          0.954
+        ],
+        "description": "large vertical hanging wooden log",
+        "description_vi": "khúc gỗ treo thẳng đứng lớn",
+        "attributes": [
+          "vertical",
+          "wooden",
+          "hollow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "mallet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "mallet_0"
+      },
+      {
+        "subject_id": "mallet_0",
+        "predicate": "overlapping",
+        "object_id": "wooden_log_0"
+      },
+      {
+        "subject_id": "wooden_log_0",
+        "predicate": "overlapping",
+        "object_id": "mallet_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0011",
+    "visual_source_frame_id": "L30_V068_f0010",
+    "ocr_source_frame_id": "L30_V068_f0011",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person wearing a conical hat and black clothing strikes a large hanging wooden log with a mallet.",
+    "detailed_caption": "In a rustic wooden structure, a person wearing a conical hat, a dark head covering, and black clothing uses a wooden mallet to strike a large vertical hollowed wooden log hanging beside them. Green banana leaves and plants are visible in the background.",
+    "caption_vi": "Một người đội nón lá và mặc đồ đen dùng búa đánh vào khúc gỗ treo lớn.",
+    "detailed_caption_vi": "Bên trong một công trình gỗ mộc mạc, một người đội nón lá, trùm khăn đen và mặc trang phục đen dùng dùi gỗ đánh vào một khúc gỗ đục rỗng thẳng đứng lớn treo bên cạnh họ. Lá chuối và cây xanh xuất hiện ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "mallet_0",
+        "label": "mallet",
+        "bbox": [
+          0.602,
+          0.455,
+          0.741,
+          0.684
+        ],
+        "description": "wooden mallet held by the person",
+        "description_vi": "búa gỗ do người đó cầm",
+        "attributes": [
+          "wooden"
+        ],
+        "action": "swinging"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.262,
+          0.18699999999999997,
+          0.682,
+          1.0
+        ],
+        "description": "person wearing a conical hat and black clothing",
+        "description_vi": "người đội nón lá và mặc đồ đen",
+        "attributes": [
+          "conical hat",
+          "black clothing"
+        ],
+        "action": "striking"
+      },
+      {
+        "object_id": "wooden_log_0",
+        "label": "wooden log",
+        "bbox": [
+          0.6519999999999999,
+          0.0,
+          0.774,
+          0.954
+        ],
+        "description": "large vertical hanging wooden log",
+        "description_vi": "khúc gỗ treo thẳng đứng lớn",
+        "attributes": [
+          "vertical",
+          "wooden",
+          "hollow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "mallet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "mallet_0"
+      },
+      {
+        "subject_id": "mallet_0",
+        "predicate": "overlapping",
+        "object_id": "wooden_log_0"
+      },
+      {
+        "subject_id": "wooden_log_0",
+        "predicate": "overlapping",
+        "object_id": "mallet_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0012",
+    "visual_source_frame_id": "L30_V068_f0012",
+    "ocr_source_frame_id": "L30_V068_f0012",
+    "quality_flags": [],
+    "caption": "A colorful hanging textile ornament with tassels and pom-poms against a bright background.",
+    "detailed_caption": "A close-up shot shows a decorative textile hanging ornament featuring a colorful patterned central section, small pom-poms along the top and center, and multiple dangling purple and pink tassels. The background is overexposed and blurred.",
+    "caption_vi": "Đồ trang trí bằng vải treo nhiều màu sắc có tua rua và cục bông trên nền sáng.",
+    "detailed_caption_vi": "Khung hình cận cảnh hiển thị một món đồ trang trí bằng vải treo gồm phần trung tâm có họa tiết sặc sỡ, các cục bông nhỏ ở phía trên và giữa, cùng nhiều tua rua màu tím và hồng rủ xuống. Phông nền bị cháy sáng và mờ ảo.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "ornament_0",
+        "label": "ornament",
+        "bbox": [
+          0.282,
+          0.0,
+          0.525,
+          0.9329999999999999
+        ],
+        "description": "colorful hanging textile ornament with tassels and pom-poms",
+        "description_vi": "đồ trang trí bằng vải treo nhiều màu sắc có tua rua và cục bông",
+        "attributes": [
+          "colorful",
+          "textile",
+          "hanging",
+          "tassels"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0013",
+    "visual_source_frame_id": "L30_V068_f0013",
+    "ocr_source_frame_id": "L30_V068_f0013",
+    "quality_flags": [],
+    "caption": "Sunlight filters through the dense canopy of tall trees in a forest.",
+    "detailed_caption": "A low-angle shot captures the bright sun shining through the dense canopy and leaves of tall trees in a lush forest. Tree trunks and broad green foliage frame the illuminated center.",
+    "caption_vi": "Ánh nắng chiếu qua tán cây rậm rạp của những hàng cây cao trong rừng.",
+    "detailed_caption_vi": "Góc chụp từ dưới lên ghi lại ánh nắng mặt trời rực rỡ chiếu xuyên qua tán lá rậm rạp của những cây cao trong khu rừng xanh tươi. Thân cây và các tán lá rộng tạo khung bao quanh vùng sáng ở trung tâm.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "trees_0",
+        "label": "trees",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "tall trees forming a dense forest canopy",
+        "description_vi": "những cây cao tạo thành tán rừng rậm rạp",
+        "attributes": [
+          "tall",
+          "dense",
+          "sunlit"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0014",
+    "visual_source_frame_id": "L30_V068_f0013",
+    "ocr_source_frame_id": "L30_V068_f0014",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Sunlight filters through the dense canopy of tall trees in a forest.",
+    "detailed_caption": "A low-angle shot captures the bright sun shining through the dense canopy and leaves of tall trees in a lush forest. Tree trunks and broad green foliage frame the illuminated center.",
+    "caption_vi": "Ánh nắng chiếu qua tán cây rậm rạp của những hàng cây cao trong rừng.",
+    "detailed_caption_vi": "Góc chụp từ dưới lên ghi lại ánh nắng mặt trời rực rỡ chiếu xuyên qua tán lá rậm rạp của những cây cao trong khu rừng xanh tươi. Thân cây và các tán lá rộng tạo khung bao quanh vùng sáng ở trung tâm.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "trees_0",
+        "label": "trees",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "tall trees forming a dense forest canopy",
+        "description_vi": "những cây cao tạo thành tán rừng rậm rạp",
+        "attributes": [
+          "tall",
+          "dense",
+          "sunlit"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0015",
+    "visual_source_frame_id": "L30_V068_f0015",
+    "ocr_source_frame_id": "L30_V068_f0015",
+    "quality_flags": [],
+    "caption": "A close-up of a person wearing a black head covering and a black top with silver ornaments and a floral strap.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a black head covering, a dark top featuring silver decorative elements and a metallic necklace, and a colorful floral patterned strap across the shoulder. The person is speaking against a soft-focus outdoor background with trees and buildings.",
+    "caption_vi": "Cận cảnh một người đội khăn trùm đầu màu đen và mặc áo đen đính đồ bạc cùng dây đeo hoa.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình hiển thị một người đội khăn trùm đầu màu đen, mặc áo tối màu có các chi tiết trang trí bằng bạc cùng vòng cổ kim loại, và đeo dây đeo có họa tiết hoa văn sặc sỡ trên vai. Người này đang nói chuyện với phông nền ngoại cảnh mờ ảo có cây cối và nhà cửa.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "person wearing a black head covering and black top with silver ornaments",
+        "description_vi": "người đội khăn trùm đầu đen và mặc áo đen đính đồ bạc",
+        "attributes": [
+          "black head covering",
+          "black top",
+          "silver ornaments",
+          "floral strap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0016",
+    "visual_source_frame_id": "L30_V068_f0016",
+    "ocr_source_frame_id": "L30_V068_f0016",
+    "quality_flags": [],
+    "caption": "A close-up of a person wearing a black head covering and a dark top with silver embellishments talking outdoors.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a black head covering, a dark top adorned with silver embroidery, a metallic necklace, and a colorful floral strap. The person speaks with an open mouth against a blurred outdoor background with greenery and buildings.",
+    "caption_vi": "Cận cảnh một người đội khăn trùm đầu đen và mặc áo tối màu có chi tiết bạc đang nói chuyện ngoài trời.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình cho thấy một người đội khăn trùm đầu đen, mặc áo tối màu thêu bạc, đeo vòng cổ kim loại và dây đeo hoa sặc sỡ. Người này đang nói với miệng hơi mở trước phông nền ngoại cảnh mờ có cây xanh và nhà cửa.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "person wearing a black head covering and dark embroidered top",
+        "description_vi": "người đội khăn trùm đầu đen và mặc áo thêu tối màu",
+        "attributes": [
+          "black head covering",
+          "black top",
+          "silver embroidery",
+          "floral strap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0017",
+    "visual_source_frame_id": "L30_V068_f0016",
+    "ocr_source_frame_id": "L30_V068_f0017",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up of a person wearing a black head covering and a dark top with silver embellishments talking outdoors.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a black head covering, a dark top adorned with silver embroidery, a metallic necklace, and a colorful floral strap. The person speaks with an open mouth against a blurred outdoor background with greenery and buildings.",
+    "caption_vi": "Cận cảnh một người đội khăn trùm đầu đen và mặc áo tối màu có chi tiết bạc đang nói chuyện ngoài trời.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình cho thấy một người đội khăn trùm đầu đen, mặc áo tối màu thêu bạc, đeo vòng cổ kim loại và dây đeo hoa sặc sỡ. Người này đang nói với miệng hơi mở trước phông nền ngoại cảnh mờ có cây xanh và nhà cửa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "person wearing a black head covering and dark embroidered top",
+        "description_vi": "người đội khăn trùm đầu đen và mặc áo thêu tối màu",
+        "attributes": [
+          "black head covering",
+          "black top",
+          "silver embroidery",
+          "floral strap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0018",
+    "visual_source_frame_id": "L30_V068_f0016",
+    "ocr_source_frame_id": "L30_V068_f0018",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up of a person wearing a black head covering and a dark top with silver embellishments talking outdoors.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a black head covering, a dark top adorned with silver embroidery, a metallic necklace, and a colorful floral strap. The person speaks with an open mouth against a blurred outdoor background with greenery and buildings.",
+    "caption_vi": "Cận cảnh một người đội khăn trùm đầu đen và mặc áo tối màu có chi tiết bạc đang nói chuyện ngoài trời.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình cho thấy một người đội khăn trùm đầu đen, mặc áo tối màu thêu bạc, đeo vòng cổ kim loại và dây đeo hoa sặc sỡ. Người này đang nói với miệng hơi mở trước phông nền ngoại cảnh mờ có cây xanh và nhà cửa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "person wearing a black head covering and dark embroidered top",
+        "description_vi": "người đội khăn trùm đầu đen và mặc áo thêu tối màu",
+        "attributes": [
+          "black head covering",
+          "black top",
+          "silver embroidery",
+          "floral strap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0019",
+    "visual_source_frame_id": "L30_V068_f0016",
+    "ocr_source_frame_id": "L30_V068_f0019",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up of a person wearing a black head covering and a dark top with silver embellishments talking outdoors.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a black head covering, a dark top adorned with silver embroidery, a metallic necklace, and a colorful floral strap. The person speaks with an open mouth against a blurred outdoor background with greenery and buildings.",
+    "caption_vi": "Cận cảnh một người đội khăn trùm đầu đen và mặc áo tối màu có chi tiết bạc đang nói chuyện ngoài trời.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình cho thấy một người đội khăn trùm đầu đen, mặc áo tối màu thêu bạc, đeo vòng cổ kim loại và dây đeo hoa sặc sỡ. Người này đang nói với miệng hơi mở trước phông nền ngoại cảnh mờ có cây xanh và nhà cửa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "person wearing a black head covering and dark embroidered top",
+        "description_vi": "người đội khăn trùm đầu đen và mặc áo thêu tối màu",
+        "attributes": [
+          "black head covering",
+          "black top",
+          "silver embroidery",
+          "floral strap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0020",
+    "visual_source_frame_id": "L30_V068_f0016",
+    "ocr_source_frame_id": "L30_V068_f0020",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up of a person wearing a black head covering and a dark top with silver embellishments talking outdoors.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a black head covering, a dark top adorned with silver embroidery, a metallic necklace, and a colorful floral strap. The person speaks with an open mouth against a blurred outdoor background with greenery and buildings.",
+    "caption_vi": "Cận cảnh một người đội khăn trùm đầu đen và mặc áo tối màu có chi tiết bạc đang nói chuyện ngoài trời.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình cho thấy một người đội khăn trùm đầu đen, mặc áo tối màu thêu bạc, đeo vòng cổ kim loại và dây đeo hoa sặc sỡ. Người này đang nói với miệng hơi mở trước phông nền ngoại cảnh mờ có cây xanh và nhà cửa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "person wearing a black head covering and dark embroidered top",
+        "description_vi": "người đội khăn trùm đầu đen và mặc áo thêu tối màu",
+        "attributes": [
+          "black head covering",
+          "black top",
+          "silver embroidery",
+          "floral strap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0021",
+    "visual_source_frame_id": "L30_V068_f0016",
+    "ocr_source_frame_id": "L30_V068_f0021",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up of a person wearing a black head covering and a dark top with silver embellishments talking outdoors.",
+    "detailed_caption": "A medium close-up shot shows a person wearing a black head covering, a dark top adorned with silver embroidery, a metallic necklace, and a colorful floral strap. The person speaks with an open mouth against a blurred outdoor background with greenery and buildings.",
+    "caption_vi": "Cận cảnh một người đội khăn trùm đầu đen và mặc áo tối màu có chi tiết bạc đang nói chuyện ngoài trời.",
+    "detailed_caption_vi": "Khung hình cận cảnh trung bình cho thấy một người đội khăn trùm đầu đen, mặc áo tối màu thêu bạc, đeo vòng cổ kim loại và dây đeo hoa sặc sỡ. Người này đang nói với miệng hơi mở trước phông nền ngoại cảnh mờ có cây xanh và nhà cửa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.091,
+          0.858,
+          1.0
+        ],
+        "description": "person wearing a black head covering and dark embroidered top",
+        "description_vi": "người đội khăn trùm đầu đen và mặc áo thêu tối màu",
+        "attributes": [
+          "black head covering",
+          "black top",
+          "silver embroidery",
+          "floral strap"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0022",
+    "visual_source_frame_id": "L30_V068_f0022",
+    "ocr_source_frame_id": "L30_V068_f0022",
+    "quality_flags": [],
+    "caption": "Looking out from under a thatched roof onto lush green forest foliage.",
+    "detailed_caption": "A view from underneath a rustic wooden and thatched roof looking outward toward a dense green forest filled with trees, branches, and leafy vegetation under bright daylight.",
+    "caption_vi": "Nhìn ra từ dưới mái tranh hướng về tán lá rừng xanh rậm rạp.",
+    "detailed_caption_vi": "Góc nhìn từ bên dưới mái nhà bằng gỗ và tranh mộc mạc hướng ra khu rừng xanh rậm rạp đầy cây cối, cành cây và thảm thực vật dưới ánh sáng ban ngày.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "roof_0",
+        "label": "roof",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.39499999999999996
+        ],
+        "description": "rustic thatched wooden roof structure",
+        "description_vi": "cấu trúc mái nhà lợp tranh mộc mạc bằng gỗ",
+        "attributes": [
+          "thatched",
+          "wooden",
+          "rustic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0023",
+    "visual_source_frame_id": "L30_V068_f0022",
+    "ocr_source_frame_id": "L30_V068_f0023",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Looking out from under a thatched roof onto lush green forest foliage.",
+    "detailed_caption": "A view from underneath a rustic wooden and thatched roof looking outward toward a dense green forest filled with trees, branches, and leafy vegetation under bright daylight.",
+    "caption_vi": "Nhìn ra từ dưới mái tranh hướng về tán lá rừng xanh rậm rạp.",
+    "detailed_caption_vi": "Góc nhìn từ bên dưới mái nhà bằng gỗ và tranh mộc mạc hướng ra khu rừng xanh rậm rạp đầy cây cối, cành cây và thảm thực vật dưới ánh sáng ban ngày.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "roof_0",
+        "label": "roof",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.39499999999999996
+        ],
+        "description": "rustic thatched wooden roof structure",
+        "description_vi": "cấu trúc mái nhà lợp tranh mộc mạc bằng gỗ",
+        "attributes": [
+          "thatched",
+          "wooden",
+          "rustic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0024",
+    "visual_source_frame_id": "L30_V068_f0024",
+    "ocr_source_frame_id": "L30_V068_f0024",
+    "quality_flags": [],
+    "caption": "A cluster of vibrant green betel and tropical leaves in a garden.",
+    "detailed_caption": "A close-up shot captures a dense cluster of shiny heart-shaped green betel leaves and various tropical plants growing together in a garden setting.",
+    "caption_vi": "Cụm lá trầu và lá cây nhiệt đới xanh tươi trong khu vườn.",
+    "detailed_caption_vi": "Khung hình cận cảnh ghi lại một cụm dày đặc những chiếc lá trầu xanh hình trái tim bóng bẩy và các loài thực vật nhiệt đới khác nhau mọc cùng nhau trong khung cảnh vườn.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plants_0",
+        "label": "plants",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "cluster of shiny green betel and tropical leaves",
+        "description_vi": "cụm lá trầu và lá nhiệt đới xanh bóng",
+        "attributes": [
+          "green",
+          "shiny",
+          "heart-shaped"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0025",
+    "visual_source_frame_id": "L30_V068_f0024",
+    "ocr_source_frame_id": "L30_V068_f0025",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A cluster of vibrant green betel and tropical leaves in a garden.",
+    "detailed_caption": "A close-up shot captures a dense cluster of shiny heart-shaped green betel leaves and various tropical plants growing together in a garden setting.",
+    "caption_vi": "Cụm lá trầu và lá cây nhiệt đới xanh tươi trong khu vườn.",
+    "detailed_caption_vi": "Khung hình cận cảnh ghi lại một cụm dày đặc những chiếc lá trầu xanh hình trái tim bóng bẩy và các loài thực vật nhiệt đới khác nhau mọc cùng nhau trong khung cảnh vườn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plants_0",
+        "label": "plants",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "cluster of shiny green betel and tropical leaves",
+        "description_vi": "cụm lá trầu và lá nhiệt đới xanh bóng",
+        "attributes": [
+          "green",
+          "shiny",
+          "heart-shaped"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0026",
+    "visual_source_frame_id": "L30_V068_f0026",
+    "ocr_source_frame_id": "L30_V068_f0026",
+    "quality_flags": [],
+    "caption": "A traditional wooden house with a thatched roof viewed through green foliage.",
+    "detailed_caption": "A medium shot displays a dark traditional wooden building with a thatched roof partially obscured by vibrant green tropical plants and leaves in the foreground. Natural light filters through the trees in the background.",
+    "caption_vi": "Một ngôi nhà gỗ truyền thống có mái tranh nhìn qua tán lá xanh.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị một tòa nhà gỗ truyền thống màu sẫm với mái tranh bị che khuất một phần bởi các loài cây và lá nhiệt đới xanh tươi ở tiền cảnh. Ánh sáng tự nhiên lọc qua những hàng cây ở hậu cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.0,
+          0.08,
+          0.775,
+          0.988
+        ],
+        "description": "a traditional wooden house with a thatched roof",
+        "description_vi": "một ngôi nhà gỗ truyền thống lợp mái tranh",
+        "attributes": [
+          "wooden",
+          "thatched",
+          "traditional"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plant_0",
+        "label": "plant",
+        "bbox": [
+          0.597,
+          0.075,
+          0.994,
+          0.988
+        ],
+        "description": "lush green tropical foliage in the foreground",
+        "description_vi": "tán lá nhiệt đới xanh tươi ở tiền cảnh",
+        "attributes": [
+          "green",
+          "lush",
+          "leafy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "house_0",
+        "predicate": "overlapping",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "overlapping",
+        "object_id": "house_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0027",
+    "visual_source_frame_id": "L30_V068_f0027",
+    "ocr_source_frame_id": "L30_V068_f0027",
+    "quality_flags": [],
+    "caption": "Two people wearing black traditional clothing sit on a wooden floor, with one playing a stringed instrument.",
+    "detailed_caption": "In a traditional wooden house, two people wearing black traditional clothing with patterned sashes sit on the floor. The person on the right plays a long-necked stringed instrument, while the person on the left gestures with their hands. A low wooden table with cups, a basket, and a teapot sits in the foreground, with a fan and jars in the background.",
+    "caption_vi": "Hai người mặc trang phục truyền thống màu đen ngồi trên sàn gỗ, một người đang chơi nhạc cụ có dây.",
+    "detailed_caption_vi": "Trong một ngôi nhà gỗ truyền thống, hai người mặc trang phục truyền thống màu đen có dải thắt lưng họa tiết đang ngồi trên sàn. Người bên phải chơi nhạc cụ dây cần dài, trong khi người bên trái đang khua tay. Một chiếc bàn gỗ thấp có các chén trà, giỏ và ấm trà ở tiền cảnh, cùng quạt máy và chum lọ ở hậu cảnh.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.074,
+          0.113,
+          0.462,
+          1.0
+        ],
+        "description": "person wearing black traditional clothing sitting on the left",
+        "description_vi": "người mặc trang phục truyền thống đen ngồi bên trái",
+        "attributes": [
+          "black clothing",
+          "patterned sash"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.45999999999999996,
+          0.171,
+          0.837,
+          0.832
+        ],
+        "description": "person wearing black traditional clothing playing a stringed instrument",
+        "description_vi": "người mặc trang phục truyền thống đen chơi nhạc cụ dây",
+        "attributes": [
+          "black clothing",
+          "patterned sash"
+        ],
+        "action": "playing"
+      },
+      {
+        "object_id": "stringed_instrument_0",
+        "label": "stringed instrument",
+        "bbox": [
+          0.524,
+          0.109,
+          0.891,
+          0.706
+        ],
+        "description": "long-necked stringed instrument being played",
+        "description_vi": "nhạc cụ dây cần dài đang được chơi",
+        "attributes": [
+          "long-necked",
+          "stringed"
+        ],
+        "action": "playing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "stringed_instrument_0"
+      },
+      {
+        "subject_id": "stringed_instrument_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "stringed_instrument_0"
+      },
+      {
+        "subject_id": "stringed_instrument_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0028",
+    "visual_source_frame_id": "L30_V068_f0027",
+    "ocr_source_frame_id": "L30_V068_f0028",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two people wearing black traditional clothing sit on a wooden floor, with one playing a stringed instrument.",
+    "detailed_caption": "In a traditional wooden house, two people wearing black traditional clothing with patterned sashes sit on the floor. The person on the right plays a long-necked stringed instrument, while the person on the left gestures with their hands. A low wooden table with cups, a basket, and a teapot sits in the foreground, with a fan and jars in the background.",
+    "caption_vi": "Hai người mặc trang phục truyền thống màu đen ngồi trên sàn gỗ, một người đang chơi nhạc cụ có dây.",
+    "detailed_caption_vi": "Trong một ngôi nhà gỗ truyền thống, hai người mặc trang phục truyền thống màu đen có dải thắt lưng họa tiết đang ngồi trên sàn. Người bên phải chơi nhạc cụ dây cần dài, trong khi người bên trái đang khua tay. Một chiếc bàn gỗ thấp có các chén trà, giỏ và ấm trà ở tiền cảnh, cùng quạt máy và chum lọ ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.074,
+          0.113,
+          0.462,
+          1.0
+        ],
+        "description": "person wearing black traditional clothing sitting on the left",
+        "description_vi": "người mặc trang phục truyền thống đen ngồi bên trái",
+        "attributes": [
+          "black clothing",
+          "patterned sash"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.45999999999999996,
+          0.171,
+          0.837,
+          0.832
+        ],
+        "description": "person wearing black traditional clothing playing a stringed instrument",
+        "description_vi": "người mặc trang phục truyền thống đen chơi nhạc cụ dây",
+        "attributes": [
+          "black clothing",
+          "patterned sash"
+        ],
+        "action": "playing"
+      },
+      {
+        "object_id": "stringed_instrument_0",
+        "label": "stringed instrument",
+        "bbox": [
+          0.524,
+          0.109,
+          0.891,
+          0.706
+        ],
+        "description": "long-necked stringed instrument being played",
+        "description_vi": "nhạc cụ dây cần dài đang được chơi",
+        "attributes": [
+          "long-necked",
+          "stringed"
+        ],
+        "action": "playing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "stringed_instrument_0"
+      },
+      {
+        "subject_id": "stringed_instrument_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "stringed_instrument_0"
+      },
+      {
+        "subject_id": "stringed_instrument_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0029",
+    "visual_source_frame_id": "L30_V068_f0029",
+    "ocr_source_frame_id": "L30_V068_f0029",
+    "quality_flags": [],
+    "caption": "Two children sit on the floor weaving bamboo strips in a rustic room with large ceramic jars.",
+    "detailed_caption": "Two children wearing dark clothing sit cross-legged on a tiled floor, weaving thin bamboo strips. In the background, numerous large dark ceramic jars line the wooden pillars of the rustic room.",
+    "caption_vi": "Hai đứa trẻ ngồi trên sàn đan nan tre trong căn phòng mộc mạc có nhiều chum gốm lớn.",
+    "detailed_caption_vi": "Hai đứa trẻ mặc trang phục tối màu ngồi khoanh chân trên sàn gạch, đang đan các nan tre mảnh. Ở hậu cảnh, rất nhiều chum gốm màu tối lớn xếp dọc theo các cột gỗ của căn phòng mộc mạc.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "child_0",
+        "label": "child",
+        "bbox": [
+          0.08299999999999999,
+          0.33499999999999996,
+          0.465,
+          1.0
+        ],
+        "description": "child wearing dark clothing sitting on the left weaving",
+        "description_vi": "trẻ em mặc đồ tối màu ngồi bên trái đang đan",
+        "attributes": [
+          "dark clothing",
+          "sitting"
+        ],
+        "action": "weaving"
+      },
+      {
+        "object_id": "child_1",
+        "label": "child",
+        "bbox": [
+          0.583,
+          0.328,
+          0.9189999999999999,
+          0.9239999999999999
+        ],
+        "description": "child wearing dark clothing sitting on the right weaving",
+        "description_vi": "trẻ em mặc đồ tối màu ngồi bên phải đang đan",
+        "attributes": [
+          "dark clothing",
+          "sitting"
+        ],
+        "action": "weaving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "child_0",
+        "predicate": "left_of",
+        "object_id": "child_1"
+      },
+      {
+        "subject_id": "child_1",
+        "predicate": "right_of",
+        "object_id": "child_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0030",
+    "visual_source_frame_id": "L30_V068_f0030",
+    "ocr_source_frame_id": "L30_V068_f0030",
+    "quality_flags": [],
+    "caption": "Close-up of hands weaving thin bamboo strips on a tiled floor.",
+    "detailed_caption": "A close-up shot shows bare hands and forearms arranging and weaving thin bamboo strips on a reddish-brown tiled floor. The person wears dark clothing sleeves.",
+    "caption_vi": "Cận cảnh đôi tay đang đan các nan tre mảnh trên sàn lát gạch.",
+    "detailed_caption_vi": "Khung hình cận cảnh cho thấy đôi tay trần và cẳng tay đang sắp xếp và đan các nan tre mảnh trên sàn gạch màu nâu đỏ. Người này mặc tay áo màu tối.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hands_0",
+        "label": "hands",
+        "bbox": [
+          0.0,
+          0.0,
+          0.7929999999999999,
+          0.746
+        ],
+        "description": "hands weaving thin bamboo strips on the floor",
+        "description_vi": "đôi tay đang đan nan tre mảnh trên sàn",
+        "attributes": [
+          "bare",
+          "weaving"
+        ],
+        "action": "weaving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0031",
+    "visual_source_frame_id": "L30_V068_f0031",
+    "ocr_source_frame_id": "L30_V068_f0031",
+    "quality_flags": [],
+    "caption": "A person viewed from behind holding bamboo sticks in a room with a tiled floor.",
+    "detailed_caption": "A high-angle close-up shows a person with short black hair wearing a dark top, seen from behind and holding thin bamboo sticks over a reddish-brown tiled floor.",
+    "caption_vi": "Một người nhìn từ phía sau đang cầm các thanh tre trong phòng có sàn lát gạch.",
+    "detailed_caption_vi": "Khung hình cận cảnh góc cao cho thấy một người tóc đen ngắn mặc áo tối màu, nhìn từ phía sau và đang cầm các thanh tre mảnh trên sàn gạch màu nâu đỏ.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.279,
+          0.0,
+          0.992,
+          1.0
+        ],
+        "description": "person with short black hair holding bamboo sticks",
+        "description_vi": "người tóc đen ngắn cầm các thanh tre",
+        "attributes": [
+          "short black hair",
+          "dark top",
+          "back view"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0032",
+    "visual_source_frame_id": "L30_V068_f0032",
+    "ocr_source_frame_id": "L30_V068_f0032",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A young person wearing a dark shirt sits on a red tile floor playing with wooden sticks.",
+    "detailed_caption": "A high-angle medium shot shows a young person with short black hair and a dark blue long-sleeve shirt sitting on a red-tiled floor. The person is holding thin wooden sticks, arranging them in a pattern on the ground.",
+    "caption_vi": "Một tuổi mặc áo tối màu ngồi trên sàn gạch đỏ chơi với nhữngh thanh gỗ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh góc cao cho thấy một tuổi tóc đen ngắn mặc áo dài tay màu xanh đậm đang ngồi trên sàn lát gạch đỏ. Người đó đang cầm những thanh gỗ mỏng, xếp thành hình trên mặt đất.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "floor_0",
+        "label": "floor",
+        "bbox": [
+          0.0,
+          0.0,
+          0.9970000000000001,
+          0.988
+        ],
+        "description": "red tiled floor with scattered white debris",
+        "description_vi": "sàn gạch đỏ có mảnh vụn trắng rải rác",
+        "attributes": [
+          "tiled",
+          "red",
+          "indoor"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.27599999999999997,
+          0.0,
+          0.9810000000000001,
+          0.996
+        ],
+        "description": "a young person with short black hair and a dark blue shirt",
+        "description_vi": "một tuổi tóc đen ngắn mặc áo xanh đậm",
+        "attributes": [
+          "short hair",
+          "dark shirt",
+          "sitting"
+        ],
+        "action": "playing with sticks"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0033",
+    "visual_source_frame_id": "L30_V068_f0033",
+    "ocr_source_frame_id": "L30_V068_f0033",
+    "quality_flags": [],
+    "caption": "A person in black traditional clothing pours liquid from a container into a basket while two other people watch in a wooden structure.",
+    "detailed_caption": "Inside a rustic wooden house, a person wearing a black head covering and black traditional clothing pours liquid from a ceramic container into a woven basket on a table. In the background, two other people stand and watch, with one holding a smartphone. Wooden pillars and a refrigerator are visible around the room.",
+    "caption_vi": "Một người mặc trang phục truyền thống đen rót chất lỏng từ dụng cụ vào giỏ trong khi hai người khác đứng nhìn trong ngôi nhà gỗ.",
+    "detailed_caption_vi": "Bên trong ngôi nhà gỗ mộc mạc, một người trùm khăn đen và mặc trang phục truyền thống đen đang rót chất lỏng từ bình gốm vào một chiếc giỏ đan trên bàn. Ở hậu cảnh, hai người khác đang đứng quan sát, một người đang cầm điện thoại thông minh. Các cột gỗ và tủ lạnh xuất hiện xung quanh phòng.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.10200000000000001,
+          0.286,
+          0.517,
+          1.0
+        ],
+        "description": "person wearing black traditional clothing pouring liquid",
+        "description_vi": "người mặc trang phục truyền thống đen đang rót chất lỏng",
+        "attributes": [
+          "black clothing",
+          "head covering"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.475,
+          0.18699999999999997,
+          0.642,
+          0.8770000000000001
+        ],
+        "description": "person standing in the middle holding a smartphone",
+        "description_vi": "người đứng ở giữa đang cầm điện thoại thông minh",
+        "attributes": [
+          "light-colored patterned top"
+        ],
+        "action": "holding smartphone"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5509999999999999,
+          0.159,
+          0.778,
+          0.995
+        ],
+        "description": "person wearing black traditional clothing standing on the right",
+        "description_vi": "người mặc trang phục truyền thống đen đứng bên phải",
+        "attributes": [
+          "black clothing",
+          "head covering"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0034",
+    "visual_source_frame_id": "L30_V068_f0034",
+    "ocr_source_frame_id": "L30_V068_f0034",
+    "quality_flags": [],
+    "caption": "A person in black traditional clothing pours liquid from a ceramic jar into a basket, with two people watching nearby.",
+    "detailed_caption": "Inside a traditional wooden building, a person wearing a black head covering and black clothing pours liquid from a patterned ceramic jar into a basket on a table. Two other people stand nearby observing, with one holding a smartphone. Shelves with jars and wooden structural pillars fill the background.",
+    "caption_vi": "Một người mặc trang phục truyền thống đen đang rót chất lỏng từ bình gốm vào giỏ, có hai người đứng quan sát gần đó.",
+    "detailed_caption_vi": "Bên trong tòa nhà gỗ truyền thống, một người trùm khăn đen và mặc trang phục đen đang rót chất lỏng từ chiếc bình gốm có hoa văn vào giỏ trên bàn. Hai người khác đứng gần đó quan sát, một người cầm điện thoại thông minh. Các kệ đựng chum và cột kết cấu bằng gỗ lấp đầy hậu cảnh.",
+    "ocr_text": "Tuổi trẻ TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.122,
+          0.282,
+          0.53,
+          1.0
+        ],
+        "description": "person wearing black clothing pouring liquid from a jar",
+        "description_vi": "người mặc trang phục đen đang rót chất lỏng từ bình",
+        "attributes": [
+          "black clothing",
+          "head covering"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.544,
+          0.191,
+          0.683,
+          0.884
+        ],
+        "description": "person standing in the middle holding a phone",
+        "description_vi": "người đứng ở giữa đang cầm điện thoại",
+        "attributes": [
+          "patterned top"
+        ],
+        "action": "holding phone"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.583,
+          0.13999999999999999,
+          0.8089999999999999,
+          1.0
+        ],
+        "description": "person wearing black traditional clothing on the right",
+        "description_vi": "người mặc trang phục truyền thống đen ở bên phải",
+        "attributes": [
+          "black clothing",
+          "head covering"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0035",
+    "visual_source_frame_id": "L30_V068_f0035",
+    "ocr_source_frame_id": "L30_V068_f0035",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A woman in a black headscarf and silver necklace looks sideways inside a room with shelves.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and dark clothing, accented by a silver necklace and earrings. She stands inside a room, with metal shelving units filled with various jars and containers visible in the blurred background. Her head is turned slightly to the right with a soft expression.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu màu đen và đeo vòng cổ bạc nhìn sang một bên trong căn phòng có kệ.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc trang phục tối màu, điểm xuyết bằng vòng cổ bạc và hoa tai. Bà đứng trong phòng, phía sau là các kệ kim loại đựng nhiều hũ và hộp khác nhau. Đầu bà hơi quay sang phải với biểu cảm nhẹ nhàng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.128,
+          0.0,
+          0.627,
+          1.0
+        ],
+        "description": "woman wearing a black headscarf and a silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu màu đen và đeo vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "silver necklace",
+          "black clothing"
+        ],
+        "action": "looking"
+      },
+      {
+        "object_id": "shelf_0",
+        "label": "shelf",
+        "bbox": [
+          0.0,
+          0.0,
+          0.978,
+          1.0
+        ],
+        "description": "metal shelving unit with jars",
+        "description_vi": "kệ kim loại chứa hũ",
+        "attributes": [
+          "metal",
+          "shelving"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0036",
+    "visual_source_frame_id": "L30_V068_f0036",
+    "ocr_source_frame_id": "L30_V068_f0036",
+    "quality_flags": [],
+    "caption": "A woven basket filled with white ceramic cups featuring blue floral designs rests near a large tray of dried leaves.",
+    "detailed_caption": "A close-up high-angle shot displays a woven bamboo basket containing multiple white ceramic cups, some adorned with small blue floral patterns. In the background, a large flat bamboo tray is piled with dark dried leaves. The lighting is bright, highlighting the texture of the cups and the basket.",
+    "caption_vi": "Một chiếc giỏ đan chứa đầy các cốc gốm trắng có họa tiết hoa xanh đặt gần một mâm lá khô lớn.",
+    "detailed_caption_vi": "Ảnh chụp góc cao cận cảnh cho thấy một chiếc giỏ tre đan chứa nhiều cốc gốm trắng, một số có họa tiết hoa màu xanh nhỏ. Ở phía sau, một mâm tre phẳng lớn được chất đầy lá khô sẫm màu. Ánh sáng rạng rỡ làm nổi bật kết cấu của các chiếc cốc và giỏ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "basket_0",
+        "label": "basket",
+        "bbox": [
+          0.0,
+          0.254,
+          0.9289999999999999,
+          1.0
+        ],
+        "description": "woven bamboo basket holding ceramic cups",
+        "description_vi": "giỏ tre đan đựng cốc gốm",
+        "attributes": [
+          "woven",
+          "bamboo"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cup_0",
+        "label": "cup",
+        "bbox": [
+          0.49000000000000005,
+          0.5,
+          0.688,
+          0.9329999999999999
+        ],
+        "description": "white ceramic cup with blue floral pattern",
+        "description_vi": "cốc gốm trắng có họa tiết hoa xanh",
+        "attributes": [
+          "white",
+          "ceramic",
+          "blue floral"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tray_0",
+        "label": "tray",
+        "bbox": [
+          0.126,
+          0.0,
+          1.0,
+          0.577
+        ],
+        "description": "large flat bamboo tray with dried leaves",
+        "description_vi": "mâm tre phẳng lớn đựng lá khô",
+        "attributes": [
+          "large",
+          "bamboo",
+          "flat"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "basket_0",
+        "predicate": "overlapping",
+        "object_id": "cup_0"
+      },
+      {
+        "subject_id": "cup_0",
+        "predicate": "overlapping",
+        "object_id": "basket_0"
+      },
+      {
+        "subject_id": "basket_0",
+        "predicate": "overlapping",
+        "object_id": "tray_0"
+      },
+      {
+        "subject_id": "tray_0",
+        "predicate": "overlapping",
+        "object_id": "basket_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0037",
+    "visual_source_frame_id": "L30_V068_f0037",
+    "ocr_source_frame_id": "L30_V068_f0037",
+    "quality_flags": [],
+    "caption": "A woven bamboo tray is filled with dark dried leaves, with a corner of another basket visible in the lower left.",
+    "detailed_caption": "A close-up shot shows a large woven bamboo tray evenly filled with dark, crumbled dried leaves. A small portion of a lower basket containing white objects appears in the bottom left corner. The background is slightly out of focus, emphasizing the texture of the dried plant material.",
+    "caption_vi": "Một mâm tre đan chứa đầy lá khô sẫm màu, với một góc giỏ khác hiển thị ở phía dưới bên trái.",
+    "detailed_caption_vi": "Cận cảnh một mâm tre đan lớn được chất đầy lá khô vụn sẫm màu. Một phần nhỏ của chiếc giỏ phía dưới chứa các vật thể màu trắng xuất hiện ở góc dưới bên trái. Phối cảnh hậu cảnh hơi mờ, làm nổi bật kết cấu của vật liệu thực vật khô.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "basket_0",
+        "label": "basket",
+        "bbox": [
+          0.0,
+          0.627,
+          0.612,
+          1.0
+        ],
+        "description": "woven basket corner with white objects",
+        "description_vi": "góc giỏ đan với các vật thể màu trắng",
+        "attributes": [
+          "woven",
+          "bamboo"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tray_0",
+        "label": "tray",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.8640000000000001
+        ],
+        "description": "large woven bamboo tray filled with dried leaves",
+        "description_vi": "mâm tre đan lớn chứa lá khô",
+        "attributes": [
+          "woven",
+          "bamboo"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "basket_0",
+        "predicate": "overlapping",
+        "object_id": "tray_0"
+      },
+      {
+        "subject_id": "tray_0",
+        "predicate": "overlapping",
+        "object_id": "basket_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0038",
+    "visual_source_frame_id": "L30_V068_f0038",
+    "ocr_source_frame_id": "L30_V068_f0038",
+    "quality_flags": [],
+    "caption": "A traditional stilt house with a thatched roof stands next to a paved courtyard with tables.",
+    "detailed_caption": "A wide shot displays a traditional wooden stilt house with a thick thatched roof and open veranda supported by large wooden pillars. The paved courtyard in the foreground features small tables and wooden blocks. Lush green trees and foliage surround the property under daylight.",
+    "caption_vi": "Một ngôi nhà sàn truyền thống mái tranh nằm cạnh sân lát đá có bàn ghế.",
+    "detailed_caption_vi": "Toàn cảnh ngôi nhà sàn gỗ truyền thống với mái tranh dày và hiên mở được đỡ bởi các cột gỗ lớn. Sân lát gạch ở phía trước có những chiếc bàn nhỏ và khúc gỗ. Xung quanh tài sản là cây cối xanh tươi dưới ánh ban ngày.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.268,
+          0.0,
+          1.0,
+          0.995
+        ],
+        "description": "traditional wooden stilt house with thatched roof",
+        "description_vi": "nhà sàn gỗ truyền thống lợp mái tranh",
+        "attributes": [
+          "wooden",
+          "stilt",
+          "thatched roof"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.143,
+          0.7270000000000001,
+          0.238,
+          0.883
+        ],
+        "description": "small metal table in the courtyard",
+        "description_vi": "bàn kim loại nhỏ ở sân",
+        "attributes": [
+          "small",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_1",
+        "label": "table",
+        "bbox": [
+          0.177,
+          0.7479999999999999,
+          0.27,
+          0.9149999999999999
+        ],
+        "description": "small round table in the courtyard",
+        "description_vi": "bàn tròn nhỏ ở sân",
+        "attributes": [
+          "small",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "house_0"
+      },
+      {
+        "subject_id": "house_0",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "table_1"
+      },
+      {
+        "subject_id": "table_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0039",
+    "visual_source_frame_id": "L30_V068_f0038",
+    "ocr_source_frame_id": "L30_V068_f0039",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A traditional stilt house with a thatched roof stands next to a paved courtyard with tables.",
+    "detailed_caption": "A wide shot displays a traditional wooden stilt house with a thick thatched roof and open veranda supported by large wooden pillars. The paved courtyard in the foreground features small tables and wooden blocks. Lush green trees and foliage surround the property under daylight.",
+    "caption_vi": "Một ngôi nhà sàn truyền thống mái tranh nằm cạnh sân lát đá có bàn ghế.",
+    "detailed_caption_vi": "Toàn cảnh ngôi nhà sàn gỗ truyền thống với mái tranh dày và hiên mở được đỡ bởi các cột gỗ lớn. Sân lát gạch ở phía trước có những chiếc bàn nhỏ và khúc gỗ. Xung quanh tài sản là cây cối xanh tươi dưới ánh ban ngày.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.268,
+          0.0,
+          1.0,
+          0.995
+        ],
+        "description": "traditional wooden stilt house with thatched roof",
+        "description_vi": "nhà sàn gỗ truyền thống lợp mái tranh",
+        "attributes": [
+          "wooden",
+          "stilt",
+          "thatched roof"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_0",
+        "label": "table",
+        "bbox": [
+          0.143,
+          0.7270000000000001,
+          0.238,
+          0.883
+        ],
+        "description": "small metal table in the courtyard",
+        "description_vi": "bàn kim loại nhỏ ở sân",
+        "attributes": [
+          "small",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "table_1",
+        "label": "table",
+        "bbox": [
+          0.177,
+          0.7479999999999999,
+          0.27,
+          0.9149999999999999
+        ],
+        "description": "small round table in the courtyard",
+        "description_vi": "bàn tròn nhỏ ở sân",
+        "attributes": [
+          "small",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "table_0",
+        "predicate": "left_of",
+        "object_id": "house_0"
+      },
+      {
+        "subject_id": "house_0",
+        "predicate": "right_of",
+        "object_id": "table_0"
+      },
+      {
+        "subject_id": "table_0",
+        "predicate": "overlapping",
+        "object_id": "table_1"
+      },
+      {
+        "subject_id": "table_1",
+        "predicate": "overlapping",
+        "object_id": "table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0040",
+    "visual_source_frame_id": "L30_V068_f0040",
+    "ocr_source_frame_id": "L30_V068_f0040",
+    "quality_flags": [],
+    "caption": "A woman in a black top with a colorful patterned strap stands outdoors in front of leafy green foliage.",
+    "detailed_caption": "A close-up shot shows a woman with her eyes closed, wearing a black top featuring decorative silver buttons and a vibrant floral patterned strap across her shoulder. She is positioned outdoors with a lush green natural background of dense trees and foliage. Her head is tilted slightly upward.",
+    "caption_vi": "Một phụ nữ mặc áo đen với quai đeo họa tiết hoa rực rỡ đứng ngoài trời trước tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ nhắm mắt, mặc áo đen đính cúc bạc trang trí và quai đeo họa tiết hoa sặc sỡ vắt qua vai. Cô đứng ngoài trời với nền thiên nhiên xanh tươi gồm cây cối và lá rậm rạp. Đầu cô hơi ngẩng lên.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.075,
+          0.041999999999999996,
+          0.682,
+          1.0
+        ],
+        "description": "woman wearing black top with floral strap and black headscarf",
+        "description_vi": "phụ nữ mặc áo đen có quai hoa và khăn trùm đầu đen",
+        "attributes": [
+          "black top",
+          "floral strap",
+          "silver buttons",
+          "black headscarf"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0041",
+    "visual_source_frame_id": "L30_V068_f0040",
+    "ocr_source_frame_id": "L30_V068_f0041",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black top with a colorful patterned strap stands outdoors in front of leafy green foliage.",
+    "detailed_caption": "A close-up shot shows a woman with her eyes closed, wearing a black top featuring decorative silver buttons and a vibrant floral patterned strap across her shoulder. She is positioned outdoors with a lush green natural background of dense trees and foliage. Her head is tilted slightly upward.",
+    "caption_vi": "Một phụ nữ mặc áo đen với quai đeo họa tiết hoa rực rỡ đứng ngoài trời trước tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ nhắm mắt, mặc áo đen đính cúc bạc trang trí và quai đeo họa tiết hoa sặc sỡ vắt qua vai. Cô đứng ngoài trời với nền thiên nhiên xanh tươi gồm cây cối và lá rậm rạp. Đầu cô hơi ngẩng lên.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.075,
+          0.041999999999999996,
+          0.682,
+          1.0
+        ],
+        "description": "woman wearing black top with floral strap and black headscarf",
+        "description_vi": "phụ nữ mặc áo đen có quai hoa và khăn trùm đầu đen",
+        "attributes": [
+          "black top",
+          "floral strap",
+          "silver buttons",
+          "black headscarf"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0042",
+    "visual_source_frame_id": "L30_V068_f0040",
+    "ocr_source_frame_id": "L30_V068_f0042",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black top with a colorful patterned strap stands outdoors in front of leafy green foliage.",
+    "detailed_caption": "A close-up shot shows a woman with her eyes closed, wearing a black top featuring decorative silver buttons and a vibrant floral patterned strap across her shoulder. She is positioned outdoors with a lush green natural background of dense trees and foliage. Her head is tilted slightly upward.",
+    "caption_vi": "Một phụ nữ mặc áo đen với quai đeo họa tiết hoa rực rỡ đứng ngoài trời trước tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ nhắm mắt, mặc áo đen đính cúc bạc trang trí và quai đeo họa tiết hoa sặc sỡ vắt qua vai. Cô đứng ngoài trời với nền thiên nhiên xanh tươi gồm cây cối và lá rậm rạp. Đầu cô hơi ngẩng lên.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.075,
+          0.041999999999999996,
+          0.682,
+          1.0
+        ],
+        "description": "woman wearing black top with floral strap and black headscarf",
+        "description_vi": "phụ nữ mặc áo đen có quai hoa và khăn trùm đầu đen",
+        "attributes": [
+          "black top",
+          "floral strap",
+          "silver buttons",
+          "black headscarf"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0043",
+    "visual_source_frame_id": "L30_V068_f0043",
+    "ocr_source_frame_id": "L30_V068_f0043",
+    "quality_flags": [],
+    "caption": "An older woman wearing a black headscarf and a silver necklace stands in front of a green forest.",
+    "detailed_caption": "A close-up shot features an older woman with a black headscarf, a silver torque necklace, and a black patterned garment with a colorful floral strap. She is looking slightly upward and speaking against a backdrop of lush green foliage.",
+    "caption_vi": "Một phụ nữ lớn tuổi đội khăn trùm đầu màu đen và đeo vòng cổ bạc đứng trước khu rừng xanh.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh có hình ảnh một phụ nữ lớn tuổi đội khăn trùm đầu màu đen, đeo vòng cổ kiềng bạc và mặc trang phục màu đen có hoa văn với dây đeo họa tiết hoa rực rỡ. Bà đang nhìn hơi hướng lên trên và nói chuyện với nền lá xanh tươi.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.08499999999999999,
+          0.037,
+          0.682,
+          0.996
+        ],
+        "description": "an older woman wearing a black headscarf, silver necklace, and black clothing",
+        "description_vi": "một phụ nữ lớn tuổi đội khăn trùm đầu đen, vòng cổ bạc và mặc đồ đen",
+        "attributes": [
+          "older",
+          "black headscarf",
+          "silver necklace",
+          "black shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0044",
+    "visual_source_frame_id": "L30_V068_f0044",
+    "ocr_source_frame_id": "L30_V068_f0044",
+    "quality_flags": [],
+    "caption": "An older woman wearing a black headscarf and a silver necklace stands in front of a green forest.",
+    "detailed_caption": "A close-up shot features an older woman with a black headscarf, a silver torque necklace, and a black patterned garment with a colorful floral strap. She is looking slightly upward and speaking against a backdrop of lush green foliage.",
+    "caption_vi": "Một phụ nữ lớn tuổi đội khăn trùm đầu màu đen và đeo vòng cổ bạc đứng trước khu rừng xanh.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh có hình ảnh một phụ nữ lớn tuổi đội khăn trùm đầu màu đen, đeo vòng cổ kiềng bạc và mặc trang phục màu đen có hoa văn với dây đeo họa tiết hoa rực rỡ. Bà đang nhìn hơi hướng lên trên và nói chuyện với nền lá xanh tươi.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.08499999999999999,
+          0.037,
+          0.688,
+          0.996
+        ],
+        "description": "an older woman wearing a black headscarf, silver necklace, and black clothing",
+        "description_vi": "một phụ nữ lớn tuổi đội khăn trùm đầu đen, vòng cổ bạc và mặc đồ đen",
+        "attributes": [
+          "older",
+          "black headscarf",
+          "silver necklace",
+          "black shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0045",
+    "visual_source_frame_id": "L30_V068_f0045",
+    "ocr_source_frame_id": "L30_V068_f0045",
+    "quality_flags": [],
+    "caption": "An older woman wearing a black headscarf and a silver necklace stands in front of a green forest with eyes closed.",
+    "detailed_caption": "A close-up shot features an older woman with a black headscarf, a silver torque necklace, and a black patterned garment with a colorful floral strap. She has her eyes closed while speaking outdoors against a backdrop of green vegetation.",
+    "caption_vi": "Một phụ nữ lớn tuổi đội khăn trùm đầu màu đen và đeo vòng cổ bạc đứng trước khu rừng xanh với đôi mắt nhắm nghiền.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh có hình ảnh một phụ nữ lớn tuổi đội khăn trùm đầu màu đen, vòng cổ kiềng bạc và mặc trang phục màu đen có hoa văn với dây đeo hoa sặc sỡ. Bà đang nhắm mắt lại khi đang nói chuyện ngoài trời trên nền thảm thực vật xanh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.074,
+          0.041,
+          0.678,
+          0.996
+        ],
+        "description": "an older woman wearing a black headscarf, silver necklace, and black clothing with eyes closed",
+        "description_vi": "một phụ nữ lớn tuổi đội khăn trùm đầu đen, vòng cổ bạc và mặc đồ đen đang nhắm mắt",
+        "attributes": [
+          "older",
+          "black headscarf",
+          "silver necklace",
+          "eyes closed"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0046",
+    "visual_source_frame_id": "L30_V068_f0046",
+    "ocr_source_frame_id": "L30_V068_f0046",
+    "quality_flags": [],
+    "caption": "A person wearing a conical hat and black clothing walks along the veranda of a wooden stilt house.",
+    "detailed_caption": "A medium shot captures a person from behind, wearing a traditional conical straw hat, black long-sleeved clothing, and a colorful patterned sash, walking down the shaded corridor of a wooden stilt house. Large vertical wooden pillars line the structure, and lush green plants grow along the edge of the building.",
+    "caption_vi": "Một người đội nón lá và mặc đồ đen đi dọc theo hành lang của ngôi nhà sàn bằng gỗ.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh một người từ phía sau, đội nón lá truyền thống, mặc trang phục dài tay màu đen và thắt lưng họa tiết sặc sỡ, đang đi dọc hành lang râm mát của ngôi nhà sàn gỗ. Các cột gỗ thẳng đứng lớn xếp dọc theo cấu trúc, và cây cối xanh tươi mọc ven rìa công trình.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.34500000000000003,
+          0.312,
+          0.511,
+          1.0
+        ],
+        "description": "person wearing conical hat and black clothing",
+        "description_vi": "người đội nón lá và mặc trang phục đen",
+        "attributes": [
+          "conical hat",
+          "black clothing",
+          "colorful sash"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "pillar_0",
+        "label": "pillar",
+        "bbox": [
+          0.22200000000000003,
+          0.0,
+          0.31,
+          1.0
+        ],
+        "description": "large wooden support pillar",
+        "description_vi": "cột đỡ bằng gỗ lớn",
+        "attributes": [
+          "wooden",
+          "vertical"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pillar_1",
+        "label": "pillar",
+        "bbox": [
+          0.534,
+          0.185,
+          0.589,
+          0.833
+        ],
+        "description": "wooden support pillar on the veranda",
+        "description_vi": "cột đỡ bằng gỗ ở hành lang",
+        "attributes": [
+          "wooden"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pillar_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "pillar_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "pillar_1"
+      },
+      {
+        "subject_id": "pillar_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "pillar_0",
+        "predicate": "left_of",
+        "object_id": "pillar_1"
+      },
+      {
+        "subject_id": "pillar_1",
+        "predicate": "right_of",
+        "object_id": "pillar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0047",
+    "visual_source_frame_id": "L30_V068_f0047",
+    "ocr_source_frame_id": "L30_V068_f0047",
+    "quality_flags": [],
+    "caption": "A woman wearing a conical hat and black traditional outfit stands on the wooden veranda of a stilt house.",
+    "detailed_caption": "A medium shot shows a woman wearing a wide conical straw hat, a black long-sleeved shirt with silver bead embellishments, and layered silver necklaces, standing on the wooden veranda of a traditional stilt house. She gestures slightly with her right hand while speaking. Thick wooden pillars and lush green foliage surround the setting.",
+    "caption_vi": "Một phụ nữ đội nón lá và mặc trang phục truyền thống màu đen đứng trên hành lang gỗ của nhà sàn.",
+    "detailed_caption_vi": "Trung cảnh cho thấy một phụ nữ đội chiếc nón lá rộng vành, áo dài tay màu đen đính cườm bạc và nhiều lớp vòng cổ bạc, đang đứng trên hành lang gỗ của một ngôi nhà sàn truyền thống. Cô ấy cử động nhẹ bằng tay phải trong khi nói chuyện. Các cột gỗ dày và tán lá xanh tươi bao quanh khung cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.301,
+          0.219,
+          0.523,
+          1.0
+        ],
+        "description": "woman wearing conical hat, black outfit and silver necklaces",
+        "description_vi": "phụ nữ đội nón lá, mặc trang phục đen và đeo vòng cổ bạc",
+        "attributes": [
+          "conical hat",
+          "black outfit",
+          "silver necklaces",
+          "beaded shirt"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "pillar_0",
+        "label": "pillar",
+        "bbox": [
+          0.003,
+          0.0,
+          0.135,
+          1.0
+        ],
+        "description": "large wooden support pillar",
+        "description_vi": "cột đỡ bằng gỗ lớn",
+        "attributes": [
+          "wooden"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pillar_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "pillar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0048",
+    "visual_source_frame_id": "L30_V068_f0048",
+    "ocr_source_frame_id": "L30_V068_f0048",
+    "quality_flags": [],
+    "caption": "A woman in a conical hat and black traditional shirt gestures with her hands on a stilt house porch.",
+    "detailed_caption": "A medium close-up shows a woman wearing a large conical hat, a black shirt adorned with silver beaded embroidery, and a silver neck ring. She stands on a wooden stilt house porch, holding her hands out and gesturing while speaking. A standing electric fan and lush outdoor greenery are visible in the background.",
+    "caption_vi": "Một phụ nữ đội nón lá và mặc áo truyền thống đen đang cử động tay trên hiên nhà sàn.",
+    "detailed_caption_vi": "Cận cảnh trung bình cho thấy một phụ nữ đội nón lá lớn, mặc áo đen trang trí thêu cườm bạc và vòng cổ bạc. Cô đứng trên hiên nhà sàn bằng gỗ, đưa hai tay ra và cử động khi đang nói. Một chiếc quạt điện đứng và cây xanh ngoài trời ở phía sau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "fan_0",
+        "label": "fan",
+        "bbox": [
+          0.44699999999999995,
+          0.412,
+          0.6,
+          0.738
+        ],
+        "description": "standing electric fan",
+        "description_vi": "quạt điện đứng",
+        "attributes": [
+          "electric",
+          "standing"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.075,
+          0.624,
+          1.0
+        ],
+        "description": "woman wearing conical hat, black embroidered shirt and silver neck ring",
+        "description_vi": "phụ nữ đội nón lá, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "conical hat",
+          "black shirt",
+          "embroidered",
+          "silver neck ring"
+        ],
+        "action": "gesturing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "fan_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "fan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0049",
+    "visual_source_frame_id": "L30_V068_f0048",
+    "ocr_source_frame_id": "L30_V068_f0049",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a conical hat and black traditional shirt gestures with her hands on a stilt house porch.",
+    "detailed_caption": "A medium close-up shows a woman wearing a large conical hat, a black shirt adorned with silver beaded embroidery, and a silver neck ring. She stands on a wooden stilt house porch, holding her hands out and gesturing while speaking. A standing electric fan and lush outdoor greenery are visible in the background.",
+    "caption_vi": "Một phụ nữ đội nón lá và mặc áo truyền thống đen đang cử động tay trên hiên nhà sàn.",
+    "detailed_caption_vi": "Cận cảnh trung bình cho thấy một phụ nữ đội nón lá lớn, mặc áo đen trang trí thêu cườm bạc và vòng cổ bạc. Cô đứng trên hiên nhà sàn bằng gỗ, đưa hai tay ra và cử động khi đang nói. Một chiếc quạt điện đứng và cây xanh ngoài trời ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "fan_0",
+        "label": "fan",
+        "bbox": [
+          0.44699999999999995,
+          0.412,
+          0.6,
+          0.738
+        ],
+        "description": "standing electric fan",
+        "description_vi": "quạt điện đứng",
+        "attributes": [
+          "electric",
+          "standing"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.075,
+          0.624,
+          1.0
+        ],
+        "description": "woman wearing conical hat, black embroidered shirt and silver neck ring",
+        "description_vi": "phụ nữ đội nón lá, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "conical hat",
+          "black shirt",
+          "embroidered",
+          "silver neck ring"
+        ],
+        "action": "gesturing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "fan_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "fan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0050",
+    "visual_source_frame_id": "L30_V068_f0050",
+    "ocr_source_frame_id": "L30_V068_f0050",
+    "quality_flags": [],
+    "caption": "A woman wearing a black headscarf and black clothing operates a large rotary machine in a workshop.",
+    "detailed_caption": "A medium shot captures a woman from behind, wearing a black headscarf and dark clothing, as she turns the handle of a large circular machine inside a wooden workshop. The workshop contains stacked timber, a concrete counter, and a small red bucket on the left. Natural light filters in from the open doorway.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc trang phục đen vận hành một cỗ máy quay lớn trong xưởng.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh một người phụ nữ từ phía sau, đội khăn trùm đầu màu đen và mặc trang phục tối màu, đang quay tay cầm của một cỗ máy hình tròn lớn bên trong xưởng làm bằng gỗ. Xưởng có gỗ xẻ xếp chồng, một quầy bê tông và một chiếc xô đỏ nhỏ bên ở phía bên trái. Ánh sáng tự nhiên chiếu vào từ cửa mở.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bucket_0",
+        "label": "bucket",
+        "bbox": [
+          0.08499999999999999,
+          0.44699999999999995,
+          0.184,
+          0.566
+        ],
+        "description": "red plastic bucket",
+        "description_vi": "xô nhựa màu đỏ",
+        "attributes": [
+          "red",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "machine_0",
+        "label": "machine",
+        "bbox": [
+          0.246,
+          0.24200000000000002,
+          0.5980000000000001,
+          0.883
+        ],
+        "description": "large industrial rotary machine with circular drum",
+        "description_vi": "máy quay công nghiệp lớn có lồng tròn",
+        "attributes": [
+          "large",
+          "circular",
+          "industrial"
+        ],
+        "action": "rotating"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16699999999999998,
+          0.135,
+          0.5509999999999999,
+          1.0
+        ],
+        "description": "woman wearing black headscarf and black clothing",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen và mặc trang phục đen",
+        "attributes": [
+          "black headscarf",
+          "black clothing"
+        ],
+        "action": "operating machine"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bucket_0",
+        "predicate": "left_of",
+        "object_id": "machine_0"
+      },
+      {
+        "subject_id": "machine_0",
+        "predicate": "right_of",
+        "object_id": "bucket_0"
+      },
+      {
+        "subject_id": "machine_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "machine_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0051",
+    "visual_source_frame_id": "L30_V068_f0051",
+    "ocr_source_frame_id": "L30_V068_f0051",
+    "quality_flags": [],
+    "caption": "A large pile of freshly harvested green tea leaves fills the frame.",
+    "detailed_caption": "A close-up shot displays a dense heap of vibrant green tea leaves piled together. The leaves have various shapes and sizes, with stems and tender shoots visible throughout the pile. The lighting is soft, highlighting the texture and rich green color of the tea leaves.",
+    "caption_vi": "Một đống lá trà xanh tươi vừa thu hoạch lấp đầy khung hình.",
+    "detailed_caption_vi": "Cận cảnh một đống lá trà xanh tươi dày đặc chất đống lại với nhau. Các lá có nhiều hình dạng và kích cỡ khác nhau, có thể nhìn thấy thân và chồi non xuyên suốt đống lá. Ánh sáng dịu nhẹ, làm nổi bật kết cấu và màu xanh đậm của lá trà.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tea_leaves_0",
+        "label": "tea leaves",
+        "bbox": [
+          0.0,
+          0.5,
+          1.0,
+          1.0
+        ],
+        "description": "pile of fresh green tea leaves",
+        "description_vi": "đống lá trà xanh tươi",
+        "attributes": [
+          "green",
+          "fresh",
+          "leafy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0052",
+    "visual_source_frame_id": "L30_V068_f0051",
+    "ocr_source_frame_id": "L30_V068_f0052",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A large pile of freshly harvested green tea leaves fills the frame.",
+    "detailed_caption": "A close-up shot displays a dense heap of vibrant green tea leaves piled together. The leaves have various shapes and sizes, with stems and tender shoots visible throughout the pile. The lighting is soft, highlighting the texture and rich green color of the tea leaves.",
+    "caption_vi": "Một đống lá trà xanh tươi vừa thu hoạch lấp đầy khung hình.",
+    "detailed_caption_vi": "Cận cảnh một đống lá trà xanh tươi dày đặc chất đống lại với nhau. Các lá có nhiều hình dạng và kích cỡ khác nhau, có thể nhìn thấy thân và chồi non xuyên suốt đống lá. Ánh sáng dịu nhẹ, làm nổi bật kết cấu và màu xanh đậm của lá trà.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tea_leaves_0",
+        "label": "tea leaves",
+        "bbox": [
+          0.0,
+          0.5,
+          1.0,
+          1.0
+        ],
+        "description": "pile of fresh green tea leaves",
+        "description_vi": "đống lá trà xanh tươi",
+        "attributes": [
+          "green",
+          "fresh",
+          "leafy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0053",
+    "visual_source_frame_id": "L30_V068_f0053",
+    "ocr_source_frame_id": "L30_V068_f0053",
+    "quality_flags": [],
+    "caption": "Green tea leaves are tumbling inside a large cylindrical metal processing drum.",
+    "detailed_caption": "A close-up shot inside a dark industrial processing machine shows fresh green tea leaves being tumbled and stirred by a central rotating metal rod. The circular drum is dark, with light catching the edges of the turning green leaves and the metallic machinery.",
+    "caption_vi": "Lá trà xanh đang đảo đều bên trong một lồng xử lý bằng kim loại hình trụ lớn.",
+    "detailed_caption_vi": "Cận cảnh bên trong một cỗ máy chế biến công nghiệp tối màu cho thấy những lá trà xanh tươi đang bị xáo trộn và đảo đều bởi một thanh kim loại quay trung tâm. Trống tròn tối màu, với ánh sáng phản chiếu trên các cạnh của lá trà đang quay và máy móc kim loại.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "machine_0",
+        "label": "machine",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "industrial rotating drum processing green tea leaves",
+        "description_vi": "trống quay công nghiệp xử lý lá trà xanh",
+        "attributes": [
+          "cylindrical",
+          "metal",
+          "industrial"
+        ],
+        "action": "tumbling"
+      },
+      {
+        "object_id": "tea_leaves_0",
+        "label": "tea leaves",
+        "bbox": [
+          0.142,
+          0.143,
+          0.6,
+          1.0
+        ],
+        "description": "green tea leaves tumbling inside processing drum",
+        "description_vi": "lá trà xanh đang nhào lộn bên trong trống xử lý",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": "tumbling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0054",
+    "visual_source_frame_id": "L30_V068_f0053",
+    "ocr_source_frame_id": "L30_V068_f0054",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Green tea leaves are tumbling inside a large cylindrical metal processing drum.",
+    "detailed_caption": "A close-up shot inside a dark industrial processing machine shows fresh green tea leaves being tumbled and stirred by a central rotating metal rod. The circular drum is dark, with light catching the edges of the turning green leaves and the metallic machinery.",
+    "caption_vi": "Lá trà xanh đang đảo đều bên trong một lồng xử lý bằng kim loại hình trụ lớn.",
+    "detailed_caption_vi": "Cận cảnh bên trong một cỗ máy chế biến công nghiệp tối màu cho thấy những lá trà xanh tươi đang bị xáo trộn và đảo đều bởi một thanh kim loại quay trung tâm. Trống tròn tối màu, với ánh sáng phản chiếu trên các cạnh của lá trà đang quay và máy móc kim loại.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "machine_0",
+        "label": "machine",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "industrial rotating drum processing green tea leaves",
+        "description_vi": "trống quay công nghiệp xử lý lá trà xanh",
+        "attributes": [
+          "cylindrical",
+          "metal",
+          "industrial"
+        ],
+        "action": "tumbling"
+      },
+      {
+        "object_id": "tea_leaves_0",
+        "label": "tea leaves",
+        "bbox": [
+          0.142,
+          0.143,
+          0.6,
+          1.0
+        ],
+        "description": "green tea leaves tumbling inside processing drum",
+        "description_vi": "lá trà xanh đang nhào lộn bên trong trống xử lý",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": "tumbling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0055",
+    "visual_source_frame_id": "L30_V068_f0055",
+    "ocr_source_frame_id": "L30_V068_f0055",
+    "quality_flags": [],
+    "caption": "A woman wearing a black headscarf and black clothing plays a traditional long-necked lute indoors.",
+    "detailed_caption": "A medium shot shows a woman wearing a black headscarf, a dark top with silver bead decorations, and a silver neck ring, sitting indoors and playing a traditional long-necked stringed instrument. Her left hand fingers the neck while her right hand plucks the strings. A standing electric fan and colorful hanging decorations are in the background.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu màu đen và mặc trang phục màu đen chơi đàn tỳ bà cổ dài trong nhà.",
+    "detailed_caption_vi": "Trung cảnh cho thấy một phụ nữ đội khăn trùm đầu màu đen, áo tối màu đính cườm bạc và vòng cổ bạc, đang ngồi trong nhà và chơi một loại nhạc cụ dây cổ dài truyền thống. Tay trái cô bấm phím trên cần đàn trong khi tay phải gảy dây. Một chiếc quạt điện đứng và đồ trang trí treo nhiều màu sắc ở phía sau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "fan_0",
+        "label": "fan",
+        "bbox": [
+          0.034999999999999996,
+          0.41100000000000003,
+          0.236,
+          0.859
+        ],
+        "description": "standing electric fan",
+        "description_vi": "quạt điện đứng",
+        "attributes": [
+          "electric",
+          "standing"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "musical_instrument_0",
+        "label": "musical instrument",
+        "bbox": [
+          0.272,
+          0.13999999999999999,
+          0.8539999999999999,
+          0.995
+        ],
+        "description": "traditional long-necked stringed instrument with wooden neck",
+        "description_vi": "nhạc cụ dây cổ dài truyền thống với cần đàn bằng gỗ",
+        "attributes": [
+          "long-necked",
+          "wooden",
+          "stringed"
+        ],
+        "action": "being played"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.152,
+          0.295,
+          0.67,
+          1.0
+        ],
+        "description": "woman wearing black headscarf playing stringed instrument",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen đang chơi nhạc cụ dây",
+        "attributes": [
+          "black headscarf",
+          "black clothing",
+          "silver bead decorations"
+        ],
+        "action": "playing instrument"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "fan_0",
+        "predicate": "left_of",
+        "object_id": "musical_instrument_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "right_of",
+        "object_id": "fan_0"
+      },
+      {
+        "subject_id": "fan_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "fan_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "musical_instrument_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0056",
+    "visual_source_frame_id": "L30_V068_f0056",
+    "ocr_source_frame_id": "L30_V068_f0056",
+    "quality_flags": [],
+    "caption": "A close-up shows a person's hands playing a traditional wooden stringed instrument with a round soundbox.",
+    "detailed_caption": "A close-up shot focuses on the hands of a person playing a traditional stringed instrument. The left hand fingers the long wooden neck, while the right hand plucks the strings over the round wooden soundbox, which features circular sound holes and silver chain decorations around the body.",
+    "caption_vi": "Cận cảnh bàn tay của một người đang chơi nhạc cụ dây bằng gỗ truyền thống có hộp âm thanh tròn.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào bàn tay của một người đang chơi nhạc cụ dây truyền thống. Tay trái bấm trên cần đàn dài bằng gỗ, trong khi tay phải gảy dây đàn qua hộp âm thanh tròn bằng gỗ, có các lỗ âm thanh hình tròn và trang trí dây chuyền bạc xung quanh thân đàn.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.16699999999999998,
+          0.29100000000000004,
+          0.619,
+          0.627
+        ],
+        "description": "person's hand plucking instrument strings",
+        "description_vi": "bàn tay người gảy dây đàn",
+        "attributes": [],
+        "action": "plucking strings"
+      },
+      {
+        "object_id": "musical_instrument_0",
+        "label": "musical instrument",
+        "bbox": [
+          0.24500000000000002,
+          0.0,
+          0.8310000000000001,
+          0.908
+        ],
+        "description": "traditional stringed instrument with round wooden soundbox",
+        "description_vi": "nhạc cụ dây truyền thống với hộp cộng hưởng gỗ hình tròn",
+        "attributes": [
+          "round",
+          "wooden",
+          "stringed"
+        ],
+        "action": "being played"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "musical_instrument_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0057",
+    "visual_source_frame_id": "L30_V068_f0056",
+    "ocr_source_frame_id": "L30_V068_f0057",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up shows a person's hands playing a traditional wooden stringed instrument with a round soundbox.",
+    "detailed_caption": "A close-up shot focuses on the hands of a person playing a traditional stringed instrument. The left hand fingers the long wooden neck, while the right hand plucks the strings over the round wooden soundbox, which features circular sound holes and silver chain decorations around the body.",
+    "caption_vi": "Cận cảnh bàn tay của một người đang chơi nhạc cụ dây bằng gỗ truyền thống có hộp âm thanh tròn.",
+    "detailed_caption_vi": "Cận cảnh tập trung vào bàn tay của một người đang chơi nhạc cụ dây truyền thống. Tay trái bấm trên cần đàn dài bằng gỗ, trong khi tay phải gảy dây đàn qua hộp âm thanh tròn bằng gỗ, có các lỗ âm thanh hình tròn và trang trí dây chuyền bạc xung quanh thân đàn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.16699999999999998,
+          0.29100000000000004,
+          0.619,
+          0.627
+        ],
+        "description": "person's hand plucking instrument strings",
+        "description_vi": "bàn tay người gảy dây đàn",
+        "attributes": [],
+        "action": "plucking strings"
+      },
+      {
+        "object_id": "musical_instrument_0",
+        "label": "musical instrument",
+        "bbox": [
+          0.24500000000000002,
+          0.0,
+          0.8310000000000001,
+          0.908
+        ],
+        "description": "traditional stringed instrument with round wooden soundbox",
+        "description_vi": "nhạc cụ dây truyền thống với hộp cộng hưởng gỗ hình tròn",
+        "attributes": [
+          "round",
+          "wooden",
+          "stringed"
+        ],
+        "action": "being played"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "musical_instrument_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0058",
+    "visual_source_frame_id": "L30_V068_f0058",
+    "ocr_source_frame_id": "L30_V068_f0058",
+    "quality_flags": [],
+    "caption": "Two women in black traditional clothing and headscarves perform music together indoors.",
+    "detailed_caption": "A medium shot shows two women sitting at a wooden table inside a traditional wooden room. The woman on the left has her hands resting on the table, while the woman on the right plays a traditional long-necked stringed instrument. Both wear dark clothing decorated with silver beads and matching black headscarves.",
+    "caption_vi": "Hai phụ nữ mặc trang phục truyền thống màu đen và khăn trùm đầu cùng nhau biểu diễn âm nhạc trong nhà.",
+    "detailed_caption_vi": "Trung cảnh cho thấy hai phụ nữ đang ngồi bên chiếc bàn gỗ trong một căn phòng gỗ truyền thống. Người phụ nữ bên trái đặt tay lên bàn, trong khi người phụ nữ bên phải đang chơi một loại nhạc cụ dây cổ dài truyền thống. Cả hai đều mặc trang phục tối màu được trang trí bằng hạt cườm bạc và khăn trùm đầu màu đen đồng bộ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "musical_instrument_0",
+        "label": "musical instrument",
+        "bbox": [
+          0.557,
+          0.195,
+          0.9119999999999999,
+          0.875
+        ],
+        "description": "traditional long-necked stringed instrument",
+        "description_vi": "nhạc cụ dây cổ dài truyền thống",
+        "attributes": [
+          "long-necked",
+          "stringed"
+        ],
+        "action": "being played"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.075,
+          0.149,
+          0.43899999999999995,
+          0.995
+        ],
+        "description": "woman on the left wearing black headscarf and dark clothing",
+        "description_vi": "phụ nữ bên trái đội khăn trùm đầu đen và mặc trang phục tối màu",
+        "attributes": [
+          "black headscarf",
+          "dark clothing",
+          "silver bead decorations"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.476,
+          0.35900000000000004,
+          0.8160000000000001,
+          0.9149999999999999
+        ],
+        "description": "woman on the right playing stringed instrument",
+        "description_vi": "phụ nữ bên phải đang chơi nhạc cụ dây",
+        "attributes": [
+          "black headscarf",
+          "dark clothing",
+          "playing instrument"
+        ],
+        "action": "playing instrument"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "musical_instrument_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "musical_instrument_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0059",
+    "visual_source_frame_id": "L30_V068_f0058",
+    "ocr_source_frame_id": "L30_V068_f0059",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two women in black traditional clothing and headscarves perform music together indoors.",
+    "detailed_caption": "A medium shot shows two women sitting at a wooden table inside a traditional wooden room. The woman on the left has her hands resting on the table, while the woman on the right plays a traditional long-necked stringed instrument. Both wear dark clothing decorated with silver beads and matching black headscarves.",
+    "caption_vi": "Hai phụ nữ mặc trang phục truyền thống màu đen và khăn trùm đầu cùng nhau biểu diễn âm nhạc trong nhà.",
+    "detailed_caption_vi": "Trung cảnh cho thấy hai phụ nữ đang ngồi bên chiếc bàn gỗ trong một căn phòng gỗ truyền thống. Người phụ nữ bên trái đặt tay lên bàn, trong khi người phụ nữ bên phải đang chơi một loại nhạc cụ dây cổ dài truyền thống. Cả hai đều mặc trang phục tối màu được trang trí bằng hạt cườm bạc và khăn trùm đầu màu đen đồng bộ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "musical_instrument_0",
+        "label": "musical instrument",
+        "bbox": [
+          0.557,
+          0.195,
+          0.9119999999999999,
+          0.875
+        ],
+        "description": "traditional long-necked stringed instrument",
+        "description_vi": "nhạc cụ dây cổ dài truyền thống",
+        "attributes": [
+          "long-necked",
+          "stringed"
+        ],
+        "action": "being played"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.075,
+          0.149,
+          0.43899999999999995,
+          0.995
+        ],
+        "description": "woman on the left wearing black headscarf and dark clothing",
+        "description_vi": "phụ nữ bên trái đội khăn trùm đầu đen và mặc trang phục tối màu",
+        "attributes": [
+          "black headscarf",
+          "dark clothing",
+          "silver bead decorations"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.476,
+          0.35900000000000004,
+          0.8160000000000001,
+          0.9149999999999999
+        ],
+        "description": "woman on the right playing stringed instrument",
+        "description_vi": "phụ nữ bên phải đang chơi nhạc cụ dây",
+        "attributes": [
+          "black headscarf",
+          "dark clothing",
+          "playing instrument"
+        ],
+        "action": "playing instrument"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "musical_instrument_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "musical_instrument_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0060",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0060",
+    "quality_flags": [],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0061",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0061",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0062",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0062",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0063",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0063",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0064",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0064",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0065",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0065",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0066",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0066",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0067",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0067",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0068",
+    "visual_source_frame_id": "L30_V068_f0060",
+    "ocr_source_frame_id": "L30_V068_f0068",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A woman in a black headscarf and embroidered black shirt stands outdoors against a green foliage background.",
+    "detailed_caption": "A close-up shot shows a woman wearing a black headscarf and a black long-sleeved shirt with intricate silver bead embroidery on the front. A colorful floral strap crosses her shoulder, and a silver necklace adorns her neck. The background is a bright, blurred outdoor setting with green trees and foliage.",
+    "caption_vi": "Một phụ nữ đội khăn trùm đầu đen và mặc áo đen thêu đứng ngoài trời với nền tán lá xanh.",
+    "detailed_caption_vi": "Cận cảnh một phụ nữ đội khăn trùm đầu màu đen và mặc áo dài tay màu đen thêu cườm bạc tỉ mỉ ở mặt trước. Quai đeo hoa rực rỡ vắt qua vai cô, và một chiếc vòng cổ bằng bạc trang trí trên cổ cô. Bối cảnh phía sau là không gian ngoài trời sáng, mờ ảo với cây xanh và tán lá.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.275,
+          0.091,
+          0.786,
+          1.0
+        ],
+        "description": "woman wearing black headscarf, embroidered black shirt and silver necklace",
+        "description_vi": "phụ nữ đội khăn trùm đầu đen, áo đen thêu và vòng cổ bạc",
+        "attributes": [
+          "black headscarf",
+          "black shirt",
+          "embroidered",
+          "silver necklace",
+          "floral strap"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0069",
+    "visual_source_frame_id": "L30_V068_f0069",
+    "ocr_source_frame_id": "L30_V068_f0069",
+    "quality_flags": [],
+    "caption": "A traditional stilt house with a thatched roof stands among lush green trees and a paved path.",
+    "detailed_caption": "A wide shot displays a wooden stilt house featuring a wide thatched roof and an open balcony with wooden railings. The house is surrounded by dense green foliage, bamboo stalks, and a paved stone path leading past it. Sunlight illuminates the scene from the right.",
+    "caption_vi": "Một ngôi nhà sàn truyền thống lợp mái tranh nằm giữa những rậm cây xanh và lối đi lát đá.",
+    "detailed_caption_vi": "Toàn cảnh ngôi nhà sàn gỗ với mái tranh rộng và ban công mở có lan ngôi bằng gỗ. Ngôi nhà được bao quanh bởi tán lá xanh rậm rạp, thân tre và con đường đá lát dẫn qua đó. Ánh nắng chiếu sáng khung cảnh từ phía bên phải.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.187,
+          0.322,
+          0.859,
+          0.8979999999999999
+        ],
+        "description": "traditional wooden stilt house with thatched roof",
+        "description_vi": "nhà sàn gỗ truyền thống lợp mái tranh",
+        "attributes": [
+          "wooden",
+          "stilt",
+          "thatched roof"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "path_0",
+        "label": "path",
+        "bbox": [
+          0.0,
+          0.725,
+          0.915,
+          1.0
+        ],
+        "description": "paved stone path leading to the house",
+        "description_vi": "đường lát đá dẫn đến ngôi nhà",
+        "attributes": [
+          "paved",
+          "stone"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "house_0",
+        "predicate": "overlapping",
+        "object_id": "path_0"
+      },
+      {
+        "subject_id": "path_0",
+        "predicate": "overlapping",
+        "object_id": "house_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0070",
+    "visual_source_frame_id": "L30_V068_f0069",
+    "ocr_source_frame_id": "L30_V068_f0070",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A traditional stilt house with a thatched roof stands among lush green trees and a paved path.",
+    "detailed_caption": "A wide shot displays a wooden stilt house featuring a wide thatched roof and an open balcony with wooden railings. The house is surrounded by dense green foliage, bamboo stalks, and a paved stone path leading past it. Sunlight illuminates the scene from the right.",
+    "caption_vi": "Một ngôi nhà sàn truyền thống lợp mái tranh nằm giữa những rậm cây xanh và lối đi lát đá.",
+    "detailed_caption_vi": "Toàn cảnh ngôi nhà sàn gỗ với mái tranh rộng và ban công mở có lan ngôi bằng gỗ. Ngôi nhà được bao quanh bởi tán lá xanh rậm rạp, thân tre và con đường đá lát dẫn qua đó. Ánh nắng chiếu sáng khung cảnh từ phía bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.187,
+          0.322,
+          0.859,
+          0.8979999999999999
+        ],
+        "description": "traditional wooden stilt house with thatched roof",
+        "description_vi": "nhà sàn gỗ truyền thống lợp mái tranh",
+        "attributes": [
+          "wooden",
+          "stilt",
+          "thatched roof"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "path_0",
+        "label": "path",
+        "bbox": [
+          0.0,
+          0.725,
+          0.915,
+          1.0
+        ],
+        "description": "paved stone path leading to the house",
+        "description_vi": "đường lát đá dẫn đến ngôi nhà",
+        "attributes": [
+          "paved",
+          "stone"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "house_0",
+        "predicate": "overlapping",
+        "object_id": "path_0"
+      },
+      {
+        "subject_id": "path_0",
+        "predicate": "overlapping",
+        "object_id": "house_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0071",
+    "visual_source_frame_id": "L30_V068_f0071",
+    "ocr_source_frame_id": "L30_V068_f0071",
+    "quality_flags": [],
+    "caption": "A close-up view shows the thick layered thatch of a traditional roof against a bright sky.",
+    "detailed_caption": "A close-up low-angle shot captures the textured, layered straw and fiber construction of a traditional thatched roof overhang. A vertical wooden pole supports the structure on the left, while bright daylight filters through the green trees and sky visible in the background on the right.",
+    "caption_vi": "Cận cảnh phần mái tranh dày nhiều lớp của một mái nhà truyền thống đối lập với bầu trời sáng.",
+    "detailed_caption_vi": "Cận cảnh góc thấp ghi lại kết cấu rơm và sợi đan nhiều lớp của phần mái tranh nhô ra truyền thống. Một cột gỗ thẳng đứng đỡ cấu trúc ở bên trái, trong khi ánh sáng ban ngày rực rỡ lọc qua cây xanh và bầu trời có thể nhìn thấy ở nền bên phải.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "roof_0",
+        "label": "roof",
+        "bbox": [
+          0.0,
+          0.0,
+          0.9109999999999999,
+          1.0
+        ],
+        "description": "layered thatched roof overhang with wooden support",
+        "description_vi": "mái tranh nhiều lớp với trụ đỡ bằng gỗ",
+        "attributes": [
+          "thatched",
+          "layered",
+          "wooden support"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0072",
+    "visual_source_frame_id": "L30_V068_f0071",
+    "ocr_source_frame_id": "L30_V068_f0072",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up view shows the thick layered thatch of a traditional roof against a bright sky.",
+    "detailed_caption": "A close-up low-angle shot captures the textured, layered straw and fiber construction of a traditional thatched roof overhang. A vertical wooden pole supports the structure on the left, while bright daylight filters through the green trees and sky visible in the background on the right.",
+    "caption_vi": "Cận cảnh phần mái tranh dày nhiều lớp của một mái nhà truyền thống đối lập với bầu trời sáng.",
+    "detailed_caption_vi": "Cận cảnh góc thấp ghi lại kết cấu rơm và sợi đan nhiều lớp của phần mái tranh nhô ra truyền thống. Một cột gỗ thẳng đứng đỡ cấu trúc ở bên trái, trong khi ánh sáng ban ngày rực rỡ lọc qua cây xanh và bầu trời có thể nhìn thấy ở nền bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "roof_0",
+        "label": "roof",
+        "bbox": [
+          0.0,
+          0.0,
+          0.9109999999999999,
+          1.0
+        ],
+        "description": "layered thatched roof overhang with wooden support",
+        "description_vi": "mái tranh nhiều lớp với trụ đỡ bằng gỗ",
+        "attributes": [
+          "thatched",
+          "layered",
+          "wooden support"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0073",
+    "visual_source_frame_id": "L30_V068_f0073",
+    "ocr_source_frame_id": "L30_V068_f0073",
+    "quality_flags": [],
+    "caption": "A wooden wall is decorated with hanging stringed instruments, colorful yarn tassels, and woven baskets.",
+    "detailed_caption": "A wide shot shows a wooden plank wall adorned with various traditional items. On the left, several stringed instruments hang in a row; in the middle are colorful yarn tassels and red pom-pom ornaments; on the right, five dark woven baskets are arranged in a floral pattern. A small sign with Vietnamese text is mounted near the top.",
+    "caption_vi": "Bức tường gỗ được trang trí bằng các nhạc cụ dây treo, tua rua len nhiều màu sắc và giỏ đan.",
+    "detailed_caption_vi": "Toàn cảnh bức tường ván gỗ được trang trí bằng nhiều vật dụng truyền thống khác nhau. Bên trái, một số nhạc cụ dây treo thành hàng; ở giữa là tua rua len nhiều màu sắc và đồ trang trí tua rua đỏ; bên phải, năm chiếc giỏ đan sẫm màu được sắp xếp theo hình bông hoa. Một biển hiệu nhỏ có chữ tiếng Việt được gắn ở gần phía trên.",
+    "ocr_text": "TRUYỀN THỐNG",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "basket_0",
+        "label": "basket",
+        "bbox": [
+          0.727,
+          0.383,
+          0.914,
+          0.6920000000000001
+        ],
+        "description": "woven baskets arranged in a floral pattern on the wall",
+        "description_vi": "giỏ đan sắp xếp theo hình hoa trên tường",
+        "attributes": [
+          "woven",
+          "floral arrangement"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "musical_instrument_0",
+        "label": "musical instrument",
+        "bbox": [
+          0.05,
+          0.312,
+          0.323,
+          0.792
+        ],
+        "description": "stringed instruments hanging on the wall",
+        "description_vi": "nhạc cụ dây treo trên tường",
+        "attributes": [
+          "stringed",
+          "wooden"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "wall_0",
+        "label": "wall",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "wooden plank wall decorated with instruments and crafts",
+        "description_vi": "tường ván gỗ trang trí nhạc cụ và đồ thủ công",
+        "attributes": [
+          "wooden",
+          "decorated"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "musical_instrument_0",
+        "predicate": "left_of",
+        "object_id": "basket_0"
+      },
+      {
+        "subject_id": "basket_0",
+        "predicate": "right_of",
+        "object_id": "musical_instrument_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0074",
+    "visual_source_frame_id": "L30_V068_f0074",
+    "ocr_source_frame_id": "L30_V068_f0074",
+    "quality_flags": [],
+    "caption": "Colorful yarn tassels and a large red pom-pom ornament hang on a wooden wall.",
+    "detailed_caption": "A close-up shot displays bright multi-colored yarn tassels hanging on the left, next to a large circular cluster of vibrant red pom-poms suspended from braided colorful threads. Additional hanging decorations and a portion of a woven basket are visible further to the right against a vertical wooden plank wall.",
+    "caption_vi": "Tua rua len nhiều màu sắc và một đồ trang trí quả bông đỏ lớn treo trên bức tường gỗ.",
+    "detailed_caption_vi": "Cận cảnh hiển thị các tua rua len đa sắc sáng rực rỡ treo ở bên trái, cạnh một chùm quả bông màu đỏ rực lớn được treo bằng các sợi chỉ bện nhiều màu sắc. Các đồ trang trí treo bổ sung và một phần của giỏ đan có thể nhìn thấy ở phía bên phải trên nền tường ván gỗ thẳng đứng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "decoration_0",
+        "label": "decoration",
+        "bbox": [
+          0.0,
+          0.0,
+          0.303,
+          1.0
+        ],
+        "description": "multi-colored yarn tassels hanging on the wall",
+        "description_vi": "tua rua len nhiều màu treo trên tường",
+        "attributes": [
+          "multi-colored",
+          "yarn",
+          "tassels"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "decoration_1",
+        "label": "decoration",
+        "bbox": [
+          0.262,
+          0.018000000000000002,
+          0.661,
+          0.983
+        ],
+        "description": "cluster of red pom-poms with colorful braided hanging threads",
+        "description_vi": "chùm quả bông đỏ với các sợi treo bện nhiều màu",
+        "attributes": [
+          "red",
+          "pom-pom",
+          "colorful",
+          "braided"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0075",
+    "visual_source_frame_id": "L30_V068_f0074",
+    "ocr_source_frame_id": "L30_V068_f0075",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Colorful yarn tassels and a large red pom-pom ornament hang on a wooden wall.",
+    "detailed_caption": "A close-up shot displays bright multi-colored yarn tassels hanging on the left, next to a large circular cluster of vibrant red pom-poms suspended from braided colorful threads. Additional hanging decorations and a portion of a woven basket are visible further to the right against a vertical wooden plank wall.",
+    "caption_vi": "Tua rua len nhiều màu sắc và một đồ trang trí quả bông đỏ lớn treo trên bức tường gỗ.",
+    "detailed_caption_vi": "Cận cảnh hiển thị các tua rua len đa sắc sáng rực rỡ treo ở bên trái, cạnh một chùm quả bông màu đỏ rực lớn được treo bằng các sợi chỉ bện nhiều màu sắc. Các đồ trang trí treo bổ sung và một phần của giỏ đan có thể nhìn thấy ở phía bên phải trên nền tường ván gỗ thẳng đứng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "decoration_0",
+        "label": "decoration",
+        "bbox": [
+          0.0,
+          0.0,
+          0.303,
+          1.0
+        ],
+        "description": "multi-colored yarn tassels hanging on the wall",
+        "description_vi": "tua rua len nhiều màu treo trên tường",
+        "attributes": [
+          "multi-colored",
+          "yarn",
+          "tassels"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "decoration_1",
+        "label": "decoration",
+        "bbox": [
+          0.262,
+          0.018000000000000002,
+          0.661,
+          0.983
+        ],
+        "description": "cluster of red pom-poms with colorful braided hanging threads",
+        "description_vi": "chùm quả bông đỏ với các sợi treo bện nhiều màu",
+        "attributes": [
+          "red",
+          "pom-pom",
+          "colorful",
+          "braided"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V068_f0076",
+    "visual_source_frame_id": "L30_V068_f0076",
+    "ocr_source_frame_id": "L30_V068_f0076",
+    "quality_flags": [],
+    "caption": "A traditional stilt house with a dark wooden exterior and a thatched roof is partially framed by green foliage.",
+    "detailed_caption": "A medium shot captures a traditional wooden stilt house featuring a dark interior, a ladder leading to the entrance, and a covered balcony. Lush green plants, trees, and stone steps occupy the foreground and right side, partially framing the view of the structure.",
+    "caption_vi": "Một ngôi nhà sàn truyền thống với phần ngoài bằng gỗ sẫm màu và mái tranh được bao quanh một phần bởi cây xanh.",
+    "detailed_caption_vi": "Trung cảnh ghi lại hình ảnh ngôi nhà sàn gỗ truyền thống với phần nội thất tối màu, có thang dẫn lên lối vào và ban công có mái che. Cây xanh tươi rậm rạp, cây cối và bậc thang đá chiếmếm phần tiền cảnh và bên phải, che một phần tầm nhìn vào công trình.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.047,
+          0.0,
+          1.0,
+          0.8979999999999999
+        ],
+        "description": "traditional wooden stilt house with thatched roof",
+        "description_vi": "nhà sàn gỗ truyền thống lợp mái tranh",
+        "attributes": [
+          "wooden",
+          "stilt",
+          "thatched roof"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plant_0",
+        "label": "plant",
+        "bbox": [
+          0.512,
+          0.219,
+          0.9949999999999999,
+          1.0
+        ],
+        "description": "lush green plants and foliage in the foreground",
+        "description_vi": "cây cối và tán lá xanh tươi ở tiền cảnh",
+        "attributes": [
+          "green",
+          "leafy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "stairs_0",
+        "label": "stairs",
+        "bbox": [
+          0.038,
+          0.875,
+          0.5660000000000001,
+          1.0
+        ],
+        "description": "stone steps leading up in the foreground",
+        "description_vi": "bậc thang đá dẫn lên ở phía trước",
+        "attributes": [
+          "stone",
+          "steps"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "house_0",
+        "predicate": "overlapping",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "overlapping",
+        "object_id": "house_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0077",
+    "visual_source_frame_id": "L30_V068_f0077",
+    "ocr_source_frame_id": "L30_V068_f0077",
+    "quality_flags": [],
+    "caption": "A person wearing a conical hat and dark clothing walks away outdoors past clotheslines and drying trays near a thatched-roof house.",
+    "detailed_caption": "This medium shot captures a person from behind, wearing a pointed conical hat and long black clothing, walking away in an outdoor courtyard. To the left, numerous black garments hang on a wooden clothesline, and round woven trays sit on tables. In the background, a rustic structure with a thatched roof stands beside lush green trees and foliage.",
+    "caption_vi": "Một người đội nón lá và mặc trang phục tối màu đi ra ngoài trời qua các sào phơi quần áo và nia phơi.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại từ phía sau một người đội nón lá nhọn và mặc quần áo dài màu đen đang đi ra ngoài sân. Phía bên trái, nhiều trang phục màu đen được phơi trên sào gỗ và có các nia đan tròn đặt trên bàn. Phía sau là một công trình nhà tranh vách đất giản dị cạnh các tán cây xanh tốt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "clothesline_0",
+        "label": "clothesline",
+        "bbox": [
+          0.0,
+          0.38,
+          0.577,
+          0.702
+        ],
+        "description": "a wooden clothesline with hanging black clothes",
+        "description_vi": "sào phơi quần áo bằng gỗ với quần áo đen treo trên đó",
+        "attributes": [
+          "wooden",
+          "hanging clothes"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.591,
+          0.076,
+          1.0,
+          0.708
+        ],
+        "description": "a rustic house with a thatched roof",
+        "description_vi": "một ngôi nhà mộc mạc lợp mái tranh",
+        "attributes": [
+          "thatched roof",
+          "rustic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.47000000000000003,
+          0.253,
+          0.8400000000000001,
+          1.0
+        ],
+        "description": "a person wearing a conical hat and black clothing walking away",
+        "description_vi": "một người đội nón lá mặc đồ đen đang đi",
+        "attributes": [
+          "conical hat",
+          "black clothing",
+          "walking away"
+        ],
+        "action": "walking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "clothesline_0",
+        "predicate": "left_of",
+        "object_id": "house_0"
+      },
+      {
+        "subject_id": "house_0",
+        "predicate": "right_of",
+        "object_id": "clothesline_0"
+      },
+      {
+        "subject_id": "house_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "house_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V068_f0078",
+    "visual_source_frame_id": "L30_V068_f0078",
+    "ocr_source_frame_id": "L30_V068_f0078",
+    "quality_flags": [],
+    "caption": "A person in a conical hat and dark clothes walks past drying trays and hanging garments near a thatched-roof house.",
+    "detailed_caption": "This medium shot shows a person from behind wearing a conical hat and dark clothing, walking across a stone-paved courtyard. Round trays filled with goods are arranged on tables next to a wooden clothesline loaded with black garments. A thatched-roof rustic house stands in the background surrounded by green trees.",
+    "caption_vi": "Một người đội nón lá và mặc đồ tối màu đi qua các nia phơi và quần áo treo gần ngôi nhà mái tranh.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh từ phía sau cho thấy một người đội nón lá và mặc quần áo tối màu đang đi trên sân lát đá. Các nia tròn đựng nông sản được sắp xếp trên bàn cạnh sào phơi đồ bằng gỗ treo đầy quần áo đen. Phía sau là ngôi nhà lợp tranh mộc mạc được bao quanh bởi cây xanh.",
+    "ocr_text": "Herbalife Tác giả: Hiền Nguyễn",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "house_0",
+        "label": "house",
+        "bbox": [
+          0.507,
+          0.0,
+          1.0,
+          0.577
+        ],
+        "description": "a rustic house with a thatched roof",
+        "description_vi": "ngôi nhà mộc mạc lợp mái tranh",
+        "attributes": [
+          "thatched roof"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.589,
+          0.322,
+          0.771,
+          1.0
+        ],
+        "description": "a person wearing a conical hat and black clothing",
+        "description_vi": "một người đội nón lá mặc trang phục màu đen",
+        "attributes": [
+          "conical hat",
+          "black clothing"
+        ],
+        "action": "walking"
+      },
+      {
+        "object_id": "tray_0",
+        "label": "tray",
+        "bbox": [
+          0.268,
+          0.667,
+          0.524,
+          0.77
+        ],
+        "description": "round woven drying trays filled with agricultural goods",
+        "description_vi": "các nia đan tròn dùng để phơi nông sản",
+        "attributes": [
+          "round",
+          "woven"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "house_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "house_0"
+      },
+      {
+        "subject_id": "tray_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "tray_0"
+      }
+    ]
+  }
+]

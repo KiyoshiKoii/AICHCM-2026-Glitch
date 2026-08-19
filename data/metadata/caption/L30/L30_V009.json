@@ -1,0 +1,5288 @@
+[
+  {
+    "frame_id": "L30_V009_f0001",
+    "visual_source_frame_id": "L30_V009_f0001",
+    "ocr_source_frame_id": "L30_V009_f0001",
+    "quality_flags": [],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain, minimalist white gradient background with soft edges and no objects.",
+    "caption_vi": "Một phông nền màu trắng chuyển sắc đơn giản.",
+    "detailed_caption_vi": "Một phông nền màu trắng chuyển sắc tối giản với các cạnh mềm và không có đối tượng nào.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0002",
+    "visual_source_frame_id": "L30_V009_f0001",
+    "ocr_source_frame_id": "L30_V009_f0002",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain, minimalist white gradient background with soft edges and no objects.",
+    "caption_vi": "Một phông nền màu trắng chuyển sắc đơn giản.",
+    "detailed_caption_vi": "Một phông nền màu trắng chuyển sắc tối giản với các cạnh mềm và không có đối tượng nào.",
+    "ocr_text": "Herbalife #1 thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0003",
+    "visual_source_frame_id": "L30_V009_f0001",
+    "ocr_source_frame_id": "L30_V009_f0003",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain, minimalist white gradient background with soft edges and no objects.",
+    "caption_vi": "Một phông nền màu trắng chuyển sắc đơn giản.",
+    "detailed_caption_vi": "Một phông nền màu trắng chuyển sắc tối giản với các cạnh mềm và không có đối tượng nào.",
+    "ocr_text": "Herbalife #1 thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0004",
+    "visual_source_frame_id": "L30_V009_f0004",
+    "ocr_source_frame_id": "L30_V009_f0004",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white coat is seen in the background behind a video camera viewfinder.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white coat standing in an interior office setting. In the foreground on the right, a black video camera displays the man on its small LCD screen.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đứng phía sau khung ngắm của máy quay video.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse trắng đứng trong môi trường văn phòng. Ở phía trước bên phải, một máy quay video màu đen hiển thị hình ảnh người đàn ông trên màn hình LCD nhỏ.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.189,
+          0.386,
+          0.471,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "video_camera_0",
+        "label": "video camera",
+        "bbox": [
+          0.38,
+          0.208,
+          1.0,
+          1.0
+        ],
+        "description": "black video camera with an LCD monitor",
+        "description_vi": "máy quay video màu đen có màn hình LCD",
+        "attributes": [
+          "black",
+          "video camera"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "video_camera_0"
+      },
+      {
+        "subject_id": "video_camera_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0005",
+    "visual_source_frame_id": "L30_V009_f0005",
+    "ocr_source_frame_id": "L30_V009_f0005",
+    "quality_flags": [],
+    "caption": "A man in a white medical coat and glasses speaks indoors with a green lower-third banner.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat standing indoors. A green banner with white text is displayed at the bottom of the frame. A printer is visible on the right side.",
+    "caption_vi": "Một người đàn ông mặc áo blouse trắng và đeo kính đang nói chuyện trong nhà với dải thông tin màu xanh lá.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse trắng đứng trong nhà. Một biểu ngữ màu xanh lá với chữ trắng xuất hiện ở dưới khung hình. Một máy in hiển thị ở bên phải.",
+    "ocr_text": "tuổi trẻTV Cuộc thi Lan tỏa năng lượng tích cực 2024: Sử dụng mạng xã hội để làm điều có ích",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.187,
+          0.327,
+          0.636,
+          1.0
+        ],
+        "description": "man wearing glasses and a white medical coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse y tế trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8099999999999999,
+          0.642,
+          1.0,
+          0.9149999999999999
+        ],
+        "description": "white and black office printer on a desk",
+        "description_vi": "máy in văn phòng màu trắng và đen trên bàn",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0006",
+    "visual_source_frame_id": "L30_V009_f0006",
+    "ocr_source_frame_id": "L30_V009_f0006",
+    "quality_flags": [],
+    "caption": "A person in a white coat speaking in an indoor setting.",
+    "detailed_caption": "A medium shot shows a person wearing a white coat talking inside a brightly lit room. The subject is positioned on the left side, facing forward with an open mouth. The background features light-colored walls and vertical architectural panels.",
+    "caption_vi": "Một người mặc áo blouse trắng đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cận cảnh một người mặc áo blouse trắng đang phát biểu trong không gian sáng sủa. Nhân vật xuất hiện ở bên trái, hướng mặt về phía trước. Phía sau là tường sáng màu và các tấm ốp dọc.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.599,
+          1.0
+        ],
+        "description": "a person wearing a white coat and glasses",
+        "description_vi": "một người mặc áo blouse trắng và đeo kính",
+        "attributes": [
+          "white coat",
+          "glasses"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0007",
+    "visual_source_frame_id": "L30_V009_f0007",
+    "ocr_source_frame_id": "L30_V009_f0007",
+    "quality_flags": [],
+    "caption": "A heavily blurred motion shot of a person indoors.",
+    "detailed_caption": "Close-up, highly motion-blurred frame of a person wearing light-colored clothing inside a room.",
+    "caption_vi": "Khung hình mờ chuyển động mạnh của một người ở trong nhà.",
+    "detailed_caption_vi": "Cận cảnh bị mờ chuyển động mạnh của một người mặc trang phục sáng màu bên trong phòng.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.602,
+          1.0
+        ],
+        "description": "heavily blurred person in light clothing",
+        "description_vi": "người mặc trang phục sáng màu bị nhòe nặng",
+        "attributes": [
+          "blurred",
+          "light clothing"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0008",
+    "visual_source_frame_id": "L30_V009_f0008",
+    "ocr_source_frame_id": "L30_V009_f0008",
+    "quality_flags": [],
+    "caption": "A person in a white coat speaking in an indoor setting.",
+    "detailed_caption": "A medium shot captures a person wearing a white coat standing in a brightly lit room. The subject's face is partially obscured by motion blur while speaking. The background shows neutral-toned walls and soft lighting.",
+    "caption_vi": "Một người mặc áo blouse trắng đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người mặc áo blouse trắng trong căn phòng sáng sủa. Khuôn mặt nhân vật hơi nhòe do chuyển động khi đang nói. Bối cảnh phía sau là bức tường màu sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.377,
+          0.36300000000000004,
+          0.622,
+          1.0
+        ],
+        "description": "a person wearing a white coat",
+        "description_vi": "một người mặc áo blouse trắng",
+        "attributes": [
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0009",
+    "visual_source_frame_id": "L30_V009_f0009",
+    "ocr_source_frame_id": "L30_V009_f0009",
+    "quality_flags": [],
+    "caption": "A person wearing a surgical cap and white coat speaking indoors.",
+    "detailed_caption": "A medium shot shows a person wearing a light blue surgical cap and a white coat standing inside a bright room. The subject is speaking with an open mouth, centered in the frame. The background is softly out of focus with plain walls.",
+    "caption_vi": "Một người đội mũ y tế và mặc áo blouse trắng đang nói chuyện.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người đội mũ trùm đầu y tế màu xanh nhạt và mặc áo blouse trắng ở trung tâm khung hình. Nhân vật đang mở miệng nói trong một căn phòng sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.35,
+          0.33399999999999996,
+          0.638,
+          1.0
+        ],
+        "description": "a person wearing a surgical cap and white coat",
+        "description_vi": "một người đội mũ y tế và mặc áo blouse trắng",
+        "attributes": [
+          "surgical cap",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0010",
+    "visual_source_frame_id": "L30_V009_f0010",
+    "ocr_source_frame_id": "L30_V009_f0010",
+    "quality_flags": [],
+    "caption": "A person wearing a surgical cap and white coat speaking indoors.",
+    "detailed_caption": "A medium shot presents a person in a light blue surgical cap and white coat facing forward. The subject is speaking with an open mouth in a brightly lit room. The background contains neutral walls and indistinct objects.",
+    "caption_vi": "Một người đội mũ y tế và mặc áo blouse trắng đang phát biểu.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đội mũ y tế xanh nhạt và mặc áo blouse trắng đứng hướng về phía trước. Nhân vật đang mở miệng nói trong phòng sáng sủa.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.321,
+          0.29200000000000004,
+          0.6719999999999999,
+          1.0
+        ],
+        "description": "a person wearing a surgical cap and white coat",
+        "description_vi": "một người đội mũ y tế và mặc áo blouse trắng",
+        "attributes": [
+          "surgical cap",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0011",
+    "visual_source_frame_id": "L30_V009_f0011",
+    "ocr_source_frame_id": "L30_V009_f0011",
+    "quality_flags": [],
+    "caption": "A doctor wearing glasses, a blue surgical cap, and a white coat speaks indoors.",
+    "detailed_caption": "Medium shot of a person wearing glasses, a light blue surgical cap, and a white medical coat with badges on the chest. The background features a computer monitor and a bottle against a plain white wall.",
+    "caption_vi": "Một bác sĩ đeo kính, đội mũ phẫu thuật xanh và mặc áo blouse trắng đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cảnh trung của một người đeo kính, đội mũ phẫu thuật màu xanh nhạt và mặc áo blouse y tế trắng có gắn phù hiệu ngực. Phía sau là màn hình máy tính và một chiếc bình đặt trên tường trắng.",
+    "ocr_text": "tuổi trẻTV S.PHONG.PTM",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "computer_monitor_0",
+        "label": "computer monitor",
+        "bbox": [
+          0.55,
+          0.383,
+          0.7,
+          0.639
+        ],
+        "description": "black computer monitor in the background",
+        "description_vi": "màn hình máy tính màu đen ở phía sau",
+        "attributes": [
+          "black",
+          "monitor"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.29900000000000004,
+          0.223,
+          0.7,
+          1.0
+        ],
+        "description": "doctor wearing glasses, blue surgical cap, and white coat",
+        "description_vi": "bác sĩ đeo kính, đội mũ phẫu thuật xanh và mặc áo blouse trắng",
+        "attributes": [
+          "person",
+          "glasses",
+          "blue cap",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "computer_monitor_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "computer_monitor_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0012",
+    "visual_source_frame_id": "L30_V009_f0012",
+    "ocr_source_frame_id": "L30_V009_f0012",
+    "quality_flags": [],
+    "caption": "A person standing by an examination table and a medical professional sitting nearby pointing.",
+    "detailed_caption": "A medium shot shows two people in a medical setting. On the left, a person stands next to an examination table wearing a light purple garment. On the right, a medical professional in glasses and a white coat sits holding a pen and pointing forward. Broadcaster graphics appear at the top and bottom.",
+    "caption_vi": "Một người đứng cạnh bàn khám và nhân viên y tế ngồi bên phải đang chỉ tay.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hai người trong phòng khám. Bên trái là người đứng cạnh bàn khám mặc áo màu tím nhạt. Bên phải là nhân viên y tế đeo kính và mặc áo blouse trắng đang ngồi cầm bút chỉ hướng về phía trước.",
+    "ocr_text": "CÁCH ĐIỀU TRỊ BỆNH GIÃN TĨNH MẠCH KHÔNG TÁI ĐI TÁI LẠI Bác sĩ tĩnh mạch",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "examination_table_0",
+        "label": "examination table",
+        "bbox": [
+          0.29900000000000004,
+          0.28800000000000003,
+          0.42000000000000004,
+          0.577
+        ],
+        "description": "a white medical examination table",
+        "description_vi": "bàn khám bệnh màu trắng",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.319,
+          0.13999999999999999,
+          0.483,
+          0.581
+        ],
+        "description": "a person standing near an examination table wearing a light purple top",
+        "description_vi": "một người đứng gần bàn khám mặc áo màu tím nhạt",
+        "attributes": [
+          "light purple top"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.43899999999999995,
+          0.156,
+          0.6990000000000001,
+          0.581
+        ],
+        "description": "a person wearing glasses and a white coat",
+        "description_vi": "một người đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "pointing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "examination_table_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "examination_table_0"
+      },
+      {
+        "subject_id": "examination_table_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "examination_table_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0013",
+    "visual_source_frame_id": "L30_V009_f0013",
+    "ocr_source_frame_id": "L30_V009_f0013",
+    "quality_flags": [],
+    "caption": "An ultrasound machine screen displays a medical scan while a hand operates the control panel.",
+    "detailed_caption": "Close-up shot of a portable ultrasound machine. The screen shows a medical grayscale and color Doppler image, and a hand rests on the control panel below.",
+    "caption_vi": "Màn hình máy siêu âm hiển thị hình ảnh y tế trong khi tay điều chỉnh bảng điều khiển.",
+    "detailed_caption_vi": "Cận cảnh máy siêu âm di động. Màn hình hiển thị hình ảnh siêu âm thang độ xám và Doppler màu, phía dưới có bàn tay đang đặt lên bảng điều khiển.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.501,
+          0.71,
+          0.648,
+          0.918
+        ],
+        "description": "person's hand operating the ultrasound console",
+        "description_vi": "bàn tay của người đang vận hành bảng điều khiển siêu âm",
+        "attributes": [
+          "hand"
+        ],
+        "action": "operating"
+      },
+      {
+        "object_id": "ultrasound_machine_0",
+        "label": "ultrasound machine",
+        "bbox": [
+          0.382,
+          0.312,
+          0.7,
+          1.0
+        ],
+        "description": "portable ultrasound machine with a display screen and control console",
+        "description_vi": "máy siêu âm di động có màn hình hiển thị và bảng điều khiển",
+        "attributes": [
+          "ultrasound machine",
+          "medical equipment"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "ultrasound_machine_0"
+      },
+      {
+        "subject_id": "ultrasound_machine_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0014",
+    "visual_source_frame_id": "L30_V009_f0014",
+    "ocr_source_frame_id": "L30_V009_f0014",
+    "quality_flags": [],
+    "caption": "A person wearing a blue polo shirt stands next to an examination table in a clinic.",
+    "detailed_caption": "Medium shot showing a person wearing a blue polo shirt and dark shorts standing beside an examination table. Part of an ultrasound machine console is visible on the left.",
+    "caption_vi": "Một người mặc áo polo xanh đứng cạnh bàn khám trong phòng khám.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một người mặc áo polo xanh và quần đùi tối màu đứng bên cạnh bàn khám bệnh. Một phần bảng điều khiển máy siêu âm hiển thị ở bên trái.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "examination_table_0",
+        "label": "examination table",
+        "bbox": [
+          0.29900000000000004,
+          0.43400000000000005,
+          0.651,
+          0.8939999999999999
+        ],
+        "description": "white medical examination table with a sheet",
+        "description_vi": "bàn khám bệnh y tế màu trắng có trải ga",
+        "attributes": [
+          "white",
+          "examination table"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.61,
+          0.0,
+          0.7,
+          1.0
+        ],
+        "description": "person wearing a blue polo shirt and dark shorts",
+        "description_vi": "người mặc áo polo xanh và quần đùi tối màu",
+        "attributes": [
+          "blue polo shirt",
+          "shorts",
+          "standing"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "examination_table_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "examination_table_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0015",
+    "visual_source_frame_id": "L30_V009_f0015",
+    "ocr_source_frame_id": "L30_V009_f0015",
+    "quality_flags": [],
+    "caption": "A person standing by an examination table and a medical professional examining a leg.",
+    "detailed_caption": "A medium shot shows a person standing on the left in a light blue shirt and dark shorts near an examination table. On the right, a medical professional in a white coat and glasses holds a medical instrument against the patient's leg. The setting is a bright medical room.",
+    "caption_vi": "Một người mặc áo xanh đứng cạnh bàn khám và bác sĩ đang khám chân.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một người đứng bên trái mặc áo xanh nhạt và quần tối màu cạnh bàn khám. Bên phải, nhân viên y tế mặc áo blouse trắng và đeo kính đang cầm dụng cụ y tế thăm khám chân người bệnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.301,
+          0.0,
+          0.483,
+          1.0
+        ],
+        "description": "a person wearing a light blue shirt and dark shorts",
+        "description_vi": "một người mặc áo xanh nhạt và quần đùi tối màu",
+        "attributes": [
+          "light blue shirt",
+          "dark shorts"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.506,
+          0.181,
+          0.701,
+          1.0
+        ],
+        "description": "a person wearing glasses and a white coat",
+        "description_vi": "một người đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "examining"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0016",
+    "visual_source_frame_id": "L30_V009_f0016",
+    "ocr_source_frame_id": "L30_V009_f0016",
+    "quality_flags": [],
+    "caption": "A blurred scene with a red banner overlay displaying text.",
+    "detailed_caption": "A motion-blurred view of an interior setting featuring a bright red banner spanning horizontally across the frame with Vietnamese text.",
+    "caption_vi": "Cảnh bị mờ với lớp phủ biểu ngữ đỏ hiển thị văn bản.",
+    "detailed_caption_vi": "Góc nhìn bị nhòe chuyển động của không gian nội thất với một biểu ngữ màu đỏ sáng trải ngang khung hình có chứa chữ tiếng Việt.",
+    "ocr_text": "tuổi trẻTV LÊ THANH PHONG",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0017",
+    "visual_source_frame_id": "L30_V009_f0017",
+    "ocr_source_frame_id": "L30_V009_f0017",
+    "quality_flags": [],
+    "caption": "A heavily blurred frame featuring a red banner overlay.",
+    "detailed_caption": "A motion-blurred, out-of-focus shot showing a red banner with overlaid text against an indistinct background.",
+    "caption_vi": "Khung hình mờ nhòe có lớp phủ biểu ngữ màu đỏ.",
+    "detailed_caption_vi": "Khung hình mất nét và mờ chuyển động hiển thị một biểu ngữ đỏ có chữ chồng lên trên phông nền không rõ nét.",
+    "ocr_text": "tuổi trẻTV LÊ THANH PHONG",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0018",
+    "visual_source_frame_id": "L30_V009_f0017",
+    "ocr_source_frame_id": "L30_V009_f0018",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A heavily blurred frame featuring a red banner overlay.",
+    "detailed_caption": "A motion-blurred, out-of-focus shot showing a red banner with overlaid text against an indistinct background.",
+    "caption_vi": "Khung hình mờ nhòe có lớp phủ biểu ngữ màu đỏ.",
+    "detailed_caption_vi": "Khung hình mất nét và mờ chuyển động hiển thị một biểu ngữ đỏ có chữ chồng lên trên phông nền không rõ nét.",
+    "ocr_text": "CHỮA TĨNH MẠCH KHÔNG ĐAU, ĐI LẠI LIÊN PHƯƠNG PHÁP KHÔNG ĐAU 17750 ỘC BÌNH THƯỜNG GIÚP BỆNH NHÂN ĐI LẠI DỄ DÀNG HƠN GIP 5453 AI DỄ DÀNG HƠN TẠI SAO PHẢI ĐEO VỚ TĨNH MẠCH? TẠI SAO PHẢI ĐEO VỚ 136 mạch? TRƯỚC ĐIỀU TRỊ TĨNH MẠCH TO BẰNG NGÓN TAY SAO ĐIỀU TRỊ 821 BỆNH GIÃN TĨNH MẠCH DỄ NHẦM VỚI BỆNH KHỚP... T 795 VỚI NHỮNG BỆNH NÀO? NU B SINH SAU NHỮ BÁC SĨ PHA CỦA BỆNH 1907 Chữa tĩnh mạch không ... Cận cảnh truyền thuốc ... Trả lời phỏng vấn Báo T... Chữa thành công ca gi... Bệnh suy giãn tĩnh mạc... Bệnh nh NĂM NGHÌN NHƯNG CHÂN VẪN ĐAU LÀ BỆNH GÌ? 13.8K CHÀO NĂM 2024 816 HIỂU VỀ SUY TĨNH MẠCH SÂU 782 SƯỴ TĨNH MẠCH SÂU LÀ BỆNH THẾ NÀO? SUÝT TỪ BỎ ĐAM MÊ VÌ SUY GIẢN TĨNH MẠCH 993 CHỮA TRỊ THÀNH CÔNG, LÂ... CA BỆNH BẨM SINH, KHÓ ĐI LẠI 838 CHƠ CHO GÁI CHÂN ĐAU, KHÔNG THỂ CHẠY NHẢY 42.1 Chân đau khi đi, nắm n... Chào năm mới 2024. M... Thông tin về Suy tĩnh ... Chữa trị thành công, lẫ... Ca bệnh bẩm sinh, khó ... Nghề gi TÁC ĐỘNG MẠCH - KẺ THÙ CỦA ĐÔI TÌM PHƯƠNG PHÁP CHỮA TRỊ HIỆU QUẢ CHO MỘT CA BỆNH BẨM SINH BÁC SĨ LÊ THANH PHONG TẠI SAO PHỤ NỮ SAU SINH LẠI CÓ NGUY CƠ CAO MẮC BỆNH SUY GIÃN TĨNH MẠCH??? CHÂN ĐAU NHỨC, XUẤT HIỆN GÂN MÀU XANH VÀ ĐỎ CHỮA CH CHÂN ĐA NHIỀU Đ",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0019",
+    "visual_source_frame_id": "L30_V009_f0019",
+    "ocr_source_frame_id": "L30_V009_f0019",
+    "quality_flags": [],
+    "caption": "A doctor wearing glasses and a white coat speaks indoors.",
+    "detailed_caption": "Close-up shot of a man wearing glasses and a white medical coat with a lapel microphone attached. He is speaking in a bright room with a printer on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cận cảnh một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang nói chuyện trong căn phòng sáng với một máy in ở bên phải.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.08299999999999999,
+          0.0,
+          0.78,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat with a microphone",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng gắn micro",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat",
+          "microphone"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8310000000000001,
+          0.657,
+          1.0,
+          1.0
+        ],
+        "description": "office printer on the right side",
+        "description_vi": "máy in văn phòng ở phía bên phải",
+        "attributes": [
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0020",
+    "visual_source_frame_id": "L30_V009_f0019",
+    "ocr_source_frame_id": "L30_V009_f0020",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat speaks indoors.",
+    "detailed_caption": "Close-up shot of a man wearing glasses and a white medical coat with a lapel microphone attached. He is speaking in a bright room with a printer on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cận cảnh một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang nói chuyện trong căn phòng sáng với một máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.08299999999999999,
+          0.0,
+          0.78,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat with a microphone",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng gắn micro",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat",
+          "microphone"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8310000000000001,
+          0.657,
+          1.0,
+          1.0
+        ],
+        "description": "office printer on the right side",
+        "description_vi": "máy in văn phòng ở phía bên phải",
+        "attributes": [
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0021",
+    "visual_source_frame_id": "L30_V009_f0019",
+    "ocr_source_frame_id": "L30_V009_f0021",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat speaks indoors.",
+    "detailed_caption": "Close-up shot of a man wearing glasses and a white medical coat with a lapel microphone attached. He is speaking in a bright room with a printer on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cận cảnh một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang nói chuyện trong căn phòng sáng với một máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.08299999999999999,
+          0.0,
+          0.78,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat with a microphone",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng gắn micro",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat",
+          "microphone"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8310000000000001,
+          0.657,
+          1.0,
+          1.0
+        ],
+        "description": "office printer on the right side",
+        "description_vi": "máy in văn phòng ở phía bên phải",
+        "attributes": [
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0022",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0022",
+    "quality_flags": [],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0023",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0023",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0024",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0024",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0025",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0025",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0026",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0026",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0027",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0027",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0028",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0028",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0029",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0029",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0030",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0030",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0031",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0031",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0032",
+    "visual_source_frame_id": "L30_V009_f0022",
+    "ocr_source_frame_id": "L30_V009_f0032",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A doctor wearing glasses and a white coat stands indoors near a printer.",
+    "detailed_caption": "Medium shot of a man wearing glasses and a white medical coat with a lapel microphone. He is speaking in an office setting with a printer visible on the right.",
+    "caption_vi": "Một bác sĩ đeo kính và mặc áo blouse trắng đứng trong nhà gần máy in.",
+    "detailed_caption_vi": "Cảnh trung của một người đàn ông đeo kính và mặc áo blouse y tế trắng có gắn mic cài áo. Ông đang phát biểu trong không gian văn phòng với máy in ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.153,
+          0.038,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man wearing glasses and a white coat",
+        "description_vi": "nam giới đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.589,
+          1.0,
+          1.0
+        ],
+        "description": "white and black office printer",
+        "description_vi": "máy in văn phòng màu trắng và đen",
+        "attributes": [
+          "white",
+          "black",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0033",
+    "visual_source_frame_id": "L30_V009_f0033",
+    "ocr_source_frame_id": "L30_V009_f0033",
+    "quality_flags": [],
+    "caption": "A grid of video thumbnails displaying medical scenes and text overlays.",
+    "detailed_caption": "A high-angle grid view showing multiple video thumbnails on a platform interface. Each thumbnail features a medical image or person with superimposed text boxes and view counts.",
+    "caption_vi": "Lưới hình thu nhỏ video hiển thị các cảnh y tế và lớp phủ văn bản.",
+    "detailed_caption_vi": "Góc nhìn lưới hiển thị nhiều hình thu nhỏ video trên giao diện nền tảng. Mỗi hình thu nhỏ bao gồm hình ảnh y tế hoặc con người kèm theo hộp văn bản và số lượt xem.",
+    "ocr_text": "tuổi trẻTV 863 1145 915 905 741 7573 720AO 599ACH 632 583 788 1675 Bác sĩ tĩnh mạch LÊ THANH PHONG",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "digital display grid showing video thumbnails",
+        "description_vi": "lưới màn hình kỹ thuật số hiển thị các hình thu nhỏ video",
+        "attributes": [
+          "screen",
+          "grid"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0034",
+    "visual_source_frame_id": "L30_V009_f0033",
+    "ocr_source_frame_id": "L30_V009_f0034",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A grid of video thumbnails displaying medical scenes and text overlays.",
+    "detailed_caption": "A high-angle grid view showing multiple video thumbnails on a platform interface. Each thumbnail features a medical image or person with superimposed text boxes and view counts.",
+    "caption_vi": "Lưới hình thu nhỏ video hiển thị các cảnh y tế và lớp phủ văn bản.",
+    "detailed_caption_vi": "Góc nhìn lưới hiển thị nhiều hình thu nhỏ video trên giao diện nền tảng. Mỗi hình thu nhỏ bao gồm hình ảnh y tế hoặc con người kèm theo hộp văn bản và số lượt xem.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "digital display grid showing video thumbnails",
+        "description_vi": "lưới màn hình kỹ thuật số hiển thị các hình thu nhỏ video",
+        "attributes": [
+          "screen",
+          "grid"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0035",
+    "visual_source_frame_id": "L30_V009_f0035",
+    "ocr_source_frame_id": "L30_V009_f0035",
+    "quality_flags": [],
+    "caption": "A motion-blurred image with vertical light streaks and a centered purple banner.",
+    "detailed_caption": "A heavily motion-blurred view showing vertical streaks of light and a purple graphic element in the upper center, with indistinct figures moving in the background.",
+    "caption_vi": "Hình ảnh bị mờ chuyển động với các vệt sáng dọc và biểu ngữ tím ở trung tâm.",
+    "detailed_caption_vi": "Góc nhìn bị nhòe chuyển động nặng hiển thị các vệt sáng dọc và một khối đồ họa màu tím ở trên cùng giữa khung hình, với các hình bóng mờ di chuyển ở phía sau.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0036",
+    "visual_source_frame_id": "L30_V009_f0036",
+    "ocr_source_frame_id": "L30_V009_f0036",
+    "quality_flags": [],
+    "caption": "A motion-blurred shot of a person sitting at a desk in an office.",
+    "detailed_caption": "A motion-blurred frame showing a person sitting at a desk in an office setting, framed by purple graphic boxes at the top and bottom with blurred peripheral views.",
+    "caption_vi": "Khung hình mờ chuyển động của một người đang ngồi làm việc tại bàn trong văn phòng.",
+    "detailed_caption_vi": "Khung hình bị mờ chuyển động cho thấy một người đang ngồi ở bàn làm việc trong phòng, được bao quanh bởi các hộp đồ họa màu tím ở trên và dưới cùng hai bên bị nhòe.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.392,
+          0.412,
+          0.5389999999999999,
+          0.6829999999999999
+        ],
+        "description": "person sitting at a desk",
+        "description_vi": "người đang ngồi tại bàn làm việc",
+        "attributes": [
+          "seated"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0037",
+    "visual_source_frame_id": "L30_V009_f0037",
+    "ocr_source_frame_id": "L30_V009_f0037",
+    "quality_flags": [],
+    "caption": "A person in a white coat speaking in a medical office.",
+    "detailed_caption": "A medium shot displays a person in a white coat sitting in an office setting. The subject is positioned on the left, looking and speaking toward the camera. In the background, a white printer and a framed picture sit on a desk.",
+    "caption_vi": "Một người mặc áo blouse trắng đang nói chuyện trong văn phòng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người mặc áo blouse trắng ngồi trong phòng làm việc. Nhân vật ở phía bên trái, đang nhìn và nói hướng vào máy ảnh. Phía sau có máy in trắng và khung ảnh trên bàn.",
+    "ocr_text": "TIẾP NHẬN MỘT CA BỆNH TỪNG ĐIỀU TRỊ Ở CÁC CƠ SỞ Y TẾ NHƯNG KHÔNG KHỎI BỆNH QUA THĂM KHÁM PHÁT HIỆN NHIỀU ĐIỀU BẤT NGỜ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.331,
+          0.33399999999999996,
+          0.563,
+          0.704
+        ],
+        "description": "a person wearing glasses and a white coat",
+        "description_vi": "một người đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.587,
+          0.461,
+          0.6980000000000001,
+          0.608
+        ],
+        "description": "a white office printer on a desk",
+        "description_vi": "máy in văn phòng màu trắng trên bàn",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0038",
+    "visual_source_frame_id": "L30_V009_f0038",
+    "ocr_source_frame_id": "L30_V009_f0038",
+    "quality_flags": [],
+    "caption": "An ultrasound scan image displays blood flow with red and blue doppler indicators.",
+    "detailed_caption": "This close-up shot shows a medical ultrasound monitor displaying a vascular scan. Red and blue Doppler signals indicate blood flow through a vessel. Text overlays appear at the top and bottom.",
+    "caption_vi": "Hình ảnh siêu âm hiển thị dòng máu với các chỉ báo màu đỏ và xanh của doppler.",
+    "detailed_caption_vi": "Cảnh cận cảnh này hiển thị màn hình siêu âm y tế với kết quả quét mạch máu. Các tín hiệu màu đỏ và xanh chỉ dòng chảy qua mạch.",
+    "ocr_text": "Siêu âm doppler mạch máu",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "monitor_0",
+        "label": "monitor",
+        "bbox": [
+          0.301,
+          0.247,
+          0.6980000000000001,
+          0.7520000000000001
+        ],
+        "description": "an ultrasound monitor displaying a medical scan",
+        "description_vi": "màn hình siêu âm hiển thị kết quả y tế",
+        "attributes": [
+          "screen",
+          "medical",
+          "ultrasound"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0039",
+    "visual_source_frame_id": "L30_V009_f0039",
+    "ocr_source_frame_id": "L30_V009_f0039",
+    "quality_flags": [],
+    "caption": "A close-up view shows skin with a small surgical stitch and surrounding redness.",
+    "detailed_caption": "This close-up shot focuses on human skin showing a small incision with a suture thread. The surrounding area exhibits slight reddish discoloration and marks.",
+    "caption_vi": "Cảnh cận cảnh cho thấy vùng da có một mũi khâu phẫu thuật nhỏ và vết đỏ xung quanh.",
+    "detailed_caption_vi": "Cảnh cận cảnh này tập trung vào vùng da có một vết mổ nhỏ kèm theo chỉ khâu. Vùng da xung quanh có màu đỏ nhẹ và các vết hằn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "skin_0",
+        "label": "skin",
+        "bbox": [
+          0.3,
+          0.008,
+          0.6980000000000001,
+          0.9979999999999999
+        ],
+        "description": "human skin with a surgical suture",
+        "description_vi": "da người có mũi khâu phẫu thuật",
+        "attributes": [
+          "skin",
+          "suture",
+          "wound"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0040",
+    "visual_source_frame_id": "L30_V009_f0039",
+    "ocr_source_frame_id": "L30_V009_f0040",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up view shows skin with a small surgical stitch and surrounding redness.",
+    "detailed_caption": "This close-up shot focuses on human skin showing a small incision with a suture thread. The surrounding area exhibits slight reddish discoloration and marks.",
+    "caption_vi": "Cảnh cận cảnh cho thấy vùng da có một mũi khâu phẫu thuật nhỏ và vết đỏ xung quanh.",
+    "detailed_caption_vi": "Cảnh cận cảnh này tập trung vào vùng da có một vết mổ nhỏ kèm theo chỉ khâu. Vùng da xung quanh có màu đỏ nhẹ và các vết hằn.",
+    "ocr_text": "Không đau",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "skin_0",
+        "label": "skin",
+        "bbox": [
+          0.3,
+          0.008,
+          0.6980000000000001,
+          0.9979999999999999
+        ],
+        "description": "human skin with a surgical suture",
+        "description_vi": "da người có mũi khâu phẫu thuật",
+        "attributes": [
+          "skin",
+          "suture",
+          "wound"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0041",
+    "visual_source_frame_id": "L30_V009_f0041",
+    "ocr_source_frame_id": "L30_V009_f0041",
+    "quality_flags": [],
+    "caption": "A person standing by an examination table and a medical professional performing an ultrasound.",
+    "detailed_caption": "A medium shot captures a medical consultation. On the left, a patient stands by a table next to an ultrasound machine. On the right, a medical professional in a white coat examines the patient's leg with an ultrasound probe.",
+    "caption_vi": "Một người đứng cạnh máy siêu âm và nhân viên y tế đang khám chân.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại buổi thăm khám y tế. Bên trái là người bệnh đứng cạnh bàn và máy siêu âm. Bên phải, nhân viên y tế mặc áo blouse trắng đang dùng đầu dò siêu âm khám chân cho bệnh nhân.",
+    "ocr_text": "TẠI SAO PHỤ NỮ SAU SINH LẠI CÓ NGUY CƠ CAO MẮC BỆNH SUY GIÃN TĨNH MẠCH??? CHÂN ĐAU NHỨC ĐI LẠI KHÓ KHĂN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.501,
+          0.296,
+          0.627,
+          0.7
+        ],
+        "description": "a person standing near an examination table",
+        "description_vi": "một người đứng gần bàn khám",
+        "attributes": [
+          "light purple top"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.5740000000000001,
+          0.356,
+          0.7,
+          0.7
+        ],
+        "description": "a person wearing glasses and a white coat",
+        "description_vi": "một người đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "examining"
+      },
+      {
+        "object_id": "ultrasound_machine_0",
+        "label": "ultrasound machine",
+        "bbox": [
+          0.301,
+          0.383,
+          0.465,
+          0.65
+        ],
+        "description": "an ultrasound machine with a display screen",
+        "description_vi": "máy siêu âm có màn hình hiển thị",
+        "attributes": [
+          "screen"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "ultrasound_machine_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "ultrasound_machine_0"
+      },
+      {
+        "subject_id": "ultrasound_machine_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "ultrasound_machine_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0042",
+    "visual_source_frame_id": "L30_V009_f0042",
+    "ocr_source_frame_id": "L30_V009_f0042",
+    "quality_flags": [],
+    "caption": "A medical professional performing an ultrasound on a person's leg.",
+    "detailed_caption": "A close-up shot shows a hand holding an ultrasound probe against a person's lower leg. The setting appears to be a medical examination room with white surfaces.",
+    "caption_vi": "Nhân viên y tế đang siêu âm phần bắp chân cho người bệnh.",
+    "detailed_caption_vi": "Cảnh cận cảnh ghi lại bàn tay đang cầm đầu dò siêu âm đặt lên phần cẳng chân của người bệnh. Bối cảnh diễn ra trong phòng khám y tế.",
+    "ocr_text": "TẠI SAO PHỤ NỮ SAU SINH LẠI CÓ NGUY CƠ CAO MẮC BỆNH SUY GIÃN TĨNH MẠCH??? CHÂN ĐAU NHỨC ĐI LẠI KHÓ KHĂN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "leg_0",
+        "label": "leg",
+        "bbox": [
+          0.43600000000000005,
+          0.3,
+          0.5549999999999999,
+          0.7
+        ],
+        "description": "a person's lower leg during medical examination",
+        "description_vi": "phần cẳng chân của người bệnh trong buổi khám",
+        "attributes": [
+          "skin"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "ultrasound_probe_0",
+        "label": "ultrasound probe",
+        "bbox": [
+          0.519,
+          0.483,
+          0.631,
+          0.642
+        ],
+        "description": "a medical ultrasound probe held against a leg",
+        "description_vi": "đầu dò siêu âm y tế đặt trên chân",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "leg_0",
+        "predicate": "overlapping",
+        "object_id": "ultrasound_probe_0"
+      },
+      {
+        "subject_id": "ultrasound_probe_0",
+        "predicate": "overlapping",
+        "object_id": "leg_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0043",
+    "visual_source_frame_id": "L30_V009_f0043",
+    "ocr_source_frame_id": "L30_V009_f0043",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A close-up portrait of a male doctor wearing glasses and a white coat.",
+    "detailed_caption": "This close-up portrait shows a male doctor wearing glasses, a white coat, and a collar microphone. A printer is visible on the right side in the background.",
+    "caption_vi": "Ảnh cận cảnh chân dung nam bác sĩ đeo kính và mặc áo blouse trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh này ghi lại khuôn mặt nam bác sĩ đeo kính, mặc áo blouse trắng và gắn mic cài áo. Phía bên phải là một chiếc máy in ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.13999999999999999,
+          0.024,
+          0.788,
+          1.0
+        ],
+        "description": "a male doctor with glasses and a white coat",
+        "description_vi": "nam bác sĩ đeo kính mặc áo blouse trắng",
+        "attributes": [
+          "male",
+          "glasses",
+          "doctor",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0044",
+    "visual_source_frame_id": "L30_V009_f0043",
+    "ocr_source_frame_id": "L30_V009_f0044",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up portrait of a male doctor wearing glasses and a white coat.",
+    "detailed_caption": "This close-up portrait shows a male doctor wearing glasses, a white coat, and a collar microphone. A printer is visible on the right side in the background.",
+    "caption_vi": "Ảnh cận cảnh chân dung nam bác sĩ đeo kính và mặc áo blouse trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh này ghi lại khuôn mặt nam bác sĩ đeo kính, mặc áo blouse trắng và gắn mic cài áo. Phía bên phải là một chiếc máy in ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.13999999999999999,
+          0.024,
+          0.788,
+          1.0
+        ],
+        "description": "a male doctor with glasses and a white coat",
+        "description_vi": "nam bác sĩ đeo kính mặc áo blouse trắng",
+        "attributes": [
+          "male",
+          "glasses",
+          "doctor",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0045",
+    "visual_source_frame_id": "L30_V009_f0043",
+    "ocr_source_frame_id": "L30_V009_f0045",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up portrait of a male doctor wearing glasses and a white coat.",
+    "detailed_caption": "This close-up portrait shows a male doctor wearing glasses, a white coat, and a collar microphone. A printer is visible on the right side in the background.",
+    "caption_vi": "Ảnh cận cảnh chân dung nam bác sĩ đeo kính và mặc áo blouse trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh này ghi lại khuôn mặt nam bác sĩ đeo kính, mặc áo blouse trắng và gắn mic cài áo. Phía bên phải là một chiếc máy in ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.13999999999999999,
+          0.024,
+          0.788,
+          1.0
+        ],
+        "description": "a male doctor with glasses and a white coat",
+        "description_vi": "nam bác sĩ đeo kính mặc áo blouse trắng",
+        "attributes": [
+          "male",
+          "glasses",
+          "doctor",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0046",
+    "visual_source_frame_id": "L30_V009_f0043",
+    "ocr_source_frame_id": "L30_V009_f0046",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up portrait of a male doctor wearing glasses and a white coat.",
+    "detailed_caption": "This close-up portrait shows a male doctor wearing glasses, a white coat, and a collar microphone. A printer is visible on the right side in the background.",
+    "caption_vi": "Ảnh cận cảnh chân dung nam bác sĩ đeo kính và mặc áo blouse trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh này ghi lại khuôn mặt nam bác sĩ đeo kính, mặc áo blouse trắng và gắn mic cài áo. Phía bên phải là một chiếc máy in ở hậu cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.13999999999999999,
+          0.024,
+          0.788,
+          1.0
+        ],
+        "description": "a male doctor with glasses and a white coat",
+        "description_vi": "nam bác sĩ đeo kính mặc áo blouse trắng",
+        "attributes": [
+          "male",
+          "glasses",
+          "doctor",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0047",
+    "visual_source_frame_id": "L30_V009_f0047",
+    "ocr_source_frame_id": "L30_V009_f0047",
+    "quality_flags": [],
+    "caption": "A social media profile page displays user details, follower counts, and video tabs.",
+    "detailed_caption": "This screenshot displays a social media profile page with a user avatar, username, follow button, statistics, and video lists below. Text in Vietnamese provides professional and contact information.",
+    "caption_vi": "Trang cá nhân mạng xã hội hiển thị thông tin người dùng, số lượng người theo dõi và danh sách video.",
+    "detailed_caption_vi": "Ảnh chụp màn hình này hiển thị giao diện trang cá nhân mạng xã hội gồm ảnh đại diện, tên người dùng, nút theo dõi, thống kê và các video phía dưới. Chữ tiếng Việt cung cấp thông tin liên hệ.",
+    "ocr_text": "bslengocdiep BSLENGOCDIEP Follow 184 Dang Follow 135.4K Follower 750.2K Thích BÁC SĨ SẢN PHỤ KHOA-BV TỪ DŨ DT:0908160014 PK:409/30 NG. TRỌNG TUYẾN Q.TÂN BÌNH www.facebook.com/bslengoc... Video Đã thích Danh sách phát Bệnh lý phụ khoa 1 bài đăng Khuyết sẹo mổ lấy thai 1 bài đăng Vô sinh- hiếm 15 bài đăng",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.0,
+          0.038,
+          1.0,
+          1.0
+        ],
+        "description": "a social media profile page interface",
+        "description_vi": "giao diện trang cá nhân mạng xã hội",
+        "attributes": [
+          "interface",
+          "digital",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0048",
+    "visual_source_frame_id": "L30_V009_f0047",
+    "ocr_source_frame_id": "L30_V009_f0048",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A social media profile page displays user details, follower counts, and video tabs.",
+    "detailed_caption": "This screenshot displays a social media profile page with a user avatar, username, follow button, statistics, and video lists below. Text in Vietnamese provides professional and contact information.",
+    "caption_vi": "Trang cá nhân mạng xã hội hiển thị thông tin người dùng, số lượng người theo dõi và danh sách video.",
+    "detailed_caption_vi": "Ảnh chụp màn hình này hiển thị giao diện trang cá nhân mạng xã hội gồm ảnh đại diện, tên người dùng, nút theo dõi, thống kê và các video phía dưới. Chữ tiếng Việt cung cấp thông tin liên hệ.",
+    "ocr_text": "BÁC SĨ SẢN PHỤ KHOA-BV TỪ DŨ ĐT:0908160014 PK:409/30 NG. TRỌNG TUYẾN Q.TÂN BÌNH www.facebook.com/bslengoc...",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.0,
+          0.038,
+          1.0,
+          1.0
+        ],
+        "description": "a social media profile page interface",
+        "description_vi": "giao diện trang cá nhân mạng xã hội",
+        "attributes": [
+          "interface",
+          "digital",
+          "text"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0049",
+    "visual_source_frame_id": "L30_V009_f0049",
+    "ocr_source_frame_id": "L30_V009_f0049",
+    "quality_flags": [],
+    "caption": "A grid of video thumbnails showing various people and scenes.",
+    "detailed_caption": "A wide shot displays a grid of multiple video thumbnails on a screen. Each thumbnail features different individuals in various indoor and outdoor settings, along with overlay text and view counts.",
+    "caption_vi": "Lưới hiển thị các khung hình thu nhỏ video với nhiều người khác nhau.",
+    "detailed_caption_vi": "Cảnh toàn cảnh hiển thị lưới gồm nhiều hình thu nhỏ video trên màn hình. Mỗi ô hình ảnh hiển thị những người khác nhau trong các bối cảnh cùng với văn bản chú thích.",
+    "ocr_text": "3842 4502 8646 2560 5817 13.9K 5380 1695 14.9K 14.5K",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.081,
+          0.033,
+          0.986,
+          0.9149999999999999
+        ],
+        "description": "a display screen showing a grid of video thumbnails",
+        "description_vi": "màn hình hiển thị lưới các khung hình video",
+        "attributes": [
+          "grid"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0050",
+    "visual_source_frame_id": "L30_V009_f0050",
+    "ocr_source_frame_id": "L30_V009_f0050",
+    "quality_flags": [],
+    "caption": "A person with short dark hair speaking in an indoor setting.",
+    "detailed_caption": "A medium shot captures a person with short dark hair wearing a white garment. The subject is centered, speaking directly to the camera in a brightly lit room. A text box and broadcaster logo are visible.",
+    "caption_vi": "Một người tóc ngắn sậm màu đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người tóc ngắn màu tối mặc áo trắng. Nhân vật ở trung tâm, đang nói chuyện trực tiếp với máy ảnh trong phòng sáng sủa.",
+    "ocr_text": "Tầm soát ung thư cổ tử cung: làm xét nghiệm gì tốt hơn?",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.31,
+          0.198,
+          0.649,
+          1.0
+        ],
+        "description": "a person with short dark hair wearing a white top",
+        "description_vi": "một người tóc ngắn sậm màu mặc áo trắng",
+        "attributes": [
+          "short hair",
+          "white top"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0051",
+    "visual_source_frame_id": "L30_V009_f0051",
+    "ocr_source_frame_id": "L30_V009_f0051",
+    "quality_flags": [],
+    "caption": "A person with short dark hair speaking in an indoor setting.",
+    "detailed_caption": "A medium shot shows a person with short dark hair and a white top speaking to the camera. The setting is an indoor room with light-colored cabinets in the background.",
+    "caption_vi": "Một người tóc ngắn sậm màu đang nói chuyện trong phòng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người tóc ngắn màu tối mặc áo trắng đang nói chuyện trước ống kính. Bối cảnh là một căn phòng trong nhà với tủ màu sáng phía sau.",
+    "ocr_text": "Tầm soát ung thư cổ tử cung: làm xét nghiệm gì tốt hơn?",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.31,
+          0.198,
+          0.649,
+          1.0
+        ],
+        "description": "a person with short dark hair wearing a white top",
+        "description_vi": "một người tóc ngắn sậm màu mặc áo trắng",
+        "attributes": [
+          "short hair",
+          "white top"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0052",
+    "visual_source_frame_id": "L30_V009_f0052",
+    "ocr_source_frame_id": "L30_V009_f0052",
+    "quality_flags": [],
+    "caption": "A person with dark medium-length hair wearing a white coat and purple top.",
+    "detailed_caption": "A medium shot presents a person with dark medium-length hair wearing a white coat over a purple top. The subject is centered and speaking indoors against a plain background.",
+    "caption_vi": "Một người tóc đen lỡ vai mặc áo blouse trắng và áo tím bên trong.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người tóc đen dài ngang vai, mặc áo blouse trắng khoác ngoài áo tím. Nhân vật đứng ở trung tâm đang nói chuyện trước nền tường đơn giản.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.34199999999999997,
+          0.314,
+          0.658,
+          1.0
+        ],
+        "description": "a person with dark hair wearing a white coat and purple top",
+        "description_vi": "một người tóc đen mặc áo blouse trắng và áo tím",
+        "attributes": [
+          "dark hair",
+          "white coat",
+          "purple top"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0053",
+    "visual_source_frame_id": "L30_V009_f0053",
+    "ocr_source_frame_id": "L30_V009_f0053",
+    "quality_flags": [],
+    "caption": "A split-screen view shows three panels of a female doctor in different settings with Vietnamese text overlays.",
+    "detailed_caption": "This split-screen layout presents three vertical panels featuring a female doctor with dark hair in various outfits and interior settings. Each panel contains distinct green or white text boxes with Vietnamese text.",
+    "caption_vi": "Bố cục chia màn hình hiển thị ba khung hình nữ bác sĩ ở các bối cảnh khác nhau kèm chữ tiếng Việt.",
+    "detailed_caption_vi": "Bố cục chia ba màn hình này cho thấy nữ bác sĩ tóc đen trong các trang phục và bối cảnh khác nhau. Mỗi khung hình đều có các hộp chữ màu xanh hoặc trắng chứa nội dung tiếng Việt.",
+    "ocr_text": "VAI TRÒ CỦA HỆ VI SINH đường ruột đối với TIÊU HÓA và MIỄN DỊCH của trẻ thai sau mổ sẹo mổ lấy thai Xét nghiệm GI cho mẹ trước sinh",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.18800000000000003,
+          0.28300000000000003,
+          1.0
+        ],
+        "description": "a woman in a brown top smiling next to a doll",
+        "description_vi": "người phụ nữ mặc áo nâu đang cười cạnh búp bê",
+        "attributes": [
+          "woman",
+          "brown top",
+          "smiling"
+        ],
+        "action": "smiling"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29,
+          0.27,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "a female doctor with a yellow top under a white coat",
+        "description_vi": "nữ bác sĩ mặc áo vàng bên trong áo blouse trắng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "yellow top",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.704,
+          0.16799999999999998,
+          1.0,
+          1.0
+        ],
+        "description": "a female doctor with long hair wearing a white coat",
+        "description_vi": "nữ bác sĩ tóc dài mặc áo blouse trắng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "long hair",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0054",
+    "visual_source_frame_id": "L30_V009_f0053",
+    "ocr_source_frame_id": "L30_V009_f0054",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A split-screen view shows three panels of a female doctor in different settings with Vietnamese text overlays.",
+    "detailed_caption": "This split-screen layout presents three vertical panels featuring a female doctor with dark hair in various outfits and interior settings. Each panel contains distinct green or white text boxes with Vietnamese text.",
+    "caption_vi": "Bố cục chia màn hình hiển thị ba khung hình nữ bác sĩ ở các bối cảnh khác nhau kèm chữ tiếng Việt.",
+    "detailed_caption_vi": "Bố cục chia ba màn hình này cho thấy nữ bác sĩ tóc đen trong các trang phục và bối cảnh khác nhau. Mỗi khung hình đều có các hộp chữ màu xanh hoặc trắng chứa nội dung tiếng Việt.",
+    "ocr_text": "HỆ VI SINH đường ruột đối với TIÊU HÓA và MIỄN DỊCH của trẻ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.18800000000000003,
+          0.28300000000000003,
+          1.0
+        ],
+        "description": "a woman in a brown top smiling next to a doll",
+        "description_vi": "người phụ nữ mặc áo nâu đang cười cạnh búp bê",
+        "attributes": [
+          "woman",
+          "brown top",
+          "smiling"
+        ],
+        "action": "smiling"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29,
+          0.27,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "a female doctor with a yellow top under a white coat",
+        "description_vi": "nữ bác sĩ mặc áo vàng bên trong áo blouse trắng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "yellow top",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.704,
+          0.16799999999999998,
+          1.0,
+          1.0
+        ],
+        "description": "a female doctor with long hair wearing a white coat",
+        "description_vi": "nữ bác sĩ tóc dài mặc áo blouse trắng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "long hair",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0055",
+    "visual_source_frame_id": "L30_V009_f0055",
+    "ocr_source_frame_id": "L30_V009_f0055",
+    "quality_flags": [],
+    "caption": "A female doctor in a white coat smiles warmly while sitting in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt. The office background features white cabinets, framed certificates, and decorative floral arrangements.",
+    "caption_vi": "Nữ bác sĩ mặc áo blouse trắng mỉm cười thân thiện khi ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu, đang mỉm cười. Phía sau là tủ trắng, bằng khen đóng khung và chậu hoa trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.158,
+          0.01,
+          0.768,
+          1.0
+        ],
+        "description": "a smiling female doctor in a white coat",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng đang mỉm cười",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0056",
+    "visual_source_frame_id": "L30_V009_f0055",
+    "ocr_source_frame_id": "L30_V009_f0056",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female doctor in a white coat smiles warmly while sitting in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt. The office background features white cabinets, framed certificates, and decorative floral arrangements.",
+    "caption_vi": "Nữ bác sĩ mặc áo blouse trắng mỉm cười thân thiện khi ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu, đang mỉm cười. Phía sau là tủ trắng, bằng khen đóng khung và chậu hoa trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.158,
+          0.01,
+          0.768,
+          1.0
+        ],
+        "description": "a smiling female doctor in a white coat",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng đang mỉm cười",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0057",
+    "visual_source_frame_id": "L30_V009_f0055",
+    "ocr_source_frame_id": "L30_V009_f0057",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female doctor in a white coat smiles warmly while sitting in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt. The office background features white cabinets, framed certificates, and decorative floral arrangements.",
+    "caption_vi": "Nữ bác sĩ mặc áo blouse trắng mỉm cười thân thiện khi ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu, đang mỉm cười. Phía sau là tủ trắng, bằng khen đóng khung và chậu hoa trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.158,
+          0.01,
+          0.768,
+          1.0
+        ],
+        "description": "a smiling female doctor in a white coat",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng đang mỉm cười",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0058",
+    "visual_source_frame_id": "L30_V009_f0055",
+    "ocr_source_frame_id": "L30_V009_f0058",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female doctor in a white coat smiles warmly while sitting in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt. The office background features white cabinets, framed certificates, and decorative floral arrangements.",
+    "caption_vi": "Nữ bác sĩ mặc áo blouse trắng mỉm cười thân thiện khi ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu, đang mỉm cười. Phía sau là tủ trắng, bằng khen đóng khung và chậu hoa trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.158,
+          0.01,
+          0.768,
+          1.0
+        ],
+        "description": "a smiling female doctor in a white coat",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng đang mỉm cười",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0059",
+    "visual_source_frame_id": "L30_V009_f0055",
+    "ocr_source_frame_id": "L30_V009_f0059",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female doctor in a white coat smiles warmly while sitting in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt. The office background features white cabinets, framed certificates, and decorative floral arrangements.",
+    "caption_vi": "Nữ bác sĩ mặc áo blouse trắng mỉm cười thân thiện khi ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu, đang mỉm cười. Phía sau là tủ trắng, bằng khen đóng khung và chậu hoa trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.158,
+          0.01,
+          0.768,
+          1.0
+        ],
+        "description": "a smiling female doctor in a white coat",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng đang mỉm cười",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0060",
+    "visual_source_frame_id": "L30_V009_f0055",
+    "ocr_source_frame_id": "L30_V009_f0060",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female doctor in a white coat smiles warmly while sitting in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt. The office background features white cabinets, framed certificates, and decorative floral arrangements.",
+    "caption_vi": "Nữ bác sĩ mặc áo blouse trắng mỉm cười thân thiện khi ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu, đang mỉm cười. Phía sau là tủ trắng, bằng khen đóng khung và chậu hoa trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.158,
+          0.01,
+          0.768,
+          1.0
+        ],
+        "description": "a smiling female doctor in a white coat",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng đang mỉm cười",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0061",
+    "visual_source_frame_id": "L30_V009_f0055",
+    "ocr_source_frame_id": "L30_V009_f0061",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female doctor in a white coat smiles warmly while sitting in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt. The office background features white cabinets, framed certificates, and decorative floral arrangements.",
+    "caption_vi": "Nữ bác sĩ mặc áo blouse trắng mỉm cười thân thiện khi ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu, đang mỉm cười. Phía sau là tủ trắng, bằng khen đóng khung và chậu hoa trang trí.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.158,
+          0.01,
+          0.768,
+          1.0
+        ],
+        "description": "a smiling female doctor in a white coat",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng đang mỉm cười",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0062",
+    "visual_source_frame_id": "L30_V009_f0062",
+    "ocr_source_frame_id": "L30_V009_f0062",
+    "quality_flags": [],
+    "caption": "A split-screen display shows three panels of a female doctor against a white wall with Vietnamese subtitles.",
+    "detailed_caption": "This split-screen layout displays three vertical panels of a female doctor with dark hair, wearing a white coat and yellow top. Green and pink text overlays appear across the top and bottom.",
+    "caption_vi": "Màn hình chia ba khung hiển thị nữ bác sĩ trước tường trắng kèm phụ đề tiếng Việt.",
+    "detailed_caption_vi": "Bố cục chia ba màn hình này cho thấy nữ bác sĩ tóc đen mặc áo blouse trắng và áo vàng, đứng trước bức tường trắng. Các hộp chữ màu xanh lá và hồng xuất hiện ở trên và dưới.",
+    "ocr_text": "VAI TRÒ CỦA HỆ VI SINH đường ruột đối với TIÊU HÓA và MIỄN DỊCH của trẻ 1 số biểu hiện mất cân bằng hệ vi sinh đường ruột Khi nào mẹ không được cho b",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.001,
+          0.267,
+          0.28300000000000003,
+          1.0
+        ],
+        "description": "a female doctor with dark hair in a white coat and yellow top",
+        "description_vi": "nữ bác sĩ tóc đen mặc áo blouse trắng và áo vàng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "yellow top",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29,
+          0.27,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "a female doctor speaking against a white background",
+        "description_vi": "nữ bác sĩ đang nói chuyện trước nền trắng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "yellow top",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.704,
+          0.178,
+          1.0,
+          1.0
+        ],
+        "description": "a close-up of a female doctor speaking",
+        "description_vi": "cận cảnh nữ bác sĩ đang nói chuyện",
+        "attributes": [
+          "woman",
+          "doctor",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0063",
+    "visual_source_frame_id": "L30_V009_f0062",
+    "ocr_source_frame_id": "L30_V009_f0063",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A split-screen display shows three panels of a female doctor against a white wall with Vietnamese subtitles.",
+    "detailed_caption": "This split-screen layout displays three vertical panels of a female doctor with dark hair, wearing a white coat and yellow top. Green and pink text overlays appear across the top and bottom.",
+    "caption_vi": "Màn hình chia ba khung hiển thị nữ bác sĩ trước tường trắng kèm phụ đề tiếng Việt.",
+    "detailed_caption_vi": "Bố cục chia ba màn hình này cho thấy nữ bác sĩ tóc đen mặc áo blouse trắng và áo vàng, đứng trước bức tường trắng. Các hộp chữ màu xanh lá và hồng xuất hiện ở trên và dưới.",
+    "ocr_text": "Rối loạn tiêu hoá ở trẻ Khi nào mẹ không được cho b",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.001,
+          0.267,
+          0.28300000000000003,
+          1.0
+        ],
+        "description": "a female doctor with dark hair in a white coat and yellow top",
+        "description_vi": "nữ bác sĩ tóc đen mặc áo blouse trắng và áo vàng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "yellow top",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29,
+          0.27,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "a female doctor speaking against a white background",
+        "description_vi": "nữ bác sĩ đang nói chuyện trước nền trắng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "yellow top",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.704,
+          0.178,
+          1.0,
+          1.0
+        ],
+        "description": "a close-up of a female doctor speaking",
+        "description_vi": "cận cảnh nữ bác sĩ đang nói chuyện",
+        "attributes": [
+          "woman",
+          "doctor",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0064",
+    "visual_source_frame_id": "L30_V009_f0064",
+    "ocr_source_frame_id": "L30_V009_f0064",
+    "quality_flags": [],
+    "caption": "A split-screen view showing three video panels of the same person speaking.",
+    "detailed_caption": "A split-screen wide shot shows three separate panels featuring the same person with dark hair and a white coat in different settings. Each panel displays the individual speaking with various text overlays.",
+    "caption_vi": "Giao diện chia đôi màn hình hiển thị ba khung hình của cùng một người đang nói.",
+    "detailed_caption_vi": "Cảnh toàn cảnh chia màn hình thành ba khung riêng biệt, cùng hiển thị một người tóc đen mặc áo blouse trắng trong các bối cảnh khác nhau. Mỗi khung có các đoạn văn bản chú thích.",
+    "ocr_text": "m thế nào để bé ngon miệng hơn? Có thai sau mổ tụ dịch sẹo mổ lấy thai",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.056,
+          0.277,
+          0.983
+        ],
+        "description": "a person wearing a white coat",
+        "description_vi": "một người mặc áo blouse trắng",
+        "attributes": [
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.303,
+          0.18800000000000003,
+          0.604,
+          0.65
+        ],
+        "description": "a person with short dark hair",
+        "description_vi": "một người tóc ngắn sậm màu",
+        "attributes": [
+          "short hair"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.706,
+          0.2,
+          0.999,
+          1.0
+        ],
+        "description": "a person wearing a white coat and patterned top",
+        "description_vi": "một người mặc áo blouse trắng và áo họa tiết",
+        "attributes": [
+          "white coat",
+          "patterned top"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0065",
+    "visual_source_frame_id": "L30_V009_f0065",
+    "ocr_source_frame_id": "L30_V009_f0065",
+    "quality_flags": [],
+    "caption": "A split-screen view presents three panels of women in different contexts with caption overlays.",
+    "detailed_caption": "This split-screen layout shows three vertical video panels. The left panel features a woman in a white coat speaking near flowers; the center panel shows a woman in a brown top; the right panel shows a woman in a white coat.",
+    "caption_vi": "Bố cục chia màn hình hiển thị ba khung hình phụ nữ trong các bối cảnh khác nhau kèm phụ đề.",
+    "detailed_caption_vi": "Bố cục chia ba màn hình này gồm ba khung dọc. Khung trái hiển thị phụ nữ mặc áo blouse trắng gần chậu hoa; khung giữa là phụ nữ mặc áo nâu; khung phải là phụ nữ mặc áo blouse trắng.",
+    "ocr_text": "Có thai sau mổ tụ dịch sẹo mổ lấy thai bac cho e song may thang moi uong thuoc ngua thai dc bac",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.04700000000000001,
+          0.28300000000000003,
+          0.984
+        ],
+        "description": "a woman in a white doctor coat speaking",
+        "description_vi": "người phụ nữ mặc áo blouse trắng đang nói chuyện",
+        "attributes": [
+          "woman",
+          "doctor",
+          "white coat"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.29,
+          0.197,
+          0.7030000000000001,
+          1.0
+        ],
+        "description": "a woman in a brown knit top",
+        "description_vi": "người phụ nữ mặc áo len nâu",
+        "attributes": [
+          "woman",
+          "brown top"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.705,
+          0.208,
+          1.0,
+          1.0
+        ],
+        "description": "a woman with dark hair wearing a white doctor coat",
+        "description_vi": "người phụ nữ tóc đen mặc áo blouse trắng",
+        "attributes": [
+          "woman",
+          "doctor",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0066",
+    "visual_source_frame_id": "L30_V009_f0066",
+    "ocr_source_frame_id": "L30_V009_f0066",
+    "quality_flags": [],
+    "caption": "A social media video grid displays multiple thumbnails of a female doctor in various clips.",
+    "detailed_caption": "This screenshot shows a social media video browsing interface filled with a grid of thumbnail images, most featuring the same female doctor in different videos with view counts and titles.",
+    "caption_vi": "Lưới video mạng xã hội hiển thị nhiều hình thu nhỏ của một nữ bác sĩ trong các đoạn clip khác nhau.",
+    "detailed_caption_vi": "Ảnh chụp màn hình này hiển thị giao diện duyệt video mạng xã hội với các ô hình thu nhỏ, hầu hết đều có hình ảnh nữ bác sĩ trong các video khác nhau kèm lượt xem và tiêu đề.",
+    "ocr_text": "k Tìm kiếm Tải lên cho bạn Follow phá Mới d ang follow n bòn xem sổ v... Ứng TikTok, sản thường n Liên hệ Quảng cáo or Networks Có thai sau mổ tụ dịch sẹo mổ lấy thai 13.5K Tụ dịch sẹo mổ lấy tha... 274.1K Kem thay bỉm cho trẻ: ... 224K Dùng Băng vệ sinh Hà... 6582 Marial Gel - Lựa chọn ... 8043 Khâu eo tử cung dề p... Trả lời ... LÝ DO PHẢI CHỌN LỰA BỈM THÍCH HỢP CHO TRẺ? 11.7K 3 lưu ý khi chọn bìm c... 15.4K Chuyển dạ giả và thật ... 11K Tăng đề kháng có thật... 2352 Tránh thai và những lợi... 46.8K Chuẩn bị cho con hệ đề kháng vững vàng Xây dựng hệ đề kháng... 14.4K 5 nhóm D",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.0,
+          0.038,
+          1.0,
+          1.0
+        ],
+        "description": "a grid of video thumbnails on a social media app",
+        "description_vi": "lưới hình thu nhỏ video trên ứng dụng mạng xã hội",
+        "attributes": [
+          "grid",
+          "thumbnails",
+          "interface"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0067",
+    "visual_source_frame_id": "L30_V009_f0067",
+    "ocr_source_frame_id": "L30_V009_f0067",
+    "quality_flags": [],
+    "caption": "A close-up portrait of a female doctor in a white coat speaking in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt, sitting in an office with white cabinets and a decorative plant in the background.",
+    "caption_vi": "Ảnh cận cảnh chân dung nữ bác sĩ mặc áo blouse trắng đang nói chuyện trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi nâu, đang nói chuyện trong văn phòng có tủ trắng và cây trang trí phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.155,
+          0.01,
+          0.76,
+          1.0
+        ],
+        "description": "a female doctor wearing a white coat and brown shirt",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "brown shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0068",
+    "visual_source_frame_id": "L30_V009_f0067",
+    "ocr_source_frame_id": "L30_V009_f0068",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up portrait of a female doctor in a white coat speaking in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt, sitting in an office with white cabinets and a decorative plant in the background.",
+    "caption_vi": "Ảnh cận cảnh chân dung nữ bác sĩ mặc áo blouse trắng đang nói chuyện trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi nâu, đang nói chuyện trong văn phòng có tủ trắng và cây trang trí phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.155,
+          0.01,
+          0.76,
+          1.0
+        ],
+        "description": "a female doctor wearing a white coat and brown shirt",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "brown shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0069",
+    "visual_source_frame_id": "L30_V009_f0069",
+    "ocr_source_frame_id": "L30_V009_f0069",
+    "quality_flags": [],
+    "caption": "A person with dark hair in a white coat sitting in an office.",
+    "detailed_caption": "A medium shot shows a person with dark hair tied back, wearing a white coat and a beige shirt underneath, sitting in an office chair. The subject is gesturing with hands while speaking. The background features a white cabinet with folders and a decorative plant with red fruits.",
+    "caption_vi": "Một người tóc đen buộc gọn mặc áo blouse trắng đang ngồi trong văn phòng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người tóc đen buộc gọn, mặc áo blouse trắng và áo màu be bên trong, ngồi trên ghế văn phòng. Nhân vật đang cử động tay khi nói. Phía sau là tủ trắng đựng tài liệu và chậu cây trang trí quả đỏ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.076,
+          0.014,
+          0.683,
+          1.0
+        ],
+        "description": "a person with dark hair wearing a white coat",
+        "description_vi": "một người tóc đen mặc áo blouse trắng",
+        "attributes": [
+          "white coat",
+          "dark hair"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "plant_0",
+        "label": "plant",
+        "bbox": [
+          0.757,
+          0.342,
+          1.0,
+          1.0
+        ],
+        "description": "a decorative plant with small red fruits",
+        "description_vi": "chậu cây trang trí có quả nhỏ màu đỏ",
+        "attributes": [
+          "red fruits"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0070",
+    "visual_source_frame_id": "L30_V009_f0070",
+    "ocr_source_frame_id": "L30_V009_f0070",
+    "quality_flags": [],
+    "caption": "A person in a white medical coat and tan sweater talks in an office setting.",
+    "detailed_caption": "This is a medium shot of one person wearing a white doctor coat over a tan sweater with a small collar. The person is speaking and gesturing with one hand visible on the left. In the background, there is a cabinet with documents and a decorative plant with red fruits.",
+    "caption_vi": "Một người mặc áo blouse trắng và áo len màu nâu đang nói chuyện trong phòng làm việc.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người mặc áo blouse trắng khoác ngoài áo len cổ lọ màu nâu. Người này đang nói chuyện và có cử chỉ tay ở bên trái. Phía sau là tủ đựng tài liệu và một chậu cây trang trí.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.078,
+          0.005,
+          0.682,
+          1.0
+        ],
+        "description": "a person wearing a white medical coat and tan sweater",
+        "description_vi": "một người mặc áo blouse trắng và áo len màu nâu",
+        "attributes": [
+          "white coat",
+          "tan sweater",
+          "dark hair"
+        ],
+        "action": "talking"
+      },
+      {
+        "object_id": "plant_0",
+        "label": "plant",
+        "bbox": [
+          0.763,
+          0.354,
+          1.0,
+          1.0
+        ],
+        "description": "a decorative plant with red fruits",
+        "description_vi": "chậu cây cảnh có quả màu đỏ",
+        "attributes": [
+          "green leaves",
+          "red fruits"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "plant_0"
+      },
+      {
+        "subject_id": "plant_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0071",
+    "visual_source_frame_id": "L30_V009_f0071",
+    "ocr_source_frame_id": "L30_V009_f0071",
+    "quality_flags": [],
+    "caption": "A person wearing a white doctor coat and tan sweater sits in an office.",
+    "detailed_caption": "This is a medium close-up shot of one person in a white medical coat over a tan sweater. The person is speaking with a slight smile. The background shows a white cabinet and a decorative plant with red fruits.",
+    "caption_vi": "Một người mặc áo blouse trắng và áo len màu nâu ngồi trong phòng làm việc.",
+    "detailed_caption_vi": "Đây là khung hình cận cảnh trung bình của một người mặc áo blouse trắng khoác ngoài áo len màu nâu. Người này đang nói chuyện với nụ cười nhẹ. Phía sau là tủ trắng và cây cảnh trang trí.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.005,
+          0.682,
+          1.0
+        ],
+        "description": "a person wearing a white medical coat and tan sweater",
+        "description_vi": "một người mặc áo blouse trắng và áo len màu nâu",
+        "attributes": [
+          "white coat",
+          "tan sweater",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0072",
+    "visual_source_frame_id": "L30_V009_f0072",
+    "ocr_source_frame_id": "L30_V009_f0072",
+    "quality_flags": [],
+    "caption": "A person in a white coat and tan sweater speaks in an office interior.",
+    "detailed_caption": "This is a medium shot of one person wearing a white doctor coat and a tan sweater, positioned centrally. The person is talking and gesturing slightly. The background includes a white cabinet and a potted plant with red berries.",
+    "caption_vi": "Một người mặc áo blouse trắng và áo len nâu đang phát biểu trong phòng làm việc.",
+    "detailed_caption_vi": "Đây là khung cảnh trung bình của một người mặc áo blouse bác sĩ và áo len màu nâu ở vị trí trung tâm. Người này đang nói chuyện và cử chỉ tay nhẹ nhàng. Bối cảnh phía sau có tủ trắng và chậu cây.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.079,
+          0.005,
+          0.682,
+          1.0
+        ],
+        "description": "a person wearing a white coat and tan sweater",
+        "description_vi": "một người mặc áo blouse trắng và áo len nâu",
+        "attributes": [
+          "white coat",
+          "tan sweater"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0073",
+    "visual_source_frame_id": "L30_V009_f0073",
+    "ocr_source_frame_id": "L30_V009_f0073",
+    "quality_flags": [],
+    "caption": "A person wearing a white medical coat and tan sweater speaks in an office.",
+    "detailed_caption": "This is a medium shot of one person in a white medical coat over a tan sweater, speaking directly to the camera. The background features a white cabinet and a decorative plant.",
+    "caption_vi": "Một người mặc áo blouse trắng và áo len màu nâu đang nói chuyện.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người mặc áo blouse trắng và áo len nâu đang nói chuyện trực diện. Phía sau là tủ trắng và cây cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.06,
+          0.005,
+          0.6910000000000001,
+          1.0
+        ],
+        "description": "a person wearing a white medical coat and tan sweater",
+        "description_vi": "một người mặc áo blouse trắng và áo len màu nâu",
+        "attributes": [
+          "white coat",
+          "tan sweater"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0074",
+    "visual_source_frame_id": "L30_V009_f0074",
+    "ocr_source_frame_id": "L30_V009_f0074",
+    "quality_flags": [],
+    "caption": "A person in a white coat and tan sweater speaks in an office setting.",
+    "detailed_caption": "This is a medium shot of one person wearing a white doctor coat and tan sweater, talking. The background shows a white cabinet filled with items and a potted plant with red fruits.",
+    "caption_vi": "Một người mặc áo blouse trắng và áo len nâu đang nói chuyện trong văn phòng.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người mặc áo blouse trắng và áo len nâu đang phát biểu. Phía sau là tủ trắng và cây cảnh có quả đỏ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.06,
+          0.0,
+          0.6910000000000001,
+          1.0
+        ],
+        "description": "a person wearing a white coat and tan sweater",
+        "description_vi": "một người mặc áo blouse trắng và áo len nâu",
+        "attributes": [
+          "white coat",
+          "tan sweater"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0075",
+    "visual_source_frame_id": "L30_V009_f0067",
+    "ocr_source_frame_id": "L30_V009_f0075",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up portrait of a female doctor in a white coat speaking in an office.",
+    "detailed_caption": "This medium shot shows a smiling female doctor wearing a white coat over a brown collared shirt, sitting in an office with white cabinets and a decorative plant in the background.",
+    "caption_vi": "Ảnh cận cảnh chân dung nữ bác sĩ mặc áo blouse trắng đang nói chuyện trong phòng làm việc.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nữ bác sĩ mặc áo blouse trắng khoác ngoài áo sơ mi nâu, đang nói chuyện trong văn phòng có tủ trắng và cây trang trí phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.155,
+          0.01,
+          0.76,
+          1.0
+        ],
+        "description": "a female doctor wearing a white coat and brown shirt",
+        "description_vi": "nữ bác sĩ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "female",
+          "doctor",
+          "white coat",
+          "brown shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0076",
+    "visual_source_frame_id": "L30_V009_f0076",
+    "ocr_source_frame_id": "L30_V009_f0076",
+    "quality_flags": [
+      "removed_inferred_demographic"
+    ],
+    "caption": "A male doctor in a white coat stands beside an patient lying on a medical bed.",
+    "detailed_caption": "This medium shot shows a male doctor in a white coat standing on the right, looking down at an male patient wearing a striped shirt lying on a medical examination bed.",
+    "caption_vi": "Nam bác sĩ mặc áo blouse trắng đứng cạnh bệnh nhân lớn tuổi đang nằm trên giường khám bệnh.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nam bác sĩ mặc áo blouse trắng đứng bên phải, đang nhìn xuống một bệnh nhân nam lớn tuổi mặc áo sọc đang nằm trên giường khám bệnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.08299999999999999,
+          0.632,
+          0.638,
+          0.982
+        ],
+        "description": "an patient lying on a medical bed in a striped shirt",
+        "description_vi": "bệnh nhân lớn tuổi mặc áo sọc đang nằm trên giường bệnh",
+        "attributes": [
+          "patient",
+          "lying"
+        ],
+        "action": "lying"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.508,
+          0.001,
+          0.9179999999999999,
+          1.0
+        ],
+        "description": "a male doctor in a white coat standing next to the bed",
+        "description_vi": "nam bác sĩ mặc áo blouse trắng đứng cạnh giường bệnh",
+        "attributes": [
+          "male",
+          "doctor",
+          "white coat"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0077",
+    "visual_source_frame_id": "L30_V009_f0077",
+    "ocr_source_frame_id": "L30_V009_f0077",
+    "quality_flags": [],
+    "caption": "A medical professional wearing gloves wraps a bandage around a patient's leg.",
+    "detailed_caption": "This close-up shot shows hands wearing medical gloves wrapping a white bandage around a patient's lower leg, which shows reddish marks and discoloration.",
+    "caption_vi": "Nhân viên y tế đeo găng tay đang quấn băng gạc quanh chân của bệnh nhân.",
+    "detailed_caption_vi": "Cảnh cận cảnh này ghi lại đôi tay mang găng tay y tế đang quấn lớp băng trắng quanh phần cẳng chân của bệnh nhân có nhiều vết đỏ và đổi màu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "leg_0",
+        "label": "leg",
+        "bbox": [
+          0.0,
+          0.33599999999999997,
+          0.755,
+          0.861
+        ],
+        "description": "a patient's lower leg with visible skin redness and bandage",
+        "description_vi": "cẳng chân bệnh nhân có vết đỏ trên da và băng gạc",
+        "attributes": [
+          "leg",
+          "wounded",
+          "bandaged"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.497,
+          0.0,
+          1.0,
+          0.927
+        ],
+        "description": "hands wearing medical gloves applying a bandage",
+        "description_vi": "đôi tay đeo găng tay y tế đang băng bó",
+        "attributes": [
+          "gloves",
+          "medical"
+        ],
+        "action": "bandaging"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "leg_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "leg_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0078",
+    "visual_source_frame_id": "L30_V009_f0078",
+    "ocr_source_frame_id": "L30_V009_f0078",
+    "quality_flags": [],
+    "caption": "A medical professional in gloves applies a white bandage to a patient's leg.",
+    "detailed_caption": "This close-up shot focuses on hands in medical gloves rolling a white gauze bandage around a patient's lower leg, which has visible red spots on the skin.",
+    "caption_vi": "Nhân viên y tế đeo găng tay đang cuộn băng gạc trắng quanh chân bệnh nhân.",
+    "detailed_caption_vi": "Cảnh cận cảnh này tập trung vào đôi tay mang găng tay y tế đang cuộn dải băng gạc trắng lên cẳng chân của bệnh nhân có nhiều đốm đỏ trên da.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "leg_0",
+        "label": "leg",
+        "bbox": [
+          0.0,
+          0.24000000000000002,
+          0.764,
+          0.7859999999999999
+        ],
+        "description": "a patient's lower leg with red spots and a white bandage",
+        "description_vi": "cẳng chân bệnh nhân có đốm đỏ và băng gạc trắng",
+        "attributes": [
+          "leg",
+          "bandaged"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.7150000000000001,
+          0.0,
+          1.0,
+          0.946
+        ],
+        "description": "hands wearing medical gloves holding a gauze roll",
+        "description_vi": "đôi tay mang găng tay y tế cầm cuộn băng gạc",
+        "attributes": [
+          "gloves",
+          "hands"
+        ],
+        "action": "bandaging"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0079",
+    "visual_source_frame_id": "L30_V009_f0079",
+    "ocr_source_frame_id": "L30_V009_f0079",
+    "quality_flags": [],
+    "caption": "A male doctor uses an ultrasound probe on a patient's leg in a clinic room.",
+    "detailed_caption": "This medium shot shows a male doctor in a white coat holding an ultrasound probe against the leg of a patient standing near a medical examination table in a bright room.",
+    "caption_vi": "Nam bác sĩ sử dụng đầu dò siêu âm trên chân bệnh nhân trong phòng khám.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại nam bác sĩ mặc áo blouse trắng đang cầm đầu dò siêu âm khám chân cho bệnh nhân đứng cạnh bàn khám trong phòng sáng sủa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.597,
+          1.0
+        ],
+        "description": "a male doctor in a white coat holding an ultrasound probe",
+        "description_vi": "nam bác sĩ mặc áo blouse trắng cầm đầu dò siêu âm",
+        "attributes": [
+          "male",
+          "doctor",
+          "white coat"
+        ],
+        "action": "examining"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.483,
+          0.0,
+          0.755,
+          1.0
+        ],
+        "description": "a patient in black clothes standing near a medical bed",
+        "description_vi": "bệnh nhân mặc đồ đen đứng cạnh giường bệnh",
+        "attributes": [
+          "patient",
+          "black clothes"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0080",
+    "visual_source_frame_id": "L30_V009_f0080",
+    "ocr_source_frame_id": "L30_V009_f0080",
+    "quality_flags": [],
+    "caption": "One medical worker wearing a blue surgical gown, surgical cap, and face mask looks down inside a brightly lit green-walled room.",
+    "detailed_caption": "A close-up shot shows one medical worker wearing a blue surgical gown, a light blue surgical cap, and a white face mask looking downward. The person is positioned in a brightly lit room with a solid green wall in the background.",
+    "caption_vi": "Một nhân viên y tế mặc áo phẫu thuật xanh, đội mũ trùm và đeo khẩu trang y tế đang cúi nhìn xuống trong căn phòng tường xanh.",
+    "detailed_caption_vi": "Cận cảnh một nhân viên y tế mặc áo choàng phẫu thuật màu xanh, đội mũ trùm đầu màu xanh nhạt và đeo khẩu trang trắng đang cúi nhìn xuống. Người này ở trong một căn phòng có tường màu xanh sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.231,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "one medical worker in blue surgical gown, surgical cap, and face mask",
+        "description_vi": "một nhân viên y tế mặc áo phẫu thuật màu xanh, đội mũ y tế và đeo khẩu trang",
+        "attributes": [
+          "person",
+          "medical worker",
+          "surgical gown",
+          "surgical cap",
+          "face mask"
+        ],
+        "action": "looking down"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0081",
+    "visual_source_frame_id": "L30_V009_f0080",
+    "ocr_source_frame_id": "L30_V009_f0081",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One medical worker wearing a blue surgical gown, surgical cap, and face mask looks down inside a brightly lit green-walled room.",
+    "detailed_caption": "A close-up shot shows one medical worker wearing a blue surgical gown, a light blue surgical cap, and a white face mask looking downward. The person is positioned in a brightly lit room with a solid green wall in the background.",
+    "caption_vi": "Một nhân viên y tế mặc áo phẫu thuật xanh, đội mũ trùm và đeo khẩu trang y tế đang cúi nhìn xuống trong căn phòng tường xanh.",
+    "detailed_caption_vi": "Cận cảnh một nhân viên y tế mặc áo choàng phẫu thuật màu xanh, đội mũ trùm đầu màu xanh nhạt và đeo khẩu trang trắng đang cúi nhìn xuống. Người này ở trong một căn phòng có tường màu xanh sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.231,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "one medical worker in blue surgical gown, surgical cap, and face mask",
+        "description_vi": "một nhân viên y tế mặc áo phẫu thuật màu xanh, đội mũ y tế và đeo khẩu trang",
+        "attributes": [
+          "person",
+          "medical worker",
+          "surgical gown",
+          "surgical cap",
+          "face mask"
+        ],
+        "action": "looking down"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0082",
+    "visual_source_frame_id": "L30_V009_f0082",
+    "ocr_source_frame_id": "L30_V009_f0082",
+    "quality_flags": [],
+    "caption": "One woman wearing a white doctor coat over a brown shirt speaks while sitting in front of a white bookshelf and decorative flowers.",
+    "detailed_caption": "A medium shot shows one woman wearing a white doctor coat over a brown collared shirt speaking directly to the camera. In the background, there is a white bookshelf containing framed certificates and a decorative flower arrangement with red blossoms.",
+    "caption_vi": "Một phụ nữ mặc áo blouse trắng khoác ngoài áo nâu đang nói chuyện khi ngồi trước giá sách và hoa trang trí.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại một phụ nữ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu đang phát biểu. Phía sau là tủ sách màu trắng có trưng bày các khung bằng khen và một bình hoa trang trí với những bông hoa đỏ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.20600000000000002,
+          0.0,
+          1.0,
+          0.51
+        ],
+        "description": "white bookshelf with books and framed certificates",
+        "description_vi": "kệ sách màu trắng có sách và khung bằng khen",
+        "attributes": [
+          "white",
+          "bookshelf"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.157,
+          0.009000000000000001,
+          0.76,
+          1.0
+        ],
+        "description": "one woman in white doctor coat and brown collared shirt",
+        "description_vi": "một phụ nữ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "person",
+          "woman",
+          "doctor coat",
+          "collared shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bookshelf_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0083",
+    "visual_source_frame_id": "L30_V009_f0082",
+    "ocr_source_frame_id": "L30_V009_f0083",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One woman wearing a white doctor coat over a brown shirt speaks while sitting in front of a white bookshelf and decorative flowers.",
+    "detailed_caption": "A medium shot shows one woman wearing a white doctor coat over a brown collared shirt speaking directly to the camera. In the background, there is a white bookshelf containing framed certificates and a decorative flower arrangement with red blossoms.",
+    "caption_vi": "Một phụ nữ mặc áo blouse trắng khoác ngoài áo nâu đang nói chuyện khi ngồi trước giá sách và hoa trang trí.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại một phụ nữ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu đang phát biểu. Phía sau là tủ sách màu trắng có trưng bày các khung bằng khen và một bình hoa trang trí với những bông hoa đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.20600000000000002,
+          0.0,
+          1.0,
+          0.51
+        ],
+        "description": "white bookshelf with books and framed certificates",
+        "description_vi": "kệ sách màu trắng có sách và khung bằng khen",
+        "attributes": [
+          "white",
+          "bookshelf"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.157,
+          0.009000000000000001,
+          0.76,
+          1.0
+        ],
+        "description": "one woman in white doctor coat and brown collared shirt",
+        "description_vi": "một phụ nữ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "person",
+          "woman",
+          "doctor coat",
+          "collared shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bookshelf_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0084",
+    "visual_source_frame_id": "L30_V009_f0082",
+    "ocr_source_frame_id": "L30_V009_f0084",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One woman wearing a white doctor coat over a brown shirt speaks while sitting in front of a white bookshelf and decorative flowers.",
+    "detailed_caption": "A medium shot shows one woman wearing a white doctor coat over a brown collared shirt speaking directly to the camera. In the background, there is a white bookshelf containing framed certificates and a decorative flower arrangement with red blossoms.",
+    "caption_vi": "Một phụ nữ mặc áo blouse trắng khoác ngoài áo nâu đang nói chuyện khi ngồi trước giá sách và hoa trang trí.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại một phụ nữ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu đang phát biểu. Phía sau là tủ sách màu trắng có trưng bày các khung bằng khen và một bình hoa trang trí với những bông hoa đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.20600000000000002,
+          0.0,
+          1.0,
+          0.51
+        ],
+        "description": "white bookshelf with books and framed certificates",
+        "description_vi": "kệ sách màu trắng có sách và khung bằng khen",
+        "attributes": [
+          "white",
+          "bookshelf"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.157,
+          0.009000000000000001,
+          0.76,
+          1.0
+        ],
+        "description": "one woman in white doctor coat and brown collared shirt",
+        "description_vi": "một phụ nữ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "person",
+          "woman",
+          "doctor coat",
+          "collared shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bookshelf_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0085",
+    "visual_source_frame_id": "L30_V009_f0082",
+    "ocr_source_frame_id": "L30_V009_f0085",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One woman wearing a white doctor coat over a brown shirt speaks while sitting in front of a white bookshelf and decorative flowers.",
+    "detailed_caption": "A medium shot shows one woman wearing a white doctor coat over a brown collared shirt speaking directly to the camera. In the background, there is a white bookshelf containing framed certificates and a decorative flower arrangement with red blossoms.",
+    "caption_vi": "Một phụ nữ mặc áo blouse trắng khoác ngoài áo nâu đang nói chuyện khi ngồi trước giá sách và hoa trang trí.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại một phụ nữ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu đang phát biểu. Phía sau là tủ sách màu trắng có trưng bày các khung bằng khen và một bình hoa trang trí với những bông hoa đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.20600000000000002,
+          0.0,
+          1.0,
+          0.51
+        ],
+        "description": "white bookshelf with books and framed certificates",
+        "description_vi": "kệ sách màu trắng có sách và khung bằng khen",
+        "attributes": [
+          "white",
+          "bookshelf"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.157,
+          0.009000000000000001,
+          0.76,
+          1.0
+        ],
+        "description": "one woman in white doctor coat and brown collared shirt",
+        "description_vi": "một phụ nữ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "person",
+          "woman",
+          "doctor coat",
+          "collared shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bookshelf_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0086",
+    "visual_source_frame_id": "L30_V009_f0082",
+    "ocr_source_frame_id": "L30_V009_f0086",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One woman wearing a white doctor coat over a brown shirt speaks while sitting in front of a white bookshelf and decorative flowers.",
+    "detailed_caption": "A medium shot shows one woman wearing a white doctor coat over a brown collared shirt speaking directly to the camera. In the background, there is a white bookshelf containing framed certificates and a decorative flower arrangement with red blossoms.",
+    "caption_vi": "Một phụ nữ mặc áo blouse trắng khoác ngoài áo nâu đang nói chuyện khi ngồi trước giá sách và hoa trang trí.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại một phụ nữ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu đang phát biểu. Phía sau là tủ sách màu trắng có trưng bày các khung bằng khen và một bình hoa trang trí với những bông hoa đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.20600000000000002,
+          0.0,
+          1.0,
+          0.51
+        ],
+        "description": "white bookshelf with books and framed certificates",
+        "description_vi": "kệ sách màu trắng có sách và khung bằng khen",
+        "attributes": [
+          "white",
+          "bookshelf"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.157,
+          0.009000000000000001,
+          0.76,
+          1.0
+        ],
+        "description": "one woman in white doctor coat and brown collared shirt",
+        "description_vi": "một phụ nữ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "person",
+          "woman",
+          "doctor coat",
+          "collared shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bookshelf_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0087",
+    "visual_source_frame_id": "L30_V009_f0082",
+    "ocr_source_frame_id": "L30_V009_f0087",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One woman wearing a white doctor coat over a brown shirt speaks while sitting in front of a white bookshelf and decorative flowers.",
+    "detailed_caption": "A medium shot shows one woman wearing a white doctor coat over a brown collared shirt speaking directly to the camera. In the background, there is a white bookshelf containing framed certificates and a decorative flower arrangement with red blossoms.",
+    "caption_vi": "Một phụ nữ mặc áo blouse trắng khoác ngoài áo nâu đang nói chuyện khi ngồi trước giá sách và hoa trang trí.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại một phụ nữ mặc áo blouse trắng khoác ngoài áo sơ mi cổ bẻ màu nâu đang phát biểu. Phía sau là tủ sách màu trắng có trưng bày các khung bằng khen và một bình hoa trang trí với những bông hoa đỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bookshelf_0",
+        "label": "bookshelf",
+        "bbox": [
+          0.20600000000000002,
+          0.0,
+          1.0,
+          0.51
+        ],
+        "description": "white bookshelf with books and framed certificates",
+        "description_vi": "kệ sách màu trắng có sách và khung bằng khen",
+        "attributes": [
+          "white",
+          "bookshelf"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.157,
+          0.009000000000000001,
+          0.76,
+          1.0
+        ],
+        "description": "one woman in white doctor coat and brown collared shirt",
+        "description_vi": "một phụ nữ mặc áo blouse trắng và áo sơ mi nâu",
+        "attributes": [
+          "person",
+          "woman",
+          "doctor coat",
+          "collared shirt"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bookshelf_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bookshelf_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0088",
+    "visual_source_frame_id": "L30_V009_f0088",
+    "ocr_source_frame_id": "L30_V009_f0088",
+    "quality_flags": [],
+    "caption": "One man wearing glasses and a white doctor coat stands indoors next to a printer.",
+    "detailed_caption": "A medium shot shows one man wearing eyeglasses and a white doctor coat. He has short dark hair and is looking forward. A printer is visible on the right side of the frame against a plain background.",
+    "caption_vi": "Một người nam đeo kính và mặc áo blouse trắng đứng trong nhà cạnh máy in.",
+    "detailed_caption_vi": "Ảnh trung cảnh một người nam đeo kính cận và mặc áo khoác blouse trắng đang nhìn về phía trước. Phía bên phải là một chiếc máy in đặt trên bàn trong không gian sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.132,
+          0.032,
+          0.775,
+          1.0
+        ],
+        "description": "one man wearing glasses and a white doctor coat",
+        "description_vi": "một người nam đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "person",
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "looking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.591,
+          1.0,
+          1.0
+        ],
+        "description": "white printer on a desk",
+        "description_vi": "máy in màu trắng đặt trên bàn",
+        "attributes": [
+          "white",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0089",
+    "visual_source_frame_id": "L30_V009_f0088",
+    "ocr_source_frame_id": "L30_V009_f0089",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One man wearing glasses and a white doctor coat stands indoors next to a printer.",
+    "detailed_caption": "A medium shot shows one man wearing eyeglasses and a white doctor coat. He has short dark hair and is looking forward. A printer is visible on the right side of the frame against a plain background.",
+    "caption_vi": "Một người nam đeo kính và mặc áo blouse trắng đứng trong nhà cạnh máy in.",
+    "detailed_caption_vi": "Ảnh trung cảnh một người nam đeo kính cận và mặc áo khoác blouse trắng đang nhìn về phía trước. Phía bên phải là một chiếc máy in đặt trên bàn trong không gian sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.132,
+          0.032,
+          0.775,
+          1.0
+        ],
+        "description": "one man wearing glasses and a white doctor coat",
+        "description_vi": "một người nam đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "person",
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "looking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.591,
+          1.0,
+          1.0
+        ],
+        "description": "white printer on a desk",
+        "description_vi": "máy in màu trắng đặt trên bàn",
+        "attributes": [
+          "white",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0090",
+    "visual_source_frame_id": "L30_V009_f0088",
+    "ocr_source_frame_id": "L30_V009_f0090",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One man wearing glasses and a white doctor coat stands indoors next to a printer.",
+    "detailed_caption": "A medium shot shows one man wearing eyeglasses and a white doctor coat. He has short dark hair and is looking forward. A printer is visible on the right side of the frame against a plain background.",
+    "caption_vi": "Một người nam đeo kính và mặc áo blouse trắng đứng trong nhà cạnh máy in.",
+    "detailed_caption_vi": "Ảnh trung cảnh một người nam đeo kính cận và mặc áo khoác blouse trắng đang nhìn về phía trước. Phía bên phải là một chiếc máy in đặt trên bàn trong không gian sáng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.132,
+          0.032,
+          0.775,
+          1.0
+        ],
+        "description": "one man wearing glasses and a white doctor coat",
+        "description_vi": "một người nam đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "person",
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "looking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.8029999999999999,
+          0.591,
+          1.0,
+          1.0
+        ],
+        "description": "white printer on a desk",
+        "description_vi": "máy in màu trắng đặt trên bàn",
+        "attributes": [
+          "white",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "printer_0"
+      },
+      {
+        "subject_id": "printer_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0091",
+    "visual_source_frame_id": "L30_V009_f0091",
+    "ocr_source_frame_id": "L30_V009_f0091",
+    "quality_flags": [],
+    "caption": "One man wearing glasses and a white medical coat looks forward in an office setting.",
+    "detailed_caption": "A close-up shot shows one man with short dark hair, wearing glasses and a white medical coat with a lapel microphone attached. He is positioned indoors with a light-colored background.",
+    "caption_vi": "Một người nam đeo kính và mặc áo blouse trắng nhìn về phía trước trong văn phòng.",
+    "detailed_caption_vi": "Cận cảnh một người nam tóc ngắn đen, đeo kính và mặc áo khoác blouse trắng có gắn mic cài áo nhỏ. Phía sau là bức tường màu sáng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.061,
+          0.0,
+          0.766,
+          1.0
+        ],
+        "description": "one man with glasses wearing a white medical coat and a lapel mic",
+        "description_vi": "một người nam đeo kính mặc áo blouse trắng có gắn mic",
+        "attributes": [
+          "person",
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0092",
+    "visual_source_frame_id": "L30_V009_f0092",
+    "ocr_source_frame_id": "L30_V009_f0092",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white medical coat speaks in an office.",
+    "detailed_caption": "This is a medium shot of a man wearing glasses and a white medical coat over a collared shirt. He is speaking while facing the camera. In the background on the right, there is a white printer, a framed picture, and a small statue on a desk.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện trong văn phòng.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông đeo kính, mặc áo blouse trắng khoác ngoài áo sơ mi. Ông ấy đang nói chuyện hướng về phía máy quay. Phía sau bên phải là máy in trắng và một bức tranh đóng khung.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.041999999999999996,
+          0.0,
+          0.612,
+          1.0
+        ],
+        "description": "a man wearing glasses and a white medical coat",
+        "description_vi": "một người đàn ông đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat",
+          "collared shirt"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.605,
+          0.41100000000000003,
+          0.933,
+          0.78
+        ],
+        "description": "a white office printer on a desk",
+        "description_vi": "máy in màu trắng trên bàn làm việc",
+        "attributes": [
+          "white",
+          "electronic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0093",
+    "visual_source_frame_id": "L30_V009_f0093",
+    "ocr_source_frame_id": "L30_V009_f0093",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white medical coat speaks in an office.",
+    "detailed_caption": "This is a medium shot of a man wearing glasses and a white medical coat over a white shirt. He is speaking directly to the camera. A printer and a framed picture are visible on a desk in the background.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông đeo kính, mặc áo blouse trắng và sơ mi trắng đang phát biểu. Phía sau có máy in và khung ảnh đặt trên bàn.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.041999999999999996,
+          0.0,
+          0.615,
+          1.0
+        ],
+        "description": "a man wearing glasses and a white medical coat",
+        "description_vi": "một người đàn ông đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0094",
+    "visual_source_frame_id": "L30_V009_f0094",
+    "ocr_source_frame_id": "L30_V009_f0094",
+    "quality_flags": [],
+    "caption": "A man in a white medical coat and glasses speaks in an office.",
+    "detailed_caption": "This is a medium shot of a man wearing glasses and a white medical coat. He is talking in an office environment with a printer and a framed portrait visible in the background.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện trong phòng làm việc.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện trong văn phòng. Phía sau có máy in và khung ảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.034,
+          0.0,
+          0.6,
+          1.0
+        ],
+        "description": "a man in a white medical coat and glasses",
+        "description_vi": "một người đàn ông mặc áo blouse trắng và đeo kính",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0095",
+    "visual_source_frame_id": "L30_V009_f0095",
+    "ocr_source_frame_id": "L30_V009_f0095",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white medical coat speaks in an office setting.",
+    "detailed_caption": "This is a medium shot of a man wearing glasses and a white doctor coat, positioned on the left side of the frame. He is speaking. A printer and framed picture are on a desk in the background.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện trong văn phòng.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện. Bối cảnh phía sau có bàn làm việc, máy in và khung ảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.038,
+          0.0,
+          0.608,
+          1.0
+        ],
+        "description": "a man wearing glasses and a white medical coat",
+        "description_vi": "một người đàn ông đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0096",
+    "visual_source_frame_id": "L30_V009_f0096",
+    "ocr_source_frame_id": "L30_V009_f0096",
+    "quality_flags": [],
+    "caption": "A man in a white medical coat and glasses speaks in an office.",
+    "detailed_caption": "This is a medium shot of a man wearing glasses and a white medical coat over a white shirt. He is speaking. A printer, keyboard, and framed picture are visible on the desk behind him.",
+    "caption_vi": "Một người đàn ông đeo kính mặc áo blouse trắng đang phát biểu.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông đeo kính, mặc áo blouse trắng đang nói chuyện. Phía sau là bàn làm việc có máy in và bàn phím.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.038,
+          0.0,
+          0.615,
+          1.0
+        ],
+        "description": "a man in a white medical coat and glasses",
+        "description_vi": "một người đàn ông mặc áo blouse trắng và đeo kính",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0097",
+    "visual_source_frame_id": "L30_V009_f0097",
+    "ocr_source_frame_id": "L30_V009_f0097",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white medical coat speaks in an office.",
+    "detailed_caption": "This is a medium shot of a man in a white medical coat and glasses, speaking to the camera. The background includes a white printer and a framed picture on a desk.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông mặc áo blouse trắng và đeo kính đang nói chuyện. Phía sau có máy in và khung ảnh trên bàn.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.041999999999999996,
+          0.0,
+          0.612,
+          1.0
+        ],
+        "description": "a man wearing glasses and a white medical coat",
+        "description_vi": "một người đàn ông đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0098",
+    "visual_source_frame_id": "L30_V009_f0092",
+    "ocr_source_frame_id": "L30_V009_f0098",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One man wearing glasses and a white doctor coat sits at a desk with a printer and a framed picture.",
+    "detailed_caption": "A medium shot shows one man wearing eyeglasses and a white doctor coat. On the desk to his right are a white printer, a framed portrait, and a small figurine.",
+    "caption_vi": "Một người nam đeo kính và mặc áo blouse trắng ngồi bên bàn làm việc có máy in và khung ảnh.",
+    "detailed_caption_vi": "Ảnh trung cảnh một người nam đeo kính và mặc áo blouse trắng đang ngồi. Trên bàn làm việc bên cạnh anh có một chiếc máy in màu trắng, một bức ảnh có khung vàng và một bức tượng nhỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "framed_picture_0",
+        "label": "framed picture",
+        "bbox": [
+          0.759,
+          0.141,
+          0.967,
+          0.47100000000000003
+        ],
+        "description": "framed portrait in gold frame",
+        "description_vi": "khung ảnh có viền màu vàng",
+        "attributes": [
+          "gold",
+          "framed picture"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.040999999999999995,
+          0.0,
+          0.611,
+          1.0
+        ],
+        "description": "one man wearing glasses and a white doctor coat",
+        "description_vi": "một người nam đeo kính mặc áo blouse trắng",
+        "attributes": [
+          "person",
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.603,
+          0.408,
+          0.9179999999999999,
+          0.78
+        ],
+        "description": "white printer on desk",
+        "description_vi": "máy in màu trắng trên bàn",
+        "attributes": [
+          "white",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "framed_picture_0"
+      },
+      {
+        "subject_id": "framed_picture_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0099",
+    "visual_source_frame_id": "L30_V009_f0099",
+    "ocr_source_frame_id": "L30_V009_f0099",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white medical coat speaks in an office.",
+    "detailed_caption": "This is a medium shot of a man in a white medical coat and glasses, speaking. The background shows an office desk with a white printer and a framed picture.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện trong văn phòng.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông mặc áo blouse trắng và đeo kính đang nói chuyện. Phía sau là bàn làm việc có máy in và bức ảnh đóng khung.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.040999999999999995,
+          0.0,
+          0.612,
+          1.0
+        ],
+        "description": "a man wearing glasses and a white medical coat",
+        "description_vi": "một người đàn ông đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0100",
+    "visual_source_frame_id": "L30_V009_f0100",
+    "ocr_source_frame_id": "L30_V009_f0100",
+    "quality_flags": [],
+    "caption": "A man wearing glasses and a white medical coat speaks in an office.",
+    "detailed_caption": "This is a medium shot of a man in a white medical coat and glasses, speaking. A printer and a framed picture are on the desk in the background.",
+    "caption_vi": "Một người đàn ông đeo kính và mặc áo blouse trắng đang nói chuyện.",
+    "detailed_caption_vi": "Đây là khung hình trung cảnh của một người đàn ông mặc áo blouse trắng đeo kính đang nói chuyện. Phía sau có máy in và khung ảnh đặt trên bàn.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.024,
+          0.0,
+          0.612,
+          1.0
+        ],
+        "description": "a man wearing glasses and a white medical coat",
+        "description_vi": "một người đàn ông đeo kính và mặc áo blouse trắng",
+        "attributes": [
+          "glasses",
+          "white coat"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V009_f0101",
+    "visual_source_frame_id": "L30_V009_f0092",
+    "ocr_source_frame_id": "L30_V009_f0101",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "One man wearing glasses and a white doctor coat sits at a desk with a printer and a framed picture.",
+    "detailed_caption": "A medium shot shows one man wearing eyeglasses and a white doctor coat. On the desk to his right are a white printer, a framed portrait, and a small figurine.",
+    "caption_vi": "Một người nam đeo kính và mặc áo blouse trắng ngồi bên bàn làm việc có máy in và khung ảnh.",
+    "detailed_caption_vi": "Ảnh trung cảnh một người nam đeo kính và mặc áo blouse trắng đang ngồi. Trên bàn làm việc bên cạnh anh có một chiếc máy in màu trắng, một bức ảnh có khung vàng và một bức tượng nhỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "framed_picture_0",
+        "label": "framed picture",
+        "bbox": [
+          0.759,
+          0.141,
+          0.967,
+          0.47100000000000003
+        ],
+        "description": "framed portrait in gold frame",
+        "description_vi": "khung ảnh có viền màu vàng",
+        "attributes": [
+          "gold",
+          "framed picture"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.040999999999999995,
+          0.0,
+          0.611,
+          1.0
+        ],
+        "description": "one man wearing glasses and a white doctor coat",
+        "description_vi": "một người nam đeo kính mặc áo blouse trắng",
+        "attributes": [
+          "person",
+          "man",
+          "glasses",
+          "white coat"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "printer_0",
+        "label": "printer",
+        "bbox": [
+          0.603,
+          0.408,
+          0.9179999999999999,
+          0.78
+        ],
+        "description": "white printer on desk",
+        "description_vi": "máy in màu trắng trên bàn",
+        "attributes": [
+          "white",
+          "printer"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "framed_picture_0"
+      },
+      {
+        "subject_id": "framed_picture_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0102",
+    "visual_source_frame_id": "L30_V009_f0102",
+    "ocr_source_frame_id": "L30_V009_f0102",
+    "quality_flags": [],
+    "caption": "A split-screen shows a surgical light on the left and a woman speaking on the right with overlaid pink text boxes.",
+    "detailed_caption": "A split-screen composition displays a white surgical light fixture with multiple illuminated circular bulbs on the left side. On the right side, a woman with dark hair and red lipstick speaks directly to the camera against a white background, accompanied by a pink banner containing Vietnamese text at the bottom.",
+    "caption_vi": "Màn hình chia đôi hiển thị đèn phẫu thuật bên trái và một phụ nữ đang nói chuyện bên phải có hộp chữ hồng phía dưới.",
+    "detailed_caption_vi": "Bố cục màn hình chia đôi cho thấy một hệ thống đèn phẫu thuật màu trắng với các bóng tròn đang phát sáng ở bên trái. Phía bên phải là một phụ nữ tóc đen thoa son đỏ đang nhìn vào máy ảnh, phía dưới có một khung màu hồng chứa chữ tiếng Việt.",
+    "ocr_text": "tuoitreTV Khi nào mẹ không được cho bé bú?",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.475,
+          0.0,
+          0.95,
+          0.7390000000000001
+        ],
+        "description": "woman with dark hair and red lipstick speaking",
+        "description_vi": "phụ nữ tóc đen thoa son đỏ đang nói chuyện",
+        "attributes": [
+          "person",
+          "woman",
+          "dark hair",
+          "red lipstick"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "surgical_light_0",
+        "label": "surgical light",
+        "bbox": [
+          0.0,
+          0.0,
+          0.42699999999999994,
+          0.552
+        ],
+        "description": "white surgical light with multiple circular lamps",
+        "description_vi": "đèn phẫu thuật màu trắng có nhiều bóng tròn",
+        "attributes": [
+          "white",
+          "surgical light"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "surgical_light_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "surgical_light_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0103",
+    "visual_source_frame_id": "L30_V009_f0103",
+    "ocr_source_frame_id": "L30_V009_f0103",
+    "quality_flags": [],
+    "caption": "A split-screen shows a medical procedure on the left with a blurred area and a woman speaking on the right.",
+    "detailed_caption": "A split-screen view presents a medical procedure scene on the left, where a worker in blue scrubs works near surgical equipment and a large white censorship box covers the center. On the right, a woman with dark hair and red lipstick speaks in front of a white wall, with a pink text banner below.",
+    "caption_vi": "Màn hình chia đôi cho thấy cảnh y tế có khu vực bị che mờ bên trái và một phụ nữ đang nói chuyện bên phải.",
+    "detailed_caption_vi": "Màn hình chia đôi hiển thị một cảnh phòng khám ở bên trái với nhân viên mặc đồ xanh đang thao tác cạnh thiết bị y tế và một hộp màu trắng lớn che khuất một phần. Bên phải là phụ nữ tóc đen đang nói chuyện trước nền trắng.",
+    "ocr_text": "tuoitreTV Khi nào mẹ không được cho bé bú?",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.11000000000000001,
+          0.386,
+          0.316,
+          0.883
+        ],
+        "description": "medical worker in blue scrubs and cap",
+        "description_vi": "nhân viên y tế mặc đồ phẫu thuật xanh và đội mũ",
+        "attributes": [
+          "person",
+          "medical worker",
+          "blue scrubs"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.46799999999999997,
+          0.0,
+          0.9470000000000001,
+          0.7390000000000001
+        ],
+        "description": "woman with dark hair and red lipstick speaking",
+        "description_vi": "phụ nữ tóc đen thoa son đỏ đang nói chuyện",
+        "attributes": [
+          "person",
+          "woman",
+          "dark hair",
+          "red lipstick"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0104",
+    "visual_source_frame_id": "L30_V009_f0104",
+    "ocr_source_frame_id": "L30_V009_f0104",
+    "quality_flags": [],
+    "caption": "A split-screen shows a medical worker in blue scrubs on the left and a woman speaking on the right with a purple text overlay.",
+    "detailed_caption": "A split-screen shows a partial view of a medical worker wearing blue scrubs and a surgical mask on the left, with a green drape and blue oxygen tanks in the background. On the right, a woman speaks directly to the camera with a purple text banner overlaid.",
+    "caption_vi": "Màn hình chia đôi hiển thị nhân viên y tế mặc đồ xanh bên trái và một phụ nữ đang nói chuyện bên phải kèm hộp chữ màu tím.",
+    "detailed_caption_vi": "Màn hình chia đôi cho thấy góc nhìn một phần nhân viên y tế mặc đồ xanh và đeo khẩu trang ở bên trái, phía sau có tấm vải xanh và bình oxy. Bên phải là người phụ nữ đang phát biểu trước ống kính với dải chữ màu tím.",
+    "ocr_text": "tuoitreTV mạch bác ở đâu Tầm soát ung thư cổ tử cung: làm xét nghiệm gì",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.153,
+          0.734
+        ],
+        "description": "medical worker in blue scrubs and surgical mask",
+        "description_vi": "nhân viên y tế mặc đồ xanh và đeo khẩu trang y tế",
+        "attributes": [
+          "person",
+          "medical worker",
+          "blue scrubs",
+          "surgical mask"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.509,
+          0.0,
+          0.858,
+          0.7030000000000001
+        ],
+        "description": "woman with dark bob haircut speaking",
+        "description_vi": "phụ nữ tóc ngắn ngang vai đang nói chuyện",
+        "attributes": [
+          "person",
+          "woman",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0105",
+    "visual_source_frame_id": "L30_V009_f0105",
+    "ocr_source_frame_id": "L30_V009_f0105",
+    "quality_flags": [],
+    "caption": "A split-screen video shows a receptionist at a desk on the left and a person talking on the right.",
+    "detailed_caption": "This is a split-screen video. The left panel shows a receptionist wearing a dark red shirt and a face mask sitting at a reception desk beneath a sign. The right panel shows a close-up of a person wearing a brown sweater talking.",
+    "caption_vi": "Video chia đôi màn hình hiển thị lễ tân ở bàn tiếp đón bên trái và một người đang nói chuyện bên phải.",
+    "detailed_caption_vi": "Đây là video màn hình chia đôi. Bảng bên trái hiển thị nhân viên lễ tân mặc áo đỏ sẫm đeo khẩu trang ngồi tại bàn tiếp tân dưới biển hiệu. Bảng bên phải hiển thị cận cảnh một người mặc áo len màu nâu đang nói chuyện.",
+    "ocr_text": "NG KHÁM MẠCH MÁU LÊ THANH PHONG tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.173,
+          0.606,
+          0.322,
+          0.8989999999999999
+        ],
+        "description": "a receptionist wearing a dark red shirt and a face mask",
+        "description_vi": "nhân viên lễ tân mặc áo đỏ sẫm và đeo khẩu trang",
+        "attributes": [
+          "face mask",
+          "dark red shirt"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.42699999999999994,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a person wearing a brown sweater",
+        "description_vi": "một người mặc áo len màu nâu",
+        "attributes": [
+          "brown sweater"
+        ],
+        "action": "talking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0106",
+    "visual_source_frame_id": "L30_V009_f0106",
+    "ocr_source_frame_id": "L30_V009_f0106",
+    "quality_flags": [],
+    "caption": "A split-screen shows a profile view of a doctor at a desk on the left and a woman speaking on the right.",
+    "detailed_caption": "A split-screen shows a profile view of a person wearing a white doctor coat sitting at a desk on the left. On the right, a woman with dark hair and red lipstick speaks in front of a white background with green overlay text.",
+    "caption_vi": "Màn hình chia đôi hiển thị góc nghiêng bác sĩ ngồi bên bàn làm việc bên trái và phụ nữ đang nói chuyện bên phải.",
+    "detailed_caption_vi": "Màn hình chia đôi cho thấy góc nghiêng của một người mặc áo blouse trắng đang ngồi bàn làm việc ở bên trái. Phía bên phải là người phụ nữ tóc đen son đỏ đang nói chuyện trước nền trắng có chữ xanh.",
+    "ocr_text": "tuoitreTV và MIỆN DỊCH của trẻ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.42699999999999994,
+          1.0
+        ],
+        "description": "person in white doctor coat sitting at desk",
+        "description_vi": "người mặc áo blouse trắng ngồi ở bàn làm việc",
+        "attributes": [
+          "person",
+          "doctor coat"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.5519999999999999,
+          0.103,
+          0.9890000000000001,
+          1.0
+        ],
+        "description": "woman with dark hair speaking to camera",
+        "description_vi": "phụ nữ tóc đen đang nói chuyện trước ống kính",
+        "attributes": [
+          "person",
+          "woman",
+          "dark hair"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0107",
+    "visual_source_frame_id": "L30_V009_f0107",
+    "ocr_source_frame_id": "L30_V009_f0107",
+    "quality_flags": [],
+    "caption": "A split-screen shows a framed calligraphy artwork with gold lettering on a red background on the left and a woman speaking on the right.",
+    "detailed_caption": "A split-screen displays a diamond-shaped red framed artwork with gold Vietnamese calligraphy on the left. On the right, part of a woman's face and shoulder is visible against a white background with green text at the top.",
+    "caption_vi": "Màn hình chia đôi hiển thị bức tranh thư pháp chữ vàng nền đỏ trong khung hình thoi bên trái và phụ nữ đang nói chuyện bên phải.",
+    "detailed_caption_vi": "Màn hình chia đôi cho thấy một bức tranh chữ thư pháp màu vàng trên nền đỏ đặt trong khung kính hình thoi ở bên trái. Phía bên phải là phần đầu và vai của một phụ nữ trước nền sáng.",
+    "ocr_text": "tuoitreTV đối v và MIỄ",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "framed_artwork_0",
+        "label": "framed artwork",
+        "bbox": [
+          0.0,
+          0.009000000000000001,
+          0.72,
+          1.0
+        ],
+        "description": "diamond-shaped red frame with gold calligraphy",
+        "description_vi": "khung tranh hình thoi màu đỏ có chữ thư pháp vàng",
+        "attributes": [
+          "red",
+          "gold",
+          "framed artwork"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.9199999999999999,
+          0.42800000000000005,
+          1.0,
+          1.0
+        ],
+        "description": "part of a woman's head and shoulder",
+        "description_vi": "một phần đầu và vai của phụ nữ",
+        "attributes": [
+          "person",
+          "woman"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "framed_artwork_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "framed_artwork_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V009_f0108",
+    "visual_source_frame_id": "L30_V009_f0108",
+    "ocr_source_frame_id": "L30_V009_f0108",
+    "quality_flags": [],
+    "caption": "A split-screen shows a close-up of a blue surgical cap on the left and a woman's face on the right with a green credit banner.",
+    "detailed_caption": "A split-screen displays a close-up view of someone wearing a blue surgical cap on the left, with a light blue arrow icon and a green author credit banner at the bottom. On the right, part of a woman's face is visible against a white background.",
+    "caption_vi": "Màn hình chia đôi hiển thị cận cảnh mũ phẫu thuật màu xanh bên trái và một phần khuôn mặt phụ nữ bên phải kèm băng thông tin xanh lá.",
+    "detailed_caption_vi": "Màn hình chia đôi cho thấy cận cảnh phần đầu đội mũ phẫu thuật màu xanh ở bên trái, bên dưới có biểu tượng mũi tên xanh và băng thông tin tác giả màu xanh lá. Phía bên phải là một phần khuôn mặt phụ nữ.",
+    "ocr_text": "tuoitreTV Tác giả: Thanh Hòa",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.0,
+          0.717,
+          1.0
+        ],
+        "description": "person wearing a blue surgical cap",
+        "description_vi": "người đội mũ phẫu thuật màu xanh",
+        "attributes": [
+          "person",
+          "surgical cap"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.922,
+          0.431,
+          1.0,
+          1.0
+        ],
+        "description": "part of a woman's face",
+        "description_vi": "một phần khuôn mặt của phụ nữ",
+        "attributes": [
+          "person",
+          "woman"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  }
+]

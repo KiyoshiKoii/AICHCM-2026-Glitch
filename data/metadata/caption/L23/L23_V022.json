@@ -1,0 +1,5225 @@
+[
+  {
+    "frame_id": "L23_V022_f0001",
+    "visual_source_frame_id": "L23_V022_f0001",
+    "ocr_source_frame_id": "L23_V022_f0001",
+    "quality_flags": [],
+    "caption": "An aerial view shows a long line of cyclists riding down a wide multi-lane city street flanked by buildings and trees.",
+    "detailed_caption": "An elevated wide shot captures a long single-file line of cyclists riding down a wide asphalt avenue in a city. The roadway is marked with white traffic arrows and divided by a central green median with trees. On the right side, a large white multi-story commercial building with red signage stands next to the street.",
+    "caption_vi": "Góc nhìn trên cao cho thấy một đoàn xe đạp nối đuôi nhau di chuyển trên đại lộ rộng rãi giữa thành phố.",
+    "detailed_caption_vi": "Khung cảnh trên cao từ góc rộng ghi lại một hàng xe đạp đơn dài đang di chuyển trên đại lộ nhựa đường rộng trong thành phố. Lòng đường có kẻ vạch mũi tên giao thông trắng và được chia bằng dải phân cách xanh có cây cối. Phía bên phải, một tòa nhà thương mại nhiều tầng màu trắng với biển hiệu đỏ nằm dọc theo con đường.",
+    "ocr_text": "34° CHẮNG 22 03:11:16 3.1 Km 1 VIB RITAVO DEPOT HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.73,
+          0.128,
+          1.0,
+          0.7569999999999999
+        ],
+        "description": "a large multi-story white commercial building with red signage",
+        "description_vi": "một tòa nhà thương mại màu trắng nhiều tầng lớn có biển hiệu đỏ",
+        "attributes": [
+          "white",
+          "multi-story",
+          "commercial"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.492,
+          0.77,
+          0.518,
+          0.8430000000000001
+        ],
+        "description": "a silver car driving on the right lane",
+        "description_vi": "một chiếc ô tô màu bạc đang chạy trên làn đường bên phải",
+        "attributes": [
+          "silver",
+          "moving"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "car_1",
+        "label": "car",
+        "bbox": [
+          0.8560000000000001,
+          0.588,
+          1.0,
+          0.715
+        ],
+        "description": "a white car parked along the right side of the street",
+        "description_vi": "một chiếc ô tô màu trắng đậu dọc theo lề phải của đường phố",
+        "attributes": [
+          "white",
+          "parked"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "car_1"
+      },
+      {
+        "subject_id": "car_1",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0002",
+    "visual_source_frame_id": "L23_V022_f0002",
+    "ocr_source_frame_id": "L23_V022_f0002",
+    "quality_flags": [],
+    "caption": "An aerial shot shows a group of cyclists riding in single file across a pedestrian crosswalk on a city street.",
+    "detailed_caption": "An elevated shot shows a group of cyclists in white and dark jerseys riding single file past a pedestrian crosswalk on a multi-lane city street. Parked cars line the left side next to a sidewalk with grouped spectators and motorcycles. A large black electronic display board stands near the green median on the left.",
+    "caption_vi": "Góc quay trên cao cho thấy nhóm vận động viên xe đạp nối đuôi nhau qua vạch sang đường trên phố.",
+    "detailed_caption_vi": "Ảnh chụp từ trên cao cho thấy nhóm vận động viên xe đạp mặc áo trắng và áo tối màu đang nối đuôi nhau đi qua vạch sang đường cho người đi bộ trên đường phố rộng. Các ô tô đậu dọc bên trái cạnh vỉa hè có đông khán giả và xe máy. Một bảng điện tử màu đen lớn đứng gần dải phân cách cây xanh bên trái.",
+    "ocr_text": "34° CHẮNG 22 03:11:22 3.1 Km 1 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.038,
+          0.454,
+          0.131,
+          0.638
+        ],
+        "description": "a white SUV parked on the left side of the road",
+        "description_vi": "một chiếc xe SUV màu trắng đậu ở phía bên trái đường",
+        "attributes": [
+          "white",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "car_1",
+        "label": "car",
+        "bbox": [
+          0.093,
+          0.34,
+          0.16599999999999998,
+          0.489
+        ],
+        "description": "a red car parked behind the white SUV",
+        "description_vi": "một chiếc ô tô màu đỏ đậu phía sau xe SUV màu trắng",
+        "attributes": [
+          "red",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.395,
+          0.693,
+          0.417,
+          0.7859999999999999
+        ],
+        "description": "a cyclist wearing a white jersey and black shorts leading the group",
+        "description_vi": "một vận động viên xe đạp mặc áo trắng và quần đùi đen dẫn đầu nhóm",
+        "attributes": [
+          "white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0003",
+    "visual_source_frame_id": "L23_V022_f0003",
+    "ocr_source_frame_id": "L23_V022_f0003",
+    "quality_flags": [],
+    "caption": "An aerial view captures a line of cyclists riding down a long multi-lane asphalt road with green medians.",
+    "detailed_caption": "An elevated wide shot depicts a single file line of cyclists riding along the right lane of a divided city avenue. The road is flanked by a lush green median on the left and a paved sidewalk on the right with a parked white SUV and a motorcycle. Several cars and motorbikes are visible further up the road.",
+    "caption_vi": "Góc nhìn trên cao ghi lại hàng xe đạp đang chạy dọc theo con đường nhựa rộng có dải phân cách xanh.",
+    "detailed_caption_vi": "Góc rộng trên cao miêu tả hàng xe đạp đi đơn đang di chuyển dọc làn bên phải của đại lộ thành phố được phân làn. Con đường được bao quanh bởi dải phân cách xanh tươi ở bên trái và vỉa hè lát gạch bên phải với một chiếc SUV trắng và xe máy đang đậu. Một số ô tô và xe máy khác xuất hiện ở phía xa trên đường.",
+    "ocr_text": "34° CHẮNG 22 03:11:29 2.6 Km 1 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.078,
+          0.37199999999999994,
+          0.147,
+          0.511
+        ],
+        "description": "a dark SUV driving on the left side of the road",
+        "description_vi": "một chiếc xe SUV màu tối đang lái ở bên trái con đường",
+        "attributes": [
+          "dark",
+          "moving"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "car_1",
+        "label": "car",
+        "bbox": [
+          0.761,
+          0.193,
+          0.866,
+          0.273
+        ],
+        "description": "a white SUV parked on the right side of the street",
+        "description_vi": "một chiếc xe SUV màu trắng đậu ở bên phải đường phố",
+        "attributes": [
+          "white",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.426,
+          0.712,
+          0.446,
+          0.804
+        ],
+        "description": "a lead cyclist wearing a white jersey and black shorts",
+        "description_vi": "vận động viên xe đạp dẫn đầu mặc áo trắng và quần đùi đen",
+        "attributes": [
+          "white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0004",
+    "visual_source_frame_id": "L23_V022_f0004",
+    "ocr_source_frame_id": "L23_V022_f0004",
+    "quality_flags": [],
+    "caption": "An aerial shot shows a single-file line of cyclists riding down a wide city road with traffic signs and a green median.",
+    "detailed_caption": "An elevated wide view captures a peloton of cyclists in white and colored jerseys riding down a multi-lane avenue. A green median with bushes separates the road, and a sidewalk on the right features parked vehicles and pedestrians. A white SUV is parked near the right edge.",
+    "caption_vi": "Góc quay từ trên cao ghi hình đoàn xe đạp nối đuôi nhau chạy trên đường phố rộng có biển báo và dải phân cách.",
+    "detailed_caption_vi": "Góc nhìn rộng trên cao ghi lại đoàn vận động viên xe đạp mặc áo trắng và áo màu đang di chuyển trên đại lộ nhiều làn. Dải phân cách xanh có cây bụi ngăn cách con đường, và vỉ bên phải có các phương tiện đỗ cùng người đi bộ. Một chiếc SUV màu trắng đỗ gần mép phải.",
+    "ocr_text": "34° CHẮNG 22 03:11:32 2.6 Km 1 TO CHAU HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.8560000000000001,
+          0.588,
+          1.0,
+          0.712
+        ],
+        "description": "a white SUV parked on the right sidewalk area",
+        "description_vi": "một chiếc xe SUV màu trắng đậu ở khu vực vỉa hè bên phải",
+        "attributes": [
+          "white",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.43899999999999995,
+          0.698,
+          0.45999999999999996,
+          0.8
+        ],
+        "description": "a lead cyclist in a white jersey and black shorts",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng và quần đùi đen",
+        "attributes": [
+          "white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.21400000000000002,
+          0.342,
+          0.28300000000000003,
+          0.529
+        ],
+        "description": "a blue and white vertical road sign standing by the roadside",
+        "description_vi": "biển báo giao thông dọc màu xanh và trắng đứng bên đường",
+        "attributes": [
+          "vertical",
+          "blue and white"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0005",
+    "visual_source_frame_id": "L23_V022_f0005",
+    "ocr_source_frame_id": "L23_V022_f0005",
+    "quality_flags": [],
+    "caption": "An aerial view shows a group of cyclists riding in a single-file line across a large multi-lane intersection.",
+    "detailed_caption": "An elevated shot shows cyclists riding in single file across a wide asphalt intersection with dashed lane markings. A standing official in a uniform and hat is visible on the lower left near a crowd of motorcycles. Other standing personnel are positioned near the corners of the intersection.",
+    "caption_vi": "Góc nhìn trên cao cho thấy nhóm vận động viên xe đạp nối đuôi nhau qua một giao lộ lớn nhiều làn đường.",
+    "detailed_caption_vi": "Góc quay trên cao ghi hình các vận động viên xe đạp đi hàng một qua ngã tư nhựa rộng với vạch kẻ làn đứt khúc. Một nhân viên mặc đồng phục và đội mũ đứng ở góc dưới bên trái gần đám đông xe máy. Các nhân viên khác đứng ở các góc của giao lộ.",
+    "ocr_text": "34° CHẮNG 22 03:11:39 2.5 Km 1 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.679,
+          0.5840000000000001,
+          0.7,
+          0.68
+        ],
+        "description": "a cyclist wearing a white jersey riding at the front of the line",
+        "description_vi": "vận động viên xe đạp mặc áo trắng đang chạy ở đầu hàng",
+        "attributes": [
+          "white jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.21200000000000002,
+          0.753,
+          0.23199999999999998,
+          0.8819999999999999
+        ],
+        "description": "an official standing on the asphalt wearing a light brown uniform and hat",
+        "description_vi": "một nhân viên mặc đồng phục màu nâu nhạt và đội mũ đang đứng trên đường nhựa",
+        "attributes": [
+          "uniform",
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0006",
+    "visual_source_frame_id": "L23_V022_f0006",
+    "ocr_source_frame_id": "L23_V022_f0006",
+    "quality_flags": [],
+    "caption": "An aerial view shows a line of cyclists riding down a wide multi-lane avenue past parked cars.",
+    "detailed_caption": "An elevated shot captures a single-file group of cyclists riding on a wide paved roadway. A green median with bushes and a row of parked cars and motorcycles lines the left side. On the right, a sidewalk features a small umbrella-shaded stand and a pedestrian.",
+    "caption_vi": "Góc nhìn trên cao ghi lại hàng xe đạp đang di chuyển trên đại lộ rộng qua các xe đang đỗ.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm xe đạp đi hàng một đang chạy trên mặt đường nhựa rộng. Dải phân cách xanh có cây bụi và hàng xe ô tô, xe máy đậu ở bên trái. Phía bên phải là vỉa hè có một quầy hàng nhỏ che ô và người đi bộ.",
+    "ocr_text": "34° CHẮNG 22 03:11:45 2.5 Km 1 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.0,
+          0.508,
+          0.089,
+          0.6869999999999999
+        ],
+        "description": "a red car parked behind the white pickup truck",
+        "description_vi": "một chiếc ô tô màu đỏ đỗ phía sau xe bán tải màu trắng",
+        "attributes": [
+          "red",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "car_1",
+        "label": "car",
+        "bbox": [
+          0.076,
+          0.36300000000000004,
+          0.158,
+          0.521
+        ],
+        "description": "a white pickup truck parked along the left side of the street",
+        "description_vi": "một chiếc xe bán tải màu trắng đỗ dọc theo phía bên trái đường phố",
+        "attributes": [
+          "white",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.67,
+          0.493,
+          0.6910000000000001,
+          0.5840000000000001
+        ],
+        "description": "a cyclist wearing a white jersey and black shorts leading the group",
+        "description_vi": "vận động viên xe đạp mặc áo trắng và quần đùi đen dẫn đầu nhóm",
+        "attributes": [
+          "white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "car_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "right_of",
+        "object_id": "car_0"
+      },
+      {
+        "subject_id": "car_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "right_of",
+        "object_id": "car_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0007",
+    "visual_source_frame_id": "L23_V022_f0007",
+    "ocr_source_frame_id": "L23_V022_f0007",
+    "quality_flags": [],
+    "caption": "An aerial view shows a long single-file line of cyclists racing down a multi-lane city street.",
+    "detailed_caption": "An elevated shot captures a large peloton of cyclists riding in a long single-file column down a wide road. The street is divided by a green median with bushes and trees. A speedometer graphic is visible in the lower left corner.",
+    "caption_vi": "Góc nhìn trên cao ghi lại đoàn xe đạp nối đuôi nhau dài đang đua trên đường phố rộng.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại một đoàn vận động viên xe đạp lớn chạy theo hàng dài đơn trên con đường rộng. Con đường được chia cắt bởi dải phân cách xanh có cây bụi và cây xanh. Đồ họa đồng hồ tốc độ hiển thị ở góc dưới bên trái.",
+    "ocr_text": "34° CHẮNG 22 03:11:52 2.5 Km 1 52 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.5740000000000001,
+          0.46799999999999997,
+          0.589,
+          0.532
+        ],
+        "description": "a lead cyclist in a white jersey riding at the front of the line",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng chạy ở đầu hàng",
+        "attributes": [
+          "white jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.23500000000000001,
+          0.65,
+          0.255,
+          0.719
+        ],
+        "description": "a motorcycle driving on the left lane",
+        "description_vi": "một chiếc xe máy đang chạy trên làn đường bên trái",
+        "attributes": [
+          "moving"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0008",
+    "visual_source_frame_id": "L23_V022_f0008",
+    "ocr_source_frame_id": "L23_V022_f0008",
+    "quality_flags": [],
+    "caption": "An aerial shot shows a single-file line of cyclists riding down a multi-lane asphalt road.",
+    "detailed_caption": "An elevated wide view captures a group of cyclists in various team jerseys riding in a straight column down a wide city road. A green median separates the road lanes, and a sidewalk with buildings runs along the right side.",
+    "caption_vi": "Góc nhìn từ trên cao cho thấy hàng xe đạp đi đơn đang chạy trên đường nhựa rộng nhiều làn.",
+    "detailed_caption_vi": "Góc nhìn rộng trên cao ghi lại nhóm vận động viên xe đạp mặc áo đấu khác nhau đang chạy theo cột thẳng trên con đường thành phố rộng. Dải phân cách xanh phân chia các làn đường, và vỉa hè có các tòa nhà chạy dọc bên phải.",
+    "ocr_text": "34° CHẮNG 22 03:11:55 2.5 Km 1 50 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.601,
+          0.477,
+          0.614,
+          0.538
+        ],
+        "description": "a lead cyclist in a white jersey and helmet",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng và đội mũ bảo hiểm",
+        "attributes": [
+          "white jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.8220000000000001,
+          0.604,
+          0.866,
+          0.646
+        ],
+        "description": "a blue road sign standing near the sidewalk on the right",
+        "description_vi": "biển báo giao thông màu xanh đứng gần vỉa hè bên phải",
+        "attributes": [
+          "blue",
+          "vertical"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0009",
+    "visual_source_frame_id": "L23_V022_f0009",
+    "ocr_source_frame_id": "L23_V022_f0009",
+    "quality_flags": [],
+    "caption": "An aerial view shows a long single-file line of cyclists riding along a wide multi-lane road.",
+    "detailed_caption": "An elevated shot shows a peloton of cyclists riding in a long straight line down a paved city avenue. A green median divides the road, while small houses and shops line the left side with roadside activity.",
+    "caption_vi": "Góc nhìn trên cao cho thấy đoàn xe đạp nối đuôi nhau dài đang chạy dọc trên con đường rộng.",
+    "detailed_caption_vi": "Góc quay từ trên cao cho thấy đoàn xe đạp đi theo hàng thẳng dài trên đại lộ thành phố được lát nhựa. Dải phân cách xanh chia đôi con đường, trong khi các ngôi nhà nhỏ và cửa hàng nằm dọc bên trái với hoạt động bên đường.",
+    "ocr_text": "34° CHẮNG 22 03:12:00 2.5 Km 1 50 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.601,
+          0.421,
+          0.616,
+          0.477
+        ],
+        "description": "a lead cyclist wearing a white jersey and helmet",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng và đội mũ bảo hiểm",
+        "attributes": [
+          "white jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.726,
+          0.7569999999999999,
+          0.75,
+          0.833
+        ],
+        "description": "a motorcycle riding on the right lane",
+        "description_vi": "một chiếc xe máy đang chạy trên làn bên phải",
+        "attributes": [
+          "moving"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0010",
+    "visual_source_frame_id": "L23_V022_f0010",
+    "ocr_source_frame_id": "L23_V022_f0010",
+    "quality_flags": [],
+    "caption": "An aerial view shows a group of cyclists riding in single file down a wide city road.",
+    "detailed_caption": "An elevated wide shot depicts cyclists riding in a single-file column along a multi-lane avenue. A green median separates the roadway, and buildings and parked vehicles line the right side. A red car is parked on the right lane.",
+    "caption_vi": "Góc nhìn trên cao cho thấy nhóm vận động viên xe đạp nối đuôi nhau chạy trên đường phố rộng.",
+    "detailed_caption_vi": "Góc rộng trên cao miêu tả các vận động viên xe đạp đang đi theo hàng một dọc theo đại lộ nhiều làn. Dải phân cách xanh chia cắt mặt đường, và các tòa nhà cùng phương tiện đỗ dọc bên phải. Một chiếc ô tô màu đỏ đậu trên làn bên phải.",
+    "ocr_text": "34° CHẮNG 22 03:12:05 2.1 Km 1 49 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.65,
+          0.594,
+          0.712,
+          0.729
+        ],
+        "description": "a red car parked on the right lane of the road",
+        "description_vi": "một chiếc ô tô màu đỏ đậu trên làn đường bên phải của con đường",
+        "attributes": [
+          "red",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.546,
+          0.369,
+          0.558,
+          0.424
+        ],
+        "description": "a lead cyclist in a white jersey and helmet riding at the front",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng và đội mũ bảo hiểm đang chạy ở phía trước",
+        "attributes": [
+          "white jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0011",
+    "visual_source_frame_id": "L23_V022_f0011",
+    "ocr_source_frame_id": "L23_V022_f0011",
+    "quality_flags": [],
+    "caption": "An aerial view shows a single-file line of cyclists riding along a fenced multi-lane road.",
+    "detailed_caption": "An elevated shot captures a group of cyclists riding in a straight column down a wide road enclosed by metal guardrails. A green median separates the lanes, and buildings line the street on the right side.",
+    "caption_vi": "Góc nhìn trên cao cho thấy hàng xe đạp đi đơn đang chạy dọc theo con đường có rào chắn.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm vận động viên xe đạp chạy theo hàng thẳng trên con đường rộng được bao bọc bởi lan can kim loại. Dải phân cách xanh chia các làn đường, và các tòa nhà nằm dọc con đường ở phía bên phải.",
+    "ocr_text": "34° CHẮNG 22 03:12:11 2.0 Km 1 48 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.626,
+          0.273,
+          0.64,
+          0.323
+        ],
+        "description": "a lead cyclist wearing a white jersey and black shorts",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng và quần đùi đen",
+        "attributes": [
+          "white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.642,
+          0.0,
+          0.8099999999999999,
+          0.988
+        ],
+        "description": "metal guardrail fencing along the right side of the road",
+        "description_vi": "rào chắn bảo vệ bằng kim loại dọc theo phía bên phải của con đường",
+        "attributes": [
+          "metal",
+          "protective"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0012",
+    "visual_source_frame_id": "L23_V022_f0012",
+    "ocr_source_frame_id": "L23_V022_f0012",
+    "quality_flags": [],
+    "caption": "An aerial view captures a group of cyclists riding in a single-file line across a bridge.",
+    "detailed_caption": "An elevated wide shot depicts cyclists in colorful jerseys riding in a straight column along a multi-lane bridge. Metal guardrails line both sides of the bridge, and green bushes run through the central divider.",
+    "caption_vi": "Góc nhìn trên cao ghi lại nhóm vận động viên xe đạp nối đuôi nhau chạy qua một cây cầu.",
+    "detailed_caption_vi": "Góc rộng trên cao miêu tả các vận động viên xe đạp mặc áo đấu nhiều màu sắc chạy theo hàng thẳng dọc theo cây cầu nhiều làn. Lan can kim loại bao bọc hai bên cầu, và các bụi cây xanh chạy qua dải phân cách trung tâm.",
+    "ocr_text": "34° CHẮNG 22 03:12:16 2.0 Km 1 48 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.629,
+          0.37,
+          0.643,
+          0.421
+        ],
+        "description": "a lead cyclist in a white jersey riding at the front of the group",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng chạy ở phía trước nhóm",
+        "attributes": [
+          "white jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.613,
+          0.0,
+          0.908,
+          0.9890000000000001
+        ],
+        "description": "metal safety railing along the right side of the bridge",
+        "description_vi": "lan can an toàn bằng kim loại dọc theo phía bên phải của cây cầu",
+        "attributes": [
+          "metal",
+          "safety"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "overlapping",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "overlapping",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0013",
+    "visual_source_frame_id": "L23_V022_f0013",
+    "ocr_source_frame_id": "L23_V022_f0013",
+    "quality_flags": [],
+    "caption": "An aerial shot shows a peloton of cyclists riding across a bridge over a river.",
+    "detailed_caption": "An elevated view captures a single-file group of cyclists riding along a bridge next to a body of water. Buildings and foliage are visible on the far bank, and metal guardrails line the bridge edges.",
+    "caption_vi": "Góc quay từ trên cao cho thấy đoàn xe đạp đang chạy qua cầu bắc qua sông.",
+    "detailed_caption_vi": "Góc nhìn trên cao ghi lại nhóm xe đạp đi hàng một chạy dọc theo cây cầu bên cạnh vùng nước. Các tòa nhà và thảm thực vật có thể nhìn thấy ở bờ bên kia, và lan can kim loại bao quanh các cạnh cầu.",
+    "ocr_text": "34° CHẮNG 22 03:12:21 1.9 Km 1 41 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.557,
+          0.412,
+          0.568,
+          0.444
+        ],
+        "description": "a lead cyclist in a white jersey and helmet",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng và đội mũ bảo hiểm",
+        "attributes": [
+          "white jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.517,
+          0.0,
+          0.818,
+          0.9890000000000001
+        ],
+        "description": "metal railing along the bridge edge next to the river",
+        "description_vi": "lan can kim loại dọc theo mép cầu cạnh con sông",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "overlapping",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "overlapping",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0014",
+    "visual_source_frame_id": "L23_V022_f0014",
+    "ocr_source_frame_id": "L23_V022_f0014",
+    "quality_flags": [],
+    "caption": "An aerial view shows a close-up line of cyclists riding down a bridge roadway.",
+    "detailed_caption": "An elevated shot captures a tight group of cyclists in colorful team jerseys and helmets riding in single file. A metal guardrail and a river bank with red flags and greenery run along the right side.",
+    "caption_vi": "Góc nhìn trên cao cho thấy cận cảnh hàng xe đạp đang chạy trên mặt đường cầu.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm vận động viên xe đạp mặc áo đấu và mũ bảo hiểm đầy màu sắc đi hàng một. Lan can kim loại và bờ sông có cờ đỏ cùng cây xanh chạy dọc theo bên phải.",
+    "ocr_text": "34° CHẮNG 22 03:12:27 1.8 Km 1 42 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.521,
+          0.002,
+          0.545,
+          0.088
+        ],
+        "description": "a cyclist wearing a white jersey and black shorts leading the group",
+        "description_vi": "vận động viên xe đạp mặc áo trắng và quần đùi đen dẫn đầu nhóm",
+        "attributes": [
+          "white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.579,
+          0.456,
+          0.617,
+          0.5840000000000001
+        ],
+        "description": "a cyclist wearing a yellow jersey and black shorts",
+        "description_vi": "vận động viên xe đạp mặc áo vàng và quần đùi đen",
+        "attributes": [
+          "yellow jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.6940000000000001,
+          0.0,
+          0.959,
+          0.9890000000000001
+        ],
+        "description": "metal guardrail along the bridge edge",
+        "description_vi": "lan can bảo vệ bằng kim loại dọc theo mép cầu",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0015",
+    "visual_source_frame_id": "L23_V022_f0015",
+    "ocr_source_frame_id": "L23_V022_f0015",
+    "quality_flags": [],
+    "caption": "An aerial view shows a close-up of cyclists riding in single file across a bridge.",
+    "detailed_caption": "An elevated shot captures a group of cyclists in distinctive team jerseys riding in a straight column on a bridge road. A stone walkway and green foliage line the right side next to the river water.",
+    "caption_vi": "Góc nhìn trên cao cho thấy cận cảnh các vận động viên xe đạp nối đuôi nhau qua cầu.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm vận động viên xe đạp mặc áo đấu đặc sắc chạy theo cột thẳng trên đường cầu. Lối đi bằng đá và thảm thực vật xanh nằm dọc bên phải cạnh làn nước sông.",
+    "ocr_text": "34° CHẮNG 22 03:12:33 1.8 Km 1 44 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.51,
+          0.038,
+          0.55,
+          0.196
+        ],
+        "description": "a lead cyclist in a white jersey with purple details",
+        "description_vi": "vận động viên dẫn đầu mặc áo trắng có chi tiết màu tím",
+        "attributes": [
+          "white jersey",
+          "purple details",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.542,
+          0.454,
+          0.595,
+          0.659
+        ],
+        "description": "a cyclist wearing a yellow jersey and black shorts",
+        "description_vi": "vận động viên mặc áo vàng và quần đùi đen",
+        "attributes": [
+          "yellow jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.7150000000000001,
+          0.0,
+          0.891,
+          0.9890000000000001
+        ],
+        "description": "metal railing and walkway alongside the bridge",
+        "description_vi": "lan can kim loại và lối đi dọc theo cây cầu",
+        "attributes": [
+          "metal",
+          "stone"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "above",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "below",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0016",
+    "visual_source_frame_id": "L23_V022_f0016",
+    "ocr_source_frame_id": "L23_V022_f0016",
+    "quality_flags": [],
+    "caption": "An aerial view shows cyclists racing in a single-file line across a finish line on a bridge.",
+    "detailed_caption": "An elevated shot captures a group of cyclists speeding across a marked finish line on a bridge. A red graphic overlay indicates rider statistics on the left side of the road. A metal guardrail and river run along the right side.",
+    "caption_vi": "Góc nhìn trên cao ghi lại các vận động viên xe đạp đang đua qua vạch đích trên cầu.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm vận động viên xe đạp đang phóng nhanh qua vạch đích có kẻ vạch trên cầu. Lớp phủ đồ họa màu đỏ biểu thị thống kê tay đua ở bên trái con đường. Lan can kim loại và dòng sông chạy dọc bên phải.",
+    "ocr_text": "34° CHẮNG 22 03:12:37 1.8 Km 1 011 HCM L.N.Minh 43 Km/h HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.526,
+          0.36100000000000004,
+          0.564,
+          0.548
+        ],
+        "description": "a lead cyclist wearing a yellow jersey and black shorts approaching the finish line",
+        "description_vi": "vận động viên dẫn đầu mặc áo vàng và quần đùi đen đang tiến gần vạch đích",
+        "attributes": [
+          "yellow jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.563,
+          0.319,
+          0.599,
+          0.492
+        ],
+        "description": "a cyclist wearing a blue jersey and black shorts",
+        "description_vi": "vận động viên mặc áo xanh dương và quần đùi đen",
+        "attributes": [
+          "blue jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.696,
+          0.0,
+          0.901,
+          0.9890000000000001
+        ],
+        "description": "metal railing along the bridge edge",
+        "description_vi": "lan can kim loại dọc theo mép cầu",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0017",
+    "visual_source_frame_id": "L23_V022_f0017",
+    "ocr_source_frame_id": "L23_V022_f0017",
+    "quality_flags": [],
+    "caption": "An aerial view shows cyclists racing in a line across a finish line on a bridge next to a river.",
+    "detailed_caption": "An elevated shot captures a peloton of cyclists riding in single file across a finish line on a bridge. A red statistical overlay points to a rider on the left. An arched white structure and river bank are visible on the left and right.",
+    "caption_vi": "Góc nhìn trên cao ghi lại các vận động viên xe đạp đang đua qua vạch đích trên cầu cạnh con sông.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại đoàn vận động viên xe đạp nối đuôi nhau đi qua vạch đích trên cầu. Lớp phủ thống kê màu đỏ chỉ vào một tay đua ở bên trái. Cấu trúc vòm màu trắng và bờ sông có thể nhìn thấy ở bên trái và bên phải.",
+    "ocr_text": "34° CHẮNG 22 03:12:40 011 HCM L.N.Minh 54 Km/h HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.563,
+          0.42600000000000005,
+          0.584,
+          0.561
+        ],
+        "description": "a lead cyclist wearing a yellow jersey and black shorts",
+        "description_vi": "vận động viên dẫn đầu mặc áo vàng và quần đùi đen",
+        "attributes": [
+          "yellow jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.583,
+          0.46399999999999997,
+          0.607,
+          0.5820000000000001
+        ],
+        "description": "a cyclist wearing a blue jersey and black shorts",
+        "description_vi": "vận động viên mặc áo xanh dương và quần đùi đen",
+        "attributes": [
+          "blue jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.638,
+          0.0,
+          0.8150000000000001,
+          0.9890000000000001
+        ],
+        "description": "metal railing along the bridge beside the river",
+        "description_vi": "lan can kim loại dọc theo cầu bên cạnh con sông",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0018",
+    "visual_source_frame_id": "L23_V022_f0018",
+    "ocr_source_frame_id": "L23_V022_f0018",
+    "quality_flags": [],
+    "caption": "An aerial close-up shows cyclists racing in single file past a finish line on a bridge.",
+    "detailed_caption": "An elevated close-up view captures a line of cyclists in colorful jerseys crossing a finish line on a bridge. A speed graphic points to a cyclist on the left. A pile of brown sacks and foliage are visible on the right bank.",
+    "caption_vi": "Góc chụp cận cảnh trên cao cho thấy các vận động viên xe đạp đang đua qua vạch đích trên cầu.",
+    "detailed_caption_vi": "Góc chụp cận cảnh trên cao ghi lại hàng vận động viên xe đạp mặc áo đấu đầy màu sắc vượt qua vạch đích trên cầu. Đồ họa tốc độ chỉ vào một vận động viên ở bên trái. Đống bao tải màu nâu và thảm thực vật có thể nhìn thấy ở bờ bên phải.",
+    "ocr_text": "34° CHẮNG 22 03:12:44 011 HCM L.N.Minh 54 Km/h HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.502,
+          0.37800000000000006,
+          0.536,
+          0.532
+        ],
+        "description": "a lead cyclist wearing a yellow jersey and black shorts",
+        "description_vi": "vận động viên dẫn đầu mặc áo vàng và quần đùi đen",
+        "attributes": [
+          "yellow jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.541,
+          0.38699999999999996,
+          0.571,
+          0.5630000000000001
+        ],
+        "description": "a cyclist wearing a blue jersey and red helmet",
+        "description_vi": "vận động viên mặc áo xanh dương và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "blue jersey",
+          "red helmet",
+          "shorts"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.679,
+          0.0,
+          0.8460000000000001,
+          0.9890000000000001
+        ],
+        "description": "metal guardrail along the bridge edge",
+        "description_vi": "lan can bảo vệ bằng kim loại dọc theo mép cầu",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0019",
+    "visual_source_frame_id": "L23_V022_f0019",
+    "ocr_source_frame_id": "L23_V022_f0019",
+    "quality_flags": [],
+    "caption": "An aerial close-up view captures a group of cyclists riding across a finish line on a bridge.",
+    "detailed_caption": "An elevated close-up shot shows cyclists in single file crossing a finish line. A graphic overlay with rider details points to a cyclist in a yellow jersey. Lush green trees line the left side of the bridge.",
+    "caption_vi": "Góc chụp cận cảnh trên cao ghi lại nhóm vận động viên xe đạp đang chạy qua vạch đích trên cầu.",
+    "detailed_caption_vi": "Góc chụp cận cảnh trên cao cho thấy các vận động viên xe đạp đi hàng một vượt qua vạch đích. Lớp phủ đồ họa với chi tiết tay đua chỉ vào vận động viên mặc áo vàng. Những hàng cây xanh tươi tốt dọc theo bên trái cầu.",
+    "ocr_text": "34° CHẮNG 22 03:12:51 011 HCM L.N.Minh 54 Km/h HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.47800000000000004,
+          0.414,
+          0.513,
+          0.59
+        ],
+        "description": "a cyclist wearing a yellow jersey and black shorts",
+        "description_vi": "vận động viên mặc áo vàng và quần đùi đen",
+        "attributes": [
+          "yellow jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.523,
+          0.42,
+          0.5549999999999999,
+          0.597
+        ],
+        "description": "a cyclist wearing a blue jersey and red helmet",
+        "description_vi": "vận động viên mặc áo xanh dương và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "blue jersey",
+          "red helmet",
+          "shorts"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "guardrail_0",
+        "label": "guardrail",
+        "bbox": [
+          0.706,
+          0.0,
+          0.8779999999999999,
+          0.9890000000000001
+        ],
+        "description": "metal railing along the right side of the bridge",
+        "description_vi": "lan can kim loại dọc theo phía bên phải của cây cầu",
+        "attributes": [
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "guardrail_0"
+      },
+      {
+        "subject_id": "guardrail_0",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0020",
+    "visual_source_frame_id": "L23_V022_f0020",
+    "ocr_source_frame_id": "L23_V022_f0020",
+    "quality_flags": [],
+    "caption": "A camera motorcycle escorts a large peloton of cyclists rounding a curve on a city street.",
+    "detailed_caption": "A medium shot captures a camera motorcycle with a camamane and driver in the foreground, leading a large dense peloton of cyclists around a sweeping curve on a multi-lane city street. Buildings, trees, and parked vehicles line the sides of the road under bright daylight.",
+    "caption_vi": "Một mô tô quay phim đang hộ tống đoàn đua xe đạp lớn ôm cua trên đường phố.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một chiếc mô tô camera có người quay phim và tài xế ở tiền cảnh, đang dẫn đầu đoàn vận động viên xe đạp đông đúc ôm một khúc cua rộng trên đường phố nhiều làn. Các tòa nhà, cây cối và phương tiện đỗ dọc hai bên đường dưới ánh sáng ban ngày rực rỡ.",
+    "ocr_text": "34° CHẮNG 22 03:12:54 1.5 Km 1 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.079,
+          0.492,
+          0.20299999999999999,
+          0.6869999999999999
+        ],
+        "description": "a white SUV parked on the left side of the street",
+        "description_vi": "một chiếc xe SUV màu trắng đậu ở bên trái đường phố",
+        "attributes": [
+          "white",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.442,
+          0.212,
+          0.705,
+          0.6489999999999999
+        ],
+        "description": "a large group of cyclists riding in a dense peloton behind the motorcycle",
+        "description_vi": "một nhóm lớn vận động viên xe đạp đang chạy trong một đoàn đông phía sau mô tô",
+        "attributes": [
+          "helmets",
+          "team jerseys"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.599,
+          0.5690000000000001,
+          0.786,
+          0.99
+        ],
+        "description": "a yellow and black camera motorcycle driving on the street with two personnel",
+        "description_vi": "một chiếc mô tô camera màu vàng và đen đang chạy trên đường phố chở theo hai nhân sự",
+        "attributes": [
+          "yellow and black",
+          "camera equipment"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "car_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "right_of",
+        "object_id": "car_0"
+      },
+      {
+        "subject_id": "car_0",
+        "predicate": "left_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "right_of",
+        "object_id": "car_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0021",
+    "visual_source_frame_id": "L23_V022_f0021",
+    "ocr_source_frame_id": "L23_V022_f0021",
+    "quality_flags": [],
+    "caption": "A dense group of cyclists in colorful team jerseys and helmets rides up a paved street.",
+    "detailed_caption": "A high-angle medium shot shows a dense peloton of cyclists riding up a paved street. The riders wear various team jerseys, helmets, and race numbers while pedaling closely together. Several support vehicles and motorcycles follow behind them on the road.",
+    "caption_vi": "Một nhóm đông các vận động viên đạp xe mặc áo đấu và đội mũ bảo hiểm đang chạy lên một con phố lớn.",
+    "detailed_caption_vi": "Góc quay cao trung cảnh ghi lại một đoàn đua xe đạp đông đúc đang di chuyển lên một con phố nhựa. Các vận động viên mặc áo đấu nhiều màu sắc và đội mũ bảo hiểm, đạp xe bám sát nhau. Phía sau đoàn đua có một số xe hỗ trợ và mô tô di chuyển theo.",
+    "ocr_text": "34° CHẶNG 22 03:13:00 1.4 Km 1 HTV HỆ THAO 61",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.6639999999999999,
+          0.219,
+          0.757,
+          0.37399999999999994
+        ],
+        "description": "white SUV driving on the road",
+        "description_vi": "xe ô tô màu trắng đang chạy trên đường",
+        "attributes": [
+          "white",
+          "suv"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.599,
+          0.492,
+          0.6559999999999999,
+          0.644
+        ],
+        "description": "cyclist in dark jersey and helmet riding a bicycle",
+        "description_vi": "vận động viên đạp xe mặc áo tối màu và đội mũ bảo hiểm",
+        "attributes": [
+          "cycling",
+          "helmet",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.732,
+          0.319,
+          0.775,
+          0.44499999999999995
+        ],
+        "description": "motorcycle riding behind the cyclists",
+        "description_vi": "xe máy chạy phía sau đoàn vận động viên",
+        "attributes": [
+          "motorcycle"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "car_0",
+        "predicate": "overlapping",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "overlapping",
+        "object_id": "car_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0022",
+    "visual_source_frame_id": "L23_V022_f0022",
+    "ocr_source_frame_id": "L23_V022_f0022",
+    "quality_flags": [],
+    "caption": "A peloton of cyclists in team jerseys rides along a city street.",
+    "detailed_caption": "A medium shot shows a tightly packed group of cyclists racing down a city street. The riders wear colorful team jerseys and helmets, pedaling in close formation. Buildings and greenery line the side of the road in the background.",
+    "caption_vi": "Đoàn đua xe đạp mặc áo đấu di chuyển trên một con phố thành phố.",
+    "detailed_caption_vi": "Trung cảnh ghi lại một nhóm vận động viên đạp xe đang di chuyển trên đường phố. Các tay đua mặc áo đấu thể thao và đội mũ bảo hiểm, đạp xe bám sát nhau. Hai bên đường là nhà cửa và cây xanh.",
+    "ocr_text": "34° CHẶNG 22 03:13:07 1.2 Km 1 HTV HỆ THAO 59",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.404,
+          0.382,
+          0.475,
+          0.745
+        ],
+        "description": "cyclist in blue and white jersey",
+        "description_vi": "vận động viên mặc áo xanh dương trắng",
+        "attributes": [
+          "blue",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.517,
+          0.377,
+          0.583,
+          0.708
+        ],
+        "description": "cyclist in yellow jersey and black shorts",
+        "description_vi": "vận động viên mặc áo vàng và quần đùi đen",
+        "attributes": [
+          "yellow",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.5730000000000001,
+          0.368,
+          0.639,
+          0.7180000000000001
+        ],
+        "description": "cyclist in purple jersey and white helmet",
+        "description_vi": "vận động viên mặc áo tím và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "purple",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0023",
+    "visual_source_frame_id": "L23_V022_f0023",
+    "ocr_source_frame_id": "L23_V022_f0023",
+    "quality_flags": [],
+    "caption": "An aerial view shows a large crowd of spectators and cyclists gathered near a decorated archway on a city street.",
+    "detailed_caption": "An aerial wide shot captures a bustling city street with a large crowd of pedestrians and motorcyclists assembled near a decorative white archway. A smaller group of cyclists rides along the road below. A building with a large sign stands on the right side.",
+    "caption_vi": "Góc nhìn từ trên cao cho thấy một đám đông khán giả và đoàn đua tập trung gần cổng chào trên đường phố.",
+    "detailed_caption_vi": "Góc rộng từ trên cao ghi lại khung cảnh đường phố tấp nập với đông đảo người đi bộ và xe máy tập trung gần một cổng chào màu trắng. Một nhóm nhỏ vận động viên đang đạp xe phía dưới đường. Bên phải là tòa nhà có biển hiệu lớn.",
+    "ocr_text": "34° CHẶNG 22 03:13:14 1.1 Km 1 HTV HỆ THAO TÔ CHÂU ZALO HOTLINE 0868 144 144 49",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "archway_0",
+        "label": "archway",
+        "bbox": [
+          0.0,
+          0.071,
+          0.571,
+          0.418
+        ],
+        "description": "large decorative white arch spanning across the street",
+        "description_vi": "cổng chào màu trắng trang trí lớn bắc ngang đường",
+        "attributes": [
+          "white",
+          "decorative"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.6,
+          0.339,
+          1.0,
+          1.0
+        ],
+        "description": "commercial building with a large sign on the roof",
+        "description_vi": "tòa nhà thương mại có biển hiệu lớn trên mái",
+        "attributes": [
+          "commercial"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "archway_0",
+        "predicate": "left_of",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "right_of",
+        "object_id": "archway_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0024",
+    "visual_source_frame_id": "L23_V022_f0024",
+    "ocr_source_frame_id": "L23_V022_f0024",
+    "quality_flags": [],
+    "caption": "An aerial view shows a single file line of cyclists riding on a paved road beside cars.",
+    "detailed_caption": "An aerial view captures a line of cyclists riding single file down a paved road. Several cars travel in the adjacent lane separated by a grassy median. Lush green trees line the right side of the road.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe thành hàng dọc trên đường nhựa cạnh ô tô.",
+    "detailed_caption_vi": "Góc nhìn trên cao ghi lại đoàn vận động viên đạp xe nối đuôi nhau di chuyển trên đường nhựa. Nhiều xe ô tô chạy ở làn đường bên cạnh ngăn cách bởi dải phân cách trồng cây. Hai bên đường có nhiều cây xanh.",
+    "ocr_text": "34° CHẶNG 22 03:13:20 1.0 Km 1 HTV HỆ THAO 51",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.259,
+          0.521,
+          0.312,
+          0.7010000000000001
+        ],
+        "description": "black car driving on the road",
+        "description_vi": "xe ô tô màu đen đang di chuyển trên đường",
+        "attributes": [
+          "black"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "car_1",
+        "label": "car",
+        "bbox": [
+          0.354,
+          0.5800000000000001,
+          0.41,
+          0.78
+        ],
+        "description": "white car driving on the road",
+        "description_vi": "xe ô tô màu trắng đang di chuyển trên đường",
+        "attributes": [
+          "white"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "car_0",
+        "predicate": "left_of",
+        "object_id": "car_1"
+      },
+      {
+        "subject_id": "car_1",
+        "predicate": "right_of",
+        "object_id": "car_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0025",
+    "visual_source_frame_id": "L23_V022_f0025",
+    "ocr_source_frame_id": "L23_V022_f0025",
+    "quality_flags": [],
+    "caption": "An aerial view captures a line of cyclists riding down a straight road beside a green median.",
+    "detailed_caption": "An aerial shot shows a single file line of cyclists riding on the right side of a divided road. A long green planted median divides the lanes. Trees and foliage border the road on both sides.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe theo hàng dọc dọc theo dải phân cách xanh.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại một hàng vận động viên đạp xe nối đuôi nhau di chuyển bên phải dải phân cách cây xanh. Cây cối và tán lá bao quanh hai bên đường.",
+    "ocr_text": "34° CHẶNG 22 03:13:22 0.9 Km 1 HTV HỆ THAO 52",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "median_0",
+        "label": "median",
+        "bbox": [
+          0.256,
+          0.0,
+          0.39,
+          1.0
+        ],
+        "description": "long green planted median strip dividing the road",
+        "description_vi": "dải phân cách trồng cây xanh dài chia cắt lòng đường",
+        "attributes": [
+          "green",
+          "plant"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0026",
+    "visual_source_frame_id": "L23_V022_f0026",
+    "ocr_source_frame_id": "L23_V022_f0026",
+    "quality_flags": [],
+    "caption": "An aerial view shows a single file line of cyclists riding on a straight road.",
+    "detailed_caption": "An aerial shot shows a line of cyclists riding single file down a paved road. A long green median separates lanes on the left. A graphical line overlay indicates a rider with the number 127 and name M. Raim traveling at 60 Km/h.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe thành hàng dọc trên đường thẳng.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại một hàng vận động viên đạp xe nối đuôi nhau trên đường nhựa. Dải phân cách xanh nằm ở phía bên trái. Đồ họa hiển thị thông tin tay đua số 127 M. Raim với vận tốc 60 Km/h.",
+    "ocr_text": "34° CHẶNG 22 03:13:29 0.8 Km 1 HTV HỆ THAO 127 NVL M.Raim 60 Km/h 51",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.44000000000000006,
+          0.64,
+          0.46799999999999997,
+          0.789
+        ],
+        "description": "cyclist in yellow jersey and black shorts leading the pack",
+        "description_vi": "vận động viên mặc áo vàng và quần đen dẫn đầu đoàn",
+        "attributes": [
+          "yellow",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0027",
+    "visual_source_frame_id": "L23_V022_f0027",
+    "ocr_source_frame_id": "L23_V022_f0027",
+    "quality_flags": [],
+    "caption": "An aerial view captures a single file line of cyclists riding down a road.",
+    "detailed_caption": "An aerial shot shows a line of cyclists riding single file on a paved road. A green median runs parallel on the left. A decorative overhead structure with white wires spans across the lower portion of the frame.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe nối đuôi nhau trên đường.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại hàng vận động viên đạp xe nối đuôi nhau trên đường nhựa. Dải phân cách cây xanh chạy song song bên trái. Cấu trúc trang trí phía trên với các đường dây màu trắng vắt ngang phần dưới khung hình.",
+    "ocr_text": "34° CHẶNG 22 03:13:30 0.8 Km 1 HTV HỆ THAO 127 NVL M.Raim 57 Km/h 59",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "structure_0",
+        "label": "structure",
+        "bbox": [
+          0.0,
+          0.627,
+          0.868,
+          1.0
+        ],
+        "description": "decorative overhead structure with radiating white wires",
+        "description_vi": "cấu trúc trang trí phía trên với các sợi dây trắng tủa ra",
+        "attributes": [
+          "white",
+          "decorative"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0028",
+    "visual_source_frame_id": "L23_V022_f0028",
+    "ocr_source_frame_id": "L23_V022_f0028",
+    "quality_flags": [],
+    "caption": "An aerial view shows a single file line of cyclists passing a large decorative tower on the road.",
+    "detailed_caption": "An aerial shot captures a single file line of cyclists riding down a paved road. A tall decorative white tower with a circular base stands to the left, casting a long shadow. A graphic overlay indicates a speed of 57 Km/h.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe chạy qua một tháp trang trí lớn trên đường.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại hàng vận động viên đạp xe nối đuôi nhau trên đường nhựa. Một ngọn tháp trang trí màu trắng cao với phần chân đế tròn đứng ở bên trái, đổ bóng dài xuống đường. Lớp phủ đồ họa hiển thị tốc độ 57 Km/h.",
+    "ocr_text": "34° CHẶNG 22 03:13:33 0.7 Km 1 HTV HỆ THAO 127 NVL M.Raim 57 Km/h",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tower_0",
+        "label": "tower",
+        "bbox": [
+          0.10600000000000001,
+          0.0,
+          0.49000000000000005,
+          0.656
+        ],
+        "description": "tall decorative white tower with circular base and shadow",
+        "description_vi": "tháp trang trí màu trắng cao với phần đế tròn và bóng đổ",
+        "attributes": [
+          "white",
+          "tall"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0029",
+    "visual_source_frame_id": "L23_V022_f0029",
+    "ocr_source_frame_id": "L23_V022_f0029",
+    "quality_flags": [],
+    "caption": "An aerial view shows cyclists riding along a road partially obscured by trees.",
+    "detailed_caption": "An aerial shot captures a portion of a road where a few cyclists are visible near the bottom of the frame. Lush green trees obscure a large section of the road and surroundings. A car is parked on the right side next to a building.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại các vận động viên đạp xe trên đoạn đường bị che khuất một phần bởi cây cối.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại một đoạn đường với một vài vận động viên xuất hiện ở gần đáy khung hình. Những tán cây xanh tốt che khuất phần lớn con đường và cảnh quan xung quanh. Một chiếc ô tô đỗ bên phải cạnh tòa nhà.",
+    "ocr_text": "34° CHẶNG 22 03:13:39 0.6 Km 1 HTV HỆ THAO 127 NVL M.Raim 58 Km/h",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.828,
+          0.643,
+          0.9179999999999999,
+          0.884
+        ],
+        "description": "black car parked on the right side of the road",
+        "description_vi": "xe ô tô màu đen đỗ ở lề phải đường",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.0,
+          0.11599999999999999,
+          0.548,
+          0.875
+        ],
+        "description": "dense green tree foliage covering part of the street",
+        "description_vi": "tán cây xanh rậm rạp che khuất một phần đường phố",
+        "attributes": [
+          "green",
+          "foliage"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "tree_0",
+        "predicate": "left_of",
+        "object_id": "car_0"
+      },
+      {
+        "subject_id": "car_0",
+        "predicate": "right_of",
+        "object_id": "tree_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0030",
+    "visual_source_frame_id": "L23_V022_f0030",
+    "ocr_source_frame_id": "L23_V022_f0030",
+    "quality_flags": [],
+    "caption": "An aerial view shows a single file line of cyclists riding down a straight road.",
+    "detailed_caption": "An aerial shot shows a group of cyclists riding in a single file line down the middle of a wide paved road. Greenery is visible in the bottom right corner. Graphical icons and text overlay the top portion of the frame.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe thành hàng dọc trên đường thẳng.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm vận động viên đạp xe nối đuôi nhau theo hàng dọc giữa lòng đường nhựa rộng. Cây xanh xuất hiện ở góc dưới bên phải. Các biểu tượng và văn bản đồ họa hiển thị ở phía trên khung hình.",
+    "ocr_text": "34° CHẶNG 22 03:13:45 0.5 Km 1 HTV HỆ THAO 60",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.43499999999999994,
+          0.55,
+          0.462,
+          0.671
+        ],
+        "description": "cyclist in yellow jersey and black shorts riding in the peloton",
+        "description_vi": "vận động viên mặc áo vàng và quần đen đang đạp trong đoàn đua",
+        "attributes": [
+          "yellow",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0031",
+    "visual_source_frame_id": "L23_V022_f0031",
+    "ocr_source_frame_id": "L23_V022_f0031",
+    "quality_flags": [],
+    "caption": "An aerial view captures a single file line of cyclists riding down a paved road.",
+    "detailed_caption": "An aerial shot shows a group of cyclists riding in single file down a paved road. Pedestrians stand on the left side of the street near a white vehicle. Striped crosswalk lines are visible on the right side.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe nối đuôi nhau trên đường nhựa.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm vận động viên đạp xe nối đuôi nhau trên con đường nhựa. Những người đi bộ đứng ở bên trái đường gần một chiếc xe màu trắng. Vạch kẻ đường cho người đi bộ xuất hiện ở phía bên phải.",
+    "ocr_text": "34° CHẶNG 22 03:13:46 0.5 Km 1 HTV HỆ THAO XXX 60",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.22599999999999998,
+          0.0,
+          0.308,
+          0.164
+        ],
+        "description": "white vehicle parked on the upper left street",
+        "description_vi": "xe màu trắng đỗ ở phía trên bên trái đường",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.42300000000000004,
+          0.555,
+          0.45,
+          0.677
+        ],
+        "description": "cyclist in yellow jersey riding in the single file line",
+        "description_vi": "vận động viên mặc áo vàng đạp xe trong hàng dọc",
+        "attributes": [
+          "yellow",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0032",
+    "visual_source_frame_id": "L23_V022_f0032",
+    "ocr_source_frame_id": "L23_V022_f0032",
+    "quality_flags": [],
+    "caption": "An aerial view shows a few cyclists riding on a road next to trees and decorative structures.",
+    "detailed_caption": "An aerial view captures a couple of cyclists riding on a paved road. Large green trees occupy the left side of the frame, and a decorative white structure with radial wires is visible at the bottom. A speedometer graphic displays 60.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại vài vận động viên đạp xe trên đường cạnh cây cối và cấu trúc trang trí.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại một vài vận động viên đang đạp xe trên đường nhựa. Những tán cây xanh lớn chiếm phần bên trái khung hình, và cấu trúc trang trí màu trắng xuất hiện ở phía dưới. Đồ họa tốc độ hiển thị số 60.",
+    "ocr_text": "34° CHẶNG 22 03:13:50 0.4 Km 1 HTV HỆ THAO 60",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.731,
+          0.358,
+          0.762,
+          0.507
+        ],
+        "description": "cyclist in white jersey and black shorts riding on the road",
+        "description_vi": "vận động viên mặc áo trắng quần đen đang đạp xe trên đường",
+        "attributes": [
+          "white",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.0,
+          0.0,
+          0.608,
+          0.675
+        ],
+        "description": "large dense green tree on the left side",
+        "description_vi": "cây xanh lớn rậm rạp ở phía bên trái",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "tree_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "right_of",
+        "object_id": "tree_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0033",
+    "visual_source_frame_id": "L23_V022_f0033",
+    "ocr_source_frame_id": "L23_V022_f0033",
+    "quality_flags": [],
+    "caption": "An aerial view shows a single file line of cyclists riding down a road past trees.",
+    "detailed_caption": "An aerial shot shows a single file line of cyclists riding along a paved road. A large green tree stands on the left side, partially obscuring the roadside. A decorative white structure spans across the lower portion of the image.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe nối đuôi nhau trên đường qua những hàng cây.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại hàng vận động viên đạp xe nối đuôi nhau di chuyển dọc theo con đường nhựa. Một cây xanh lớn đứng ở phía bên trái, che khuất một phần lề đường. Cấu trúc trang trí màu trắng vắt ngang phần dưới hình ảnh.",
+    "ocr_text": "34° CHẶNG 22 03:13:55 0.4 Km 1 HTV HỆ THAO 61",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.597,
+          0.223,
+          0.622,
+          0.356
+        ],
+        "description": "cyclist in white jersey leading the single file line",
+        "description_vi": "vận động viên mặc áo trắng dẫn đầu hàng dọc",
+        "attributes": [
+          "white",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.177,
+          0.0,
+          0.5690000000000001,
+          0.837
+        ],
+        "description": "large green leafy tree on the left",
+        "description_vi": "cây xanh lá lớn bên trái",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "tree_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "right_of",
+        "object_id": "tree_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0034",
+    "visual_source_frame_id": "L23_V022_f0034",
+    "ocr_source_frame_id": "L23_V022_f0034",
+    "quality_flags": [],
+    "caption": "An aerial view captures a single file line of cyclists riding across a crosswalk on a paved road.",
+    "detailed_caption": "An aerial shot shows a group of cyclists riding single file across a striped crosswalk on a paved road. A green median with shrubbery runs down the left side, and trees line the right. A speedometer graphic reads 61.",
+    "caption_vi": "Góc nhìn từ trên cao ghi lại đoàn vận động viên đạp xe nối đuôi nhau qua vạch sang đường trên đường nhựa.",
+    "detailed_caption_vi": "Góc quay từ trên cao ghi lại nhóm vận động viên đạp xe nối đuôi nhau đi qua vạch qua đường kẻ sọc trên đường nhựa. Dải phân cách xanh có cây bụi chạy dọc phía bên trái, và cây xanh ở bên phải. Đồ họa tốc độ hiển thị 61.",
+    "ocr_text": "34° CHẶNG 22 03:13:56 0.3 Km 1 HTV HỆ THAO 61",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "crosswalk_0",
+        "label": "crosswalk",
+        "bbox": [
+          0.0,
+          0.319,
+          0.9189999999999999,
+          0.475
+        ],
+        "description": "striped crosswalk painted on the asphalt road",
+        "description_vi": "vạch sang đường kẻ sọc trên mặt đường nhựa",
+        "attributes": [
+          "striped",
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.722,
+          0.298,
+          0.75,
+          0.44
+        ],
+        "description": "cyclist in white jersey and black shorts riding across the crosswalk",
+        "description_vi": "vận động viên mặc áo trắng quần đen đang đạp xe qua vạch sang đường",
+        "attributes": [
+          "white",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "crosswalk_0",
+        "predicate": "overlapping",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "overlapping",
+        "object_id": "crosswalk_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0035",
+    "visual_source_frame_id": "L23_V022_f0035",
+    "ocr_source_frame_id": "L23_V022_f0035",
+    "quality_flags": [],
+    "caption": "A group of cyclists races closely together past a barrier lined with cheering spectators.",
+    "detailed_caption": "A medium-close shot shows a peloton of cyclists riding down a city street. The riders wear team jerseys and helmets, pedaling hard in a compact group. Barriers decorated with colorful patterns line the right side, where spectators lean over to watch.",
+    "caption_vi": "Nhóm vận động viên đạp xe đua sát nhau chạy qua hàng rào có đông khán giả cổ vũ.",
+    "detailed_caption_vi": "Cận cảnh trung bình ghi lại đoàn đua xe đạp đang di chuyển trên đường phố. Các tay đua mặc áo đấu và đội mũ bảo hiểm, đang gắng sức đạp xe trong một nhóm gọn gàng. Hàng rào trang trí hoa văn màu sắc nằm ở bên phải, nơi khán giả đang cúi người theo dõi.",
+    "ocr_text": "34° CHẶNG 22 03:13:58 0.3 Km 1 HTV HỆ THAO 62",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.254,
+          0.18900000000000003,
+          0.354,
+          0.418
+        ],
+        "description": "cyclist in yellow jersey and yellow helmet leading the group",
+        "description_vi": "vận động viên mặc áo vàng và đội mũ bảo hiểm vàng dẫn đầu nhóm",
+        "attributes": [
+          "yellow",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.396,
+          0.319,
+          0.495,
+          0.793
+        ],
+        "description": "cyclist in dark blue jersey and white helmet",
+        "description_vi": "vận động viên mặc áo xanh đậm và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "blue",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.54,
+          0.296,
+          0.661,
+          0.7569999999999999
+        ],
+        "description": "cyclist in blue and black jersey and white helmet",
+        "description_vi": "vận động viên mặc áo xanh đen và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "blue",
+          "black",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0036",
+    "visual_source_frame_id": "L23_V022_f0036",
+    "ocr_source_frame_id": "L23_V022_f0036",
+    "quality_flags": [],
+    "caption": "A large group of cyclists races down a wide street lined with colorful banners and barriers.",
+    "detailed_caption": "A wide shot captures a large peloton of cyclists racing along a wide city street. The riders wear diverse team jerseys and helmets, spread across the road in a competitive sprint. Colorful vertical banners and protective barriers line both sides of the street.",
+    "caption_vi": "Đoàn đua xe đạp lớn đang di chuyển trên một con phố rộng được trang trí cờ và rào chắn.",
+    "detailed_caption_vi": "Góc quay rộng ghi lại một đoàn vận động viên đông đảo đang đua trên đường phố rộng. Các tay đua mặc áo đấu và mũ bảo hiểm đa dạng, trải rộng trên mặt đường trong cuộc đua nước rút. Các băng rôn dọc đầy màu sắc và rào chắn bảo vệ dọc hai bên đường.",
+    "ocr_text": "34° CHẶNG 22 03:14:02 0.2 Km 1 HTV HỆ THAO 57",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.479,
+          0.455,
+          0.528,
+          0.627
+        ],
+        "description": "cyclist in blue and white jersey",
+        "description_vi": "vận động viên mặc áo xanh trắng",
+        "attributes": [
+          "blue",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.593,
+          0.42,
+          0.633,
+          0.596
+        ],
+        "description": "cyclist in orange jersey and white helmet",
+        "description_vi": "vận động viên mặc áo cam và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "orange",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.6769999999999999,
+          0.442,
+          0.727,
+          0.631
+        ],
+        "description": "cyclist in blue jersey and red helmet sprinting forward",
+        "description_vi": "vận động viên mặc áo xanh dương và đội mũ bảo hiểm đỏ đang bứt tốc",
+        "attributes": [
+          "blue",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0037",
+    "visual_source_frame_id": "L23_V022_f0037",
+    "ocr_source_frame_id": "L23_V022_f0037",
+    "quality_flags": [],
+    "caption": "A group of cyclists races toward the finish line under a red banner on a city street.",
+    "detailed_caption": "A medium shot shows a group of cyclists sprinting toward the finish line on a sunlit city street. A large red overhead banner with white text spans the road. Spectators line both sides behind protective barriers, and buildings are visible in the background.",
+    "caption_vi": "Nhóm vận động viên đạp xe đang nước rút về đích dưới băng rôn đỏ trên đường phố.",
+    "detailed_caption_vi": "Trung cảnh ghi lại nhóm vận động viên đang nước rút về đích trên đường phố ngập nắng. Một băng rôn đỏ lớn có chữ trắng bắc ngang đường. Khán giả đứng kín hai bên sau hàng rào bảo vệ, phía sau là các tòa nhà.",
+    "ocr_text": "34° CHẶNG 22 03:14:08 00:01 0.0 Km 1 HTV HỆ THAO DICH TON DONGA TON DONGA",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "banner_0",
+        "label": "banner",
+        "bbox": [
+          0.20600000000000002,
+          0.219,
+          0.6,
+          0.28099999999999997
+        ],
+        "description": "large red overhead banner with white text reading DICH",
+        "description_vi": "băng rôn đỏ lớn bắc ngang với chữ trắng ghi chữ DICH",
+        "attributes": [
+          "red",
+          "banner"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.67,
+          0.622,
+          0.712,
+          0.7909999999999999
+        ],
+        "description": "cyclist in yellow and blue jersey riding",
+        "description_vi": "vận động viên mặc áo vàng xanh đang đạp xe",
+        "attributes": [
+          "yellow",
+          "blue",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.798,
+          0.7010000000000001,
+          0.859,
+          0.961
+        ],
+        "description": "cyclist in yellow and red jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo vàng đỏ đang đạp xe",
+        "attributes": [
+          "yellow",
+          "red",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0038",
+    "visual_source_frame_id": "L23_V022_f0037",
+    "ocr_source_frame_id": "L23_V022_f0038",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A group of cyclists races toward the finish line under a red banner on a city street.",
+    "detailed_caption": "A medium shot shows a group of cyclists sprinting toward the finish line on a sunlit city street. A large red overhead banner with white text spans the road. Spectators line both sides behind protective barriers, and buildings are visible in the background.",
+    "caption_vi": "Nhóm vận động viên đạp xe đang nước rút về đích dưới băng rôn đỏ trên đường phố.",
+    "detailed_caption_vi": "Trung cảnh ghi lại nhóm vận động viên đang nước rút về đích trên đường phố ngập nắng. Một băng rôn đỏ lớn có chữ trắng bắc ngang đường. Khán giả đứng kín hai bên sau hàng rào bảo vệ, phía sau là các tòa nhà.",
+    "ocr_text": "DICH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "banner_0",
+        "label": "banner",
+        "bbox": [
+          0.20600000000000002,
+          0.219,
+          0.6,
+          0.28099999999999997
+        ],
+        "description": "large red overhead banner with white text reading DICH",
+        "description_vi": "băng rôn đỏ lớn bắc ngang với chữ trắng ghi chữ DICH",
+        "attributes": [
+          "red",
+          "banner"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.67,
+          0.622,
+          0.712,
+          0.7909999999999999
+        ],
+        "description": "cyclist in yellow and blue jersey riding",
+        "description_vi": "vận động viên mặc áo vàng xanh đang đạp xe",
+        "attributes": [
+          "yellow",
+          "blue",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.798,
+          0.7010000000000001,
+          0.859,
+          0.961
+        ],
+        "description": "cyclist in yellow and red jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo vàng đỏ đang đạp xe",
+        "attributes": [
+          "yellow",
+          "red",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0039",
+    "visual_source_frame_id": "L23_V022_f0037",
+    "ocr_source_frame_id": "L23_V022_f0039",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A group of cyclists races toward the finish line under a red banner on a city street.",
+    "detailed_caption": "A medium shot shows a group of cyclists sprinting toward the finish line on a sunlit city street. A large red overhead banner with white text spans the road. Spectators line both sides behind protective barriers, and buildings are visible in the background.",
+    "caption_vi": "Nhóm vận động viên đạp xe đang nước rút về đích dưới băng rôn đỏ trên đường phố.",
+    "detailed_caption_vi": "Trung cảnh ghi lại nhóm vận động viên đang nước rút về đích trên đường phố ngập nắng. Một băng rôn đỏ lớn có chữ trắng bắc ngang đường. Khán giả đứng kín hai bên sau hàng rào bảo vệ, phía sau là các tòa nhà.",
+    "ocr_text": "DICH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "banner_0",
+        "label": "banner",
+        "bbox": [
+          0.20600000000000002,
+          0.219,
+          0.6,
+          0.28099999999999997
+        ],
+        "description": "large red overhead banner with white text reading DICH",
+        "description_vi": "băng rôn đỏ lớn bắc ngang với chữ trắng ghi chữ DICH",
+        "attributes": [
+          "red",
+          "banner"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.67,
+          0.622,
+          0.712,
+          0.7909999999999999
+        ],
+        "description": "cyclist in yellow and blue jersey riding",
+        "description_vi": "vận động viên mặc áo vàng xanh đang đạp xe",
+        "attributes": [
+          "yellow",
+          "blue",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.798,
+          0.7010000000000001,
+          0.859,
+          0.961
+        ],
+        "description": "cyclist in yellow and red jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo vàng đỏ đang đạp xe",
+        "attributes": [
+          "yellow",
+          "red",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0040",
+    "visual_source_frame_id": "L23_V022_f0040",
+    "ocr_source_frame_id": "L23_V022_f0040",
+    "quality_flags": [],
+    "caption": "Several cyclists in team jerseys and helmets ride on a street alongside support vehicles.",
+    "detailed_caption": "A close medium shot captures several cyclists riding in a tight pack on a city street. From left to right, riders wear green and yellow, blue and white, and yellow and black jerseys with helmets. Support cars and motorcycles follow closely behind them.",
+    "caption_vi": "Nhiều vận động viên mặc áo đấu và đội mũ bảo hiểm đang chạy trên đường cùng các xe hỗ trợ.",
+    "detailed_caption_vi": "Cận cảnh trung bình ghi lại nhiều vận động viên đạp xe sát nhau trên đường phố. Từ trái sang phải, các tay đua mặc áo xanh lá vàng, xanh dương trắng, và vàng đen cùng mũ bảo hiểm. Các ô tô và mô tô hỗ trợ di chuyển ngay phía sau.",
+    "ocr_text": "34° CHẶNG 22 03:14:08 00:18 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.242,
+          0.429,
+          0.365,
+          0.9930000000000001
+        ],
+        "description": "cyclist in green and yellow jersey and sunglasses",
+        "description_vi": "vận động viên mặc áo xanh lá vàng và đeo kính râm",
+        "attributes": [
+          "green",
+          "yellow",
+          "jersey",
+          "sunglasses"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.418,
+          0.33499999999999996,
+          0.577,
+          0.995
+        ],
+        "description": "cyclist in blue and white jersey and black shorts",
+        "description_vi": "vận động viên mặc áo xanh trắng và quần đen",
+        "attributes": [
+          "blue",
+          "white",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.571,
+          0.42,
+          0.697,
+          0.995
+        ],
+        "description": "cyclist in patterned blue and black jersey and white helmet",
+        "description_vi": "vận động viên mặc áo họa tiết xanh đen và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "blue",
+          "black",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0041",
+    "visual_source_frame_id": "L23_V022_f0040",
+    "ocr_source_frame_id": "L23_V022_f0041",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Several cyclists in team jerseys and helmets ride on a street alongside support vehicles.",
+    "detailed_caption": "A close medium shot captures several cyclists riding in a tight pack on a city street. From left to right, riders wear green and yellow, blue and white, and yellow and black jerseys with helmets. Support cars and motorcycles follow closely behind them.",
+    "caption_vi": "Nhiều vận động viên mặc áo đấu và đội mũ bảo hiểm đang chạy trên đường cùng các xe hỗ trợ.",
+    "detailed_caption_vi": "Cận cảnh trung bình ghi lại nhiều vận động viên đạp xe sát nhau trên đường phố. Từ trái sang phải, các tay đua mặc áo xanh lá vàng, xanh dương trắng, và vàng đen cùng mũ bảo hiểm. Các ô tô và mô tô hỗ trợ di chuyển ngay phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.242,
+          0.429,
+          0.365,
+          0.9930000000000001
+        ],
+        "description": "cyclist in green and yellow jersey and sunglasses",
+        "description_vi": "vận động viên mặc áo xanh lá vàng và đeo kính râm",
+        "attributes": [
+          "green",
+          "yellow",
+          "jersey",
+          "sunglasses"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.418,
+          0.33499999999999996,
+          0.577,
+          0.995
+        ],
+        "description": "cyclist in blue and white jersey and black shorts",
+        "description_vi": "vận động viên mặc áo xanh trắng và quần đen",
+        "attributes": [
+          "blue",
+          "white",
+          "jersey"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.571,
+          0.42,
+          0.697,
+          0.995
+        ],
+        "description": "cyclist in patterned blue and black jersey and white helmet",
+        "description_vi": "vận động viên mặc áo họa tiết xanh đen và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "blue",
+          "black",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0042",
+    "visual_source_frame_id": "L23_V022_f0042",
+    "ocr_source_frame_id": "L23_V022_f0042",
+    "quality_flags": [],
+    "caption": "A few cyclists ride along a street lined with colorful banners and cheering spectators behind barriers.",
+    "detailed_caption": "A medium shot shows a few cyclists riding on a paved street. A rider in a yellow and green jersey is in the foreground, followed by others. The street is lined with colorful promotional banners, orange flags, and barriers holding spectators.",
+    "caption_vi": "Một vài vận động viên đạp xe trên con phố có treo băng rôn và khán giả đứng sau hàng rào cổ vũ.",
+    "detailed_caption_vi": "Trung cảnh ghi lại một vài vận động viên đang đạp xe trên đường nhựa. Một tay đua mặc áo vàng xanh đi ở phía trước, theo sau là những người khác. Con đường được trang trí bằng các dải băng rôn quảng cáo đầy màu sắc, cờ cam và hàng rào có khán giả.",
+    "ocr_text": "34° CHẶNG 22 03:14:08 00:31 HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.524,
+          0.475,
+          0.595,
+          0.837
+        ],
+        "description": "cyclist in green and yellow jersey and helmet riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh vàng và đội mũ bảo hiểm đang đạp xe",
+        "attributes": [
+          "green",
+          "yellow",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.826,
+          0.455,
+          0.905,
+          0.8340000000000001
+        ],
+        "description": "cyclist in blue jersey and light blue helmet riding",
+        "description_vi": "vận động viên mặc áo xanh dương và đội mũ xanh đang đạp xe",
+        "attributes": [
+          "blue",
+          "jersey",
+          "helmet"
+        ],
+        "action": "riding"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.9179999999999999,
+          0.473,
+          1.0,
+          0.884
+        ],
+        "description": "cyclist in blue and black jersey riding on the right",
+        "description_vi": "vận động viên mặc áo xanh đen đang đạp xe bên phải",
+        "attributes": [
+          "blue",
+          "black",
+          "jersey"
+        ],
+        "action": "riding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0043",
+    "visual_source_frame_id": "L23_V022_f0043",
+    "ocr_source_frame_id": "L23_V022_f0043",
+    "quality_flags": [],
+    "caption": "An aerial view shows a city intersection with a large decorative arch and crowds of people gathered.",
+    "detailed_caption": "An aerial wide shot captures a wide city intersection featuring a large golden decorative arch and a central landscaped roundabout. Crowds of spectators and parked vehicles line the surrounding streets. A red-carpeted staging area is set up in the lower right corner.",
+    "caption_vi": "Góc nhìn từ trên cao cho thấy giao lộ thành phố với cổng chào lớn và đông đảo người tập trung.",
+    "detailed_caption_vi": "Góc rộng từ trên cao ghi lại một giao lộ lớn trong thành phố với một cổng chào trang trí màu vàng lớn và đảo giao thông ở giữa. Đám đông khán giả và các phương tiện đậu dọc theo các con đường xung quanh. Khu vực sân khấu trải thảm đỏ được dựng ở góc dưới bên phải.",
+    "ocr_text": "HTV HỆ THAO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "arch_0",
+        "label": "arch",
+        "bbox": [
+          0.20600000000000002,
+          0.20199999999999999,
+          0.5660000000000001,
+          0.396
+        ],
+        "description": "large golden decorative arch spanning the intersection",
+        "description_vi": "cổng chào trang trí màu vàng lớn bắc qua giao lộ",
+        "attributes": [
+          "golden",
+          "decorative"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "stage_0",
+        "label": "stage",
+        "bbox": [
+          0.484,
+          0.7110000000000001,
+          0.833,
+          1.0
+        ],
+        "description": "red carpeted staging area with white tents and umbrellas",
+        "description_vi": "khu vực sân khấu trải thảm đỏ với các lều và ô màu trắng",
+        "attributes": [
+          "red",
+          "staging"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "arch_0",
+        "predicate": "above",
+        "object_id": "stage_0"
+      },
+      {
+        "subject_id": "stage_0",
+        "predicate": "below",
+        "object_id": "arch_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0044",
+    "visual_source_frame_id": "L23_V022_f0044",
+    "ocr_source_frame_id": "L23_V022_f0044",
+    "quality_flags": [],
+    "caption": "An aerial shot of a wide street with spectators lining the side and several vehicles and cyclists on the road.",
+    "detailed_caption": "An aerial shot captures a wide urban street lined with spectators, barriers, and tents. Several vehicles, including cars and motorcycles, are driving along the road alongside a few scattered cyclists. The setting includes a red carpeted staging area with umbrellas on the right side.",
+    "caption_vi": "Ảnh chụp từ trên cao một con đường rộng có khán giả đứng dọc hai bên cùng nhiều phương tiện và người đi xe đạp.",
+    "detailed_caption_vi": "Ảnh chụp toàn cảnh từ trên cao cho thấy một con đường đô thị rộng lớn được bao quanh bởi khán giả, hàng rào và lều bạt. Nhiều phương tiện gồm ô tô và xe máy đang di chuyển cùng vài vận động viên xe đạp rải rác trên đường. Khung cảnh có khu vực sân khấu trải thảm đỏ gắn ô dù ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "street_0",
+        "label": "street",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "",
+        "description_vi": "",
+        "attributes": [],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0045",
+    "visual_source_frame_id": "L23_V022_f0045",
+    "ocr_source_frame_id": "L23_V022_f0045",
+    "quality_flags": [],
+    "caption": "A medium shot of cyclists racing along a street lined with spectators and colorful banners.",
+    "detailed_caption": "A medium shot shows multiple cyclists racing forward on a paved street. The cyclist in the foreground wears a yellow and green jersey, while the one ahead wears blue. Spectators and colorful tents line the right side of the road under a large archway.",
+    "caption_vi": "Ảnh chụp trung cảnh các vận động viên xe đạp đang đua trên một con đường có khán giả và băng rôn đầy màu sắc.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh ghi lại nhiều vận động viên xe đạp đang đua về phía trước trên đường nhựa. Vận động viên ở tiền cảnh mặc áo vàng xanh, người đi trước mặc áo xanh dương. Khán giả và các gian hàng lều đầy màu sắc xếp dọc bên phải đường dưới một vòm cổng lớn.",
+    "ocr_text": "HTV HE THAO TON DONG A TON DONG A HTF TÒN DO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.563,
+          0.42600000000000005,
+          0.624,
+          0.6489999999999999
+        ],
+        "description": "cyclist wearing a blue jersey and black shorts riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh dương và quần đùi đen đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.73,
+          0.492,
+          0.8949999999999999,
+          0.9510000000000001
+        ],
+        "description": "cyclist wearing a yellow and green jersey and black shorts riding a bicycle",
+        "description_vi": "vận động viên mặc áo vàng xanh và quần đùi đen đang đạp xe",
+        "attributes": [
+          "yellow and green jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0046",
+    "visual_source_frame_id": "L23_V022_f0046",
+    "ocr_source_frame_id": "L23_V022_f0046",
+    "quality_flags": [],
+    "caption": "A medium shot of two cyclists riding away from the camera on a street next to a group of pedestrians.",
+    "detailed_caption": "A medium shot shows two cyclists riding away from the camera on a wide city street. A group of pedestrians stand on the right sidewalk watching the cyclists pass by. Buildings and trees are visible in the background.",
+    "caption_vi": "Ảnh chụp trung cảnh hai vận động viên xe đạp đang chạy hướng ra xa camera trên đường phố cạnh nhóm người đi bộ.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hiển thị hai vận động viên xe đạp đang di chuyển hướng ra xa camera trên một con đường rộng trong thành phố. Một nhóm người đi bộ đứng trên vỉa hè bên phải quan sát các vận động viên lướt qua. Xa xa phía sau là các tòa nhà và cây xanh.",
+    "ocr_text": "CHIEN THANG DIEN BIEN PHU (7/5/1954-7/5/2034)",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.22599999999999998,
+          0.453,
+          0.305,
+          0.8220000000000001
+        ],
+        "description": "cyclist in a yellow and white jersey and black shorts riding a bicycle",
+        "description_vi": "vận động viên mặc áo vàng trắng và quần đen đang đạp xe",
+        "attributes": [
+          "yellow and white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.292,
+          0.435,
+          0.35,
+          0.706
+        ],
+        "description": "cyclist in a red and black jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo đỏ đen đang đạp xe",
+        "attributes": [
+          "red and black jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "overlapping",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "overlapping",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0047",
+    "visual_source_frame_id": "L23_V022_f0047",
+    "ocr_source_frame_id": "L23_V022_f0047",
+    "quality_flags": [],
+    "caption": "A medium shot of cyclists racing under a red finish arch on a street lined with crowds and vehicles.",
+    "detailed_caption": "A medium shot captures several cyclists racing forward beneath a red finish arch across a paved street. Spectators line both sides behind barriers, and several support cars and motorcycles follow closely behind the cyclists.",
+    "caption_vi": "Ảnh chụp trung cảnh các vận động viên đang đua dưới vòm cổng đích màu đỏ trên đường phố đông đúc khán giả và xe cộ.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh ghi lại nhiều vận động viên đang đua tiến về phía trước dưới vòm cổng đích màu đỏ bắc ngang đường nhựa. Khán giả đứng kín hai bên phía sau hàng rào, cùng một số xe ô tô và mô tô hỗ trợ chạy bám sát phía sau các vận động viên.",
+    "ocr_text": "HTV DICH TON DONG",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.47300000000000003,
+          0.538,
+          0.518,
+          0.772
+        ],
+        "description": "cyclist in a dark jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo tối màu đang đạp xe",
+        "attributes": [
+          "dark jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.587,
+          0.637,
+          0.658,
+          0.982
+        ],
+        "description": "cyclist in a white and blue jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo trắng xanh đang đạp xe",
+        "attributes": [
+          "white and blue jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0048",
+    "visual_source_frame_id": "L23_V022_f0048",
+    "ocr_source_frame_id": "L23_V022_f0048",
+    "quality_flags": [],
+    "caption": "A medium shot of a motorcycle escort leading the way under a red finish arch on an empty street.",
+    "detailed_caption": "A medium shot shows a police or official motorcycle escort driving forward in the foreground beneath a red finish arch spanning the street. A silver SUV drives further down the road, and spectators gather behind barriers on the left.",
+    "caption_vi": "Ảnh chụp trung cảnh một xe mô tô hộ mô tô dẫn đường chạy dưới vòm đích màu đỏ trên đường vắng.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hiển thị một xe mô tô dẫn đường của lực lượng chức năng đang chạy ở tiền cảnh dưới vòm cổng đích màu đỏ bắc qua đường. Một chiếc SUV màu bạc chạy xa hơn phía trước, trong khi khán giả tập trung sau hàng rào bên trái.",
+    "ocr_text": "HTV DICH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.7030000000000001,
+          0.454,
+          0.86,
+          0.686
+        ],
+        "description": "silver SUV driving on the road",
+        "description_vi": "xe SUV màu bạc đang chạy trên đường",
+        "attributes": [
+          "silver",
+          "car"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.799,
+          0.816,
+          0.907,
+          0.9979999999999999
+        ],
+        "description": "yellow and black motorcycle being driven by a person in a reflective jacket",
+        "description_vi": "xe mô tô màu vàng đen do người mặc áo phản quang điều khiển",
+        "attributes": [
+          "yellow and black",
+          "motorcycle"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "car_0",
+        "predicate": "above",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "below",
+        "object_id": "car_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0049",
+    "visual_source_frame_id": "L23_V022_f0048",
+    "ocr_source_frame_id": "L23_V022_f0049",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A medium shot of a motorcycle escort leading the way under a red finish arch on an empty street.",
+    "detailed_caption": "A medium shot shows a police or official motorcycle escort driving forward in the foreground beneath a red finish arch spanning the street. A silver SUV drives further down the road, and spectators gather behind barriers on the left.",
+    "caption_vi": "Ảnh chụp trung cảnh một xe mô tô hộ mô tô dẫn đường chạy dưới vòm đích màu đỏ trên đường vắng.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hiển thị một xe mô tô dẫn đường của lực lượng chức năng đang chạy ở tiền cảnh dưới vòm cổng đích màu đỏ bắc qua đường. Một chiếc SUV màu bạc chạy xa hơn phía trước, trong khi khán giả tập trung sau hàng rào bên trái.",
+    "ocr_text": "DICH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "car_0",
+        "label": "car",
+        "bbox": [
+          0.7030000000000001,
+          0.454,
+          0.86,
+          0.686
+        ],
+        "description": "silver SUV driving on the road",
+        "description_vi": "xe SUV màu bạc đang chạy trên đường",
+        "attributes": [
+          "silver",
+          "car"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.799,
+          0.816,
+          0.907,
+          0.9979999999999999
+        ],
+        "description": "yellow and black motorcycle being driven by a person in a reflective jacket",
+        "description_vi": "xe mô tô màu vàng đen do người mặc áo phản quang điều khiển",
+        "attributes": [
+          "yellow and black",
+          "motorcycle"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "car_0",
+        "predicate": "above",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "below",
+        "object_id": "car_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0050",
+    "visual_source_frame_id": "L23_V022_f0050",
+    "ocr_source_frame_id": "L23_V022_f0050",
+    "quality_flags": [],
+    "caption": "A close-up shot of a cyclist in a blue jersey riding past a row of yellow escort motorcycles.",
+    "detailed_caption": "A close-up shot captures a cyclist in a blue and white jersey riding a bicycle forward. To the left and right, multiple yellow escort motorcycles are driven by people wearing red and orange jackets with reflective vests. Spectators line the background.",
+    "caption_vi": "Ảnh chụp cận cảnh một vận động viên mặc áo xanh dương đang đạp xe vượt qua hàng xe mô tô hộ tống màu vàng.",
+    "detailed_caption_vi": "Ảnh chụp cận cảnh ghi lại một vận động viên mặc áo xanh trắng đang đạp xe tiến về phía trước. Xung quanh là nhiều xe mô tô hộ tống màu vàng do những người mặc áo đỏ cam và áo phản quang điều khiển. Khán giả đứng dọc phía sau.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.41200000000000003,
+          0.326,
+          0.542,
+          0.929
+        ],
+        "description": "cyclist in a blue and white jersey and black shorts riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh trắng và quần đùi đen đang đạp xe",
+        "attributes": [
+          "blue and white jersey",
+          "black shorts",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.23700000000000002,
+          0.27,
+          0.375,
+          0.715
+        ],
+        "description": "yellow motorcycle ridden by a person in an orange jacket",
+        "description_vi": "xe mô tô màu vàng do người mặc áo cam điều khiển",
+        "attributes": [
+          "yellow",
+          "motorcycle"
+        ],
+        "action": "driving"
+      },
+      {
+        "object_id": "motorcycle_1",
+        "label": "motorcycle",
+        "bbox": [
+          0.5549999999999999,
+          0.287,
+          0.717,
+          0.717
+        ],
+        "description": "yellow motorcycle ridden by a person in an orange jacket",
+        "description_vi": "xe mô tô màu vàng do người mặc áo cam điều khiển",
+        "attributes": [
+          "yellow",
+          "motorcycle"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "motorcycle_1"
+      },
+      {
+        "subject_id": "motorcycle_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "motorcycle_1"
+      },
+      {
+        "subject_id": "motorcycle_1",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0051",
+    "visual_source_frame_id": "L23_V022_f0051",
+    "ocr_source_frame_id": "L23_V022_f0051",
+    "quality_flags": [],
+    "caption": "An aerial shot of a lone cyclist riding under a red finish arch followed by a line of motorcycles.",
+    "detailed_caption": "An aerial shot shows a single cyclist riding down the center of a wide street under a red finish arch. A long procession of yellow motorcycles with riders follows closely behind the cyclist. Spectators stand behind barriers on both sides of the road.",
+    "caption_vi": "Ảnh chụp từ trên cao một vận động viên đi xe đạp đơn độc dưới vòm đích đỏ theo sau là hàng xe mô tô.",
+    "detailed_caption_vi": "Ảnh chụp toàn cảnh từ trên cao cho thấy một vận động viên đi xe đạp đơn độc ở giữa con đường rộng dưới vòm đích màu đỏ. Một đoàn xe mô tô màu vàng nối đuôi nhau chạy sát phía sau vận động viên. Khán giả đứng sau hàng rào dọc hai bên đường.",
+    "ocr_text": "HTV DICH TON DONG",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.558,
+          0.431,
+          0.592,
+          0.592
+        ],
+        "description": "cyclist in a dark jersey riding a bicycle on the street",
+        "description_vi": "vận động viên mặc áo tối màu đang đạp xe trên đường",
+        "attributes": [
+          "dark jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "motorcycle_0",
+        "label": "motorcycle",
+        "bbox": [
+          0.307,
+          0.36300000000000004,
+          0.351,
+          0.48000000000000004
+        ],
+        "description": "yellow escort motorcycle riding in a group",
+        "description_vi": "xe mô tô hộ tống màu vàng đang chạy theo đoàn",
+        "attributes": [
+          "yellow",
+          "motorcycle"
+        ],
+        "action": "driving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "motorcycle_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "right_of",
+        "object_id": "motorcycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0052",
+    "visual_source_frame_id": "L23_V022_f0052",
+    "ocr_source_frame_id": "L23_V022_f0052",
+    "quality_flags": [],
+    "caption": "A graphic animation features a horse mascot holding a checkered flag against a gradient background.",
+    "detailed_caption": "An animated sequence shows a cartoon horse character in a yellow and green outfit holding a black and white checkered flag. The background is a bright gradient of yellow, orange, and green with geometric graphic patterns.",
+    "caption_vi": "Ảnh đồ họa động hình chú linh vật ngựa cầm cờ ca-rô trên nền màu chuyển sắc.",
+    "detailed_caption_vi": "Đoạn hoạt hình hiển thị nhân vật hoạt hình hình chú ngựa mặc trang phục vàng xanh đang cầm lá cờ ca-rô đen trắng. Phông nền là dải màu chuyển sắc vàng, cam và xanh lá với các họa tiết đồ họa hình học.",
+    "ocr_text": "HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "mascot_0",
+        "label": "mascot",
+        "bbox": [
+          0.739,
+          0.40700000000000003,
+          0.9789999999999999,
+          0.995
+        ],
+        "description": "animated horse character wearing a yellow shirt and black shorts holding a checkered flag",
+        "description_vi": "nhân vật ngựa hoạt hình mặc áo vàng quần đen đang cầm cờ ca-rô",
+        "attributes": [
+          "animated",
+          "horse mascot",
+          "yellow shirt",
+          "black shorts"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0053",
+    "visual_source_frame_id": "L23_V022_f0053",
+    "ocr_source_frame_id": "L23_V022_f0053",
+    "quality_flags": [],
+    "caption": "An aerial replay shot shows a cyclist riding on a street next to green foliage and overhead structures.",
+    "detailed_caption": "An aerial replay shot shows a cyclist riding along a road partially obscured by large green trees on the left. Overhead decorative metal structures span the street, and the word 'REPLAY' appears in the bottom left corner.",
+    "caption_vi": "Ảnh phát lại từ trên cao ghi lại cảnh vận động viên đạp xe trên đường bên cạnh tán cây xanh và khung trang trí.",
+    "detailed_caption_vi": "Ảnh phát lại từ trên cao hiển thị vận động viên đang đi xe đạp trên đường, một phần bị che khuất bởi những tán cây xanh lớn bên trái. Các cấu trúc kim loại trang trí phía trên bắc ngang đường, với chữ 'REPLAY' ở góc dưới bên trái.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.0,
+          0.0,
+          0.7150000000000001,
+          1.0
+        ],
+        "description": "dense green leafy tree on the left side of the street",
+        "description_vi": "cây xanh lá rậm rạp bên trái đường",
+        "attributes": [
+          "green",
+          "leafy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0054",
+    "visual_source_frame_id": "L23_V022_f0054",
+    "ocr_source_frame_id": "L23_V022_f0054",
+    "quality_flags": [],
+    "caption": "An aerial shot shows several cyclists riding in a line down a street next to barriers and spectators.",
+    "detailed_caption": "An aerial shot captures a single-file line of cyclists riding down a paved road. Colorful barriers and spectators line the left side of the street next to a vertical screen display. A 'REPLAY' indicator is visible in the bottom left corner.",
+    "caption_vi": "Ảnh chụp từ trên cao hiển thị nhiều vận động viên xe đạp đang nối đuôi nhau chạy trên đường cạnh rào chắn và khán giả.",
+    "detailed_caption_vi": "Ảnh chụp từ trên cao ghi lại hàng vận động viên xe đạp đi theo một hàng dọc trên đường nhựa. Hàng rào đầy màu sắc và khán giả đứng dọc bên trái đường cạnh một màn hình hiển thị dọc. Biểu thị 'REPLAY' xuất hiện ở góc dưới bên trái.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.544,
+          0.551,
+          0.5820000000000001,
+          0.737
+        ],
+        "description": "cyclist in a blue and purple jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh tím đang đạp xe",
+        "attributes": [
+          "blue and purple jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.5519999999999999,
+          0.34700000000000003,
+          0.595,
+          0.5449999999999999
+        ],
+        "description": "cyclist in a blue jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh dương đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0055",
+    "visual_source_frame_id": "L23_V022_f0055",
+    "ocr_source_frame_id": "L23_V022_f0055",
+    "quality_flags": [],
+    "caption": "An aerial shot shows a cyclist celebrating as they cross the finish line on a street.",
+    "detailed_caption": "An aerial shot captures a cyclist in a blue jersey raising one arm in celebration while crossing a finish line on a street. Lush green trees are on the left, and complex overhead metal street decorations are visible below.",
+    "caption_vi": "Ảnh chụp từ trên cao ghi lại khoảnh khắc vận động viên giơ tay ăn mừng khi cán đích trên đường.",
+    "detailed_caption_vi": "Ảnh chụp từ trên cao ghi lại vận động viên mặc áo xanh dương đang giơ một tay ăn mừng khi vượt qua vạch đích trên đường phố. Cây xanh tươi tốt ở bên trái, và các cấu trúc trang trí kim loại phức tạp ở phía dưới.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.501,
+          0.48200000000000004,
+          0.563,
+          0.715
+        ],
+        "description": "cyclist in a blue jersey with one arm raised riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh dương giơ một tay đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "helmet"
+        ],
+        "action": "celebrating"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0056",
+    "visual_source_frame_id": "L23_V022_f0056",
+    "ocr_source_frame_id": "L23_V022_f0056",
+    "quality_flags": [],
+    "caption": "An aerial shot shows two cyclists riding along a street past green trees and a red barrier.",
+    "detailed_caption": "An aerial shot shows two cyclists riding down a paved street. Lush green foliage covers the left side of the frame, and a bright red barrier marks the bottom boundary. Birds are flying across the open road space.",
+    "caption_vi": "Ảnh chụp từ trên cao hai vận động viên xe đạp đang di chuyển trên đường qua hàng cây xanh và rào chắn đỏ.",
+    "detailed_caption_vi": "Ảnh chụp từ trên cao cho thấy hai vận động viên xe đạp đang di chuyển trên đường nhựa. Tán lá xanh tươi phủ kín phần bên trái khung hình, và một thanh chắn màu đỏ tươi đánh dấu ranh giới phía dưới. Những chú chim đang bay qua khoảng không của mặt đường.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.484,
+          0.44699999999999995,
+          0.523,
+          0.638
+        ],
+        "description": "cyclist in a blue jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh dương đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.511,
+          0.669,
+          0.549,
+          0.878
+        ],
+        "description": "cyclist in a blue and purple jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh tím đang đạp xe",
+        "attributes": [
+          "blue and purple jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "above",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "below",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0057",
+    "visual_source_frame_id": "L23_V022_f0057",
+    "ocr_source_frame_id": "L23_V022_f0057",
+    "quality_flags": [],
+    "caption": "A medium shot of a large group of cyclists racing down a wide street lined with spectators.",
+    "detailed_caption": "A medium shot shows a large peloton of cyclists racing forward on a paved street. Spectators and colorful promotional flags line both sides of the road behind barriers. A 'REPLAY' graphic is visible in the bottom left corner.",
+    "caption_vi": "Ảnh chụp trung cảnh một nhóm lớn các vận động viên xe đạp đang đua trên đường rộng có đông khán giả.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh ghi lại một đoàn đông các vận động viên xe đạp đang đua về phía trước trên con đường nhựa. Khán giả và các lá cờ quảng cáo đầy màu sắc xếp dọc hai bên đường phía sau hàng rào. Biểu trưng 'REPLAY' hiển thị ở góc dưới bên trái.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.624,
+          0.423,
+          0.663,
+          0.597
+        ],
+        "description": "cyclist in a blue jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh dương đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.722,
+          0.42600000000000005,
+          0.768,
+          0.606
+        ],
+        "description": "cyclist in a blue and red jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh đỏ đang đạp xe",
+        "attributes": [
+          "blue and red jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0058",
+    "visual_source_frame_id": "L23_V022_f0058",
+    "ocr_source_frame_id": "L23_V022_f0058",
+    "quality_flags": [],
+    "caption": "A medium-close shot of a cyclist raising an arm in victory as he sprints past the finish line.",
+    "detailed_caption": "A medium-close shot shows a cyclist in a blue jersey raising his right arm in celebration as he leads the sprint across the finish line. Other cyclists follow closely behind in a tight group, while spectators line the barriers on the right.",
+    "caption_vi": "Ảnh cận cảnh vừa ghi lại vận động viên giơ tay ăn mừng khi bứt phá vượt qua vạch đích.",
+    "detailed_caption_vi": "Ảnh cận cảnh vừa ghi lại một vận động viên mặc áo xanh dương đang giơ tay phải ăn mừng khi dẫn đầu nhóm nước rút qua vạch đích. Các vận động viên khác bám sát ngay phía sau tạo thành một nhóm đông, trong khi khán giả đứng dọc hàng rào bên phải.",
+    "ocr_text": "REPLAY HTV TON DONGA TON DONGA",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.497,
+          0.37600000000000006,
+          0.558,
+          0.631
+        ],
+        "description": "cyclist in a blue and purple jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh tím đang đạp xe",
+        "attributes": [
+          "blue and purple jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.528,
+          0.365,
+          0.631,
+          0.675
+        ],
+        "description": "cyclist in a blue jersey with one arm raised riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh dương giơ một tay đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "helmet"
+        ],
+        "action": "celebrating"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "overlapping",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "overlapping",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0059",
+    "visual_source_frame_id": "L23_V022_f0059",
+    "ocr_source_frame_id": "L23_V022_f0059",
+    "quality_flags": [],
+    "caption": "A close-up shot of cyclists sprinting aggressively across the finish line with spectators watching.",
+    "detailed_caption": "A close-up shot captures several cyclists in aerodynamic crouching positions sprinting towards the finish line. The central cyclist wears a blue jersey and white helmet, flanked by others. Spectators behind barriers on the right hold up phones to record.",
+    "caption_vi": "Ảnh cận cảnh các vận động viên đang cúi người nước rút mạnh mẽ qua vạch đích dưới sự chứng kiến của khán giả.",
+    "detailed_caption_vi": "Ảnh cận cảnh ghi lại một số vận động viên đang ở tư thế cúi người khí động học để nước rút về vạch đích. Vận động viên ở giữa mặc áo xanh và đội mũ bảo hiểm trắng, được vây quanh bởi những người khác. Khán giả sau hàng rào bên phải giơ điện thoại quay phim.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.033,
+          0.274,
+          0.20600000000000002,
+          0.9850000000000001
+        ],
+        "description": "cyclist in a blue and white jersey and white helmet riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh trắng đội mũ trắng đang đạp xe",
+        "attributes": [
+          "blue and white jersey",
+          "white helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.28700000000000003,
+          0.38,
+          0.497,
+          0.9890000000000001
+        ],
+        "description": "cyclist in a blue jersey and white helmet leaning over handlebars",
+        "description_vi": "vận động viên mặc áo xanh mũ trắng đang cúi người trên tay lái",
+        "attributes": [
+          "blue jersey",
+          "white helmet",
+          "black shorts"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0060",
+    "visual_source_frame_id": "L23_V022_f0060",
+    "ocr_source_frame_id": "L23_V022_f0060",
+    "quality_flags": [],
+    "caption": "A close-up shot of a cyclist in a blue jersey celebrating as he crosses the finish line.",
+    "detailed_caption": "A close-up shot focuses on a cyclist in a blue jersey and white helmet with green sunglasses, extending his arm in celebration. Spectators are blurred in the background behind colorful barriers.",
+    "caption_vi": "Ảnh cận cảnh một vận động viên mặc áo xanh dương đang ăn mừng khi cán vạch đích.",
+    "detailed_caption_vi": "Ảnh cận cảnh tập trung vào một vận động viên mặc áo xanh dương, đội mũ trắng và đeo kính râm xanh lá, đang giơ tay ăn mừng. Khán giả ở hậu cảnh mờ ảo phía sau các rào chắn đầy màu sắc.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.0,
+          0.095,
+          0.513,
+          0.995
+        ],
+        "description": "cyclist in a blue jersey, white helmet, and green sunglasses with arm extended",
+        "description_vi": "vận động viên mặc áo xanh, mũ trắng và kính râm xanh lá đang giơ tay",
+        "attributes": [
+          "blue jersey",
+          "white helmet",
+          "green sunglasses",
+          "black shorts"
+        ],
+        "action": "celebrating"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0061",
+    "visual_source_frame_id": "L23_V022_f0061",
+    "ocr_source_frame_id": "L23_V022_f0061",
+    "quality_flags": [],
+    "caption": "A wide shot of a finish area with a red banner overhead, spectators, and a large display screen.",
+    "detailed_caption": "A wide shot shows the finish area of a race with a large red banner overhead bearing Vietnamese text. A crowd of spectators lines the barriers on the right, and a tall digital screen displays event graphics on the right side.",
+    "caption_vi": "Ảnh toàn cảnh khu vực về đích có băng rôn đỏ phía trên, khán giả và một màn hình hiển thị lớn.",
+    "detailed_caption_vi": "Ảnh toàn cảnh cho thấy khu vực về đích của cuộc đua với một băng rôn đỏ lớn phía trên có chữ tiếng Việt. Đông đảo khán giả xếp hàng dọc các thanh chắn bên phải, và một màn hình kỹ thuật số cao hiển thị đồ họa sự kiện ở bên phải.",
+    "ocr_text": "HTV DÍCH TON DONG A CUP TRUYEN H",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "barrier_0",
+        "label": "barrier",
+        "bbox": [
+          0.335,
+          0.628,
+          0.9460000000000001,
+          0.8029999999999999
+        ],
+        "description": "barriers lining the side of the street with advertisements",
+        "description_vi": "hàng rào dọc bên đường có in quảng cáo",
+        "attributes": [
+          "barriers",
+          "advertisements"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "display_screen_0",
+        "label": "display screen",
+        "bbox": [
+          0.8630000000000001,
+          0.19,
+          0.9890000000000001,
+          0.396
+        ],
+        "description": "large digital screen displaying event branding and graphics",
+        "description_vi": "màn hình kỹ thuật số lớn hiển thị thương hiệu và đồ họa sự kiện",
+        "attributes": [
+          "digital screen",
+          "yellow background"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "display_screen_0",
+        "predicate": "above",
+        "object_id": "barrier_0"
+      },
+      {
+        "subject_id": "barrier_0",
+        "predicate": "below",
+        "object_id": "display_screen_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0062",
+    "visual_source_frame_id": "L23_V022_f0062",
+    "ocr_source_frame_id": "L23_V022_f0062",
+    "quality_flags": [],
+    "caption": "A low-angle shot of the finish line on a street with buildings and spectators in the background.",
+    "detailed_caption": "A low-angle shot captures the empty finish line marked on the asphalt street. Buildings, trees, and spectators gathered behind advertising barriers are visible in the background under a clear sky.",
+    "caption_vi": "Ảnh chụp góc thấp vạch đích trên đường phố với các tòa nhà và khán giả ở hậu cảnh.",
+    "detailed_caption_vi": "Ảnh chụp góc thấp ghi lại vạch đích trống được đánh dấu trên mặt đường nhựa. Các tòa nhà, cây xanh và khán giả tập trung sau các rào chắn quảng cáo xuất hiện ở hậu cảnh dưới bầu trời quang đãng.",
+    "ocr_text": "REPLAY TON DONG A TON DONG A",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.16299999999999998,
+          0.0,
+          0.471,
+          0.442
+        ],
+        "description": "multistory white building in the background",
+        "description_vi": "tòa nhà màu trắng nhiều tầng ở hậu cảnh",
+        "attributes": [
+          "white",
+          "building"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "street_0",
+        "label": "street",
+        "bbox": [
+          0.0,
+          0.551,
+          1.0,
+          1.0
+        ],
+        "description": "asphalt street with a finish line marking and yellow dividing line",
+        "description_vi": "đường nhựa có vạch đích và vạch phân cách màu vàng",
+        "attributes": [
+          "asphalt",
+          "street"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "building_0",
+        "predicate": "above",
+        "object_id": "street_0"
+      },
+      {
+        "subject_id": "street_0",
+        "predicate": "below",
+        "object_id": "building_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0063",
+    "visual_source_frame_id": "L23_V022_f0063",
+    "ocr_source_frame_id": "L23_V022_f0063",
+    "quality_flags": [],
+    "caption": "A medium shot of a large group of cyclists racing down a street towards the camera.",
+    "detailed_caption": "A medium shot shows a large pack of cyclists racing forward on a paved street. Spectators stand behind barriers on the left, and hands holding phones are visible in the lower right foreground recording the race.",
+    "caption_vi": "Ảnh chụp trung cảnh một đoàn lớn các vận động viên xe đạp đang đua trên đường tiến về phía camera.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hiển thị một nhóm đông các vận động viên xe đạp đang đua về phía trước trên đường nhựa. Khán giả đứng sau rào chắn bên trái, và những bàn tay cầm điện thoại xuất hiện ở góc phải tiền cảnh để quay phim cuộc đua.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.5599999999999999,
+          0.436,
+          0.608,
+          0.624
+        ],
+        "description": "cyclist in a red and black jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo đỏ đen đang đạp xe",
+        "attributes": [
+          "red and black jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.739,
+          0.44699999999999995,
+          0.7929999999999999,
+          0.631
+        ],
+        "description": "cyclist in a blue jersey riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh dương đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0064",
+    "visual_source_frame_id": "L23_V022_f0064",
+    "ocr_source_frame_id": "L23_V022_f0064",
+    "quality_flags": [],
+    "caption": "A medium shot of a dense peloton of cyclists racing forward on a street.",
+    "detailed_caption": "A medium shot captures a dense peloton of cyclists racing down a wide street. Spectators line the left side behind barriers, while hands holding smartphones appear in the foreground on the right.",
+    "caption_vi": "Ảnh chụp trung cảnh một đoàn đua xe đạp đông đúc đang lao về phía trước trên đường phố.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh ghi lại một đoàn đua xe đạp đông đúc đang chạy tốc độ cao trên đường rộng. Khán giả xếp hàng dọc bên trái sau rào chắn, trong khi những bàn tay cầm điện thoại thông minh xuất hiện ở tiền cảnh bên phải.",
+    "ocr_text": "REPLAY HTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.526,
+          0.465,
+          0.592,
+          0.6900000000000001
+        ],
+        "description": "cyclist in a red helmet and blue jersey riding a bicycle",
+        "description_vi": "vận động viên đội mũ đỏ mặc áo xanh đang đạp xe",
+        "attributes": [
+          "red helmet",
+          "blue jersey"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.755,
+          0.45999999999999996,
+          0.829,
+          0.686
+        ],
+        "description": "cyclist in a blue jersey and white helmet riding a bicycle",
+        "description_vi": "vận động viên mặc áo xanh và mũ trắng đang đạp xe",
+        "attributes": [
+          "blue jersey",
+          "white helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0065",
+    "visual_source_frame_id": "L23_V022_f0065",
+    "ocr_source_frame_id": "L23_V022_f0065",
+    "quality_flags": [],
+    "caption": "A peloton of cyclists sprints towards the finish line on a sunny road lined with spectators.",
+    "detailed_caption": "A medium shot captures a peloton of cyclists sprinting down a sunlit street during a race. Multiple riders in colorful jerseys and helmets grip their handlebars tightly, speeding towards the finish line on the right. Spectators line the left side behind low barriers adorned with flags and banners. The road surface is clear with painted lane markers.",
+    "caption_vi": "Một đoàn đua xe đạp đang nước rút về đích trên con đường lộng gió có đông đảo khán giả.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại đoàn vận động viên xe đạp đang nước rút trên một con đường đầy nắng. Nhiều tay đua mặc áo đấu đầy màu sắc và đội mũ bảo hiểm đang nắm chặt tay lái, phóng nhanh về hướng vạch đích ở bên phải. Khán giả đứng kín hai bên đường phía sau các hàng rào thấp được trang trí bằng cờ và biểu ngữ.",
+    "ocr_text": "REPLAY",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.29,
+          0.353,
+          0.33799999999999997,
+          0.5670000000000001
+        ],
+        "description": "cyclist in yellow jersey and black shorts riding solo near barriers",
+        "description_vi": "vận động viên mặc áo vàng và quần đùi đen đang đạp xe đơn độc gần hàng rào",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.5469999999999999,
+          0.431,
+          0.616,
+          0.655
+        ],
+        "description": "cyclist wearing a red jersey and white helmet",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "red",
+          "white",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.604,
+          0.452,
+          0.6679999999999999,
+          0.696
+        ],
+        "description": "cyclist wearing a blue jersey and red helmet",
+        "description_vi": "vận động viên xe đạp mặc áo xanh dương và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "blue",
+          "red",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_3",
+        "label": "cyclist",
+        "bbox": [
+          0.775,
+          0.439,
+          0.8560000000000001,
+          0.715
+        ],
+        "description": "cyclist wearing a blue jersey and white helmet sprinting",
+        "description_vi": "vận động viên xe đạp mặc áo xanh và đội mũ bảo hiểm trắng đang nước rút",
+        "attributes": [
+          "blue",
+          "white",
+          "helmet"
+        ],
+        "action": "sprinting"
+      },
+      {
+        "object_id": "cyclist_4",
+        "label": "cyclist",
+        "bbox": [
+          0.85,
+          0.431,
+          0.915,
+          0.678
+        ],
+        "description": "cyclist wearing a white and black jersey with a white helmet",
+        "description_vi": "vận động viên xe đạp mặc áo trắng đen và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "white",
+          "black",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0066",
+    "visual_source_frame_id": "L23_V022_f0065",
+    "ocr_source_frame_id": "L23_V022_f0066",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A peloton of cyclists sprints towards the finish line on a sunny road lined with spectators.",
+    "detailed_caption": "A medium shot captures a peloton of cyclists sprinting down a sunlit street during a race. Multiple riders in colorful jerseys and helmets grip their handlebars tightly, speeding towards the finish line on the right. Spectators line the left side behind low barriers adorned with flags and banners. The road surface is clear with painted lane markers.",
+    "caption_vi": "Một đoàn đua xe đạp đang nước rút về đích trên con đường lộng gió có đông đảo khán giả.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại đoàn vận động viên xe đạp đang nước rút trên một con đường đầy nắng. Nhiều tay đua mặc áo đấu đầy màu sắc và đội mũ bảo hiểm đang nắm chặt tay lái, phóng nhanh về hướng vạch đích ở bên phải. Khán giả đứng kín hai bên đường phía sau các hàng rào thấp được trang trí bằng cờ và biểu ngữ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.29,
+          0.353,
+          0.33799999999999997,
+          0.5670000000000001
+        ],
+        "description": "cyclist in yellow jersey and black shorts riding solo near barriers",
+        "description_vi": "vận động viên mặc áo vàng và quần đùi đen đang đạp xe đơn độc gần hàng rào",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.5469999999999999,
+          0.431,
+          0.616,
+          0.655
+        ],
+        "description": "cyclist wearing a red jersey and white helmet",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "red",
+          "white",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.604,
+          0.452,
+          0.6679999999999999,
+          0.696
+        ],
+        "description": "cyclist wearing a blue jersey and red helmet",
+        "description_vi": "vận động viên xe đạp mặc áo xanh dương và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "blue",
+          "red",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_3",
+        "label": "cyclist",
+        "bbox": [
+          0.775,
+          0.439,
+          0.8560000000000001,
+          0.715
+        ],
+        "description": "cyclist wearing a blue jersey and white helmet sprinting",
+        "description_vi": "vận động viên xe đạp mặc áo xanh và đội mũ bảo hiểm trắng đang nước rút",
+        "attributes": [
+          "blue",
+          "white",
+          "helmet"
+        ],
+        "action": "sprinting"
+      },
+      {
+        "object_id": "cyclist_4",
+        "label": "cyclist",
+        "bbox": [
+          0.85,
+          0.431,
+          0.915,
+          0.678
+        ],
+        "description": "cyclist wearing a white and black jersey with a white helmet",
+        "description_vi": "vận động viên xe đạp mặc áo trắng đen và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "white",
+          "black",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0067",
+    "visual_source_frame_id": "L23_V022_f0065",
+    "ocr_source_frame_id": "L23_V022_f0067",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A peloton of cyclists sprints towards the finish line on a sunny road lined with spectators.",
+    "detailed_caption": "A medium shot captures a peloton of cyclists sprinting down a sunlit street during a race. Multiple riders in colorful jerseys and helmets grip their handlebars tightly, speeding towards the finish line on the right. Spectators line the left side behind low barriers adorned with flags and banners. The road surface is clear with painted lane markers.",
+    "caption_vi": "Một đoàn đua xe đạp đang nước rút về đích trên con đường lộng gió có đông đảo khán giả.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại đoàn vận động viên xe đạp đang nước rút trên một con đường đầy nắng. Nhiều tay đua mặc áo đấu đầy màu sắc và đội mũ bảo hiểm đang nắm chặt tay lái, phóng nhanh về hướng vạch đích ở bên phải. Khán giả đứng kín hai bên đường phía sau các hàng rào thấp được trang trí bằng cờ và biểu ngữ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.29,
+          0.353,
+          0.33799999999999997,
+          0.5670000000000001
+        ],
+        "description": "cyclist in yellow jersey and black shorts riding solo near barriers",
+        "description_vi": "vận động viên mặc áo vàng và quần đùi đen đang đạp xe đơn độc gần hàng rào",
+        "attributes": [
+          "yellow",
+          "black"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.5469999999999999,
+          0.431,
+          0.616,
+          0.655
+        ],
+        "description": "cyclist wearing a red jersey and white helmet",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "red",
+          "white",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.604,
+          0.452,
+          0.6679999999999999,
+          0.696
+        ],
+        "description": "cyclist wearing a blue jersey and red helmet",
+        "description_vi": "vận động viên xe đạp mặc áo xanh dương và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "blue",
+          "red",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_3",
+        "label": "cyclist",
+        "bbox": [
+          0.775,
+          0.439,
+          0.8560000000000001,
+          0.715
+        ],
+        "description": "cyclist wearing a blue jersey and white helmet sprinting",
+        "description_vi": "vận động viên xe đạp mặc áo xanh và đội mũ bảo hiểm trắng đang nước rút",
+        "attributes": [
+          "blue",
+          "white",
+          "helmet"
+        ],
+        "action": "sprinting"
+      },
+      {
+        "object_id": "cyclist_4",
+        "label": "cyclist",
+        "bbox": [
+          0.85,
+          0.431,
+          0.915,
+          0.678
+        ],
+        "description": "cyclist wearing a white and black jersey with a white helmet",
+        "description_vi": "vận động viên xe đạp mặc áo trắng đen và đội mũ bảo hiểm trắng",
+        "attributes": [
+          "white",
+          "black",
+          "helmet"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "left_of",
+        "object_id": "cyclist_3"
+      },
+      {
+        "subject_id": "cyclist_3",
+        "predicate": "right_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "left_of",
+        "object_id": "cyclist_4"
+      },
+      {
+        "subject_id": "cyclist_4",
+        "predicate": "right_of",
+        "object_id": "cyclist_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0068",
+    "visual_source_frame_id": "L23_V022_f0068",
+    "ocr_source_frame_id": "L23_V022_f0068",
+    "quality_flags": [],
+    "caption": "Several cyclists finish a race on an empty street with spectators gathered along the barriers.",
+    "detailed_caption": "A wide shot shows several cyclists in the distance completing a race on a wide asphalt road. A crowd of spectators under colorful umbrellas stands behind branded barriers along the right side of the street. Buildings and trees line the background under a clear sky.",
+    "caption_vi": "Một số tay đua hoàn thành cuộc đua trên con đường vắng với khán giả tập trung dọc theo hàng rào.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh cho thấy một số tay đua ở phía xa đang hoàn thành cuộc đua trên một con đường nhựa rộng. Đám đông khán giả cầm ô đủ màu sắc đứng sau các hàng rào có thương hiệu dọc theo phía bên phải đường. Các tòa nhà và cây xanh xếp ở hậu cảnh dưới bầu trời quang đãng.",
+    "ocr_text": "REPLAY TON DONG A",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "barriers_0",
+        "label": "barriers",
+        "bbox": [
+          0.233,
+          0.261,
+          1.0,
+          0.439
+        ],
+        "description": "branded barriers with text along the roadside",
+        "description_vi": "hàng rào có in chữ thương hiệu dọc bên đường",
+        "attributes": [
+          "branded",
+          "colorful"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L23_V022_f0069",
+    "visual_source_frame_id": "L23_V022_f0069",
+    "ocr_source_frame_id": "L23_V022_f0069",
+    "quality_flags": [],
+    "caption": "A cyclist raises his arms in victory as he crosses the finish line ahead of competitors.",
+    "detailed_caption": "A medium shot captures a cyclist wearing a blue jersey and white helmet raising his right arm in triumph as he crosses the yellow finish line. Other cyclists follow closely behind him on the left. Spectators gather behind barriers lining the street.",
+    "caption_vi": "Một tay đua giơ tay ăn mừng chiến thắng khi vượt qua vạch đích trước các đối thủ.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh ghi lại một tay đua mặc áo xanh và đội mũ bảo hiểm trắng đang giơ tay phải ăn mừng khi cán qua vạch đích màu vàng. Các tay đua khác bám sát phía sau bên trái. Khán giả tập trung phía sau các hàng rào dọc theo con đường.",
+    "ocr_text": "REPLAY TON DONG A",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.155,
+          0.23900000000000002,
+          0.233,
+          0.381
+        ],
+        "description": "cyclist in a blue jersey riding a bicycle",
+        "description_vi": "vận động viên xe đạp mặc áo xanh đang đạp xe",
+        "attributes": [
+          "blue"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.483,
+          0.21500000000000002,
+          0.5740000000000001,
+          0.442
+        ],
+        "description": "cyclist wearing a purple top and dark shorts",
+        "description_vi": "vận động viên xe đạp mặc áo tím và quần tối màu",
+        "attributes": [
+          "purple",
+          "dark"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.768,
+          0.10700000000000001,
+          0.8640000000000001,
+          0.47100000000000003
+        ],
+        "description": "cyclist wearing blue jersey and white helmet raising arm in victory",
+        "description_vi": "vận động viên xe đạp mặc áo xanh đội mũ bảo hiểm trắng giơ tay ăn mừng chiến thắng",
+        "attributes": [
+          "blue",
+          "white",
+          "helmet"
+        ],
+        "action": "celebrating"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0070",
+    "visual_source_frame_id": "L23_V022_f0070",
+    "ocr_source_frame_id": "L23_V022_f0070",
+    "quality_flags": [],
+    "caption": "Cyclists race tightly together towards the finish line near cheering crowds.",
+    "detailed_caption": "A medium shot shows a group of cyclists sprinting across a paved road with a yellow finish line. A rider in a red jersey leads the group in the center, flanked by other competitors. A large crowd watches from behind branded barriers on the left.",
+    "caption_vi": "Các tay đua bám sát nhau nước rút về đích gần đám đông đang cổ vũ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một nhóm tay đua đang nước rút qua con đường trải nhựa có vạch đích màu vàng. Một tay đua áo đỏ dẫn đầu nhóm ở giữa, bên cạnh là các đối thủ khác. Đám đông khán giả đứng xem phía sau các hàng rào có thương hiệu ở phía bên trái.",
+    "ocr_text": "REPLAY TON DONG A",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.461,
+          0.183,
+          0.5650000000000001,
+          0.429
+        ],
+        "description": "cyclist in red jersey and white helmet leading the sprint",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ và đội mũ bảo hiểm trắng dẫn đầu cuộc đua nước rút",
+        "attributes": [
+          "red",
+          "white",
+          "helmet"
+        ],
+        "action": "sprinting"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.5820000000000001,
+          0.18,
+          0.674,
+          0.452
+        ],
+        "description": "cyclist in green and yellow jersey riding a bicycle",
+        "description_vi": "vận động viên xe đạp mặc áo xanh lá và vàng đang đạp xe",
+        "attributes": [
+          "green",
+          "yellow"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.765,
+          0.245,
+          0.859,
+          0.442
+        ],
+        "description": "cyclist in red and black jersey",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ đen",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0071",
+    "visual_source_frame_id": "L23_V022_f0070",
+    "ocr_source_frame_id": "L23_V022_f0071",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Cyclists race tightly together towards the finish line near cheering crowds.",
+    "detailed_caption": "A medium shot shows a group of cyclists sprinting across a paved road with a yellow finish line. A rider in a red jersey leads the group in the center, flanked by other competitors. A large crowd watches from behind branded barriers on the left.",
+    "caption_vi": "Các tay đua bám sát nhau nước rút về đích gần đám đông đang cổ vũ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một nhóm tay đua đang nước rút qua con đường trải nhựa có vạch đích màu vàng. Một tay đua áo đỏ dẫn đầu nhóm ở giữa, bên cạnh là các đối thủ khác. Đám đông khán giả đứng xem phía sau các hàng rào có thương hiệu ở phía bên trái.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.461,
+          0.183,
+          0.5650000000000001,
+          0.429
+        ],
+        "description": "cyclist in red jersey and white helmet leading the sprint",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ và đội mũ bảo hiểm trắng dẫn đầu cuộc đua nước rút",
+        "attributes": [
+          "red",
+          "white",
+          "helmet"
+        ],
+        "action": "sprinting"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.5820000000000001,
+          0.18,
+          0.674,
+          0.452
+        ],
+        "description": "cyclist in green and yellow jersey riding a bicycle",
+        "description_vi": "vận động viên xe đạp mặc áo xanh lá và vàng đang đạp xe",
+        "attributes": [
+          "green",
+          "yellow"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.765,
+          0.245,
+          0.859,
+          0.442
+        ],
+        "description": "cyclist in red and black jersey",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ đen",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0072",
+    "visual_source_frame_id": "L23_V022_f0072",
+    "ocr_source_frame_id": "L23_V022_f0072",
+    "quality_flags": [],
+    "caption": "Cyclists sprint across the finish line during a road race.",
+    "detailed_caption": "A medium shot captures several cyclists racing across a yellow finish line on an asphalt road. A rider in a blue jersey and red helmet pedals in the center while another in a patterned white jersey rides on the right. Spectators line the background behind low barriers.",
+    "caption_vi": "Các tay đua nước rút qua vạch đích trong một giải đua xe đạp đường trường.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một số tay đua đang tranh tài vượt qua vạch đích màu vàng trên con đường nhựa. Một tay đua mặc áo xanh và đội mũ bảo hiểm đỏ đang đạp xe ở giữa trong khi một tay đua khác mặc áo trắng họa tiết đạp xe ở bên phải. Khán giả đứng dọc phía sau các hàng rào thấp ở hậu cảnh.",
+    "ocr_text": "REPLAY TON DONGA",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.294,
+          0.24000000000000002,
+          0.36,
+          0.431
+        ],
+        "description": "cyclist in red and yellow jersey",
+        "description_vi": "vận động viên xe đạp mặc áo đỏ và vàng",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.396,
+          0.201,
+          0.485,
+          0.46599999999999997
+        ],
+        "description": "cyclist in blue jersey and red helmet",
+        "description_vi": "vận động viên xe đạp mặc áo xanh và đội mũ bảo hiểm đỏ",
+        "attributes": [
+          "blue",
+          "red",
+          "helmet"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.725,
+          0.207,
+          0.8240000000000001,
+          0.451
+        ],
+        "description": "cyclist in white and red jersey riding on the right",
+        "description_vi": "vận động viên xe đạp mặc áo trắng đỏ đang đạp xe ở bên phải",
+        "attributes": [
+          "white",
+          "red"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0073",
+    "visual_source_frame_id": "L23_V022_f0073",
+    "ocr_source_frame_id": "L23_V022_f0073",
+    "quality_flags": [],
+    "caption": "A group of cyclists rides along a street past spectators and barriers.",
+    "detailed_caption": "A wide shot shows multiple cyclists riding from left to right along a paved street. The top portion of the frame is obscured by a black overlay, while spectators and branded barriers are visible along the left side and background.",
+    "caption_vi": "Một nhóm tay đua di chuyển dọc theo con đường qua các khán giả và hàng rào.",
+    "detailed_caption_vi": "Cảnh quay toàn cảnh cho thấy nhiều tay đua đang chạy từ trái sang phải dọc theo con đường trải nhựa. Phần trên của khung hình bị che bởi lớp phủ màu đen, trong khi khán giả và hàng rào có thương hiệu có thể nhìn thấy ở phía bên trái và hậu cảnh.",
+    "ocr_text": "REPLAY",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cyclist_0",
+        "label": "cyclist",
+        "bbox": [
+          0.303,
+          0.323,
+          0.372,
+          0.453
+        ],
+        "description": "cyclist riding a red bicycle",
+        "description_vi": "vận động viên đạp xe đạp màu đỏ",
+        "attributes": [
+          "red"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_1",
+        "label": "cyclist",
+        "bbox": [
+          0.608,
+          0.321,
+          0.693,
+          0.452
+        ],
+        "description": "cyclist riding a yellow bicycle",
+        "description_vi": "vận động viên đạp xe đạp màu vàng",
+        "attributes": [
+          "yellow"
+        ],
+        "action": "cycling"
+      },
+      {
+        "object_id": "cyclist_2",
+        "label": "cyclist",
+        "bbox": [
+          0.747,
+          0.318,
+          0.8310000000000001,
+          0.48200000000000004
+        ],
+        "description": "cyclist riding a black bicycle",
+        "description_vi": "vận động viên đạp xe đạp màu đen",
+        "attributes": [
+          "black"
+        ],
+        "action": "cycling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_1"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_0",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_0"
+      },
+      {
+        "subject_id": "cyclist_1",
+        "predicate": "left_of",
+        "object_id": "cyclist_2"
+      },
+      {
+        "subject_id": "cyclist_2",
+        "predicate": "right_of",
+        "object_id": "cyclist_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L23_V022_f0074",
+    "visual_source_frame_id": "L23_V022_f0074",
+    "ocr_source_frame_id": "L23_V022_f0074",
+    "quality_flags": [],
+    "caption": "An animated mascot holding a checkered flag stands beneath a broadcast title graphic.",
+    "detailed_caption": "A medium shot features an animated horse mascot holding a checkered flag on the lower left, set against an orange and yellow gradient background with geometric patterns. Above the mascot, a golden circular logo and a red banner display Vietnamese text in yellow lettering. The scene serves as a television broadcast title card.",
+    "caption_vi": "Một linh vật hoạt hình cầm cờ ca-rô đứng bên dưới đồ họa tiêu đề phát sóng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh có hình ảnh linh vật ngựa hoạt hình cầm lá cờ ca-rô ở góc dưới bên trái, đặt trên nền chuyển màu cam và vàng với các họa tiết hình học. Phía trên linh vật là logo hình tròn màu vàng và một băng rôn đỏ hiển thị chữ tiếng Việt màu vàng. Khung hình đóng vai trò là một thẻ tiêu đề phát sóng truyền hình.",
+    "ocr_text": "CÚP TRUYỀN HÌNH ĐÀI TRUYỀN HÌNH TPHCM 2024 HTV TON DONG A ĐÀI TRUYỀN HÌNH THÀNH PHỐ HỒ CHÍ MINH THỰC HIỆN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "banner_0",
+        "label": "banner",
+        "bbox": [
+          0.1,
+          0.338,
+          0.891,
+          0.493
+        ],
+        "description": "red banner with yellow text",
+        "description_vi": "băng rôn đỏ với chữ màu vàng",
+        "attributes": [
+          "red",
+          "yellow"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "mascot_0",
+        "label": "mascot",
+        "bbox": [
+          0.06899999999999999,
+          0.564,
+          0.254,
+          0.999
+        ],
+        "description": "animated horse mascot wearing a yellow and brown jersey and holding a checkered flag",
+        "description_vi": "linh vật ngựa hoạt hình mặc áo vàng nâu và cầm cờ ca-rô",
+        "attributes": [
+          "animated",
+          "yellow",
+          "brown"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "banner_0",
+        "predicate": "above",
+        "object_id": "mascot_0"
+      },
+      {
+        "subject_id": "mascot_0",
+        "predicate": "below",
+        "object_id": "banner_0"
+      }
+    ]
+  }
+]

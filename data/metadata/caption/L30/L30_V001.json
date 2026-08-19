@@ -1,0 +1,4343 @@
+[
+  {
+    "frame_id": "L30_V001_f0001",
+    "visual_source_frame_id": "L30_V001_f0001",
+    "ocr_source_frame_id": "L30_V001_f0001",
+    "quality_flags": [],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions from a slightly brighter center to a soft vignette around the edges.",
+    "caption_vi": "Phông nền trắng đơn giản.",
+    "detailed_caption_vi": "Phông nền trắng trơn chuyển màu nhẹ nhàng từ tâm sáng ra viền tối xung quanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0002",
+    "visual_source_frame_id": "L30_V001_f0001",
+    "ocr_source_frame_id": "L30_V001_f0002",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions from a slightly brighter center to a soft vignette around the edges.",
+    "caption_vi": "Phông nền trắng đơn giản.",
+    "detailed_caption_vi": "Phông nền trắng trơn chuyển màu nhẹ nhàng từ tâm sáng ra viền tối xung quanh.",
+    "ocr_text": "Herbalife #1 thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0003",
+    "visual_source_frame_id": "L30_V001_f0001",
+    "ocr_source_frame_id": "L30_V001_f0003",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plain white gradient background.",
+    "detailed_caption": "A plain white background transitions from a slightly brighter center to a soft vignette around the edges.",
+    "caption_vi": "Phông nền trắng đơn giản.",
+    "detailed_caption_vi": "Phông nền trắng trơn chuyển màu nhẹ nhàng từ tâm sáng ra viền tối xung quanh.",
+    "ocr_text": "Herbalife #1 thương hiệu quản lý cân nặng & sức khỏe trên thế giới",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0004",
+    "visual_source_frame_id": "L30_V001_f0004",
+    "ocr_source_frame_id": "L30_V001_f0004",
+    "quality_flags": [],
+    "caption": "A man wearing a dark blue t-shirt and gloves repairs a bicycle in an outdoor alleyway.",
+    "detailed_caption": "A medium shot in an outdoor alleyway shows a man wearing a dark blue t-shirt and gloves working on a bicycle. The man is squatting, facing right, and manipulating the rear wheel of a bicycle that is positioned horizontally. The alley has light green walls on the right and a doorway structure on the left.",
+    "caption_vi": "Một người đàn ông mặc áo thun xanh đen và đeo găng tay đang sửa xe đạp ở lối đi ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh tại một lối đi nhỏ ngoài trời cho thấy một người đàn ông mặc áo thun xanh tối màu và đeo găng tay đang làm việc với một chiếc xe đạp. Người đàn ông đang ngồi xổm, hướng về phía bên phải và thao tác với bánh sau của chiếc xe đạp đặt nằm ngang.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.399,
+          0.552,
+          0.646,
+          0.837
+        ],
+        "description": "a bicycle frame being repaired on the ground",
+        "description_vi": "khung xe đạp đang được sửa chữa trên mặt đất",
+        "attributes": [
+          "metal",
+          "under repair"
+        ],
+        "action": "being repaired"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.546,
+          0.459,
+          0.6559999999999999,
+          0.8119999999999999
+        ],
+        "description": "a man wearing a dark blue t-shirt, dark trousers, and gloves",
+        "description_vi": "một người đàn ông mặc áo thun xanh đen, quần tối màu và đeo găng tay",
+        "attributes": [
+          "man",
+          "dark blue t-shirt",
+          "gloves",
+          "squatting"
+        ],
+        "action": "repairing bicycle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0005",
+    "visual_source_frame_id": "L30_V001_f0005",
+    "ocr_source_frame_id": "L30_V001_f0005",
+    "quality_flags": [],
+    "caption": "A gloved hand uses a spray can to paint a black bicycle gear component on cardboard.",
+    "detailed_caption": "A close-up shot shows a gloved hand holding a spray can and painting a black bicycle chainring and crank arm placed on a cardboard sheet. The painted bicycle part is in sharp focus on the right, while the spray can and hand appear on the left.",
+    "caption_vi": "Một bàn tay đeo găng tay dùng bình xịt sơn lên bộ phận đĩa xích xe đạp màu đen trên tấm bìa carton.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một bàn tay đeo găng tay cầm bình xịt để sơn một đĩa xích và cần trục xe đạp màu đen được đặt trên một tấm bìa carton. Bộ phận xe đạp được sơn nằm ở bên phải trong khi tay cầm bình xịt ở bên trái.",
+    "ocr_text": "Cuộc thi Lan tỏa năng lượng tích cực 2024: Chàng trai ‘hồi sinh’ xe đạp tặng người nghèo",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_part_0",
+        "label": "bicycle part",
+        "bbox": [
+          0.52,
+          0.071,
+          0.881,
+          0.7270000000000001
+        ],
+        "description": "a black bicycle chainring and crank arm",
+        "description_vi": "đĩa xích và cần trục xe đạp màu đen",
+        "attributes": [
+          "black",
+          "metal",
+          "toothed"
+        ],
+        "action": "being painted"
+      },
+      {
+        "object_id": "spray_can_0",
+        "label": "spray can",
+        "bbox": [
+          0.0,
+          0.005,
+          0.21800000000000003,
+          0.559
+        ],
+        "description": "a spray can held in a gloved hand",
+        "description_vi": "bình xịt được cầm trong bàn tay đeo găng",
+        "attributes": [
+          "gloved hand",
+          "holding"
+        ],
+        "action": "spraying paint"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_part_0"
+      },
+      {
+        "subject_id": "bicycle_part_0",
+        "predicate": "right_of",
+        "object_id": "spray_can_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0006",
+    "visual_source_frame_id": "L30_V001_f0006",
+    "ocr_source_frame_id": "L30_V001_f0006",
+    "quality_flags": [],
+    "caption": "A bald man wearing a dark blue t-shirt gestures toward bicycles in a storage room.",
+    "detailed_caption": "A medium shot indoors features a bald man wearing a dark blue t-shirt gesturing with his right hand toward several bicycles arranged in the background. The man is positioned on the right side of the frame, facing left. Various bicycle parts and frames fill the background storage area.",
+    "caption_vi": "Một người đàn ông đầu trọc mặc áo thun xanh đen đang chỉ tay về phía những chiếc xe đạp trong phòng chứa đồ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh trong nhà cho thấy một người đàn ông đầu trọc mặc áo thun xanh tối màu đang dùng tay phải ra hiệu về phía nhiều chiếc xe đạp xếp ở phía sau. Người đàn ông ở bên phải khung hình, mặt hướng sang trái.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.679,
+          0.106,
+          1.0,
+          0.995
+        ],
+        "description": "a blue bicycle with a brown basket",
+        "description_vi": "một chiếc xe đạp màu xanh lam có giỏ màu nâu",
+        "attributes": [
+          "blue",
+          "basket"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.199,
+          0.11599999999999999,
+          0.8720000000000001,
+          0.997
+        ],
+        "description": "a bald man wearing a dark blue t-shirt",
+        "description_vi": "một người đàn ông đầu trọc mặc áo thun xanh đen",
+        "attributes": [
+          "bald",
+          "man",
+          "dark blue t-shirt"
+        ],
+        "action": "gesturing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0007",
+    "visual_source_frame_id": "L30_V001_f0006",
+    "ocr_source_frame_id": "L30_V001_f0007",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A bald man wearing a dark blue t-shirt gestures toward bicycles in a storage room.",
+    "detailed_caption": "A medium shot indoors features a bald man wearing a dark blue t-shirt gesturing with his right hand toward several bicycles arranged in the background. The man is positioned on the right side of the frame, facing left. Various bicycle parts and frames fill the background storage area.",
+    "caption_vi": "Một người đàn ông đầu trọc mặc áo thun xanh đen đang chỉ tay về phía những chiếc xe đạp trong phòng chứa đồ.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh trong nhà cho thấy một người đàn ông đầu trọc mặc áo thun xanh tối màu đang dùng tay phải ra hiệu về phía nhiều chiếc xe đạp xếp ở phía sau. Người đàn ông ở bên phải khung hình, mặt hướng sang trái.",
+    "ocr_text": "STEG-AF D",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.679,
+          0.106,
+          1.0,
+          0.995
+        ],
+        "description": "a blue bicycle with a brown basket",
+        "description_vi": "một chiếc xe đạp màu xanh lam có giỏ màu nâu",
+        "attributes": [
+          "blue",
+          "basket"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.199,
+          0.11599999999999999,
+          0.8720000000000001,
+          0.997
+        ],
+        "description": "a bald man wearing a dark blue t-shirt",
+        "description_vi": "một người đàn ông đầu trọc mặc áo thun xanh đen",
+        "attributes": [
+          "bald",
+          "man",
+          "dark blue t-shirt"
+        ],
+        "action": "gesturing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0008",
+    "visual_source_frame_id": "L30_V001_f0008",
+    "ocr_source_frame_id": "L30_V001_f0008",
+    "quality_flags": [],
+    "caption": "A light green bicycle stands parked outdoors on a concrete surface against a white wall.",
+    "detailed_caption": "This medium shot captures a light green bicycle parked outdoors on a weathered concrete surface. The bicycle features a silver handlebar, a wrapped saddle, and a luggage rack over the rear wheel. In the background, a white wall with windows and another partially visible bicycle complete the scene.",
+    "caption_vi": "Một chiếc xe đạp màu xanh nhạt đậu ngoài trời trên bề mặt bê tông cạnh bức tường trắng.",
+    "detailed_caption_vi": "Bức ảnh chụp ở góc trung cảnh ghi lại một chiếc xe đạp màu xanh nhạt đang đậu trên nền bê tông ngoài trời. Xe có ghi-lông màu bạc, yên xe được bọc và một giá chở hàng phía sau. Phía sau là bức tường trắng có gắn cửa sổ và một phần chiếc xe đạp khác.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.233,
+          0.08399999999999999,
+          0.7929999999999999,
+          0.91
+        ],
+        "description": "light green bicycle with silver handlebars and wrapped seat",
+        "description_vi": "xe đạp màu xanh nhạt có ghi-lông bạc và yên bọc",
+        "attributes": [
+          "green",
+          "silver",
+          "parked"
+        ],
+        "action": "parked"
+      },
+      {
+        "object_id": "bicycle_1",
+        "label": "bicycle",
+        "bbox": [
+          0.86,
+          0.098,
+          0.998,
+          0.644
+        ],
+        "description": "partially visible bicycle on the right side",
+        "description_vi": "xe đạp một phần ở bên phải",
+        "attributes": [
+          "brown",
+          "metallic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.0,
+          0.0,
+          0.998,
+          0.557
+        ],
+        "description": "white wall with blue window frames",
+        "description_vi": "bức tường trắng với khung cửa sổ màu xanh",
+        "attributes": [
+          "white",
+          "blue"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0009",
+    "visual_source_frame_id": "L30_V001_f0009",
+    "ocr_source_frame_id": "L30_V001_f0009",
+    "quality_flags": [],
+    "caption": "A bald man wearing a blue t-shirt points to the left inside a bicycle repair shop.",
+    "detailed_caption": "This medium shot shows a bald man wearing a blue t-shirt with white graphic text, gesturing with his left arm towards bicycles in the background. He is positioned indoors inside a shop filled with stacked bicycles and spare parts. A microphone is visible in the lower foreground.",
+    "caption_vi": "Một người đàn ông trọc đầu mặc áo thun xanh chỉ tay sang bên trái trong một cửa hàng sửa xe đạp.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh ghi lại một người đàn ông đầu trọc mặc áo phông xanh có in chữ màu trắng, đang giơ tay trái chỉ về phía những chiếc xe đạp xếp xung quanh. Không gian bên trong là một cửa hàng chật kín xe đạp và phụ tùng. Một micro xuất hiện ở góc dưới.",
+    "ocr_text": "VTV tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.683,
+          0.103,
+          0.9970000000000001,
+          1.0
+        ],
+        "description": "blue bicycle frame on the right",
+        "description_vi": "khung xe đạp màu xanh dương ở bên phải",
+        "attributes": [
+          "blue",
+          "metallic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bicycle_basket_0",
+        "label": "bicycle basket",
+        "bbox": [
+          0.148,
+          0.18699999999999997,
+          0.358,
+          0.46199999999999997
+        ],
+        "description": "brown plastic bicycle basket hanging on the wall",
+        "description_vi": "rổ xe đạp nhựa màu nâu treo trên tường",
+        "attributes": [
+          "brown",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.316,
+          0.768,
+          0.40800000000000003,
+          0.931
+        ],
+        "description": "small white and black microphone with VTV logo",
+        "description_vi": "micro màu trắng và đen có logo VTV",
+        "attributes": [
+          "white",
+          "black"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.23199999999999998,
+          0.113,
+          0.8720000000000001,
+          1.0
+        ],
+        "description": "bald man wearing a blue t-shirt pointing",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh đang chỉ tay",
+        "attributes": [
+          "bald",
+          "blue",
+          "t-shirt"
+        ],
+        "action": "pointing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_basket_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "bicycle_basket_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_basket_0",
+        "predicate": "above",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "below",
+        "object_id": "bicycle_basket_0"
+      },
+      {
+        "subject_id": "bicycle_basket_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_basket_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0010",
+    "visual_source_frame_id": "L30_V001_f0010",
+    "ocr_source_frame_id": "L30_V001_f0010",
+    "quality_flags": [],
+    "caption": "A bald man wearing a blue t-shirt gestures with his arm inside a bicycle workshop.",
+    "detailed_caption": "This medium shot features a bald man wearing a dark blue t-shirt pointing towards the left while positioned in a workshop filled with various bicycles and bicycle parts. Multiple bicycles and wheels are stacked in the background. A microphone stands in the lower foreground.",
+    "caption_vi": "Một người đàn ông trọc đầu mặc áo thun xanh dang tay chỉ trong xưởng sửa xe đạp.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại người đàn ông trọc đầu mặc áo thun xanh đậm đang chỉ tay sang trái khi đang ở trong một xưởng chứa đầy xe đạp và linh kiện. Nhiều xe và bánh xe được xếp gọn phía sau. Một chiếc micro nằm ở góc dưới.",
+    "ocr_text": "VTV tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "basket_0",
+        "label": "basket",
+        "bbox": [
+          0.148,
+          0.18699999999999997,
+          0.358,
+          0.46199999999999997
+        ],
+        "description": "brown plastic basket attached to a bicycle",
+        "description_vi": "rổ nhựa màu nâu gắn trên xe đạp",
+        "attributes": [
+          "brown",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.687,
+          0.106,
+          0.998,
+          1.0
+        ],
+        "description": "blue bicycle on the right side",
+        "description_vi": "xe đạp màu xanh ở bên phải",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.316,
+          0.768,
+          0.40800000000000003,
+          0.931
+        ],
+        "description": "small microphone with VTV logo",
+        "description_vi": "micro nhỏ có logo VTV",
+        "attributes": [
+          "white",
+          "black"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.219,
+          0.11,
+          0.8720000000000001,
+          1.0
+        ],
+        "description": "bald man wearing a blue t-shirt",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh",
+        "attributes": [
+          "bald",
+          "blue"
+        ],
+        "action": "pointing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "basket_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "basket_0"
+      },
+      {
+        "subject_id": "basket_0",
+        "predicate": "above",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "below",
+        "object_id": "basket_0"
+      },
+      {
+        "subject_id": "basket_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "basket_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "microphone_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0011",
+    "visual_source_frame_id": "L30_V001_f0011",
+    "ocr_source_frame_id": "L30_V001_f0011",
+    "quality_flags": [],
+    "caption": "A man repairs a bicycle outdoors in an alleyway with translucent graphical overlay text.",
+    "detailed_caption": "A medium shot shows a man squatting on the ground in an alleyway, working on a disassembled bicycle frame. Translucent yellow and white text overlays the scene. Several stacked bicycle wheels are visible on the left side of the frame.",
+    "caption_vi": "Một người đàn ông sửa xe đạp ngoài trời ở ngõ hẻm với lớp chữ đồ họa mờ trên màn hình.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông đang ngồi xổm trên mặt đất trong một con hẻm, làm việc với khung xe đạp tháo rời. Chữ phủ màu vàng và trắng mờ xuất hiện trên khung hình. Một số bánh xe đạp chồng lên nhau ở bên trái.",
+    "ocr_text": "HỒI SINH XE CŨ đăng người nghèo",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.583,
+          0.245,
+          0.8630000000000001,
+          0.568
+        ],
+        "description": "a bald man wearing a blue shirt and dark pants squatting",
+        "description_vi": "một người đàn ông đầu trọc mặc áo xanh và quần tối màu đang ngồi xổm",
+        "attributes": [
+          "man",
+          "squatting",
+          "blue shirt"
+        ],
+        "action": "repairing bicycle"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0012",
+    "visual_source_frame_id": "L30_V001_f0012",
+    "ocr_source_frame_id": "L30_V001_f0012",
+    "quality_flags": [],
+    "caption": "An overhead shot shows a man repairing a bicycle on concrete ground beside stacked bicycles.",
+    "detailed_caption": "An elevated high-angle shot captures a person sitting on concrete pavement, repairing bicycle parts. Tools are laid out neatly on the ground nearby, and a pile of bicycles is stacked on the right side next to a wall with a sign.",
+    "caption_vi": "Góc quay cao cho thấy một người đàn ông sửa xe đạp trên nền bê tông cạnh những chiếc xe đạp chất đống.",
+    "detailed_caption_vi": "Góc quay cao từ trên xuống ghi lại cảnh một người đang ngồi trên mặt đường bê tông, sửa chữa các bộ phận xe đạp. Dụng cụ được bày gọn gàng dưới đất bên cạnh, và một đống xe đạp xếp ở bên phải gần một bức tường có biển hiệu.",
+    "ocr_text": "TUYÊN T DIỆN T Chuyên : Mua Bán - Sửa Chữa Ti Tivi CD - DVD MP4 - ĐẦU 6 SỐ - ĐIỆN CÔNG NGHIỆP - MÁY GIẶT - ĐC: 394 NGUYỄN VĂN TĂNG - P. LONG THÀNH MỸ - Q. 9",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.34700000000000003,
+          0.23099999999999998,
+          0.5519999999999999,
+          0.5389999999999999
+        ],
+        "description": "a person squatting and working on a bicycle",
+        "description_vi": "một người đang ngồi xổm và làm việc với xe đạp",
+        "attributes": [
+          "person",
+          "squatting"
+        ],
+        "action": "repairing"
+      },
+      {
+        "object_id": "tool_0",
+        "label": "tool",
+        "bbox": [
+          0.382,
+          0.677,
+          0.417,
+          0.838
+        ],
+        "description": "green pliers and tools on the ground",
+        "description_vi": "kìm màu xanh và dụng cụ trên mặt đất",
+        "attributes": [
+          "green",
+          "tools"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "tool_0"
+      },
+      {
+        "subject_id": "tool_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0013",
+    "visual_source_frame_id": "L30_V001_f0012",
+    "ocr_source_frame_id": "L30_V001_f0013",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An overhead shot shows a man repairing a bicycle on concrete ground beside stacked bicycles.",
+    "detailed_caption": "An elevated high-angle shot captures a person sitting on concrete pavement, repairing bicycle parts. Tools are laid out neatly on the ground nearby, and a pile of bicycles is stacked on the right side next to a wall with a sign.",
+    "caption_vi": "Góc quay cao cho thấy một người đàn ông sửa xe đạp trên nền bê tông cạnh những chiếc xe đạp chất đống.",
+    "detailed_caption_vi": "Góc quay cao từ trên xuống ghi lại cảnh một người đang ngồi trên mặt đường bê tông, sửa chữa các bộ phận xe đạp. Dụng cụ được bày gọn gàng dưới đất bên cạnh, và một đống xe đạp xếp ở bên phải gần một bức tường có biển hiệu.",
+    "ocr_text": "ĐIỆN BA Chuyên : Mua Bán - Sửa Chữa Bo M DC : 394 NGUYỄN VĂN TĂNG - P. LONG THẠNH MỸ - Q.9",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.34700000000000003,
+          0.23099999999999998,
+          0.5519999999999999,
+          0.5389999999999999
+        ],
+        "description": "a person squatting and working on a bicycle",
+        "description_vi": "một người đang ngồi xổm và làm việc với xe đạp",
+        "attributes": [
+          "person",
+          "squatting"
+        ],
+        "action": "repairing"
+      },
+      {
+        "object_id": "tool_0",
+        "label": "tool",
+        "bbox": [
+          0.382,
+          0.677,
+          0.417,
+          0.838
+        ],
+        "description": "green pliers and tools on the ground",
+        "description_vi": "kìm màu xanh và dụng cụ trên mặt đất",
+        "attributes": [
+          "green",
+          "tools"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "above",
+        "object_id": "tool_0"
+      },
+      {
+        "subject_id": "tool_0",
+        "predicate": "below",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0014",
+    "visual_source_frame_id": "L30_V001_f0014",
+    "ocr_source_frame_id": "L30_V001_f0014",
+    "quality_flags": [],
+    "caption": "A man wearing gloves uses a wrench to work on a bicycle frame outdoors.",
+    "detailed_caption": "A close-up shot shows a bald man wearing a dark blue t-shirt and work gloves tightening a component on a bicycle frame with a wrench. The bicycle frame is positioned on the ground next to an outdoor wall and concrete stairs.",
+    "caption_vi": "Một người đàn ông đeo găng tay dùng cờ lê làm việc trên khung xe đạp ở ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một người đàn ông đầu trọc mặc áo thun xanh tối màu và đeo găng tay bảo hộ đang siết chặt một bộ phận trên khung xe đạp bằng cờ lê. Khung xe đạp nằm dưới đất cạnh bức tường ngoài trời và bậc thềm bê tông.",
+    "ocr_text": "MONOSHOCK",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_frame_0",
+        "label": "bicycle frame",
+        "bbox": [
+          0.0,
+          0.38899999999999996,
+          0.759,
+          0.9979999999999999
+        ],
+        "description": "a silver and black bicycle frame",
+        "description_vi": "khung xe đạp màu bạc và đen",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.40800000000000003,
+          0.135,
+          0.786,
+          0.995
+        ],
+        "description": "a bald man wearing a blue t-shirt and white gloves",
+        "description_vi": "một người đàn ông đầu trọc mặc áo thun xanh và găng tay trắng",
+        "attributes": [
+          "bald",
+          "man",
+          "gloves"
+        ],
+        "action": "repairing bicycle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_frame_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_frame_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0015",
+    "visual_source_frame_id": "L30_V001_f0015",
+    "ocr_source_frame_id": "L30_V001_f0015",
+    "quality_flags": [],
+    "caption": "A bald man wearing a dark blue t-shirt smiles indoors with bicycles in the background.",
+    "detailed_caption": "A close-up shot shows a bald man wearing a dark blue t-shirt smiling slightly while looking forward. The background is filled with multiple parked bicycles and parts inside a storage space.",
+    "caption_vi": "Một người đàn ông đầu trọc mặc áo thun xanh đen mỉm cười trong nhà với những chiếc xe đạp phía sau.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một người đàn ông đầu trọc mặc áo thun xanh tối màu đang mỉm cười nhẹ và nhìn về phía trước. Phía sau là nhiều chiếc xe đạp đang đỗ và linh kiện bên trong không gian chứa đồ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.26,
+          0.016,
+          0.9289999999999999,
+          1.0
+        ],
+        "description": "a bald man wearing a dark blue t-shirt",
+        "description_vi": "một người đàn ông đầu trọc mặc áo thun xanh đen",
+        "attributes": [
+          "bald",
+          "man",
+          "dark blue t-shirt",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0016",
+    "visual_source_frame_id": "L30_V001_f0015",
+    "ocr_source_frame_id": "L30_V001_f0016",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A bald man wearing a dark blue t-shirt smiles indoors with bicycles in the background.",
+    "detailed_caption": "A close-up shot shows a bald man wearing a dark blue t-shirt smiling slightly while looking forward. The background is filled with multiple parked bicycles and parts inside a storage space.",
+    "caption_vi": "Một người đàn ông đầu trọc mặc áo thun xanh đen mỉm cười trong nhà với những chiếc xe đạp phía sau.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một người đàn ông đầu trọc mặc áo thun xanh tối màu đang mỉm cười nhẹ và nhìn về phía trước. Phía sau là nhiều chiếc xe đạp đang đỗ và linh kiện bên trong không gian chứa đồ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.26,
+          0.016,
+          0.9289999999999999,
+          1.0
+        ],
+        "description": "a bald man wearing a dark blue t-shirt",
+        "description_vi": "một người đàn ông đầu trọc mặc áo thun xanh đen",
+        "attributes": [
+          "bald",
+          "man",
+          "dark blue t-shirt",
+          "smiling"
+        ],
+        "action": "smiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0017",
+    "visual_source_frame_id": "L30_V001_f0017",
+    "ocr_source_frame_id": "L30_V001_f0017",
+    "quality_flags": [],
+    "caption": "A soft-focus close-up shows a bald man in a dark shirt indoors with bicycles in the background.",
+    "detailed_caption": "A close-up shot, partially blurred with a soft-focus effect, features a bald man wearing a dark t-shirt looking forward. The background displays parts of bicycles stored indoors.",
+    "caption_vi": "Cảnh cận cảnh mờ ảo cho thấy một người đàn ông đầu trọc mặc áo tối màu trong nhà với xe đạp phía sau.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh bị làm mờ nhẹ, hiển thị một người đàn ông đầu trọc mặc áo thun tối màu đang nhìn về phía trước. Phía sau là các bộ phận xe đạp được cất giữ trong nhà.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.26,
+          0.016,
+          0.9289999999999999,
+          1.0
+        ],
+        "description": "a bald man wearing a dark t-shirt",
+        "description_vi": "một người đàn ông đầu trọc mặc áo thun tối màu",
+        "attributes": [
+          "bald",
+          "man",
+          "dark t-shirt"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0018",
+    "visual_source_frame_id": "L30_V001_f0018",
+    "ocr_source_frame_id": "L30_V001_f0018",
+    "quality_flags": [],
+    "caption": "A bald man kneels outdoors working on bicycle parts on the ground.",
+    "detailed_caption": "This medium shot, partially obscured by a hazy foreground overlay, shows a bald man wearing a blue shirt kneeling on a concrete surface. He is working on bicycle handlebars and metal frames lying on the ground. Several parked bicycles and a wall are visible in the background.",
+    "caption_vi": "Một người đàn ông trọc đầu quỳ ngoài trời đang sửa chữa các bộ phận xe đạp trên mặt đất.",
+    "detailed_caption_vi": "Ảnh trung cảnh bị che khuất bởi lớp phủ mờ ở phía trước, cho thấy một người đàn ông trọc đầu mặc áo xanh đang quỳ trên nền bê tông. Anh ấy đang thao tác với tay lái và khung xe đạp đặt dưới đất. Xung quanh là vài chiếc xe đạp đang đỗ và bức tường.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.0,
+          0.0,
+          0.368,
+          0.5840000000000001
+        ],
+        "description": "bicycle wheels and frame on the left",
+        "description_vi": "bánh xe đạp và khung xe ở bên trái",
+        "attributes": [
+          "metallic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bicycle_1",
+        "label": "bicycle",
+        "bbox": [
+          0.417,
+          0.461,
+          0.961,
+          0.6869999999999999
+        ],
+        "description": "disassembled bicycle parts on the ground",
+        "description_vi": "các bộ phận xe đạp tháo rời trên mặt đất",
+        "attributes": [
+          "metal"
+        ],
+        "action": "repairing"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.591,
+          0.24200000000000002,
+          0.859,
+          0.5800000000000001
+        ],
+        "description": "bald man wearing a blue shirt kneeling on the ground",
+        "description_vi": "người đàn ông trọc đầu mặc áo xanh đang quỳ dưới đất",
+        "attributes": [
+          "bald",
+          "blue"
+        ],
+        "action": "kneeling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0019",
+    "visual_source_frame_id": "L30_V001_f0019",
+    "ocr_source_frame_id": "L30_V001_f0019",
+    "quality_flags": [],
+    "caption": "A gloved hand uses a tool on a bicycle component surrounded by various repair tools.",
+    "detailed_caption": "A close-up shot shows a person wearing white work gloves holding a tool and working on a silver bicycle part. Several tools, including a red hammer, a wrench, and pliers, are scattered on the concrete floor nearby.",
+    "caption_vi": "Một bàn tay đeo găng tay sử dụng dụng cụ trên bộ phận xe đạp xung quanh là các dụng cụ sửa chữa.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một người đeo găng tay bảo hộ màu trắng đang cầm dụng cụ và thao tác trên một bộ phận xe đạp bằng kim loại. Nhiều công cụ như búa đỏ, cờ lê và kìm được đặt rải rác trên sàn bê tông.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pliers_0",
+        "label": "pliers",
+        "bbox": [
+          0.001,
+          0.089,
+          0.315,
+          0.47100000000000003
+        ],
+        "description": "green handled bolt cutters on the floor",
+        "description_vi": "kìm cộng lực có cán màu xanh lá trên sàn",
+        "attributes": [
+          "green handles",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tool_0",
+        "label": "tool",
+        "bbox": [
+          0.275,
+          0.512,
+          0.43600000000000005,
+          0.7030000000000001
+        ],
+        "description": "a red hammer on the ground",
+        "description_vi": "một chiếc búa đỏ trên mặt đất",
+        "attributes": [
+          "red",
+          "hammer"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "wrench_0",
+        "label": "wrench",
+        "bbox": [
+          0.086,
+          0.632,
+          0.135,
+          0.7989999999999999
+        ],
+        "description": "a chrome combination wrench on the floor",
+        "description_vi": "một chiếc cờ lê vòng miệng bằng crôm trên sàn",
+        "attributes": [
+          "chrome",
+          "metal",
+          "wrench"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pliers_0",
+        "predicate": "above",
+        "object_id": "tool_0"
+      },
+      {
+        "subject_id": "tool_0",
+        "predicate": "below",
+        "object_id": "pliers_0"
+      },
+      {
+        "subject_id": "pliers_0",
+        "predicate": "above",
+        "object_id": "wrench_0"
+      },
+      {
+        "subject_id": "wrench_0",
+        "predicate": "below",
+        "object_id": "pliers_0"
+      },
+      {
+        "subject_id": "wrench_0",
+        "predicate": "left_of",
+        "object_id": "tool_0"
+      },
+      {
+        "subject_id": "tool_0",
+        "predicate": "right_of",
+        "object_id": "wrench_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0020",
+    "visual_source_frame_id": "L30_V001_f0020",
+    "ocr_source_frame_id": "L30_V001_f0020",
+    "quality_flags": [],
+    "caption": "A chrome wrench lies on a concrete floor next to a bicycle frame part.",
+    "detailed_caption": "A close-up shot shows a chrome combination wrench resting on a textured concrete and stone floor next to a curved bicycle frame component bearing red and white details.",
+    "caption_vi": "Một chiếc cờ lê crôm nằm trên sàn bê tông cạnh một phần khung xe đạp.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một chiếc cờ lê vòng miệng bằng crôm đặt trên nền sàn bê tông sần sùi bên cạnh một bộ phận khung xe đạp uốn cong có chi tiết màu đỏ và trắng.",
+    "ocr_text": "CHROME VANADIUM 14",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_part_0",
+        "label": "bicycle part",
+        "bbox": [
+          0.61,
+          0.0,
+          0.958,
+          1.0
+        ],
+        "description": "a curved silver bicycle frame with red and yellow accents",
+        "description_vi": "khung xe đạp màu bạc uốn cong có điểm nhấn màu đỏ và vàng",
+        "attributes": [
+          "silver",
+          "curved",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "wrench_0",
+        "label": "wrench",
+        "bbox": [
+          0.181,
+          0.696,
+          0.571,
+          0.999
+        ],
+        "description": "a chrome combination wrench labeled chrome vanadium",
+        "description_vi": "một chiếc cờ lê bằng crôm có nhãn chrome vanadium",
+        "attributes": [
+          "metal",
+          "chrome",
+          "wrench"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "wrench_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_part_0"
+      },
+      {
+        "subject_id": "bicycle_part_0",
+        "predicate": "right_of",
+        "object_id": "wrench_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0021",
+    "visual_source_frame_id": "L30_V001_f0021",
+    "ocr_source_frame_id": "L30_V001_f0021",
+    "quality_flags": [],
+    "caption": "A close-up shot of a bald man's face looking downward in concentration.",
+    "detailed_caption": "An extreme close-up shot focuses on the face and head of a bald man looking downward with a focused expression. The man wears a blue top and is illuminated by soft natural light.",
+    "caption_vi": "Cận cảnh khuôn mặt của một người đàn ông đầu trọc đang nhìn xuống với vẻ tập trung.",
+    "detailed_caption_vi": "Cảnh quay cực cận tập trung vào khuôn mặt và đầu của một người đàn ông đầu trọc đang nhìn xuống dưới với biểu cảm tập trung. Người đàn ông mặc áo xanh và được chiếu sáng bởi ánh sáng tự nhiên dịu nhẹ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.151,
+          0.0,
+          0.999,
+          1.0
+        ],
+        "description": "a bald man looking down",
+        "description_vi": "một người đàn ông đầu trọc đang nhìn xuống",
+        "attributes": [
+          "bald",
+          "man",
+          "focused"
+        ],
+        "action": "looking down"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0022",
+    "visual_source_frame_id": "L30_V001_f0021",
+    "ocr_source_frame_id": "L30_V001_f0022",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up shot of a bald man's face looking downward in concentration.",
+    "detailed_caption": "An extreme close-up shot focuses on the face and head of a bald man looking downward with a focused expression. The man wears a blue top and is illuminated by soft natural light.",
+    "caption_vi": "Cận cảnh khuôn mặt của một người đàn ông đầu trọc đang nhìn xuống với vẻ tập trung.",
+    "detailed_caption_vi": "Cảnh quay cực cận tập trung vào khuôn mặt và đầu của một người đàn ông đầu trọc đang nhìn xuống dưới với biểu cảm tập trung. Người đàn ông mặc áo xanh và được chiếu sáng bởi ánh sáng tự nhiên dịu nhẹ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.151,
+          0.0,
+          0.999,
+          1.0
+        ],
+        "description": "a bald man looking down",
+        "description_vi": "một người đàn ông đầu trọc đang nhìn xuống",
+        "attributes": [
+          "bald",
+          "man",
+          "focused"
+        ],
+        "action": "looking down"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0023",
+    "visual_source_frame_id": "L30_V001_f0023",
+    "ocr_source_frame_id": "L30_V001_f0023",
+    "quality_flags": [],
+    "caption": "A man wearing gloves uses a hammer to work on a bicycle frame.",
+    "detailed_caption": "A medium shot shows a bald man wearing a dark blue t-shirt and work gloves striking a bicycle frame with a hammer. The background features a weathered concrete wall.",
+    "caption_vi": "Một người đàn ông đeo găng tay dùng búa làm việc trên khung xe đạp.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông đầu trọc mặc áo thun xanh tối màu và đeo găng tay bảo hộ đang dùng búa gõ vào khung xe đạp. Phía sau là một bức tường bê tông cũ kỹ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_frame_0",
+        "label": "bicycle frame",
+        "bbox": [
+          0.0,
+          0.0,
+          0.44699999999999995,
+          1.0
+        ],
+        "description": "a silver metal bicycle frame",
+        "description_vi": "khung xe đạp bằng kim loại màu bạc",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.386,
+          0.030000000000000002,
+          0.873,
+          1.0
+        ],
+        "description": "a bald man wearing a blue t-shirt, gloves, and hammering",
+        "description_vi": "một người đàn ông đầu trọc mặc áo thun xanh, đeo găng tay và đang đóng búa",
+        "attributes": [
+          "bald",
+          "man",
+          "gloves",
+          "blue t-shirt"
+        ],
+        "action": "hammering"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0024",
+    "visual_source_frame_id": "L30_V001_f0024",
+    "ocr_source_frame_id": "L30_V001_f0024",
+    "quality_flags": [],
+    "caption": "A close-up view shows a bicycle frame and a hand wearing a glove on a crankset.",
+    "detailed_caption": "A close-up shot focuses on a silver bicycle frame with a red and green decal, alongside a chainring and a hand wearing a work glove manipulating the crank. The background is softly blurred.",
+    "caption_vi": "Cảnh quay cận cảnh hiển thị khung xe đạp và bàn tay đeo găng tay trên cụm đĩa xích.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh tập trung vào một khung xe đạp màu bạc có hình dán màu đỏ và xanh lá cây, bên cạnh đĩa xích và bàn tay đeo găng tay bảo hộ đang thao tác. Phía nền được làm mờ nhẹ.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_frame_0",
+        "label": "bicycle frame",
+        "bbox": [
+          0.0,
+          0.0,
+          0.933,
+          1.0
+        ],
+        "description": "a silver bicycle frame with a gear wheel and decal",
+        "description_vi": "khung xe đạp màu bạc có bánh răng và tem dán",
+        "attributes": [
+          "silver",
+          "metal",
+          "toothed gear"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0025",
+    "visual_source_frame_id": "L30_V001_f0025",
+    "ocr_source_frame_id": "L30_V001_f0025",
+    "quality_flags": [],
+    "caption": "A close-up view shows a bald man in a blue shirt standing next to a bicycle frame.",
+    "detailed_caption": "This close-up shot focuses on a bald man wearing a blue t-shirt looking down thoughtfully. A rusted bicycle seat post and frame tube with a martin logo are visible in the foreground. The background features a blurred weathered wall.",
+    "caption_vi": "Cảnh cận cảnh ghi lại người đàn ông trọc đầu mặc áo xanh đứng cạnh khung xe đạp.",
+    "detailed_caption_vi": "Ảnh cận cảnh tập trung vào khuôn mặt người đàn ông trọc đầu mặc áo phông xanh đang nhìn xuống với vẻ đăm chiêu. Cọc yên xe đạp bị gỉ sét và ống khung xe có nhãn martin xuất hiện ở tiền cảnh. Phía sau là bức tường cũ mờ ảo.",
+    "ocr_text": "tuoitre TV martin",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.0,
+          0.0,
+          0.999,
+          1.0
+        ],
+        "description": "metallic bicycle frame with rusted seat post",
+        "description_vi": "khung xe đạp kim loại với cọc yên bị gỉ sét",
+        "attributes": [
+          "metallic",
+          "rusted"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.389,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "bald man wearing a blue t-shirt looking down",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh đang nhìn xuống",
+        "attributes": [
+          "bald",
+          "blue"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0026",
+    "visual_source_frame_id": "L30_V001_f0026",
+    "ocr_source_frame_id": "L30_V001_f0026",
+    "quality_flags": [],
+    "caption": "A person pedals a bicycle with a blue chain guard outdoors.",
+    "detailed_caption": "A medium close-up shot shows a person pedaling a bicycle equipped with a blue chain guard and a green rim with colorful spokes. The motion of the wheel and pedals is captured with slight blur.",
+    "caption_vi": "Một người đang đạp xe đạp có hộp xích màu xanh ở ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cận cho thấy một người đang đạp chiếc xe đạp được trang bị hộp bảo vệ xích màu xanh lam và vành bánh xe màu xanh lá cây với các nan hoa nhiều màu sắc. Chuyển động của bánh xe và bàn đạp được ghi lại với độ mờ nhẹ.",
+    "ocr_text": "TAIWAN TECH",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a bicycle with a blue chain guard and green wheel rim",
+        "description_vi": "một chiếc xe đạp có hộp xích màu xanh và vành bánh xe màu xanh lá",
+        "attributes": [
+          "blue chain guard",
+          "green rim",
+          "multicolored spokes"
+        ],
+        "action": "pedaling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0027",
+    "visual_source_frame_id": "L30_V001_f0027",
+    "ocr_source_frame_id": "L30_V001_f0027",
+    "quality_flags": [],
+    "caption": "A man kneels on the ground while cleaning or repairing a bicycle outdoors.",
+    "detailed_caption": "A medium shot captures a bald man wearing a blue shirt kneeling on the ground next to a silver bicycle with a blue chain guard. A spray can labeled 'De-Rust' sits on the ground near the front wheel. A concrete wall with weathering stains forms the background.",
+    "caption_vi": "Một người đàn ông quỳ trên mặt đất trong khi làm sạch hoặc sửa chữa xe đạp ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người đàn ông đầu trọc mặc áo xanh đang quỳ trên mặt đất bên cạnh một chiếc xe đạp màu bạc có hộp xích màu xanh. Một bình xịt nhãn 'De-Rust' đặt dưới đất gần bánh trước. Bường bê tông có vết ố phong hóa làm phông nền.",
+    "ocr_text": "De-Rust Lubricating Spray",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.135,
+          0.13999999999999999,
+          1.0,
+          1.0
+        ],
+        "description": "a silver bicycle with a blue chain guard and green rims",
+        "description_vi": "một chiếc xe đạp màu bạc có hộp xích màu xanh và vành xanh lá",
+        "attributes": [
+          "silver",
+          "blue chain guard",
+          "green rims"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.38,
+          0.132,
+          0.752,
+          1.0
+        ],
+        "description": "a bald man kneeling and working on a bicycle",
+        "description_vi": "một người đàn ông đầu trọc đang quỳ và làm việc với xe đạp",
+        "attributes": [
+          "bald",
+          "man",
+          "kneeling",
+          "blue shirt"
+        ],
+        "action": "repairing bicycle"
+      },
+      {
+        "object_id": "spray_can_0",
+        "label": "spray can",
+        "bbox": [
+          0.124,
+          0.82,
+          0.172,
+          1.0
+        ],
+        "description": "a spray can of rust lubricant on the ground",
+        "description_vi": "bình xịt chống gỉ trên mặt đất",
+        "attributes": [
+          "spray can",
+          "red and yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "spray_can_0"
+      },
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "spray_can_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0028",
+    "visual_source_frame_id": "L30_V001_f0027",
+    "ocr_source_frame_id": "L30_V001_f0028",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man kneels on the ground while cleaning or repairing a bicycle outdoors.",
+    "detailed_caption": "A medium shot captures a bald man wearing a blue shirt kneeling on the ground next to a silver bicycle with a blue chain guard. A spray can labeled 'De-Rust' sits on the ground near the front wheel. A concrete wall with weathering stains forms the background.",
+    "caption_vi": "Một người đàn ông quỳ trên mặt đất trong khi làm sạch hoặc sửa chữa xe đạp ngoài trời.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một người đàn ông đầu trọc mặc áo xanh đang quỳ trên mặt đất bên cạnh một chiếc xe đạp màu bạc có hộp xích màu xanh. Một bình xịt nhãn 'De-Rust' đặt dưới đất gần bánh trước. Bường bê tông có vết ố phong hóa làm phông nền.",
+    "ocr_text": "martin 20% De-Rust Lubricating Spray",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.135,
+          0.13999999999999999,
+          1.0,
+          1.0
+        ],
+        "description": "a silver bicycle with a blue chain guard and green rims",
+        "description_vi": "một chiếc xe đạp màu bạc có hộp xích màu xanh và vành xanh lá",
+        "attributes": [
+          "silver",
+          "blue chain guard",
+          "green rims"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.38,
+          0.132,
+          0.752,
+          1.0
+        ],
+        "description": "a bald man kneeling and working on a bicycle",
+        "description_vi": "một người đàn ông đầu trọc đang quỳ và làm việc với xe đạp",
+        "attributes": [
+          "bald",
+          "man",
+          "kneeling",
+          "blue shirt"
+        ],
+        "action": "repairing bicycle"
+      },
+      {
+        "object_id": "spray_can_0",
+        "label": "spray can",
+        "bbox": [
+          0.124,
+          0.82,
+          0.172,
+          1.0
+        ],
+        "description": "a spray can of rust lubricant on the ground",
+        "description_vi": "bình xịt chống gỉ trên mặt đất",
+        "attributes": [
+          "spray can",
+          "red and yellow"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "spray_can_0"
+      },
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "spray_can_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0029",
+    "visual_source_frame_id": "L30_V001_f0029",
+    "ocr_source_frame_id": "L30_V001_f0029",
+    "quality_flags": [],
+    "caption": "A person holds a smartphone showing a video of bicycle repair indoors.",
+    "detailed_caption": "A medium close-up shot shows a pair of hands holding a smartphone horizontally. The phone screen displays a video of a person working on a bicycle wheel in an indoor space. The background consists of a wooden tabletop and a light-colored wall.",
+    "caption_vi": "Một người cầm điện thoại thông minh hiển thị video sửa xe đạp ở trong nhà.",
+    "detailed_caption_vi": "Cận cảnh trung bình cho thấy đôi tay đang cầm một chiếc điện thoại thông minh theo chiều ngang. Màn hình điện thoại hiển thị video một người đang làm việc với bánh xe đạp trong không gian trong nhà. Phông nền bao gồm một mặt bàn bằng gỗ và bức tường sáng màu.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.621,
+          0.223,
+          1.0,
+          0.988
+        ],
+        "description": "Right hand holding the side of the smartphone",
+        "description_vi": "Bàn tay phải đang cầm cạnh của chiếc điện thoại thông minh",
+        "attributes": [
+          "skin",
+          "fingers"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "smartphone_0",
+        "label": "smartphone",
+        "bbox": [
+          0.161,
+          0.287,
+          0.745,
+          0.8430000000000001
+        ],
+        "description": "A horizontal smartphone displaying a video on its screen",
+        "description_vi": "Một chiếc điện thoại thông minh đặt nằm ngang đang hiển thị video trên màn hình",
+        "attributes": [
+          "horizontal",
+          "electronic"
+        ],
+        "action": "displaying video"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "smartphone_0"
+      },
+      {
+        "subject_id": "smartphone_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0030",
+    "visual_source_frame_id": "L30_V001_f0030",
+    "ocr_source_frame_id": "L30_V001_f0030",
+    "quality_flags": [],
+    "caption": "A person holds a smartphone displaying a video near a window with potted plants.",
+    "detailed_caption": "A close-up view from behind shows a person holding a smartphone horizontally. The phone displays a video of someone working on a bicycle. In the background, a window looks out onto green leafy plants.",
+    "caption_vi": "Một người cầm điện thoại thông minh hiển thị video gần cửa sổ có chậu cây.",
+    "detailed_caption_vi": "Góc nhìn cận cảnh từ phía sau cho thấy một người đang cầm điện thoại thông minh nằm ngang. Điện thoại hiển thị video ai đó đang làm việc với xe đạp. Phông nền là cửa sổ nhìn ra những chậu cây xanh lá.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.492,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "A person seen from behind, wearing a dark blue t-shirt",
+        "description_vi": "Một người nhìn từ phía sau, mặc áo thun xanh đậm",
+        "attributes": [
+          "short hair",
+          "dark shirt"
+        ],
+        "action": "holding phone"
+      },
+      {
+        "object_id": "smartphone_0",
+        "label": "smartphone",
+        "bbox": [
+          0.292,
+          0.503,
+          0.523,
+          0.73
+        ],
+        "description": "A horizontal smartphone held in hands",
+        "description_vi": "Một chiếc điện thoại thông minh đặt nằm ngang trên tay",
+        "attributes": [
+          "mobile",
+          "screen"
+        ],
+        "action": "displaying video"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0031",
+    "visual_source_frame_id": "L30_V001_f0031",
+    "ocr_source_frame_id": "L30_V001_f0031",
+    "quality_flags": [],
+    "caption": "A person uses a smartphone displaying social media posts with images.",
+    "detailed_caption": "A close-up shot shows hands interacting with a smartphone screen. The phone displays a social media interface with text and a grid of small images. The background is a light wooden surface.",
+    "caption_vi": "Một người sử dụng điện thoại thông minh hiển thị bài đăng mạng xã hội có hình ảnh.",
+    "detailed_caption_vi": "Cận cảnh cho thấy đôi tay đang tương tác với màn hình điện thoại thông minh. Điện thoại hiển thị giao diện mạng xã hội có văn bản và lưới hình ảnh nhỏ. Phông nền là bề mặt gỗ sáng màu.",
+    "ocr_text": "21 giờ Phải nói đó là 1 núi việc mà 1 vài người bạn đến chia sẻ đã giải quyết sau 2 ngày. 4 bình luận • 1 lượt chia sẻ 66",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "smartphone_0",
+        "label": "smartphone",
+        "bbox": [
+          0.16,
+          0.0,
+          0.744,
+          1.0
+        ],
+        "description": "A vertical smartphone displaying social media content",
+        "description_vi": "Một chiếc điện thoại thông minh đặt dọc hiển thị nội dung mạng xã hội",
+        "attributes": [
+          "mobile",
+          "touchscreen"
+        ],
+        "action": "browsing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0032",
+    "visual_source_frame_id": "L30_V001_f0032",
+    "ocr_source_frame_id": "L30_V001_f0032",
+    "quality_flags": [],
+    "caption": "A bald man holding a tool works on a bicycle handlebar outdoors.",
+    "detailed_caption": "This wide shot shows a bald man wearing a dark blue t-shirt and dark shorts standing outdoors, using a tool to adjust the handlebar of a bicycle. Several bicycles are parked neatly around him against a white building with stairs and hanging clothes in the background.",
+    "caption_vi": "Một người đàn ông trọc đầu cầm dụng cụ đang sửa ghi-lông xe đạp ngoài trời.",
+    "detailed_caption_vi": "Ảnh toàn cảnh ghi lại người đàn ông đầu trọc mặc áo thun tối màu và quần đùi đang đứng ngoài trời, dùng dụng cụ để điều chỉnh tay lái xe đạp. Xung quanh có nhiều chiếc xe đạp đỗ ngăn nắp trước tòa nhà trắng có cầu thang và quần áo phơi phía sau.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.192,
+          0.353,
+          0.399,
+          0.78
+        ],
+        "description": "silver bicycle parked on the left",
+        "description_vi": "xe đạp màu bạc đậu ở bên trái",
+        "attributes": [
+          "silver",
+          "parked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bicycle_1",
+        "label": "bicycle",
+        "bbox": [
+          0.393,
+          0.319,
+          0.67,
+          1.0
+        ],
+        "description": "dark metallic bicycle being repaired",
+        "description_vi": "chiếc xe đạp kim loại tối màu đang được sửa chữa",
+        "attributes": [
+          "dark",
+          "metallic"
+        ],
+        "action": "repairing"
+      },
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.0,
+          0.0,
+          0.999,
+          0.691
+        ],
+        "description": "white building with outdoor stairs and clothing racks",
+        "description_vi": "tòa nhà trắng có cầu thang ngoài trời và giá phơi đồ",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.517,
+          0.068,
+          0.713,
+          0.995
+        ],
+        "description": "bald man wearing a dark blue t-shirt and shorts working on a bicycle",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun tối màu và quần đùi đang sửa xe đạp",
+        "attributes": [
+          "bald",
+          "blue",
+          "shorts"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0033",
+    "visual_source_frame_id": "L30_V001_f0033",
+    "ocr_source_frame_id": "L30_V001_f0033",
+    "quality_flags": [],
+    "caption": "A bald man uses a tool on a bicycle handlebar outdoors.",
+    "detailed_caption": "This wide shot shows a bald man in a dark blue t-shirt and gloves standing outside, working on the handlebar of a bicycle. Multiple bicycles are parked on the left, and a white building with stairs appears in the background.",
+    "caption_vi": "Một người đàn ông trọc đầu dùng dụng cụ sửa tay lái xe đạp ngoài trời.",
+    "detailed_caption_vi": "Ảnh toàn cảnh ghi lại một người đàn ông đầu trọc mặc áo thun xanh đậm và mang găng tay đang đứng ngoài trời, thao tác với tay lái xe đạp. Nhiều xe đạp được đậu bên trái và tòa nhà trắng có cầu thang ở phía sau.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.192,
+          0.353,
+          0.399,
+          0.78
+        ],
+        "description": "silver bicycle parked on the left",
+        "description_vi": "xe đạp màu bạc đậu ở bên trái",
+        "attributes": [
+          "silver"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bicycle_1",
+        "label": "bicycle",
+        "bbox": [
+          0.393,
+          0.319,
+          0.67,
+          1.0
+        ],
+        "description": "dark bicycle being adjusted",
+        "description_vi": "xe đạp tối màu đang được điều chỉnh",
+        "attributes": [
+          "dark",
+          "metallic"
+        ],
+        "action": "adjusting"
+      },
+      {
+        "object_id": "building_0",
+        "label": "building",
+        "bbox": [
+          0.0,
+          0.0,
+          0.999,
+          0.691
+        ],
+        "description": "white building with outdoor stairway",
+        "description_vi": "tòa nhà trắng có cầu thang ngoài trời",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.517,
+          0.068,
+          0.713,
+          0.995
+        ],
+        "description": "bald man wearing a dark blue t-shirt and gloves repairing a bicycle",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh đậm và mang găng tay đang sửa xe đạp",
+        "attributes": [
+          "bald",
+          "blue",
+          "gloves"
+        ],
+        "action": "repairing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "building_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "building_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0034",
+    "visual_source_frame_id": "L30_V001_f0034",
+    "ocr_source_frame_id": "L30_V001_f0034",
+    "quality_flags": [],
+    "caption": "A close-up shows a person in a dark blue t-shirt working on a bicycle part.",
+    "detailed_caption": "A close-up shot captures a person with short hair wearing a dark blue t-shirt and gloves. The person is using a tool to tighten a metal component on a bicycle handlebar. The background features part of a building structure.",
+    "caption_vi": "Cận cảnh một người mặc áo thun xanh đậm đang làm việc với bộ phận xe đạp.",
+    "detailed_caption_vi": "Cận cảnh ghi lại một người tóc ngắn mặc áo thun xanh đậm và đeo găng tay. Người này đang dùng dụng cụ để vặn chặt một bộ phận kim loại trên ghi đông xe đạp. Phông nền có một phần kết cấu công trình.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_handlebar_0",
+        "label": "bicycle handlebar",
+        "bbox": [
+          0.327,
+          0.183,
+          0.696,
+          1.0
+        ],
+        "description": "A silver bicycle handlebar being worked on",
+        "description_vi": "Một ghi đông xe đạp bằng bạc đang được tác động",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "being assembled"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.20099999999999998,
+          0.051,
+          0.77,
+          1.0
+        ],
+        "description": "A person wearing a dark blue t-shirt and gloves",
+        "description_vi": "Một người mặc áo thun xanh đậm và đeo găng tay",
+        "attributes": [
+          "short hair",
+          "dark blue t-shirt",
+          "gloves"
+        ],
+        "action": "repairing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_handlebar_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_handlebar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0035",
+    "visual_source_frame_id": "L30_V001_f0035",
+    "ocr_source_frame_id": "L30_V001_f0035",
+    "quality_flags": [],
+    "caption": "A person wearing gloves uses a tool to tighten a bicycle handlebar clamp.",
+    "detailed_caption": "This close-up shot focuses on gloved hands using a metal tool to adjust a clamp on a bicycle handlebar. The person wears a dark blue t-shirt in the background.",
+    "caption_vi": "Một người mang găng tay dùng dụng cụ siết chặt ốc tay lái xe đạp.",
+    "detailed_caption_vi": "Ảnh cận cảnh tập trung vào đôi bàn tay mang găng tay đang dùng dụng cụ kim loại để điều chỉnh bộ phận kẹp trên tay lái xe đạp. Người này mặc áo thun xanh đậm phía sau.",
+    "ocr_text": "tuoitre TV 9mm",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_handlebar_0",
+        "label": "bicycle handlebar",
+        "bbox": [
+          0.056999999999999995,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "metal bicycle handlebar with a clamp being adjusted",
+        "description_vi": "tay lái xe đạp bằng kim loại có bộ phận kẹp đang được điều chỉnh",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "adjusting"
+      },
+      {
+        "object_id": "glove_0",
+        "label": "glove",
+        "bbox": [
+          0.386,
+          0.52,
+          0.829,
+          1.0
+        ],
+        "description": "protective work glove on a hand",
+        "description_vi": "găng tay bảo hộ lao động trên tay",
+        "attributes": [
+          "grey",
+          "protective"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "tool_0",
+        "label": "tool",
+        "bbox": [
+          0.491,
+          0.0,
+          0.55,
+          0.4
+        ],
+        "description": "metal wrench tool tightening a bolt",
+        "description_vi": "dụng cụ cờ lê kim loại đang siết ốc",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "tightening"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_handlebar_0",
+        "predicate": "overlapping",
+        "object_id": "glove_0"
+      },
+      {
+        "subject_id": "glove_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_handlebar_0"
+      },
+      {
+        "subject_id": "bicycle_handlebar_0",
+        "predicate": "overlapping",
+        "object_id": "tool_0"
+      },
+      {
+        "subject_id": "tool_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_handlebar_0"
+      },
+      {
+        "subject_id": "tool_0",
+        "predicate": "above",
+        "object_id": "glove_0"
+      },
+      {
+        "subject_id": "glove_0",
+        "predicate": "below",
+        "object_id": "tool_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0036",
+    "visual_source_frame_id": "L30_V001_f0036",
+    "ocr_source_frame_id": "L30_V001_f0036",
+    "quality_flags": [],
+    "caption": "Several bicycles are parked in an indoor storage room with tiled walls.",
+    "detailed_caption": "A wide shot shows a collection of bicycles parked inside a room with light blue tiled walls and a white floor. Extra bicycle wheels hang on the wall, and various parts are neatly organized.",
+    "caption_vi": "Nhiều chiếc xe đạp được đỗ trong phòng kho trong nhà có tường ốp gạch.",
+    "detailed_caption_vi": "Cảnh rộng cho thấy một bộ sưu tập xe đạp được đỗ bên trong căn phòng có tường ốp gạch màu xanh nhạt và sàn nhà màu trắng. Các bánh xe đạp phụ được treo trên tường, và các bộ phận khác nhau được sắp xếp gọn gàng.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.24,
+          0.34700000000000003,
+          0.381,
+          0.874
+        ],
+        "description": "A bicycle with a front basket parked next to other bikes",
+        "description_vi": "Một chiếc xe đạp có giỏ trước đỗ cạnh các xe khác",
+        "attributes": [
+          "silver",
+          "basket"
+        ],
+        "action": "parked"
+      },
+      {
+        "object_id": "bicycle_1",
+        "label": "bicycle",
+        "bbox": [
+          0.49800000000000005,
+          0.386,
+          0.783,
+          1.0
+        ],
+        "description": "A blue bicycle parked in the foreground",
+        "description_vi": "Một chiếc xe đạp màu xanh dương đỗ ở tiền cảnh",
+        "attributes": [
+          "blue",
+          "brown saddle"
+        ],
+        "action": "parked"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0037",
+    "visual_source_frame_id": "L30_V001_f0037",
+    "ocr_source_frame_id": "L30_V001_f0037",
+    "quality_flags": [],
+    "caption": "A bald man wearing a blue t-shirt walks past stacked bicycles inside a workshop.",
+    "detailed_caption": "This indoor medium shot captures a bald man wearing a dark blue t-shirt and dark pants walking past several bicycles parked against a tiled wall. The motion is slightly blurred, showing movement. A shelf with bottles and containers is mounted on the wall.",
+    "caption_vi": "Một người đàn ông trọc đầu mặc áo thun xanh đi ngang qua những chiếc xe đạp xếp trong xưởng.",
+    "detailed_caption_vi": "Ảnh trung cảnh trong nhà ghi lại một người đàn ông trọc đầu mặc áo thun xanh đậm và quần tối màu đang đi bước qua các xe đạp đỗ sát bức tường ốp gạch. Chuyển động bị mờ nhẹ thể hiện hành động di chuyển. Kệ đựng chai lọ gắn trên tường phía sau.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.507,
+          0.423,
+          0.783,
+          1.0
+        ],
+        "description": "blue bicycle parked on the right",
+        "description_vi": "xe đạp màu xanh dương đậu ở bên phải",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bicycle_wheel_0",
+        "label": "bicycle wheel",
+        "bbox": [
+          0.393,
+          0.194,
+          0.5589999999999999,
+          0.451
+        ],
+        "description": "bicycle wheels mounted high on the wall",
+        "description_vi": "bánh xe đạp treo cao trên tường",
+        "attributes": [
+          "round",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.076,
+          0.018000000000000002,
+          0.319,
+          0.995
+        ],
+        "description": "bald man wearing a dark blue t-shirt walking",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh đậm đang đi",
+        "attributes": [
+          "bald",
+          "blue"
+        ],
+        "action": "walking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_wheel_0"
+      },
+      {
+        "subject_id": "bicycle_wheel_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0038",
+    "visual_source_frame_id": "L30_V001_f0038",
+    "ocr_source_frame_id": "L30_V001_f0038",
+    "quality_flags": [],
+    "caption": "A person wearing a dark blue t-shirt works on a bicycle part indoors.",
+    "detailed_caption": "A close-up shot shows a person with a shaved head and a dark blue t-shirt working on a bicycle component. The person's arm and side profile are visible as they focus on the mechanical part.",
+    "caption_vi": "Một người mặc áo thun xanh đậm đang làm việc với bộ phận xe đạp trong nhà.",
+    "detailed_caption_vi": "Cận cảnh cho thấy một người đầu trọc mặc áo thun xanh đậm đang làm việc với bộ phận xe đạp. Cánh tay và góc nghiêng khuôn mặt của người đó lộ rõ khi đang tập trung vào bộ phận cơ khí.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_part_0",
+        "label": "bicycle part",
+        "bbox": [
+          0.655,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "A bicycle component being worked on",
+        "description_vi": "Bộ phận xe đạp đang được xử lý",
+        "attributes": [
+          "metal",
+          "mechanical"
+        ],
+        "action": "being repaired"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.0,
+          0.027000000000000003,
+          0.866,
+          1.0
+        ],
+        "description": "A person with a shaved head wearing a dark blue t-shirt",
+        "description_vi": "Một người đầu trọc mặc áo thun xanh đậm",
+        "attributes": [
+          "shaved head",
+          "dark blue t-shirt",
+          "profile view"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_part_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_part_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0039",
+    "visual_source_frame_id": "L30_V001_f0039",
+    "ocr_source_frame_id": "L30_V001_f0039",
+    "quality_flags": [],
+    "caption": "A close-up view shows a bicycle chainring and crankset on a green frame.",
+    "detailed_caption": "A close-up shot displays a bicycle crankset with a metal chainring and chain mounted on a green frame. The metallic parts are clean and clearly visible in detail.",
+    "caption_vi": "Cận cảnh đĩa xích và bộ đùi đĩa xe đạp trên khung màu xanh lá.",
+    "detailed_caption_vi": "Cận cảnh hiển thị bộ đùi đĩa xe đạp với đĩa xích bằng kim loại và xích được gắn trên khung màu xanh lá cây. Các bộ phận bằng kim loại sạch sẽ và nhìn thấy rõ chi tiết.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_crankset_0",
+        "label": "bicycle crankset",
+        "bbox": [
+          0.273,
+          0.183,
+          0.8140000000000001,
+          1.0
+        ],
+        "description": "A shiny metal bicycle crankset and chainring",
+        "description_vi": "Bộ đùi đĩa và đĩa xích xe đạp bằng kim loại sáng bóng",
+        "attributes": [
+          "silver",
+          "metal",
+          "gear"
+        ],
+        "action": "installed"
+      },
+      {
+        "object_id": "bicycle_frame_0",
+        "label": "bicycle frame",
+        "bbox": [
+          0.0,
+          0.0,
+          0.999,
+          0.638
+        ],
+        "description": "A green bicycle frame tube",
+        "description_vi": "Ống khung xe đạp màu xanh lá cây",
+        "attributes": [
+          "green",
+          "tubular"
+        ],
+        "action": "fixed"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_crankset_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_frame_0"
+      },
+      {
+        "subject_id": "bicycle_frame_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_crankset_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0040",
+    "visual_source_frame_id": "L30_V001_f0039",
+    "ocr_source_frame_id": "L30_V001_f0040",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up view shows a bicycle chainring and crankset on a green frame.",
+    "detailed_caption": "A close-up shot displays a bicycle crankset with a metal chainring and chain mounted on a green frame. The metallic parts are clean and clearly visible in detail.",
+    "caption_vi": "Cận cảnh đĩa xích và bộ đùi đĩa xe đạp trên khung màu xanh lá.",
+    "detailed_caption_vi": "Cận cảnh hiển thị bộ đùi đĩa xe đạp với đĩa xích bằng kim loại và xích được gắn trên khung màu xanh lá cây. Các bộ phận bằng kim loại sạch sẽ và nhìn thấy rõ chi tiết.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_crankset_0",
+        "label": "bicycle crankset",
+        "bbox": [
+          0.273,
+          0.183,
+          0.8140000000000001,
+          1.0
+        ],
+        "description": "A shiny metal bicycle crankset and chainring",
+        "description_vi": "Bộ đùi đĩa và đĩa xích xe đạp bằng kim loại sáng bóng",
+        "attributes": [
+          "silver",
+          "metal",
+          "gear"
+        ],
+        "action": "installed"
+      },
+      {
+        "object_id": "bicycle_frame_0",
+        "label": "bicycle frame",
+        "bbox": [
+          0.0,
+          0.0,
+          0.999,
+          0.638
+        ],
+        "description": "A green bicycle frame tube",
+        "description_vi": "Ống khung xe đạp màu xanh lá cây",
+        "attributes": [
+          "green",
+          "tubular"
+        ],
+        "action": "fixed"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_crankset_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_frame_0"
+      },
+      {
+        "subject_id": "bicycle_frame_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_crankset_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0041",
+    "visual_source_frame_id": "L30_V001_f0041",
+    "ocr_source_frame_id": "L30_V001_f0041",
+    "quality_flags": [],
+    "caption": "Various repair tools including wrenches, hammers, and screwdrivers are in a container.",
+    "detailed_caption": "A close-up shot shows a collection of tools inside a container or toolbox. Wrenches, pliers, screwdrivers, a hammer, and socket sets are arranged together, with a gloved hand visible on the right.",
+    "caption_vi": "Nhiều dụng cụ sửa chữa bao gồm cờ lê, búa và tuốc nơ vít trong hộp.",
+    "detailed_caption_vi": "Cận cảnh cho thấy bộ sưu tập dụng cụ bên trong một hộp hoặc thùng đồ nghề. Cờ lê, kìm, tuốc nơ vít, búa và bộ đầu khẩu được xếp cùng nhau, với bàn tay đeo găng tay ở bên phải.",
+    "ocr_text": "tools LESTAR Metric Sockets 0-066",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.642,
+          0.41500000000000004,
+          0.8460000000000001,
+          1.0
+        ],
+        "description": "A gloved hand touching tools",
+        "description_vi": "Bàn tay đeo găng tay đang chạm vào dụng cụ",
+        "attributes": [
+          "blue glove",
+          "fabric"
+        ],
+        "action": "touching"
+      },
+      {
+        "object_id": "screwdriver_0",
+        "label": "screwdriver",
+        "bbox": [
+          0.246,
+          0.516,
+          0.584,
+          0.829
+        ],
+        "description": "A screwdriver with a red and clear handle",
+        "description_vi": "Một chiếc tuốc nơ vít có tay cầm màu đỏ và trong suốt",
+        "attributes": [
+          "red handle",
+          "striped"
+        ],
+        "action": "lying"
+      },
+      {
+        "object_id": "wrench_0",
+        "label": "wrench",
+        "bbox": [
+          0.528,
+          0.10800000000000001,
+          0.73,
+          0.308
+        ],
+        "description": "A silver metal open-end wrench",
+        "description_vi": "Một chiếc cờ lê mở miệng bằng kim loại màu bạc",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "lying"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "screwdriver_0",
+        "predicate": "left_of",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "right_of",
+        "object_id": "screwdriver_0"
+      },
+      {
+        "subject_id": "wrench_0",
+        "predicate": "above",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "below",
+        "object_id": "wrench_0"
+      },
+      {
+        "subject_id": "wrench_0",
+        "predicate": "above",
+        "object_id": "screwdriver_0"
+      },
+      {
+        "subject_id": "screwdriver_0",
+        "predicate": "below",
+        "object_id": "wrench_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0042",
+    "visual_source_frame_id": "L30_V001_f0042",
+    "ocr_source_frame_id": "L30_V001_f0042",
+    "quality_flags": [],
+    "caption": "A bald man wearing a blue t-shirt works on a bicycle frame in a workshop.",
+    "detailed_caption": "This indoor medium shot shows a bald man wearing a dark blue t-shirt bent over a metallic bicycle frame, assembling or adjusting it. Several other bicycles, wheels, and storage containers are arranged around him against a white tiled wall.",
+    "caption_vi": "Một người đàn ông trọc đầu mặc áo thun xanh đang lắp ráp khung xe đạp trong xưởng.",
+    "detailed_caption_vi": "Ảnh trung cảnh trong nhà ghi lại người đàn ông trọc đầu mặc áo thun xanh đậm đang cúi người làm việc với khung xe đạp kim loại. Nhiều xe đạp khác, bánh xe và các thùng chứa đồ được xếp xung quanh sát tường gạch trắng.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.126,
+          0.4,
+          0.475,
+          0.793
+        ],
+        "description": "metallic bicycle frame being worked on",
+        "description_vi": "khung xe đạp kim loại đang được thao tác",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "repairing"
+      },
+      {
+        "object_id": "bicycle_1",
+        "label": "bicycle",
+        "bbox": [
+          0.602,
+          0.181,
+          0.892,
+          0.966
+        ],
+        "description": "blue bicycle parked on the right",
+        "description_vi": "xe đạp màu xanh dương đậu ở bên phải",
+        "attributes": [
+          "blue"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.16699999999999998,
+          0.118,
+          0.425,
+          0.929
+        ],
+        "description": "bald man wearing a blue t-shirt bending over",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh đang cúi người",
+        "attributes": [
+          "bald",
+          "blue"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_1"
+      },
+      {
+        "subject_id": "bicycle_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0043",
+    "visual_source_frame_id": "L30_V001_f0043",
+    "ocr_source_frame_id": "L30_V001_f0043",
+    "quality_flags": [],
+    "caption": "Multiple bicycles and parts are stored in a cluttered indoor area.",
+    "detailed_caption": "A medium shot shows several bicycles, spare parts, and items stacked and stored in an indoor corner space. A silver bicycle frame and a blue bicycle are prominent in the foreground.",
+    "caption_vi": "Nhiều xe đạp và phụ tùng được cất giữ trong khu vực trong nhà lộn xộn.",
+    "detailed_caption_vi": "Cảnh trung bình cho thấy một số xe đạp, phụ tùng và đồ đạc được xếp chồng và cất giữ trong góc nhà. Khung xe đạp bằng bạc và xe đạp màu xanh nổi bật ở tiền cảnh.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.532,
+          0.33399999999999996,
+          0.8779999999999999,
+          0.9810000000000001
+        ],
+        "description": "A blue bicycle with a brown saddle",
+        "description_vi": "Một chiếc xe đạp màu xanh dương có yên màu nâu",
+        "attributes": [
+          "blue",
+          "rear rack"
+        ],
+        "action": "parked"
+      },
+      {
+        "object_id": "bicycle_frame_0",
+        "label": "bicycle frame",
+        "bbox": [
+          0.0,
+          0.18599999999999997,
+          0.381,
+          0.8560000000000001
+        ],
+        "description": "A disassembled silver bicycle frame",
+        "description_vi": "Khung xe đạp màu bạc đã tháo rời",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "stored"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_frame_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "bicycle_frame_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0044",
+    "visual_source_frame_id": "L30_V001_f0043",
+    "ocr_source_frame_id": "L30_V001_f0044",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Multiple bicycles and parts are stored in a cluttered indoor area.",
+    "detailed_caption": "A medium shot shows several bicycles, spare parts, and items stacked and stored in an indoor corner space. A silver bicycle frame and a blue bicycle are prominent in the foreground.",
+    "caption_vi": "Nhiều xe đạp và phụ tùng được cất giữ trong khu vực trong nhà lộn xộn.",
+    "detailed_caption_vi": "Cảnh trung bình cho thấy một số xe đạp, phụ tùng và đồ đạc được xếp chồng và cất giữ trong góc nhà. Khung xe đạp bằng bạc và xe đạp màu xanh nổi bật ở tiền cảnh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.532,
+          0.33399999999999996,
+          0.8779999999999999,
+          0.9810000000000001
+        ],
+        "description": "A blue bicycle with a brown saddle",
+        "description_vi": "Một chiếc xe đạp màu xanh dương có yên màu nâu",
+        "attributes": [
+          "blue",
+          "rear rack"
+        ],
+        "action": "parked"
+      },
+      {
+        "object_id": "bicycle_frame_0",
+        "label": "bicycle frame",
+        "bbox": [
+          0.0,
+          0.18599999999999997,
+          0.381,
+          0.8560000000000001
+        ],
+        "description": "A disassembled silver bicycle frame",
+        "description_vi": "Khung xe đạp màu bạc đã tháo rời",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "stored"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_frame_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "bicycle_frame_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0045",
+    "visual_source_frame_id": "L30_V001_f0045",
+    "ocr_source_frame_id": "L30_V001_f0045",
+    "quality_flags": [],
+    "caption": "A person works on a bicycle in an outdoor corridor.",
+    "detailed_caption": "A medium shot shows a person standing in a covered outdoor corridor next to a wall, working on a bicycle. The corridor leads toward a staircase in the background.",
+    "caption_vi": "Một người đang sửa xe đạp ở hành lang ngoài trời.",
+    "detailed_caption_vi": "Cảnh trung bình cho thấy một người đang đứng ở hành lang ngoài trời có mái che cạnh bức tường, đang làm việc với một chiếc xe đạp. Hành lang dẫn về phía cầu thang ở phía sau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.597,
+          0.516,
+          0.734,
+          0.762
+        ],
+        "description": "A bicycle being repaired in the corridor",
+        "description_vi": "Một chiếc xe đạp đang được sửa chữa ở hành lang",
+        "attributes": [
+          "silver",
+          "metal frame"
+        ],
+        "action": "being repaired"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.629,
+          0.343,
+          0.742,
+          0.7689999999999999
+        ],
+        "description": "A person standing and working on a bicycle",
+        "description_vi": "Một người đang đứng làm việc với chiếc xe đạp",
+        "attributes": [
+          "dark t-shirt",
+          "standing"
+        ],
+        "action": "working"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0046",
+    "visual_source_frame_id": "L30_V001_f0046",
+    "ocr_source_frame_id": "L30_V001_f0046",
+    "quality_flags": [],
+    "caption": "Water drops fall from green palm leaves during rain.",
+    "detailed_caption": "A close-up shot captures water droplets falling from the tips of green palm leaves. The background is a soft, blurred green foliage setting.",
+    "caption_vi": "Các giọt nước rơi từ lá cọ xanh trong cơn mưa.",
+    "detailed_caption_vi": "Cận cảnh ghi lại những giọt nước đang rơi từ đầu lá cọ màu xanh. Phông nền là khung cảnh lá cây xanh mờ ảo.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "leaves_0",
+        "label": "leaves",
+        "bbox": [
+          0.0,
+          0.0,
+          0.9279999999999999,
+          0.41700000000000004
+        ],
+        "description": "Green palm leaves with falling water drops",
+        "description_vi": "Lá cọ màu xanh có giọt nước đang rơi",
+        "attributes": [
+          "green",
+          "pointed"
+        ],
+        "action": "dripping water"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0047",
+    "visual_source_frame_id": "L30_V001_f0047",
+    "ocr_source_frame_id": "L30_V001_f0047",
+    "quality_flags": [],
+    "caption": "Wet green leaves on branches are shown outdoors against a pale wall.",
+    "detailed_caption": "A medium shot displays lush green leaves covered with raindrops on branches. A tree trunk and a light-colored wall with partial signage are visible in the blurred background.",
+    "caption_vi": "Lá cây xanh ướt trên cành được nhìn thấy ngoài trời trước bức tường nhạt màu.",
+    "detailed_caption_vi": "Cảnh trung bình hiển thị những chiếc lá xanh tươi phủ đầy giọt nước trên cành cây. Thân cây và bức tường sáng màu có biển hiệu một phần ở phông nền mờ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "leaves_0",
+        "label": "leaves",
+        "bbox": [
+          0.0,
+          0.183,
+          0.688,
+          1.0
+        ],
+        "description": "Wet green leaves on branches",
+        "description_vi": "Lá xanh ướt trên cành cây",
+        "attributes": [
+          "green",
+          "wet"
+        ],
+        "action": "hanging"
+      },
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.362,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "Tree branches and trunk in the background",
+        "description_vi": "Cành và thân cây ở phía sau",
+        "attributes": [
+          "brown",
+          "bare branches"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "leaves_0",
+        "predicate": "overlapping",
+        "object_id": "tree_0"
+      },
+      {
+        "subject_id": "tree_0",
+        "predicate": "overlapping",
+        "object_id": "leaves_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0048",
+    "visual_source_frame_id": "L30_V001_f0047",
+    "ocr_source_frame_id": "L30_V001_f0048",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Wet green leaves on branches are shown outdoors against a pale wall.",
+    "detailed_caption": "A medium shot displays lush green leaves covered with raindrops on branches. A tree trunk and a light-colored wall with partial signage are visible in the blurred background.",
+    "caption_vi": "Lá cây xanh ướt trên cành được nhìn thấy ngoài trời trước bức tường nhạt màu.",
+    "detailed_caption_vi": "Cảnh trung bình hiển thị những chiếc lá xanh tươi phủ đầy giọt nước trên cành cây. Thân cây và bức tường sáng màu có biển hiệu một phần ở phông nền mờ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "leaves_0",
+        "label": "leaves",
+        "bbox": [
+          0.0,
+          0.183,
+          0.688,
+          1.0
+        ],
+        "description": "Wet green leaves on branches",
+        "description_vi": "Lá xanh ướt trên cành cây",
+        "attributes": [
+          "green",
+          "wet"
+        ],
+        "action": "hanging"
+      },
+      {
+        "object_id": "tree_0",
+        "label": "tree",
+        "bbox": [
+          0.362,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "Tree branches and trunk in the background",
+        "description_vi": "Cành và thân cây ở phía sau",
+        "attributes": [
+          "brown",
+          "bare branches"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "leaves_0",
+        "predicate": "overlapping",
+        "object_id": "tree_0"
+      },
+      {
+        "subject_id": "tree_0",
+        "predicate": "overlapping",
+        "object_id": "leaves_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0049",
+    "visual_source_frame_id": "L30_V001_f0049",
+    "ocr_source_frame_id": "L30_V001_f0049",
+    "quality_flags": [],
+    "caption": "A person looks through the spokes of a bicycle wheel.",
+    "detailed_caption": "A close-up shot shows a person's face framed by the spokes and rim of a bicycle wheel. The person has short hair and wears a dark blue t-shirt, looking forward intently.",
+    "caption_vi": "Một người nhìn qua các căm của bánh xe đạp.",
+    "detailed_caption_vi": "Cận cảnh cho thấy khuôn mặt của một người được khung bởi các căm và vành của bánh xe đạp. Người này tóc ngắn, mặc áo thun xanh đậm, đang nhìn thẳng phía trước chăm chú.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_wheel_0",
+        "label": "bicycle wheel",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "A bicycle wheel with metal spokes in the foreground",
+        "description_vi": "Bánh xe đạp với căm kim loại ở tiền cảnh",
+        "attributes": [
+          "silver spokes",
+          "rim"
+        ],
+        "action": "stationary"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.263,
+          0.044,
+          0.893,
+          1.0
+        ],
+        "description": "A person with short hair wearing a dark blue t-shirt viewed through bicycle spokes",
+        "description_vi": "Một người tóc ngắn mặc áo thun xanh đậm nhìn qua căm xe đạp",
+        "attributes": [
+          "short hair",
+          "dark blue t-shirt",
+          "focused"
+        ],
+        "action": "looking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0050",
+    "visual_source_frame_id": "L30_V001_f0050",
+    "ocr_source_frame_id": "L30_V001_f0050",
+    "quality_flags": [],
+    "caption": "A person is being interviewed in a room filled with bicycles.",
+    "detailed_caption": "A medium close-up shot shows a person with a shaved head and a dark blue t-shirt speaking during an interview. A microphone is visible in front. The background is filled with various parked bicycles.",
+    "caption_vi": "Một người đang được phỏng vấn trong căn phòng chứa đầy xe đạp.",
+    "detailed_caption_vi": "Cảnh cận trung bình cho thấy một người đầu trọc mặc áo thun xanh đậm đang nói chuyện trong một buổi phỏng vấn. Một chiếc micro hiển thị phía trước. Phông nền chứa đầy các loại xe đạp được đỗ.",
+    "ocr_text": "VTV SIEG-AF D",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.381,
+          0.859,
+          0.48200000000000004,
+          1.0
+        ],
+        "description": "A television microphone with a logo",
+        "description_vi": "Một chiếc micro truyền hình có logo",
+        "attributes": [
+          "black",
+          "branded"
+        ],
+        "action": "recording sound"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.362,
+          0.09,
+          0.9029999999999999,
+          1.0
+        ],
+        "description": "A person with a shaved head wearing a dark blue t-shirt",
+        "description_vi": "Một người đầu trọc mặc áo thun xanh đậm",
+        "attributes": [
+          "shaved head",
+          "dark blue t-shirt",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0051",
+    "visual_source_frame_id": "L30_V001_f0050",
+    "ocr_source_frame_id": "L30_V001_f0051",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person is being interviewed in a room filled with bicycles.",
+    "detailed_caption": "A medium close-up shot shows a person with a shaved head and a dark blue t-shirt speaking during an interview. A microphone is visible in front. The background is filled with various parked bicycles.",
+    "caption_vi": "Một người đang được phỏng vấn trong căn phòng chứa đầy xe đạp.",
+    "detailed_caption_vi": "Cảnh cận trung bình cho thấy một người đầu trọc mặc áo thun xanh đậm đang nói chuyện trong một buổi phỏng vấn. Một chiếc micro hiển thị phía trước. Phông nền chứa đầy các loại xe đạp được đỗ.",
+    "ocr_text": "STEG-AF D",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "microphone_0",
+        "label": "microphone",
+        "bbox": [
+          0.381,
+          0.859,
+          0.48200000000000004,
+          1.0
+        ],
+        "description": "A television microphone with a logo",
+        "description_vi": "Một chiếc micro truyền hình có logo",
+        "attributes": [
+          "black",
+          "branded"
+        ],
+        "action": "recording sound"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.362,
+          0.09,
+          0.9029999999999999,
+          1.0
+        ],
+        "description": "A person with a shaved head wearing a dark blue t-shirt",
+        "description_vi": "Một người đầu trọc mặc áo thun xanh đậm",
+        "attributes": [
+          "shaved head",
+          "dark blue t-shirt",
+          "speaking"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "microphone_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "microphone_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0052",
+    "visual_source_frame_id": "L30_V001_f0052",
+    "ocr_source_frame_id": "L30_V001_f0052",
+    "quality_flags": [],
+    "caption": "A gloved hand uses a spray can to paint a bicycle crankset on cardboard.",
+    "detailed_caption": "A close-up shot shows a gloved hand using a spray can to coat a black bicycle crankset. The crankset is held over a piece of cardboard on the ground, with text printed on the cardboard.",
+    "caption_vi": "Một bàn tay đeo găng tay dùng bình xịt để sơn đùi đĩa xe đạp trên bìa carton.",
+    "detailed_caption_vi": "Cận cảnh cho thấy bàn tay đeo găng tay đang dùng bình xịt để sơn phủ lên bộ đùi đĩa xe đạp màu đen. Đùi đĩa được giữ phía trên một tấm bìa carton trên mặt đất, có in chữ trên bìя.",
+    "ocr_text": "HIFI DIGITAL KARAOKE Design of USA Professional Audio Digital",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_crankset_0",
+        "label": "bicycle crankset",
+        "bbox": [
+          0.43099999999999994,
+          0.16799999999999998,
+          0.75,
+          0.8430000000000001
+        ],
+        "description": "A black bicycle crankset being painted",
+        "description_vi": "Một bộ đùi đĩa xe đạp màu đen đang được sơn",
+        "attributes": [
+          "black",
+          "metal"
+        ],
+        "action": "being painted"
+      },
+      {
+        "object_id": "cardboard_0",
+        "label": "cardboard",
+        "bbox": [
+          0.269,
+          0.27799999999999997,
+          1.0,
+          1.0
+        ],
+        "description": "A piece of cardboard with printed text used as a protective surface",
+        "description_vi": "Tấm bìa carton có chữ in dùng làm bề mặt lót bảo vệ",
+        "attributes": [
+          "brown",
+          "printed text"
+        ],
+        "action": "resting on ground"
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.0,
+          0.0,
+          0.296,
+          0.631
+        ],
+        "description": "A gloved hand holding a spray can",
+        "description_vi": "Bàn tay đeo găng tay đang cầm bình xịt",
+        "attributes": [
+          "gloved",
+          "holding"
+        ],
+        "action": "spray painting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_crankset_0",
+        "predicate": "overlapping",
+        "object_id": "cardboard_0"
+      },
+      {
+        "subject_id": "cardboard_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_crankset_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_crankset_0"
+      },
+      {
+        "subject_id": "bicycle_crankset_0",
+        "predicate": "right_of",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0053",
+    "visual_source_frame_id": "L30_V001_f0053",
+    "ocr_source_frame_id": "L30_V001_f0053",
+    "quality_flags": [],
+    "caption": "A bald man wearing a blue shirt kneels outdoors holding a bicycle chain ring.",
+    "detailed_caption": "This medium shot shows a bald man wearing a blue t-shirt, dark trousers, and gloves, kneeling on the ground next to a wall with large printed text. He holds up a bicycle chain ring with one hand while holding a spray can with the other.",
+    "caption_vi": "Một người đàn ông trọc đầu mặc áo xanh quỳ ngoài trời tay cầm đĩa xích xe đạp.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại một người đàn ông trọc đầu mặc áo thun xanh, quần tối màu và mang găng tay đang quỳ dưới đất sát bức tường có in chữ lớn. Anh ấy một tay cầm đĩa xích xe đạp giơ lên, tay kia cầm bình xịt sơn.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_chain_ring_0",
+        "label": "bicycle chain ring",
+        "bbox": [
+          0.589,
+          0.423,
+          0.632,
+          0.844
+        ],
+        "description": "black metal bicycle chain ring and crank arm",
+        "description_vi": "đĩa xích và giò đạp xe đạp bằng kim loại màu đen",
+        "attributes": [
+          "black",
+          "metal"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.006,
+          0.018000000000000002,
+          0.634,
+          0.958
+        ],
+        "description": "bald man wearing a blue t-shirt and gloves holding a bicycle part",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh và mang găng tay đang cầm bộ phận xe đạp",
+        "attributes": [
+          "bald",
+          "blue",
+          "gloves"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spray_can_0",
+        "label": "spray can",
+        "bbox": [
+          0.374,
+          0.8029999999999999,
+          0.442,
+          1.0
+        ],
+        "description": "aerosol spray can held in hand",
+        "description_vi": "bình xịt sơn cầm trên tay",
+        "attributes": [
+          "spray",
+          "can"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_chain_ring_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_chain_ring_0"
+      },
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_chain_ring_0"
+      },
+      {
+        "subject_id": "bicycle_chain_ring_0",
+        "predicate": "right_of",
+        "object_id": "spray_can_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "spray_can_0"
+      },
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0054",
+    "visual_source_frame_id": "L30_V001_f0054",
+    "ocr_source_frame_id": "L30_V001_f0054",
+    "quality_flags": [],
+    "caption": "A bald man wearing a blue shirt kneels outdoors holding a bicycle chain ring.",
+    "detailed_caption": "This medium shot captures a bald man wearing a blue t-shirt, dark pants, and gloves, kneeling on a concrete surface next to a wall with large typography. He holds up a black bicycle chain ring and crankset with his right hand while holding a spray can in his left hand.",
+    "caption_vi": "Một người đàn ông trọc đầu mặc áo xanh quỳ ngoài trời đang cầm đĩa xích xe đạp.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại người đàn ông đầu trọc mặc áo thun xanh, quần dài và mang găng tay đang quỳ trên nền bê tông cạnh bức tường in chữ lớn. Anh ấy dùng tay phải cầm đĩa xích và giò dĩa xe đạp màu đen giơ lên, tay trái cầm bình xịt.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_chain_ring_0",
+        "label": "bicycle chain ring",
+        "bbox": [
+          0.567,
+          0.455,
+          0.651,
+          0.8510000000000001
+        ],
+        "description": "black bicycle chain ring suspended in the air",
+        "description_vi": "đĩa xích xe đạp màu đen đang lơ lửng trên không",
+        "attributes": [
+          "black",
+          "metal"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.006,
+          0.023,
+          0.646,
+          0.987
+        ],
+        "description": "bald man wearing a blue t-shirt holding a bicycle chain ring",
+        "description_vi": "người đàn ông trọc đầu mặc áo thun xanh đang cầm đĩa xích xe đạp",
+        "attributes": [
+          "bald",
+          "blue",
+          "gloves"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spray_can_0",
+        "label": "spray can",
+        "bbox": [
+          0.34700000000000003,
+          0.838,
+          0.425,
+          1.0
+        ],
+        "description": "spray paint can held by gloved hand",
+        "description_vi": "bình sơn xịt được cầm bởi tay đeo găng",
+        "attributes": [
+          "can"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_chain_ring_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_chain_ring_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "spray_can_0"
+      },
+      {
+        "subject_id": "spray_can_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0055",
+    "visual_source_frame_id": "L30_V001_f0055",
+    "ocr_source_frame_id": "L30_V001_f0055",
+    "quality_flags": [],
+    "caption": "A person in a dark blue t-shirt works on a bicycle frame indoors.",
+    "detailed_caption": "A medium shot shows a person with a shaved head and a dark blue t-shirt standing and working on a bicycle frame in a bright indoor room. Several other bicycles are parked against the wall in the background.",
+    "caption_vi": "Một người mặc áo thun xanh đậm đang làm việc với khung xe đạp trong nhà.",
+    "detailed_caption_vi": "Cảnh trung bình cho thấy một người đầu trọc mặc áo thun xanh đậm đang đứng làm việc với khung xe đạp trong căn phòng sáng sủa bên trong nhà. Một số chiếc xe đạp khác được đỗ sát tường ở phía sau.",
+    "ocr_text": "tuoitreTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.595,
+          0.181,
+          0.8880000000000001,
+          0.9890000000000001
+        ],
+        "description": "A blue bicycle parked on the right",
+        "description_vi": "Một chiếc xe đạp màu xanh dương đỗ bên phải",
+        "attributes": [
+          "blue",
+          "brown saddle"
+        ],
+        "action": "parked"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.159,
+          0.13099999999999998,
+          0.42300000000000004,
+          0.921
+        ],
+        "description": "A person with a shaved head wearing a dark blue t-shirt",
+        "description_vi": "Một người đầu trọc mặc áo thun xanh đậm",
+        "attributes": [
+          "shaved head",
+          "dark blue t-shirt",
+          "standing"
+        ],
+        "action": "working on bicycle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0056",
+    "visual_source_frame_id": "L30_V001_f0056",
+    "ocr_source_frame_id": "L30_V001_f0056",
+    "quality_flags": [],
+    "caption": "Three men are sitting outdoors repairing a bicycle surrounded by tools and equipment.",
+    "detailed_caption": "A medium shot shows three men working on a bicycle outdoors against a light wall. From left to right, the first man wears a dark shirt and works near bicycle parts, the second man wears a blue shirt, and the third man wears a turquoise shirt and shorts while handling components. Various tools, wheels, and parts are scattered around them on the ground.",
+    "caption_vi": "Ba người đàn ông đang ngồi ngoài trời sửa chữa xe đạp xung quanh có nhiều dụng cụ.",
+    "detailed_caption_vi": "Cảnh trung cho thấy ba người đàn ông đang làm việc với một chiếc xe đạp ngoài trời gần bức tường sáng màu. Từ trái sang phải, người đàn ông đầu tiên mặc áo tối màu ở gần các bộ phận xe đạp, người thứ hai mặc áo xanh dương, và người thứ ba mặc áo xanh ngọc cùng quần đùi đang thao tác với linh kiện. Nhiều dụng cụ, bánh xe và phụ tùng nằm rải rác xung quanh họ trên mặt đất.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.43099999999999994,
+          0.521,
+          0.534,
+          0.632
+        ],
+        "description": "bicycle frame and wheel parts on ground",
+        "description_vi": "khung xe đạp và các bộ phận bánh xe trên mặt đất",
+        "attributes": [
+          "metal",
+          "spokes"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.44800000000000006,
+          0.35,
+          0.524,
+          0.517
+        ],
+        "description": "man in dark patterned t-shirt sitting on ground",
+        "description_vi": "nam giới mặc áo thun tối màu ngồi trên mặt đất",
+        "attributes": [
+          "dark shirt",
+          "sitting",
+          "shaved head"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.507,
+          0.35900000000000004,
+          0.554,
+          0.504
+        ],
+        "description": "man in blue shirt sitting and watching",
+        "description_vi": "nam giới mặc áo xanh dương đang ngồi quan sát",
+        "attributes": [
+          "blue shirt",
+          "sitting"
+        ],
+        "action": "watching"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5519999999999999,
+          0.354,
+          0.67,
+          0.632
+        ],
+        "description": "man in turquoise shirt and shorts working on bicycle",
+        "description_vi": "nam giới mặc áo xanh ngọc và quần đùi đang sửa xe đạp",
+        "attributes": [
+          "turquoise shirt",
+          "shorts",
+          "sitting"
+        ],
+        "action": "repairing bicycle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_1",
+        "predicate": "above",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "below",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0057",
+    "visual_source_frame_id": "L30_V001_f0056",
+    "ocr_source_frame_id": "L30_V001_f0057",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Three men are sitting outdoors repairing a bicycle surrounded by tools and equipment.",
+    "detailed_caption": "A medium shot shows three men working on a bicycle outdoors against a light wall. From left to right, the first man wears a dark shirt and works near bicycle parts, the second man wears a blue shirt, and the third man wears a turquoise shirt and shorts while handling components. Various tools, wheels, and parts are scattered around them on the ground.",
+    "caption_vi": "Ba người đàn ông đang ngồi ngoài trời sửa chữa xe đạp xung quanh có nhiều dụng cụ.",
+    "detailed_caption_vi": "Cảnh trung cho thấy ba người đàn ông đang làm việc với một chiếc xe đạp ngoài trời gần bức tường sáng màu. Từ trái sang phải, người đàn ông đầu tiên mặc áo tối màu ở gần các bộ phận xe đạp, người thứ hai mặc áo xanh dương, và người thứ ba mặc áo xanh ngọc cùng quần đùi đang thao tác với linh kiện. Nhiều dụng cụ, bánh xe và phụ tùng nằm rải rác xung quanh họ trên mặt đất.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_0",
+        "label": "bicycle",
+        "bbox": [
+          0.43099999999999994,
+          0.521,
+          0.534,
+          0.632
+        ],
+        "description": "bicycle frame and wheel parts on ground",
+        "description_vi": "khung xe đạp và các bộ phận bánh xe trên mặt đất",
+        "attributes": [
+          "metal",
+          "spokes"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.44800000000000006,
+          0.35,
+          0.524,
+          0.517
+        ],
+        "description": "man in dark patterned t-shirt sitting on ground",
+        "description_vi": "nam giới mặc áo thun tối màu ngồi trên mặt đất",
+        "attributes": [
+          "dark shirt",
+          "sitting",
+          "shaved head"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.507,
+          0.35900000000000004,
+          0.554,
+          0.504
+        ],
+        "description": "man in blue shirt sitting and watching",
+        "description_vi": "nam giới mặc áo xanh dương đang ngồi quan sát",
+        "attributes": [
+          "blue shirt",
+          "sitting"
+        ],
+        "action": "watching"
+      },
+      {
+        "object_id": "person_2",
+        "label": "person",
+        "bbox": [
+          0.5519999999999999,
+          0.354,
+          0.67,
+          0.632
+        ],
+        "description": "man in turquoise shirt and shorts working on bicycle",
+        "description_vi": "nam giới mặc áo xanh ngọc và quần đùi đang sửa xe đạp",
+        "attributes": [
+          "turquoise shirt",
+          "shorts",
+          "sitting"
+        ],
+        "action": "repairing bicycle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_1",
+        "predicate": "above",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "below",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "bicycle_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "bicycle_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_2"
+      },
+      {
+        "subject_id": "person_2",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0058",
+    "visual_source_frame_id": "L30_V001_f0058",
+    "ocr_source_frame_id": "L30_V001_f0058",
+    "quality_flags": [],
+    "caption": "A blurred abstract scene features yellow sun icons overlaid on a grayscale background.",
+    "detailed_caption": "This motion-blurred shot shows a grayscale background with two bright yellow sun-like graphic icons overlaid in the center. The right side contains faint indistinct figures in an outdoor setting.",
+    "caption_vi": "Cảnh mờ nhòe với các biểu tượng mặt trời vàng chồng lên nền xám.",
+    "detailed_caption_vi": "Ảnh chụp bị nhòe chuyển động hiển thị nền xám với hai biểu tượng đồ họa hình mặt trời màu vàng sáng ở trung tâm. Bên phải có hình dáng mờ ảo của con người trong bối cảnh ngoài trời.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "graphic_icon_0",
+        "label": "graphic icon",
+        "bbox": [
+          0.389,
+          0.124,
+          0.688,
+          0.42800000000000005
+        ],
+        "description": "bright yellow sun-shaped graphic overlay",
+        "description_vi": "biểu tượng đồ họa hình mặt trời màu vàng sáng",
+        "attributes": [
+          "yellow",
+          "graphic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0059",
+    "visual_source_frame_id": "L30_V001_f0059",
+    "ocr_source_frame_id": "L30_V001_f0059",
+    "quality_flags": [],
+    "caption": "A blurred scene features a yellow sun graphic overlaid on a grayscale background with indistinct figures.",
+    "detailed_caption": "This motion-blurred shot displays a grayscale background with a single bright yellow sun-like graphic icon on the upper center. Faint figures are visible in the background on the right.",
+    "caption_vi": "Cảnh mờ với hình họa mặt trời màu vàng chồng lên nền xám có hình người mờ ảo.",
+    "detailed_caption_vi": "Ảnh mờ chuyển động hiển thị nền xám với một biểu tượng hình mặt trời màu vàng ở phía trên trung tâm. Phía bên phải có hình người mờ nhạt ở hậu cảnh.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "graphic_icon_0",
+        "label": "graphic icon",
+        "bbox": [
+          0.572,
+          0.124,
+          0.8160000000000001,
+          0.42800000000000005
+        ],
+        "description": "yellow sun-shaped graphic overlay",
+        "description_vi": "biểu tượng đồ họa hình mặt trời màu vàng",
+        "attributes": [
+          "yellow",
+          "graphic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0060",
+    "visual_source_frame_id": "L30_V001_f0060",
+    "ocr_source_frame_id": "L30_V001_f0060",
+    "quality_flags": [],
+    "caption": "A motion-blurred shot displays a yellow sun graphic icon on a grayscale background.",
+    "detailed_caption": "This blurred frame shows a grayscale background with a bright yellow sun graphic icon positioned on the right side. Indistinct shapes and figures appear beneath the graphic overlay.",
+    "caption_vi": "Bức ảnh mờ chuyển động hiển thị biểu tượng đồ họa mặt trời vàng trên nền xám.",
+    "detailed_caption_vi": "Khung hình mờ nhòe hiển thị nền xám với biểu tượng đồ họa mặt trời màu vàng sáng ở bên phải. Các hình khối và nhân vật mờ ảo xuất hiện bên dưới lớp phủ đồ họa.",
+    "ocr_text": "tuoitre TV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "graphic_icon_0",
+        "label": "graphic icon",
+        "bbox": [
+          0.6910000000000001,
+          0.135,
+          0.933,
+          0.41500000000000004
+        ],
+        "description": "yellow sun graphic icon overlaid on the right",
+        "description_vi": "biểu tượng đồ họa mặt trời màu vàng phủ ở bên phải",
+        "attributes": [
+          "yellow",
+          "graphic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0061",
+    "visual_source_frame_id": "L30_V001_f0061",
+    "ocr_source_frame_id": "L30_V001_f0061",
+    "quality_flags": [],
+    "caption": "A television graphic showing a light-colored background with a blurred circular window scene on the left and a yellow sun emblem on the right.",
+    "detailed_caption": "This medium shot displays a television broadcast graphic featuring a light gray and white background. On the left side, a circular vignette shows a blurred interior scene with a window and figures. On the upper left, a stylized cluster of transparent shapes appears, while on the upper right, a yellow sun-like emblem is visible. The Tuoi Tre TV logo appears in the top right corner.",
+    "caption_vi": "Đồ họa truyền hình hiển thị nền sáng với khung cửa sổ tròn mờ ở bên trái và biểu tượng mặt trời vàng ở bên phải.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị đồ họa phát sóng truyền hình với nền màu xám nhạt và trắng. Phía bên trái, một khung hình tròn hiển thị cảnh nội thất mờ ảo với cửa sổ và các nhân vật. Phía trên bên phải xuất hiện biểu tượng mặt trời màu vàng và logo Tuoi Tre TV ở góc trên cùng bên phải.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "emblem_0",
+        "label": "emblem",
+        "bbox": [
+          0.9369999999999999,
+          0.181,
+          1.0,
+          0.34500000000000003
+        ],
+        "description": "yellow sun emblem on the right",
+        "description_vi": "biểu tượng mặt trời màu vàng ở bên phải",
+        "attributes": [
+          "yellow",
+          "sun"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0062",
+    "visual_source_frame_id": "L30_V001_f0062",
+    "ocr_source_frame_id": "L30_V001_f0062",
+    "quality_flags": [],
+    "caption": "A blurred motion frame showing an interior space with vertical structures.",
+    "detailed_caption": "A blurred close-up shot shows indistinct vertical lines and textures suggesting an indoor or sheltered area. The image suffers from motion blur, obscuring fine details and subjects.",
+    "caption_vi": "Một khung hình bị mờ chuyển động hiển thị không gian nội thất với các cấu trúc dọc.",
+    "detailed_caption_vi": "Cảnh cận cảnh bị mờ cho thấy các đường nét và kết cấu dọc không rõ ràng gợi ý khu vực trong nhà hoặc có mái che. Hình ảnh bị nhòe do chuyển động, che khuất các chi tiết và chủ thể.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0063",
+    "visual_source_frame_id": "L30_V001_f0062",
+    "ocr_source_frame_id": "L30_V001_f0063",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A blurred motion frame showing an interior space with vertical structures.",
+    "detailed_caption": "A blurred close-up shot shows indistinct vertical lines and textures suggesting an indoor or sheltered area. The image suffers from motion blur, obscuring fine details and subjects.",
+    "caption_vi": "Một khung hình bị mờ chuyển động hiển thị không gian nội thất với các cấu trúc dọc.",
+    "detailed_caption_vi": "Cảnh cận cảnh bị mờ cho thấy các đường nét và kết cấu dọc không rõ ràng gợi ý khu vực trong nhà hoặc có mái che. Hình ảnh bị nhòe do chuyển động, che khuất các chi tiết và chủ thể.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0064",
+    "visual_source_frame_id": "L30_V001_f0064",
+    "ocr_source_frame_id": "L30_V001_f0064",
+    "quality_flags": [],
+    "caption": "A blurred motion shot focusing on a metallic object against a white background.",
+    "detailed_caption": "A blurred close-up shot captures a metallic cylindrical object angled diagonally across a bright background. The motion blur creates streaks across the frame, concealing surrounding context.",
+    "caption_vi": "Một cảnh mờ chuyển động tập trung vào vật bằng kim loại trên nền trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh bị mờ ghi lại một vật hình trụ bằng kim loại đặt chếch trên nền sáng. Hiệu ứng nhòe chuyển động tạo ra các vệt dài khắp khung hình, che lấp bối cảnh xung quanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0065",
+    "visual_source_frame_id": "L30_V001_f0064",
+    "ocr_source_frame_id": "L30_V001_f0065",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A blurred motion shot focusing on a metallic object against a white background.",
+    "detailed_caption": "A blurred close-up shot captures a metallic cylindrical object angled diagonally across a bright background. The motion blur creates streaks across the frame, concealing surrounding context.",
+    "caption_vi": "Một cảnh mờ chuyển động tập trung vào vật bằng kim loại trên nền trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh bị mờ ghi lại một vật hình trụ bằng kim loại đặt chếch trên nền sáng. Hiệu ứng nhòe chuyển động tạo ra các vệt dài khắp khung hình, che lấp bối cảnh xung quanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0066",
+    "visual_source_frame_id": "L30_V001_f0066",
+    "ocr_source_frame_id": "L30_V001_f0066",
+    "quality_flags": [],
+    "caption": "A television transition graphic showing a train drawing passing over a circular picture of an indoor room with a person.",
+    "detailed_caption": "This medium shot features a television transition graphic over a white background. A stylized black and white train drawing moves horizontally across the lower left. In the center, a circular inset image shows an indoor setting with a person sitting on a floor mat next to stacked wheelchairs and shelving. The Tuoi Tre TV logo is visible in the top right corner.",
+    "caption_vi": "Đồ họa chuyển cảnh truyền hình hiển thị hình vẽ đoàn tàu đi qua bức ảnh tròn chụp căn phòng trong nhà có người.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị đồ họa chuyển cảnh truyền hình trên nền trắng. Hình vẽ đoàn tàu đen trắng cách điệu di chuyển ngang ở góc dưới bên trái. Ở trung tâm, một hình ảnh lồng hình tròn hiển thị bối cảnh trong nhà với một người đang ngồi trên thảm sàn cạnh các xe lăn được xếp chồng lên nhau và kệ tủ.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.528,
+          0.47100000000000003,
+          0.67,
+          0.8029999999999999
+        ],
+        "description": "person wearing blue shirt sitting indoors",
+        "description_vi": "người mặc áo xanh đang ngồi trong nhà",
+        "attributes": [
+          "blue",
+          "sitting"
+        ],
+        "action": "sitting"
+      },
+      {
+        "object_id": "train_0",
+        "label": "train",
+        "bbox": [
+          0.024,
+          0.442,
+          0.5820000000000001,
+          0.997
+        ],
+        "description": "stylized black and white train drawing",
+        "description_vi": "hình vẽ đoàn tàu đen trắng cách điệu",
+        "attributes": [
+          "black",
+          "white",
+          "drawing"
+        ],
+        "action": "moving"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "train_0"
+      },
+      {
+        "subject_id": "train_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0067",
+    "visual_source_frame_id": "L30_V001_f0067",
+    "ocr_source_frame_id": "L30_V001_f0067",
+    "quality_flags": [],
+    "caption": "A television transition graphic featuring a central rectangular inset showing an indoor room with shelves and stacked wheelchairs, flanked by gray abstract shapes.",
+    "detailed_caption": "This medium shot shows a television graphic transition with a heavily blurred gray background. In the center, a rectangular frame displays an indoor scene with vertical shelving units and stacked wheelchairs on the left, and a person standing near the right. The Tuoi Tre TV logo is displayed in the upper right corner.",
+    "caption_vi": "Đồ họa chuyển cảnh truyền hình có khung hình chữ nhật ở trung tâm hiển thị phòng trong nhà với kệ và xe lăn xếp chồng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị đồ họa chuyển cảnh truyền hình với nền màu xám bị mờ nặng. Ở trung tâm, một khung hình chữ nhật hiển thị cảnh trong nhà với các kệ tủ thẳng đứng và xe lăn xếp chồng bên trái, cùng một người đang đứng gần bên phải.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.46799999999999997,
+          0.49,
+          0.541,
+          0.885
+        ],
+        "description": "person standing indoors",
+        "description_vi": "người đang đứng trong nhà",
+        "attributes": [
+          "standing"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0068",
+    "visual_source_frame_id": "L30_V001_f0068",
+    "ocr_source_frame_id": "L30_V001_f0068",
+    "quality_flags": [],
+    "caption": "A television transition frame with a central rectangular image of an indoor space, partially obscured by a sliding white overlay.",
+    "detailed_caption": "This medium shot shows a broadcast transition frame. A white graphic element slides horizontally across the lower portion of the frame, partially covering a central rectangular view of an indoor space containing shelving and seated figures. The Tuoi Tre TV logo is in the top right corner.",
+    "caption_vi": "Khung chuyển cảnh truyền hình với hình ảnh chữ nhật trung tâm về không gian trong nhà, bị che một phần bởi lớp phủ trắng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị khung chuyển cảnh phát sóng. Một yếu tố đồ họa màu trắng trượt ngang qua phần dưới của khung hình, che một phần tầm nhìn hình chữ nhật trung tâm về không gian trong nhà chứa kệ và các nhân vật đang ngồi.",
+    "ocr_text": "tuổi trẻTV",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0069",
+    "visual_source_frame_id": "L30_V001_f0064",
+    "ocr_source_frame_id": "L30_V001_f0069",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A blurred motion shot focusing on a metallic object against a white background.",
+    "detailed_caption": "A blurred close-up shot captures a metallic cylindrical object angled diagonally across a bright background. The motion blur creates streaks across the frame, concealing surrounding context.",
+    "caption_vi": "Một cảnh mờ chuyển động tập trung vào vật bằng kim loại trên nền trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh bị mờ ghi lại một vật hình trụ bằng kim loại đặt chếch trên nền sáng. Hiệu ứng nhòe chuyển động tạo ra các vệt dài khắp khung hình, che lấp bối cảnh xung quanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L30_V001_f0070",
+    "visual_source_frame_id": "L30_V001_f0070",
+    "ocr_source_frame_id": "L30_V001_f0070",
+    "quality_flags": [],
+    "caption": "A close-up view of a person working on a bicycle brake mechanism.",
+    "detailed_caption": "A close-up shot shows the upper body of a person wearing a dark blue shirt with a colourful graphic, leaning over a bicycle handle and brake system. Metal handlebars, cables, and brake calipers dominate the foreground, with a fence and wall visible in the background.",
+    "caption_vi": "Cận cảnh một người đang thao tác với hệ thống phanh xe đạp.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy phần thân trên của một người mặc áo xanh đen có họa tiết màu sắc, đang cúi người bên ghi đông và hệ thống phanh xe đạp. Tay lái bằng kim loại, dây cáp và ngàm phanh chiếm phần lớn khung hình phía trước, với hàng rào và bức tường ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_brake_0",
+        "label": "bicycle brake",
+        "bbox": [
+          0.40800000000000003,
+          0.308,
+          0.8140000000000001,
+          0.768
+        ],
+        "description": "metal bicycle brake assembly and cables",
+        "description_vi": "cụm phanh xe đạp bằng kim loại và dây cáp",
+        "attributes": [
+          "metal",
+          "mechanical"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.209,
+          0.23299999999999998,
+          0.786,
+          0.995
+        ],
+        "description": "person in dark blue shirt leaning over bicycle",
+        "description_vi": "người mặc áo xanh đen đang cúi trên xe đạp",
+        "attributes": [
+          "dark blue shirt",
+          "graphic print"
+        ],
+        "action": "repairing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_brake_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_brake_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0071",
+    "visual_source_frame_id": "L30_V001_f0071",
+    "ocr_source_frame_id": "L30_V001_f0071",
+    "quality_flags": [],
+    "caption": "A person with a shaved head is working on a bicycle part outdoors.",
+    "detailed_caption": "A medium close-up shows a bald man wearing a dark blue shirt and gloves working on a bicycle frame. Metal bicycle components dominate the left foreground, while a weathered concrete wall and metal fence form the background.",
+    "caption_vi": "Một người đàn ông đầu trọc đang sửa chữa bộ phận xe đạp ngoài trời.",
+    "detailed_caption_vi": "Cảnh cận trung cho thấy một người đàn ông đầu trọc mặc áo xanh sẫm và đeo găng tay đang làm việc với khung xe đạp. Các bộ phận xe đạp bằng kim loại chiếm phần lớn ở góc trái phía trước, trong khi bức tường bê tông cũ kỹ và hàng rào sắt làm nền phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bicycle_component_0",
+        "label": "bicycle component",
+        "bbox": [
+          0.033,
+          0.001,
+          0.43099999999999994,
+          0.883
+        ],
+        "description": "metal bicycle frame and handle part",
+        "description_vi": "khung xe đạp bằng kim loại và bộ phận tay cầm",
+        "attributes": [
+          "metal",
+          "tubular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.046,
+          0.1,
+          0.67,
+          0.987
+        ],
+        "description": "bald man in dark blue shirt and gloves working on bicycle",
+        "description_vi": "nam giới đầu trọc mặc áo xanh sẫm và đeo găng tay sửa xe đạp",
+        "attributes": [
+          "bald",
+          "dark blue shirt",
+          "gloves"
+        ],
+        "action": "repairing bicycle"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bicycle_component_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "bicycle_component_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L30_V001_f0072",
+    "visual_source_frame_id": "L30_V001_f0072",
+    "ocr_source_frame_id": "L30_V001_f0072",
+    "quality_flags": [],
+    "caption": "A smiling woman with short hair wearing a pink shirt waves while riding a bicycle.",
+    "detailed_caption": "A medium shot shows a smiling woman with short hair wearing a pink t-shirt with text, raising her right hand to wave. She is positioned on a bicycle handle, outdoors with a blurry street and vehicle background.",
+    "caption_vi": "Một phụ nữ tóc ngắn mặc áo hồng đang mỉm cười vẫy tay khi đạp xe.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh người phụ nữ tóc ngắn mặc áo thun hồng có chữ, mỉm cười và giơ tay phải vẫy chào. Cô ấy ở phía sau ghi đông xe đạp, ngoài trời với khung cảnh đường phố và xe cộ phía sau bị làm mờ.",
+    "ocr_text": "ATLANTA Tác giả: Thu Hồng",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.05500000000000001,
+          0.052,
+          0.6559999999999999,
+          0.995
+        ],
+        "description": "smiling woman with short hair wearing pink t-shirt waving",
+        "description_vi": "phụ nữ tóc ngắn mặc áo thun hồng mỉm cười vẫy tay",
+        "attributes": [
+          "short hair",
+          "pink t-shirt",
+          "smiling",
+          "waving"
+        ],
+        "action": "waving"
+      }
+    ],
+    "spatial_relations": []
+  }
+]
