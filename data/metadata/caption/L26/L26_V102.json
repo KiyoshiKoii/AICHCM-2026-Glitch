@@ -1,0 +1,2760 @@
+[
+  {
+    "frame_id": "L26_V102_f0080",
+    "visual_source_frame_id": "L26_V102_f0080",
+    "ocr_source_frame_id": "L26_V102_f0080",
+    "quality_flags": [],
+    "caption": "A female cook in a white uniform on the left and a man in an apron on the right stand in a kitchen with a blender and gas stove.",
+    "detailed_caption": "This medium shot features two dominant foreground subjects inside a kitchen with white countertops and light-colored wooden cabinets. On the left, a female cook wearing a white chef uniform with red trim stands next to a tall glass container and an immersion blender. On the right, a man wearing a white t-shirt and a white apron stands with his hands clasped, looking towards the left. The background shows a modern kitchen with a sink, faucet, and various cooking utensils.",
+    "caption_vi": "Một nữ đầu bếp mặc đồng phục trắng bên trái và một người đàn ông đeo tạp dề bên phải đứng trong nhà bếp có máy xay và bếp gas.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy hai nhân vật chính trong một căn bếp có mặt bàn trắng và tủ gỗ sáng màu. Ở bên trái, một nữ đầu bếp mặc áo đầu bếp trắng viền đỏ đang đứng cạnh bình thủy tinh và máy xay cầm tay. Ở bên phải, một người đàn ông mặc áo thun trắng và đeo tạp dề đứng chắp tay nhìn sang bên trái. Phía sau là không gian bếp hiện đại với bồn rửa, vòi nước và nhiều dụng cụ nấu nướng.",
+    "ocr_text": "MON NGON mỗi ngày Ai AJINOMOTO Eat Well, Live Well. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.281,
+          0.531,
+          0.319,
+          0.8029999999999999
+        ],
+        "description": "an immersion blender standing inside a clear container on the white counter",
+        "description_vi": "một máy xay cầm tay đặt trong bình nhựa trong suốt trên mặt bàn trắng",
+        "attributes": [
+          "white",
+          "clear",
+          "tall"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "cabinet_0",
+        "label": "cabinet",
+        "bbox": [
+          0.154,
+          0.066,
+          0.8619999999999999,
+          0.403
+        ],
+        "description": "light-colored wooden kitchen cabinets mounted on the wall",
+        "description_vi": "tủ bếp gỗ màu sáng gắn trên tường",
+        "attributes": [
+          "wooden",
+          "light",
+          "wall-mounted"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.274,
+          0.253,
+          0.45499999999999996,
+          0.78
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim and dark hair",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ và tóc tối màu",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.604,
+          0.192,
+          0.775,
+          0.7859999999999999
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và đeo tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.346,
+          0.763,
+          0.653,
+          0.833
+        ],
+        "description": "a black glass-top gas stove embedded in the white countertop",
+        "description_vi": "một bếp gas mặt kính đen lắp âm trên mặt bàn trắng",
+        "attributes": [
+          "black",
+          "glass",
+          "built-in"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0081",
+    "visual_source_frame_id": "L26_V102_f0080",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female cook in a white uniform on the left and a man in an apron on the right stand in a kitchen with a blender and gas stove.",
+    "detailed_caption": "This medium shot features two dominant foreground subjects inside a kitchen with white countertops and light-colored wooden cabinets. On the left, a female cook wearing a white chef uniform with red trim stands next to a tall glass container and an immersion blender. On the right, a man wearing a white t-shirt and a white apron stands with his hands clasped, looking towards the left. The background shows a modern kitchen with a sink, faucet, and various cooking utensils.",
+    "caption_vi": "Một nữ đầu bếp mặc đồng phục trắng bên trái và một người đàn ông đeo tạp dề bên phải đứng trong nhà bếp có máy xay và bếp gas.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy hai nhân vật chính trong một căn bếp có mặt bàn trắng và tủ gỗ sáng màu. Ở bên trái, một nữ đầu bếp mặc áo đầu bếp trắng viền đỏ đang đứng cạnh bình thủy tinh và máy xay cầm tay. Ở bên phải, một người đàn ông mặc áo thun trắng và đeo tạp dề đứng chắp tay nhìn sang bên trái. Phía sau là không gian bếp hiện đại với bồn rửa, vòi nước và nhiều dụng cụ nấu nướng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.281,
+          0.531,
+          0.319,
+          0.8029999999999999
+        ],
+        "description": "an immersion blender standing inside a clear container on the white counter",
+        "description_vi": "một máy xay cầm tay đặt trong bình nhựa trong suốt trên mặt bàn trắng",
+        "attributes": [
+          "white",
+          "clear",
+          "tall"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "cabinet_0",
+        "label": "cabinet",
+        "bbox": [
+          0.154,
+          0.066,
+          0.8619999999999999,
+          0.403
+        ],
+        "description": "light-colored wooden kitchen cabinets mounted on the wall",
+        "description_vi": "tủ bếp gỗ màu sáng gắn trên tường",
+        "attributes": [
+          "wooden",
+          "light",
+          "wall-mounted"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.274,
+          0.253,
+          0.45499999999999996,
+          0.78
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim and dark hair",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ và tóc tối màu",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.604,
+          0.192,
+          0.775,
+          0.7859999999999999
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và đeo tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.346,
+          0.763,
+          0.653,
+          0.833
+        ],
+        "description": "a black glass-top gas stove embedded in the white countertop",
+        "description_vi": "một bếp gas mặt kính đen lắp âm trên mặt bàn trắng",
+        "attributes": [
+          "black",
+          "glass",
+          "built-in"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0082",
+    "visual_source_frame_id": "L26_V102_f0082",
+    "ocr_source_frame_id": "L26_V102_f0082",
+    "quality_flags": [],
+    "caption": "A person's hands hold a white square bowl with red logo and a spoon while using an immersion blender.",
+    "detailed_caption": "This close-up shot shows a pair of hands holding a small white square bowl with a red hexagonal logo containing text. A hand holds a small metal spoon inside the bowl, scooping white powder. An immersion blender with a white and gray handle stands upright on the right side of the frame against a white background.",
+    "caption_vi": "Đôi tay của một người đang cầm chiếc bát vuông màu trắng có logo đỏ và thìa nhỏ.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh này cho thấy đôi tay đang cầm một chiếc bát vuông màu trắng nhỏ có logo hình lục giác màu đỏ bên trong chứa chữ. Một tay cầm chiếc thìa kim loại nhỏ múc bột bên trong bát. Máy xay cầm tay màu trắng xám dựng đứng bên phải.",
+    "ocr_text": "MUỐI",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.808,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "an immersion blender with a white and gray body",
+        "description_vi": "một máy xay cầm tay thân màu trắng và xám",
+        "attributes": [
+          "white",
+          "gray",
+          "electric"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.43600000000000005,
+          0.35700000000000004,
+          0.8039999999999999,
+          0.891
+        ],
+        "description": "a small white square bowl with a red hexagonal logo",
+        "description_vi": "một chiếc bát vuông trắng nhỏ có logo hình lục giác đỏ",
+        "attributes": [
+          "white",
+          "square",
+          "small"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.305,
+          0.178,
+          0.5700000000000001,
+          0.442
+        ],
+        "description": "a small metal spoon resting inside a white square bowl",
+        "description_vi": "một chiếc thìa kim loại nhỏ đặt trong bát vuông trắng",
+        "attributes": [
+          "metal",
+          "small"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "spoon_0",
+        "predicate": "left_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "right_of",
+        "object_id": "spoon_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0083",
+    "visual_source_frame_id": "L26_V102_f0082",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person's hands hold a white square bowl with red logo and a spoon while using an immersion blender.",
+    "detailed_caption": "This close-up shot shows a pair of hands holding a small white square bowl with a red hexagonal logo containing text. A hand holds a small metal spoon inside the bowl, scooping white powder. An immersion blender with a white and gray handle stands upright on the right side of the frame against a white background.",
+    "caption_vi": "Đôi tay của một người đang cầm chiếc bát vuông màu trắng có logo đỏ và thìa nhỏ.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh này cho thấy đôi tay đang cầm một chiếc bát vuông màu trắng nhỏ có logo hình lục giác màu đỏ bên trong chứa chữ. Một tay cầm chiếc thìa kim loại nhỏ múc bột bên trong bát. Máy xay cầm tay màu trắng xám dựng đứng bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.808,
+          0.0,
+          1.0,
+          0.997
+        ],
+        "description": "an immersion blender with a white and gray body",
+        "description_vi": "một máy xay cầm tay thân màu trắng và xám",
+        "attributes": [
+          "white",
+          "gray",
+          "electric"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.43600000000000005,
+          0.35700000000000004,
+          0.8039999999999999,
+          0.891
+        ],
+        "description": "a small white square bowl with a red hexagonal logo",
+        "description_vi": "một chiếc bát vuông trắng nhỏ có logo hình lục giác đỏ",
+        "attributes": [
+          "white",
+          "square",
+          "small"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.305,
+          0.178,
+          0.5700000000000001,
+          0.442
+        ],
+        "description": "a small metal spoon resting inside a white square bowl",
+        "description_vi": "một chiếc thìa kim loại nhỏ đặt trong bát vuông trắng",
+        "attributes": [
+          "metal",
+          "small"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "spoon_0",
+        "predicate": "left_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "right_of",
+        "object_id": "spoon_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0084",
+    "visual_source_frame_id": "L26_V102_f0084",
+    "ocr_source_frame_id": "L26_V102_f0084",
+    "quality_flags": [],
+    "caption": "An immersion blender blends yellowish batter inside a tall clear container.",
+    "detailed_caption": "This close-up shot focuses on a tall transparent container filled with yellowish batter. An immersion blender is inserted into the container, mixing the ingredients. In the blurred background, a white bowl sits on a white surface.",
+    "caption_vi": "Máy xay cầm tay đang trộn hỗn hợp bột màu vàng nhạt bên trong một chiếc bình trong suốt cao.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh tập trung vào một chiếc bình nhựa trong suốt cao chứa hỗn hợp bột màu vàng nhạt. Máy xay cầm tay được cắm vào bình để trộn các nguyên liệu. Phía sau mờ ảo là một chiếc bát trắng đặt trên mặt phẳng trắng.",
+    "ocr_text": "INE MUỐI 1/4m",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.379,
+          0.0,
+          0.597,
+          0.642
+        ],
+        "description": "an immersion blender blending batter inside a container",
+        "description_vi": "một máy xay cầm tay đang xay hỗn hợp trong bình",
+        "attributes": [
+          "white",
+          "metallic"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.048,
+          0.0,
+          0.362,
+          0.246
+        ],
+        "description": "a white bowl placed in the blurred background",
+        "description_vi": "một chiếc bát trắng đặt ở hậu cảnh mờ",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "container_0",
+        "label": "container",
+        "bbox": [
+          0.292,
+          0.044,
+          0.696,
+          1.0
+        ],
+        "description": "a tall transparent plastic container filled with creamy batter",
+        "description_vi": "một chiếc bình nhựa trong suốt cao chứa đầy hỗn hợp bột kem",
+        "attributes": [
+          "tall",
+          "transparent",
+          "plastic"
+        ],
+        "action": "holding batter"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "left_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "right_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "overlapping",
+        "object_id": "container_0"
+      },
+      {
+        "subject_id": "container_0",
+        "predicate": "overlapping",
+        "object_id": "blender_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0085",
+    "visual_source_frame_id": "L26_V102_f0085",
+    "ocr_source_frame_id": "L26_V102_f0085",
+    "quality_flags": [],
+    "caption": "A person holds a white square bowl with red logo and a spoon next to an immersion blender.",
+    "detailed_caption": "This close-up shot shows hands holding a small white square bowl with a red logo containing text. A metal spoon rests inside the bowl, being used to scoop ingredients. An immersion blender with a white and gray handle stands on the right against a plain white background.",
+    "caption_vi": "Đôi tay giữ chiếc bát vuông màu trắng có chữ đỏ và thìa bên cạnh máy xay cầm tay.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy đôi tay đang giữ một chiếc bát vuông màu trắng nhỏ có logo màu đỏ chứa chữ. Một chiếc thìa kim loại nằm bên trong bát để múc nguyên liệu. Máy xay cầm tay thân trắng xám đứng ở bên phải trên nền trắng.",
+    "ocr_text": "TIÊU",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.807,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "an immersion blender with a white and gray body",
+        "description_vi": "một máy xay cầm tay thân màu trắng xám",
+        "attributes": [
+          "white",
+          "gray",
+          "electric"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.296,
+          0.31,
+          0.663,
+          0.836
+        ],
+        "description": "a small white square bowl with a red logo",
+        "description_vi": "một chiếc bát vuông trắng nhỏ có logo đỏ",
+        "attributes": [
+          "white",
+          "square",
+          "small"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.305,
+          0.181,
+          0.44400000000000006,
+          0.437
+        ],
+        "description": "a small metal spoon resting inside a white square bowl",
+        "description_vi": "một chiếc thìa kim loại nhỏ đặt trong bát vuông trắng",
+        "attributes": [
+          "metal",
+          "small"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "left_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "right_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "left_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "right_of",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0086",
+    "visual_source_frame_id": "L26_V102_f0086",
+    "ocr_source_frame_id": "L26_V102_f0086",
+    "quality_flags": [],
+    "caption": "An immersion blender mixes creamy batter in a tall transparent container.",
+    "detailed_caption": "This close-up shot shows an immersion blender operating inside a tall clear container filled with creamy yellowish batter. In the background, a white bowl sits on a white surface.",
+    "caption_vi": "Máy xay cầm tay đang trộn hỗn hợp kem trong một chiếc bình trong suốt cao.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy máy xay cầm tay đang hoạt động bên trong một chiếc bình trong suốt cao chứa đầy hỗn hợp bột màu vàng kem. Phía sau là một chiếc bát trắng đặt trên bề mặt trắng.",
+    "ocr_text": "TIÊU 1/4m",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.38,
+          0.0,
+          0.597,
+          0.642
+        ],
+        "description": "an immersion blender mixing batter inside a tall container",
+        "description_vi": "một máy xay cầm tay đang trộn bột trong bình cao",
+        "attributes": [
+          "white",
+          "metallic"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.048,
+          0.0,
+          0.387,
+          0.301
+        ],
+        "description": "a white bowl placed in the blurred background",
+        "description_vi": "một chiếc bát trắng đặt ở hậu cảnh mờ",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "container_0",
+        "label": "container",
+        "bbox": [
+          0.298,
+          0.098,
+          0.702,
+          1.0
+        ],
+        "description": "a tall transparent container filled with creamy batter",
+        "description_vi": "một chiếc bình trong suốt cao chứa đầy bột kem",
+        "attributes": [
+          "tall",
+          "transparent"
+        ],
+        "action": "holding batter"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blender_0",
+        "predicate": "overlapping",
+        "object_id": "container_0"
+      },
+      {
+        "subject_id": "container_0",
+        "predicate": "overlapping",
+        "object_id": "blender_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0087",
+    "visual_source_frame_id": "L26_V102_f0087",
+    "ocr_source_frame_id": "L26_V102_f0087",
+    "quality_flags": [],
+    "caption": "A female cook in a white uniform holding a bowl and blender stands beside a man in an apron.",
+    "detailed_caption": "This medium shot features a female cook on the left wearing a white chef uniform with red trim, holding a small bowl and an immersion blender near a tall glass container on the counter. On the right, a man in a white apron and t-shirt stands with clasped hands. The background consists of light-colored kitchen cabinets and a tiled wall.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng cầm bát và máy xay đứng cạnh người đàn ông đeo tạp dề.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy một nữ đầu bếp ở bên trái mặc đồng phục bếp trắng viền đỏ, đang cầm một chiếc bát nhỏ và máy xay cầm tay gần bình thủy tinh trên mặt bàn. Ở bên phải, một người đàn ông mặc tạp dề trắng đứng chắp tay. Phía sau là tủ bếp màu sáng và tường ốp gạch men.",
+    "ocr_text": "MON NGON mỗi ngày Ai AJINOMOTO Eat Well, Live Well. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.303,
+          0.53,
+          0.335,
+          0.802
+        ],
+        "description": "an immersion blender in a clear container on the white counter",
+        "description_vi": "một máy xay cầm tay trong bình trong suốt trên mặt bàn trắng",
+        "attributes": [
+          "white",
+          "clear"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "cabinet_0",
+        "label": "cabinet",
+        "bbox": [
+          0.154,
+          0.066,
+          0.8619999999999999,
+          0.403
+        ],
+        "description": "light-colored wooden kitchen cabinets on the wall",
+        "description_vi": "tủ bếp gỗ màu sáng trên tường",
+        "attributes": [
+          "wooden",
+          "light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.22999999999999998,
+          0.256,
+          0.42000000000000004,
+          0.7779999999999999
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "holding bowl"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.638,
+          0.198,
+          0.7929999999999999,
+          0.792
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.346,
+          0.763,
+          0.653,
+          0.832
+        ],
+        "description": "a black glass-top gas stove built into the countertop",
+        "description_vi": "một bếp gas mặt kính đen lắp âm trên mặt bàn",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0088",
+    "visual_source_frame_id": "L26_V102_f0087",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female cook in a white uniform holding a bowl and blender stands beside a man in an apron.",
+    "detailed_caption": "This medium shot features a female cook on the left wearing a white chef uniform with red trim, holding a small bowl and an immersion blender near a tall glass container on the counter. On the right, a man in a white apron and t-shirt stands with clasped hands. The background consists of light-colored kitchen cabinets and a tiled wall.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng cầm bát và máy xay đứng cạnh người đàn ông đeo tạp dề.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy một nữ đầu bếp ở bên trái mặc đồng phục bếp trắng viền đỏ, đang cầm một chiếc bát nhỏ và máy xay cầm tay gần bình thủy tinh trên mặt bàn. Ở bên phải, một người đàn ông mặc tạp dề trắng đứng chắp tay. Phía sau là tủ bếp màu sáng và tường ốp gạch men.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_0",
+        "label": "blender",
+        "bbox": [
+          0.303,
+          0.53,
+          0.335,
+          0.802
+        ],
+        "description": "an immersion blender in a clear container on the white counter",
+        "description_vi": "một máy xay cầm tay trong bình trong suốt trên mặt bàn trắng",
+        "attributes": [
+          "white",
+          "clear"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "cabinet_0",
+        "label": "cabinet",
+        "bbox": [
+          0.154,
+          0.066,
+          0.8619999999999999,
+          0.403
+        ],
+        "description": "light-colored wooden kitchen cabinets on the wall",
+        "description_vi": "tủ bếp gỗ màu sáng trên tường",
+        "attributes": [
+          "wooden",
+          "light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.22999999999999998,
+          0.256,
+          0.42000000000000004,
+          0.7779999999999999
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "holding bowl"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.638,
+          0.198,
+          0.7929999999999999,
+          0.792
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.346,
+          0.763,
+          0.653,
+          0.832
+        ],
+        "description": "a black glass-top gas stove built into the countertop",
+        "description_vi": "một bếp gas mặt kính đen lắp âm trên mặt bàn",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "blender_0",
+        "predicate": "left_of",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "right_of",
+        "object_id": "blender_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0089",
+    "visual_source_frame_id": "L26_V102_f0089",
+    "ocr_source_frame_id": "L26_V102_f0089",
+    "quality_flags": [],
+    "caption": "A person holds a pink package of pancake mix with pictures of pancakes.",
+    "detailed_caption": "This close-up shot shows a pair of hands holding a pink and white package of pancake mix. The package features illustrations of cooked pancakes and text in Vietnamese. In the blurred background, a wooden cutting board and glass jars sit on a kitchen counter.",
+    "caption_vi": "Một người đang cầm gói bột làm bánh màu hồng có hình bánh kếp.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy đôi tay đang cầm một gói bột làm bánh màu hồng và trắng. Trên bao bì có hình minh họa bánh kếp đã nấu chín và chữ bằng tiếng Việt. Phía sau mờ ảo là thớt gỗ và các hũ thủy tinh trên mặt bàn bếp.",
+    "ocr_text": "Bột Bánh Rán Pha Sẵn Xốp Mềm Thơm Ngon Chi Cần thêm NƯỚC",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.627,
+          0.0,
+          0.8869999999999999,
+          0.451
+        ],
+        "description": "a round wooden cutting board placed in the blurred background",
+        "description_vi": "một chiếc thớt gỗ tròn đặt ở hậu cảnh mờ",
+        "attributes": [
+          "wooden",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.318,
+          0.102,
+          0.653,
+          0.9149999999999999
+        ],
+        "description": "a pink and white package of pancake mix with illustrations of pancakes",
+        "description_vi": "một gói bột làm bánh màu hồng trắng có hình minh họa bánh kếp",
+        "attributes": [
+          "pink",
+          "white",
+          "packaged"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0090",
+    "visual_source_frame_id": "L26_V102_f0090",
+    "ocr_source_frame_id": "L26_V102_f0090",
+    "quality_flags": [],
+    "caption": "A female cook holding a small package stands next to a man in an apron in a kitchen.",
+    "detailed_caption": "This medium shot features a female cook on the left in a white chef uniform holding a small pink package, standing next to a man in a white apron and t-shirt on the right. The kitchen features white countertops, a gas stove, a sink, and wooden cabinets in the background.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng cầm gói nhỏ đứng cạnh người đàn ông đeo tạp dề trong bếp.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy nữ đầu bếp bên trái mặc đồng phục trắng cầm một gói nhỏ màu hồng, đứng cạnh người đàn ông mặc tạp dề trắng và áo thun bên phải. Căn bếp có mặt bàn trắng, bếp gas, bồn rửa và tủ gỗ phía sau.",
+    "ocr_text": "MON NGON mỗi ngày Ai AJINOMOTO Eat Well, Live Well. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabinet_0",
+        "label": "cabinet",
+        "bbox": [
+          0.154,
+          0.068,
+          0.8619999999999999,
+          0.403
+        ],
+        "description": "light-colored wooden kitchen cabinets on the wall",
+        "description_vi": "tủ bếp gỗ màu sáng trên tường",
+        "attributes": [
+          "wooden",
+          "light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.303,
+          0.44099999999999995,
+          0.355,
+          0.625
+        ],
+        "description": "a small pink package held by the cook",
+        "description_vi": "một gói nhỏ màu hồng do đầu bếp cầm",
+        "attributes": [
+          "pink",
+          "small",
+          "packaged"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.263,
+          0.253,
+          0.45099999999999996,
+          0.78
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "holding package"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.5519999999999999,
+          0.20299999999999999,
+          0.7190000000000001,
+          0.7859999999999999
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.346,
+          0.763,
+          0.653,
+          0.8310000000000001
+        ],
+        "description": "a black glass-top gas stove embedded in the white countertop",
+        "description_vi": "một bếp gas mặt kính đen lắp trên mặt bàn trắng",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0091",
+    "visual_source_frame_id": "L26_V102_f0090",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female cook holding a small package stands next to a man in an apron in a kitchen.",
+    "detailed_caption": "This medium shot features a female cook on the left in a white chef uniform holding a small pink package, standing next to a man in a white apron and t-shirt on the right. The kitchen features white countertops, a gas stove, a sink, and wooden cabinets in the background.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng cầm gói nhỏ đứng cạnh người đàn ông đeo tạp dề trong bếp.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy nữ đầu bếp bên trái mặc đồng phục trắng cầm một gói nhỏ màu hồng, đứng cạnh người đàn ông mặc tạp dề trắng và áo thun bên phải. Căn bếp có mặt bàn trắng, bếp gas, bồn rửa và tủ gỗ phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cabinet_0",
+        "label": "cabinet",
+        "bbox": [
+          0.154,
+          0.068,
+          0.8619999999999999,
+          0.403
+        ],
+        "description": "light-colored wooden kitchen cabinets on the wall",
+        "description_vi": "tủ bếp gỗ màu sáng trên tường",
+        "attributes": [
+          "wooden",
+          "light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.303,
+          0.44099999999999995,
+          0.355,
+          0.625
+        ],
+        "description": "a small pink package held by the cook",
+        "description_vi": "một gói nhỏ màu hồng do đầu bếp cầm",
+        "attributes": [
+          "pink",
+          "small",
+          "packaged"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.263,
+          0.253,
+          0.45099999999999996,
+          0.78
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "holding package"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.5519999999999999,
+          0.20299999999999999,
+          0.7190000000000001,
+          0.7859999999999999
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.346,
+          0.763,
+          0.653,
+          0.8310000000000001
+        ],
+        "description": "a black glass-top gas stove embedded in the white countertop",
+        "description_vi": "một bếp gas mặt kính đen lắp trên mặt bàn trắng",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "overlapping",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "overlapping",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "cabinet_0",
+        "predicate": "above",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "below",
+        "object_id": "cabinet_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0092",
+    "visual_source_frame_id": "L26_V102_f0092",
+    "ocr_source_frame_id": "L26_V102_f0092",
+    "quality_flags": [],
+    "caption": "A person pours pancake mix from a pink package into a white bowl.",
+    "detailed_caption": "This close-up shot shows hands tilting a pink and white package of pancake mix to pour powdery contents into a large white mixing bowl on a white countertop. Part of a gas stove is visible on the right.",
+    "caption_vi": "Một người đang đổ bột làm bánh từ gói hồng vào chiếc bát trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy đôi tay đang nghiêng gói bột bánh màu hồng trắng để đổ bột vào một chiếc bát trộn lớn màu trắng trên mặt bàn bếp trắng. Một phần bếp gas xuất hiện ở bên phải.",
+    "ocr_text": "Chi Cần thêm NƯỚC Bánh Rán Pha Sẵn Xốp Mềm Thơm Ngon Ai AJINOMOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.28900000000000003,
+          0.588,
+          0.722,
+          0.997
+        ],
+        "description": "a large white mixing bowl filled with poured pancake powder",
+        "description_vi": "một chiếc bát trộn trắng lớn chứa bột bánh vừa đổ",
+        "attributes": [
+          "white",
+          "round",
+          "large"
+        ],
+        "action": "holding powder"
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.248,
+          0.0,
+          0.729,
+          0.608
+        ],
+        "description": "a pink package of pancake mix being poured",
+        "description_vi": "một gói bột làm bánh màu hồng đang được đổ ra",
+        "attributes": [
+          "pink",
+          "packaged"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.642,
+          0.492,
+          1.0,
+          0.95
+        ],
+        "description": "a black glass-top gas stove on the right",
+        "description_vi": "một bếp gas mặt kính đen ở bên phải",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0093",
+    "visual_source_frame_id": "L26_V102_f0092",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person pours pancake mix from a pink package into a white bowl.",
+    "detailed_caption": "This close-up shot shows hands tilting a pink and white package of pancake mix to pour powdery contents into a large white mixing bowl on a white countertop. Part of a gas stove is visible on the right.",
+    "caption_vi": "Một người đang đổ bột làm bánh từ gói hồng vào chiếc bát trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy đôi tay đang nghiêng gói bột bánh màu hồng trắng để đổ bột vào một chiếc bát trộn lớn màu trắng trên mặt bàn bếp trắng. Một phần bếp gas xuất hiện ở bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.28900000000000003,
+          0.588,
+          0.722,
+          0.997
+        ],
+        "description": "a large white mixing bowl filled with poured pancake powder",
+        "description_vi": "một chiếc bát trộn trắng lớn chứa bột bánh vừa đổ",
+        "attributes": [
+          "white",
+          "round",
+          "large"
+        ],
+        "action": "holding powder"
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.248,
+          0.0,
+          0.729,
+          0.608
+        ],
+        "description": "a pink package of pancake mix being poured",
+        "description_vi": "một gói bột làm bánh màu hồng đang được đổ ra",
+        "attributes": [
+          "pink",
+          "packaged"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.642,
+          0.492,
+          1.0,
+          0.95
+        ],
+        "description": "a black glass-top gas stove on the right",
+        "description_vi": "một bếp gas mặt kính đen ở bên phải",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0094",
+    "visual_source_frame_id": "L26_V102_f0094",
+    "ocr_source_frame_id": "L26_V102_f0094",
+    "quality_flags": [],
+    "caption": "A person pours water from a clear measuring cup into a bowl of flour.",
+    "detailed_caption": "This close-up shot shows a hand holding a transparent measuring cup and pouring water into a large white bowl filled with flour. The flour is piled inside the white bowl on a plain white surface.",
+    "caption_vi": "Một người đang đổ nước từ cốc đo lường trong suốt vào tô bột.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một bàn tay đang cầm cốc đong trong suốt và đổ nước vào một tô lớn màu trắng chứa đầy bột. Bột được vun đống bên trong tô trắng đặt trên mặt phẳng trắng.",
+    "ocr_text": "250g 200g 150g",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.143,
+          0.123,
+          0.834,
+          0.9029999999999999
+        ],
+        "description": "a large white bowl containing flour",
+        "description_vi": "một chiếc bát trắng lớn chứa bột",
+        "attributes": [
+          "white",
+          "round",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "measuring_cup_0",
+        "label": "measuring cup",
+        "bbox": [
+          0.321,
+          0.025,
+          0.729,
+          1.0
+        ],
+        "description": "a transparent plastic measuring cup with measurement markings filled with water",
+        "description_vi": "một cốc đong nhựa trong suốt có vạch chia độ chứa đầy nước",
+        "attributes": [
+          "transparent",
+          "plastic",
+          "measured"
+        ],
+        "action": "pouring water"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "measuring_cup_0"
+      },
+      {
+        "subject_id": "measuring_cup_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0095",
+    "visual_source_frame_id": "L26_V102_f0094",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person pours water from a clear measuring cup into a bowl of flour.",
+    "detailed_caption": "This close-up shot shows a hand holding a transparent measuring cup and pouring water into a large white bowl filled with flour. The flour is piled inside the white bowl on a plain white surface.",
+    "caption_vi": "Một người đang đổ nước từ cốc đo lường trong suốt vào tô bột.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một bàn tay đang cầm cốc đong trong suốt và đổ nước vào một tô lớn màu trắng chứa đầy bột. Bột được vun đống bên trong tô trắng đặt trên mặt phẳng trắng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.143,
+          0.123,
+          0.834,
+          0.9029999999999999
+        ],
+        "description": "a large white bowl containing flour",
+        "description_vi": "một chiếc bát trắng lớn chứa bột",
+        "attributes": [
+          "white",
+          "round",
+          "large"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "measuring_cup_0",
+        "label": "measuring cup",
+        "bbox": [
+          0.321,
+          0.025,
+          0.729,
+          1.0
+        ],
+        "description": "a transparent plastic measuring cup with measurement markings filled with water",
+        "description_vi": "một cốc đong nhựa trong suốt có vạch chia độ chứa đầy nước",
+        "attributes": [
+          "transparent",
+          "plastic",
+          "measured"
+        ],
+        "action": "pouring water"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "measuring_cup_0"
+      },
+      {
+        "subject_id": "measuring_cup_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0096",
+    "visual_source_frame_id": "L26_V102_f0096",
+    "ocr_source_frame_id": "L26_V102_f0096",
+    "quality_flags": [],
+    "caption": "A gas stove is ignited on a white countertop with a patterned cloth in the background.",
+    "detailed_caption": "This close-up shot shows a black gas stove with a lit burner on a white countertop. In the background, a person holds a light-colored patterned cloth. A red and white label is adhered to the left side of the stove surface.",
+    "caption_vi": "Bếp gas được bật lửa trên mặt bàn trắng với tấm vải có hoa văn ở phía sau.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy bếp gas màu đen có bếp nấu đang cháy lửa trên mặt bàn trắng. Phía sau, một người cầm chiếc khăn màu sáng có hoa văn. Nhãn đỏ trắng dán ở góc trái mặt bếp.",
+    "ocr_text": "MÓN NGON mỗi ngày",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cloth_0",
+        "label": "cloth",
+        "bbox": [
+          0.372,
+          0.0,
+          0.9630000000000001,
+          0.809
+        ],
+        "description": "a light-colored fabric towel held in the background",
+        "description_vi": "một chiếc khăn vải màu sáng cầm ở phía sau",
+        "attributes": [
+          "fabric",
+          "light"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.331,
+          0.36300000000000004,
+          0.853,
+          0.997
+        ],
+        "description": "a black gas stove with burners on a white countertop",
+        "description_vi": "một bếp gas màu đen có các mâm chia lửa trên mặt bàn trắng",
+        "attributes": [
+          "black",
+          "glass",
+          "gas"
+        ],
+        "action": "burning"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cloth_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "cloth_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0097",
+    "visual_source_frame_id": "L26_V102_f0097",
+    "ocr_source_frame_id": "L26_V102_f0097",
+    "quality_flags": [],
+    "caption": "A square frying pan is placed on a gas stove by a person holding a cloth.",
+    "detailed_caption": "This medium close-up shot shows a rectangular non-stick frying pan with a black handle being placed onto a lit gas stove. A person holding a light-colored cloth stands behind the stove.",
+    "caption_vi": "Một chiếc chảo rán hình chữ nhật được đặt lên bếp gas bởi người cầm khăn.",
+    "detailed_caption_vi": "Cảnh cận cảnh trung này cho thấy một chiếc chảo chống dính hình chữ nhật có cán đen đang được đặt lên bếp gas đang cháy. Phía sau bếp có người cầm một tấm vải màu sáng.",
+    "ocr_text": "MON NGON mỗi ngày",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cloth_0",
+        "label": "cloth",
+        "bbox": [
+          0.33399999999999996,
+          0.0,
+          0.891,
+          0.5
+        ],
+        "description": "a light-colored fabric cloth held by a person",
+        "description_vi": "một tấm vải sáng màu được người cầm",
+        "attributes": [
+          "fabric",
+          "light"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.077,
+          0.295,
+          0.999,
+          0.9279999999999999
+        ],
+        "description": "a rectangular non-stick frying pan with a black handle",
+        "description_vi": "một chiếc chảo rán hình chữ nhật chống dính có cán đen",
+        "attributes": [
+          "rectangular",
+          "black",
+          "non-stick"
+        ],
+        "action": "being placed"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.313,
+          0.39699999999999996,
+          1.0,
+          0.997
+        ],
+        "description": "a black gas stove with burners underneath",
+        "description_vi": "một bếp gas màu đen có mâm lửa bên dưới",
+        "attributes": [
+          "black",
+          "gas"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cloth_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "cloth_0"
+      },
+      {
+        "subject_id": "cloth_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "cloth_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0098",
+    "visual_source_frame_id": "L26_V102_f0098",
+    "ocr_source_frame_id": "L26_V102_f0098",
+    "quality_flags": [],
+    "caption": "A female cook and a man stand in a kitchen with a frying pan on the stove.",
+    "detailed_caption": "This medium shot shows a female cook on the left in a white chef uniform standing near a gas stove with a frying pan heating up. On the right, a man in a white apron and t-shirt stands with clasped hands. The kitchen features white counters, wooden cabinets, and a tiled wall.",
+    "caption_vi": "Nữ đầu bếp và người đàn ông đứng trong nhà bếp với chảo trên bếp.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy nữ đầu bếp bên trái mặc đồng phục trắng đứng gần bếp gas có đặt chảo đang làm nóng. Ở bên phải, người đàn ông mặc tạp dề trắng và áo thun đứng chắp tay. Căn bếp có mặt bàn trắng, tủ gỗ và tường gạch.",
+    "ocr_text": "MON NGON mỗi ngày Ai AJINOMOTO Eat Well, Live Well. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.34700000000000003,
+          0.712,
+          0.653,
+          0.8310000000000001
+        ],
+        "description": "a rectangular frying pan placed on the lit gas stove",
+        "description_vi": "một chiếc chảo hình chữ nhật đặt trên bếp gas đang cháy",
+        "attributes": [
+          "rectangular",
+          "black"
+        ],
+        "action": "heating"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.274,
+          0.259,
+          0.45499999999999996,
+          0.7779999999999999
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.587,
+          0.206,
+          0.765,
+          0.788
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.346,
+          0.763,
+          0.653,
+          0.832
+        ],
+        "description": "a black glass-top gas stove with a lit burner",
+        "description_vi": "một bếp gas mặt kính đen có ngọn lửa cháy",
+        "attributes": [
+          "black",
+          "glass",
+          "gas"
+        ],
+        "action": "burning"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0099",
+    "visual_source_frame_id": "L26_V102_f0099",
+    "ocr_source_frame_id": "L26_V102_f0099",
+    "quality_flags": [],
+    "caption": "A rectangular frying pan sits on a gas stove near a folded cloth.",
+    "detailed_caption": "This close-up shot focuses on a dark rectangular frying pan resting on a black glass gas stove. Behind the pan, a folded light-colored textured cloth is placed on the white countertop. A hand is visible in the upper right corner.",
+    "caption_vi": "Một chiếc chảo hình chữ nhật đặt trên bếp gas cạnh chiếc khăn xếp gọn.",
+    "detailed_caption_vi": "Cảnh cận cảnh tập trung vào chiếc chảo rán hình chữ nhật màu tối đặt trên bếp gas kính đen. Phía sau chảo là một chiếc khăn vải sáng màu có hoa văn gấp gọn trên mặt bàn trắng. Một bàn tay xuất hiện ở góc trên bên phải.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cloth_0",
+        "label": "cloth",
+        "bbox": [
+          0.274,
+          0.025,
+          0.792,
+          0.492
+        ],
+        "description": "a folded light-colored textured fabric cloth",
+        "description_vi": "một chiếc khăn vải sáng màu có kết cấu được gấp gọn",
+        "attributes": [
+          "folded",
+          "fabric",
+          "light"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.274,
+          0.408,
+          1.0,
+          1.0
+        ],
+        "description": "a rectangular non-stick frying pan with a black handle",
+        "description_vi": "một chiếc chảo rán hình chữ nhật chống dính có tay cầm màu đen",
+        "attributes": [
+          "rectangular",
+          "black",
+          "non-stick"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.178,
+          0.5579999999999999,
+          0.96,
+          1.0
+        ],
+        "description": "a black glass-top gas stove",
+        "description_vi": "một bếp gas mặt kính đen",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cloth_0",
+        "predicate": "above",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "below",
+        "object_id": "cloth_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0100",
+    "visual_source_frame_id": "L26_V102_f0100",
+    "ocr_source_frame_id": "L26_V102_f0100",
+    "quality_flags": [],
+    "caption": "A person holds the handle of a rectangular frying pan placed on a folded cloth and stove.",
+    "detailed_caption": "This close-up shot shows a hand holding the black handle of a rectangular frying pan. The pan rests on a folded patterned cloth placed over a white countertop and a gas stove with a lit blue flame.",
+    "caption_vi": "Một người cầm tay cầm chiếc chảo hình chữ nhật đặt trên khăn gấp và bếp.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một bàn tay đang cầm tay cầm màu đen của chiếc chảo hình chữ nhật. Chảo được đặt trên một tấm khăn gấp có họa tiết trải trên mặt bàn trắng và bếp gas đang có ngọn lửa xanh cháy.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cloth_0",
+        "label": "cloth",
+        "bbox": [
+          0.038,
+          0.638,
+          0.999,
+          0.995
+        ],
+        "description": "a folded fabric cloth placed underneath the pan",
+        "description_vi": "một tấm khăn vải gấp đặt bên dưới chảo",
+        "attributes": [
+          "folded",
+          "fabric"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.072,
+          0.267,
+          0.9789999999999999,
+          0.93
+        ],
+        "description": "a rectangular frying pan with a black handle being held",
+        "description_vi": "một chiếc chảo hình chữ nhật có tay cầm đen đang được giữ",
+        "attributes": [
+          "rectangular",
+          "black"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.44400000000000006,
+          0.112,
+          1.0,
+          0.724
+        ],
+        "description": "a black gas stove with a lit blue flame",
+        "description_vi": "một bếp gas màu đen có ngọn lửa xanh đang cháy",
+        "attributes": [
+          "black",
+          "gas"
+        ],
+        "action": "burning"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cloth_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "cloth_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0101",
+    "visual_source_frame_id": "L26_V102_f0101",
+    "ocr_source_frame_id": "L26_V102_f0101",
+    "quality_flags": [],
+    "caption": "A person holds a rectangular frying pan near a lit gas stove burner.",
+    "detailed_caption": "This close-up shot shows a hand holding the handle of a rectangular frying pan that rests on a folded cloth over a white countertop, positioned next to a gas stove burner with a blue flame.",
+    "caption_vi": "Một người cầm chảo hình chữ nhật bên cạnh mâm chia lửa của bếp gas đang cháy.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một người đang cầm tay cầm của chiếc chảo hình chữ nhật đặt trên khăn gấp trải trên mặt bàn trắng, nằm cạnh mâm chia lửa của bếp gas có ngọn lửa xanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cloth_0",
+        "label": "cloth",
+        "bbox": [
+          0.023,
+          0.645,
+          0.984,
+          0.9979999999999999
+        ],
+        "description": "a folded fabric cloth placed under the pan",
+        "description_vi": "một tấm khăn vải gấp đặt dưới chảo",
+        "attributes": [
+          "folded",
+          "fabric"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.065,
+          0.267,
+          0.975,
+          0.9430000000000001
+        ],
+        "description": "a rectangular frying pan with a black handle",
+        "description_vi": "một chiếc chảo hình chữ nhật có tay cầm màu đen",
+        "attributes": [
+          "rectangular",
+          "black"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.43,
+          0.128,
+          1.0,
+          0.7260000000000001
+        ],
+        "description": "a black gas stove with a burning blue flame",
+        "description_vi": "một bếp gas màu đen có ngọn lửa xanh đang cháy",
+        "attributes": [
+          "black",
+          "gas"
+        ],
+        "action": "burning"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cloth_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "cloth_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0102",
+    "visual_source_frame_id": "L26_V102_f0102",
+    "ocr_source_frame_id": "L26_V102_f0102",
+    "quality_flags": [],
+    "caption": "A close-up view of a rectangular frying pan resting on a gas stove.",
+    "detailed_caption": "This close-up shot shows a dark rectangular frying pan with a black handle resting on top of a gas stove burner. Part of a white surface and clothing is visible in the background.",
+    "caption_vi": "Cận cảnh chiếc chảo hình chữ nhật đặt trên bếp gas.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một chiếc chảo rán hình chữ nhật màu tối có tay cầm màu đen đặt trên mâm chia lửa của bếp gas. Phía sau là bề mặt màu trắng và quần áo mờ ảo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.23900000000000002,
+          1.0,
+          0.997
+        ],
+        "description": "a dark rectangular frying pan with a black handle",
+        "description_vi": "một chiếc chảo rán hình chữ nhật màu tối có tay cầm đen",
+        "attributes": [
+          "dark",
+          "rectangular"
+        ],
+        "action": "resting"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.6799999999999999,
+          0.207,
+          1.0,
+          0.519
+        ],
+        "description": "a black gas stove burner underneath the pan",
+        "description_vi": "một mâm chia lửa bếp gas màu đen bên dưới chảo",
+        "attributes": [
+          "black",
+          "gas"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0103",
+    "visual_source_frame_id": "L26_V102_f0102",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up view of a rectangular frying pan resting on a gas stove.",
+    "detailed_caption": "This close-up shot shows a dark rectangular frying pan with a black handle resting on top of a gas stove burner. Part of a white surface and clothing is visible in the background.",
+    "caption_vi": "Cận cảnh chiếc chảo hình chữ nhật đặt trên bếp gas.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một chiếc chảo rán hình chữ nhật màu tối có tay cầm màu đen đặt trên mâm chia lửa của bếp gas. Phía sau là bề mặt màu trắng và quần áo mờ ảo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.23900000000000002,
+          1.0,
+          0.997
+        ],
+        "description": "a dark rectangular frying pan with a black handle",
+        "description_vi": "một chiếc chảo rán hình chữ nhật màu tối có tay cầm đen",
+        "attributes": [
+          "dark",
+          "rectangular"
+        ],
+        "action": "resting"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.6799999999999999,
+          0.207,
+          1.0,
+          0.519
+        ],
+        "description": "a black gas stove burner underneath the pan",
+        "description_vi": "một mâm chia lửa bếp gas màu đen bên dưới chảo",
+        "attributes": [
+          "black",
+          "gas"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0104",
+    "visual_source_frame_id": "L26_V102_f0104",
+    "ocr_source_frame_id": "L26_V102_f0104",
+    "quality_flags": [],
+    "caption": "Batter is poured from above into the center of a rectangular frying pan.",
+    "detailed_caption": "This close-up shot shows creamy yellow batter being poured in a steady stream into the center of a dark rectangular frying pan, forming a circular pool with concentric ripples. A textured fabric cloth is visible in the background.",
+    "caption_vi": "Hỗn hợp bột được rót từ trên xuống vào giữa chiếc chảo hình chữ nhật.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy dòng bột màu vàng kem đang được rót đều vào giữa chiếc chảo hình chữ nhật tối màu, tạo thành một vũng tròn có các gợn sóng đồng tâm. Phía sau là khăn vải có hoa văn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "batter_0",
+        "label": "batter",
+        "bbox": [
+          0.364,
+          0.0,
+          0.614,
+          0.777
+        ],
+        "description": "a circular pool of creamy yellow pancake batter being poured",
+        "description_vi": "một vũng tròn bột bánh kếp vàng kem đang được rót xuống",
+        "attributes": [
+          "creamy",
+          "yellow",
+          "liquid"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.02,
+          1.0,
+          1.0
+        ],
+        "description": "a dark rectangular frying pan",
+        "description_vi": "một chiếc chảo rán hình chữ nhật tối màu",
+        "attributes": [
+          "dark",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0105",
+    "visual_source_frame_id": "L26_V102_f0105",
+    "ocr_source_frame_id": "L26_V102_f0105",
+    "quality_flags": [],
+    "caption": "A round pancake cooks in the center of a dark rectangular frying pan.",
+    "detailed_caption": "This close-up shot shows a round, light-colored pancake batter cooking on the flat surface of a dark rectangular frying pan. Small bubbles are visible forming on the surface of the batter.",
+    "caption_vi": "Một chiếc bánh kếp tròn đang được nấu ở giữa chiếc chảo hình chữ nhật tối màu.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một miếng bột bánh hình tròn màu sáng đang nấu trên bề mặt phẳng của chiếc chảo hình chữ nhật tối màu. Những bong bóng nhỏ đang hình thành trên bề mặt lớp bột.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a dark rectangular frying pan",
+        "description_vi": "một chiếc chảo rán hình chữ nhật tối màu",
+        "attributes": [
+          "dark",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pancake_0",
+        "label": "pancake",
+        "bbox": [
+          0.0,
+          0.369,
+          0.7230000000000001,
+          0.8220000000000001
+        ],
+        "description": "a round, light-colored pancake cooking on a frying pan",
+        "description_vi": "một chiếc bánh kếp hình tròn màu sáng đang nấu trên chảo",
+        "attributes": [
+          "round",
+          "light",
+          "uncooked"
+        ],
+        "action": "cooking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0106",
+    "visual_source_frame_id": "L26_V102_f0105",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A round pancake cooks in the center of a dark rectangular frying pan.",
+    "detailed_caption": "This close-up shot shows a round, light-colored pancake batter cooking on the flat surface of a dark rectangular frying pan. Small bubbles are visible forming on the surface of the batter.",
+    "caption_vi": "Một chiếc bánh kếp tròn đang được nấu ở giữa chiếc chảo hình chữ nhật tối màu.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một miếng bột bánh hình tròn màu sáng đang nấu trên bề mặt phẳng của chiếc chảo hình chữ nhật tối màu. Những bong bóng nhỏ đang hình thành trên bề mặt lớp bột.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a dark rectangular frying pan",
+        "description_vi": "một chiếc chảo rán hình chữ nhật tối màu",
+        "attributes": [
+          "dark",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pancake_0",
+        "label": "pancake",
+        "bbox": [
+          0.0,
+          0.369,
+          0.7230000000000001,
+          0.8220000000000001
+        ],
+        "description": "a round, light-colored pancake cooking on a frying pan",
+        "description_vi": "một chiếc bánh kếp hình tròn màu sáng đang nấu trên chảo",
+        "attributes": [
+          "round",
+          "light",
+          "uncooked"
+        ],
+        "action": "cooking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0107",
+    "visual_source_frame_id": "L26_V102_f0107",
+    "ocr_source_frame_id": "L26_V102_f0107",
+    "quality_flags": [],
+    "caption": "A female cook flips a pancake in a pan on the stove next to a man in an apron.",
+    "detailed_caption": "This medium shot shows a female cook on the left in a white uniform using a spatula to flip a pancake in a pan on the gas stove. On the right, a man in an apron and white t-shirt stands watching. The kitchen features white countertops and light wooden cabinets.",
+    "caption_vi": "Nữ đầu bếp lật bánh trong chảo trên bếp bên cạnh người đàn ông đeo tạp dề.",
+    "detailed_caption_vi": "Cảnh trung này cho thấy nữ đầu bếp bên trái mặc đồng phục trắng đang dùng xẻng lật bánh trong chảo trên bếp gas. Ở bên phải, người đàn ông mặc tạp dề và áo thun trắng đứng quan sát. Căn bếp có mặt bàn trắng và tủ gỗ sáng màu.",
+    "ocr_text": "MON NGON mỗi ngày Ai AJINOMOTO Eat Well, Live Well. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.372,
+          0.706,
+          0.492,
+          0.793
+        ],
+        "description": "a rectangular frying pan placed on the gas stove burner",
+        "description_vi": "một chiếc chảo hình chữ nhật đặt trên mâm lửa bếp gas",
+        "attributes": [
+          "rectangular",
+          "black"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.298,
+          0.261,
+          0.48600000000000004,
+          0.779
+        ],
+        "description": "a female cook wearing a white chef uniform with red trim",
+        "description_vi": "một nữ đầu bếp mặc đồng phục trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform",
+          "female"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.617,
+          0.2,
+          0.7849999999999999,
+          0.7859999999999999
+        ],
+        "description": "a man wearing a white t-shirt and a white apron with red straps",
+        "description_vi": "một người đàn ông mặc áo thun trắng và tạp dề trắng quai đỏ",
+        "attributes": [
+          "white",
+          "apron",
+          "male"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.35,
+          0.763,
+          0.6559999999999999,
+          0.832
+        ],
+        "description": "a black glass-top gas stove with a pan on top",
+        "description_vi": "một bếp gas mặt kính đen có đặt chảo bên trên",
+        "attributes": [
+          "black",
+          "glass",
+          "gas"
+        ],
+        "action": "cooking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  }
+]
