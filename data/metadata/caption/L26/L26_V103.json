@@ -1,1 +1,6402 @@
-[]
+[
+  {
+    "frame_id": "L26_V103_f0001",
+    "visual_source_frame_id": "L26_V103_f0001",
+    "ocr_source_frame_id": "L26_V103_f0001",
+    "quality_flags": [],
+    "caption": "Red and orange chili peppers and small round tomatoes are arranged in a star shape on a white surface.",
+    "detailed_caption": "A top-down shot shows fresh vegetables arranged in a geometric star shape against a solid white background. Four small orange and red chili peppers point outward from the center, interspersed with small round red tomatoes.",
+    "caption_vi": "Cà chua bi và ớt được xếp thành hình ngôi sao trên nền trắng.",
+    "detailed_caption_vi": "Cảnh chụp từ trên xuống cho thấy các loại rau củ được xếp thành hình ngôi sao trên nền trắng trơn. Bốn quả ớt màu đỏ và cam chỉa ra ngoài từ trung tâm, xen kẽ với những quả cà chua bi tròn nhỏ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chili_pepper_0",
+        "label": "chili pepper",
+        "bbox": [
+          0.331,
+          0.517,
+          0.458,
+          0.6719999999999999
+        ],
+        "description": "Orange chili pepper pointing left",
+        "description_vi": "Ớt cam chỉa sang trái",
+        "attributes": [
+          "orange",
+          "spicy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_1",
+        "label": "chili pepper",
+        "bbox": [
+          0.509,
+          0.637,
+          0.5690000000000001,
+          0.8520000000000001
+        ],
+        "description": "Red chili pepper pointing down",
+        "description_vi": "Ớt đỏ chỉa xuống dưới",
+        "attributes": [
+          "red",
+          "spicy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_2",
+        "label": "chili pepper",
+        "bbox": [
+          0.545,
+          0.159,
+          0.621,
+          0.381
+        ],
+        "description": "Red chili pepper pointing upward",
+        "description_vi": "Ớt đỏ chỉa lên trên",
+        "attributes": [
+          "red",
+          "spicy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_3",
+        "label": "chili pepper",
+        "bbox": [
+          0.629,
+          0.492,
+          0.758,
+          0.625
+        ],
+        "description": "Orange chili pepper pointing right",
+        "description_vi": "Ớt cam chỉa sang phải",
+        "attributes": [
+          "orange",
+          "spicy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tomato_0",
+        "label": "tomato",
+        "bbox": [
+          0.479,
+          0.313,
+          0.544,
+          0.431
+        ],
+        "description": "Small round red tomato",
+        "description_vi": "Cà chua bi tròn đỏ",
+        "attributes": [
+          "red",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chili_pepper_0",
+        "predicate": "left_of",
+        "object_id": "chili_pepper_1"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "right_of",
+        "object_id": "chili_pepper_0"
+      },
+      {
+        "subject_id": "chili_pepper_0",
+        "predicate": "left_of",
+        "object_id": "chili_pepper_3"
+      },
+      {
+        "subject_id": "chili_pepper_3",
+        "predicate": "right_of",
+        "object_id": "chili_pepper_0"
+      },
+      {
+        "subject_id": "chili_pepper_2",
+        "predicate": "above",
+        "object_id": "chili_pepper_1"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "below",
+        "object_id": "chili_pepper_2"
+      },
+      {
+        "subject_id": "tomato_0",
+        "predicate": "above",
+        "object_id": "chili_pepper_1"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "below",
+        "object_id": "tomato_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0002",
+    "visual_source_frame_id": "L26_V103_f0002",
+    "ocr_source_frame_id": "L26_V103_f0002",
+    "quality_flags": [],
+    "caption": "Pieces of broccoli, cauliflower florets, and carrots are cooking in a black pan.",
+    "detailed_caption": "A close-up shot shows a black frying pan filled with cooking vegetables. Broccoli florets, white cauliflower pieces, and small cylindrical carrot slices are mixed together in the pan.",
+    "caption_vi": "Súp lơ xanh, súp lơ trắng và cà rốt đang được nấu trong chảo đen.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một chiếc chảo rán màu đen đầy rau củ đang nấu. Các bông súp lơ xanh, miếng súp lơ trắng và lát cà rốt hình trụ nhỏ được trộn lẫn với nhau trong chảo.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "broccoli_0",
+        "label": "broccoli",
+        "bbox": [
+          0.24300000000000002,
+          0.504,
+          0.381,
+          0.712
+        ],
+        "description": "Green broccoli floret",
+        "description_vi": "Bông súp lơ xanh",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "carrot_0",
+        "label": "carrot",
+        "bbox": [
+          0.372,
+          0.788,
+          0.5389999999999999,
+          0.896
+        ],
+        "description": "Small cylindrical carrot piece",
+        "description_vi": "Miếng cà rốt nhỏ",
+        "attributes": [
+          "orange"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cauliflower_0",
+        "label": "cauliflower",
+        "bbox": [
+          0.49800000000000005,
+          0.318,
+          0.633,
+          0.529
+        ],
+        "description": "White cauliflower floret",
+        "description_vi": "Bông súp lơ trắng",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.0,
+          0.5740000000000001,
+          0.275
+        ],
+        "description": "Second black pan with french fries in the background",
+        "description_vi": "Chảo đen thứ hai đựng khoai tây chiên ở nền sau",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pan_1",
+        "label": "pan",
+        "bbox": [
+          0.10200000000000001,
+          0.16,
+          1.0,
+          1.0
+        ],
+        "description": "Black frying pan with vegetables",
+        "description_vi": "Chảo rán đen chứa rau củ",
+        "attributes": [
+          "black",
+          "cooking"
+        ],
+        "action": "cooking"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "above",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "below",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "overlapping",
+        "object_id": "pan_1"
+      },
+      {
+        "subject_id": "pan_1",
+        "predicate": "overlapping",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "cauliflower_0",
+        "predicate": "above",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "carrot_0",
+        "predicate": "below",
+        "object_id": "cauliflower_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "above",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "carrot_0",
+        "predicate": "below",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "carrot_0",
+        "predicate": "overlapping",
+        "object_id": "pan_1"
+      },
+      {
+        "subject_id": "pan_1",
+        "predicate": "overlapping",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "above",
+        "object_id": "cauliflower_0"
+      },
+      {
+        "subject_id": "cauliflower_0",
+        "predicate": "below",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "cauliflower_0",
+        "predicate": "overlapping",
+        "object_id": "pan_1"
+      },
+      {
+        "subject_id": "pan_1",
+        "predicate": "overlapping",
+        "object_id": "cauliflower_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "pan_1"
+      },
+      {
+        "subject_id": "pan_1",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0003",
+    "visual_source_frame_id": "L26_V103_f0003",
+    "ocr_source_frame_id": "L26_V103_f0003",
+    "quality_flags": [],
+    "caption": "A blurred shot shows fine white particles scattering in the air over a surface.",
+    "detailed_caption": "A close-up action shot shows a cloud of fine white particles or powder dispersing against a muted background. The motion creates a dynamic spray effect across the frame.",
+    "caption_vi": "Cảnh mờ hiển thị các hạt màu trắng mịn đang bay lơ lửng trong không khí.",
+    "detailed_caption_vi": "Cảnh hành động cận cảnh cho thấy một đám mây hạt trắng mịn hoặc bột đang phân tán trên nền tối. Chuyển động tạo ra hiệu ứng phun động lực khắp khung hình.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "particles_0",
+        "label": "particles",
+        "bbox": [
+          0.0,
+          0.197,
+          0.974,
+          0.8989999999999999
+        ],
+        "description": "White powder particles scattering in air",
+        "description_vi": "Hạt bột trắng tung bay trong không khí",
+        "attributes": [
+          "white",
+          "powdery"
+        ],
+        "action": "scattering"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0004",
+    "visual_source_frame_id": "L26_V103_f0004",
+    "ocr_source_frame_id": "L26_V103_f0004",
+    "quality_flags": [],
+    "caption": "A close-up shot shows white grains falling through a sieve onto a surface.",
+    "detailed_caption": "A close-up view captures small white grains or flour sifting downward from a wire mesh strainer above. The background is softly blurred with warm tones.",
+    "caption_vi": "Cảnh cận cảnh cho thấy các hạt trắng rơi qua rây xuống bề mặt.",
+    "detailed_caption_vi": "Góc nhìn cận cảnh ghi lại những hạt màu trắng nhỏ hoặc bột đang rây xuống từ lưới lọc phía trên. Phông nền mờ ảo với tông màu ấm.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "grains_0",
+        "label": "grains",
+        "bbox": [
+          0.172,
+          0.163,
+          0.836,
+          0.999
+        ],
+        "description": "White particles falling through air",
+        "description_vi": "Các hạt trắng rơi qua không khí",
+        "attributes": [
+          "white"
+        ],
+        "action": "falling"
+      },
+      {
+        "object_id": "sieve_0",
+        "label": "sieve",
+        "bbox": [
+          0.0,
+          0.0,
+          0.646,
+          0.154
+        ],
+        "description": "Metal mesh strainer at top",
+        "description_vi": "Dụng cụ lọc lưới kim loại ở phía trên",
+        "attributes": [
+          "metallic",
+          "mesh"
+        ],
+        "action": "sifting"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0005",
+    "visual_source_frame_id": "L26_V103_f0005",
+    "ocr_source_frame_id": "L26_V103_f0005",
+    "quality_flags": [],
+    "caption": "White rice grains fall through the air against a dark background.",
+    "detailed_caption": "A close-up action shot captures white rice grains suspended and falling mid-air. The surrounding background is dark with out-of-focus bokeh lights.",
+    "caption_vi": "Hạt gạo trắng rơi trong không khí trên nền tối.",
+    "detailed_caption_vi": "Cảnh cận cảnh ghi lại những hạt gạo trắng đang rơi lơ lửng giữa không trung. Phông nền tối với hiệu ứng ánh sáng bokeh nhòe.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "rice_grains_0",
+        "label": "rice grains",
+        "bbox": [
+          0.271,
+          0.013,
+          0.786,
+          0.792
+        ],
+        "description": "White rice grains falling mid-air",
+        "description_vi": "Hạt gạo trắng rơi giữa không trung",
+        "attributes": [
+          "white",
+          "elongated"
+        ],
+        "action": "falling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0006",
+    "visual_source_frame_id": "L26_V103_f0006",
+    "ocr_source_frame_id": "L26_V103_f0006",
+    "quality_flags": [],
+    "caption": "A dense shower of white rice grains fills the frame.",
+    "detailed_caption": "A close-up, high-speed action shot shows a dense flurry of white rice grains falling across the screen. The grains are scattered dynamically from top to bottom.",
+    "caption_vi": "Một trận mưa hạt gạo trắng dày đặc lấp đầy khung hình.",
+    "detailed_caption_vi": "Cảnh quay hành động tốc độ cao, cận cảnh cho thấy một trận mưa hạt gạo trắng rơi khắp màn hình. Các hạt được phân tán năng động từ trên xuống dưới.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "rice_grains_0",
+        "label": "rice grains",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "Dense shower of white rice grains",
+        "description_vi": "Mưa hạt gạo trắng dày đặc",
+        "attributes": [
+          "white"
+        ],
+        "action": "falling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0007",
+    "visual_source_frame_id": "L26_V103_f0007",
+    "ocr_source_frame_id": "L26_V103_f0007",
+    "quality_flags": [],
+    "caption": "White rice grains disperse rapidly in a dynamic motion shot.",
+    "detailed_caption": "A close-up action shot displays white rice grains scattering outwards in all directions. The motion creates a blurred, dynamic effect across the entire frame.",
+    "caption_vi": "Hạt gạo trắng phân tán nhanh chóng trong khung hình động.",
+    "detailed_caption_vi": "Cảnh quay hành động cận cảnh hiển thị các hạt gạo trắng đang phân tán ra mọi hướng. Chuyển động tạo ra hiệu ứng nhòe, động trên toàn bộ khung hình.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "rice_grains_0",
+        "label": "rice grains",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "White rice grains scattering",
+        "description_vi": "Hạt gạo trắng đang phân tán",
+        "attributes": [
+          "white"
+        ],
+        "action": "scattering"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0008",
+    "visual_source_frame_id": "L26_V103_f0008",
+    "ocr_source_frame_id": "L26_V103_f0008",
+    "quality_flags": [],
+    "caption": "A person's hand sprinkles black peppercorns over a salmon fillet on a wooden board.",
+    "detailed_caption": "A medium close-up shot shows a hand dropping black peppercorns onto a raw orange salmon fillet resting on a wooden cutting board. Additional ingredients including small tomatoes, salt crystals, and fresh herbs are arranged on the left and background.",
+    "caption_vi": "Tay người rắc hạt tiêu đen lên miếng cá hồi trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một bàn tay đang thả hạt tiêu đen lên miếng phi lê cá hồi màu cam tươi đặt trên thớt gỗ. Các nguyên liệu khác bao gồm cà chua bi, muối hạt và thảo mộc tươi được bày ở bên trái và phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.0,
+          0.27,
+          1.0,
+          1.0
+        ],
+        "description": "Long wooden cutting board",
+        "description_vi": "Thớt gỗ dài",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.372,
+          0.0,
+          0.689,
+          0.5579999999999999
+        ],
+        "description": "Human hand dropping peppercorns",
+        "description_vi": "Bàn tay con người đang thả hạt tiêu",
+        "attributes": [
+          "skin"
+        ],
+        "action": "sprinkling"
+      },
+      {
+        "object_id": "peppercorns_0",
+        "label": "peppercorns",
+        "bbox": [
+          0.5740000000000001,
+          0.381,
+          0.6759999999999999,
+          0.554
+        ],
+        "description": "Black peppercorns falling",
+        "description_vi": "Hạt tiêu đen đang rơi",
+        "attributes": [
+          "black",
+          "round"
+        ],
+        "action": "falling"
+      },
+      {
+        "object_id": "salmon_0",
+        "label": "salmon",
+        "bbox": [
+          0.422,
+          0.55,
+          0.796,
+          0.865
+        ],
+        "description": "Orange raw salmon fillet",
+        "description_vi": "Miếng phi lê cá hồi tươi màu cam",
+        "attributes": [
+          "orange",
+          "raw"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tomato_0",
+        "label": "tomato",
+        "bbox": [
+          0.296,
+          0.316,
+          0.355,
+          0.38699999999999996
+        ],
+        "description": "Small red cherry tomatoes on the board",
+        "description_vi": "Cà chua bi đỏ nhỏ trên thớt",
+        "attributes": [
+          "red",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "peppercorns_0"
+      },
+      {
+        "subject_id": "peppercorns_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "salmon_0"
+      },
+      {
+        "subject_id": "salmon_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "tomato_0"
+      },
+      {
+        "subject_id": "tomato_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "peppercorns_0"
+      },
+      {
+        "subject_id": "peppercorns_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "tomato_0",
+        "predicate": "left_of",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "right_of",
+        "object_id": "tomato_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0009",
+    "visual_source_frame_id": "L26_V103_f0009",
+    "ocr_source_frame_id": "L26_V103_f0009",
+    "quality_flags": [],
+    "caption": "A faded, top-down view shows various vegetables and spices arranged on a grey surface.",
+    "detailed_caption": "A top-down shot displays a collection of ingredients including a yellow bell pepper, garlic, pumpkin, eggplant, and green beans arranged on a grey background. The image has a soft, semi-transparent overlay effect.",
+    "caption_vi": "Góc nhìn từ trên xuống mờ ảo hiển thị các loại rau củ và gia vị được sắp xếp trên nền xám.",
+    "detailed_caption_vi": "Cảnh chụp từ trên xuống cho thấy một tập hợp các nguyên liệu bao gồm ớt chuông vàng, tỏi, bí ngô, cà tím và đậu ve được sắp xếp trên nền xám. Hình ảnh có hiệu ứng lớp phủ mờ nhẹ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bell_pepper_0",
+        "label": "bell pepper",
+        "bbox": [
+          0.399,
+          0.022,
+          0.554,
+          0.28099999999999997
+        ],
+        "description": "Yellow bell pepper at the top center",
+        "description_vi": "Ớt chuông vàng ở trên cùng giữa",
+        "attributes": [
+          "yellow"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "eggplant_0",
+        "label": "eggplant",
+        "bbox": [
+          0.6980000000000001,
+          0.675,
+          0.9109999999999999,
+          0.9979999999999999
+        ],
+        "description": "Purple eggplant on the lower right",
+        "description_vi": "Cà tím ở góc dưới bên phải",
+        "attributes": [
+          "purple"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "garlic_0",
+        "label": "garlic",
+        "bbox": [
+          0.017,
+          0.419,
+          0.129,
+          0.613
+        ],
+        "description": "White garlic bulb on the left",
+        "description_vi": "Củ tỏi trắng ở bên trái",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pumpkin_0",
+        "label": "pumpkin",
+        "bbox": [
+          0.020999999999999998,
+          0.676,
+          0.24100000000000002,
+          0.999
+        ],
+        "description": "Orange pumpkin on the lower left",
+        "description_vi": "Bí ngô cam ở góc dưới bên trái",
+        "attributes": [
+          "orange",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pumpkin_0",
+        "predicate": "left_of",
+        "object_id": "eggplant_0"
+      },
+      {
+        "subject_id": "eggplant_0",
+        "predicate": "right_of",
+        "object_id": "pumpkin_0"
+      },
+      {
+        "subject_id": "garlic_0",
+        "predicate": "above",
+        "object_id": "pumpkin_0"
+      },
+      {
+        "subject_id": "pumpkin_0",
+        "predicate": "below",
+        "object_id": "garlic_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0010",
+    "visual_source_frame_id": "L26_V103_f0010",
+    "ocr_source_frame_id": "L26_V103_f0010",
+    "quality_flags": [],
+    "caption": "Broccoli florets, peppers, and tomatoes are arranged symmetrically on a white background.",
+    "detailed_caption": "A top-down view shows small broccoli florets, colorful peppers, and tomatoes arranged in a geometric pattern on a white surface. The ingredients are evenly spaced around the center.",
+    "caption_vi": "Bông súp lơ, ớt và cà chua được sắp xếp đối xứng trên nền trắng.",
+    "detailed_caption_vi": "Góc nhìn từ trên xuống cho thấy các bông súp lơ nhỏ, ớt nhiều màu sắc và cà chua được sắp xếp theo hình học trên nền trắng. Các nguyên liệu được bố trí đều đặn xung quanh trung tâm.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "broccoli_0",
+        "label": "broccoli",
+        "bbox": [
+          0.388,
+          0.23399999999999999,
+          0.45899999999999996,
+          0.375
+        ],
+        "description": "Green broccoli floret at top left",
+        "description_vi": "Bông súp lơ xanh ở trên cùng bên trái",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "broccoli_1",
+        "label": "broccoli",
+        "bbox": [
+          0.5730000000000001,
+          0.21500000000000002,
+          0.6599999999999999,
+          0.358
+        ],
+        "description": "Green broccoli floret at top right",
+        "description_vi": "Bông súp lơ xanh ở trên cùng bên phải",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_0",
+        "label": "chili pepper",
+        "bbox": [
+          0.24700000000000003,
+          0.273,
+          0.377,
+          0.436
+        ],
+        "description": "Orange bell pepper on the left",
+        "description_vi": "Ớt chuông cam ở bên trái",
+        "attributes": [
+          "orange"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_1",
+        "label": "chili pepper",
+        "bbox": [
+          0.497,
+          0.053,
+          0.558,
+          0.273
+        ],
+        "description": "Red chili pepper pointing up",
+        "description_vi": "Ớt đỏ chỉa lên",
+        "attributes": [
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tomato_0",
+        "label": "tomato",
+        "bbox": [
+          0.44800000000000006,
+          0.36300000000000004,
+          0.51,
+          0.467
+        ],
+        "description": "Small red tomato",
+        "description_vi": "Cà chua đỏ nhỏ",
+        "attributes": [
+          "red",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "left_of",
+        "object_id": "broccoli_1"
+      },
+      {
+        "subject_id": "broccoli_1",
+        "predicate": "right_of",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "chili_pepper_0",
+        "predicate": "left_of",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "right_of",
+        "object_id": "chili_pepper_0"
+      },
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "left_of",
+        "object_id": "chili_pepper_1"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "right_of",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "chili_pepper_0",
+        "predicate": "left_of",
+        "object_id": "broccoli_1"
+      },
+      {
+        "subject_id": "broccoli_1",
+        "predicate": "right_of",
+        "object_id": "chili_pepper_0"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "left_of",
+        "object_id": "broccoli_1"
+      },
+      {
+        "subject_id": "broccoli_1",
+        "predicate": "right_of",
+        "object_id": "chili_pepper_1"
+      },
+      {
+        "subject_id": "chili_pepper_0",
+        "predicate": "left_of",
+        "object_id": "tomato_0"
+      },
+      {
+        "subject_id": "tomato_0",
+        "predicate": "right_of",
+        "object_id": "chili_pepper_0"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "above",
+        "object_id": "tomato_0"
+      },
+      {
+        "subject_id": "tomato_0",
+        "predicate": "below",
+        "object_id": "chili_pepper_1"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0011",
+    "visual_source_frame_id": "L26_V103_f0011",
+    "ocr_source_frame_id": "L26_V103_f0011",
+    "quality_flags": [],
+    "caption": "A solid plain white background fills the entire frame.",
+    "detailed_caption": "A plain, minimalist white background fills the frame with subtle lighting variations. No distinct objects or subjects are visible.",
+    "caption_vi": "Nền trắng trơn lấp đầy toàn bộ khung hình.",
+    "detailed_caption_vi": "Nền trắng đơn giản, tối giản lấp đầy khung hình với sự thay đổi ánh sáng tinh tế. Không có đối tượng hoặc chủ thể rõ ràng nào hiển thị.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0012",
+    "visual_source_frame_id": "L26_V103_f0012",
+    "ocr_source_frame_id": "L26_V103_f0012",
+    "quality_flags": [],
+    "caption": "Various vegetables are arranged in a heart shape on a white surface.",
+    "detailed_caption": "A top-down shot shows broccoli florets, peppers, and tomatoes arranged carefully to form a heart shape against a solid white background. The colorful produce creates a distinct outline.",
+    "caption_vi": "Nhiều loại rau củ được sắp xếp thành hình trái tim trên nền trắng.",
+    "detailed_caption_vi": "Cảnh chụp từ trên xuống cho thấy các bông súp lơ xanh, ớt và cà chua được sắp xếp cẩn thận tạo thành hình trái tim trên nền trắng trơn. Các nông sản đầy màu sắc tạo nên đường viền rõ nét.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "broccoli_0",
+        "label": "broccoli",
+        "bbox": [
+          0.317,
+          0.141,
+          0.392,
+          0.255
+        ],
+        "description": "Green broccoli floret at top left",
+        "description_vi": "Bông súp lơ xanh ở trên cùng bên trái",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_0",
+        "label": "chili pepper",
+        "bbox": [
+          0.26,
+          0.461,
+          0.34199999999999997,
+          0.634
+        ],
+        "description": "Orange chili pepper on the mid-left",
+        "description_vi": "Ớt cam ở giữa bên trái",
+        "attributes": [
+          "orange"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_1",
+        "label": "chili pepper",
+        "bbox": [
+          0.404,
+          0.136,
+          0.511,
+          0.303
+        ],
+        "description": "Red chili pepper near the top",
+        "description_vi": "Ớt đỏ gần phía trên",
+        "attributes": [
+          "red"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chili_pepper_2",
+        "label": "chili pepper",
+        "bbox": [
+          0.503,
+          0.118,
+          0.5900000000000001,
+          0.246
+        ],
+        "description": "Orange pepper at top right",
+        "description_vi": "Ớt cam ở trên cùng bên phải",
+        "attributes": [
+          "orange"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "tomato_0",
+        "label": "tomato",
+        "bbox": [
+          0.24700000000000003,
+          0.272,
+          0.313,
+          0.385
+        ],
+        "description": "Round red tomato on the left",
+        "description_vi": "Cà chua tròn đỏ ở bên trái",
+        "attributes": [
+          "red",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "above",
+        "object_id": "chili_pepper_0"
+      },
+      {
+        "subject_id": "chili_pepper_0",
+        "predicate": "below",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "left_of",
+        "object_id": "chili_pepper_1"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "right_of",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "broccoli_0",
+        "predicate": "left_of",
+        "object_id": "chili_pepper_2"
+      },
+      {
+        "subject_id": "chili_pepper_2",
+        "predicate": "right_of",
+        "object_id": "broccoli_0"
+      },
+      {
+        "subject_id": "tomato_0",
+        "predicate": "above",
+        "object_id": "chili_pepper_0"
+      },
+      {
+        "subject_id": "chili_pepper_0",
+        "predicate": "below",
+        "object_id": "tomato_0"
+      },
+      {
+        "subject_id": "tomato_0",
+        "predicate": "left_of",
+        "object_id": "chili_pepper_1"
+      },
+      {
+        "subject_id": "chili_pepper_1",
+        "predicate": "right_of",
+        "object_id": "tomato_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0013",
+    "visual_source_frame_id": "L26_V103_f0013",
+    "ocr_source_frame_id": "L26_V103_f0013",
+    "quality_flags": [],
+    "caption": "Sliced meat rolls in sauce are served on a rectangular plate with garnish and dipping sauce.",
+    "detailed_caption": "A high-angle shot shows a rectangular grey plate holding sliced meat and vegetable rolls in a dark brown sauce, garnished with shredded scallions and chili strips. Next to the plate are wooden chopsticks on a white rest, a small bowl of dark dipping sauce, and fresh lettuce in the background.",
+    "caption_vi": "Món thịt cuộn sốt cắt lát được bày trên đĩa chữ nhật kèm gia vị và nước chấm.",
+    "detailed_caption_vi": "Cảnh chụp góc cao cho thấy một chiếc đĩa chữ nhật màu xám đựng các khoanh thịt cuộn rau củ trong nước sốt nâu đậm, được trang trí bằng hành hoa thái sợi và ớt. Bên cạnh đĩa có đôi đũa gỗ trên gác đũa trắng, một chén nước chấm nhỏ và rau xà lách tươi ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.842,
+          0.43400000000000005,
+          0.9960000000000001,
+          0.75
+        ],
+        "description": "Small white bowl with dark dipping sauce",
+        "description_vi": "Chén trắng nhỏ đựng nước chấm tối màu",
+        "attributes": [
+          "white",
+          "small"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chopsticks_0",
+        "label": "chopsticks",
+        "bbox": [
+          0.393,
+          0.676,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "Wooden chopsticks on white rest",
+        "description_vi": "Đũa gỗ trên gác đũa trắng",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lettuce_0",
+        "label": "lettuce",
+        "bbox": [
+          0.663,
+          0.0,
+          0.991,
+          0.313
+        ],
+        "description": "Fresh green lettuce leaves in background",
+        "description_vi": "Lá xà lách xanh tươi ở phông nền",
+        "attributes": [
+          "green",
+          "leafy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "meat_roll_0",
+        "label": "meat roll",
+        "bbox": [
+          0.271,
+          0.263,
+          0.608,
+          0.8220000000000001
+        ],
+        "description": "Sliced meat and vegetable rolls",
+        "description_vi": "Thịt và rau củ cuộn cắt lát",
+        "attributes": [
+          "sliced",
+          "cooked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.16399999999999998,
+          0.134,
+          0.734,
+          0.922
+        ],
+        "description": "Grey rectangular plate with meat rolls and sauce",
+        "description_vi": "Đĩa chữ nhật màu xám đựng thịt cuộn và sốt",
+        "attributes": [
+          "grey",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "left_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "right_of",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "above",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "below",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "meat_roll_0",
+        "predicate": "left_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "right_of",
+        "object_id": "meat_roll_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "left_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "right_of",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "above",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "below",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "meat_roll_0"
+      },
+      {
+        "subject_id": "meat_roll_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "meat_roll_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "meat_roll_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0014",
+    "visual_source_frame_id": "L26_V103_f0013",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Sliced meat rolls in sauce are served on a rectangular plate with garnish and dipping sauce.",
+    "detailed_caption": "A high-angle shot shows a rectangular grey plate holding sliced meat and vegetable rolls in a dark brown sauce, garnished with shredded scallions and chili strips. Next to the plate are wooden chopsticks on a white rest, a small bowl of dark dipping sauce, and fresh lettuce in the background.",
+    "caption_vi": "Món thịt cuộn sốt cắt lát được bày trên đĩa chữ nhật kèm gia vị và nước chấm.",
+    "detailed_caption_vi": "Cảnh chụp góc cao cho thấy một chiếc đĩa chữ nhật màu xám đựng các khoanh thịt cuộn rau củ trong nước sốt nâu đậm, được trang trí bằng hành hoa thái sợi và ớt. Bên cạnh đĩa có đôi đũa gỗ trên gác đũa trắng, một chén nước chấm nhỏ và rau xà lách tươi ở phía sau.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.842,
+          0.43400000000000005,
+          0.9960000000000001,
+          0.75
+        ],
+        "description": "Small white bowl with dark dipping sauce",
+        "description_vi": "Chén trắng nhỏ đựng nước chấm tối màu",
+        "attributes": [
+          "white",
+          "small"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chopsticks_0",
+        "label": "chopsticks",
+        "bbox": [
+          0.393,
+          0.676,
+          0.7929999999999999,
+          1.0
+        ],
+        "description": "Wooden chopsticks on white rest",
+        "description_vi": "Đũa gỗ trên gác đũa trắng",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lettuce_0",
+        "label": "lettuce",
+        "bbox": [
+          0.663,
+          0.0,
+          0.991,
+          0.313
+        ],
+        "description": "Fresh green lettuce leaves in background",
+        "description_vi": "Lá xà lách xanh tươi ở phông nền",
+        "attributes": [
+          "green",
+          "leafy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "meat_roll_0",
+        "label": "meat roll",
+        "bbox": [
+          0.271,
+          0.263,
+          0.608,
+          0.8220000000000001
+        ],
+        "description": "Sliced meat and vegetable rolls",
+        "description_vi": "Thịt và rau củ cuộn cắt lát",
+        "attributes": [
+          "sliced",
+          "cooked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.16399999999999998,
+          0.134,
+          0.734,
+          0.922
+        ],
+        "description": "Grey rectangular plate with meat rolls and sauce",
+        "description_vi": "Đĩa chữ nhật màu xám đựng thịt cuộn và sốt",
+        "attributes": [
+          "grey",
+          "rectangular"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "left_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "right_of",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "above",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "below",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "meat_roll_0",
+        "predicate": "left_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "right_of",
+        "object_id": "meat_roll_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "left_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "right_of",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "above",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "below",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "meat_roll_0"
+      },
+      {
+        "subject_id": "meat_roll_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "meat_roll_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "meat_roll_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0015",
+    "visual_source_frame_id": "L26_V103_f0015",
+    "ocr_source_frame_id": "L26_V103_f0015",
+    "quality_flags": [],
+    "caption": "Raw pork loin, sliced mushrooms, shredded carrots, shallots, and lettuce are arranged on a wooden board.",
+    "detailed_caption": "A close-up shot shows raw pork loin on a wooden cutting board, accompanied by dark sliced wood ear mushrooms, shredded carrots in a small white dish, purple shallots, and fresh green lettuce.",
+    "caption_vi": "Thịt thăn heo sống, nấm cắt lát, cà rốt bào sợi, hành tím và xà lách được bày trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy thịt thăn heo sống trên thớt gỗ, đi kèm với nấm mèo đen cắt lát, cà rốt bào sợi trong chén trắng nhỏ, hành tím và rau xà lách xanh tươi.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "carrot_0",
+        "label": "carrot",
+        "bbox": [
+          0.8470000000000001,
+          0.44699999999999995,
+          0.999,
+          0.695
+        ],
+        "description": "Shredded carrots in white bowl",
+        "description_vi": "Cà rốt bào sợi trong chén trắng",
+        "attributes": [
+          "orange",
+          "shredded"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "lettuce_0",
+        "label": "lettuce",
+        "bbox": [
+          0.0,
+          0.55,
+          0.477,
+          1.0
+        ],
+        "description": "Fresh green lettuce leaves",
+        "description_vi": "Lá xà lách xanh tươi",
+        "attributes": [
+          "green",
+          "leafy"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "mushrooms_0",
+        "label": "mushrooms",
+        "bbox": [
+          0.532,
+          0.10800000000000001,
+          0.999,
+          0.693
+        ],
+        "description": "Sliced dark mushrooms",
+        "description_vi": "Nấm tối màu thái lát",
+        "attributes": [
+          "dark",
+          "sliced"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.032,
+          0.126,
+          0.659,
+          0.686
+        ],
+        "description": "Large block of raw pink pork loin",
+        "description_vi": "Khối thịt thăn heo sống màu hồng lớn",
+        "attributes": [
+          "pink",
+          "raw"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shallot_0",
+        "label": "shallot",
+        "bbox": [
+          0.362,
+          0.7430000000000001,
+          0.577,
+          0.9979999999999999
+        ],
+        "description": "Whole purple shallots",
+        "description_vi": "Hành tím nguyên củ",
+        "attributes": [
+          "purple",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "left_of",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "carrot_0",
+        "predicate": "right_of",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "carrot_0",
+        "predicate": "overlapping",
+        "object_id": "mushrooms_0"
+      },
+      {
+        "subject_id": "mushrooms_0",
+        "predicate": "overlapping",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "left_of",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "carrot_0",
+        "predicate": "right_of",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "left_of",
+        "object_id": "mushrooms_0"
+      },
+      {
+        "subject_id": "mushrooms_0",
+        "predicate": "right_of",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "lettuce_0",
+        "predicate": "overlapping",
+        "object_id": "shallot_0"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "overlapping",
+        "object_id": "lettuce_0"
+      },
+      {
+        "subject_id": "mushrooms_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "mushrooms_0"
+      },
+      {
+        "subject_id": "mushrooms_0",
+        "predicate": "above",
+        "object_id": "shallot_0"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "below",
+        "object_id": "mushrooms_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "above",
+        "object_id": "shallot_0"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "below",
+        "object_id": "pork_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0016",
+    "visual_source_frame_id": "L26_V103_f0016",
+    "ocr_source_frame_id": "L26_V103_f0016",
+    "quality_flags": [],
+    "caption": "A ball of minced meat, shredded carrots, shallots, and mushrooms are arranged on a wooden surface.",
+    "detailed_caption": "A close-up shot shows a mound of pink minced meat on a small plate, accompanied by shredded carrots in a white bowl, a purple shallot, and sliced mushrooms in the blurred background.",
+    "caption_vi": "Một viên thịt băm, cà rốt bào sợi, hành tím và nấm được đặt trên mặt bàn gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh cho thấy một đĩa thịt băm màu hồng trên đĩa nhỏ, đi kèm với cà rốt bào sợi trong chén trắng, một củ hành tím và nấm thái lát ở phông nền mờ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "carrot_0",
+        "label": "carrot",
+        "bbox": [
+          0.238,
+          0.43400000000000005,
+          0.722,
+          0.6869999999999999
+        ],
+        "description": "Shredded carrots in white bowl",
+        "description_vi": "Cà rốt bào sợi trong chén trắng",
+        "attributes": [
+          "orange",
+          "shredded"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "minced_meat_0",
+        "label": "minced meat",
+        "bbox": [
+          0.5549999999999999,
+          0.537,
+          0.977,
+          0.921
+        ],
+        "description": "Dome of pink minced meat on small dish",
+        "description_vi": "Vòm thịt heo xay màu hồng trên đĩa nhỏ",
+        "attributes": [
+          "pink",
+          "minced"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shallot_0",
+        "label": "shallot",
+        "bbox": [
+          0.05,
+          0.753,
+          0.242,
+          0.999
+        ],
+        "description": "Purple shallot in the foreground",
+        "description_vi": "Củ hành tím ở tiền cảnh",
+        "attributes": [
+          "purple"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "carrot_0",
+        "predicate": "overlapping",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "overlapping",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "left_of",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "right_of",
+        "object_id": "shallot_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0017",
+    "visual_source_frame_id": "L26_V103_f0017",
+    "ocr_source_frame_id": "L26_V103_f0017",
+    "quality_flags": [],
+    "caption": "Raw ingredients including minced meat, carrots, shallots, pork, and lettuce are arranged on a table.",
+    "detailed_caption": "A medium close-up shot displays food preparation ingredients on a wooden tabletop, including a portion of minced meat on a small plate, shredded carrots, pork loin, shallots, mushrooms, and large green lettuce leaves.",
+    "caption_vi": "Các nguyên liệu sống gồm thịt băm, cà rốt, hành tím, thịt heo và xà lách được bày trên bàn.",
+    "detailed_caption_vi": "Cảnh trung cận cho thấy các nguyên liệu chuẩn bị món ăn trên mặt bàn gỗ, bao gồm một phần thịt băm trên đĩa nhỏ, cà rốt bào sợi, thịt thăn heo, hành tím, nấm và lá xà lách xanh lớn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "carrot_0",
+        "label": "carrot",
+        "bbox": [
+          0.5,
+          0.55,
+          0.866,
+          0.742
+        ],
+        "description": "Shredded carrots in white dish",
+        "description_vi": "Cà rốt bào sợi trong đĩa trắng",
+        "attributes": [
+          "orange",
+          "shredded"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "minced_meat_0",
+        "label": "minced meat",
+        "bbox": [
+          0.7,
+          0.638,
+          0.999,
+          0.9390000000000001
+        ],
+        "description": "Mound of pink minced meat on plate",
+        "description_vi": "Khối thịt băm màu hồng trên đĩa",
+        "attributes": [
+          "pink",
+          "minced"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shallot_0",
+        "label": "shallot",
+        "bbox": [
+          0.126,
+          0.784,
+          0.29300000000000004,
+          0.999
+        ],
+        "description": "Two purple shallots on wooden surface",
+        "description_vi": "Hai củ hành tím trên mặt bàn gỗ",
+        "attributes": [
+          "purple",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shallot_1",
+        "label": "shallot",
+        "bbox": [
+          0.355,
+          0.792,
+          0.503,
+          0.9810000000000001
+        ],
+        "description": "Smaller purple shallot",
+        "description_vi": "Củ hành tím nhỏ hơn",
+        "attributes": [
+          "purple"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "carrot_0",
+        "predicate": "overlapping",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "overlapping",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "left_of",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "right_of",
+        "object_id": "shallot_0"
+      },
+      {
+        "subject_id": "shallot_1",
+        "predicate": "left_of",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "right_of",
+        "object_id": "shallot_1"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "left_of",
+        "object_id": "shallot_1"
+      },
+      {
+        "subject_id": "shallot_1",
+        "predicate": "right_of",
+        "object_id": "shallot_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0018",
+    "visual_source_frame_id": "L26_V103_f0017",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Raw ingredients including minced meat, carrots, shallots, pork, and lettuce are arranged on a table.",
+    "detailed_caption": "A medium close-up shot displays food preparation ingredients on a wooden tabletop, including a portion of minced meat on a small plate, shredded carrots, pork loin, shallots, mushrooms, and large green lettuce leaves.",
+    "caption_vi": "Các nguyên liệu sống gồm thịt băm, cà rốt, hành tím, thịt heo và xà lách được bày trên bàn.",
+    "detailed_caption_vi": "Cảnh trung cận cho thấy các nguyên liệu chuẩn bị món ăn trên mặt bàn gỗ, bao gồm một phần thịt băm trên đĩa nhỏ, cà rốt bào sợi, thịt thăn heo, hành tím, nấm và lá xà lách xanh lớn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "carrot_0",
+        "label": "carrot",
+        "bbox": [
+          0.5,
+          0.55,
+          0.866,
+          0.742
+        ],
+        "description": "Shredded carrots in white dish",
+        "description_vi": "Cà rốt bào sợi trong đĩa trắng",
+        "attributes": [
+          "orange",
+          "shredded"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "minced_meat_0",
+        "label": "minced meat",
+        "bbox": [
+          0.7,
+          0.638,
+          0.999,
+          0.9390000000000001
+        ],
+        "description": "Mound of pink minced meat on plate",
+        "description_vi": "Khối thịt băm màu hồng trên đĩa",
+        "attributes": [
+          "pink",
+          "minced"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shallot_0",
+        "label": "shallot",
+        "bbox": [
+          0.126,
+          0.784,
+          0.29300000000000004,
+          0.999
+        ],
+        "description": "Two purple shallots on wooden surface",
+        "description_vi": "Hai củ hành tím trên mặt bàn gỗ",
+        "attributes": [
+          "purple",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "shallot_1",
+        "label": "shallot",
+        "bbox": [
+          0.355,
+          0.792,
+          0.503,
+          0.9810000000000001
+        ],
+        "description": "Smaller purple shallot",
+        "description_vi": "Củ hành tím nhỏ hơn",
+        "attributes": [
+          "purple"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "carrot_0",
+        "predicate": "overlapping",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "overlapping",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "left_of",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "right_of",
+        "object_id": "shallot_0"
+      },
+      {
+        "subject_id": "shallot_1",
+        "predicate": "left_of",
+        "object_id": "minced_meat_0"
+      },
+      {
+        "subject_id": "minced_meat_0",
+        "predicate": "right_of",
+        "object_id": "shallot_1"
+      },
+      {
+        "subject_id": "shallot_0",
+        "predicate": "left_of",
+        "object_id": "shallot_1"
+      },
+      {
+        "subject_id": "shallot_1",
+        "predicate": "right_of",
+        "object_id": "shallot_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0019",
+    "visual_source_frame_id": "L26_V103_f0019",
+    "ocr_source_frame_id": "L26_V103_f0019",
+    "quality_flags": [],
+    "caption": "Various ingredients including green mustard leaves, shredded carrots, pork, minced meat, an egg, mushrooms, and a bottle of soy sauce are arranged on a wooden table.",
+    "detailed_caption": "A top-down view shows ingredients neatly arranged on a wooden table: a stack of green mustard leaves on the left, a dish of shredded carrots, a bowl of minced meat, a block of pork loin with mushrooms, an egg, shallots, and a large bottle of Phu Si soy sauce in the center.",
+    "caption_vi": "Nhiều nguyên liệu gồm lá cải xanh, cà rốt bào, thịt heo, thịt băm, trứng, nấm và chai nước tương được bày trên bàn gỗ.",
+    "detailed_caption_vi": "Góc nhìn từ trên xuống cho thấy các nguyên liệu được sắp xếp gọn gàng trên bàn gỗ: chồng lá cải xanh bên trái, đĩa cà rốt bào sợi, tô thịt băm, khối thịt thăn heo kèm nấm, một quả trứng, hành tím và một chai nước tương Phú Sĩ lớn ở trung tâm.",
+    "ocr_text": "Aj nước tương Phú Si LÊN MEN NHẬT BẢN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "carrot_0",
+        "label": "carrot",
+        "bbox": [
+          0.29900000000000004,
+          0.126,
+          0.43499999999999994,
+          0.27799999999999997
+        ],
+        "description": "Shredded carrots in rectangular dish",
+        "description_vi": "Cà rốt bào sợi trong đĩa chữ nhật",
+        "attributes": [
+          "orange",
+          "shredded"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "egg_0",
+        "label": "egg",
+        "bbox": [
+          0.186,
+          0.693,
+          0.279,
+          0.8390000000000001
+        ],
+        "description": "Brown chicken egg",
+        "description_vi": "Trứng gà màu nâu",
+        "attributes": [
+          "brown",
+          "oval"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.271,
+          0.323,
+          0.43899999999999995,
+          0.825
+        ],
+        "description": "Block of raw pork loin with sliced mushrooms",
+        "description_vi": "Khối thịt thăn heo sống kèm nấm cắt lát",
+        "attributes": [
+          "pink",
+          "raw"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "soy_sauce_bottle_0",
+        "label": "soy sauce bottle",
+        "bbox": [
+          0.44699999999999995,
+          0.304,
+          0.567,
+          0.931
+        ],
+        "description": "Large bottle of Phu Si soy sauce with yellow cap",
+        "description_vi": "Chai nước tương Phú Sĩ lớn có nắp vàng",
+        "attributes": [
+          "dark",
+          "bottled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "vegetable_0",
+        "label": "vegetable",
+        "bbox": [
+          0.013000000000000001,
+          0.071,
+          0.313,
+          0.825
+        ],
+        "description": "Stack of green mustard leaves",
+        "description_vi": "Chồng lá cải xanh",
+        "attributes": [
+          "green",
+          "leafy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "carrot_0",
+        "predicate": "above",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "below",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "egg_0",
+        "predicate": "left_of",
+        "object_id": "soy_sauce_bottle_0"
+      },
+      {
+        "subject_id": "soy_sauce_bottle_0",
+        "predicate": "right_of",
+        "object_id": "egg_0"
+      },
+      {
+        "subject_id": "egg_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "egg_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "left_of",
+        "object_id": "soy_sauce_bottle_0"
+      },
+      {
+        "subject_id": "soy_sauce_bottle_0",
+        "predicate": "right_of",
+        "object_id": "vegetable_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0020",
+    "visual_source_frame_id": "L26_V103_f0020",
+    "ocr_source_frame_id": "L26_V103_f0020",
+    "quality_flags": [],
+    "caption": "Recipe ingredients and a recipe text list are displayed on a wooden table.",
+    "detailed_caption": "A top-down view shows recipe ingredients on the left and a red-bordered ingredients list card on the right against a wooden tabletop. The ingredients include green mustard leaves, shredded carrots, pork, minced meat, an egg, mushrooms, and a bottle of soy sauce.",
+    "caption_vi": "Các nguyên liệu nấu ăn và danh sách nguyên liệu dạng văn bản được hiển thị trên bàn gỗ.",
+    "detailed_caption_vi": "Góc nhìn từ trên xuống cho thấy các nguyên liệu nấu ăn bên trái và bảng danh sách nguyên liệu viền đỏ bên phải trên mặt bàn gỗ. Các nguyên liệu bao gồm lá cải xanh, cà rốt bào sợi, thịt heo, thịt băm, trứng, nấm và chai nước tương.",
+    "ocr_text": "NGUYÊN LIỆU . Thăn heo 300g . Giò sống 70g . Trứng gà 1 quả . Cà rốt 1 củ . Nấm mèo 5g . Nấm hương 10g . Lá cải xanh 10 lá . Hành tím băm 2m . Hành lá . Thuốc muối (baking soda) . Bột ngọt . Nước tương Quét mã QR để xem Công thức chi tiết",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "carrot_0",
+        "label": "carrot",
+        "bbox": [
+          0.29900000000000004,
+          0.126,
+          0.43499999999999994,
+          0.27799999999999997
+        ],
+        "description": "Shredded carrots in small white dish",
+        "description_vi": "Cà rốt bào sợi trong đĩa trắng nhỏ",
+        "attributes": [
+          "orange",
+          "shredded"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.271,
+          0.323,
+          0.43899999999999995,
+          0.825
+        ],
+        "description": "Block of raw pork loin with sliced mushrooms",
+        "description_vi": "Khối thịt thăn heo sống kèm nấm",
+        "attributes": [
+          "pink",
+          "raw"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "recipe_card_0",
+        "label": "recipe card",
+        "bbox": [
+          0.63,
+          0.15,
+          0.9460000000000001,
+          0.846
+        ],
+        "description": "Red-bordered card listing recipe ingredients in Vietnamese",
+        "description_vi": "Thẻ viền đỏ liệt kê danh sách nguyên liệu bằng tiếng Việt",
+        "attributes": [
+          "red",
+          "text"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "soy_sauce_bottle_0",
+        "label": "soy sauce bottle",
+        "bbox": [
+          0.446,
+          0.304,
+          0.567,
+          0.931
+        ],
+        "description": "Bottle of Phu Si soy sauce with yellow cap",
+        "description_vi": "Chai nước tương Phú Sĩ nắp vàng",
+        "attributes": [
+          "dark",
+          "bottled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "vegetable_0",
+        "label": "vegetable",
+        "bbox": [
+          0.013000000000000001,
+          0.071,
+          0.313,
+          0.8140000000000001
+        ],
+        "description": "Stack of green mustard leaves",
+        "description_vi": "Chồng lá cải xanh",
+        "attributes": [
+          "green",
+          "leafy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "carrot_0",
+        "predicate": "above",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "below",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "carrot_0",
+        "predicate": "left_of",
+        "object_id": "recipe_card_0"
+      },
+      {
+        "subject_id": "recipe_card_0",
+        "predicate": "right_of",
+        "object_id": "carrot_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "left_of",
+        "object_id": "recipe_card_0"
+      },
+      {
+        "subject_id": "recipe_card_0",
+        "predicate": "right_of",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "soy_sauce_bottle_0",
+        "predicate": "left_of",
+        "object_id": "recipe_card_0"
+      },
+      {
+        "subject_id": "recipe_card_0",
+        "predicate": "right_of",
+        "object_id": "soy_sauce_bottle_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "left_of",
+        "object_id": "recipe_card_0"
+      },
+      {
+        "subject_id": "recipe_card_0",
+        "predicate": "right_of",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "left_of",
+        "object_id": "soy_sauce_bottle_0"
+      },
+      {
+        "subject_id": "soy_sauce_bottle_0",
+        "predicate": "right_of",
+        "object_id": "vegetable_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0021",
+    "visual_source_frame_id": "L26_V103_f0021",
+    "ocr_source_frame_id": "L26_V103_f0021",
+    "quality_flags": [],
+    "caption": "A male chef in a white chef coat and a female host in an apron stand behind a kitchen island in a studio.",
+    "detailed_caption": "A medium shot shows a male chef in a white double-breasted chef jacket on the left and a female host in a white apron over a green top on the right, both standing behind a white kitchen island in a brightly lit kitchen studio. Various kitchen utensils, bottles, and a plate of greens are on the counter.",
+    "caption_vi": "Nam đầu bếp mặc áo trắng và nữ MC mặc tạp dề đứng sau bàn bếp trong studio.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một nam đầu bếp mặc áo khoác trắng bên trái và nữ MC mặc tạp dề trắng bên trên áo xanh lá ở bên phải, cả hai cùng đứng phía sau đảo bếp màu trắng trong một studio bếp sáng sủa. Các dụng cụ nhà bếp, chai lọ và đĩa rau xanh được đặt trên mặt bàn.",
+    "ocr_text": "MÒN NGON moingay Aj AJINOMOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bottle_0",
+        "label": "bottle",
+        "bbox": [
+          0.22200000000000003,
+          0.587,
+          0.24500000000000002,
+          0.712
+        ],
+        "description": "Bottle of soy sauce on counter",
+        "description_vi": "Chai nước tương trên quầy bếp",
+        "attributes": [
+          "dark",
+          "bottled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "kitchen_island_0",
+        "label": "kitchen island",
+        "bbox": [
+          0.067,
+          0.623,
+          1.0,
+          1.0
+        ],
+        "description": "Large white kitchen island with stovetop",
+        "description_vi": "Đảo bếp trắng lớn có bếp nấu",
+        "attributes": [
+          "white",
+          "countertop"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.34500000000000003,
+          0.222,
+          0.497,
+          0.642
+        ],
+        "description": "Male chef wearing white chef coat",
+        "description_vi": "Nam đầu bếp mặc áo khoác đầu bếp trắng",
+        "attributes": [
+          "white",
+          "chef coat"
+        ],
+        "action": "talking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.603,
+          0.21500000000000002,
+          0.739,
+          0.642
+        ],
+        "description": "Female host wearing white apron over green top",
+        "description_vi": "Nữ MC mặc tạp dề trắng bên ngoài áo xanh",
+        "attributes": [
+          "white apron",
+          "green top"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "vegetable_0",
+        "label": "vegetable",
+        "bbox": [
+          0.252,
+          0.638,
+          0.355,
+          0.693
+        ],
+        "description": "Plate of green vegetables on counter",
+        "description_vi": "Đĩa rau xanh trên quầy bếp",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bottle_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0022",
+    "visual_source_frame_id": "L26_V103_f0021",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male chef in a white chef coat and a female host in an apron stand behind a kitchen island in a studio.",
+    "detailed_caption": "A medium shot shows a male chef in a white double-breasted chef jacket on the left and a female host in a white apron over a green top on the right, both standing behind a white kitchen island in a brightly lit kitchen studio. Various kitchen utensils, bottles, and a plate of greens are on the counter.",
+    "caption_vi": "Nam đầu bếp mặc áo trắng và nữ MC mặc tạp dề đứng sau bàn bếp trong studio.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một nam đầu bếp mặc áo khoác trắng bên trái và nữ MC mặc tạp dề trắng bên trên áo xanh lá ở bên phải, cả hai cùng đứng phía sau đảo bếp màu trắng trong một studio bếp sáng sủa. Các dụng cụ nhà bếp, chai lọ và đĩa rau xanh được đặt trên mặt bàn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bottle_0",
+        "label": "bottle",
+        "bbox": [
+          0.22200000000000003,
+          0.587,
+          0.24500000000000002,
+          0.712
+        ],
+        "description": "Bottle of soy sauce on counter",
+        "description_vi": "Chai nước tương trên quầy bếp",
+        "attributes": [
+          "dark",
+          "bottled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "kitchen_island_0",
+        "label": "kitchen island",
+        "bbox": [
+          0.067,
+          0.623,
+          1.0,
+          1.0
+        ],
+        "description": "Large white kitchen island with stovetop",
+        "description_vi": "Đảo bếp trắng lớn có bếp nấu",
+        "attributes": [
+          "white",
+          "countertop"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.34500000000000003,
+          0.222,
+          0.497,
+          0.642
+        ],
+        "description": "Male chef wearing white chef coat",
+        "description_vi": "Nam đầu bếp mặc áo khoác đầu bếp trắng",
+        "attributes": [
+          "white",
+          "chef coat"
+        ],
+        "action": "talking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.603,
+          0.21500000000000002,
+          0.739,
+          0.642
+        ],
+        "description": "Female host wearing white apron over green top",
+        "description_vi": "Nữ MC mặc tạp dề trắng bên ngoài áo xanh",
+        "attributes": [
+          "white apron",
+          "green top"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "vegetable_0",
+        "label": "vegetable",
+        "bbox": [
+          0.252,
+          0.638,
+          0.355,
+          0.693
+        ],
+        "description": "Plate of green vegetables on counter",
+        "description_vi": "Đĩa rau xanh trên quầy bếp",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bottle_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0023",
+    "visual_source_frame_id": "L26_V103_f0023",
+    "ocr_source_frame_id": "L26_V103_f0023",
+    "quality_flags": [],
+    "caption": "A male chef and a female host stand behind a kitchen island with ingredients on the counter.",
+    "detailed_caption": "A medium shot shows a male chef in a white uniform gesturing with his hands on the left, and a female host in a white apron standing on the right behind a white kitchen counter. Ingredients, utensils, and a stovetop are visible on the island.",
+    "caption_vi": "Nam đầu bếp và nữ MC đứng phía sau đảo bếp có các nguyên liệu trên quầy.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một nam đầu bếp mặc đồng phục trắng đang cử chỉ tay ở bên trái, và nữ MC mặc tạp dề trắng đứng ở bên phải phía sau quầy bếp trắng. Các nguyên liệu, dụng cụ và bếp nấu hiển thị trên đảo bếp.",
+    "ocr_text": "MÒN NGON moingay Aj AJINOMOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bottle_0",
+        "label": "bottle",
+        "bbox": [
+          0.16299999999999998,
+          0.673,
+          0.191,
+          0.8350000000000001
+        ],
+        "description": "Bottle of sauce on the counter",
+        "description_vi": "Chai sốt trên quầy bếp",
+        "attributes": [
+          "dark",
+          "bottled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "kitchen_island_0",
+        "label": "kitchen island",
+        "bbox": [
+          0.0,
+          0.7220000000000001,
+          1.0,
+          1.0
+        ],
+        "description": "White kitchen counter with built-in stove",
+        "description_vi": "Quầy bếp trắng có bếp tích hợp",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.35,
+          0.253,
+          0.513,
+          0.7430000000000001
+        ],
+        "description": "Male chef wearing white uniform",
+        "description_vi": "Nam đầu bếp mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "talking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.621,
+          0.24100000000000002,
+          0.788,
+          0.7479999999999999
+        ],
+        "description": "Female host wearing white apron",
+        "description_vi": "Nữ MC mặc tạp dề trắng",
+        "attributes": [
+          "white apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "vegetable_0",
+        "label": "vegetable",
+        "bbox": [
+          0.20299999999999999,
+          0.7439999999999999,
+          0.319,
+          0.81
+        ],
+        "description": "Plate of greens on the counter",
+        "description_vi": "Đĩa rau trên quầy bếp",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bottle_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0024",
+    "visual_source_frame_id": "L26_V103_f0023",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male chef and a female host stand behind a kitchen island with ingredients on the counter.",
+    "detailed_caption": "A medium shot shows a male chef in a white uniform gesturing with his hands on the left, and a female host in a white apron standing on the right behind a white kitchen counter. Ingredients, utensils, and a stovetop are visible on the island.",
+    "caption_vi": "Nam đầu bếp và nữ MC đứng phía sau đảo bếp có các nguyên liệu trên quầy.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một nam đầu bếp mặc đồng phục trắng đang cử chỉ tay ở bên trái, và nữ MC mặc tạp dề trắng đứng ở bên phải phía sau quầy bếp trắng. Các nguyên liệu, dụng cụ và bếp nấu hiển thị trên đảo bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bottle_0",
+        "label": "bottle",
+        "bbox": [
+          0.16299999999999998,
+          0.673,
+          0.191,
+          0.8350000000000001
+        ],
+        "description": "Bottle of sauce on the counter",
+        "description_vi": "Chai sốt trên quầy bếp",
+        "attributes": [
+          "dark",
+          "bottled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "kitchen_island_0",
+        "label": "kitchen island",
+        "bbox": [
+          0.0,
+          0.7220000000000001,
+          1.0,
+          1.0
+        ],
+        "description": "White kitchen counter with built-in stove",
+        "description_vi": "Quầy bếp trắng có bếp tích hợp",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.35,
+          0.253,
+          0.513,
+          0.7430000000000001
+        ],
+        "description": "Male chef wearing white uniform",
+        "description_vi": "Nam đầu bếp mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "talking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.621,
+          0.24100000000000002,
+          0.788,
+          0.7479999999999999
+        ],
+        "description": "Female host wearing white apron",
+        "description_vi": "Nữ MC mặc tạp dề trắng",
+        "attributes": [
+          "white apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "vegetable_0",
+        "label": "vegetable",
+        "bbox": [
+          0.20299999999999999,
+          0.7439999999999999,
+          0.319,
+          0.81
+        ],
+        "description": "Plate of greens on the counter",
+        "description_vi": "Đĩa rau trên quầy bếp",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bottle_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0025",
+    "visual_source_frame_id": "L26_V103_f0023",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male chef and a female host stand behind a kitchen island with ingredients on the counter.",
+    "detailed_caption": "A medium shot shows a male chef in a white uniform gesturing with his hands on the left, and a female host in a white apron standing on the right behind a white kitchen counter. Ingredients, utensils, and a stovetop are visible on the island.",
+    "caption_vi": "Nam đầu bếp và nữ MC đứng phía sau đảo bếp có các nguyên liệu trên quầy.",
+    "detailed_caption_vi": "Cảnh trung cảnh cho thấy một nam đầu bếp mặc đồng phục trắng đang cử chỉ tay ở bên trái, và nữ MC mặc tạp dề trắng đứng ở bên phải phía sau quầy bếp trắng. Các nguyên liệu, dụng cụ và bếp nấu hiển thị trên đảo bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bottle_0",
+        "label": "bottle",
+        "bbox": [
+          0.16299999999999998,
+          0.673,
+          0.191,
+          0.8350000000000001
+        ],
+        "description": "Bottle of sauce on the counter",
+        "description_vi": "Chai sốt trên quầy bếp",
+        "attributes": [
+          "dark",
+          "bottled"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "kitchen_island_0",
+        "label": "kitchen island",
+        "bbox": [
+          0.0,
+          0.7220000000000001,
+          1.0,
+          1.0
+        ],
+        "description": "White kitchen counter with built-in stove",
+        "description_vi": "Quầy bếp trắng có bếp tích hợp",
+        "attributes": [
+          "white"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.35,
+          0.253,
+          0.513,
+          0.7430000000000001
+        ],
+        "description": "Male chef wearing white uniform",
+        "description_vi": "Nam đầu bếp mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "talking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.621,
+          0.24100000000000002,
+          0.788,
+          0.7479999999999999
+        ],
+        "description": "Female host wearing white apron",
+        "description_vi": "Nữ MC mặc tạp dề trắng",
+        "attributes": [
+          "white apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "vegetable_0",
+        "label": "vegetable",
+        "bbox": [
+          0.20299999999999999,
+          0.7439999999999999,
+          0.319,
+          0.81
+        ],
+        "description": "Plate of greens on the counter",
+        "description_vi": "Đĩa rau trên quầy bếp",
+        "attributes": [
+          "green"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bottle_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      },
+      {
+        "subject_id": "kitchen_island_0",
+        "predicate": "overlapping",
+        "object_id": "vegetable_0"
+      },
+      {
+        "subject_id": "vegetable_0",
+        "predicate": "overlapping",
+        "object_id": "kitchen_island_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0026",
+    "visual_source_frame_id": "L26_V103_f0026",
+    "ocr_source_frame_id": "L26_V103_f0026",
+    "quality_flags": [],
+    "caption": "A close-up shot shows a black gas stove burner on a glossy cooktop.",
+    "detailed_caption": "A close-up shot shows a black gas stove burner mounted on a glossy black cooktop surface. The circular burner features metal grates and central rings against the dark background. No people or other objects are visible in the frame.",
+    "caption_vi": "Cận cảnh một bếp gas màu đen đặt trên mặt bếp bóng.",
+    "detailed_caption_vi": "Cận cảnh bếp gas màu đen được lắp trên mặt kính bếp bóng loáng. Các kiềng bếp bằng kim loại bố trí xung quanh vòng lửa trung tâm.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "stove_burner_0",
+        "label": "stove burner",
+        "bbox": [
+          0.271,
+          0.273,
+          0.885,
+          1.0
+        ],
+        "description": "a black gas stove burner with metal grates",
+        "description_vi": "một bếp gas màu đen có kiềng kim loại",
+        "attributes": [
+          "black",
+          "round",
+          "metallic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0027",
+    "visual_source_frame_id": "L26_V103_f0026",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up shot shows a black gas stove burner on a glossy cooktop.",
+    "detailed_caption": "A close-up shot shows a black gas stove burner mounted on a glossy black cooktop surface. The circular burner features metal grates and central rings against the dark background. No people or other objects are visible in the frame.",
+    "caption_vi": "Cận cảnh một bếp gas màu đen đặt trên mặt bếp bóng.",
+    "detailed_caption_vi": "Cận cảnh bếp gas màu đen được lắp trên mặt kính bếp bóng loáng. Các kiềng bếp bằng kim loại bố trí xung quanh vòng lửa trung tâm.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "stove_burner_0",
+        "label": "stove burner",
+        "bbox": [
+          0.271,
+          0.273,
+          0.885,
+          1.0
+        ],
+        "description": "a black gas stove burner with metal grates",
+        "description_vi": "một bếp gas màu đen có kiềng kim loại",
+        "attributes": [
+          "black",
+          "round",
+          "metallic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0028",
+    "visual_source_frame_id": "L26_V103_f0028",
+    "ocr_source_frame_id": "L26_V103_f0028",
+    "quality_flags": [],
+    "caption": "Two chefs stand behind a kitchen island with cooking equipment in a brightly lit studio.",
+    "detailed_caption": "A medium shot shows two chefs standing behind a white kitchen island in a bright, modern studio. On the left, a man wearing a white chef coat and red trim gestures with his hand while speaking. On the right, a woman in a white apron and light green shirt stands with her hands clasped. In the background are kitchen cabinets, a sink, and various cooking utensils.",
+    "caption_vi": "Hai đầu bếp đứng sau đảo bếp trong một studio sáng sủa.",
+    "detailed_caption_vi": "Cảnh trung cho thấy hai đầu bếp đứng phía sau đảo bếp màu trắng trong một studio hiện đại. Bên trái, nam đầu bếp mặc áo khoác trắng viền đỏ đang cử chỉ tay khi nói chuyện. Bên phải, nữ đầu bếp mặc tạp dề trắng và áo xanh nhạt đứng chắp tay.",
+    "ocr_text": "HTV Online MON NGON mỗi ngày Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.381,
+          0.7739999999999999,
+          0.6950000000000001,
+          0.846
+        ],
+        "description": "a black built-in glass cooktop on the island counter",
+        "description_vi": "một mặt bếp kính màu đen gắn trên bàn đảo",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.246,
+          0.78,
+          0.38,
+          0.816
+        ],
+        "description": "a wooden cutting board with food items on the counter",
+        "description_vi": "thớt gỗ đựng thực phẩm trên quầy bếp",
+        "attributes": [
+          "wooden"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.28900000000000003,
+          0.247,
+          0.492,
+          0.7939999999999999
+        ],
+        "description": "a man wearing a white chef coat with red trim",
+        "description_vi": "một người nam mặc áo đầu bếp trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red",
+          "chef coat"
+        ],
+        "action": "talking"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.5700000000000001,
+          0.7090000000000001,
+          0.6759999999999999,
+          0.792
+        ],
+        "description": "a golden cooking pot on the stove",
+        "description_vi": "một nồi nấu ăn màu vàng trên bếp",
+        "attributes": [
+          "golden",
+          "metallic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.64,
+          0.228,
+          0.8240000000000001,
+          0.796
+        ],
+        "description": "a woman wearing a white apron and green shirt",
+        "description_vi": "một người nữ mặc tạp dề trắng và áo xanh",
+        "attributes": [
+          "white",
+          "green",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "cooktop_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "left_of",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "right_of",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0029",
+    "visual_source_frame_id": "L26_V103_f0029",
+    "ocr_source_frame_id": "L26_V103_f0029",
+    "quality_flags": [],
+    "caption": "A hand pours ingredients from a yellow measuring cup into a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand pouring dry ingredients from a small yellow measuring cup into a clear glass mixing bowl resting on a wooden surface.",
+    "caption_vi": "Một bàn tay đổ nguyên liệu từ chiếc cốc đo màu vàng vào tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang đổ nguyên liệu khô từ chiếc cốc đo màu vàng nhỏ vào một tô trộn thủy tinh trong suốt đặt trên bề mặt gỗ.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.183,
+          0.0,
+          0.8310000000000001,
+          0.9600000000000001
+        ],
+        "description": "a clear glass mixing bowl on a wooden board",
+        "description_vi": "một tô trộn thủy tinh trong suốt trên tấm ván gỗ",
+        "attributes": [
+          "clear",
+          "glass",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.642,
+          0.0,
+          1.0,
+          0.63
+        ],
+        "description": "a person's hand holding a yellow measuring cup",
+        "description_vi": "bàn tay người đang cầm chiếc cốc đo màu vàng",
+        "attributes": [
+          "skin"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "measuring_cup_0",
+        "label": "measuring cup",
+        "bbox": [
+          0.39,
+          0.18900000000000003,
+          0.663,
+          0.461
+        ],
+        "description": "a small yellow measuring cup held by a hand",
+        "description_vi": "một chiếc cốc đo màu vàng nhỏ được cầm bởi một bàn tay",
+        "attributes": [
+          "yellow",
+          "small"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "measuring_cup_0"
+      },
+      {
+        "subject_id": "measuring_cup_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0030",
+    "visual_source_frame_id": "L26_V103_f0030",
+    "ocr_source_frame_id": "L26_V103_f0030",
+    "quality_flags": [],
+    "caption": "A hand uses a spoon to mix ingredients in a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand holding a spoon to stir ingredients inside a clear glass bowl, with a small white dish of dark chopped ingredients held in the other hand above it.",
+    "caption_vi": "Một bàn tay dùng thìa trộn nguyên liệu trong tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang dùng thìa khuấy các nguyên liệu bên trong tô thủy tinh trong suốt, tay kia giữ một đĩa nhỏ đựng nguyên liệu thái nhỏ sẫm màu.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.0,
+          0.554,
+          0.646,
+          1.0
+        ],
+        "description": "a clear glass mixing bowl",
+        "description_vi": "tô trộn bằng thủy tinh trong suốt",
+        "attributes": [
+          "clear",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.602,
+          0.0,
+          0.9029999999999999,
+          0.5489999999999999
+        ],
+        "description": "a person's hand holding a small dish",
+        "description_vi": "bàn tay người đang cầm đĩa nhỏ",
+        "attributes": [
+          "skin"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "small_dish_0",
+        "label": "small dish",
+        "bbox": [
+          0.384,
+          0.16799999999999998,
+          0.65,
+          0.597
+        ],
+        "description": "a small white dish containing dark chopped ingredients",
+        "description_vi": "một chiếc đĩa trắng nhỏ chứa nguyên liệu thái nhỏ màu tối",
+        "attributes": [
+          "white",
+          "small"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.154,
+          0.287,
+          0.526,
+          1.0
+        ],
+        "description": "a metal spoon stirring inside the bowl",
+        "description_vi": "một chiếc thìa kim loại khuấy trong tô",
+        "attributes": [
+          "metallic",
+          "silver"
+        ],
+        "action": "stirring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "left_of",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "right_of",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "small_dish_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "small_dish_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0031",
+    "visual_source_frame_id": "L26_V103_f0031",
+    "ocr_source_frame_id": "L26_V103_f0031",
+    "quality_flags": [],
+    "caption": "A hand pours dark chopped ingredients from a small dish into a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand tilting a small white dish to empty finely chopped dark ingredients into a clear glass mixing bowl, while a metal spoon rests nearby.",
+    "caption_vi": "Một bàn tay đổ nguyên liệu thái nhỏ tối màu từ đĩa nhỏ vào tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang nghiêng đĩa trắng nhỏ để trút nguyên liệu thái nhỏ tối màu vào tô trộn thủy tinh trong suốt, bên cạnh có chiếc thìa kim loại.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.014000000000000002,
+          0.5,
+          0.693,
+          1.0
+        ],
+        "description": "a clear glass mixing bowl",
+        "description_vi": "tô trộn thủy tinh trong suốt",
+        "attributes": [
+          "clear",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.339,
+          0.0,
+          0.836,
+          0.663
+        ],
+        "description": "a person's hand holding a small white dish",
+        "description_vi": "bàn tay người đang giữ đĩa trắng nhỏ",
+        "attributes": [
+          "skin"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "small_dish_0",
+        "label": "small dish",
+        "bbox": [
+          0.321,
+          0.273,
+          0.554,
+          0.746
+        ],
+        "description": "a small white dish holding chopped dark ingredients",
+        "description_vi": "đĩa trắng nhỏ đựng nguyên liệu băm tối màu",
+        "attributes": [
+          "white",
+          "small"
+        ],
+        "action": "tilting"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.093,
+          0.0,
+          0.477,
+          0.33499999999999996
+        ],
+        "description": "a metal spoon inside the glass bowl",
+        "description_vi": "thìa kim loại bên trong tô thủy tinh",
+        "attributes": [
+          "metallic",
+          "silver"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "small_dish_0"
+      },
+      {
+        "subject_id": "small_dish_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "above",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "below",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "small_dish_0"
+      },
+      {
+        "subject_id": "small_dish_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0032",
+    "visual_source_frame_id": "L26_V103_f0032",
+    "ocr_source_frame_id": "L26_V103_f0032",
+    "quality_flags": [],
+    "caption": "Two chefs stand at a kitchen counter with cooking utensils and ingredients.",
+    "detailed_caption": "A medium shot shows two chefs in a kitchen. On the left, a man in a white chef coat prepares food at a cutting board. On the right, a woman in a white apron stands near a stove with a pot. The kitchen has white brick tiles and wooden cabinets.",
+    "caption_vi": "Hai đầu bếp đứng ở quầy bếp với các dụng cụ nấu ăn và nguyên liệu.",
+    "detailed_caption_vi": "Cảnh trung hiển thị hai đầu bếp trong nhà bếp. Bên trái, nam đầu bếp mặc áo khoác trắng chuẩn bị thức ăn trên thớt. Bên phải, nữ đầu bếp mặc tạp dề trắng đứng gần bếp có nồi. Nhà bếp có tường gạch trắng và tủ gỗ.",
+    "ocr_text": "HTV Online MON NGON mỗi ngày Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.381,
+          0.776,
+          0.6950000000000001,
+          0.846
+        ],
+        "description": "a black built-in glass cooktop",
+        "description_vi": "mặt bếp kính âm màu đen",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.246,
+          0.78,
+          0.38,
+          0.816
+        ],
+        "description": "a wooden cutting board on the counter",
+        "description_vi": "thớt gỗ trên mặt quầy",
+        "attributes": [
+          "wooden"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.242,
+          0.276,
+          0.404,
+          0.785
+        ],
+        "description": "a man wearing a white chef coat preparing food",
+        "description_vi": "nam đầu bếp mặc áo khoác trắng đang chuẩn bị thức ăn",
+        "attributes": [
+          "white",
+          "chef coat"
+        ],
+        "action": "preparing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.55,
+          0.245,
+          0.808,
+          0.796
+        ],
+        "description": "a woman wearing a white apron standing by the stove",
+        "description_vi": "nữ đầu bếp mặc tạp dề trắng đứng cạnh bếp",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0033",
+    "visual_source_frame_id": "L26_V103_f0033",
+    "ocr_source_frame_id": "L26_V103_f0033",
+    "quality_flags": [],
+    "caption": "A male chef in a white uniform speaks in a kitchen studio.",
+    "detailed_caption": "A medium close-up shot shows a male chef wearing a white uniform with red trim speaking directly to the camera in a kitchen studio, with a logo on the wall behind him.",
+    "caption_vi": "Nam đầu bếp mặc đồng phục trắng đang nói chuyện trong studio bếp.",
+    "detailed_caption_vi": "Cảnh trung cận cho thấy nam đầu bếp mặc đồng phục trắng viền đỏ đang nói chuyện trực tiếp với camera trong studio nhà bếp, phía sau có logo trên tường.",
+    "ocr_text": "HTV Online MON NGON mỗi ngày Eat Well. Live Well. Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.331,
+          0.158,
+          0.786,
+          1.0
+        ],
+        "description": "a man wearing a white chef uniform with red trim",
+        "description_vi": "người đàn ông mặc đồng phục đầu bếp trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red",
+          "chef uniform"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0034",
+    "visual_source_frame_id": "L26_V103_f0033",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male chef in a white uniform speaks in a kitchen studio.",
+    "detailed_caption": "A medium close-up shot shows a male chef wearing a white uniform with red trim speaking directly to the camera in a kitchen studio, with a logo on the wall behind him.",
+    "caption_vi": "Nam đầu bếp mặc đồng phục trắng đang nói chuyện trong studio bếp.",
+    "detailed_caption_vi": "Cảnh trung cận cho thấy nam đầu bếp mặc đồng phục trắng viền đỏ đang nói chuyện trực tiếp với camera trong studio nhà bếp, phía sau có logo trên tường.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.331,
+          0.158,
+          0.786,
+          1.0
+        ],
+        "description": "a man wearing a white chef uniform with red trim",
+        "description_vi": "người đàn ông mặc đồng phục đầu bếp trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red",
+          "chef uniform"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0035",
+    "visual_source_frame_id": "L26_V103_f0033",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male chef in a white uniform speaks in a kitchen studio.",
+    "detailed_caption": "A medium close-up shot shows a male chef wearing a white uniform with red trim speaking directly to the camera in a kitchen studio, with a logo on the wall behind him.",
+    "caption_vi": "Nam đầu bếp mặc đồng phục trắng đang nói chuyện trong studio bếp.",
+    "detailed_caption_vi": "Cảnh trung cận cho thấy nam đầu bếp mặc đồng phục trắng viền đỏ đang nói chuyện trực tiếp với camera trong studio nhà bếp, phía sau có logo trên tường.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.331,
+          0.158,
+          0.786,
+          1.0
+        ],
+        "description": "a man wearing a white chef uniform with red trim",
+        "description_vi": "người đàn ông mặc đồng phục đầu bếp trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red",
+          "chef uniform"
+        ],
+        "action": "speaking"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0036",
+    "visual_source_frame_id": "L26_V103_f0036",
+    "ocr_source_frame_id": "L26_V103_f0036",
+    "quality_flags": [],
+    "caption": "A hand pours chopped green and purple ingredients into a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand tilting a small white dish to add finely chopped green herbs and purple onions into a clear glass bowl containing other chopped ingredients.",
+    "caption_vi": "Một bàn tay đổ nguyên liệu màu xanh và tím thái nhỏ vào tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang nghiêng đĩa trắng nhỏ để thêm rau thơm xanh và hành tím băm nhỏ vào tô thủy tinh trong suốt chứa các nguyên liệu khác.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.151,
+          0.005,
+          0.764,
+          0.9510000000000001
+        ],
+        "description": "a clear glass mixing bowl with ingredients",
+        "description_vi": "tô trộn thủy tinh trong suốt có chứa nguyên liệu",
+        "attributes": [
+          "clear",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.492,
+          0.0,
+          1.0,
+          0.679
+        ],
+        "description": "a person's hand holding a small dish",
+        "description_vi": "bàn tay người đang giữ đĩa nhỏ",
+        "attributes": [
+          "skin"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "small_dish_0",
+        "label": "small dish",
+        "bbox": [
+          0.321,
+          0.223,
+          0.621,
+          0.508
+        ],
+        "description": "a small white dish holding chopped green and purple ingredients",
+        "description_vi": "đĩa trắng nhỏ đựng rau xanh và hành tím băm",
+        "attributes": [
+          "white",
+          "small"
+        ],
+        "action": "tilting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "small_dish_0"
+      },
+      {
+        "subject_id": "small_dish_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "small_dish_0"
+      },
+      {
+        "subject_id": "small_dish_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0037",
+    "visual_source_frame_id": "L26_V103_f0037",
+    "ocr_source_frame_id": "L26_V103_f0037",
+    "quality_flags": [],
+    "caption": "A hand uses a spoon to mix ingredients in a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand holding a spoon to stir finely chopped ingredients inside a clear glass mixing bowl.",
+    "caption_vi": "Một bàn tay dùng thìa trộn các nguyên liệu trong tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang cầm chiếc thìa để trộn các nguyên liệu băm nhỏ bên trong tô trộn thủy tinh trong suốt.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.344,
+          0.228,
+          0.786,
+          0.7180000000000001
+        ],
+        "description": "a clear glass mixing bowl containing chopped food",
+        "description_vi": "tô trộn thủy tinh trong suốt chứa thực phẩm băm nhỏ",
+        "attributes": [
+          "clear",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.663,
+          0.0,
+          1.0,
+          0.689
+        ],
+        "description": "a person's hand holding a spoon",
+        "description_vi": "bàn tay người đang cầm thìa",
+        "attributes": [
+          "skin"
+        ],
+        "action": "stirring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.501,
+          0.0,
+          0.6559999999999999,
+          0.574
+        ],
+        "description": "a metal spoon stirring ingredients in the bowl",
+        "description_vi": "thìa kim loại khuấy nguyên liệu trong tô",
+        "attributes": [
+          "metallic",
+          "silver"
+        ],
+        "action": "stirring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0038",
+    "visual_source_frame_id": "L26_V103_f0038",
+    "ocr_source_frame_id": "L26_V103_f0038",
+    "quality_flags": [],
+    "caption": "A male chef stands at a kitchen island mixing ingredients in a bowl.",
+    "detailed_caption": "A medium shot shows a male chef wearing a white uniform standing at a white kitchen island, holding a bowl and spoon to mix ingredients. A woman in a white apron stands to the right near a stove.",
+    "caption_vi": "Nam đầu bếp đứng ở đảo bếp trộn nguyên liệu trong tô.",
+    "detailed_caption_vi": "Cảnh trung hiển thị nam đầu bếp mặc đồng phục trắng đang đứng ở đảo bếp màu trắng, tay cầm tô và thìa để trộn nguyên liệu. Nữ đầu bếp mặc tạp dề trắng đứng bên phải gần bếp.",
+    "ocr_text": "HTV Online MON NGON mỗi ngày Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.381,
+          0.776,
+          0.6950000000000001,
+          0.846
+        ],
+        "description": "a black glass cooktop on the island",
+        "description_vi": "mặt bếp kính đen trên bàn đảo",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.26,
+          0.263,
+          0.462,
+          0.785
+        ],
+        "description": "a man wearing a white chef uniform mixing ingredients",
+        "description_vi": "nam đầu bếp mặc đồng phục trắng đang trộn nguyên liệu",
+        "attributes": [
+          "white",
+          "chef uniform"
+        ],
+        "action": "mixing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.64,
+          0.24000000000000002,
+          0.8099999999999999,
+          0.796
+        ],
+        "description": "a woman wearing a white apron standing by the stove",
+        "description_vi": "nữ mặc tạp dề trắng đứng cạnh bếp",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0039",
+    "visual_source_frame_id": "L26_V103_f0038",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male chef stands at a kitchen island mixing ingredients in a bowl.",
+    "detailed_caption": "A medium shot shows a male chef wearing a white uniform standing at a white kitchen island, holding a bowl and spoon to mix ingredients. A woman in a white apron stands to the right near a stove.",
+    "caption_vi": "Nam đầu bếp đứng ở đảo bếp trộn nguyên liệu trong tô.",
+    "detailed_caption_vi": "Cảnh trung hiển thị nam đầu bếp mặc đồng phục trắng đang đứng ở đảo bếp màu trắng, tay cầm tô và thìa để trộn nguyên liệu. Nữ đầu bếp mặc tạp dề trắng đứng bên phải gần bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.381,
+          0.776,
+          0.6950000000000001,
+          0.846
+        ],
+        "description": "a black glass cooktop on the island",
+        "description_vi": "mặt bếp kính đen trên bàn đảo",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.26,
+          0.263,
+          0.462,
+          0.785
+        ],
+        "description": "a man wearing a white chef uniform mixing ingredients",
+        "description_vi": "nam đầu bếp mặc đồng phục trắng đang trộn nguyên liệu",
+        "attributes": [
+          "white",
+          "chef uniform"
+        ],
+        "action": "mixing"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.64,
+          0.24000000000000002,
+          0.8099999999999999,
+          0.796
+        ],
+        "description": "a woman wearing a white apron standing by the stove",
+        "description_vi": "nữ mặc tạp dề trắng đứng cạnh bếp",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0040",
+    "visual_source_frame_id": "L26_V103_f0040",
+    "ocr_source_frame_id": "L26_V103_f0040",
+    "quality_flags": [],
+    "caption": "A hand pours ingredients into a pot of boiling water.",
+    "detailed_caption": "A close-up shot shows a hand holding a small green bowl to add ingredients into a pot filled with bubbling, boiling water.",
+    "caption_vi": "Một bàn tay đổ nguyên liệu vào nồi nước đang sôi.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang cầm bát xanh nhỏ để cho nguyên liệu vào nồi đầy nước đang sôi sùng sục.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.6900000000000001,
+          0.0,
+          1.0,
+          0.833
+        ],
+        "description": "a person's hand holding a small bowl",
+        "description_vi": "bàn tay người đang cầm bát nhỏ",
+        "attributes": [
+          "skin"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.0,
+          0.075,
+          1.0,
+          1.0
+        ],
+        "description": "a glass pot filled with boiling water and bubbles",
+        "description_vi": "nồi thủy tinh chứa nước sôi và bọt nước",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "boiling"
+      },
+      {
+        "object_id": "small_bowl_0",
+        "label": "small bowl",
+        "bbox": [
+          0.5740000000000001,
+          0.14400000000000002,
+          0.756,
+          0.501
+        ],
+        "description": "a small green bowl held by a hand",
+        "description_vi": "bát xanh nhỏ được cầm bởi một bàn tay",
+        "attributes": [
+          "green",
+          "small"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "small_bowl_0"
+      },
+      {
+        "subject_id": "small_bowl_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "small_bowl_0"
+      },
+      {
+        "subject_id": "small_bowl_0",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0041",
+    "visual_source_frame_id": "L26_V103_f0041",
+    "ocr_source_frame_id": "L26_V103_f0041",
+    "quality_flags": [],
+    "caption": "A close-up shot shows water boiling vigorously in a glass pot.",
+    "detailed_caption": "A close-up shot displays water boiling with heavy bubbles inside a clear glass cooking pot.",
+    "caption_vi": "Cận cảnh nước đang sôi sùng sục trong nồi thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh nước đang sôi với nhiều bọt khí lớn bên trong một chiếc nồi nấu ăn bằng thủy tinh trong suốt.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a glass pot with vigorously boiling water",
+        "description_vi": "nồi thủy tinh có nước đang sôi sùng sục",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "boiling"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0042",
+    "visual_source_frame_id": "L26_V103_f0042",
+    "ocr_source_frame_id": "L26_V103_f0042",
+    "quality_flags": [],
+    "caption": "A pair of chopsticks holds a small plate of sliced green vegetables over a pot of water.",
+    "detailed_caption": "A close-up shot shows a pair of wooden chopsticks holding a small clear plate containing neatly arranged sliced green vegetables, positioned above a glass pot of water.",
+    "caption_vi": "Đôi đũa giữ một đĩa nhỏ rau xanh thái lát phía trên nồi nước.",
+    "detailed_caption_vi": "Cận cảnh một đôi đũa gỗ đang giữ một chiếc đĩa thủy tinh nhỏ đựng rau củ xanh thái lát được xếp gọn gàng, đặt phía trên nồi nước.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chopsticks_0",
+        "label": "chopsticks",
+        "bbox": [
+          0.321,
+          0.0,
+          0.55,
+          0.5579999999999999
+        ],
+        "description": "a pair of wooden chopsticks holding a plate",
+        "description_vi": "đôi đũa gỗ đang kẹp đĩa",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.40800000000000003,
+          0.253,
+          0.737,
+          0.579
+        ],
+        "description": "a small clear plate holding sliced green vegetables",
+        "description_vi": "đĩa thủy tinh nhỏ đựng rau xanh thái lát",
+        "attributes": [
+          "clear",
+          "glass",
+          "round"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.268,
+          0.712,
+          0.8470000000000001,
+          1.0
+        ],
+        "description": "a glass cooking pot with water",
+        "description_vi": "nồi nấu ăn bằng thủy tinh đựng nước",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "above",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "below",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "above",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "below",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0043",
+    "visual_source_frame_id": "L26_V103_f0043",
+    "ocr_source_frame_id": "L26_V103_f0043",
+    "quality_flags": [],
+    "caption": "A wire skimmer lifts sliced green vegetables from ice water.",
+    "detailed_caption": "A close-up shot shows a wire mesh skimmer lifting long, sliced green vegetables out of a clear glass bowl filled with ice water and ice cubes.",
+    "caption_vi": "Vợt lưới nhấc rau xanh thái lát ra khỏi nước đá.",
+    "detailed_caption_vi": "Cận cảnh chiếc vợt lưới kim loại đang nhấc các lát rau màu xanh dài ra khỏi tô thủy tinh trong suốt đựng nước đá và đá viên.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.024,
+          0.04700000000000001,
+          0.9119999999999999,
+          1.0
+        ],
+        "description": "a clear glass bowl filled with ice water",
+        "description_vi": "tô thủy tinh trong suốt chứa nước đá",
+        "attributes": [
+          "clear",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "skimmer_0",
+        "label": "skimmer",
+        "bbox": [
+          0.162,
+          0.0,
+          0.742,
+          0.6679999999999999
+        ],
+        "description": "a metal wire mesh skimmer holding green vegetable slices",
+        "description_vi": "vợt lưới kim loại đựng các lát rau xanh",
+        "attributes": [
+          "metallic",
+          "mesh"
+        ],
+        "action": "lifting"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "skimmer_0"
+      },
+      {
+        "subject_id": "skimmer_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0044",
+    "visual_source_frame_id": "L26_V103_f0044",
+    "ocr_source_frame_id": "L26_V103_f0044",
+    "quality_flags": [],
+    "caption": "Sliced green vegetables sit in a glass bowl filled with ice water.",
+    "detailed_caption": "A close-up shot shows a pile of bright green sliced vegetables resting among ice cubes inside a clear glass bowl.",
+    "caption_vi": "Rau xanh thái lát nằm trong tô thủy tinh chứa nước đá.",
+    "detailed_caption_vi": "Cận cảnh đống rau xanh thái lát sáng màu nằm giữa các viên đá bên trong tô thủy tinh trong suốt.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.024,
+          0.0,
+          0.915,
+          1.0
+        ],
+        "description": "a clear glass bowl filled with ice and water",
+        "description_vi": "tô thủy tinh trong suốt chứa đầy đá và nước",
+        "attributes": [
+          "clear",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "vegetables_0",
+        "label": "vegetables",
+        "bbox": [
+          0.273,
+          0.235,
+          0.638,
+          0.996
+        ],
+        "description": "sliced green vegetables resting on ice",
+        "description_vi": "rau xanh thái lát nằm trên đá",
+        "attributes": [
+          "green",
+          "sliced"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "vegetables_0"
+      },
+      {
+        "subject_id": "vegetables_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0045",
+    "visual_source_frame_id": "L26_V103_f0045",
+    "ocr_source_frame_id": "L26_V103_f0045",
+    "quality_flags": [],
+    "caption": "A hand tilts a white dish over a cooking pot.",
+    "detailed_caption": "A close-up shot shows a hand holding and tilting a white dish over a glass cooking pot placed on a burner.",
+    "caption_vi": "Một bàn tay nghiêng đĩa trắng phía trên nồi nấu ăn.",
+    "detailed_caption_vi": "Cận cảnh một bàn tay đang cầm và nghiêng chiếc đĩa trắng phía trên nồi nấu ăn bằng thủy tinh đặt trên bếp.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "dish_0",
+        "label": "dish",
+        "bbox": [
+          0.26,
+          0.0,
+          0.796,
+          0.693
+        ],
+        "description": "a white dish held by a hand",
+        "description_vi": "đĩa màu trắng được cầm bởi bàn tay",
+        "attributes": [
+          "white"
+        ],
+        "action": "tilting"
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.43600000000000005,
+          0.0,
+          1.0,
+          0.689
+        ],
+        "description": "a person's hand holding a white dish",
+        "description_vi": "bàn tay người đang cầm đĩa trắng",
+        "attributes": [
+          "skin"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a glass cooking pot on a stove burner",
+        "description_vi": "nồi nấu ăn bằng thủy tinh trên bếp",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "dish_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "dish_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0046",
+    "visual_source_frame_id": "L26_V103_f0046",
+    "ocr_source_frame_id": "L26_V103_f0046",
+    "quality_flags": [],
+    "caption": "Chopsticks stir orange carrot strips boiling in a glass pot.",
+    "detailed_caption": "A close-up shot shows a pair of wooden chopsticks stirring orange carrot strips boiling in water inside a clear glass pot.",
+    "caption_vi": "Đôi đũa khuấy các dải cà rốt màu cam đang sôi trong nồi thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh một đôi đũa gỗ đang khuấy các dải cà rốt màu cam đang luộc trong nước sôi bên trong nồi thủy tinh trong suốt.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "carrots_0",
+        "label": "carrots",
+        "bbox": [
+          0.0,
+          0.056,
+          0.8869999999999999,
+          0.9939999999999999
+        ],
+        "description": "orange carrot strips boiling in water",
+        "description_vi": "các dải cà rốt màu cam đang luộc trong nước",
+        "attributes": [
+          "orange",
+          "sliced"
+        ],
+        "action": "boiling"
+      },
+      {
+        "object_id": "chopsticks_0",
+        "label": "chopsticks",
+        "bbox": [
+          0.7809999999999999,
+          0.04700000000000001,
+          0.999,
+          0.5559999999999999
+        ],
+        "description": "a pair of wooden chopsticks stirring the carrots",
+        "description_vi": "đôi đũa gỗ đang khuấy cà rốt",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": "stirring"
+      },
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a clear glass pot with boiling water and carrots",
+        "description_vi": "nồi thủy tinh trong suốt chứa nước sôi và cà rốt",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "boiling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "carrots_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "carrots_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0047",
+    "visual_source_frame_id": "L26_V103_f0047",
+    "ocr_source_frame_id": "L26_V103_f0047",
+    "quality_flags": [],
+    "caption": "A wire skimmer is used in a glass pot of water on a gas stove.",
+    "detailed_caption": "A medium close-up shot shows a wire skimmer inside a clear glass pot filled with water, placed on an active blue flame of a gas stove.",
+    "caption_vi": "Vợt lưới được đặt trong nồi thủy tinh đựng nước trên bếp gas.",
+    "detailed_caption_vi": "Cảnh trung cận hiển thị chiếc vợt lưới bên trong nồi thủy tinh chứa nước, được đặt trên ngọn lửa màu xanh của bếp gas đang hoạt động.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pot_0",
+        "label": "pot",
+        "bbox": [
+          0.16599999999999998,
+          0.308,
+          0.751,
+          0.883
+        ],
+        "description": "a glass pot on a gas stove with blue flame",
+        "description_vi": "nồi thủy tinh trên bếp gas có ngọn lửa xanh",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "skimmer_0",
+        "label": "skimmer",
+        "bbox": [
+          0.0,
+          0.034999999999999996,
+          0.657,
+          0.654
+        ],
+        "description": "a metal wire skimmer inside the pot",
+        "description_vi": "vợt lưới kim loại bên trong nồi",
+        "attributes": [
+          "metallic",
+          "mesh"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "stove_burner_0",
+        "label": "stove burner",
+        "bbox": [
+          0.25,
+          0.837,
+          0.649,
+          1.0
+        ],
+        "description": "a gas stove burner with blue flames",
+        "description_vi": "đầu đốt bếp gas có ngọn lửa xanh",
+        "attributes": [
+          "blue",
+          "flame"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "skimmer_0"
+      },
+      {
+        "subject_id": "skimmer_0",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "pot_0",
+        "predicate": "overlapping",
+        "object_id": "stove_burner_0"
+      },
+      {
+        "subject_id": "stove_burner_0",
+        "predicate": "overlapping",
+        "object_id": "pot_0"
+      },
+      {
+        "subject_id": "skimmer_0",
+        "predicate": "above",
+        "object_id": "stove_burner_0"
+      },
+      {
+        "subject_id": "stove_burner_0",
+        "predicate": "below",
+        "object_id": "skimmer_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0048",
+    "visual_source_frame_id": "L26_V103_f0048",
+    "ocr_source_frame_id": "L26_V103_f0048",
+    "quality_flags": [],
+    "caption": "A wire skimmer places orange carrot strips into ice water.",
+    "detailed_caption": "A close-up shot shows a wire skimmer transferring orange carrot strips into a clear glass bowl filled with ice water alongside previously added green vegetables.",
+    "caption_vi": "Vợt lưới cho các dải cà rốt màu cam vào nước đá.",
+    "detailed_caption_vi": "Cận cảnh chiếc vợt lưới đang chuyển các dải cà rốt màu cam vào tô thủy tinh trong suốt chứa nước đá bên cạnh rau xanh đã cho vào trước đó.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.032,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "a clear glass bowl with ice water and vegetables",
+        "description_vi": "tô thủy tinh trong suốt đựng nước đá và rau củ",
+        "attributes": [
+          "clear",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "carrots_0",
+        "label": "carrots",
+        "bbox": [
+          0.15,
+          0.0,
+          0.686,
+          0.895
+        ],
+        "description": "orange carrot strips falling into the ice water",
+        "description_vi": "dải cà rốt cam rơi vào nước đá",
+        "attributes": [
+          "orange",
+          "sliced"
+        ],
+        "action": "falling"
+      },
+      {
+        "object_id": "skimmer_0",
+        "label": "skimmer",
+        "bbox": [
+          0.274,
+          0.0,
+          0.613,
+          0.7180000000000001
+        ],
+        "description": "a metal wire skimmer holding carrot strips",
+        "description_vi": "vợt lưới kim loại đựng các dải cà rốt",
+        "attributes": [
+          "metallic",
+          "mesh"
+        ],
+        "action": "transferring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "carrots_0",
+        "predicate": "overlapping",
+        "object_id": "skimmer_0"
+      },
+      {
+        "subject_id": "skimmer_0",
+        "predicate": "overlapping",
+        "object_id": "carrots_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0049",
+    "visual_source_frame_id": "L26_V103_f0049",
+    "ocr_source_frame_id": "L26_V103_f0049",
+    "quality_flags": [],
+    "caption": "Two chefs stand by a kitchen island in a brightly lit studio.",
+    "detailed_caption": "A medium shot shows two chefs standing behind a white kitchen island. On the left, a man in a white chef coat adjusts items near a bowl. On the right, a woman in a white apron stands with her hands clasped.",
+    "caption_vi": "Hai đầu bếp đứng cạnh đảo bếp trong studio sáng sủa.",
+    "detailed_caption_vi": "Cảnh trung hiển thị hai đầu bếp đứng sau đảo bếp trắng. Bên trái, nam đầu bếp mặc áo khoác trắng chỉnh sửa đồ vật gần tô. Bên phải, nữ đầu bếp mặc tạp dề trắng đứng chắp tay.",
+    "ocr_text": "HTV Online MON NGON mỗi ngày Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.381,
+          0.776,
+          0.6950000000000001,
+          0.846
+        ],
+        "description": "a black built-in glass cooktop on the island",
+        "description_vi": "mặt bếp kính đen lắp trên bàn đảo",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.20299999999999999,
+          0.276,
+          0.442,
+          0.81
+        ],
+        "description": "a man wearing a white chef coat working at the counter",
+        "description_vi": "nam đầu bếp mặc áo khoác trắng đang làm việc ở quầy",
+        "attributes": [
+          "white",
+          "chef coat"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.631,
+          0.23800000000000002,
+          0.8039999999999999,
+          0.796
+        ],
+        "description": "a woman wearing a white apron standing on the right",
+        "description_vi": "nữ đầu bếp mặc tạp dề trắng đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0050",
+    "visual_source_frame_id": "L26_V103_f0049",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two chefs stand by a kitchen island in a brightly lit studio.",
+    "detailed_caption": "A medium shot shows two chefs standing behind a white kitchen island. On the left, a man in a white chef coat adjusts items near a bowl. On the right, a woman in a white apron stands with her hands clasped.",
+    "caption_vi": "Hai đầu bếp đứng cạnh đảo bếp trong studio sáng sủa.",
+    "detailed_caption_vi": "Cảnh trung hiển thị hai đầu bếp đứng sau đảo bếp trắng. Bên trái, nam đầu bếp mặc áo khoác trắng chỉnh sửa đồ vật gần tô. Bên phải, nữ đầu bếp mặc tạp dề trắng đứng chắp tay.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.381,
+          0.776,
+          0.6950000000000001,
+          0.846
+        ],
+        "description": "a black built-in glass cooktop on the island",
+        "description_vi": "mặt bếp kính đen lắp trên bàn đảo",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "man_0",
+        "label": "man",
+        "bbox": [
+          0.20299999999999999,
+          0.276,
+          0.442,
+          0.81
+        ],
+        "description": "a man wearing a white chef coat working at the counter",
+        "description_vi": "nam đầu bếp mặc áo khoác trắng đang làm việc ở quầy",
+        "attributes": [
+          "white",
+          "chef coat"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "woman_0",
+        "label": "woman",
+        "bbox": [
+          0.631,
+          0.23800000000000002,
+          0.8039999999999999,
+          0.796
+        ],
+        "description": "a woman wearing a white apron standing on the right",
+        "description_vi": "nữ đầu bếp mặc tạp dề trắng đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "man_0",
+        "predicate": "left_of",
+        "object_id": "woman_0"
+      },
+      {
+        "subject_id": "woman_0",
+        "predicate": "right_of",
+        "object_id": "man_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0051",
+    "visual_source_frame_id": "L26_V103_f0051",
+    "ocr_source_frame_id": "L26_V103_f0051",
+    "quality_flags": [],
+    "caption": "A person pours chopped shallots from a small dish into a glass bowl filled with more chopped ingredients.",
+    "detailed_caption": "A close-up shot shows a person pouring chopped shallots from a small white dish into a clear glass mixing bowl containing finely minced dark ingredients. The bowl rests on a wooden cutting board in a kitchen setting. The person's hand guides the small dish to empty its contents completely.",
+    "caption_vi": "Một người đang đổ hành củ băm nhỏ từ đĩa nhỏ vào một tô thủy tinh lớn chứa các nguyên liệu băm sẵn.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một người đang nghiêng đĩa sứ trắng để đổ hành củ băm nhuyễn vào tô trộn thủy tinh trong suốt đặt trên thớt gỗ. Các thành phần băm nhỏ khác đã có sẵn bên trong tô.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "glass_bowl_0",
+        "label": "glass bowl",
+        "bbox": [
+          0.10700000000000001,
+          0.0,
+          0.866,
+          1.0
+        ],
+        "description": "clear glass mixing bowl containing chopped brown ingredients",
+        "description_vi": "tô thủy tinh trong suốt chứa hỗn hợp nguyên liệu băm nhỏ màu nâu",
+        "attributes": [
+          "clear",
+          "glass",
+          "round"
+        ],
+        "action": "containing ingredients"
+      },
+      {
+        "object_id": "small_dish_0",
+        "label": "small dish",
+        "bbox": [
+          0.219,
+          0.14600000000000002,
+          0.617,
+          0.439
+        ],
+        "description": "small white and orange dish held by a hand",
+        "description_vi": "đĩa nhỏ màu trắng viền cam trên tay người",
+        "attributes": [
+          "small",
+          "white",
+          "orange rim"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "glass_bowl_0",
+        "predicate": "overlapping",
+        "object_id": "small_dish_0"
+      },
+      {
+        "subject_id": "small_dish_0",
+        "predicate": "overlapping",
+        "object_id": "glass_bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0052",
+    "visual_source_frame_id": "L26_V103_f0052",
+    "ocr_source_frame_id": "L26_V103_f0052",
+    "quality_flags": [],
+    "caption": "A person pours dark sauce from a bottle onto a spoon held over a glass bowl of food.",
+    "detailed_caption": "A close-up shot shows a person holding a dark bottle with a spout in one hand and pouring dark liquid sauce onto a small metal spoon held in the other hand. Below the spoon, a clear glass bowl rests on a wooden cutting board, containing a pink mixture layered over chopped ingredients.",
+    "caption_vi": "Một người đang rót nước sốt sẫm màu từ chai vào chiếc muỗng nhỏ phía trên tô thủy tinh đựng thức ăn.",
+    "detailed_caption_vi": "Cảnh cận cảnh ghi lại khoảnh khắc người đầu bếp tay phải cầm chai đen rót chất lỏng sẫm màu vào chiếc thìa kim loại trên tay trái. Phía dưới là tô thủy tinh đặt trên thớt gỗ có sẵn hỗn hợp màu hồng và vụn nguyên liệu.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bottle_0",
+        "label": "bottle",
+        "bbox": [
+          0.519,
+          0.032,
+          0.8779999999999999,
+          0.41500000000000004
+        ],
+        "description": "dark bottle with a pour spout containing dark sauce",
+        "description_vi": "chai sẫm màu có vòi rót chứa nước sốt",
+        "attributes": [
+          "dark",
+          "glass",
+          "pour spout"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "glass_bowl_0",
+        "label": "glass bowl",
+        "bbox": [
+          0.40199999999999997,
+          0.553,
+          0.79,
+          0.995
+        ],
+        "description": "clear glass bowl containing pink paste and chopped ingredients",
+        "description_vi": "tô thủy tinh trong suốt đựng hỗn hợp màu hồng và nguyên liệu băm",
+        "attributes": [
+          "clear",
+          "glass",
+          "round"
+        ],
+        "action": "holding food"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.274,
+          0.41,
+          0.608,
+          0.553
+        ],
+        "description": "small metal spoon catching liquid from a bottle",
+        "description_vi": "thìa kim loại nhỏ hứng chất lỏng",
+        "attributes": [
+          "metal",
+          "silver",
+          "small"
+        ],
+        "action": "holding liquid"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bottle_0",
+        "predicate": "above",
+        "object_id": "glass_bowl_0"
+      },
+      {
+        "subject_id": "glass_bowl_0",
+        "predicate": "below",
+        "object_id": "bottle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0053",
+    "visual_source_frame_id": "L26_V103_f0053",
+    "ocr_source_frame_id": "L26_V103_f0053",
+    "quality_flags": [],
+    "caption": "A person holds a small white jar labeled with red text and scoops out contents with a spoon.",
+    "detailed_caption": "A close-up shot captures a person wearing a white chef uniform holding a small white ceramic jar in one hand. The other hand uses a metal spoon to scoop from the jar, which features red lettering on the front.",
+    "caption_vi": "Một người cầm một hũ sứ trắng có chữ đỏ và dùng thìa múc gia vị bên trong.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh người mặc áo đầu bếp màu trắng đang cầm một hũ đựng bằng sứ trắng nhỏ in chữ đỏ phía trước. Tay còn lại cầm chiếc thìa kim loại đang múc nguyên liệu bên trong hũ.",
+    "ocr_text": "HTV Online AJI-NO-MOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "jar_0",
+        "label": "jar",
+        "bbox": [
+          0.484,
+          0.314,
+          0.705,
+          0.7220000000000001
+        ],
+        "description": "small white ceramic jar with red lettering on the front",
+        "description_vi": "hũ gốm nhỏ màu trắng có chữ màu đỏ",
+        "attributes": [
+          "white",
+          "ceramic",
+          "small",
+          "labeled"
+        ],
+        "action": "being scooped from"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.461,
+          0.149,
+          0.577,
+          0.452
+        ],
+        "description": "silver metal spoon being dipped into a white jar",
+        "description_vi": "thìa kim loại màu bạc đang múc vào hũ trắng",
+        "attributes": [
+          "metal",
+          "silver",
+          "small"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "jar_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "jar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0054",
+    "visual_source_frame_id": "L26_V103_f0053",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person holds a small white jar labeled with red text and scoops out contents with a spoon.",
+    "detailed_caption": "A close-up shot captures a person wearing a white chef uniform holding a small white ceramic jar in one hand. The other hand uses a metal spoon to scoop from the jar, which features red lettering on the front.",
+    "caption_vi": "Một người cầm một hũ sứ trắng có chữ đỏ và dùng thìa múc gia vị bên trong.",
+    "detailed_caption_vi": "Cảnh quay cận cảnh người mặc áo đầu bếp màu trắng đang cầm một hũ đựng bằng sứ trắng nhỏ in chữ đỏ phía trước. Tay còn lại cầm chiếc thìa kim loại đang múc nguyên liệu bên trong hũ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "jar_0",
+        "label": "jar",
+        "bbox": [
+          0.484,
+          0.314,
+          0.705,
+          0.7220000000000001
+        ],
+        "description": "small white ceramic jar with red lettering on the front",
+        "description_vi": "hũ gốm nhỏ màu trắng có chữ màu đỏ",
+        "attributes": [
+          "white",
+          "ceramic",
+          "small",
+          "labeled"
+        ],
+        "action": "being scooped from"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.461,
+          0.149,
+          0.577,
+          0.452
+        ],
+        "description": "silver metal spoon being dipped into a white jar",
+        "description_vi": "thìa kim loại màu bạc đang múc vào hũ trắng",
+        "attributes": [
+          "metal",
+          "silver",
+          "small"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "jar_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "jar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0055",
+    "visual_source_frame_id": "L26_V103_f0055",
+    "ocr_source_frame_id": "L26_V103_f0055",
+    "quality_flags": [],
+    "caption": "A person holds a white jar and a spoon filled with white seasoning granules.",
+    "detailed_caption": "A close-up shot shows a person in a white chef uniform holding a small white ceramic jar. A metal spoon filled with white seasoning granules is held just above the jar, which has a gold and red label.",
+    "caption_vi": "Một người cầm hũ gia vị màu trắng và chiếc thìa đầy hạt nêm trên tay.",
+    "detailed_caption_vi": "Cảnh cận cảnh người đầu bếp mặc áo trắng đang cầm một hũ đựng nhỏ bằng sứ trắng có nhãn màu vàng đỏ. Phía trên miệng hũ, chiếc thìa kim loại chứa đầy các hạt gia vị màu trắng.",
+    "ocr_text": "HTV Online Ajin-ngon",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "jar_0",
+        "label": "jar",
+        "bbox": [
+          0.502,
+          0.356,
+          0.746,
+          0.8260000000000001
+        ],
+        "description": "small white jar with gold and red logo label",
+        "description_vi": "hũ nhỏ màu trắng có nhãn chữ đỏ vàng",
+        "attributes": [
+          "white",
+          "ceramic",
+          "labeled"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.319,
+          0.27,
+          0.646,
+          0.44699999999999995
+        ],
+        "description": "metal spoon filled with white seasoning granules",
+        "description_vi": "thìa kim loại chứa đầy hạt nêm trắng",
+        "attributes": [
+          "metal",
+          "silver",
+          "small"
+        ],
+        "action": "holding granules"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "jar_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "jar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0056",
+    "visual_source_frame_id": "L26_V103_f0056",
+    "ocr_source_frame_id": "L26_V103_f0056",
+    "quality_flags": [],
+    "caption": "A glass bowl containing a pink ball topped with seasoning sits on a wooden cutting board.",
+    "detailed_caption": "A medium close-up shot shows a clear glass bowl placed on a wooden cutting board on a white countertop. Inside the bowl, a rounded pink food preparation item is topped with white seasoning granules and surrounded by chopped dark ingredients.",
+    "caption_vi": "Một tô thủy tinh đặt trên thớt gỗ chứa một khối màu hồng được rắc hạt nêm lên trên.",
+    "detailed_caption_vi": "Cảnh quay góc trung cho thấy tô thủy tinh trong suốt đặt trên thớt gỗ trên mặt bàn trắng. Bên trong tô có một khối thực phẩm màu hồng được phủ hạt gia vị màu trắng và bao quanh bởi các nguyên liệu băm.",
+    "ocr_text": "HTV Online HẠT NÊM HEO 1/2m",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.0,
+          0.55,
+          1.0,
+          1.0
+        ],
+        "description": "light brown wooden cutting board",
+        "description_vi": "thớt gỗ màu nâu nhạt",
+        "attributes": [
+          "wooden",
+          "brown",
+          "rectangular"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "glass_bowl_0",
+        "label": "glass bowl",
+        "bbox": [
+          0.309,
+          0.356,
+          0.788,
+          0.9069999999999999
+        ],
+        "description": "clear glass bowl containing pink food and seasoning",
+        "description_vi": "tô thủy tinh trong suốt chứa thực phẩm màu hồng và gia vị",
+        "attributes": [
+          "clear",
+          "glass",
+          "round"
+        ],
+        "action": "containing ingredients"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "glass_bowl_0"
+      },
+      {
+        "subject_id": "glass_bowl_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0057",
+    "visual_source_frame_id": "L26_V103_f0057",
+    "ocr_source_frame_id": "L26_V103_f0057",
+    "quality_flags": [],
+    "caption": "A person's hand touches the edge of a glass bowl filled with chopped ingredients and a pink mixture.",
+    "detailed_caption": "A close-up shot focuses on a person's hand resting near the side of a clear glass bowl. The bowl sits on a wooden surface and holds a rounded pink mixture covered with white seasoning granules, surrounded by dark minced ingredients.",
+    "caption_vi": "Tay của một người chạm nhẹ vào cạnh tô thủy tinh chứa thực phẩm băm nhỏ và khối màu hồng.",
+    "detailed_caption_vi": "Cảnh cận cảnh chụp bàn tay một người đang đặt gần mép tô thủy tinh trong suốt đặt trên bề mặt gỗ. Bên trong tô là khối màu hồng được phủ hạt nêm trắng, xung quanh là nguyên liệu băm.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "glass_bowl_0",
+        "label": "glass bowl",
+        "bbox": [
+          0.10200000000000001,
+          0.0,
+          0.8470000000000001,
+          0.995
+        ],
+        "description": "clear glass bowl with pink mixture and seasoning",
+        "description_vi": "tô thủy tinh trong suốt chứa hỗn hợp hồng và gia vị",
+        "attributes": [
+          "clear",
+          "glass",
+          "round"
+        ],
+        "action": "containing food"
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.461,
+          0.21500000000000002,
+          1.0,
+          0.995
+        ],
+        "description": "human hand resting near the side of the glass bowl",
+        "description_vi": "bàn tay người đặt gần thành tô thủy tinh",
+        "attributes": [
+          "bare skin"
+        ],
+        "action": "touching"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "glass_bowl_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "glass_bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0058",
+    "visual_source_frame_id": "L26_V103_f0058",
+    "ocr_source_frame_id": "L26_V103_f0058",
+    "quality_flags": [],
+    "caption": "A person uses a sharp chef's knife to slice a block of raw pork on a wooden cutting board.",
+    "detailed_caption": "A close-up shot shows a person's hands holding a large block of pink raw pork on a wooden cutting board. A silver chef's knife is positioned to cut a slice from the meat.",
+    "caption_vi": "Một người dùng dao sắc cắt một khối thịt lợn sống trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh ghi lại đôi tay người giữ một khối thịt lợn sống màu hồng đặt trên thớt gỗ. Một con dao bếp bằng kim loại sáng bóng đang cắt một lát thịt.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.0,
+          0.24300000000000002,
+          1.0,
+          1.0
+        ],
+        "description": "light brown wooden cutting board",
+        "description_vi": "thớt gỗ màu nâu nhạt",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "knife_0",
+        "label": "knife",
+        "bbox": [
+          0.22599999999999998,
+          0.0,
+          0.693,
+          0.5630000000000001
+        ],
+        "description": "silver metal chef's knife cutting raw meat",
+        "description_vi": "dao bếp bằng kim loại màu bạc đang cắt thịt",
+        "attributes": [
+          "metal",
+          "silver",
+          "sharp",
+          "long"
+        ],
+        "action": "slicing"
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.353,
+          0.253,
+          0.9710000000000001,
+          0.8069999999999999
+        ],
+        "description": "large block of pink raw pork meat",
+        "description_vi": "khối thịt lợn sống màu hồng lớn",
+        "attributes": [
+          "raw",
+          "pink",
+          "meat",
+          "solid"
+        ],
+        "action": "being sliced"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "knife_0"
+      },
+      {
+        "subject_id": "knife_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "knife_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "knife_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0059",
+    "visual_source_frame_id": "L26_V103_f0059",
+    "ocr_source_frame_id": "L26_V103_f0059",
+    "quality_flags": [],
+    "caption": "A person uses a knife to slice raw pork on a wooden cutting board.",
+    "detailed_caption": "A close-up shot shows a person's fingers holding a piece of pink raw pork on a wooden cutting board as a knife slices a portion off. The sliced piece rests flat on the board next to the main block of meat.",
+    "caption_vi": "Một người đang dùng dao cắt một lát thịt lợn sống trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh đôi tay đang ấn giữ khối thịt lợn hồng trên thớt gỗ. Một lát thịt vừa được cắt rời nằm phẳng bên cạnh khối thịt chính.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.0,
+          0.21700000000000003,
+          1.0,
+          1.0
+        ],
+        "description": "light brown wooden cutting board",
+        "description_vi": "thớt gỗ màu nâu nhạt",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "knife_0",
+        "label": "knife",
+        "bbox": [
+          0.0,
+          0.331,
+          0.40499999999999997,
+          0.921
+        ],
+        "description": "silver metal chef's knife resting beside sliced meat",
+        "description_vi": "dao bếp bằng kim loại đặt cạnh miếng thịt đã cắt",
+        "attributes": [
+          "metal",
+          "silver",
+          "long"
+        ],
+        "action": "slicing"
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.248,
+          0.23399999999999999,
+          0.969,
+          0.836
+        ],
+        "description": "sliced raw pink pork meat on a wooden board",
+        "description_vi": "miếng thịt lợn sống màu hồng đã thái lát trên thớt",
+        "attributes": [
+          "raw",
+          "pink",
+          "sliced"
+        ],
+        "action": "being sliced"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "knife_0"
+      },
+      {
+        "subject_id": "knife_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      },
+      {
+        "subject_id": "knife_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "knife_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0060",
+    "visual_source_frame_id": "L26_V103_f0060",
+    "ocr_source_frame_id": "L26_V103_f0060",
+    "quality_flags": [],
+    "caption": "Several thinly sliced pieces of raw pink pork are arranged on a white plate.",
+    "detailed_caption": "A close-up shot shows multiple thinly sliced pieces of raw pink pork neatly arranged on a white ceramic plate. In the upper right corner, a small white bowl contains green chopped ingredients.",
+    "caption_vi": "Nhiều lát thịt lợn sống màu hồng được xếp gọn gàng trên đĩa trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh chụp các lát thịt lợn sống màu hồng được thái mỏng xếp đều trên một chiếc đĩa sứ trắng. Góc trên bên phải xuất hiện một chiếc bát nhỏ đựng nguyên liệu băm màu xanh.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.0,
+          0.063,
+          0.984,
+          1.0
+        ],
+        "description": "round white ceramic plate holding sliced pork",
+        "description_vi": "đĩa sứ trắng tròn đựng thịt lợn",
+        "attributes": [
+          "white",
+          "ceramic",
+          "round"
+        ],
+        "action": "holding food"
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.028999999999999998,
+          0.024,
+          0.966,
+          0.966
+        ],
+        "description": "multiple thin slices of raw pink pork arranged on a plate",
+        "description_vi": "nhiều lát thịt lợn sống màu hồng xếp trên đĩa",
+        "attributes": [
+          "raw",
+          "pink",
+          "sliced"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0061",
+    "visual_source_frame_id": "L26_V103_f0060",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Several thinly sliced pieces of raw pink pork are arranged on a white plate.",
+    "detailed_caption": "A close-up shot shows multiple thinly sliced pieces of raw pink pork neatly arranged on a white ceramic plate. In the upper right corner, a small white bowl contains green chopped ingredients.",
+    "caption_vi": "Nhiều lát thịt lợn sống màu hồng được xếp gọn gàng trên đĩa trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh chụp các lát thịt lợn sống màu hồng được thái mỏng xếp đều trên một chiếc đĩa sứ trắng. Góc trên bên phải xuất hiện một chiếc bát nhỏ đựng nguyên liệu băm màu xanh.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.0,
+          0.063,
+          0.984,
+          1.0
+        ],
+        "description": "round white ceramic plate holding sliced pork",
+        "description_vi": "đĩa sứ trắng tròn đựng thịt lợn",
+        "attributes": [
+          "white",
+          "ceramic",
+          "round"
+        ],
+        "action": "holding food"
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.028999999999999998,
+          0.024,
+          0.966,
+          0.966
+        ],
+        "description": "multiple thin slices of raw pink pork arranged on a plate",
+        "description_vi": "nhiều lát thịt lợn sống màu hồng xếp trên đĩa",
+        "attributes": [
+          "raw",
+          "pink",
+          "sliced"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0062",
+    "visual_source_frame_id": "L26_V103_f0062",
+    "ocr_source_frame_id": "L26_V103_f0062",
+    "quality_flags": [],
+    "caption": "A transparent plastic wrap is placed smoothly over a wooden cutting board.",
+    "detailed_caption": "A close-up shot shows a wooden cutting board covered with a layer of clear plastic wrap. The surface of the plastic wrap reflects light, and a person's upper body is visible in the blurred background.",
+    "caption_vi": "Một lớp màng bọc thực phẩm trong suốt được phủ lên bề mặt thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh ghi lại chiếc thớt gỗ được bọc một lớp màng bọc thực phẩm trong suốt ở phía trên. Bề mặt màng nhựa phản chiếu ánh sáng nhẹ.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.0,
+          0.312,
+          1.0,
+          1.0
+        ],
+        "description": "light brown wooden cutting board under plastic wrap",
+        "description_vi": "thớt gỗ màu nâu nhạt bên dưới màng bọc",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plastic_wrap_0",
+        "label": "plastic wrap",
+        "bbox": [
+          0.0,
+          0.317,
+          1.0,
+          1.0
+        ],
+        "description": "transparent plastic wrap covering a wooden board",
+        "description_vi": "màng bọc thực phẩm trong suốt phủ trên thớt",
+        "attributes": [
+          "transparent",
+          "glossy",
+          "thin"
+        ],
+        "action": "covering"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "plastic_wrap_0"
+      },
+      {
+        "subject_id": "plastic_wrap_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0063",
+    "visual_source_frame_id": "L26_V103_f0063",
+    "ocr_source_frame_id": "L26_V103_f0063",
+    "quality_flags": [],
+    "caption": "Two overlapping slices of raw pink pork rest on plastic wrap over a wooden board.",
+    "detailed_caption": "A close-up shot shows two overlapping slices of pink raw pork placed on top of clear plastic wrap, which covers a wooden cutting board. A person's hand is visible in the upper left corner.",
+    "caption_vi": "Hai lát thịt lợn sống màu hồng đặt chồng lên nhau trên lớp màng bọc phủ trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh hai miếng thịt lợn sống màu hồng đặt chồng lên màng bọc thực phẩm trên bề mặt thớt gỗ. Phía góc trên bên trái xuất hiện mờ phần tay của người làm bếp.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.0,
+          0.227,
+          1.0,
+          1.0
+        ],
+        "description": "light brown wooden cutting board covered in plastic wrap",
+        "description_vi": "thớt gỗ màu nâu nhạt bọc màng nhựa",
+        "attributes": [
+          "wooden",
+          "brown",
+          "transparent cover"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.296,
+          0.498,
+          0.9019999999999999,
+          0.841
+        ],
+        "description": "two overlapping slices of raw pink pork",
+        "description_vi": "hai lát thịt lợn sống màu hồng đặt chồng lên nhau",
+        "attributes": [
+          "raw",
+          "pink",
+          "sliced"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "cutting_board_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "cutting_board_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0064",
+    "visual_source_frame_id": "L26_V103_f0064",
+    "ocr_source_frame_id": "L26_V103_f0064",
+    "quality_flags": [],
+    "caption": "Two thin slices of raw pink pork are arranged on plastic wrap over a wooden board.",
+    "detailed_caption": "A close-up shot captures two neatly positioned slices of pink raw pork lying flat on clear plastic wrap that covers a wooden cutting board. The grain of the wood is visible through the translucent setup.",
+    "caption_vi": "Hai lát thịt lợn sống màu hồng được đặt ngay ngắn trên màng bọc trên thớt gỗ.",
+    "detailed_caption_vi": "Cảnh cận cảnh hai lát thịt lợn hồng đặt phẳng trên lớp màng bọc thực phẩm trải trên thớt gỗ. Vân gỗ mờ nhạt hiện rõ bên dưới.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "cutting_board_0",
+        "label": "cutting board",
+        "bbox": [
+          0.0,
+          0.015000000000000001,
+          1.0,
+          1.0
+        ],
+        "description": "wooden cutting board covered with plastic wrap",
+        "description_vi": "thớt gỗ bọc màng thực phẩm",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.317,
+          0.38,
+          0.683,
+          0.8510000000000001
+        ],
+        "description": "two slices of raw pink pork meat",
+        "description_vi": "hai lát thịt lợn sống màu hồng",
+        "attributes": [
+          "raw",
+          "pink",
+          "sliced"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0065",
+    "visual_source_frame_id": "L26_V103_f0065",
+    "ocr_source_frame_id": "L26_V103_f0065",
+    "quality_flags": [],
+    "caption": "A person uses a meat mallet to tenderize pork covered in plastic wrap on a wooden board.",
+    "detailed_caption": "A close-up shot shows a person using a metal meat mallet with a textured head to pound and flatten slices of raw pork. The meat is covered with a layer of clear plastic wrap on top of a wooden cutting board.",
+    "caption_vi": "Một người dùng búa đập thịt để làm mềm miếng thịt lợn được bọc trong màng bọc thực phẩm.",
+    "detailed_caption_vi": "Cảnh cận cảnh một người đang dùng búa đập thịt bằng kim loại có bề mặt gai để dằn dẹt các lát thịt lợn. Miếng thịt được phủ kín bởi màng bọc nhựa đặt trên thớt gỗ.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_mallet_0",
+        "label": "meat mallet",
+        "bbox": [
+          0.15,
+          0.21700000000000003,
+          0.679,
+          0.6829999999999999
+        ],
+        "description": "metal meat tenderizer mallet with textured pounding head",
+        "description_vi": "búa đập thịt bằng kim loại có đầu gai",
+        "attributes": [
+          "metal",
+          "silver",
+          "textured head"
+        ],
+        "action": "pound"
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.127,
+          0.24100000000000002,
+          1.0,
+          0.9590000000000001
+        ],
+        "description": "pork slices covered in plastic wrap being flattened",
+        "description_vi": "các lát thịt lợn bọc màng nhựa đang bị đập dẹt",
+        "attributes": [
+          "raw",
+          "pink",
+          "covered"
+        ],
+        "action": "being pounded"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "meat_mallet_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "meat_mallet_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0066",
+    "visual_source_frame_id": "L26_V103_f0066",
+    "ocr_source_frame_id": "L26_V103_f0066",
+    "quality_flags": [],
+    "caption": "Several thinly pounded slices of raw pink pork are arranged on a white plate.",
+    "detailed_caption": "A close-up shot shows multiple thinly pounded and flattened slices of raw pink pork arranged overlapping on a white ceramic plate. A hand is partially visible in the upper right corner.",
+    "caption_vi": "Nhiều lát thịt lợn sống màu hồng đã được đập mỏng xếp trên đĩa trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh các lát thịt lợn hồng đã được đập dẹt mỏng, xếp chồng lên nhau trên đĩa sứ trắng. Một phần bàn tay xuất hiện ở góc trên bên phải.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "white ceramic plate holding flattened pork slices",
+        "description_vi": "đĩa sứ trắng đựng các lát thịt",
+        "attributes": [
+          "white",
+          "ceramic"
+        ],
+        "action": "holding food"
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.02,
+          0.205,
+          0.8949999999999999,
+          0.983
+        ],
+        "description": "flattened thin slices of raw pink pork on a plate",
+        "description_vi": "các lát thịt lợn sống màu hồng mỏng đã đập dẹt trên đĩa",
+        "attributes": [
+          "raw",
+          "pink",
+          "flattened"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0067",
+    "visual_source_frame_id": "L26_V103_f0067",
+    "ocr_source_frame_id": "L26_V103_f0067",
+    "quality_flags": [],
+    "caption": "A person arranges and adjusts flattened slices of raw pink pork on a white plate.",
+    "detailed_caption": "A close-up shot shows a person's hands delicately arranging and positioning thin, flattened slices of raw pink pork on a white ceramic plate.",
+    "caption_vi": "Một người đang sắp xếp các lát thịt lợn sống mỏng trên đĩa trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh đôi tay đang cẩn thận sắp xếp và điều chỉnh các lát thịt lợn sống mỏng đã đập dẹt trên một chiếc đĩa trắng.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "white ceramic plate holding pork slices",
+        "description_vi": "đĩa sứ trắng đựng thịt",
+        "attributes": [
+          "white",
+          "ceramic"
+        ],
+        "action": "holding food"
+      },
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.442,
+          0.024,
+          0.755,
+          0.42
+        ],
+        "description": "flattened slices of raw pink pork arranged on a plate",
+        "description_vi": "các lát thịt lợn hồng được xếp trên đĩa",
+        "attributes": [
+          "raw",
+          "pink",
+          "flattened"
+        ],
+        "action": "being arranged"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0068",
+    "visual_source_frame_id": "L26_V103_f0068",
+    "ocr_source_frame_id": "L26_V103_f0068",
+    "quality_flags": [],
+    "caption": "A person pours oil from a bottle onto a spoon.",
+    "detailed_caption": "A close-up shot shows a person in a white chef uniform holding a bottle of yellow cooking oil in one hand and pouring a small amount onto a metal spoon held in the other hand.",
+    "caption_vi": "Một người đang rót dầu ăn màu vàng từ chai vào chiếc thìa.",
+    "detailed_caption_vi": "Cảnh cận cảnh người mặc áo đầu bếp trắng tay trái cầm chai dầu ăn màu vàng đang rót một ít dầu vào chiếc thìa kim loại ở tay phải.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bottle_0",
+        "label": "bottle",
+        "bbox": [
+          0.024,
+          0.0,
+          0.41500000000000004,
+          0.461
+        ],
+        "description": "glass bottle with pour spout containing yellow oil",
+        "description_vi": "chai thủy tinh có vòi rót chứa dầu ăn màu vàng",
+        "attributes": [
+          "glass",
+          "transparent",
+          "pour spout"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.45599999999999996,
+          0.271,
+          0.9390000000000001,
+          0.6829999999999999
+        ],
+        "description": "metal spoon catching oil from a bottle",
+        "description_vi": "thìa kim loại hứng dầu từ chai",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "holding oil"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bottle_0",
+        "predicate": "left_of",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "right_of",
+        "object_id": "bottle_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0069",
+    "visual_source_frame_id": "L26_V103_f0069",
+    "ocr_source_frame_id": "L26_V103_f0069",
+    "quality_flags": [],
+    "caption": "A person pours oil from a spoon onto food.",
+    "detailed_caption": "A close-up shot shows a person holding a metal spoon filled with oil and tilting it to pour the liquid downward onto food items below. The person is wearing a white chef uniform.",
+    "caption_vi": "Một người đang nghiêng thìa để rưới dầu ăn lên thức ăn phía dưới.",
+    "detailed_caption_vi": "Cảnh cận cảnh người mặc đồng phục đầu bếp đang cầm chiếc thìa kim loại chứa đầy dầu và nghiêng để nhỏ giọt chất lỏng xuống thực phẩm phía dưới.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.381,
+          0.14600000000000002,
+          0.859,
+          0.8119999999999999
+        ],
+        "description": "metal spoon pouring oil downward",
+        "description_vi": "thìa kim loại đang rót dầu xuống",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "pouring oil"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V103_f0070",
+    "visual_source_frame_id": "L26_V103_f0070",
+    "ocr_source_frame_id": "L26_V103_f0070",
+    "quality_flags": [],
+    "caption": "A person holds a white jar labeled with red text and a spoon above it.",
+    "detailed_caption": "A close-up shot shows a person in a white chef uniform holding a small white ceramic jar with a gold and red label. A metal spoon is positioned above the open jar filled with white seasoning granules.",
+    "caption_vi": "Một người cầm hũ sứ trắng có chữ đỏ và một chiếc thìa ở phía trên.",
+    "detailed_caption_vi": "Cảnh cận cảnh người đầu bếp mặc áo trắng đang cầm hũ gốm trắng có nhãn chữ đỏ vàng. Một chiếc thìa kim loại đang giữ phía trên miệng hũ đầy hạt gia vị.",
+    "ocr_text": "HTV Online Ajin-ngon",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "jar_0",
+        "label": "jar",
+        "bbox": [
+          0.393,
+          0.11699999999999999,
+          0.646,
+          0.627
+        ],
+        "description": "small white ceramic jar with red and gold lettering",
+        "description_vi": "hũ gốm nhỏ màu trắng in chữ đỏ và vàng",
+        "attributes": [
+          "white",
+          "ceramic",
+          "labeled"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.383,
+          0.0,
+          0.542,
+          0.20199999999999999
+        ],
+        "description": "metal spoon positioned over a jar of seasoning",
+        "description_vi": "thìa kim loại đặt phía trên hũ gia vị",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "jar_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "jar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0071",
+    "visual_source_frame_id": "L26_V103_f0071",
+    "ocr_source_frame_id": "L26_V103_f0071",
+    "quality_flags": [],
+    "caption": "A person sprinkles seasoning from a spoon onto sliced raw pork on a plate.",
+    "detailed_caption": "A close-up shot shows a person holding a small jar and using a spoon to sprinkle white seasoning granules evenly over a row of sliced raw pink pork arranged on a white plate.",
+    "caption_vi": "Một người dùng thìa rắc hạt nêm lên các lát thịt lợn sống trên đĩa trắng.",
+    "detailed_caption_vi": "Cảnh cận cảnh người đầu bếp đang cầm hũ gia vị và dùng thìa rắc đều các hạt gia vị trắng lên dải thịt lợn sống thái lát xếp trên đĩa trắng.",
+    "ocr_text": "HTV Online HẠT NÊM HEO 1/2m",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.11699999999999999,
+          0.624,
+          0.9369999999999999,
+          1.0
+        ],
+        "description": "sliced raw pink pork sprinkled with white seasoning",
+        "description_vi": "thịt lợn sống thái lát được rắc hạt nêm trắng",
+        "attributes": [
+          "raw",
+          "pink",
+          "sliced",
+          "seasoned"
+        ],
+        "action": "being seasoned"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.5599999999999999,
+          0.056,
+          0.7150000000000001,
+          0.21700000000000003
+        ],
+        "description": "metal spoon sprinkling seasoning granules downward",
+        "description_vi": "thìa kim loại đang rắc hạt nêm",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "sprinkling"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "spoon_0",
+        "predicate": "above",
+        "object_id": "pork_0"
+      },
+      {
+        "subject_id": "pork_0",
+        "predicate": "below",
+        "object_id": "spoon_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V103_f0072",
+    "visual_source_frame_id": "L26_V103_f0072",
+    "ocr_source_frame_id": "L26_V103_f0072",
+    "quality_flags": [],
+    "caption": "A person pours chopped green scallions from a small white dish onto seasoned pork slices.",
+    "detailed_caption": "A close-up shot shows a person's hand tilting a small white rectangular dish to pour chopped green scallions onto a row of seasoned raw pink pork slices arranged on a white surface.",
+    "caption_vi": "Một người đang đổ hành lá băm nhỏ từ đĩa trắng lên các lát thịt lợn.",
+    "detailed_caption_vi": "Cảnh cận cảnh bàn tay người đang nghiêng chiếc đĩa trắng nhỏ để rắc hành lá thái nhỏ lên trên dãy các lát thịt lợn sống đã được tẩm ướp gia vị.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pork_0",
+        "label": "pork",
+        "bbox": [
+          0.0,
+          0.171,
+          0.966,
+          1.0
+        ],
+        "description": "sliced raw pink pork seasoned with white granules",
+        "description_vi": "thịt lợn sống thái lát được tẩm gia vị",
+        "attributes": [
+          "raw",
+          "pink",
+          "sliced"
+        ],
+        "action": "being garnished"
+      },
+      {
+        "object_id": "small_dish_0",
+        "label": "small dish",
+        "bbox": [
+          0.32,
+          0.002,
+          0.712,
+          0.51
+        ],
+        "description": "small white dish holding chopped green scallions",
+        "description_vi": "đĩa trắng nhỏ đựng hành lá băm",
+        "attributes": [
+          "white",
+          "small",
+          "rectangular"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pork_0",
+        "predicate": "overlapping",
+        "object_id": "small_dish_0"
+      },
+      {
+        "subject_id": "small_dish_0",
+        "predicate": "overlapping",
+        "object_id": "pork_0"
+      }
+    ]
+  }
+]
