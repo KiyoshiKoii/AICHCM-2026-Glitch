@@ -133,13 +133,19 @@ def iter_caption_records(
     caption_dir: str | Path = DEFAULT_CAPTION_DIR,
     *,
     require_provenance: bool = False,
+    batch_ids: Sequence[str] | None = None,
 ) -> Iterator[CompactVisualRecord]:
     """Yield validated records from all per-video Gemini checkpoints."""
 
     root = Path(caption_dir)
     if not root.is_dir():
         raise FileNotFoundError(f"Caption directory does not exist: {root}")
-    files = sorted(root.glob("L*/L*_V*.json"))
+    wanted_batches = {item.strip().upper() for item in (batch_ids or ()) if item.strip()}
+    files = sorted(
+        path
+        for path in root.glob("L*/L*_V*.json")
+        if not wanted_batches or path.parent.name.upper() in wanted_batches
+    )
     if not files:
         raise FileNotFoundError(f"No per-video caption JSON files found under {root}")
 
@@ -270,11 +276,16 @@ def iter_bulk_actions(
     youtube_metadata: str | Path = DEFAULT_YOUTUBE_METADATA,
     index_name: str = DEFAULT_INDEX_NAME,
     require_provenance: bool = False,
+    batch_ids: Sequence[str] | None = None,
 ) -> Iterator[dict[str, Any]]:
     """Build idempotent bulk actions, using ``frame_id`` as ``_id``."""
 
     contexts = load_video_contexts(youtube_metadata)
-    for record in iter_caption_records(caption_dir, require_provenance=require_provenance):
+    for record in iter_caption_records(
+        caption_dir,
+        require_provenance=require_provenance,
+        batch_ids=batch_ids,
+    ):
         source = build_frame_document(record, contexts.get(parse_frame_id(record.frame_id).video_name))
         yield {
             "_op_type": "index",
@@ -338,6 +349,7 @@ def bulk_ingest(
     index_name: str = DEFAULT_INDEX_NAME,
     chunk_size: int = 500,
     require_provenance: bool = False,
+    batch_ids: Sequence[str] | None = None,
     streaming_bulk_fn: Any | None = None,
 ) -> dict[str, int]:
     """Index every current caption checkpoint and refresh the physical index."""
@@ -356,6 +368,7 @@ def bulk_ingest(
         youtube_metadata,
         index_name,
         require_provenance=require_provenance,
+        batch_ids=batch_ids,
     )
     for succeeded, item in helper(
         client,

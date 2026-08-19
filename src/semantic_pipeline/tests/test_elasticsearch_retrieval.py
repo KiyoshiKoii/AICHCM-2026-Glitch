@@ -115,6 +115,31 @@ def test_bulk_actions_join_video_context_and_derive_frame_fields(tmp_path: Path)
     }
 
 
+def test_bulk_actions_can_limit_ingestion_to_one_batch(tmp_path: Path) -> None:
+    caption_dir = _write_caption_artifact(tmp_path / "caption")
+    l22_dir = caption_dir / "L22"
+    l22_dir.mkdir()
+    l22_payload = json.loads((caption_dir / "L21/L21_V001.json").read_text(encoding="utf-8"))
+    l22_payload[0]["frame_id"] = "L22_V001_f0001"
+    (l22_dir / "L22_V001.json").write_text(
+        json.dumps(l22_payload, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    youtube_path = tmp_path / "youtube.jsonl"
+    youtube_path.write_text("", encoding="utf-8")
+
+    actions = list(
+        iter_bulk_actions(
+            caption_dir,
+            youtube_path,
+            "semantic_frames_test",
+            batch_ids=["l22"],
+        )
+    )
+
+    assert [action["_id"] for action in actions] == ["L22_V001_f0001"]
+
+
 def test_lexical_query_prioritises_detailed_visual_evidence() -> None:
     query = build_lexical_query(
         ["red umbrella", "tin tuc", "RED UMBRELLA"],

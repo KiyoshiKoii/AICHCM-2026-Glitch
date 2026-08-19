@@ -36,6 +36,12 @@ def build_parser() -> argparse.ArgumentParser:
         command.add_argument("--youtube-metadata", type=Path, default=DEFAULT_YOUTUBE_METADATA)
         command.add_argument("--chunk-size", type=int, default=500)
         command.add_argument(
+            "--batch-id",
+            action="append",
+            default=[],
+            help="Index only the selected batch; repeat for multiple batches.",
+        )
+        command.add_argument(
             "--require-provenance",
             action="store_true",
             help="Reject legacy caption records missing visual/OCR source IDs.",
@@ -77,6 +83,7 @@ def main() -> None:
                 index_name=args.index_name,
                 chunk_size=args.chunk_size,
                 require_provenance=args.require_provenance,
+                batch_ids=args.batch_id,
             )
             if args.command == "bootstrap":
                 activate_alias(client, index_name=args.index_name, alias_name=args.alias)
