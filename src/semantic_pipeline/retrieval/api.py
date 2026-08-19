@@ -75,7 +75,10 @@ from semantic_pipeline.retrieval.temporal_event_search import (
     TemporalEventSearch,
     discover_temporal_corpus,
 )
-from semantic_pipeline.retrieval.temporal_query_expander import GeminiTemporalQueryParser
+from semantic_pipeline.retrieval.temporal_query_expander import (
+    GeminiTemporalQueryParser,
+    temporal_query_to_retrieval_spec,
+)
 from semantic_pipeline.retrieval.temporal_query_parser import parse_temporal_query
 from semantic_pipeline.retrieval.temporal_video_selector import ElasticsearchVideoSelector
 from semantic_pipeline.retrieval.qwen_video_verifier import QwenTemporalVerifier
@@ -334,6 +337,7 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
                         "mode": app.state.temporal_query_parser.mode,
                         "model": app.state.temporal_query_parser.model,
                     },
+                    "query_plan": temporal_query_to_retrieval_spec(parsed),
                     "selected_video_id": selection.get("selected_video_id"),
                     "candidates": selection.get("candidates", []),
                     "video_selection": selection,

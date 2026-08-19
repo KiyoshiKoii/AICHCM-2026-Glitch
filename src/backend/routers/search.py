@@ -85,5 +85,5 @@ async def search_temporal_videos(
         video_ids=body.video_ids,
         top_k_videos=body.top_k_videos,
         summary_weight=body.summary_weight,
-        event_weight=body.event_weight,
+        kis_weight=body.kis_weight,
     )

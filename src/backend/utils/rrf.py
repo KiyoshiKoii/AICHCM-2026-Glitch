@@ -77,7 +77,11 @@ def reciprocal_rank_fusion(
             frame_id=item.frame_id,
             score=item.rrf_score,
             thumbnail_url=build_thumbnail_url(item.frame_id, thumbnail_base_url),
-            metadata=item.metadata,
+            metadata={
+                **item.metadata,
+                "source_ranks": dict(item.source_ranks),
+                "source_scores": dict(item.source_scores),
+            },
         )
         for item in ordered
     ]

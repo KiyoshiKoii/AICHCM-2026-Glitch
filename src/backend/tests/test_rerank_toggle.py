@@ -86,15 +86,21 @@ def test_text_search_request_rejects_unknown_batch_filter():
         TextSearchRequest(query="a person", batch_ids=["L20"])
 
 
-def test_temporal_video_request_exposes_summary_event_weights():
+def test_temporal_video_request_exposes_summary_kis_weights():
     request = TemporalVideoSearchRequest(
         query="A cycling race",
         summary_weight=0.6,
-        event_weight=0.4,
+        kis_weight=0.4,
     )
 
     assert request.summary_weight == 0.6
-    assert request.event_weight == 0.4
+    assert request.kis_weight == 0.4
+
+
+def test_temporal_video_request_accepts_legacy_event_weight():
+    request = TemporalVideoSearchRequest(query="A cycling race", event_weight=0.4)
+
+    assert request.kis_weight == 0.4
 
 
 def test_temporal_video_request_rejects_zero_fusion_weights():
@@ -102,7 +108,7 @@ def test_temporal_video_request_rejects_zero_fusion_weights():
         TemporalVideoSearchRequest(
             query="A cycling race",
             summary_weight=0.0,
-            event_weight=0.0,
+            kis_weight=0.0,
         )
 
 

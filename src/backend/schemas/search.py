@@ -1,7 +1,7 @@
 import re
 from typing import Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 _BATCH_ID_PATTERN = re.compile(r"^L(?:2[1-9]|30)$", re.IGNORECASE)
@@ -266,12 +266,19 @@ class TemporalEventSearchRequest(BaseModel):
 
 
 class TemporalVideoSearchRequest(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+
     query: str = Field(min_length=2, max_length=5000)
     batch_ids: list[str] = Field(default_factory=list, max_length=10)
     video_ids: list[str] = Field(default_factory=list, max_length=100)
     top_k_videos: int = Field(default=20, ge=1, le=100)
     summary_weight: float = Field(default=0.75, ge=0.0, le=1.0)
-    event_weight: float = Field(default=0.25, ge=0.0, le=1.0)
+    kis_weight: float = Field(
+        default=0.25,
+        ge=0.0,
+        le=1.0,
+        validation_alias=AliasChoices("kis_weight", "event_weight"),
+    )
 
     @field_validator("query")
     @classmethod
@@ -288,8 +295,8 @@ class TemporalVideoSearchRequest(BaseModel):
 
     @model_validator(mode="after")
     def validate_fusion_weights(self) -> "TemporalVideoSearchRequest":
-        if self.summary_weight + self.event_weight <= 0:
-            raise ValueError("summary_weight and event_weight cannot both be zero")
+        if self.summary_weight + self.kis_weight <= 0:
+            raise ValueError("summary_weight and kis_weight cannot both be zero")
         return self
 
 

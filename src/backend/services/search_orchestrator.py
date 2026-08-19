@@ -10,6 +10,12 @@ from backend.utils.rrf import reciprocal_rank_fusion
 
 from backend.services.llm_reranker import GeminiReRanker
 from backend.services.query_analyzer import enrich_explicit_interactions
+from backend.services.temporal_video_fusion import (
+    KISQuery,
+    aggregate_kis_rankings,
+    build_kis_queries,
+    fuse_summary_and_kis,
+)
 
 
 def _filter_upstream_results(results: list[Any], batch_ids: list[str], video_ids: list[str]) -> list[Any]:
@@ -263,9 +269,9 @@ class SearchService:
         video_ids: list[str] | None = None,
         top_k_videos: int = 20,
         summary_weight: float = 0.75,
-        event_weight: float = 0.25,
+        kis_weight: float = 0.25,
     ) -> dict[str, Any]:
-        """Rank candidate videos without resolving temporal event anchors."""
+        """Rank videos by summary evidence and the existing frame-level KIS."""
 
         try:
             payload = await self.dev2.search_temporal_videos(
@@ -273,13 +279,130 @@ class SearchService:
                     "query": query,
                     "batch_ids": batch_ids or [],
                     "video_ids": video_ids or [],
-                    "top_k_videos": top_k_videos,
-                    "summary_weight": summary_weight,
-                    "event_weight": event_weight,
+                    # Pull a deeper summary pool before combining it with KIS.
+                    "top_k_videos": min(100, max(50, top_k_videos * 5)),
+                    # Dev2 owns summary retrieval and the one-shot temporal
+                    # parse.  Frame KIS fusion happens here, where both Dev1
+                    # visual embeddings and Dev2 captions are available.
+                    "summary_weight": 1.0,
+                    "event_weight": 0.0,
                 }
             )
         except Exception as exc:
             raise UpstreamError(f"Failed to select temporal videos from Dev2: {exc}") from exc
         if not isinstance(payload, dict):
             raise UpstreamError("Dev2 temporal video response must be an object")
+
+        data = payload.get("data")
+        if not isinstance(data, dict):
+            raise UpstreamError("Dev2 temporal video response has no data object")
+        summary_candidates = data.get("candidates")
+        if not isinstance(summary_candidates, list):
+            summary_candidates = []
+
+        kis_queries = build_kis_queries(query, data.get("query_plan")) if kis_weight > 0 else []
+        frame_pool = min(500, max(200, top_k_videos * 15))
+        kis_rankings: list[tuple[KISQuery, list[SearchHit]]] = []
+        if kis_queries:
+            ranking_results = await asyncio.gather(
+                *(
+                    self._search_temporal_kis_query(
+                        spec,
+                        top_k=frame_pool,
+                        batch_ids=batch_ids or [],
+                        video_ids=video_ids or [],
+                    )
+                    for spec in kis_queries
+                )
+            )
+            kis_rankings = list(zip(kis_queries, ranking_results))
+
+        kis_scores, kis_evidence = aggregate_kis_rankings(kis_rankings)
+        candidates = fuse_summary_and_kis(
+            summary_candidates,
+            kis_scores,
+            kis_evidence,
+            summary_weight=summary_weight,
+            kis_weight=kis_weight,
+            top_k=top_k_videos,
+        )
+        weight_total = summary_weight + kis_weight
+        weights = {
+            "summary": round(summary_weight / weight_total, 8),
+            "kis": round(kis_weight / weight_total, 8),
+        }
+        data.update(
+            {
+                "mode": "temporal_video_selection_summary_kis",
+                "selected_video_id": candidates[0]["video_id"] if candidates else None,
+                "candidates": candidates,
+                "weights": weights,
+                "kis": {
+                    "query_count": len(kis_queries),
+                    "frame_pool": frame_pool,
+                    "video_hits": len(kis_scores),
+                    "queries": [
+                        {
+                            "event_id": spec.event_id,
+                            "description": spec.description,
+                            "visual_prompt": spec.visual_prompt,
+                        }
+                        for spec in kis_queries
+                    ],
+                },
+                "video_selection": {
+                    "mode": "summary_kis_fusion",
+                    "selected_video_id": candidates[0]["video_id"] if candidates else None,
+                    "candidates": candidates,
+                    "weights": weights,
+                },
+            }
+        )
         return payload
+
+    async def _search_temporal_kis_query(
+        self,
+        spec: KISQuery,
+        *,
+        top_k: int,
+        batch_ids: list[str],
+        video_ids: list[str],
+    ) -> list[SearchHit]:
+        """Run one temporal subquery through visual embeddings and captions."""
+
+        dev1_task = self.dev1.search_text(
+            {
+                "visual_prompt": spec.visual_prompt,
+                "prompt_variants": list(spec.prompt_variants),
+                "batch_ids": batch_ids,
+                "video_ids": video_ids,
+                "top_k": top_k,
+            }
+        )
+        dev2_task = self.dev2.search_text(
+            {
+                "keywords": list(spec.semantic_keywords),
+                "batch_ids": batch_ids,
+                "video_ids": video_ids,
+                "collapse_visual_duplicates": True,
+                "top_k": top_k,
+            }
+        )
+        dev1_res, dev2_res = await asyncio.gather(dev1_task, dev2_task, return_exceptions=True)
+        rankings = {}
+        if not isinstance(dev1_res, Exception):
+            rankings["dev1"] = _filter_upstream_results(
+                normalize_upstream_results(dev1_res, source="dev1"), batch_ids, video_ids
+            )
+        if not isinstance(dev2_res, Exception):
+            rankings["dev2"] = _filter_upstream_results(
+                normalize_upstream_results(dev2_res, source="dev2"), batch_ids, video_ids
+            )
+        if not rankings:
+            return []
+        return reciprocal_rank_fusion(
+            rankings,
+            limit=top_k,
+            thumbnail_base_url=self.settings.thumbnail_base_url,
+            source_weights={"dev1": 0.5, "dev2": 0.5},
+        )
