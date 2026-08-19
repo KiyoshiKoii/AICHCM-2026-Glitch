@@ -744,6 +744,76 @@ def test_skip_duplicate_ocr_leaves_copied_ocr_empty(tmp_path, monkeypatch):
     assert records[1]["ocr_source_frame_id"] == ""
 
 
+def test_video_range_processes_only_requested_video_suffixes(tmp_path, monkeypatch):
+    keyframe_root = tmp_path / "keyframes"
+    for video_id in ("L99_V001", "L99_V002", "L99_V003"):
+        video_dir = keyframe_root / video_id
+        video_dir.mkdir(parents=True)
+        Image.new("RGB", (100, 100), "white").save(video_dir / "001.jpg")
+
+    class FakeExtractor:
+        def __init__(self, **_kwargs):
+            pass
+
+        @staticmethod
+        def batch_paths(image_paths, **_kwargs):
+            return [list(image_paths)] if image_paths else []
+
+        def extract_batch(self, image_paths, **_kwargs):
+            return [
+                CompactVisualRecord(
+                    frame_id=frame_id_from_path(path),
+                    caption="Range-selected frame.",
+                    detailed_caption="Metadata from a range-selected frame.",
+                )
+                for path in image_paths
+            ]
+
+        def extract_ocr_batch(self, *_args, **_kwargs):
+            return []
+
+    monkeypatch.setattr(gemini_visual_extractor, "GeminiVisualExtractor", FakeExtractor)
+    output_dir = tmp_path / "metadata" / "caption"
+
+    summary = run_extraction(
+        keyframe_root,
+        output_dir,
+        api_key="test-key",
+        global_filter_results_path=None,
+        video_prefix="L99",
+        video_start=2,
+        video_end=3,
+        with_duplicate_ocr=False,
+    )
+
+    assert summary["processed"] == 2
+    assert (output_dir / "L99" / "L99_V002.json").is_file()
+    assert (output_dir / "L99" / "L99_V003.json").is_file()
+    assert not (output_dir / "L99" / "L99_V001.json").exists()
+
+
+def test_video_range_requires_prefix_and_both_bounds(tmp_path):
+    keyframe_root = tmp_path / "keyframes"
+    keyframe_root.mkdir()
+
+    with pytest.raises(ValueError, match="require video_prefix"):
+        run_extraction(
+            keyframe_root,
+            tmp_path / "output",
+            api_key="test-key",
+            video_start=1,
+            video_end=2,
+        )
+    with pytest.raises(ValueError, match="provided together"):
+        run_extraction(
+            keyframe_root,
+            tmp_path / "output",
+            api_key="test-key",
+            video_prefix="L99",
+            video_start=1,
+        )
+
+
 def test_daily_request_arguments_do_not_stop_local_extraction(
     tmp_path, monkeypatch
 ):

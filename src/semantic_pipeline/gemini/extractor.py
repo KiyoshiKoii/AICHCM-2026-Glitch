@@ -1042,6 +1042,8 @@ def run_extraction(
     daily_requests_already_used: int = 0,
     request_budget_state_path: str | Path | None = None,
     video_prefix: str | None = None,
+    video_start: int | None = None,
+    video_end: int | None = None,
     with_duplicate_ocr: bool = True,
 ) -> dict[str, int]:
     input_dir = Path(input_dir)
@@ -1056,6 +1058,13 @@ def run_extraction(
         daily_request_limit,
         daily_requests_already_used,
     )
+    if (video_start is None) != (video_end is None):
+        raise ValueError("video_start and video_end must be provided together")
+    if video_start is not None:
+        if video_prefix is None:
+            raise ValueError("video_start and video_end require video_prefix")
+        if video_start < 1 or video_end < video_start:
+            raise ValueError("video range must satisfy 1 <= video_start <= video_end")
 
     all_image_paths = sorted(
         path
@@ -1073,6 +1082,16 @@ def run_extraction(
                 f"{normalized_prefix}_"
             )
         ]
+        if video_start is not None:
+            all_image_paths = [
+                path
+                for path in all_image_paths
+                if video_start
+                <= int(
+                    parse_frame_id(frame_id_from_path(path)).video_name.rsplit("_V", 1)[1]
+                )
+                <= video_end
+            ]
     all_paths_by_frame = {
         frame_id_from_path(path): path for path in all_image_paths
     }
@@ -1383,6 +1402,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Only process videos whose IDs start with this batch prefix, for example L21",
     )
     parser.add_argument(
+        "--video-start",
+        type=int,
+        help="First numeric video suffix to process, for example 1 for L26_V001",
+    )
+    parser.add_argument(
+        "--video-end",
+        type=int,
+        help="Last numeric video suffix to process, for example 100 for L26_V100",
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         default=Path("data/metadata/caption"),
@@ -1479,6 +1508,8 @@ def main() -> None:
             daily_requests_already_used=args.daily_requests_already_used,
             request_budget_state_path=args.request_budget_state,
             video_prefix=args.video_prefix,
+            video_start=args.video_start,
+            video_end=args.video_end,
             with_duplicate_ocr=not args.skip_duplicate_ocr,
         )
     except Exception as exc:
