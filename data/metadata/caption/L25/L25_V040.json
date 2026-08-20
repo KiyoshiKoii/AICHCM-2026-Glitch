@@ -24,7 +24,7 @@
     "detailed_caption": "A light blue channel logo is centered on a minimal gray studio background. The studio floor has a soft reflection below the text. The scene is clean and brightly lit.",
     "caption_vi": "Logo kênh màu xanh nhạt nằm ở trung tâm trên phông nền phòng thu màu xám tối giản.",
     "detailed_caption_vi": "Logo kênh màu xanh nhạt nằm ở trung tâm trên phông nền phòng thu màu xám tối giản. Sàn phòng thu có hiệu ứng phản chiếu mờ phía dưới dòng chữ. Cảnh quay sạch sẽ và sáng sủa.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -72,7 +72,7 @@
     "detailed_caption": "An educational title slide displays yellow and cyan text against a dark blue gradient background with faint network graph patterns. The top lines state the subject and lesson topic in yellow and cyan font. The lower section displays presenter credentials in yellow text.",
     "caption_vi": "Slide tiêu đề giáo dục hiển thị văn bản màu vàng và xanh lam trên nền gradient xanh đậm có hình ảnh mạng.",
     "detailed_caption_vi": "Slide tiêu đề giáo dục hiển thị văn bản màu vàng và xanh lam trên nền gradient xanh đậm có các đường nét mạng lưới mờ. Các dòng trên cùng nêu tên môn học và chủ đề bài học bằng phông chữ màu vàng và xanh lam. Phần dưới hiển thị thông tin người trình bày bằng chữ màu vàng.",
-    "ocr_text": "ÔN TẬP MÔN VẬT LÝ CHUYÊN ĐỀ 6 CÁC LOẠI MÁY ĐIỆN SỰ TRUYỀN TẢI ĐIỆN Giáo viên hướng dẫn: ThS. HUỲNH KIỀU VIẾT LÃM Giáo viên môn Vật lý Trường THPT TENLỢMAN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -184,7 +184,7 @@
     "detailed_caption": "A medium shot shows one person wearing a white long-sleeve shirt and glasses, seated behind a silver laptop on a white desk. A blue background with digital graphic elements is behind the desk, and a digital interface overlay is visible on the right side.",
     "caption_vi": "Một người mặc áo trắng và đeo kính ngồi sau máy tính xách tay trong phòng thu màu xanh.",
     "detailed_caption_vi": "Cảnh trung cho thấy một người mặc áo sơ mi dài tay màu trắng và đeo kính, ngồi sau máy tính xách tay màu bạc trên bàn làm việc màu trắng. Phía sau bàn là phông nền màu xanh lam có các yếu tố đồ họa kỹ thuật số.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -255,13 +255,15 @@
   },
   {
     "frame_id": "L25_V040_f0007",
-    "visual_source_frame_id": "L25_V040_f0007",
+    "visual_source_frame_id": "L25_V040_f0005",
     "ocr_source_frame_id": "L25_V040_f0007",
-    "quality_flags": [],
-    "caption": "A man wearing glasses and a white button-down shirt sits behind a laptop in a studio with a blue background.",
-    "detailed_caption": "A medium shot shows one man sitting behind a silver laptop in a studio setting. The man has short black hair, wears clear-framed glasses and a long-sleeved white button-down shirt, and faces forward. The background is a blue patterned wall with a large rectangular inset screen on the right.",
-    "caption_vi": "Một nam giáo viên đeo kính và mặc áo sơ mi trắng ngồi phía sau máy tính xách tay trong phòng thu với phông nền màu xanh.",
-    "detailed_caption_vi": "Cận cảnh trung bình cho thấy một người đàn ông ngồi sau máy tính xách tay màu bạc trong một phòng thu. Người đàn ông có tóc đen ngắn, đeo kính gọng trong và mặc áo sơ mi trắng dài tay, hướng về phía trước. Phông nền là một bức tường màu xanh có màn hình lồng vào ở bên phải.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person in a white shirt and glasses sits behind a laptop in a blue studio.",
+    "detailed_caption": "A medium shot shows one person wearing a white long-sleeve shirt and glasses, seated behind a silver laptop on a white desk. A blue background with digital graphic elements is behind the desk, and a digital interface overlay is visible on the right side.",
+    "caption_vi": "Một người mặc áo trắng và đeo kính ngồi sau máy tính xách tay trong phòng thu màu xanh.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một người mặc áo sơ mi dài tay màu trắng và đeo kính, ngồi sau máy tính xách tay màu bạc trên bàn làm việc màu trắng. Phía sau bàn là phông nền màu xanh lam có các yếu tố đồ họa kỹ thuật số.",
     "ocr_text": "THANH NIÊN THs. HUỲNH KIỀU VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
@@ -269,16 +271,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11299999999999999,
-          0.7220000000000001,
-          0.438,
-          0.9939999999999999
+          0.11399999999999999,
+          0.725,
+          0.44000000000000006,
+          0.9930000000000001
         ],
-        "description": "silver laptop with asus logo",
-        "description_vi": "máy tính xách tay màu bạc có logo asus",
+        "description": "silver laptop on white desk",
+        "description_vi": "máy tính xách tay màu bạc trên bàn trắng",
         "attributes": [
           "silver",
-          "laptop"
+          "portable"
         ],
         "action": ""
       },
@@ -286,20 +288,36 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.1,
+          0.10600000000000001,
           0.171,
           0.487,
-          0.992
+          0.995
         ],
-        "description": "man wearing glasses and a white button-down shirt",
-        "description_vi": "nam giới đeo kính và mặc áo sơ mi trắng",
+        "description": "person in white long-sleeve shirt and glasses",
+        "description_vi": "người mặc áo sơ mi dài tay màu trắng và đeo kính",
         "attributes": [
-          "man",
+          "white",
           "glasses",
-          "white shirt",
-          "short hair"
+          "long-sleeve"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.475,
+          0.008,
+          0.9960000000000001,
+          0.528
+        ],
+        "description": "digital display window on blue background",
+        "description_vi": "cửa sổ hiển thị kỹ thuật số trên nền xanh",
+        "attributes": [
+          "blue",
+          "digital"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -326,7 +344,7 @@
     "detailed_caption": "A medium shot shows one person wearing a white long-sleeve shirt and glasses, seated behind a silver laptop on a white desk. A blue background with digital graphic elements is behind the desk, and a digital interface overlay is visible on the right side.",
     "caption_vi": "Một người mặc áo trắng và đeo kính ngồi sau máy tính xách tay trong phòng thu màu xanh.",
     "detailed_caption_vi": "Cảnh trung cho thấy một người mặc áo sơ mi dài tay màu trắng và đeo kính, ngồi sau máy tính xách tay màu bạc trên bàn làm việc màu trắng. Phía sau bàn là phông nền màu xanh lam có các yếu tố đồ họa kỹ thuật số.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -2064,7 +2082,7 @@
     "detailed_caption": "A close-up shot shows a hand holding an orange and black pencil, writing notes in cursive on lined paper inside an open notebook. Other written text and notebooks are visible on the blurred desk surface.",
     "caption_vi": "Một người đang viết ghi chú bằng tay vào vở bằng một cây bút chì màu cam và đen.",
     "detailed_caption_vi": "Cảnh quay cận cảnh cho thấy một bàn tay đang cầm một cây bút chì màu cam và đen, viết các ghi chú chữ thảo trên giấy kẻ dòng bên trong một cuốn vở mở. Các chữ viết khác và vở nằm trên mặt bàn mờ ảo phía sau.",
-    "ocr_text": "Put the",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3711,7 +3729,7 @@
     "detailed_caption": "A medium shot displays a man wearing glasses and a white shirt seated at a white desk with a laptop. A lower-third overlay at the bottom right displays his name and professional title in Vietnamese. The background is blue with a digital pattern and an upper educational banner.",
     "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng ngồi bàn làm việc với máy tính xách tay và bảng tên phía dưới.",
     "detailed_caption_vi": "Cảnh trung hiển thị một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi tại bàn làm việc màu trắng có máy tính xách tay. Một lớp phủ đồ họa ở góc dưới bên phải hiển thị tên và chức danh nghề nghiệp của anh bằng tiếng Việt. Nền màu xanh lam với họa tiết kỹ thuật số và biểu ngữ giáo dục phía trên.",
-    "ocr_text": "THANH NIÊN ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM ThS. HUỲNH KIỀU VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3808,7 +3826,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3843,7 +3861,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3878,7 +3896,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3913,7 +3931,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3948,7 +3966,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3983,7 +4001,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4018,7 +4036,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4053,7 +4071,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4088,7 +4106,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4123,7 +4141,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4158,7 +4176,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4193,7 +4211,7 @@
     "detailed_caption": "A wide shot shows an educational computer slide with yellow navigation buttons at the top, a red title box, and a definition of an alternating current generator in Vietnamese. The background is plain white with small interface icons in the bottom corners.",
     "caption_vi": "Một slide giáo dục trình bày các khái niệm vật lý về máy phát điện xoay chiều trên nền trắng.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide máy tính giáo dục với các nút điều hướng màu vàng ở phía trên, một hộp tiêu đề màu đỏ, và định nghĩa về máy phát điện xoay chiều bằng tiếng Việt. Nền màu trắng đơn giản với các biểu tượng giao diện nhỏ ở các góc dưới.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4294,7 +4312,7 @@
     "detailed_caption": "A wide shot shows an educational white slide containing formulas, a generator diagram, and a waveform graph. The upper sections outline alternating current generators and single-phase generator frequency formulas, while the bottom includes a three-phase generator diagram and wave graph.",
     "caption_vi": "Một slide giáo dục hiển thị các công thức vật lý và sơ đồ cho máy phát điện xoay chiều một pha và ba pha.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide trắng giáo dục chứa các công thức, sơ đồ máy phát điện, và đồ thị sóng. Các phần trên phác thảo máy phát điện xoay chiều và công thức tần số máy phát điện một pha, trong khi phần dưới bao gồm sơ đồ máy phát điện ba pha và biểu đồ sóng.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4329,7 +4347,7 @@
     "detailed_caption": "A wide shot shows an educational white slide containing formulas, a generator diagram, and a waveform graph. The upper sections outline alternating current generators and single-phase generator frequency formulas, while the bottom includes a three-phase generator diagram and wave graph.",
     "caption_vi": "Một slide giáo dục hiển thị các công thức vật lý và sơ đồ cho máy phát điện xoay chiều một pha và ba pha.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide trắng giáo dục chứa các công thức, sơ đồ máy phát điện, và đồ thị sóng. Các phần trên phác thảo máy phát điện xoay chiều và công thức tần số máy phát điện một pha, trong khi phần dưới bao gồm sơ đồ máy phát điện ba pha và biểu đồ sóng.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4364,7 +4382,7 @@
     "detailed_caption": "A wide shot shows an educational white slide containing formulas, a generator diagram, and a waveform graph. The upper sections outline alternating current generators and single-phase generator frequency formulas, while the bottom includes a three-phase generator diagram and wave graph.",
     "caption_vi": "Một slide giáo dục hiển thị các công thức vật lý và sơ đồ cho máy phát điện xoay chiều một pha và ba pha.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide trắng giáo dục chứa các công thức, sơ đồ máy phát điện, và đồ thị sóng. Các phần trên phác thảo máy phát điện xoay chiều và công thức tần số máy phát điện một pha, trong khi phần dưới bao gồm sơ đồ máy phát điện ba pha và biểu đồ sóng.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4465,7 +4483,7 @@
     "detailed_caption": "A wide shot shows a split educational slide divided by a red vertical line. The left panel contains alternating current generator formulas, graphs, and circuit schematics. The right panel displays a technical illustration of a transformer with primary and secondary coils.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và hình minh họa máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi bởi một đường dọc màu đỏ. Bảng bên trái chứa các công thức máy phát điện xoay chiều, đồ thị và sơ đồ mạch. Bảng bên phải hiển thị hình minh họa kỹ thuật của một máy biến áp với các cuộn dây sơ cấp và thứ cấp.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4500,7 +4518,7 @@
     "detailed_caption": "A wide shot shows a split educational slide divided by a red vertical line. The left panel contains alternating current generator formulas, graphs, and circuit schematics. The right panel displays a technical illustration of a transformer with primary and secondary coils.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và hình minh họa máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi bởi một đường dọc màu đỏ. Bảng bên trái chứa các công thức máy phát điện xoay chiều, đồ thị và sơ đồ mạch. Bảng bên phải hiển thị hình minh họa kỹ thuật của một máy biến áp với các cuộn dây sơ cấp và thứ cấp.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4617,7 +4635,7 @@
     "detailed_caption": "A wide shot shows a split educational slide with a red vertical dividing line. The left side includes generator formulas and diagrams, and the right side displays transformer equations and adds a text heading for power loss during electrical transmission.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi với đường phân chia dọc màu đỏ. Bên trái bao gồm các công thức và sơ đồ máy phát điện, và bên phải hiển thị các phương trình máy biến áp cùng với tiêu đề văn bản về công suất hao phí khi truyền tải điện.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I2 / I1 Công suất hao phí khi truyền tải điện:",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4652,7 +4670,7 @@
     "detailed_caption": "A wide shot shows a split educational slide with a red vertical dividing line. The left side includes generator formulas and diagrams, and the right side displays transformer equations and adds a text heading for power loss during electrical transmission.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi với đường phân chia dọc màu đỏ. Bên trái bao gồm các công thức và sơ đồ máy phát điện, và bên phải hiển thị các phương trình máy biến áp cùng với tiêu đề văn bản về công suất hao phí khi truyền tải điện.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I2 / I1 Công suất hao phí khi truyền tải điện:",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4687,7 +4705,7 @@
     "detailed_caption": "A wide shot shows a split educational slide with a red vertical dividing line. The left side includes generator formulas and diagrams, and the right side displays transformer equations and adds a text heading for power loss during electrical transmission.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi với đường phân chia dọc màu đỏ. Bên trái bao gồm các công thức và sơ đồ máy phát điện, và bên phải hiển thị các phương trình máy biến áp cùng với tiêu đề văn bản về công suất hao phí khi truyền tải điện.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I2 / I1 Công suất hao phí khi truyền tải điện:",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4722,7 +4740,7 @@
     "detailed_caption": "A wide shot shows a split educational slide with a red vertical dividing line. The left side includes generator formulas and diagrams, and the right side displays transformer equations and adds a text heading for power loss during electrical transmission.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi với đường phân chia dọc màu đỏ. Bên trái bao gồm các công thức và sơ đồ máy phát điện, và bên phải hiển thị các phương trình máy biến áp cùng với tiêu đề văn bản về công suất hao phí khi truyền tải điện.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I2 / I1 Công suất hao phí khi truyền tải điện:",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4757,7 +4775,7 @@
     "detailed_caption": "A wide shot shows a split educational slide with a red vertical dividing line. The left side includes generator formulas and diagrams, and the right side displays transformer equations and adds a text heading for power loss during electrical transmission.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi với đường phân chia dọc màu đỏ. Bên trái bao gồm các công thức và sơ đồ máy phát điện, và bên phải hiển thị các phương trình máy biến áp cùng với tiêu đề văn bản về công suất hao phí khi truyền tải điện.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I2 / I1 Công suất hao phí khi truyền tải điện:",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4792,7 +4810,7 @@
     "detailed_caption": "A wide shot shows a split educational slide with a red vertical dividing line. The left side includes generator formulas and diagrams, and the right side displays transformer equations and adds a text heading for power loss during electrical transmission.",
     "caption_vi": "Một slide giáo dục chia đôi trình bày các công thức vật lý cho máy phát điện và máy biến áp.",
     "detailed_caption_vi": "Cảnh toàn cho thấy một slide giáo dục chia đôi với đường phân chia dọc màu đỏ. Bên trái bao gồm các công thức và sơ đồ máy phát điện, và bên phải hiển thị các phương trình máy biến áp cùng với tiêu đề văn bản về công suất hao phí khi truyền tải điện.",
-    "ocr_text": "ÔN THI THPT VẬT LÍ NĂM 2024 CĐ6: CÁC LOẠI MÁY ĐIỆN – SỰ TRUYỀN TẢI ĐIỆN KIẾN THỨC TRỌNG TÂM Máy phát điện xoay chiều ĐN: Thiết bị tạo ra dòng điện xoay chiều dựa trên hiện tượng cảm ứng điện từ. Từ thông qua khung dây: Φ = NBS cos(ωt + φ) Suất điện động: e = ωNBS cos(ωt + φ - π/2) Máy phát điện một pha: f = p.n(v/giây) = p.n(v/phút) / 60 Máy phát điện xoay chiều ba pha e1 = E0 cos(ωt) e2 = E0 cos(ωt - 2π/3) e3 = E0 cos(ωt + 2π/3) Máy biến áp – Sự truyền tải điện Cuộn sơ cấp Cuộn thứ cấp Công thức máy biến áp: U1 / U2 = N1 / N2 = E1 / E2 = I2 / I1 Công suất hao phí khi truyền tải điện:",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5115,7 +5133,7 @@
     "detailed_caption": "A man wearing glasses and a white collared shirt sits behind a silver laptop on the left. On the right, a white display screen shows a physics problem in Vietnamese. A lower-third graphic with a teacher's name appears at the bottom right.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi trắng ngồi bên máy tính xách tay cạnh màn hình thuyết trình chứa bài tập vật lý.",
     "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi có cổ màu trắng ngồi phía sau máy tính xách tay màu bạc ở bên trái. Ở bên phải, một màn hình hiển thị màu trắng hiển thị bài tập vật lý bằng tiếng Việt. Đồ họa dòng chữ hiển thị tên giáo viên ở góc dưới bên phải.",
-    "ocr_text": "THANH NIÊN Câu 1: Một máy biến áp lí tưởng có số vòng dây của cuộn sơ cấp và số vòng dây của cuộn thứ cấp lần lượt là N1 vòng và N2 = 120 vòng. Đặt điện áp xoay chiều có giá trị hiệu dụng 220V vào hai đầu cuộn sơ cấp thì điện áp hiệu dụng giữa hai đầu cuộn thứ cấp để hở là 6V. Giá trị của N1 là (TN THPT 2023) ThS. HUỲNH KIỀU VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5193,7 +5211,7 @@
     "detailed_caption": "A man wearing glasses and a white collared shirt sits behind a silver laptop on the left. On the right, a white display screen shows a physics problem in Vietnamese. A lower-third graphic with a teacher's name appears at the bottom right.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi trắng ngồi bên máy tính xách tay cạnh màn hình thuyết trình chứa bài tập vật lý.",
     "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi có cổ màu trắng ngồi phía sau máy tính xách tay màu bạc ở bên trái. Ở bên phải, một màn hình hiển thị màu trắng hiển thị bài tập vật lý bằng tiếng Việt. Đồ họa dòng chữ hiển thị tên giáo viên ở góc dưới bên phải.",
-    "ocr_text": "THANH NIÊN Câu 1: Một máy biến áp lí tưởng có số vòng dây của cuộn sơ cấp và số vòng dây của cuộn thứ cấp lần lượt là N1 vòng và N2 = 120 vòng. Đặt điện áp xoay chiều có giá trị hiệu dụng 220V vào hai đầu cuộn sơ cấp thì điện áp hiệu dụng giữa hai đầu cuộn thứ cấp để hở là 6V. Giá trị của N1 là (TN THPT 2023) ThS. HUỲNH KIỀU VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5271,7 +5289,7 @@
     "detailed_caption": "A man wearing glasses and a white collared shirt sits behind a silver laptop on the left. On the right, a white display screen shows a physics problem in Vietnamese. A lower-third graphic with a teacher's name appears at the bottom right.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi trắng ngồi bên máy tính xách tay cạnh màn hình thuyết trình chứa bài tập vật lý.",
     "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi có cổ màu trắng ngồi phía sau máy tính xách tay màu bạc ở bên trái. Ở bên phải, một màn hình hiển thị màu trắng hiển thị bài tập vật lý bằng tiếng Việt. Đồ họa dòng chữ hiển thị tên giáo viên ở góc dưới bên phải.",
-    "ocr_text": "THANH NIÊN Câu 1: Một máy biến áp lí tưởng có số vòng dây của cuộn sơ cấp và số vòng dây của cuộn thứ cấp lần lượt là N1 vòng và N2 = 120 vòng. Đặt điện áp xoay chiều có giá trị hiệu dụng 220V vào hai đầu cuộn sơ cấp thì điện áp hiệu dụng giữa hai đầu cuộn thứ cấp để hở là 6V. Giá trị của N1 là (TN THPT 2023) ThS. HUỲNH KIỀU VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5425,7 +5443,7 @@
     "detailed_caption": "A man wearing glasses and a white shirt sits in front of a blue background with a silver laptop. A presentation screen on the right displays a physics problem text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi trắng ngồi cạnh máy tính xách tay và màn hình thuyết trình hiển thị bài toán vật lý.",
     "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng ngồi trước nền xanh dương với máy tính xách tay màu bạc. Màn hình thuyết trình ở bên phải hiển thị văn bản bài toán vật lý bằng tiếng Việt.",
-    "ocr_text": "THANH NIÊN Câu 1: Một máy biến áp lí tưởng có số vòng dây của cuộn sơ cấp và số vòng dây của cuộn thứ cấp lần lượt là N1 vòng và N2 = 120 vòng. Đặt điện áp xoay chiều có giá trị hiệu dụng 220V vào hai đầu cuộn sơ cấp thì điện áp hiệu dụng giữa hai đầu cuộn thứ cấp để hở là 6V. Giá trị của N1 là (TN THPT 2023)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5744,7 +5762,7 @@
     "detailed_caption": "An educational slide displays a physics question at the top, four multiple-choice options, and solution equations in the middle. At the bottom, a highlighted yellow box shows the final answer 'N1 = 4400 vòng'.",
     "caption_vi": "Một slide giáo dục hiển thị hộp kết quả tính toán cho bài toán máy biến áp vật lý.",
     "detailed_caption_vi": "Một slide giáo dục hiển thị câu hỏi vật lý ở phía trên, bốn lựa chọn trắc nghiệm và các phương trình giải ở giữa. Ở phía dưới, một hộp màu vàng được đánh dấu hiển thị đáp án cuối cùng 'N1 = 4400 vòng'.",
-    "ocr_text": "Câu 1: Một máy biến áp lí tưởng có số vòng dây của cuộn sơ cấp và số vòng dây của cuộn thứ cấp lần lượt là N1 vòng và N2 = 120 vòng. Đặt điện áp xoay chiều có giá trị hiệu dụng 220V vào hai đầu cuộn sơ cấp thì điện áp hiệu dụng giữa hai đầu cuộn thứ cấp để hở là 6V. Giá trị của N1 là (TN THPT 2023) A 1100 vòng B 2200 vòng C 2400 vòng D 4400 vòng Bài giải \\frac{U_1}{U_2} = \\frac{N_1}{N_2} \\frac{220}{6} = \\frac{N_1}{120} N_1 = 4400 vòng",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5956,7 +5974,7 @@
     "detailed_caption": "An educational presentation slide shows a physics question regarding a single-phase alternating current generator at the top. Four multiple-choice options labeled A, B, C, and D are displayed across yellow boxes below the question.",
     "caption_vi": "Một slide giáo dục hiển thị câu hỏi trắc nghiệm vật lý về máy phát điện xoay chiều.",
     "detailed_caption_vi": "Một slide thuyết trình giáo dục hiển thị câu hỏi vật lý về máy phát điện xoay chiều một pha ở phía trên. Bốn lựa chọn trắc nghiệm được đánh nhãn A, B, C và D hiển thị qua các hộp màu vàng bên dưới câu hỏi.",
-    "ocr_text": "Câu 2: Một máy phát điện xoay chiều một pha khi hoạt động tạo ra suất điện động e = 120\\sqrt{2}\\cos 100\\pi t (V). Giá trị hiệu dụng của suất điện động này là bao nhiêu? (TN THPT 2022) A 60V B 120\\sqrt{2}V C 100\\pi V D 120V Bài giải",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5991,7 +6009,7 @@
     "detailed_caption": "An educational presentation slide shows a physics question regarding a single-phase alternating current generator at the top. Four multiple-choice options labeled A, B, C, and D are displayed across yellow boxes below the question.",
     "caption_vi": "Một slide giáo dục hiển thị câu hỏi trắc nghiệm vật lý về máy phát điện xoay chiều.",
     "detailed_caption_vi": "Một slide thuyết trình giáo dục hiển thị câu hỏi vật lý về máy phát điện xoay chiều một pha ở phía trên. Bốn lựa chọn trắc nghiệm được đánh nhãn A, B, C và D hiển thị qua các hộp màu vàng bên dưới câu hỏi.",
-    "ocr_text": "Câu 2: Một máy phát điện xoay chiều một pha khi hoạt động tạo ra suất điện động e = 120\\sqrt{2}\\cos 100\\pi t (V). Giá trị hiệu dụng của suất điện động này là bao nhiêu? (TN THPT 2022) A 60V B 120\\sqrt{2}V C 100\\pi V D 120V Bài giải",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6026,7 +6044,7 @@
     "detailed_caption": "An educational presentation slide shows a physics question regarding a single-phase alternating current generator at the top. Four multiple-choice options labeled A, B, C, and D are displayed across yellow boxes below the question.",
     "caption_vi": "Một slide giáo dục hiển thị câu hỏi trắc nghiệm vật lý về máy phát điện xoay chiều.",
     "detailed_caption_vi": "Một slide thuyết trình giáo dục hiển thị câu hỏi vật lý về máy phát điện xoay chiều một pha ở phía trên. Bốn lựa chọn trắc nghiệm được đánh nhãn A, B, C và D hiển thị qua các hộp màu vàng bên dưới câu hỏi.",
-    "ocr_text": "Câu 2: Một máy phát điện xoay chiều một pha khi hoạt động tạo ra suất điện động e = 120\\sqrt{2}\\cos 100\\pi t (V). Giá trị hiệu dụng của suất điện động này là bao nhiêu? (TN THPT 2022) A 60V B 120\\sqrt{2}V C 100\\pi V D 120V Bài giải",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8839,13 +8857,15 @@
   },
   {
     "frame_id": "L25_V040_f0175",
-    "visual_source_frame_id": "L25_V040_f0175",
+    "visual_source_frame_id": "L25_V040_f0174",
     "ocr_source_frame_id": "L25_V040_f0175",
-    "quality_flags": [],
-    "caption": "A man wearing glasses and a white button-down shirt sits behind a laptop next to an educational display board.",
-    "detailed_caption": "A medium shot shows a man seated at a desk with a silver laptop in front of him against a blue background. The man wears glasses and a white button-down shirt. To his right is a white display board featuring physics text in Vietnamese.",
-    "caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng ngồi sau máy tính xách tay cạnh bảng hiển thị giáo dục.",
-    "detailed_caption_vi": "Khung hình trung bình cho thấy một người đàn ông ngồi bên bàn làm việc với máy tính xách tay màu bạc trước mặt trên phông nền màu xanh. Người đàn ông đeo kính và mặc áo sơ mi trắng. Bên phải anh ta là một bảng hiển thị màu trắng có nội dung văn bản vật lý bằng tiếng Việt.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male teacher wearing glasses sits at a desk with a laptop in front of a blue background.",
+    "detailed_caption": "A medium shot shows a male teacher wearing glasses and a white collared shirt seated behind an open silver laptop on a white desk. A blank white slide area appears on the right against a blue patterned backdrop, with the text 'THANH NIÊN' in the top-left corner.",
+    "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay trước phông nền xanh.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên đeo kính và mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu bạc trên bàn trắng. Khu vực bảng trắng trống hiển thị bên phải trên nền xanh, cùng dòng chữ 'THANH NIÊN' ở góc trên bên trái.",
     "ocr_text": "THANH NIÊN Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) Ths. HUỲNH KIẾN VIẾT LÃM Giáo viên môn Vật lý Trường THPT Ernst Thälmann (Q.1, TP.HCM)",
     "news_ticker_text": "",
     "detections": [
@@ -8853,16 +8873,16 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.11299999999999999,
-          0.723,
-          0.438,
-          0.995
+          0.11499999999999999,
+          0.719,
+          0.44000000000000006,
+          0.992
         ],
-        "description": "silver laptop",
-        "description_vi": "máy tính xách tay màu bạc",
+        "description": "a silver laptop with an ASUS logo on the lid",
+        "description_vi": "máy tính xách tay màu bạc có logo ASUS trên nắp",
         "attributes": [
           "silver",
-          "laptop"
+          "open"
         ],
         "action": ""
       },
@@ -8871,18 +8891,34 @@
         "label": "person",
         "bbox": [
           0.0,
-          0.175,
-          0.487,
-          0.9930000000000001
+          0.181,
+          0.479,
+          0.992
         ],
-        "description": "man wearing glasses and white shirt",
-        "description_vi": "nam giới đeo kính và mặc áo sơ mi trắng",
+        "description": "a male teacher wearing glasses and a white shirt",
+        "description_vi": "nam giáo viên đeo kính và mặc áo sơ mi trắng",
         "attributes": [
-          "man",
           "glasses",
           "white shirt"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "screen_0",
+        "label": "screen",
+        "bbox": [
+          0.475,
+          0.008,
+          0.9960000000000001,
+          0.527
+        ],
+        "description": "a white presentation screen showing instructional content area",
+        "description_vi": "màn hình trình bày màu trắng hiển thị vùng nội dung hướng dẫn",
+        "attributes": [
+          "white",
+          "rectangular"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
@@ -9063,7 +9099,7 @@
     "detailed_caption": "A medium shot shows a male teacher wearing glasses and a white shirt sitting at a white desk with an open silver laptop. Next to him on the right is a white board displaying a physics problem text about a single-phase AC generator.",
     "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh bảng trắng ghi đề bài vật lý.",
     "detailed_caption_vi": "Ảnh trung cảnh cho thấy nam giáo viên đeo kính và mặc áo sơ mi trắng ngồi tại bàn trắng với máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trắng hiển thị nội dung bài toán vật lý về máy phát điện xoay chiều một pha.",
-    "ocr_text": "THANH NIÊN Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9142,7 +9178,7 @@
     "detailed_caption": "A medium shot shows a male teacher wearing glasses and a white shirt sitting at a white desk with an open silver laptop. Next to him on the right is a white board displaying a physics problem text about a single-phase AC generator.",
     "caption_vi": "Một thầy giáo đeo kính ngồi bên máy tính xách tay cạnh bảng trắng ghi đề bài vật lý.",
     "detailed_caption_vi": "Ảnh trung cảnh cho thấy nam giáo viên đeo kính và mặc áo sơ mi trắng ngồi tại bàn trắng với máy tính xách tay màu bạc đang mở. Phía bên phải anh là bảng trắng hiển thị nội dung bài toán vật lý về máy phát điện xoay chiều một pha.",
-    "ocr_text": "THANH NIÊN Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9253,7 +9289,7 @@
     "detailed_caption": "A full-screen view shows an educational slide with a yellow question box at the top containing a physics problem in Vietnamese. Below it, four horizontal yellow option bars labeled A, B, C, and D present numerical answers.",
     "caption_vi": "Một trang chiếu hiển thị câu hỏi trắc nghiệm vật lý với bốn lựa chọn A, B, C và D.",
     "detailed_caption_vi": "Góc nhìn toàn màn hình hiển thị trang chiếu giáo dục với hộp câu hỏi màu vàng ở trên chứa bài toán vật lý tiếng Việt. Phía dưới là bốn thanh tùy chọn màu vàng nằm ngang được dán nhãn A, B, C và D trình bày các đáp án số.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9319,7 +9355,7 @@
     "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
     "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
     "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
-    "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9344,48 +9380,32 @@
   },
   {
     "frame_id": "L25_V040_f0184",
-    "visual_source_frame_id": "L25_V040_f0184",
+    "visual_source_frame_id": "L25_V040_f0182",
     "ocr_source_frame_id": "L25_V040_f0184",
-    "quality_flags": [],
-    "caption": "A physics slide displays a formula and a formula proportion box on a light blue background.",
-    "detailed_caption": "A physics slide displayed on a light blue background features the formula f equals p times n at the center and a formula proportion box below with an arrow pointing to it. The top of the frame shows a multiple-choice question and options A, B, C, and D in yellow and green boxes. At the bottom left, a small box contains text labeled Bài giải.",
-    "caption_vi": "Một slide vật lý hiển thị công thức và hộp tỉ lệ công thức trên nền xanh nhạt.",
-    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có công thức f bằng p nhân n ở giữa và hộp tỉ lệ công thức ở phía dưới với mũi tên trỏ vào. Phía trên khung hình hiển thị câu hỏi trắc nghiệm và các lựa chọn A, B, C, D trong các ô màu vàng và xanh lá. Ở góc dưới bên trái, một hộp nhỏ chứa văn bản có nhãn Bài giải.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
+    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
+    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
+    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
     "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
-        "bbox": [
-          0.22999999999999998,
-          0.57,
-          0.381,
-          0.775
-        ],
-        "description": "a yellow box with a ratio formula displayed inside",
-        "description_vi": "một hộp màu vàng có công thức tỉ lệ hiển thị bên trong",
-        "attributes": [
-          "yellow",
-          "formula"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
           0.0,
-          0.0,
-          1.0,
-          1.0
+          0.006,
+          0.998,
+          0.9939999999999999
         ],
-        "description": "a light blue educational slide showing physics formulas and multiple-choice options",
-        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và các lựa chọn trắc nghiệm",
+        "description": "an educational slide showing a physics problem and a formula solution",
+        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
         "attributes": [
-          "light blue",
-          "educational",
-          "formula"
+          "blue",
+          "text"
         ],
         "action": ""
       }
@@ -9394,48 +9414,32 @@
   },
   {
     "frame_id": "L25_V040_f0185",
-    "visual_source_frame_id": "L25_V040_f0185",
+    "visual_source_frame_id": "L25_V040_f0182",
     "ocr_source_frame_id": "L25_V040_f0185",
-    "quality_flags": [],
-    "caption": "A physics slide displays a formula and a formula proportion box on a light blue background.",
-    "detailed_caption": "A physics slide displayed on a light blue background features the formula f equals p times n at the center and a formula proportion box below with an arrow pointing to it. The top of the frame shows a multiple-choice question and options A, B, C, and D in yellow and green boxes. At the bottom left, a small box contains text labeled Bài giải.",
-    "caption_vi": "Một slide vật lý hiển thị công thức và hộp tỉ lệ công thức trên nền xanh nhạt.",
-    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có công thức f bằng p nhân n ở giữa và hộp tỉ lệ công thức ở phía dưới với mũi tên trỏ vào. Phía trên khung hình hiển thị câu hỏi trắc nghiệm và các lựa chọn A, B, C, D trong các ô màu vàng và xanh lá. Ở góc dưới bên trái, một hộp nhỏ chứa văn bản có nhãn Bài giải.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
+    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
+    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
+    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
     "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
-        "bbox": [
-          0.22999999999999998,
-          0.57,
-          0.381,
-          0.775
-        ],
-        "description": "a yellow box with a ratio formula displayed inside",
-        "description_vi": "một hộp màu vàng có công thức tỉ lệ hiển thị bên trong",
-        "attributes": [
-          "yellow",
-          "formula"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
           0.0,
-          0.0,
-          1.0,
-          1.0
+          0.006,
+          0.998,
+          0.9939999999999999
         ],
-        "description": "a light blue educational slide showing physics formulas and multiple-choice options",
-        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và các lựa chọn trắc nghiệm",
+        "description": "an educational slide showing a physics problem and a formula solution",
+        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
         "attributes": [
-          "light blue",
-          "educational",
-          "formula"
+          "blue",
+          "text"
         ],
         "action": ""
       }
@@ -9444,393 +9448,173 @@
   },
   {
     "frame_id": "L25_V040_f0186",
-    "visual_source_frame_id": "L25_V040_f0186",
+    "visual_source_frame_id": "L25_V040_f0182",
     "ocr_source_frame_id": "L25_V040_f0186",
-    "quality_flags": [],
-    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
-    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
-    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
-    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
+    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
+    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
+    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
     "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
-        "bbox": [
-          0.22999999999999998,
-          0.57,
-          0.381,
-          0.775
-        ],
-        "description": "a yellow box with a ratio formula",
-        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
-        "attributes": [
-          "yellow",
-          "formula"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "result_box_0",
-        "label": "result box",
-        "bbox": [
-          0.501,
-          0.623,
-          0.666,
-          0.7220000000000001
-        ],
-        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
-        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
-        "attributes": [
-          "yellow",
-          "result"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
           0.0,
-          0.0,
-          1.0,
-          1.0
+          0.006,
+          0.998,
+          0.9939999999999999
         ],
-        "description": "a light blue educational slide showing physics formulas and a solution result",
-        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
+        "description": "an educational slide showing a physics problem and a formula solution",
+        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
         "attributes": [
-          "light blue",
-          "educational",
-          "formula"
+          "blue",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "formula_box_0",
-        "predicate": "left_of",
-        "object_id": "result_box_0"
-      },
-      {
-        "subject_id": "result_box_0",
-        "predicate": "right_of",
-        "object_id": "formula_box_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V040_f0187",
-    "visual_source_frame_id": "L25_V040_f0187",
+    "visual_source_frame_id": "L25_V040_f0182",
     "ocr_source_frame_id": "L25_V040_f0187",
-    "quality_flags": [],
-    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
-    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
-    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
-    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
+    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
+    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
+    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
     "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
-        "bbox": [
-          0.22999999999999998,
-          0.57,
-          0.381,
-          0.775
-        ],
-        "description": "a yellow box with a ratio formula",
-        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
-        "attributes": [
-          "yellow",
-          "formula"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "result_box_0",
-        "label": "result box",
-        "bbox": [
-          0.501,
-          0.623,
-          0.666,
-          0.7220000000000001
-        ],
-        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
-        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
-        "attributes": [
-          "yellow",
-          "result"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
           0.0,
-          0.0,
-          1.0,
-          1.0
+          0.006,
+          0.998,
+          0.9939999999999999
         ],
-        "description": "a light blue educational slide showing physics formulas and a solution result",
-        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
+        "description": "an educational slide showing a physics problem and a formula solution",
+        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
         "attributes": [
-          "light blue",
-          "educational",
-          "formula"
+          "blue",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "formula_box_0",
-        "predicate": "left_of",
-        "object_id": "result_box_0"
-      },
-      {
-        "subject_id": "result_box_0",
-        "predicate": "right_of",
-        "object_id": "formula_box_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V040_f0188",
-    "visual_source_frame_id": "L25_V040_f0188",
+    "visual_source_frame_id": "L25_V040_f0182",
     "ocr_source_frame_id": "L25_V040_f0188",
-    "quality_flags": [],
-    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
-    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
-    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
-    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
+    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
+    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
+    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
     "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
-        "bbox": [
-          0.22999999999999998,
-          0.57,
-          0.381,
-          0.775
-        ],
-        "description": "a yellow box with a ratio formula",
-        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
-        "attributes": [
-          "yellow",
-          "formula"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "result_box_0",
-        "label": "result box",
-        "bbox": [
-          0.501,
-          0.623,
-          0.666,
-          0.7220000000000001
-        ],
-        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
-        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
-        "attributes": [
-          "yellow",
-          "result"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
           0.0,
-          0.0,
-          1.0,
-          1.0
+          0.006,
+          0.998,
+          0.9939999999999999
         ],
-        "description": "a light blue educational slide showing physics formulas and a solution result",
-        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
+        "description": "an educational slide showing a physics problem and a formula solution",
+        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
         "attributes": [
-          "light blue",
-          "educational",
-          "formula"
+          "blue",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "formula_box_0",
-        "predicate": "left_of",
-        "object_id": "result_box_0"
-      },
-      {
-        "subject_id": "result_box_0",
-        "predicate": "right_of",
-        "object_id": "formula_box_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V040_f0189",
-    "visual_source_frame_id": "L25_V040_f0189",
+    "visual_source_frame_id": "L25_V040_f0182",
     "ocr_source_frame_id": "L25_V040_f0189",
-    "quality_flags": [],
-    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
-    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
-    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
-    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
+    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
+    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
+    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
     "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
-        "bbox": [
-          0.22999999999999998,
-          0.57,
-          0.381,
-          0.775
-        ],
-        "description": "a yellow box with a ratio formula",
-        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
-        "attributes": [
-          "yellow",
-          "formula"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "result_box_0",
-        "label": "result box",
-        "bbox": [
-          0.501,
-          0.623,
-          0.666,
-          0.7220000000000001
-        ],
-        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
-        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
-        "attributes": [
-          "yellow",
-          "result"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
           0.0,
-          0.0,
-          1.0,
-          1.0
+          0.006,
+          0.998,
+          0.9939999999999999
         ],
-        "description": "a light blue educational slide showing physics formulas and a solution result",
-        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
+        "description": "an educational slide showing a physics problem and a formula solution",
+        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
         "attributes": [
-          "light blue",
-          "educational",
-          "formula"
+          "blue",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "formula_box_0",
-        "predicate": "left_of",
-        "object_id": "result_box_0"
-      },
-      {
-        "subject_id": "result_box_0",
-        "predicate": "right_of",
-        "object_id": "formula_box_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V040_f0190",
-    "visual_source_frame_id": "L25_V040_f0190",
+    "visual_source_frame_id": "L25_V040_f0182",
     "ocr_source_frame_id": "L25_V040_f0190",
-    "quality_flags": [],
-    "caption": "A physics slide shows a formula calculation step resulting in ninety hertz.",
-    "detailed_caption": "A physics slide displayed on a light blue background features a formula proportion box pointing via an arrow to a result box showing f equals 90Hz. The top shows a multiple-choice question with options A, B, C, and D. A small box labeled Bài giải is visible at the bottom left.",
-    "caption_vi": "Một slide vật lý hiển thị bước tính toán công thức dẫn đến kết quả chín mươi héc.",
-    "detailed_caption_vi": "Một slide vật lý hiển thị trên nền xanh nhạt có hộp tỉ lệ công thức trỏ mũi tên đến hộp kết quả hiển thị f bằng 90Hz. Phía trên hiển thị câu hỏi trắc nghiệm với các lựa chọn A, B, C, D. Một hộp nhỏ dán nhãn Bài giải ở góc dưới bên trái.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An educational slide displays a physics question and formula solution on a blue background.",
+    "detailed_caption": "A full-screen view shows a blue slide with the physics question and multiple-choice options at the top. Below, a solution box labeled 'Bài giải' displays the formula 'f = pn' in bold black text.",
+    "caption_vi": "Một trang chiếu giáo dục hiển thị câu hỏi vật lý và công thức giải trên nền xanh.",
+    "detailed_caption_vi": "Toàn cảnh trang chiếu màu xanh có câu hỏi vật lý và các lựa chọn trắc nghiệm ở phía trên. Bên dưới, hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'f = pn' bằng chữ đen đậm.",
     "ocr_text": "Câu 3: Một máy phát điện xoay chiều một pha đang hoạt động. Khi rôto của máy quay đều với tốc độ n vòng/s thì suất điện động do máy tạo ra có tần số 60 Hz. Khi rôto quay đều với tốc độ 1,5n vòng/s thì suất điện động do máy tạo ra có tần số là (THPT 2020) A 20 Hz B 180 Hz C 90 Hz D 40 Hz Bài giải f = pn f1 / f2 = n1 / n2 f = 90Hz",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
-        "bbox": [
-          0.22999999999999998,
-          0.57,
-          0.381,
-          0.775
-        ],
-        "description": "a yellow box with a ratio formula",
-        "description_vi": "một hộp màu vàng có công thức tỉ lệ",
-        "attributes": [
-          "yellow",
-          "formula"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "result_box_0",
-        "label": "result box",
-        "bbox": [
-          0.501,
-          0.623,
-          0.666,
-          0.7220000000000001
-        ],
-        "description": "a yellow box showing the calculated frequency result f equals 90Hz",
-        "description_vi": "một hộp màu vàng hiển thị kết quả tần số được tính toán f bằng 90Hz",
-        "attributes": [
-          "yellow",
-          "result"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
           0.0,
-          0.0,
-          1.0,
-          1.0
+          0.006,
+          0.998,
+          0.9939999999999999
         ],
-        "description": "a light blue educational slide showing physics formulas and a solution result",
-        "description_vi": "một slide giáo dục màu xanh nhạt hiển thị các công thức vật lý và kết quả giải",
+        "description": "an educational slide showing a physics problem and a formula solution",
+        "description_vi": "slide giáo dục hiển thị bài toán vật lý và công thức giải",
         "attributes": [
-          "light blue",
-          "educational",
-          "formula"
+          "blue",
+          "text"
         ],
         "action": ""
       }
     ],
-    "spatial_relations": [
-      {
-        "subject_id": "formula_box_0",
-        "predicate": "left_of",
-        "object_id": "result_box_0"
-      },
-      {
-        "subject_id": "result_box_0",
-        "predicate": "right_of",
-        "object_id": "formula_box_0"
-      }
-    ]
+    "spatial_relations": []
   },
   {
     "frame_id": "L25_V040_f0191",
@@ -9923,13 +9707,16 @@
   },
   {
     "frame_id": "L25_V040_f0192",
-    "visual_source_frame_id": "L25_V040_f0192",
+    "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0192",
-    "quality_flags": [],
-    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
-    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
-    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
-    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
@@ -9942,10 +9729,11 @@
           0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop computer",
-        "description_vi": "một chiếc máy tính xách tay màu bạc",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -9953,10 +9741,10 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
+          0.11000000000000001,
           0.183,
-          0.45199999999999996,
-          0.9890000000000001
+          0.44699999999999995,
+          0.878
         ],
         "description": "a man wearing glasses and a white long-sleeve shirt",
         "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
@@ -9964,7 +9752,7 @@
           "glasses",
           "white shirt"
         ],
-        "action": "using mouse"
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
@@ -9975,11 +9763,11 @@
           0.998,
           0.529
         ],
-        "description": "a white projection screen displaying physics problem text",
-        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "text"
+          "projector screen"
         ],
         "action": ""
       }
@@ -10009,13 +9797,16 @@
   },
   {
     "frame_id": "L25_V040_f0193",
-    "visual_source_frame_id": "L25_V040_f0193",
+    "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0193",
-    "quality_flags": [],
-    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
-    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
-    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
-    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
@@ -10028,10 +9819,11 @@
           0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop computer",
-        "description_vi": "một chiếc máy tính xách tay màu bạc",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -10039,10 +9831,10 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
+          0.11000000000000001,
           0.183,
-          0.45199999999999996,
-          0.9890000000000001
+          0.44699999999999995,
+          0.878
         ],
         "description": "a man wearing glasses and a white long-sleeve shirt",
         "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
@@ -10050,7 +9842,7 @@
           "glasses",
           "white shirt"
         ],
-        "action": "using mouse"
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
@@ -10061,11 +9853,11 @@
           0.998,
           0.529
         ],
-        "description": "a white projection screen displaying physics problem text",
-        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "text"
+          "projector screen"
         ],
         "action": ""
       }
@@ -10095,13 +9887,16 @@
   },
   {
     "frame_id": "L25_V040_f0194",
-    "visual_source_frame_id": "L25_V040_f0194",
+    "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0194",
-    "quality_flags": [],
-    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
-    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
-    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
-    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
@@ -10114,10 +9909,11 @@
           0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop computer",
-        "description_vi": "một chiếc máy tính xách tay màu bạc",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -10125,10 +9921,10 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
+          0.11000000000000001,
           0.183,
-          0.45199999999999996,
-          0.9890000000000001
+          0.44699999999999995,
+          0.878
         ],
         "description": "a man wearing glasses and a white long-sleeve shirt",
         "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
@@ -10136,7 +9932,7 @@
           "glasses",
           "white shirt"
         ],
-        "action": "using mouse"
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
@@ -10147,11 +9943,11 @@
           0.998,
           0.529
         ],
-        "description": "a white projection screen displaying physics problem text",
-        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "text"
+          "projector screen"
         ],
         "action": ""
       }
@@ -10181,13 +9977,16 @@
   },
   {
     "frame_id": "L25_V040_f0195",
-    "visual_source_frame_id": "L25_V040_f0195",
+    "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0195",
-    "quality_flags": [],
-    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
-    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
-    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
-    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
@@ -10200,10 +9999,11 @@
           0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop computer",
-        "description_vi": "một chiếc máy tính xách tay màu bạc",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -10211,10 +10011,10 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
+          0.11000000000000001,
           0.183,
-          0.45199999999999996,
-          0.9890000000000001
+          0.44699999999999995,
+          0.878
         ],
         "description": "a man wearing glasses and a white long-sleeve shirt",
         "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
@@ -10222,7 +10022,7 @@
           "glasses",
           "white shirt"
         ],
-        "action": "using mouse"
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
@@ -10233,11 +10033,11 @@
           0.998,
           0.529
         ],
-        "description": "a white projection screen displaying physics problem text",
-        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "text"
+          "projector screen"
         ],
         "action": ""
       }
@@ -10267,13 +10067,16 @@
   },
   {
     "frame_id": "L25_V040_f0196",
-    "visual_source_frame_id": "L25_V040_f0196",
+    "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0196",
-    "quality_flags": [],
-    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
-    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
-    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
-    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
@@ -10286,10 +10089,11 @@
           0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop computer",
-        "description_vi": "một chiếc máy tính xách tay màu bạc",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -10297,10 +10101,10 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
+          0.11000000000000001,
           0.183,
-          0.45199999999999996,
-          0.9890000000000001
+          0.44699999999999995,
+          0.878
         ],
         "description": "a man wearing glasses and a white long-sleeve shirt",
         "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
@@ -10308,7 +10112,7 @@
           "glasses",
           "white shirt"
         ],
-        "action": "using mouse"
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
@@ -10319,11 +10123,11 @@
           0.998,
           0.529
         ],
-        "description": "a white projection screen displaying physics problem text",
-        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "text"
+          "projector screen"
         ],
         "action": ""
       }
@@ -10353,13 +10157,16 @@
   },
   {
     "frame_id": "L25_V040_f0197",
-    "visual_source_frame_id": "L25_V040_f0197",
+    "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0197",
-    "quality_flags": [],
-    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
-    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
-    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
-    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
@@ -10372,10 +10179,11 @@
           0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop computer",
-        "description_vi": "một chiếc máy tính xách tay màu bạc",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -10383,10 +10191,10 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
+          0.11000000000000001,
           0.183,
-          0.45199999999999996,
-          0.9890000000000001
+          0.44699999999999995,
+          0.878
         ],
         "description": "a man wearing glasses and a white long-sleeve shirt",
         "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
@@ -10394,7 +10202,7 @@
           "glasses",
           "white shirt"
         ],
-        "action": "using mouse"
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
@@ -10405,11 +10213,11 @@
           0.998,
           0.529
         ],
-        "description": "a white projection screen displaying physics problem text",
-        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "text"
+          "projector screen"
         ],
         "action": ""
       }
@@ -10439,13 +10247,16 @@
   },
   {
     "frame_id": "L25_V040_f0198",
-    "visual_source_frame_id": "L25_V040_f0198",
+    "visual_source_frame_id": "L25_V040_f0191",
     "ocr_source_frame_id": "L25_V040_f0198",
-    "quality_flags": [],
-    "caption": "A man in a white shirt and glasses sits behind a laptop, with text displayed on a screen to his right.",
-    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a silver laptop. He holds a computer mouse in his hand. To his right, a white screen displays a block of Vietnamese text with a question about physics. The background is blue with electronic circuitry graphics.",
-    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay, với văn bản hiển thị trên màn hình bên phải.",
-    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng đang ngồi sau một chiếc máy tính xách tay màu bạc. Ông đang cầm một con chuột máy tính trên tay. Ở bên phải ông, một màn hình trắng hiển thị một đoạn văn bản tiếng Việt có câu hỏi về vật lý. Phông nền có màu xanh lam với đồ họa mạch điện tử.",
+    "quality_flags": [
+      "removed_inferred_demographic",
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and glasses sits behind a laptop against a blue background with a white screen.",
+    "detailed_caption": "A man wearing glasses and a white button-down shirt is seated behind a laptop computer. He is positioned in front of a blue background that features circuit board patterns. To his right, a large white projection screen displays a blank yellow box.",
+    "caption_vi": "Một người đàn ông mặc áo trắng và đeo kính ngồi sau máy tính xách tay trước phông nền xanh với màn hình trắng.",
+    "detailed_caption_vi": "Một người đàn ông đeo kính và mặc áo sơ mi trắng cài khuy đang ngồi sau một chiếc máy tính xách tay. Ông ngồi trước phông nền màu xanh lam có các họa tiết bảng mạch. Ở bên phải ông, một màn hình chiếu trắng lớn hiển thị một hộp màu vàng trống.",
     "ocr_text": "THANH NIÊN Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10-²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017)",
     "news_ticker_text": "",
     "detections": [
@@ -10458,10 +10269,11 @@
           0.43899999999999995,
           0.992
         ],
-        "description": "a silver laptop computer",
-        "description_vi": "một chiếc máy tính xách tay màu bạc",
+        "description": "a silver laptop computer placed on the desk",
+        "description_vi": "một chiếc máy tính xách tay màu bạc đặt trên bàn",
         "attributes": [
-          "silver"
+          "silver",
+          "laptop"
         ],
         "action": ""
       },
@@ -10469,10 +10281,10 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.0,
+          0.11000000000000001,
           0.183,
-          0.45199999999999996,
-          0.9890000000000001
+          0.44699999999999995,
+          0.878
         ],
         "description": "a man wearing glasses and a white long-sleeve shirt",
         "description_vi": "một người đàn ông đeo kính và mặc áo sơ mi dài tay màu trắng",
@@ -10480,7 +10292,7 @@
           "glasses",
           "white shirt"
         ],
-        "action": "using mouse"
+        "action": "sitting"
       },
       {
         "object_id": "screen_0",
@@ -10491,11 +10303,11 @@
           0.998,
           0.529
         ],
-        "description": "a white projection screen displaying physics problem text",
-        "description_vi": "một màn hình chiếu màu trắng hiển thị văn bản bài toán vật lý",
+        "description": "a white projection screen displaying a yellow box",
+        "description_vi": "một màn hình chiếu trắng hiển thị hộp màu vàng",
         "attributes": [
           "white",
-          "text"
+          "projector screen"
         ],
         "action": ""
       }
@@ -10694,7 +10506,7 @@
     "detailed_caption": "A full-screen view shows a physics question at the top with four multiple-choice options. Below, a light green work area features a solution box labeled 'Bài giải' displaying the formula 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
     "caption_vi": "Một trang chiếu giáo dục hiển thị công thức giải bài toán vật lý trên nền xanh lá nhạt.",
     "detailed_caption_vi": "Toàn cảnh trang chiếu hiển thị câu hỏi vật lý ở phía trên cùng bốn lựa chọn trắc nghiệm. Bên dưới, vùng làm việc màu xanh lá nhạt có hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
-    "ocr_text": "Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10⁻²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017) A e = 119,9cos100πt (V) B e =169,6cos(100πt - π/2)(V C e = 169,6cos 100πt (V) D e = 119,9cos(100πt - π/2)(V Bài giải E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10728,7 +10540,7 @@
     "detailed_caption": "A full-screen view shows a physics question at the top with four multiple-choice options. Below, a light green work area features a solution box labeled 'Bài giải' displaying the formula 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
     "caption_vi": "Một trang chiếu giáo dục hiển thị công thức giải bài toán vật lý trên nền xanh lá nhạt.",
     "detailed_caption_vi": "Toàn cảnh trang chiếu hiển thị câu hỏi vật lý ở phía trên cùng bốn lựa chọn trắc nghiệm. Bên dưới, vùng làm việc màu xanh lá nhạt có hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
-    "ocr_text": "Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10⁻²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017) A e = 119,9cos100πt (V) B e =169,6cos(100πt - π/2)(V C e = 169,6cos 100πt (V) D e = 119,9cos(100πt - π/2)(V Bài giải E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10762,7 +10574,7 @@
     "detailed_caption": "A full-screen view shows a physics question at the top with four multiple-choice options. Below, a light green work area features a solution box labeled 'Bài giải' displaying the formula 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
     "caption_vi": "Một trang chiếu giáo dục hiển thị công thức giải bài toán vật lý trên nền xanh lá nhạt.",
     "detailed_caption_vi": "Toàn cảnh trang chiếu hiển thị câu hỏi vật lý ở phía trên cùng bốn lựa chọn trắc nghiệm. Bên dưới, vùng làm việc màu xanh lá nhạt có hộp giải pháp mang nhãn 'Bài giải' hiển thị công thức 'E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴'.",
-    "ocr_text": "Câu 4: Một khung dây dẫn phẳng, dẹt có 200 vòng, mỗi vòng có diện tích 600 cm². Khung dây quay đều quanh trục nằm trong mặt phẳng khung, trong một từ trường đều có vecto cảm ứng từ vuông góc với trục quay và có độ lớn 4,5.10⁻²T. Suất điện động e trong khung có tần số 50 Hz. Chọn gốc thời gian lúc pháp tuyến của mặt phẳng khung cùng hướng với vecto cảm ứng từ. Biểu thức của e là (THPTQG 2017) A e = 119,9cos100πt (V) B e =169,6cos(100πt - π/2)(V C e = 169,6cos 100πt (V) D e = 119,9cos(100πt - π/2)(V Bài giải E0 = ωNBS = 2π.50.200.4,5.10⁻².600.10⁻⁴",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -14704,7 +14516,7 @@
     "detailed_caption": "A medium shot shows two men holding a large scholarship sign indoors. The man on the left wears a dark suit, white shirt, and red tie. The man on the right wears a blue striped shirt and glasses. A blue backdrop with Vietnamese text is visible behind them.",
     "caption_vi": "Hai người đàn ông cầm bảng trao học bổng lớn trước phông nền xanh.",
     "detailed_caption_vi": "Cảnh trung cho thấy hai người đàn ông đang cầm một tấm biển học bổng lớn trong nhà. Người đàn ông bên trái mặc vest sẫm màu, áo sơ mi trắng và cà vạt đỏ. Người đàn ông bên phải mặc áo sơ mi sọc xanh và đeo kính. Phía sau họ là phông nền xanh có chữ tiếng Việt.",
-    "ocr_text": "TRƯỜNG ĐẠI HỌC QUỐC TẾ SÀI GÒN TRAO TẶNG HỌC BỔNG ĐỒNG HÀNH XÂY DỰNG NHÂN LỰC CHẤT LƯỢNG CAO CHO THÀNH PHỐ THỦ ĐỨC TRỊ GIÁ 30% HỌC PHÍ TOÀN KHÓA HỌC",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -15752,7 +15564,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -15844,7 +15656,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -15936,7 +15748,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16028,7 +15840,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16120,7 +15932,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16212,7 +16024,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16304,7 +16116,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16396,7 +16208,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16488,7 +16300,7 @@
     "detailed_caption": "A medium shot shows a male teacher with glasses and a white collared shirt sitting behind a white laptop. He looks forward while holding a mouse. On the upper right, a physics multiple-choice question slide with formulas and diagrams is displayed against a blue patterned backdrop.",
     "caption_vi": "Một thầy giáo đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay bên cạnh bảng slide bài học vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại một thầy giáo đeo kính, mặc áo sơ mi trắng đang ngồi sau chiếc máy tính xách tay màu trắng. Ông nhìn về phía trước tay cầm chuột máy tính. Góc trên bên phải hiển thị bảng câu hỏi trắc nghiệm vật lý kèm theo công thức và hình vẽ trên nền xanh.",
-    "ocr_text": "THANH NIÊN Câu 5: Khảo sát thực nghiệm một máy biến áp có cuốn sơ cấp A và cuộn thứ cấp B... Bài giải Công thức máy biến áp: U1/U2 = N1/N2 U2 tỉ lệ thuận với N2 Để U2 min thì N2 min -> Chốt q",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16612,7 +16424,7 @@
     "detailed_caption": "A wide shot displays an educational presentation slide with a pale green background containing a physics word problem at the top. On the right side, multiple-choice options labeled A, B, C, D with corresponding numerical values are listed in yellow boxes. A grey heading box labeled 'Bài giải' appears on the left.",
     "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị một câu hỏi trắc nghiệm vật lý cùng các đáp án ở bên phải.",
     "detailed_caption_vi": "Khung hình rộng hiển thị slide bài giảng có nền xanh nhạt chứa đề bài toán vật lý ở phần trên. Phía bên phải là các lựa chọn đáp án A, B, C, D với các giá trị số đặt trong hộp màu vàng. Hộp tiêu đề xám ghi 'Bài giải' nằm ở góc trái.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy... Bài giải A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16638,27 +16450,29 @@
   },
   {
     "frame_id": "L25_V040_f0329",
-    "visual_source_frame_id": "L25_V040_f0329",
+    "visual_source_frame_id": "L25_V040_f0327",
     "ocr_source_frame_id": "L25_V040_f0329",
-    "quality_flags": [],
-    "caption": "A physics slide displays a power transmission word problem and formulas on a light green background.",
-    "detailed_caption": "This medium shot displays an educational slide about electrical power transmission on a light green background. The top section presents a multiple-choice question labeled Câu 6 with options A, B, C, and D on the right. Below, a green box titled Bài giải shows mathematical equations regarding transmission efficiency.",
-    "caption_vi": "Một slide vật lý hiển thị bài toán truyền tải điện năng và công thức trên nền màu xanh nhạt.",
-    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục về truyền tải điện năng trên nền xanh nhạt. Phần trên là câu hỏi trắc nghiệm Câu 6 cùng các lựa chọn A, B, C, D ở bên phải. Phía dưới tiêu đề Bài giải là các phương trình toán học về hiệu suất truyền tải.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A pale green educational slide displays a physics multiple-choice question with answer options on the right.",
+    "detailed_caption": "A wide shot displays an educational presentation slide with a pale green background containing a physics word problem at the top. On the right side, multiple-choice options labeled A, B, C, D with corresponding numerical values are listed in yellow boxes. A grey heading box labeled 'Bài giải' appears on the left.",
+    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị một câu hỏi trắc nghiệm vật lý cùng các đáp án ở bên phải.",
+    "detailed_caption_vi": "Khung hình rộng hiển thị slide bài giảng có nền xanh nhạt chứa đề bài toán vật lý ở phần trên. Phía bên phải là các lựa chọn đáp án A, B, C, D với các giá trị số đặt trong hộp màu vàng. Hộp tiêu đề xám ghi 'Bài giải' nằm ở góc trái.",
     "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy đến nơi tiêu thụ bằng đường dây tải điện một pha. Giờ cao điểm cần cả 8 tổ máy hoạt động, hiệu suất truyền tải đạt 70%. Coi điện áp hiệu dụng ở nhà máy không đổi, hệ số công suất của mạch bằng 1, công suất phát điện của các tổ máy khi hoạt động là không đổi và như nhau. Khi công suất tiêu thụ điện ở nơi tiêu thụ giảm còn 83% so với giờ cao điểm thì cần bao nhiêu tổ máy phát động? (THPTQG 2018) A 5 B 6 C 4 D 7 Bài giải H1 = 70% nên Php1 = 0,3P1 = RP12 / U2 R / U2 = 0,3 / P1",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "an educational slide showing a physics problem and equations",
-        "description_vi": "một slide giáo dục hiển thị bài toán vật lý và các phương trình",
+        "description": "educational slide with physics problem and multiple choice options",
+        "description_vi": "slide bài giảng chứa đề bài vật lý và các đáp án trắc nghiệm",
         "attributes": [
           "green",
           "text",
@@ -16671,27 +16485,29 @@
   },
   {
     "frame_id": "L25_V040_f0330",
-    "visual_source_frame_id": "L25_V040_f0330",
+    "visual_source_frame_id": "L25_V040_f0327",
     "ocr_source_frame_id": "L25_V040_f0330",
-    "quality_flags": [],
-    "caption": "A physics slide displays a power transmission word problem and formulas on a light green background.",
-    "detailed_caption": "This medium shot displays an educational slide about electrical power transmission on a light green background. The top section presents a multiple-choice question labeled Câu 6 with options A, B, C, and D on the right. Below, a green box titled Bài giải shows mathematical equations regarding transmission efficiency.",
-    "caption_vi": "Một slide vật lý hiển thị bài toán truyền tải điện năng và công thức trên nền màu xanh nhạt.",
-    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục về truyền tải điện năng trên nền xanh nhạt. Phần trên là câu hỏi trắc nghiệm Câu 6 cùng các lựa chọn A, B, C, D ở bên phải. Phía dưới tiêu đề Bài giải là các phương trình toán học về hiệu suất truyền tải.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A pale green educational slide displays a physics multiple-choice question with answer options on the right.",
+    "detailed_caption": "A wide shot displays an educational presentation slide with a pale green background containing a physics word problem at the top. On the right side, multiple-choice options labeled A, B, C, D with corresponding numerical values are listed in yellow boxes. A grey heading box labeled 'Bài giải' appears on the left.",
+    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị một câu hỏi trắc nghiệm vật lý cùng các đáp án ở bên phải.",
+    "detailed_caption_vi": "Khung hình rộng hiển thị slide bài giảng có nền xanh nhạt chứa đề bài toán vật lý ở phần trên. Phía bên phải là các lựa chọn đáp án A, B, C, D với các giá trị số đặt trong hộp màu vàng. Hộp tiêu đề xám ghi 'Bài giải' nằm ở góc trái.",
     "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy đến nơi tiêu thụ bằng đường dây tải điện một pha. Giờ cao điểm cần cả 8 tổ máy hoạt động, hiệu suất truyền tải đạt 70%. Coi điện áp hiệu dụng ở nhà máy không đổi, hệ số công suất của mạch bằng 1, công suất phát điện của các tổ máy khi hoạt động là không đổi và như nhau. Khi công suất tiêu thụ điện ở nơi tiêu thụ giảm còn 83% so với giờ cao điểm thì cần bao nhiêu tổ máy phát động? (THPTQG 2018) A 5 B 6 C 4 D 7 Bài giải H1 = 70% nên Php1 = 0,3P1 = RP12 / U2 R / U2 = 0,3 / P1",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "an educational slide showing a physics problem and equations",
-        "description_vi": "một slide giáo dục hiển thị bài toán vật lý và các phương trình",
+        "description": "educational slide with physics problem and multiple choice options",
+        "description_vi": "slide bài giảng chứa đề bài vật lý và các đáp án trắc nghiệm",
         "attributes": [
           "green",
           "text",
@@ -16746,7 +16562,7 @@
     "detailed_caption": "A medium shot shows a pale green presentation slide displaying physics equations related to power transmission efficiency. Formulas involving efficiency H1, power Php1, and resistance ratios are centered on the lower section. The top portion retains the multiple-choice question text and options from the previous frame.",
     "caption_vi": "Slide màu xanh nhạt trình bày các công thức vật lý để giải bài toán truyền tải điện năng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị slide bài giảng màu xanh nhạt trình bày các phương trình vật lý liên quan đến hiệu suất truyền tải điện. Các công thức chứa hiệu suất H1, công suất Php1 và tỉ số điện trở được đặt ở phần dưới.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1 = (R P1^2) / U^2 => R / U^2 = 0,3 / P1 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16781,7 +16597,7 @@
     "detailed_caption": "A medium shot shows a pale green presentation slide displaying physics equations related to power transmission efficiency. Formulas involving efficiency H1, power Php1, and resistance ratios are centered on the lower section. The top portion retains the multiple-choice question text and options from the previous frame.",
     "caption_vi": "Slide màu xanh nhạt trình bày các công thức vật lý để giải bài toán truyền tải điện năng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị slide bài giảng màu xanh nhạt trình bày các phương trình vật lý liên quan đến hiệu suất truyền tải điện. Các công thức chứa hiệu suất H1, công suất Php1 và tỉ số điện trở được đặt ở phần dưới.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1 = (R P1^2) / U^2 => R / U^2 = 0,3 / P1 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16849,7 +16665,7 @@
     "detailed_caption": "A close-up view of the pale green presentation slide shows a new row of physics formulas added below the previous equations. The formula for Php2 power loss is displayed on the left side of the lower section. The top question block and multiple-choice options remain visible.",
     "caption_vi": "Slide vật lý hiển thị thêm các công thức truyền tải điện năng trên nền xanh nhạt.",
     "detailed_caption_vi": "Cảnh cận cảnh slide bài giảng màu xanh nhạt cho thấy một dòng công thức vật lý mới được bổ sung bên dưới các phương trình trước. Công thức tính công suất hao phí Php2 hiển thị ở phía bên trái phần dưới.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1 = (R P1^2) / U^2 => R / U^2 = 0,3 / P1 Php2 = (R P2^2) / U^2 = (0,30 P2^2) / P1 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16884,7 +16700,7 @@
     "detailed_caption": "A close-up view of the pale green presentation slide shows a new row of physics formulas added below the previous equations. The formula for Php2 power loss is displayed on the left side of the lower section. The top question block and multiple-choice options remain visible.",
     "caption_vi": "Slide vật lý hiển thị thêm các công thức truyền tải điện năng trên nền xanh nhạt.",
     "detailed_caption_vi": "Cảnh cận cảnh slide bài giảng màu xanh nhạt cho thấy một dòng công thức vật lý mới được bổ sung bên dưới các phương trình trước. Công thức tính công suất hao phí Php2 hiển thị ở phía bên trái phần dưới.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1 = (R P1^2) / U^2 => R / U^2 = 0,3 / P1 Php2 = (R P2^2) / U^2 = (0,30 P2^2) / P1 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16919,7 +16735,7 @@
     "detailed_caption": "A close-up view of the pale green presentation slide shows a new row of physics formulas added below the previous equations. The formula for Php2 power loss is displayed on the left side of the lower section. The top question block and multiple-choice options remain visible.",
     "caption_vi": "Slide vật lý hiển thị thêm các công thức truyền tải điện năng trên nền xanh nhạt.",
     "detailed_caption_vi": "Cảnh cận cảnh slide bài giảng màu xanh nhạt cho thấy một dòng công thức vật lý mới được bổ sung bên dưới các phương trình trước. Công thức tính công suất hao phí Php2 hiển thị ở phía bên trái phần dưới.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1 = (R P1^2) / U^2 => R / U^2 = 0,3 / P1 Php2 = (R P2^2) / U^2 = (0,30 P2^2) / P1 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16954,7 +16770,7 @@
     "detailed_caption": "A close-up view of the pale green presentation slide shows a new row of physics formulas added below the previous equations. The formula for Php2 power loss is displayed on the left side of the lower section. The top question block and multiple-choice options remain visible.",
     "caption_vi": "Slide vật lý hiển thị thêm các công thức truyền tải điện năng trên nền xanh nhạt.",
     "detailed_caption_vi": "Cảnh cận cảnh slide bài giảng màu xanh nhạt cho thấy một dòng công thức vật lý mới được bổ sung bên dưới các phương trình trước. Công thức tính công suất hao phí Php2 hiển thị ở phía bên trái phần dưới.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1 = (R P1^2) / U^2 => R / U^2 = 0,3 / P1 Php2 = (R P2^2) / U^2 = (0,30 P2^2) / P1 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16989,7 +16805,7 @@
     "detailed_caption": "A close-up view of the pale green presentation slide shows a new row of physics formulas added below the previous equations. The formula for Php2 power loss is displayed on the left side of the lower section. The top question block and multiple-choice options remain visible.",
     "caption_vi": "Slide vật lý hiển thị thêm các công thức truyền tải điện năng trên nền xanh nhạt.",
     "detailed_caption_vi": "Cảnh cận cảnh slide bài giảng màu xanh nhạt cho thấy một dòng công thức vật lý mới được bổ sung bên dưới các phương trình trước. Công thức tính công suất hao phí Php2 hiển thị ở phía bên trái phần dưới.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1 = (R P1^2) / U^2 => R / U^2 = 0,3 / P1 Php2 = (R P2^2) / U^2 = (0,30 P2^2) / P1 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17081,9 +16897,11 @@
   },
   {
     "frame_id": "L25_V040_f0342",
-    "visual_source_frame_id": "L25_V040_f0342",
+    "visual_source_frame_id": "L25_V040_f0341",
     "ocr_source_frame_id": "L25_V040_f0342",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
     "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
     "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
@@ -17119,28 +16937,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17154,28 +16972,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17189,28 +17007,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17224,28 +17042,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17259,28 +17077,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17294,28 +17112,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17329,28 +17147,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17364,28 +17182,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17399,28 +17217,28 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A pale green educational slide displays continued physics equations for power transmission.",
-    "detailed_caption": "A close-up shot shows the pale green presentation slide with the same equations visible in the previous frame, continuing the derivation steps for solving the electrical transmission problem. The multiple-choice options remain on the upper right.",
-    "caption_vi": "Slide giáo dục màu xanh nhạt hiển thị tiếp tục các phương trình vật lý về truyền tải điện.",
-    "detailed_caption_vi": "Cảnh cận cảnh hiển thị slide bài giảng màu xanh nhạt với các phương trình giống khung hình trước, tiếp tục các bước suy luận để giải bài toán truyền tải điện. Các lựa chọn trắc nghiệm vẫn hiển thị ở góc trên bên phải.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải H1 = 70% nên Php1 = 0,3P1... Php2 = ... Ptt2 = 0,83 Ptt1 = 0,83 . 0,70 P1 = (581 / 1000) P1 A 5 B 6 C 4 D 7",
+    "caption": "A physics slide displays a power transmission problem with extended solution formulas.",
+    "detailed_caption": "This medium shot displays an educational slide on a light green background with the continuation of a physics problem solution. The upper part contains the question text and multiple-choice options on the right, while the lower part shows additional mathematical formulas and steps for calculating power loss.",
+    "caption_vi": "Slide bài tập vật lý hiển thị bài toán truyền tải điện kèm theo các công thức giải chi tiết.",
+    "detailed_caption_vi": "Khung hình trung hiển thị slide giáo dục trên nền xanh nhạt với phần tiếp theo của lời giải bài toán vật lý. Phía trên chứa đề bài và các lựa chọn trắc nghiệm, trong khi phần dưới hiển thị thêm các công thức toán học và các bước tính công suất hao phí.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "slide_0",
-        "label": "slide",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
           0.0,
           0.0,
           1.0,
           1.0
         ],
-        "description": "educational slide with continued physics equations",
-        "description_vi": "slide giáo dục chứa các phương trình vật lý tiếp theo",
+        "description": "an educational slide with physics formulas and calculation steps",
+        "description_vi": "một slide giáo dục với công thức vật lý và các bước tính toán",
         "attributes": [
           "green",
-          "formulas",
-          "text"
+          "text",
+          "formulas"
         ],
         "action": ""
       }
@@ -17471,7 +17289,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17506,7 +17324,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17541,7 +17359,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17576,7 +17394,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17611,7 +17429,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17646,7 +17464,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17681,7 +17499,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17716,7 +17534,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17751,7 +17569,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17786,7 +17604,7 @@
     "detailed_caption": "A medium shot of the presentation slide shows further algebraic expansion equations added at the bottom, expressing total power P2 as a sum of power loss and consumption. Below it, a variable substitution step 'Đặt X = P2 / P0' is shown.",
     "caption_vi": "Slide màu xanh nhạt hiển thị các bước biến đổi đại số nâng cao để giải bài toán vật lý.",
     "detailed_caption_vi": "Cảnh quay trung cảnh của slide bài giảng cho thấy các phương trình khai triển đại số tiếp theo được thêm ở phía dưới, biểu diễn tổng công suất P2 là tổng của công suất hao phí và tiêu thụ. Ngay bên dưới là bước đặt ẩn phụ 'Đặt X = P2 / P0'.",
-    "ocr_text": "Câu 6: Điện năng được truyền từ một nhà máy phát điện... Bài giải P2 = Php2 + Ptt2 = ... Đặt X = P2 / P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17910,7 +17728,7 @@
     "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
     "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18001,7 +17819,7 @@
     "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
     "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18092,7 +17910,7 @@
     "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
     "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18183,7 +18001,7 @@
     "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
     "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18274,7 +18092,7 @@
     "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
     "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18365,7 +18183,7 @@
     "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
     "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
     "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
-    "ocr_text": "THANH NIÊN H1 = 70%... P2 = Php2 + Ptt2... 37,5X^2 - 1000X + 4648 = 0 P2 = 6P0 A 5 B 6 C 4 D 7",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18447,13 +18265,15 @@
   },
   {
     "frame_id": "L25_V040_f0370",
-    "visual_source_frame_id": "L25_V040_f0370",
+    "visual_source_frame_id": "L25_V040_f0363",
     "ocr_source_frame_id": "L25_V040_f0370",
-    "quality_flags": [],
-    "caption": "A male teacher wearing glasses and a white shirt sits behind a laptop in a studio with a blue background.",
-    "detailed_caption": "This medium shot shows a male teacher wearing glasses and a white button-down shirt, seated at a desk with an Asus laptop in front of him. A blue digital screen is positioned to his right against a blue background with a Thanh Nien logo in the upper left corner.",
-    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi trắng ngồi sau máy tính xách tay trong phòng thu có phông nền xanh.",
-    "detailed_caption_vi": "Khung hình trung ghi lại nam giáo viên đeo kính và mặc áo sơ mi trắng dài tay, đang ngồi bên bàn làm việc với chiếc máy tính xách tay Asus đặt trước mặt. Màn hình kỹ thuật số màu xanh đặt bên phải với logo Thanh Niên ở góc trên bên trái.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male teacher sits at a laptop alongside a final physics calculation slide showing the solution.",
+    "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
+    "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
     "ocr_text": "THANH NIÊN ASUS",
     "news_ticker_text": "",
     "detections": [
@@ -18462,86 +18282,89 @@
         "label": "laptop",
         "bbox": [
           0.11399999999999999,
-          0.7220000000000001,
+          0.719,
           0.43899999999999995,
           0.9939999999999999
         ],
-        "description": "a silver Asus laptop on the desk",
-        "description_vi": "một chiếc máy tính xách tay Asus màu bạc đặt trên bàn",
+        "description": "white laptop computer on desk",
+        "description_vi": "máy tính xách tay màu trắng trên bàn",
         "attributes": [
-          "silver",
+          "white",
           "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
-          0.0,
-          0.197,
-          0.442,
-          0.991
+          0.475,
+          0.005,
+          0.999,
+          0.529
         ],
-        "description": "a male teacher with glasses and a white shirt sitting at a laptop",
-        "description_vi": "một nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay",
+        "description": "educational slide showing final physics calculation result",
+        "description_vi": "slide giáo dục hiển thị kết quả tính toán vật lý cuối cùng",
         "attributes": [
-          "glasses",
-          "white shirt",
-          "seated"
-        ],
-        "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.47400000000000003,
-          0.006,
-          0.9960000000000001,
-          0.528
-        ],
-        "description": "a blue digital display screen on the right",
-        "description_vi": "màn hình hiển thị kỹ thuật số màu xanh ở bên phải",
-        "attributes": [
-          "blue",
-          "digital"
+          "green",
+          "equations",
+          "text"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.0,
+          0.184,
+          0.44000000000000006,
+          0.995
+        ],
+        "description": "male teacher with glasses and white shirt",
+        "description_vi": "thầy giáo đeo kính mặc áo sơ mi trắng",
+        "attributes": [
+          "male",
+          "glasses",
+          "white shirt"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "slide_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "slide_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       }
     ]
   },
   {
     "frame_id": "L25_V040_f0371",
-    "visual_source_frame_id": "L25_V040_f0371",
+    "visual_source_frame_id": "L25_V040_f0363",
     "ocr_source_frame_id": "L25_V040_f0371",
-    "quality_flags": [],
-    "caption": "A male teacher wearing glasses and a white shirt sits behind a laptop in a studio with a presentation slide on screen.",
-    "detailed_caption": "This medium shot shows a male teacher with glasses and a white button-down shirt seated at a desk operating a laptop. A presentation slide with Vietnamese text is displayed on the screen to his right, against a blue studio background with the Thanh Nien logo at the top left.",
-    "caption_vi": "Nam giáo viên đeo kính mặc áo sơ mi trắng ngồi trước máy tính xách tay với slide bài giảng trên màn hình.",
-    "detailed_caption_vi": "Khung hình trung hiển thị nam giáo viên đeo kính mặc áo sơ mi trắng đang ngồi thao tác trên máy tính xách tay tại bàn làm việc. Slide trình bày với văn bản tiếng Việt xuất hiện trên màn hình bên phải, trên nền phòng thu màu xanh.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male teacher sits at a laptop alongside a final physics calculation slide showing the solution.",
+    "detailed_caption": "A medium shot shows the male teacher with glasses and a white shirt sitting at his white laptop on the left side of the screen. On the upper right, the educational slide displays the complete algebraic solution and highlights the final answer 'P2 = 6P0' in a yellow box.",
+    "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh slide bài giải vật lý hiển thị kết quả cuối cùng.",
+    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy thầy giáo đeo kính mặc áo sơ mi trắng đang ngồi bên chiếc máy tính xách tay ở nửa bên trái màn hình. Ở góc trên bên phải, slide bài giảng hiển thị toàn bộ lời giải đại số và làm nổi bật đáp án cuối cùng 'P2 = 6P0' trong một ô màu vàng.",
     "ocr_text": "THANH NIÊN CHÚC CÁC EM HỌC TỐT Hẹn gặp lại các em trong chuyên đề sau",
     "news_ticker_text": "",
     "detections": [
@@ -18550,74 +18373,75 @@
         "label": "laptop",
         "bbox": [
           0.11399999999999999,
-          0.7220000000000001,
+          0.719,
           0.43899999999999995,
           0.9939999999999999
         ],
-        "description": "a silver Asus laptop on the desk",
-        "description_vi": "một chiếc máy tính xách tay Asus màu bạc đặt trên bàn",
+        "description": "white laptop computer on desk",
+        "description_vi": "máy tính xách tay màu trắng trên bàn",
         "attributes": [
-          "silver",
+          "white",
           "laptop"
         ],
         "action": ""
       },
       {
-        "object_id": "person_0",
-        "label": "person",
+        "object_id": "slide_0",
+        "label": "slide",
         "bbox": [
-          0.0,
-          0.197,
-          0.442,
-          0.991
+          0.475,
+          0.005,
+          0.999,
+          0.529
         ],
-        "description": "a male teacher with glasses and a white shirt sitting at a desk",
-        "description_vi": "một nam giáo viên đeo kính mặc áo sơ mi trắng ngồi tại bàn làm việc",
+        "description": "educational slide showing final physics calculation result",
+        "description_vi": "slide giáo dục hiển thị kết quả tính toán vật lý cuối cùng",
         "attributes": [
-          "glasses",
-          "white shirt",
-          "seated"
-        ],
-        "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.47400000000000003,
-          0.006,
-          0.9960000000000001,
-          0.528
-        ],
-        "description": "a digital presentation screen displaying a closing message",
-        "description_vi": "màn hình trình chiếu kỹ thuật số hiển thị thông điệp kết thúc",
-        "attributes": [
-          "blue",
-          "text display"
+          "green",
+          "equations",
+          "text"
         ],
         "action": ""
+      },
+      {
+        "object_id": "teacher_0",
+        "label": "teacher",
+        "bbox": [
+          0.0,
+          0.184,
+          0.44000000000000006,
+          0.995
+        ],
+        "description": "male teacher with glasses and white shirt",
+        "description_vi": "thầy giáo đeo kính mặc áo sơ mi trắng",
+        "attributes": [
+          "male",
+          "glasses",
+          "white shirt"
+        ],
+        "action": "sitting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
         "predicate": "overlapping",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "person_0",
+        "subject_id": "teacher_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "slide_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "slide_0",
         "predicate": "right_of",
-        "object_id": "person_0"
+        "object_id": "teacher_0"
       }
     ]
   },
@@ -18660,7 +18484,7 @@
     "detailed_caption": "A wide shot displays the blue stylized program logo centered horizontally against a minimalist light grey studio background with a soft shadow underneath.",
     "caption_vi": "Logo chương trình màu xanh xuất hiện trên nền xám nhạt đơn giản.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình cách điệu màu xanh đặt ở trung tâm theo chiều ngang trên nền phòng thu xám nhạt tối giản với bóng mờ bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18676,7 +18500,7 @@
     "detailed_caption": "A wide shot displays the blue stylized program logo centered horizontally against a minimalist light grey studio background with a soft shadow underneath.",
     "caption_vi": "Logo chương trình màu xanh xuất hiện trên nền xám nhạt đơn giản.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình cách điệu màu xanh đặt ở trung tâm theo chiều ngang trên nền phòng thu xám nhạt tối giản với bóng mờ bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18692,7 +18516,7 @@
     "detailed_caption": "A wide shot displays the blue stylized program logo centered horizontally against a minimalist light grey studio background with a soft shadow underneath.",
     "caption_vi": "Logo chương trình màu xanh xuất hiện trên nền xám nhạt đơn giản.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình cách điệu màu xanh đặt ở trung tâm theo chiều ngang trên nền phòng thu xám nhạt tối giản với bóng mờ bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18708,7 +18532,7 @@
     "detailed_caption": "A wide shot displays the blue stylized program logo centered horizontally against a minimalist light grey studio background with a soft shadow underneath.",
     "caption_vi": "Logo chương trình màu xanh xuất hiện trên nền xám nhạt đơn giản.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình cách điệu màu xanh đặt ở trung tâm theo chiều ngang trên nền phòng thu xám nhạt tối giản với bóng mờ bên dưới.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18738,7 +18562,7 @@
     "detailed_caption": "A wide shot shows the blue stylized program logo centered on a neutral grey background, with a smaller website address text positioned directly beneath it to the right.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh hiển thị trên nền xám của phòng thu.",
     "detailed_caption_vi": "Cảnh quay rộng hiển thị logo chương trình cách điệu màu xanh ở chính giữa nền xám trung tính, kèm theo dòng chữ địa chỉ website nhỏ hơn nằm ngay phía dưới góc phải của logo.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18754,7 +18578,7 @@
     "detailed_caption": "A wide shot shows the blue stylized program logo centered on a neutral grey background, with a smaller website address text positioned directly beneath it to the right.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh hiển thị trên nền xám của phòng thu.",
     "detailed_caption_vi": "Cảnh quay rộng hiển thị logo chương trình cách điệu màu xanh ở chính giữa nền xám trung tính, kèm theo dòng chữ địa chỉ website nhỏ hơn nằm ngay phía dưới góc phải của logo.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18770,7 +18594,7 @@
     "detailed_caption": "A wide shot shows the blue stylized program logo centered on a neutral grey background, with a smaller website address text positioned directly beneath it to the right.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh hiển thị trên nền xám của phòng thu.",
     "detailed_caption_vi": "Cảnh quay rộng hiển thị logo chương trình cách điệu màu xanh ở chính giữa nền xám trung tính, kèm theo dòng chữ địa chỉ website nhỏ hơn nằm ngay phía dưới góc phải của logo.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18800,7 +18624,7 @@
     "detailed_caption": "A wide shot shows the blue program logo and website address centered on a darker grey gradient background with a soft horizontal shadow underneath.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh xuất hiện trên nền chuyển sắc xám tối hơn.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình và địa chỉ website màu xanh đặt ở trung tâm trên nền gradient xám tối hơn cùng bóng đổ nằm ngang bên dưới.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18816,7 +18640,7 @@
     "detailed_caption": "A wide shot shows the blue program logo and website address centered on a darker grey gradient background with a soft horizontal shadow underneath.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh xuất hiện trên nền chuyển sắc xám tối hơn.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình và địa chỉ website màu xanh đặt ở trung tâm trên nền gradient xám tối hơn cùng bóng đổ nằm ngang bên dưới.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18832,7 +18656,7 @@
     "detailed_caption": "A wide shot shows the blue program logo and website address centered on a darker grey gradient background with a soft horizontal shadow underneath.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh xuất hiện trên nền chuyển sắc xám tối hơn.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình và địa chỉ website màu xanh đặt ở trung tâm trên nền gradient xám tối hơn cùng bóng đổ nằm ngang bên dưới.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18848,7 +18672,7 @@
     "detailed_caption": "A wide shot shows the blue program logo and website address centered on a darker grey gradient background with a soft horizontal shadow underneath.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh xuất hiện trên nền chuyển sắc xám tối hơn.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình và địa chỉ website màu xanh đặt ở trung tâm trên nền gradient xám tối hơn cùng bóng đổ nằm ngang bên dưới.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -18864,7 +18688,7 @@
     "detailed_caption": "A wide shot shows the blue program logo and website address centered on a darker grey gradient background with a soft horizontal shadow underneath.",
     "caption_vi": "Logo chương trình và địa chỉ website màu xanh xuất hiện trên nền chuyển sắc xám tối hơn.",
     "detailed_caption_vi": "Khung hình rộng hiển thị logo chương trình và địa chỉ website màu xanh đặt ở trung tâm trên nền gradient xám tối hơn cùng bóng đổ nằm ngang bên dưới.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []

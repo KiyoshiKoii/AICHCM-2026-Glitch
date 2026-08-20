@@ -24,7 +24,7 @@
     "detailed_caption": "A light blue 3D logo displaying the word THANH NIÊN is centered in a brightly lit, minimalist studio with a grey gradient background. Soft ambient lighting creates a subtle shadow beneath the text on the reflective white floor.",
     "caption_vi": "Một logo màu xanh nhạt với dòng chữ THANH NIÊN xuất hiện trên nền xám.",
     "detailed_caption_vi": "Logo 3D màu xanh nhạt mang dòng chữ THANH NIÊN được đặt ở trung tâm của một không gian phòng thu tối giản với nền chuyển màu xám. Ánh sáng dịu nhẹ tạo ra một bóng mờ nhẹ bên dưới dòng chữ trên sàn nhà màu trắng.",
-    "ocr_text": "THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -45,9 +45,11 @@
   },
   {
     "frame_id": "L25_V004_f0004",
-    "visual_source_frame_id": "L25_V004_f0004",
+    "visual_source_frame_id": "L25_V004_f0003",
     "ocr_source_frame_id": "L25_V004_f0004",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A blue title screen with yellow and dark blue text reading ON TAP MON HOA HOC CHUYEN DE 10 DIEN PHAN.",
     "detailed_caption": "This is a blue title card with centered text. At the top, yellow text reads ON TAP MON HOA HOC CHUYEN DE 10. Below it, larger dark blue text reads DIEN PHAN. At the bottom, smaller yellow text gives instructor details.",
     "caption_vi": "Man hinh tieu de mau xanh duong voi chu mau vang va xanh dam.",
@@ -224,7 +226,7 @@
     "detailed_caption": "A medium shot shows a man wearing a white shirt, glasses, and a purple tie seated at a desk with a laptop. A green slide with chemistry icons and text is visible to his right.",
     "caption_vi": "Nam giáo viên mặc áo sơ mi trắng và cà vạt tím ngồi bàn làm việc cạnh slide bài giảng.",
     "detailed_caption_vi": "Ảnh trung cảnh ghi lại nam giáo viên mặc áo sơ mi trắng, đeo kính và thắt cà vạt màu tím đang ngồi bên bàn có đặt máy tính xách tay. Slide màu xanh lá hiển thị các biểu tượng hóa học xuất hiện ở phía bên phải.",
-    "ocr_text": "THANH NIÊN Chuyên đề 10 ĐIỆN PHÂN ThS. Phạm Lê Thanh Cu Na K Fe Al",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -2890,9 +2892,11 @@
   },
   {
     "frame_id": "L25_V004_f0056",
-    "visual_source_frame_id": "L25_V004_f0056",
+    "visual_source_frame_id": "L25_V004_f0055",
     "ocr_source_frame_id": "L25_V004_f0056",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A man wearing glasses, a white shirt, and a purple tie sits at a desk next to a chemistry slide.",
     "detailed_caption": "Medium shot of a man with glasses, wearing a white button-down shirt and a purple tie, sitting at a white desk with a laptop. To his right is a large display screen showing a chemistry lesson with tables and diagrams about electrolysis.",
     "caption_vi": "Mot nam giao vien deo kinh mac ao trang va ca vat tim ngoi truoc man hinh bai giang hoa hoc.",
@@ -2905,12 +2909,12 @@
         "label": "laptop",
         "bbox": [
           0.10400000000000001,
-          0.804,
+          0.8029999999999999,
           0.34700000000000003,
-          0.9930000000000001
+          0.995
         ],
         "description": "silver laptop on the desk",
-        "description_vi": "may tinh xach tay tren ban",
+        "description_vi": "may tinh xach tay mau bac tren ban",
         "attributes": [
           "silver"
         ],
@@ -2920,9 +2924,9 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.075,
+          0.079,
           0.22899999999999998,
-          0.381,
+          0.383,
           0.987
         ],
         "description": "man wearing a white shirt and purple tie",
@@ -2942,12 +2946,13 @@
           0.44299999999999995,
           0.011,
           0.9890000000000001,
-          0.559
+          0.5579999999999999
         ],
-        "description": "display screen with chemistry lesson",
-        "description_vi": "man hinh hien thi bai hoc hoa hoc",
+        "description": "large display screen showing chemistry formulas and diagrams",
+        "description_vi": "man hinh lon hien thi cong thuc hoa hoc va so do",
         "attributes": [
-          "green"
+          "green",
+          "display"
         ],
         "action": ""
       }
@@ -3108,9 +3113,11 @@
   },
   {
     "frame_id": "L25_V004_f0061",
-    "visual_source_frame_id": "L25_V004_f0061",
+    "visual_source_frame_id": "L25_V004_f0060",
     "ocr_source_frame_id": "L25_V004_f0061",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A close-up view of a chemistry slide with tables and diagrams about molten electrolysis.",
     "detailed_caption": "Close-up shot of a presentation slide titled 'a. Điện phân nóng chảy' showing a table of electrode processes on the left and an electrolysis diagram on the right.",
     "caption_vi": "Canh can mot man hinh trinh chieu bai hoc hoa hoc ve dien phan nong chay.",
@@ -3182,7 +3189,7 @@
     "detailed_caption": "A medium shot displays a chemistry lesson slide featuring a comprehensive table about molten sodium chloride electrolysis on the left and a schematic diagram of the cell on the right.",
     "caption_vi": "Slide bài giảng hóa học hiển thị bảng điện phân nóng chảy bên trái và sơ đồ cấu tạo bên phải.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại slide bài giảng Hóa học với bảng tóm tắt toàn diện về quá trình điện phân nóng chảy natri clorua bên trái và sơ đồ chi tiết bên phải.",
-    "ocr_text": "I. Phương pháp điện phân: quá trình oxh-k diễn ra trên bề mặt điện cực khi có dòng điện một chiều đi qua chất nóng chảy, dd chất điện li. a. Điện phân nóng chảy Điện cực Dương (+) Âm (-) Ion chuyển đến CI- Na+ Quá trình trao đổi e 2CI-(l) -> Cl2(k) + 2e 2Na+(l) + 2e -> 2Na(l) Quá trình OXH-Khử Oxi hóa Khử Tên gọi điện cực Anot Catot Phương trình điện phân 2NaCl -> 2Na + Cl2 -> Dùng để điều chế kim loại kiềm (nhóm IA), kiềm thổ (IIA) và nhôm (điện phân nóng chảy quặng boxit). Sơ đồ điện phân nóng chảy NaCI NaCl Cl2 Na Na nóng chảy Na nóng chảy Catot bằng thép Catot bằng thép Lưới thép Anôt bằng than chì Sơ đồ điện phân: Catot (-) NaCl -> Anot (+) 2Na+ + 2e -> 2Na 2CI- -> Cl2 + 2e Phương trình điện phân: 2NaCl dpnc 2Na + Cl2",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -3315,7 +3322,7 @@
     "detailed_caption": "A medium shot captures a chemistry lesson slide with a table explaining the electrolysis process on the left and a labeled schematic diagram of an electrolytic cell on the right.",
     "caption_vi": "Slide giáo dục hiển thị bảng quá trình điện phân bên trái và sơ đồ chú thích bên phải.",
     "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại slide bài học hóa học với bảng tóm tắt quá trình điện phân ở bên trái và sơ đồ cấu tạo bình điện phân có chú thích chi tiết ở bên phải.",
-    "ocr_text": "I. Phương pháp điện phân: quá trình oxh-k diễn ra trên bề mặt điện cực khi có dòng điện một chiều đi qua chất nóng chảy, dd chất điện li. a. Điện phân nóng chảy Điện cực Dương (+) Âm (-) Ion chuyển đến CI- Na+ Quá trình trao đổi e 2CI-(l) -> Cl2(k) + 2e 2Na+(l) + 2e -> 2Na(l) Quá trình OXH-Khử Oxi hóa Khử Tên gọi điện cực Anot Catot Phương trình điện phân 2NaCl -> 2Na + Cl2 -> Dùng để điều chế kim loại kiềm (nhóm IA), kiềm thổ (IIA) và nhôm (điện phân nóng chảy quặng boxit). Sơ đồ điện phân nóng chảy NaCI NaCl Cl2 Na Na nóng chảy Na nóng chảy Catot bằng thép Catot bằng thép Lưới thép Anôt bằng than chì Sơ đồ điện phân: Catot (-) NaCl -> Anot (+) 2Na+ + 2e -> 2Na 2CI- -> Cl2 + 2e Phương trình điện phân: 2NaCl dpnc 2Na + Cl2",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -4605,9 +4612,11 @@
   },
   {
     "frame_id": "L25_V004_f0081",
-    "visual_source_frame_id": "L25_V004_f0081",
+    "visual_source_frame_id": "L25_V004_f0080",
     "ocr_source_frame_id": "L25_V004_f0081",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A chemistry slide on the left and a laboratory power supply with a beaker of blue liquid on the right.",
     "detailed_caption": "Medium shot split between a presentation slide about solution electrolysis on the left and a laboratory setup on the right featuring a blue power supply, wires, and a small beaker filled with blue liquid.",
     "caption_vi": "Slide hoa hoc ben trai va thiet bi thi nghiem gom nguon dien va coc dung dich xanh duong ben phai.",
@@ -5102,9 +5111,11 @@
   },
   {
     "frame_id": "L25_V004_f0086",
-    "visual_source_frame_id": "L25_V004_f0086",
+    "visual_source_frame_id": "L25_V004_f0085",
     "ocr_source_frame_id": "L25_V004_f0086",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A chemistry slide on the left and a power supply with wires and a blue liquid beaker on the right.",
     "detailed_caption": "The split screen displays educational chemistry notes on the left side and a laboratory bench setup on the right side. The right side shows a blue laboratory bench power supply unit connected by red and black wires to two electrodes positioned near a small glass beaker filled with blue liquid. Broadcaster graphics are omitted from this visual description.",
     "caption_vi": "Một slide hóa học ở bên trái và bộ nguồn điện với dây điện cùng cốc đựng dung dịch màu xanh ở bên phải.",
@@ -5998,9 +6009,11 @@
   },
   {
     "frame_id": "L25_V004_f0095",
-    "visual_source_frame_id": "L25_V004_f0095",
+    "visual_source_frame_id": "L25_V004_f0094",
     "ocr_source_frame_id": "L25_V004_f0095",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A chemistry slide on the left and a laboratory power supply with electrodes in a beaker on the right.",
     "detailed_caption": "The split screen shows educational notes on the left and a laboratory electrolysis setup on the right. The right side features a blue power supply unit connected to a stand holding two electrodes immersed inside a beaker of blue liquid. Broadcaster graphics are excluded.",
     "caption_vi": "Một slide hóa học ở bên trái và bộ nguồn điện thí nghiệm có gắn điện cực nhúng trong cốc dung dịch màu xanh ở bên phải.",
@@ -6154,7 +6167,7 @@
     "detailed_caption": "The left side displays instructional text and formulas about electrolysis. The right side shows an extreme close-up video of two dark graphite electrodes submerged in a blue copper sulfate solution contained within a clear beaker.",
     "caption_vi": "Slide hóa học giáo dục bên cạnh video cận cảnh điện cực than chì nhúng trong dung dịch xanh trong cốc.",
     "detailed_caption_vi": "Phía bên trái hiển thị văn bản hướng dẫn và công thức về điện phân. Phía bên phải hiển thị video cận cảnh hai điện cực than chì màu đen nhúng trong dung dịch đồng sulfat xanh chứa trong cốc trong suốt.",
-    "ocr_text": "II. Phương pháp điện phân b. Điện phân dung dịch Dùng để điều chế kim loại trung bình và yếu như Fe, Cu, Ag .... Điện cực Anot Catot Chất ở điện cực H2O, SO42- Cu2+, H2O Trao đổi e 2H2O -> O2 (k) + 4H+ + 4e Cu2+ (l) + 2e -> Cu (r) Phương trình 2CuSO4 + 2H2O -> 2Cu + O2 + 2H2SO4 Cực âm (catot): Cực dương (anot): xảy ra quá trình khử ra quá trình OXH Ion từ Li+ -> Al3+: không bị điện phân Ion halogen, OH- (VD: K+, Na+, Ba2+, Ca2+ ....) : 2Cl- -> Cl2 +2e 2Br- -> Brr +2e 2H2O+2e ->H2 + 2OH- H2O -> 1/2 O2 + 2H+ + 2e Ion sau Al3+: bị điện phân Ion: NO3-, SO42-, CO32-, PO43- Mn+ +ne -> M không bị điện phân Sơ đồ điện dung dịch CuSO4 điện cực graphit (than chì)",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6406,7 +6419,7 @@
     "detailed_caption": "The left panel displays electrolysis lesson content. The right panel shows a top-down view of a blue and white digital balance scale holding a white weighing tray with a single dark graphite rod inside, displaying a mass measurement on its screen.",
     "caption_vi": "Slide hóa học giáo dục cùng với video hiển thị cân điện tử có thanh than chì trên khay hiển thị số đo.",
     "detailed_caption_vi": "Bảng bên trái hiển thị nội dung bài học điện phân. Bảng bên phải hiển thị góc nhìn từ trên xuống của cân điện tử màu xanh trắng chứa khay cân trắng đựng một thanh than chì đen bên trong, hiển thị số đo khối lượng trên màn hình.",
-    "ocr_text": "II. Phương pháp điện phân b. Điện phân dung dịch Dùng để điều chế kim loại trung bình và yếu như Fe, Cu, Ag .... Điện cực Anot Catot Chất ở điện cực H2O, SO42- Cu2+, H2O Trao đổi e 2H2O -> O2 (k) + 4H+ + 4e Cu2+ (l) + 2e -> Cu (r) Phương trình 2CuSO4 + 2H2O -> 2Cu + O2 + 2H2SO4 Cực âm (catot): Cực dương (anot): xảy ra quá trình khử ra quá trình OXH Ion từ Li+ -> Al3+: không bị điện phân Ion halogen, OH- (VD: K+, Na+, Ba2+, Ca2+ ....) : 2Cl- -> Cl2 +2e 2Br- -> Brr +2e 2H2O+2e ->H2 + 2OH- H2O -> 1/2 O2 + 2H+ + 2e Ion sau Al3+: bị điện phân Ion: NO3-, SO42-, CO32-, PO43- Mn+ +ne -> M không bị điện phân Sơ đồ điện dung dịch CuSO4 điện cực graphit (than chì) 3746",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6628,7 +6641,7 @@
     "detailed_caption": "The left side shows an electrolysis lesson slide. The right side shows a top-down view of a blue and white digital balance scale with a white weighing tray and a graphite rod, displaying a mass of 3.746 grams.",
     "caption_vi": "Slide hóa học giáo dục bên cạnh video hiển thị cân điện tử đang cân thanh than chì.",
     "detailed_caption_vi": "Phía bên trái hiển thị slide bài học điện phân. Phía bên phải hiển thị góc nhìn từ trên xuống của cân điện tử màu xanh trắng có khay cân trắng và thanh than chì, hiển thị khối lượng 3.746 gam.",
-    "ocr_text": "II. Phương pháp điện phân b. Điện phân dung dịch Dùng để điều chế kim loại trung bình và yếu như Fe, Cu, Ag .... Điện cực Anot Catot Chất ở điện cực H2O, SO42- Cu2+, H2O Trao đổi e 2H2O -> O2 (k) + 4H+ + 4e Cu2+ (l) + 2e -> Cu (r) Phương trình 2CuSO4 + 2H2O -> 2Cu + O2 + 2H2SO4 Cực âm (catot): Cực dương (anot): xảy ra quá trình khử ra quá trình OXH Ion từ Li+ -> Al3+: không bị điện phân Ion halogen, OH- (VD: K+, Na+, Ba2+, Ca2+ ....) : 2Cl- -> Cl2 +2e 2Br- -> Brr +2e 2H2O+2e ->H2 + 2OH- H2O -> 1/2 O2 + 2H+ + 2e Ion sau Al3+: bị điện phân Ion: NO3-, SO42-, CO32-, PO43- Mn+ +ne -> M không bị điện phân Sơ đồ điện dung dịch CuSO4 điện cực graphit (than chì) 3746",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6752,7 +6765,7 @@
     "detailed_caption": "The left side presents chemical formulas and notes on electrolysis. The right side shows a digital laboratory scale with a white weighing tray holding a graphite rod, displaying a measurement on the screen.",
     "caption_vi": "Slide hóa học giáo dục bên cạnh video hiển thị cân điện tử đang cân thanh than chì.",
     "detailed_caption_vi": "Phía bên trái trình bày công thức hóa học và ghi chú về điện phân. Phía bên phải hiển thị cân phòng thí nghiệm điện tử có khay cân trắng chứa thanh than chì, hiển thị số đo trên màn hình.",
-    "ocr_text": "II. Phương pháp điện phân b. Điện phân dung dịch Dùng để điều chế kim loại trung bình và yếu như Fe, Cu, Ag .... Điện cực Anot Catot Chất ở điện cực H2O, SO42- Cu2+, H2O Trao đổi e 2H2O -> O2 (k) + 4H+ + 4e Cu2+ (l) + 2e -> Cu (r) Phương trình 2CuSO4 + 2H2O -> 2Cu + O2 + 2H2SO4 Cực âm (catot): Cực dương (anot): xảy ra quá trình khử ra quá trình OXH Ion từ Li+ -> Al3+: không bị điện phân Ion halogen, OH- (VD: K+, Na+, Ba2+, Ca2+ ....) : 2Cl- -> Cl2 +2e 2Br- -> Brr +2e 2H2O+2e ->H2 + 2OH- H2O -> 1/2 O2 + 2H+ + 2e Ion sau Al3+: bị điện phân Ion: NO3-, SO42-, CO32-, PO43- Mn+ +ne -> M không bị điện phân Sơ đồ điện dung dịch CuSO4 điện cực graphit (than chì) 3746",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6815,7 +6828,7 @@
     "detailed_caption": "The left side presents chemical formulas and notes on electrolysis. The right side shows a digital laboratory scale with a white weighing tray holding a graphite rod, displaying a measurement on the screen.",
     "caption_vi": "Slide hóa học giáo dục bên cạnh video hiển thị cân điện tử đang cân thanh than chì.",
     "detailed_caption_vi": "Phía bên trái trình bày công thức hóa học và ghi chú về điện phân. Phía bên phải hiển thị cân phòng thí nghiệm điện tử có khay cân trắng chứa thanh than chì, hiển thị số đo trên màn hình.",
-    "ocr_text": "II. Phương pháp điện phân b. Điện phân dung dịch Dùng để điều chế kim loại trung bình và yếu như Fe, Cu, Ag .... Điện cực Anot Catot Chất ở điện cực H2O, SO42- Cu2+, H2O Trao đổi e 2H2O -> O2 (k) + 4H+ + 4e Cu2+ (l) + 2e -> Cu (r) Phương trình 2CuSO4 + 2H2O -> 2Cu + O2 + 2H2SO4 Cực âm (catot): Cực dương (anot): xảy ra quá trình khử ra quá trình OXH Ion từ Li+ -> Al3+: không bị điện phân Ion halogen, OH- (VD: K+, Na+, Ba2+, Ca2+ ....) : 2Cl- -> Cl2 +2e 2Br- -> Brr +2e 2H2O+2e ->H2 + 2OH- H2O -> 1/2 O2 + 2H+ + 2e Ion sau Al3+: bị điện phân Ion: NO3-, SO42-, CO32-, PO43- Mn+ +ne -> M không bị điện phân Sơ đồ điện dung dịch CuSO4 điện cực graphit (than chì) 3746",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10476,9 +10489,11 @@
   },
   {
     "frame_id": "L25_V004_f0166",
-    "visual_source_frame_id": "L25_V004_f0166",
+    "visual_source_frame_id": "L25_V004_f0165",
     "ocr_source_frame_id": "L25_V004_f0166",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A presentation slide on a green background displays common molten electrolysis reactions with chemical equations.",
     "detailed_caption": "This educational presentation slide is divided into sections with a green backdrop. The left panel features an orange header and a boxed white area containing chemical equations for molten electrolysis.",
     "caption_vi": "Slide bài giảng trên nền xanh lá hiển thị các phản ứng điện phân nóng chảy thông dụng kèm theo phương trình hóa học.",
@@ -10508,13 +10523,15 @@
   },
   {
     "frame_id": "L25_V004_f0167",
-    "visual_source_frame_id": "L25_V004_f0167",
+    "visual_source_frame_id": "L25_V004_f0165",
     "ocr_source_frame_id": "L25_V004_f0167",
-    "quality_flags": [],
-    "caption": "A green presentation slide displays molten and aqueous electrolysis reactions in two separate side panels.",
-    "detailed_caption": "The slide is divided into two main panels against a dark green background. The left panel shows molten electrolysis equations in an orange header box, while the right panel introduces aqueous electrolysis with a blank content box.",
-    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị các phản ứng điện phân nóng chảy và dung dịch ở hai bảng riêng biệt.",
-    "detailed_caption_vi": "Slide được chia thành hai bảng chính trên nền xanh lá cây đậm. Bảng bên trái hiển thị các phương trình điện phân nóng chảy trong hộp tiêu đề màu cam, trong khi bảng bên phải giới thiệu điện phân dung dịch với một hộp nội dung trống.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A presentation slide on a green background displays common molten electrolysis reactions with chemical equations.",
+    "detailed_caption": "This educational presentation slide is divided into sections with a green backdrop. The left panel features an orange header and a boxed white area containing chemical equations for molten electrolysis.",
+    "caption_vi": "Slide bài giảng trên nền xanh lá hiển thị các phản ứng điện phân nóng chảy thông dụng kèm theo phương trình hóa học.",
+    "detailed_caption_vi": "Slide bài giảng giáo dục này được chia thành các phần với phông nền màu xanh lá cây. Bảng bên trái có tiêu đề màu cam và khu vực màu trắng đóng khung chứa các phương trình hóa học cho quá trình điện phân nóng chảy.",
     "ocr_text": "III. Phương pháp điện phân Một số phản ứng điện phân nóng chảy thông dụng 4NaOH -> 4Na + O2 + 2H2O 2NaCl -> 2Na + Cl2 MgCl2 -> Mg + Cl2 Một số phản ứng điện phân dung dịch thông dụng",
     "news_ticker_text": "",
     "detections": [
@@ -10527,11 +10544,11 @@
           0.986,
           0.986
         ],
-        "description": "A green educational slide divided into two sections for electrolysis types",
-        "description_vi": "Một slide giáo dục màu xanh lá cây được chia thành hai phần cho các loại điện phân",
+        "description": "A green presentation slide containing chemistry formulas",
+        "description_vi": "Một slide thuyết trình màu xanh lá cây chứa các công thức hóa học",
         "attributes": [
           "green",
-          "split screen"
+          "educational"
         ],
         "action": ""
       }
@@ -10540,13 +10557,15 @@
   },
   {
     "frame_id": "L25_V004_f0168",
-    "visual_source_frame_id": "L25_V004_f0168",
+    "visual_source_frame_id": "L25_V004_f0165",
     "ocr_source_frame_id": "L25_V004_f0168",
-    "quality_flags": [],
-    "caption": "A green educational slide displays molten electrolysis reactions on the left and an aqueous electrolysis equation on the right.",
-    "detailed_caption": "The slide features a dark green background with two distinct content sections. The left section lists common molten electrolysis reactions, while the right section adds an aqueous electrolysis equation involving silver nitrate.",
-    "caption_vi": "Slide giáo dục màu xanh lá hiển thị các phản ứng điện phân nóng chảy bên trái và phương trình điện phân dung dịch bên phải.",
-    "detailed_caption_vi": "Slide có nền màu xanh lá cây đậm với hai phần nội dung riêng biệt. Phần bên trái liệt kê các phản ứng điện phân nóng chảy thông dụng, trong khi phần bên phải bổ sung phương trình điện phân dung dịch liên quan đến bạc nitrat.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A presentation slide on a green background displays common molten electrolysis reactions with chemical equations.",
+    "detailed_caption": "This educational presentation slide is divided into sections with a green backdrop. The left panel features an orange header and a boxed white area containing chemical equations for molten electrolysis.",
+    "caption_vi": "Slide bài giảng trên nền xanh lá hiển thị các phản ứng điện phân nóng chảy thông dụng kèm theo phương trình hóa học.",
+    "detailed_caption_vi": "Slide bài giảng giáo dục này được chia thành các phần với phông nền màu xanh lá cây. Bảng bên trái có tiêu đề màu cam và khu vực màu trắng đóng khung chứa các phương trình hóa học cho quá trình điện phân nóng chảy.",
     "ocr_text": "III. Phương pháp điện phân Một số phản ứng điện phân nóng chảy thông dụng 4NaOH -> 4Na + O2 + 2H2O 2NaCl -> 2Na + Cl2 MgCl2 -> Mg + Cl2 Một số phản ứng điện phân dung dịch thông dụng 2AgNO3 + H2O -> 2Ag + 2HNO3 + 1/2 O2",
     "news_ticker_text": "",
     "detections": [
@@ -10559,8 +10578,8 @@
           0.986,
           0.986
         ],
-        "description": "A green presentation slide with chemistry equations on both sides",
-        "description_vi": "Một slide thuyết trình màu xanh lá cây với các phương trình hóa học ở cả hai mặt",
+        "description": "A green presentation slide containing chemistry formulas",
+        "description_vi": "Một slide thuyết trình màu xanh lá cây chứa các công thức hóa học",
         "attributes": [
           "green",
           "educational"
@@ -10614,7 +10633,7 @@
     "detailed_caption": "A green educational slide divided vertically by a pink line. The left side lists molten electrolysis reactions, while the right side displays an aqueous electrolysis reaction for silver nitrate inside a white banner.",
     "caption_vi": "Slide bài giảng chia đôi màn hình hiển thị phương trình phản ứng điện phân nóng chảy và dung dịch.",
     "detailed_caption_vi": "Slide màu xanh lá được chia làm hai phần bởi một đường dọc màu hồng. Phần bên trái là phản ứng điện phân nóng chảy, bên phải là phản ứng điện phân dung dịch.",
-    "ocr_text": "III. Phương pháp điện phân Một số phản ứng điện phân nóng chảy thông dụng 4NaOH → 4Na + O₂ + 2H₂O 2NaCl → 2Na + Cl₂ MgCl₂ → Mg + Cl₂ Một số phản ứng điện phân dung dịch thông dụng 2AgNO₃ + H₂O → 2Ag + 2HNO₃ + ½ O₂",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10672,13 +10691,15 @@
   },
   {
     "frame_id": "L25_V004_f0172",
-    "visual_source_frame_id": "L25_V004_f0172",
+    "visual_source_frame_id": "L25_V004_f0171",
     "ocr_source_frame_id": "L25_V004_f0172",
-    "quality_flags": [],
-    "caption": "A green educational slide displays molten electrolysis equations on the left and three aqueous electrolysis equations on the right.",
-    "detailed_caption": "The slide features a dark green backdrop with categorized chemistry equations. The left panel shows molten electrolysis, and the right panel displays three equations for aqueous electrolysis including copper chloride.",
-    "caption_vi": "Slide giáo dục màu xanh lá hiển thị các phương trình điện phân nóng chảy bên trái và ba phương trình điện phân dung dịch bên phải.",
-    "detailed_caption_vi": "Slide có phông nền màu xanh lá cây đậm với các phương trình hóa học được phân loại. Bảng bên trái hiển thị điện phân nóng chảy, và bảng bên phải hiển thị ba phương trình điện phân dung dịch bao gồm đồng clorua.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green educational slide displays molten electrolysis equations on the left and two aqueous electrolysis equations on the right.",
+    "detailed_caption": "This slide presents chemistry notes against a dark green background. The left column details molten electrolysis, and the right column lists two aqueous electrolysis equations involving silver nitrate and copper sulfate.",
+    "caption_vi": "Slide giáo dục màu xanh lá hiển thị các phương trình điện phân nóng chảy ở bên trái và hai phương trình điện phân dung dịch ở bên phải.",
+    "detailed_caption_vi": "Slide này trình bày các ghi chú hóa học trên nền màu xanh lá cây đậm. Cột bên trái chi tiết về điện phân nóng chảy, và cột bên phải liệt kê hai phương trình điện phân dung dịch liên quan đến bạc nitrat và đồng sunfat.",
     "ocr_text": "III. Phương pháp điện phân Một số phản ứng điện phân nóng chảy thông dụng 4NaOH -> 4Na + O2 + 2H2O 2NaCl -> 2Na + Cl2 MgCl2 -> Mg + Cl2 Một số phản ứng điện phân dung dịch thông dụng 2AgNO3 + H2O -> 2Ag + 2HNO3 + 1/2 O2 CuSO4 + H2O -> Cu + H2SO4 + 1/2 O2 CuCl2 -> Cu + Cl2",
     "news_ticker_text": "",
     "detections": [
@@ -10691,8 +10712,8 @@
           0.986,
           0.986
         ],
-        "description": "A green educational slide with chemistry equations",
-        "description_vi": "Một slide giáo dục màu xanh lá cây với các phương trình hóa học",
+        "description": "A green educational slide showing multiple chemical equations",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị nhiều phương trình hóa học",
         "attributes": [
           "green",
           "educational"
@@ -10806,7 +10827,7 @@
     "detailed_caption": "A medium shot shows the male teacher in a white shirt and purple tie seated behind a laptop. Next to him is a green slide with a green ribbon header reading 'Bài tập áp dụng' and a multiple-choice chemistry question.",
     "caption_vi": "Nam giáo viên ngồi trước máy tính xách tay bên cạnh slide bài tập trắc nghiệm hóa học.",
     "detailed_caption_vi": "Nam giáo viên mặc áo sơ mi trắng và cà vạt tím ngồi bên laptop. Bên phải là slide màu xanh lá hiển thị câu hỏi bài tập áp dụng dạng trắc nghiệm.",
-    "ocr_text": "THANH NIÊN Bài tập áp dụng Câu 15: Một dung dịch X chứa đồng thời NaNO₃, Cu(NO₃)₂, Fe(NO₃)₃, Zn(NO₃)₂, AgNO₃. Thứ tự các kim loại thoát ra ở catot khi điện phân dung dịch trên là: A. Ag, Fe, Cu, Zn B. Ag, Cu, Fe, Zn C. Ag, Cu, Fe D. Ag, Cu, Fe, Zn, Na",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10869,7 +10890,7 @@
     "detailed_caption": "A medium shot shows the male teacher in a white shirt and purple tie seated behind a laptop. Next to him is a green slide with a green ribbon header reading 'Bài tập áp dụng' and a multiple-choice chemistry question.",
     "caption_vi": "Nam giáo viên ngồi trước máy tính xách tay bên cạnh slide bài tập trắc nghiệm hóa học.",
     "detailed_caption_vi": "Nam giáo viên mặc áo sơ mi trắng và cà vạt tím ngồi bên laptop. Bên phải là slide màu xanh lá hiển thị câu hỏi bài tập áp dụng dạng trắc nghiệm.",
-    "ocr_text": "THANH NIÊN Bài tập áp dụng Câu 15: Một dung dịch X chứa đồng thời NaNO₃, Cu(NO₃)₂, Fe(NO₃)₃, Zn(NO₃)₂, AgNO₃. Thứ tự các kim loại thoát ra ở catot khi điện phân dung dịch trên là: A. Ag, Fe, Cu, Zn B. Ag, Cu, Fe, Zn C. Ag, Cu, Fe D. Ag, Cu, Fe, Zn, Na",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10932,7 +10953,7 @@
     "detailed_caption": "A medium shot shows the male teacher in a white shirt and purple tie seated behind a laptop. Next to him is a green slide with a green ribbon header reading 'Bài tập áp dụng' and a multiple-choice chemistry question.",
     "caption_vi": "Nam giáo viên ngồi trước máy tính xách tay bên cạnh slide bài tập trắc nghiệm hóa học.",
     "detailed_caption_vi": "Nam giáo viên mặc áo sơ mi trắng và cà vạt tím ngồi bên laptop. Bên phải là slide màu xanh lá hiển thị câu hỏi bài tập áp dụng dạng trắc nghiệm.",
-    "ocr_text": "THANH NIÊN Bài tập áp dụng Câu 15: Một dung dịch X chứa đồng thời NaNO₃, Cu(NO₃)₂, Fe(NO₃)₃, Zn(NO₃)₂, AgNO₃. Thứ tự các kim loại thoát ra ở catot khi điện phân dung dịch trên là: A. Ag, Fe, Cu, Zn B. Ag, Cu, Fe, Zn C. Ag, Cu, Fe D. Ag, Cu, Fe, Zn, Na",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10995,7 +11016,7 @@
     "detailed_caption": "A medium shot shows the male teacher in a white shirt and purple tie seated behind a laptop. Next to him is a green slide with a green ribbon header reading 'Bài tập áp dụng' and a multiple-choice chemistry question.",
     "caption_vi": "Nam giáo viên ngồi trước máy tính xách tay bên cạnh slide bài tập trắc nghiệm hóa học.",
     "detailed_caption_vi": "Nam giáo viên mặc áo sơ mi trắng và cà vạt tím ngồi bên laptop. Bên phải là slide màu xanh lá hiển thị câu hỏi bài tập áp dụng dạng trắc nghiệm.",
-    "ocr_text": "THANH NIÊN Bài tập áp dụng Câu 15: Một dung dịch X chứa đồng thời NaNO₃, Cu(NO₃)₂, Fe(NO₃)₃, Zn(NO₃)₂, AgNO₃. Thứ tự các kim loại thoát ra ở catot khi điện phân dung dịch trên là: A. Ag, Fe, Cu, Zn B. Ag, Cu, Fe, Zn C. Ag, Cu, Fe D. Ag, Cu, Fe, Zn, Na",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11090,7 +11111,7 @@
     "detailed_caption": "A full-screen green educational slide with a decorative green banner at the top reading 'Bài tập áp dụng'. Below it, a chemistry question asks for the order of metal deposition during electrolysis with four multiple-choice options.",
     "caption_vi": "Slide toàn màn hình màu xanh lá hiển thị câu hỏi trắc nghiệm hóa học về thứ tự điện phân kim loại.",
     "detailed_caption_vi": "Slide giáo dục toàn màn hình có nền xanh lá với tiêu đề 'Bài tập áp dụng' ở phía trên. Nội dung hiển thị câu hỏi trắc nghiệm về thứ tự thoát ra của các kim loại ở catot.",
-    "ocr_text": "Bài tập áp dụng Câu 15: Một dung dịch X chứa đồng thời NaNO₃, Cu(NO₃)₂, Fe(NO₃)₃, Zn(NO₃)₂, AgNO₃. Thứ tự các kim loại thoát ra ở catot khi điện phân dung dịch trên là: A. Ag, Fe, Cu, Zn B. Ag, Cu, Fe, Zn C. Ag, Cu, Fe D. Ag, Cu, Fe, Zn, Na",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11147,9 +11168,11 @@
   },
   {
     "frame_id": "L25_V004_f0182",
-    "visual_source_frame_id": "L25_V004_f0182",
+    "visual_source_frame_id": "L25_V004_f0181",
     "ocr_source_frame_id": "L25_V004_f0182",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A green educational slide displays a chemistry exercise question with multiple-choice options and a metal reactivity series chart.",
     "detailed_caption": "The slide features a green background with a banner reading 'Bài tập áp dụng' at the top. Below the question text and multiple-choice options A, B, C, and D, a horizontal chart illustrates the increasing oxidizing power and decreasing reducing power of metal ions.",
     "caption_vi": "Slide giáo dục màu xanh lá hiển thị một câu hỏi bài tập hóa học kèm theo các lựa chọn trắc nghiệm và biểu đồ dãy hoạt động hóa học của kim loại.",
@@ -11211,9 +11234,11 @@
   },
   {
     "frame_id": "L25_V004_f0184",
-    "visual_source_frame_id": "L25_V004_f0184",
+    "visual_source_frame_id": "L25_V004_f0183",
     "ocr_source_frame_id": "L25_V004_f0184",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A green educational slide displays a chemistry exercise question with multiple-choice options and a metal reactivity series chart.",
     "detailed_caption": "The slide features a green background with a banner reading 'Bài tập áp dụng' at the top. Below the question text and multiple-choice options A, B, C, and D, a horizontal chart illustrates the increasing oxidizing power and decreasing reducing power of metal ions.",
     "caption_vi": "Slide giáo dục màu xanh lá hiển thị một câu hỏi bài tập hóa học kèm theo các lựa chọn trắc nghiệm và biểu đồ dãy hoạt động hóa học của kim loại.",
@@ -11284,7 +11309,7 @@
     "detailed_caption": "A green educational slide shows a chemistry question and electrochemical table, with an added white banner at the bottom displaying the prioritized electrolysis order and highlighting the correct answer as 'Đáp án B'.",
     "caption_vi": "Slide bài giảng hiển thị câu hỏi trắc nghiệm kèm theo khung đáp án ở phía dưới cùng.",
     "detailed_caption_vi": "Slide giáo dục màu xanh lá hiển thị câu hỏi và bảng dãy điện hóa, kèm theo hộp văn bản màu trắng ở dưới cùng nêu rõ thứ tự điện phân ưu tiên và kết luận đáp án B.",
-    "ocr_text": "Bài tập áp dụng Câu 15: Một dung dịch X chứa đồng thời NaNO₃, Cu(NO₃)₂, Fe(NO₃)₃, Zn(NO₃)₂, AgNO₃. Thứ tự các kim loại thoát ra ở catot khi điện phân dung dịch trên là: A. Ag, Fe, Cu, Zn B. Ag, Cu, Fe, Zn C. Ag, Cu, Fe D. Ag, Cu, Fe, Zn, Na Chiều tăng dần tính oxi hóa của ion kim loại Li⁺ K⁺ Ba²⁺ Ca²⁺ Na⁺ Mg²⁺ Al³⁺ Mn²⁺ Cr²⁺ Zn²⁺ Fe²⁺ Ni²⁺ Sn²⁺ Pb²⁺ H⁺ Cu²⁺ Fe³⁺ Ag⁺ Hg²⁺ Pt²⁺ Au³⁺ Li K Ba Ca Na Mg Al Mn Cr Zn Fe Ni Sn Pb H₂ Cu Fe²⁺ Ag Hg Pt Au Tác dụng với nước Chiều giảm dần tính khử của kim loại Thứ tự điện phân ưu tiên: Ag⁺, Fe³⁺, Cu²⁺, Fe²⁺, Zn²⁺, H₂O → Đáp án B.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11341,9 +11366,11 @@
   },
   {
     "frame_id": "L25_V004_f0188",
-    "visual_source_frame_id": "L25_V004_f0188",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0188",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
     "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
     "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
@@ -11373,9 +11400,11 @@
   },
   {
     "frame_id": "L25_V004_f0189",
-    "visual_source_frame_id": "L25_V004_f0189",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0189",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
     "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
     "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
@@ -11405,31 +11434,32 @@
   },
   {
     "frame_id": "L25_V004_f0190",
-    "visual_source_frame_id": "L25_V004_f0190",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0190",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11438,31 +11468,32 @@
   },
   {
     "frame_id": "L25_V004_f0191",
-    "visual_source_frame_id": "L25_V004_f0191",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0191",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11471,31 +11502,32 @@
   },
   {
     "frame_id": "L25_V004_f0192",
-    "visual_source_frame_id": "L25_V004_f0192",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0192",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11504,31 +11536,32 @@
   },
   {
     "frame_id": "L25_V004_f0193",
-    "visual_source_frame_id": "L25_V004_f0193",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0193",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11537,31 +11570,32 @@
   },
   {
     "frame_id": "L25_V004_f0194",
-    "visual_source_frame_id": "L25_V004_f0194",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0194",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11570,31 +11604,32 @@
   },
   {
     "frame_id": "L25_V004_f0195",
-    "visual_source_frame_id": "L25_V004_f0195",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0195",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11603,31 +11638,32 @@
   },
   {
     "frame_id": "L25_V004_f0196",
-    "visual_source_frame_id": "L25_V004_f0196",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0196",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11636,31 +11672,32 @@
   },
   {
     "frame_id": "L25_V004_f0197",
-    "visual_source_frame_id": "L25_V004_f0197",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0197",
-    "quality_flags": [],
-    "caption": "An educational slide detailing Faraday's law of electrolysis with formulas and explanatory text against a blue and green background.",
-    "detailed_caption": "An educational slide displays Faraday's law of electrolysis on a blue panel with the chemical formula m = A I t / n F centered at the top. Below the formula, explanatory bullet points define each variable in Vietnamese. The top banner shows the title 'II. 3. Phương pháp điện phân' on a dark blue background.",
-    "caption_vi": "Slide giáo dục trình bày định luật Faraday về điện phân với công thức và các giải thích chi tiết trên nền xanh.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị định luật Faraday về điện phân trên nền xanh dương với công thức m = A I t / n F ở phía trên. Dưới công thức là các chú thích chi tiết bằng tiếng Việt giải thích từng đại lượng. Tiêu đề bài học nằm ở thanh màu xanh đậm phía trên cùng.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemical formulas and explanatory text",
-        "description_vi": "slide giáo dục chứa công thức hóa học và văn bản giải thích",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11669,31 +11706,32 @@
   },
   {
     "frame_id": "L25_V004_f0198",
-    "visual_source_frame_id": "L25_V004_f0198",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0198",
-    "quality_flags": [],
-    "caption": "An educational slide presenting an electrolysis application problem header alongside Faraday's law formulas.",
-    "detailed_caption": "An educational slide features a section titled 'Áp dụng 1' at the top right against a green background, while the left side retains Faraday's law formulas and variable definitions on a blue panel. The top banner shows the main topic title.",
-    "caption_vi": "Slide giáo dục hiển thị tiêu đề bài tập áp dụng bên cạnh các công thức về định luật Faraday.",
-    "detailed_caption_vi": "Slide giáo dục có tiêu đề phần 'Áp dụng 1' ở góc trên bên phải trên nền xanh lá, trong khi bên trái vẫn giữ các công thức định luật Faraday trên nền xanh dương.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Áp dụng 1 Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with problem header and chemical formulas",
-        "description_vi": "slide giáo dục với tiêu đề bài toán và công thức hóa học",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "formula"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11702,31 +11740,32 @@
   },
   {
     "frame_id": "L25_V004_f0199",
-    "visual_source_frame_id": "L25_V004_f0199",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0199",
-    "quality_flags": [],
-    "caption": "An educational slide presenting an electrolysis chemistry problem titled Áp dụng 1 next to Faraday's law formulas.",
-    "detailed_caption": "An educational slide displays a chemistry problem on the right panel with the heading 'Áp dụng 1' and text asking about the mass decrease after electrolyzing Cu(NO3)2. The left panel shows Faraday's law formulas and definitions, and the top banner displays the main lesson title.",
-    "caption_vi": "Slide giáo dục hiển thị bài toán hóa học về điện phân có tiêu đề Áp dụng 1 bên cạnh các công thức định luật Faraday.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị bài toán hóa học ở bảng bên phải với tiêu đề 'Áp dụng 1' và nội dung câu hỏi về khối lượng dung dịch giảm sau khi điện phân. Bảng bên trái hiển thị công thức định luật Faraday.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemistry problem text",
-        "description_vi": "slide giáo dục chứa nội dung bài toán hóa học",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "problem"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11735,31 +11774,32 @@
   },
   {
     "frame_id": "L25_V004_f0200",
-    "visual_source_frame_id": "L25_V004_f0200",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0200",
-    "quality_flags": [],
-    "caption": "An educational slide presenting an electrolysis chemistry problem titled Áp dụng 1 next to Faraday's law formulas.",
-    "detailed_caption": "An educational slide displays a chemistry problem on the right panel with the heading 'Áp dụng 1' and text asking about the mass decrease after electrolyzing Cu(NO3)2. The left panel shows Faraday's law formulas and definitions, and the top banner displays the main lesson title.",
-    "caption_vi": "Slide giáo dục hiển thị bài toán hóa học về điện phân có tiêu đề Áp dụng 1 bên cạnh các công thức định luật Faraday.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị bài toán hóa học ở bảng bên phải với tiêu đề 'Áp dụng 1' và nội dung câu hỏi về khối lượng dung dịch giảm sau khi điện phân. Bảng bên trái hiển thị công thức định luật Faraday.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemistry problem text",
-        "description_vi": "slide giáo dục chứa nội dung bài toán hóa học",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "problem"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11768,31 +11808,32 @@
   },
   {
     "frame_id": "L25_V004_f0201",
-    "visual_source_frame_id": "L25_V004_f0201",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0201",
-    "quality_flags": [],
-    "caption": "An educational slide presenting an electrolysis chemistry problem titled Áp dụng 1 next to Faraday's law formulas.",
-    "detailed_caption": "An educational slide displays a chemistry problem on the right panel with the heading 'Áp dụng 1' and text asking about the mass decrease after electrolyzing Cu(NO3)2. The left panel shows Faraday's law formulas and definitions, and the top banner displays the main lesson title.",
-    "caption_vi": "Slide giáo dục hiển thị bài toán hóa học về điện phân có tiêu đề Áp dụng 1 bên cạnh các công thức định luật Faraday.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị bài toán hóa học ở bảng bên phải với tiêu đề 'Áp dụng 1' và nội dung câu hỏi về khối lượng dung dịch giảm sau khi điện phân. Bảng bên trái hiển thị công thức định luật Faraday.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemistry problem text",
-        "description_vi": "slide giáo dục chứa nội dung bài toán hóa học",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "problem"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11801,31 +11842,32 @@
   },
   {
     "frame_id": "L25_V004_f0202",
-    "visual_source_frame_id": "L25_V004_f0202",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0202",
-    "quality_flags": [],
-    "caption": "An educational slide presenting an electrolysis chemistry problem titled Áp dụng 1 next to Faraday's law formulas.",
-    "detailed_caption": "An educational slide displays a chemistry problem on the right panel with the heading 'Áp dụng 1' and text asking about the mass decrease after electrolyzing Cu(NO3)2. The left panel shows Faraday's law formulas and definitions, and the top banner displays the main lesson title.",
-    "caption_vi": "Slide giáo dục hiển thị bài toán hóa học về điện phân có tiêu đề Áp dụng 1 bên cạnh các công thức định luật Faraday.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị bài toán hóa học ở bảng bên phải với tiêu đề 'Áp dụng 1' và nội dung câu hỏi về khối lượng dung dịch giảm sau khi điện phân. Bảng bên trái hiển thị công thức định luật Faraday.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemistry problem text",
-        "description_vi": "slide giáo dục chứa nội dung bài toán hóa học",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "problem"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11834,31 +11876,32 @@
   },
   {
     "frame_id": "L25_V004_f0203",
-    "visual_source_frame_id": "L25_V004_f0203",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0203",
-    "quality_flags": [],
-    "caption": "An educational slide presenting an electrolysis chemistry problem titled Áp dụng 1 next to Faraday's law formulas.",
-    "detailed_caption": "An educational slide displays a chemistry problem on the right panel with the heading 'Áp dụng 1' and text asking about the mass decrease after electrolyzing Cu(NO3)2. The left panel shows Faraday's law formulas and definitions, and the top banner displays the main lesson title.",
-    "caption_vi": "Slide giáo dục hiển thị bài toán hóa học về điện phân có tiêu đề Áp dụng 1 bên cạnh các công thức định luật Faraday.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị bài toán hóa học ở bảng bên phải với tiêu đề 'Áp dụng 1' và nội dung câu hỏi về khối lượng dung dịch giảm sau khi điện phân. Bảng bên trái hiển thị công thức định luật Faraday.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemistry problem text",
-        "description_vi": "slide giáo dục chứa nội dung bài toán hóa học",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "problem"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11867,31 +11910,32 @@
   },
   {
     "frame_id": "L25_V004_f0204",
-    "visual_source_frame_id": "L25_V004_f0204",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0204",
-    "quality_flags": [],
-    "caption": "An educational slide presenting an electrolysis chemistry problem titled Áp dụng 1 next to Faraday's law formulas.",
-    "detailed_caption": "An educational slide displays a chemistry problem on the right panel with the heading 'Áp dụng 1' and text asking about the mass decrease after electrolyzing Cu(NO3)2. The left panel shows Faraday's law formulas and definitions, and the top banner displays the main lesson title.",
-    "caption_vi": "Slide giáo dục hiển thị bài toán hóa học về điện phân có tiêu đề Áp dụng 1 bên cạnh các công thức định luật Faraday.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị bài toán hóa học ở bảng bên phải với tiêu đề 'Áp dụng 1' và nội dung câu hỏi về khối lượng dung dịch giảm sau khi điện phân. Bảng bên trái hiển thị công thức định luật Faraday.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Định luật Faraday m = A I t / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s ) F = const = 96500 C/mol",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.019,
-          0.033,
-          0.471,
-          0.963
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "educational slide with chemistry problem text",
-        "description_vi": "slide giáo dục chứa nội dung bài toán hóa học",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "problem"
+          "green",
+          "educational"
         ],
         "action": ""
       }
@@ -11900,33 +11944,34 @@
   },
   {
     "frame_id": "L25_V004_f0205",
-    "visual_source_frame_id": "L25_V004_f0205",
+    "visual_source_frame_id": "L25_V004_f0187",
     "ocr_source_frame_id": "L25_V004_f0205",
-    "quality_flags": [],
-    "caption": "A chemistry slide presentation featuring Faraday's law formula and an applied problem about copper nitrate electrolysis.",
-    "detailed_caption": "A detailed educational slide presentation displaying Faraday's law formula m equals A It over n F on the left panel. The right panel contains a chemistry exercise titled Ap dung 1 regarding the electrolysis of copper nitrate solution. Chemical equations and definitions of variables are displayed below.",
-    "caption_vi": "Slide bài giảng hóa học trình bày công thức định luật Faraday và bài toán áp dụng về điện phân dung dịch đồng nitrat.",
-    "detailed_caption_vi": "Slide giáo dục chi tiết hiển thị công thức định luật Faraday m bằng A It chia n F ở bảng bên trái. Bảng bên phải chứa bài tập hóa học có tiêu đề Áp dụng 1 về quá trình điện phân dung dịch đồng nitrat. Các phương trình hóa học và định nghĩa biến số được hiển thị phía dưới.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A green presentation slide features Faraday's law of electrolysis formula and definitions on the left side.",
+    "detailed_caption": "The slide is set against a dark green background with an orange header box titled 'Định luật Faraday'. Below it, a white box displays the mathematical formula for Faraday's law, accompanied by explanatory text detailing each variable on a blue panel.",
+    "caption_vi": "Slide thuyết trình màu xanh lá hiển thị công thức và định nghĩa của định luật Faraday về điện phân ở phía bên trái.",
+    "detailed_caption_vi": "Slide được đặt trên nền màu xanh lá cây đậm với hộp tiêu đề màu cam có tiêu đề 'Định luật Faraday'. Bên dưới, một hộp màu trắng hiển thị công thức toán học của định luật Faraday, đi kèm với văn bản giải thích chi tiết từng biến số trên một bảng màu xanh lam.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A It / n F Trong đó: m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân (s) F = const = 96500 C/mol Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Giải Cu(NO3)2 + H2O -> Cu + 2HNO3 + 1/2 O2",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "document_0",
-        "label": "document",
+        "object_id": "screen_0",
+        "label": "screen",
         "bbox": [
-          0.128,
-          0.036000000000000004,
-          0.9869999999999999,
-          0.966
+          0.011,
+          0.014,
+          0.986,
+          0.986
         ],
-        "description": "An educational slide containing chemical formulas and problem statements.",
-        "description_vi": "Một slide giáo dục chứa các công thức hóa học và đề bài toán.",
+        "description": "A green educational slide showing Faraday's law formula and variable descriptions",
+        "description_vi": "Một slide giáo dục màu xanh lá cây hiển thị công thức định luật Faraday và mô tả các biến",
         "attributes": [
-          "educational",
-          "text",
-          "slide"
+          "green",
+          "educational"
         ],
-        "action": "displaying information"
+        "action": ""
       }
     ],
     "spatial_relations": []
@@ -11999,13 +12044,15 @@
   },
   {
     "frame_id": "L25_V004_f0208",
-    "visual_source_frame_id": "L25_V004_f0208",
+    "visual_source_frame_id": "L25_V004_f0207",
     "ocr_source_frame_id": "L25_V004_f0208",
-    "quality_flags": [],
-    "caption": "A chemistry slide showing a completed mass calculation formula for electrolysis.",
-    "detailed_caption": "An educational slide presenting the solution to an electrolysis problem. The calculation formula for the mass of the solution decrease is shown with values substituted.",
-    "caption_vi": "Slide hóa học hiển thị công thức tính khối lượng đã hoàn thành cho quá trình điện phân.",
-    "detailed_caption_vi": "Slide giáo dục trình bày lời giải cho bài toán điện phân. Công thức tính khối lượng dung dịch giảm được hiển thị với các giá trị đã thay thế.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A chemistry slide displaying mole calculations and mass decrease formulas for electrolysis.",
+    "detailed_caption": "An instructional slide presenting stoichiometry calculations for electrolysis. A blue arrow points from 0.1 mol of copper nitrate to 0.1 mol of copper and 0.05 mol of oxygen, followed by a mass decrease formula at the bottom.",
+    "caption_vi": "Slide hóa học hiển thị tính toán số mol và công thức tính khối lượng giảm cho quá trình điện phân.",
+    "detailed_caption_vi": "Slide hướng dẫn trình bày các tính toán hóa lượng cho quá trình điện phân. Một mũi tên xanh chỉ từ 0,1 mol đồng nitrat sang 0,1 mol đồng và 0,05 mol oxy, theo sau là công thức tính khối lượng giảm ở phía dưới.",
     "ocr_text": "II. 3. Phương pháp điện phân Định luật Faraday m = A It / n F Trong đó: m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân (s) F = const = 96500 C/mol Áp dụng 1 Điện phân đến hết 0,1 mol Cu(NO3)2 trong dung dịch với điện cực trơ, thì sau điện phân khối lượng dung dịch đã giảm bao nhiêu gam? Giải Cu(NO3)2 + H2O -> Cu + 2HNO3 + 1/2 O2 0,1 mol -> 0,1 mol 0,05 mol m dung dịch giảm = mCu + mO2 = 64.0,1 + 0,05.32 = gam",
     "news_ticker_text": "",
     "detections": [
@@ -12018,8 +12065,8 @@
           0.986,
           0.965
         ],
-        "description": "An educational slide showing chemical calculation steps.",
-        "description_vi": "Một slide giáo dục hiển thị các bước tính toán hóa học.",
+        "description": "An educational slide showing chemical calculations and equations.",
+        "description_vi": "Một slide giáo dục hiển thị các tính toán và phương trình hóa học.",
         "attributes": [
           "educational",
           "text",
@@ -12222,60 +12269,88 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A male teacher sits at a laptop next to a chemistry practice problem slide, with his name and title in a lower-third box.",
-    "detailed_caption": "A medium shot shows a male teacher in a white shirt and purple tie seated behind a laptop next to a green slide with 'Áp dụng 2'. A lower-third banner at the bottom right displays his name and professional title.",
-    "caption_vi": "Nam giáo viên ngồi bên máy tính xách tay cạnh slide bài tập, kèm bảng tên ở góc phải.",
-    "detailed_caption_vi": "Nam giáo viên mặc áo sơ mi trắng thắt cà vạt tím ngồi trước laptop, cạnh slide bài giảng màu xanh lá. Dòng thông tin tên giáo viên hiển thị ở góc dưới bên phải.",
-    "ocr_text": "THANH NIÊN Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải ThS. PHẠM LÊ THANH Giáo viên môn Hoá học Trường THPT Nguyễn Hiền",
+    "caption": "A male teacher wearing glasses and a white shirt with a purple tie is seated in front of a laptop, presenting a chemistry slide.",
+    "detailed_caption": "A medium shot of a male teacher wearing wire-rimmed glasses, a white collared shirt, and a purple tie, seated behind a silver laptop on a white desk. A presentation slide about electrolysis is displayed on the screen to his right, and a lower-third banner shows his name and title.",
+    "caption_vi": "Một nam giáo viên đeo kính và mặc áo sơ mi trắng thắt cà vạt tím ngồi trước máy tính xách tay, thuyết trình bài học hóa học.",
+    "detailed_caption_vi": "Cảnh trung cận của một nam giáo viên đeo kính gọng mảnh, áo sơ mi trắng có cổ và cà vạt tím, ngồi phía sau máy tính xách tay màu bạc trên bàn trắng. Slide thuyết trình về điện phân hiển thị ở màn hình bên phải.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.44299999999999995,
+          0.012,
+          0.9869999999999999,
+          0.5599999999999999
+        ],
+        "description": "An educational slide showing a chemistry problem.",
+        "description_vi": "Một slide giáo dục hiển thị bài toán hóa học.",
+        "attributes": [
+          "educational",
+          "text",
+          "slide"
+        ],
+        "action": "displaying information"
+      },
+      {
+        "object_id": "laptop_0",
+        "label": "laptop",
+        "bbox": [
+          0.093,
+          0.8029999999999999,
+          0.34700000000000003,
+          0.992
+        ],
+        "description": "A silver laptop sitting on a white desk.",
+        "description_vi": "Một máy tính xách tay màu bạc đặt trên bàn trắng.",
+        "attributes": [
+          "silver",
+          "open"
+        ],
+        "action": "sitting"
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06999999999999999,
-          0.24000000000000002,
-          0.372,
-          0.982
+          0.08299999999999999,
+          0.247,
+          0.365,
+          0.995
         ],
-        "description": "male teacher wearing glasses, white shirt, and purple tie",
-        "description_vi": "nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím",
+        "description": "A male teacher wearing glasses, a white shirt, and a purple tie.",
+        "description_vi": "Một nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím.",
         "attributes": [
           "glasses",
           "white shirt",
           "purple tie",
           "male"
         ],
-        "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.44299999999999995,
-          0.014,
-          0.9890000000000001,
-          0.559
-        ],
-        "description": "green slide displaying chemistry practice problem Áp dụng 2",
-        "description_vi": "slide màu xanh hiển thị bài tập áp dụng 2",
-        "attributes": [
-          "green",
-          "text"
-        ],
-        "action": ""
+        "action": "presenting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "document_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "document_0",
         "predicate": "right_of",
         "object_id": "person_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
@@ -12286,60 +12361,88 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A male teacher sits at a laptop next to a chemistry practice problem slide, with his name and title in a lower-third box.",
-    "detailed_caption": "A medium shot shows a male teacher in a white shirt and purple tie seated behind a laptop next to a green slide with 'Áp dụng 2'. A lower-third banner at the bottom right displays his name and professional title.",
-    "caption_vi": "Nam giáo viên ngồi bên máy tính xách tay cạnh slide bài tập, kèm bảng tên ở góc phải.",
-    "detailed_caption_vi": "Nam giáo viên mặc áo sơ mi trắng thắt cà vạt tím ngồi trước laptop, cạnh slide bài giảng màu xanh lá. Dòng thông tin tên giáo viên hiển thị ở góc dưới bên phải.",
-    "ocr_text": "THANH NIÊN Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải ThS. PHẠM LÊ THANH Giáo viên môn Hoá học Trường THPT Nguyễn Hiền",
+    "caption": "A male teacher wearing glasses and a white shirt with a purple tie is seated in front of a laptop, presenting a chemistry slide.",
+    "detailed_caption": "A medium shot of a male teacher wearing wire-rimmed glasses, a white collared shirt, and a purple tie, seated behind a silver laptop on a white desk. A presentation slide about electrolysis is displayed on the screen to his right, and a lower-third banner shows his name and title.",
+    "caption_vi": "Một nam giáo viên đeo kính và mặc áo sơ mi trắng thắt cà vạt tím ngồi trước máy tính xách tay, thuyết trình bài học hóa học.",
+    "detailed_caption_vi": "Cảnh trung cận của một nam giáo viên đeo kính gọng mảnh, áo sơ mi trắng có cổ và cà vạt tím, ngồi phía sau máy tính xách tay màu bạc trên bàn trắng. Slide thuyết trình về điện phân hiển thị ở màn hình bên phải.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.44299999999999995,
+          0.012,
+          0.9869999999999999,
+          0.5599999999999999
+        ],
+        "description": "An educational slide showing a chemistry problem.",
+        "description_vi": "Một slide giáo dục hiển thị bài toán hóa học.",
+        "attributes": [
+          "educational",
+          "text",
+          "slide"
+        ],
+        "action": "displaying information"
+      },
+      {
+        "object_id": "laptop_0",
+        "label": "laptop",
+        "bbox": [
+          0.093,
+          0.8029999999999999,
+          0.34700000000000003,
+          0.992
+        ],
+        "description": "A silver laptop sitting on a white desk.",
+        "description_vi": "Một máy tính xách tay màu bạc đặt trên bàn trắng.",
+        "attributes": [
+          "silver",
+          "open"
+        ],
+        "action": "sitting"
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06999999999999999,
-          0.24000000000000002,
-          0.372,
-          0.982
+          0.08299999999999999,
+          0.247,
+          0.365,
+          0.995
         ],
-        "description": "male teacher wearing glasses, white shirt, and purple tie",
-        "description_vi": "nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím",
+        "description": "A male teacher wearing glasses, a white shirt, and a purple tie.",
+        "description_vi": "Một nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím.",
         "attributes": [
           "glasses",
           "white shirt",
           "purple tie",
           "male"
         ],
-        "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.44299999999999995,
-          0.014,
-          0.9890000000000001,
-          0.559
-        ],
-        "description": "green slide displaying chemistry practice problem Áp dụng 2",
-        "description_vi": "slide màu xanh hiển thị bài tập áp dụng 2",
-        "attributes": [
-          "green",
-          "text"
-        ],
-        "action": ""
+        "action": "presenting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "document_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "document_0",
         "predicate": "right_of",
         "object_id": "person_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
@@ -12350,60 +12453,88 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A male teacher sits at a laptop next to a chemistry practice problem slide, with his name and title in a lower-third box.",
-    "detailed_caption": "A medium shot shows a male teacher in a white shirt and purple tie seated behind a laptop next to a green slide with 'Áp dụng 2'. A lower-third banner at the bottom right displays his name and professional title.",
-    "caption_vi": "Nam giáo viên ngồi bên máy tính xách tay cạnh slide bài tập, kèm bảng tên ở góc phải.",
-    "detailed_caption_vi": "Nam giáo viên mặc áo sơ mi trắng thắt cà vạt tím ngồi trước laptop, cạnh slide bài giảng màu xanh lá. Dòng thông tin tên giáo viên hiển thị ở góc dưới bên phải.",
-    "ocr_text": "THANH NIÊN Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải ThS. PHẠM LÊ THANH Giáo viên môn Hoá học Trường THPT Nguyễn Hiền",
+    "caption": "A male teacher wearing glasses and a white shirt with a purple tie is seated in front of a laptop, presenting a chemistry slide.",
+    "detailed_caption": "A medium shot of a male teacher wearing wire-rimmed glasses, a white collared shirt, and a purple tie, seated behind a silver laptop on a white desk. A presentation slide about electrolysis is displayed on the screen to his right, and a lower-third banner shows his name and title.",
+    "caption_vi": "Một nam giáo viên đeo kính và mặc áo sơ mi trắng thắt cà vạt tím ngồi trước máy tính xách tay, thuyết trình bài học hóa học.",
+    "detailed_caption_vi": "Cảnh trung cận của một nam giáo viên đeo kính gọng mảnh, áo sơ mi trắng có cổ và cà vạt tím, ngồi phía sau máy tính xách tay màu bạc trên bàn trắng. Slide thuyết trình về điện phân hiển thị ở màn hình bên phải.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
+      {
+        "object_id": "document_0",
+        "label": "document",
+        "bbox": [
+          0.44299999999999995,
+          0.012,
+          0.9869999999999999,
+          0.5599999999999999
+        ],
+        "description": "An educational slide showing a chemistry problem.",
+        "description_vi": "Một slide giáo dục hiển thị bài toán hóa học.",
+        "attributes": [
+          "educational",
+          "text",
+          "slide"
+        ],
+        "action": "displaying information"
+      },
+      {
+        "object_id": "laptop_0",
+        "label": "laptop",
+        "bbox": [
+          0.093,
+          0.8029999999999999,
+          0.34700000000000003,
+          0.992
+        ],
+        "description": "A silver laptop sitting on a white desk.",
+        "description_vi": "Một máy tính xách tay màu bạc đặt trên bàn trắng.",
+        "attributes": [
+          "silver",
+          "open"
+        ],
+        "action": "sitting"
+      },
       {
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.06999999999999999,
-          0.24000000000000002,
-          0.372,
-          0.982
+          0.08299999999999999,
+          0.247,
+          0.365,
+          0.995
         ],
-        "description": "male teacher wearing glasses, white shirt, and purple tie",
-        "description_vi": "nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím",
+        "description": "A male teacher wearing glasses, a white shirt, and a purple tie.",
+        "description_vi": "Một nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím.",
         "attributes": [
           "glasses",
           "white shirt",
           "purple tie",
           "male"
         ],
-        "action": "sitting"
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.44299999999999995,
-          0.014,
-          0.9890000000000001,
-          0.559
-        ],
-        "description": "green slide displaying chemistry practice problem Áp dụng 2",
-        "description_vi": "slide màu xanh hiển thị bài tập áp dụng 2",
-        "attributes": [
-          "green",
-          "text"
-        ],
-        "action": ""
+        "action": "presenting"
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "document_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "document_0",
         "predicate": "right_of",
         "object_id": "person_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
       }
     ]
   },
@@ -12451,7 +12582,7 @@
     "detailed_caption": "A green presentation slide features chemistry problem text at the top titled Ap dung 2 in yellow lettering. Below the problem text, the heading Giai appears above a vertical red line on the board. The rest of the green board remains blank.",
     "caption_vi": "Một slide bài học hóa học trên nền xanh lá hiển thị đề bài mang tiêu đề Áp dụng 2 kèm theo các phương trình.",
     "detailed_caption_vi": "Một slide trình chiếu màu xanh lá hiển thị văn bản đề bài hóa học ở phía trên với tiêu đề Áp dụng 2 bằng chữ màu vàng. Phía dưới văn bản đề bài, tiêu đề Giải xuất hiện phía trên một đường kẻ dọc màu đỏ trên bảng. Phần còn lại của bảng màu xanh lá vẫn để trống.",
-    "ocr_text": "Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12548,30 +12679,30 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A green slide displays a chemistry problem, formula panel on the left, and calculation steps on the right.",
-    "detailed_caption": "A presentation slide features chemistry problem statements across the top and formula references on the lower left. The right side shows solution steps for calculating exchanged electrons.",
-    "caption_vi": "Slide màu xanh lá hiển thị bài toán hóa học, bảng công thức bên trái và các bước tính toán bên phải.",
-    "detailed_caption_vi": "Slide trình chiếu có các phát biểu bài toán hóa học ở phía trên và tham khảo công thức ở phía dưới bên trái. Phía bên phải hiển thị các bước giải để tính toán electron trao đổi.",
-    "ocr_text": "Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải + Số mol electron trao đổi It/F = 2. 14475/ 96500 = 0,3 mol = hóa trị kim loại. nkl m = A It / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s) F = const = 96500 C/mol",
+    "caption": "A chemistry slide displaying Faraday's law formulas and a calculated electron mole value.",
+    "detailed_caption": "An instructional slide showing an electrolysis problem at the top, Faraday's law on the lower-left blue box, and a calculation step for electron moles on the right.",
+    "caption_vi": "Slide hóa học hiển thị các công thức định luật Faraday và giá trị số mol electron đã tính toán.",
+    "detailed_caption_vi": "Slide hướng dẫn hiển thị bài toán điện phân ở trên, định luật Faraday ở ô màu xanh bên trái phía dưới và bước tính số mol electron ở bên phải.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.009,
-          0.519,
-          0.319,
+          0.008,
+          0.036000000000000004,
+          0.985,
           0.9550000000000001
         ],
-        "description": "blue box displaying formula and variable definitions",
-        "description_vi": "hộp màu xanh dương hiển thị công thức và định nghĩa biến",
+        "description": "An educational slide showing chemistry formulas and calculations.",
+        "description_vi": "Một slide giáo dục hiển thị các công thức và phép tính hóa học.",
         "attributes": [
-          "blue",
-          "formula",
-          "text"
+          "educational",
+          "text",
+          "slide"
         ],
-        "action": ""
+        "action": "displaying information"
       }
     ],
     "spatial_relations": []
@@ -12583,43 +12714,45 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A green slide displays a chemistry problem, formula panel on the left, and calculation steps on the right.",
-    "detailed_caption": "A presentation slide features chemistry problem statements across the top and formula references on the lower left. The right side shows solution steps for calculating exchanged electrons.",
-    "caption_vi": "Slide màu xanh lá hiển thị bài toán hóa học, bảng công thức bên trái và các bước tính toán bên phải.",
-    "detailed_caption_vi": "Slide trình chiếu có các phát biểu bài toán hóa học ở phía trên và tham khảo công thức ở phía dưới bên trái. Phía bên phải hiển thị các bước giải để tính toán electron trao đổi.",
-    "ocr_text": "Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải + Số mol electron trao đổi It/F = 2. 14475/ 96500 = 0,3 mol = hóa trị kim loại. nkl m = A It / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s) F = const = 96500 C/mol",
+    "caption": "A chemistry slide displaying Faraday's law formulas and a calculated electron mole value.",
+    "detailed_caption": "An instructional slide showing an electrolysis problem at the top, Faraday's law on the lower-left blue box, and a calculation step for electron moles on the right.",
+    "caption_vi": "Slide hóa học hiển thị các công thức định luật Faraday và giá trị số mol electron đã tính toán.",
+    "detailed_caption_vi": "Slide hướng dẫn hiển thị bài toán điện phân ở trên, định luật Faraday ở ô màu xanh bên trái phía dưới và bước tính số mol electron ở bên phải.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.009,
-          0.519,
-          0.319,
+          0.008,
+          0.036000000000000004,
+          0.985,
           0.9550000000000001
         ],
-        "description": "blue box displaying formula and variable definitions",
-        "description_vi": "hộp màu xanh dương hiển thị công thức và định nghĩa biến",
+        "description": "An educational slide showing chemistry formulas and calculations.",
+        "description_vi": "Một slide giáo dục hiển thị các công thức và phép tính hóa học.",
         "attributes": [
-          "blue",
-          "formula",
-          "text"
+          "educational",
+          "text",
+          "slide"
         ],
-        "action": ""
+        "action": "displaying information"
       }
     ],
     "spatial_relations": []
   },
   {
     "frame_id": "L25_V004_f0221",
-    "visual_source_frame_id": "L25_V004_f0221",
+    "visual_source_frame_id": "L25_V004_f0218",
     "ocr_source_frame_id": "L25_V004_f0221",
-    "quality_flags": [],
-    "caption": "A chemistry slide displaying an electrolysis problem and electron transfer calculations.",
-    "detailed_caption": "An instructional slide presenting the solution to an electrolysis problem. The upper section contains the problem statement, while the lower section shows Faraday's law and electron transfer calculations.",
-    "caption_vi": "Slide hóa học hiển thị bài toán điện phân và các tính toán trao đổi electron.",
-    "detailed_caption_vi": "Slide hướng dẫn trình bày lời giải cho bài toán điện phân. Phần trên chứa đề bài, trong khi phần dưới hiển thị định luật Faraday và các phép tính trao đổi electron.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A chemistry slide displaying Faraday's law formulas and a calculated electron mole value.",
+    "detailed_caption": "An instructional slide showing an electrolysis problem at the top, Faraday's law on the lower-left blue box, and a calculation step for electron moles on the right.",
+    "caption_vi": "Slide hóa học hiển thị các công thức định luật Faraday và giá trị số mol electron đã tính toán.",
+    "detailed_caption_vi": "Slide hướng dẫn hiển thị bài toán điện phân ở trên, định luật Faraday ở ô màu xanh bên trái phía dưới và bước tính số mol electron ở bên phải.",
     "ocr_text": "Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải m = A It / n F Trong đó: m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân (s) F = const = 96500 C/mol + Số mol electron trao đổi It/F = 2. 14475/ 96500 = 0,3 mol = hóa trị kim loại. nkl",
     "news_ticker_text": "",
     "detections": [
@@ -12632,8 +12765,8 @@
           0.985,
           0.9550000000000001
         ],
-        "description": "An educational slide showing chemistry problem solutions.",
-        "description_vi": "Một slide giáo dục hiển thị lời giải bài toán hóa học.",
+        "description": "An educational slide showing chemistry formulas and calculations.",
+        "description_vi": "Một slide giáo dục hiển thị các công thức và phép tính hóa học.",
         "attributes": [
           "educational",
           "text",
@@ -12646,13 +12779,15 @@
   },
   {
     "frame_id": "L25_V004_f0222",
-    "visual_source_frame_id": "L25_V004_f0222",
+    "visual_source_frame_id": "L25_V004_f0218",
     "ocr_source_frame_id": "L25_V004_f0222",
-    "quality_flags": [],
-    "caption": "A chemistry slide displaying a calculation step for metal mass during electrolysis.",
-    "detailed_caption": "An educational slide showing the solution steps for an electrolysis problem. The screen presents the mass of the metal equal to the increase in cathode mass, evaluated at 9.75 grams.",
-    "caption_vi": "Slide hóa học hiển thị bước tính khối lượng kim loại trong quá trình điện phân.",
-    "detailed_caption_vi": "Slide giáo dục hiển thị các bước giải cho bài toán điện phân. Màn hình trình bày khối lượng kim loại bằng độ tăng khối lượng catot, tính bằng 9,75 gam.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A chemistry slide displaying Faraday's law formulas and a calculated electron mole value.",
+    "detailed_caption": "An instructional slide showing an electrolysis problem at the top, Faraday's law on the lower-left blue box, and a calculation step for electron moles on the right.",
+    "caption_vi": "Slide hóa học hiển thị các công thức định luật Faraday và giá trị số mol electron đã tính toán.",
+    "detailed_caption_vi": "Slide hướng dẫn hiển thị bài toán điện phân ở trên, định luật Faraday ở ô màu xanh bên trái phía dưới và bước tính số mol electron ở bên phải.",
     "ocr_text": "Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải m = A It / n F Trong đó: m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân (s) F = const = 96500 C/mol + Số mol electron trao đổi It/F = 2. 14475/ 96500 = 0,3 mol = hóa trị kim loại. nkl + mkim loại = mcatot tăng = 9,75 gam.",
     "news_ticker_text": "",
     "detections": [
@@ -12665,8 +12800,8 @@
           0.985,
           0.9550000000000001
         ],
-        "description": "An educational slide showing chemistry calculations.",
-        "description_vi": "Một slide giáo dục hiển thị các phép tính hóa học.",
+        "description": "An educational slide showing chemistry formulas and calculations.",
+        "description_vi": "Một slide giáo dục hiển thị các công thức và phép tính hóa học.",
         "attributes": [
           "educational",
           "text",
@@ -12712,10 +12847,12 @@
   },
   {
     "frame_id": "L25_V004_f0224",
-    "visual_source_frame_id": "L25_V004_f0224",
+    "visual_source_frame_id": "L25_V004_f0223",
     "ocr_source_frame_id": "L25_V004_f0224",
-    "quality_flags": [],
-    "caption": "A chemistry slide displaying the final calculation steps and the identification of metal M as zinc.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A chemistry slide showing the final calculation steps and the identification of metal M as zinc.",
     "detailed_caption": "An instructional slide displaying the solution to an electrolysis problem. The bottom line calculates the molar mass of metal M as 65, identifying it as zinc (Zn).",
     "caption_vi": "Slide hóa học hiển thị các bước tính toán cuối cùng và xác định kim loại M là kẽm.",
     "detailed_caption_vi": "Slide hướng dẫn trình bày lời giải cho bài toán điện phân. Dòng cuối tính khối lượng mol của kim loại M là 65, xác định đó là kẽm (Zn).",
@@ -12750,29 +12887,30 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A green chemistry lesson slide displays the complete problem solution including final calculation of metal M.",
-    "detailed_caption": "A green slide presents a chemistry problem at the top, a formula reference panel on the bottom left, and step-by-step calculation equations on the right resulting in zinc as the answer.",
-    "caption_vi": "Slide bài học hóa học màu xanh lá hiển thị toàn bộ lời giải bài toán gồm cả tính toán cuối cùng của kim loại M.",
-    "detailed_caption_vi": "Slide màu xanh lá trình bày bài toán hóa học ở phía trên, bảng tham khảo công thức ở góc dưới bên trái và các phương trình tính toán từng bước ở bên phải dẫn đến kết quả là kẽm.",
-    "ocr_text": "Áp dụng 2 Điện phân dung dịch muối nitrat của kim loại M, điện cực trơ, dòng điện I = 2A. Sau thời gian điện phân 4 giờ 1 phút 15 giây, không thấy khí thoát ra ở catot. Khối lượng catot tăng 9,75 gam. Giả thiết hiệu suất điện phân đạt 100%, toàn bộ kim loại sinh ra bám hết vào catot. Xác định kim loại M? Giải + Số mol electron trao đổi It/F = 2. 14475/ 96500 = 0,3 mol = hóa trị kim loại. nkl + m kim loại = mcatot tăng = 9,75 gam. + Gọi a là hóa trị của kim loại M thì: a. (9,75 / M ) = 0,3 -> M = 32,5 a -> a = 2, M = 65 (Zn) m = A It / n F Trong đó : m : khối lượng chất thu được ở điện cực ( gam) A : khối lượng mol nguyên tử chất thu được ở điện cực n : số e trao đổi t : thời gian điện phân ( s) F = const = 96500 C/mol",
+    "caption": "A chemistry slide showing the final calculation steps and the identification of metal M as zinc.",
+    "detailed_caption": "An instructional slide displaying the solution to an electrolysis problem. The bottom line calculates the molar mass of metal M as 65, identifying it as zinc (Zn).",
+    "caption_vi": "Slide hóa học hiển thị các bước tính toán cuối cùng và xác định kim loại M là kẽm.",
+    "detailed_caption_vi": "Slide hướng dẫn trình bày lời giải cho bài toán điện phân. Dòng cuối tính khối lượng mol của kim loại M là 65, xác định đó là kẽm (Zn).",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
-        "object_id": "formula_box_0",
-        "label": "formula box",
+        "object_id": "document_0",
+        "label": "document",
         "bbox": [
-          0.009,
-          0.519,
-          0.319,
+          0.008,
+          0.036000000000000004,
+          0.985,
           0.9550000000000001
         ],
-        "description": "blue rectangle showing formula and variable glossary",
-        "description_vi": "hình chữ nhật màu xanh dương hiển thị công thức và bảng thuật ngữ biến",
+        "description": "An educational slide showing final chemistry calculations and answers.",
+        "description_vi": "Một slide giáo dục hiển thị các phép tính và đáp án hóa học cuối cùng.",
         "attributes": [
-          "blue",
-          "formula"
+          "educational",
+          "text",
+          "slide"
         ],
-        "action": ""
+        "action": "displaying information"
       }
     ],
     "spatial_relations": []
@@ -12845,9 +12983,11 @@
   },
   {
     "frame_id": "L25_V004_f0228",
-    "visual_source_frame_id": "L25_V004_f0228",
+    "visual_source_frame_id": "L25_V004_f0227",
     "ocr_source_frame_id": "L25_V004_f0228",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "A chemistry slide displaying the final calculation steps and the identification of metal M as zinc.",
     "detailed_caption": "An instructional slide displaying the solution to an electrolysis problem. The bottom line calculates the molar mass of metal M as 65, identifying it as zinc (Zn).",
     "caption_vi": "Slide hóa học hiển thị các bước tính toán cuối cùng và xác định kim loại M là kẽm.",
@@ -13008,7 +13148,7 @@
     "detailed_caption": "A male teacher with glasses, short black hair, white long-sleeve shirt, and purple tie sits facing forward behind a light-colored laptop on a desk. To his right, a green board displays exercise text and a yellow star icon. The background features blue graphics and a news station logo on the upper left.",
     "caption_vi": "Nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím ngồi trước máy tính xách tay bên cạnh slide bài học màu xanh lá.",
     "detailed_caption_vi": "Một nam giáo viên đeo kính, tóc đen ngắn, mặc áo sơ mi trắng dài tay và cà vạt màu tím ngồi hướng về phía trước sau chiếc máy tính xách tay sáng màu trên bàn. Ở bên phải anh ấy, một chiếc bảng xanh lá hiển thị văn bản bài tập và biểu tượng ngôi sao màu vàng. Phía sau là đồ họa màu xanh dương và logo đài phát thanh ở góc trên bên trái.",
-    "ocr_text": "Thanh Niên Bài tập áp dụng Câu 16.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -13099,7 +13239,7 @@
     "detailed_caption": "A male teacher with glasses, short black hair, white long-sleeve shirt, and purple tie sits facing forward behind a light-colored laptop on a desk. To his right, a green board displays exercise text and a yellow star icon. The background features blue graphics and a news station logo on the upper left.",
     "caption_vi": "Nam giáo viên đeo kính, mặc áo sơ mi trắng và cà vạt tím ngồi trước máy tính xách tay bên cạnh slide bài học màu xanh lá.",
     "detailed_caption_vi": "Một nam giáo viên đeo kính, tóc đen ngắn, mặc áo sơ mi trắng dài tay và cà vạt màu tím ngồi hướng về phía trước sau chiếc máy tính xách tay sáng màu trên bàn. Ở bên phải anh ấy, một chiếc bảng xanh lá hiển thị văn bản bài tập và biểu tượng ngôi sao màu vàng. Phía sau là đồ họa màu xanh dương và logo đài phát thanh ở góc trên bên trái.",
-    "ocr_text": "Thanh Niên Bài tập áp dụng Câu 16.",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -13229,9 +13369,11 @@
   },
   {
     "frame_id": "L25_V004_f0234",
-    "visual_source_frame_id": "L25_V004_f0234",
+    "visual_source_frame_id": "L25_V004_f0233",
     "ocr_source_frame_id": "L25_V004_f0234",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "An educational chemistry slide displaying a multiple-choice question against a dark green background.",
     "detailed_caption": "An educational chemistry slide is shown on a dark green background with a decorative green banner at the top reading 'Bài tập áp dụng'. Below the banner, question text is displayed with multiple options labeled A through D, alongside a yellow star icon on the left.",
     "caption_vi": "Slide bài tập hóa học hiển thị câu hỏi trắc nghiệm trên nền xanh đậm.",
@@ -13277,9 +13419,11 @@
   },
   {
     "frame_id": "L25_V004_f0235",
-    "visual_source_frame_id": "L25_V004_f0235",
+    "visual_source_frame_id": "L25_V004_f0233",
     "ocr_source_frame_id": "L25_V004_f0235",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "An educational chemistry slide displaying a multiple-choice question against a dark green background.",
     "detailed_caption": "An educational chemistry slide is shown on a dark green background with a decorative green banner at the top reading 'Bài tập áp dụng'. Below the banner, question text is displayed with multiple options labeled A through D, alongside a yellow star icon on the left.",
     "caption_vi": "Slide bài tập hóa học hiển thị câu hỏi trắc nghiệm trên nền xanh đậm.",
@@ -13325,9 +13469,11 @@
   },
   {
     "frame_id": "L25_V004_f0236",
-    "visual_source_frame_id": "L25_V004_f0236",
+    "visual_source_frame_id": "L25_V004_f0233",
     "ocr_source_frame_id": "L25_V004_f0236",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "An educational chemistry slide displaying a multiple-choice question against a dark green background.",
     "detailed_caption": "An educational chemistry slide is shown on a dark green background with a decorative green banner at the top reading 'Bài tập áp dụng'. Below the banner, question text is displayed with multiple options labeled A through D, alongside a yellow star icon on the left.",
     "caption_vi": "Slide bài tập hóa học hiển thị câu hỏi trắc nghiệm trên nền xanh đậm.",
@@ -13504,7 +13650,7 @@
     "detailed_caption": "A presentation slide displays multiple-choice question Cau 16 at the top. Below, the left side shows an electrolysis cell diagram with labels, while the right side displays step-by-step electrolysis explanation notes and chemical equations.",
     "caption_vi": "Slide màu xanh lá hiển thị câu hỏi hóa học ở phía trên kèm theo hai sơ đồ giải thích và phương trình ở phía dưới.",
     "detailed_caption_vi": "Slide trình chiếu hiển thị câu hỏi trắc nghiệm Câu 16 ở phía trên. Phía dưới, bên trái hiển thị sơ đồ bình điện phân có chú thích, trong khi bên phải hiển thị các ghi chú giải thích điện phân và phương trình hóa học từng bước.",
-    "ocr_text": "Bài tập áp dụng Câu 16. Trong quá trình điện phân dung dịch NaCl bằng điện cực trơ có màng ngăn A. Cation Na+ bị khử ở catot B. Phân tử H2O bị khử ở catot C. ion Cl- bị khử ở anot D. Phân tử H2O bị oxi hóa ở anot Trong dung dịch, NaCl điện li thành các ion Na+ và Cl-. Dưới tác dụng của điện trường, ion Na+ chạy về cực âm, ion Cl- chạy về cực dương. Catot (-) NaCl Anot (+) H2O, Na+ Cl-, H2O Cực âm: Ion Na+ không bị điện phân, thay vào đó H2O bị điện phân thành OH- và H2. Cực dương: Ion Cl- bị điện tạo ra phân tử Cl2. Quá trình điện cực: 2H2O + 2e 2OH- + H2 2Cl- - 2e Cl2 Quá trình khử Quá trình oxi hóa Phương trình điện phân: đpdd 2NaCl + 2H2O 2NaOH + H2 + Cl2 mn catot anot Cl2 dd NaCl Cực dương Mảng ngăn xốp dd NaCI dd NaOH Cực âm dd NaOH H2",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -13567,7 +13713,7 @@
     "detailed_caption": "A presentation slide displays multiple-choice question Cau 16 at the top. Below, the left side shows an electrolysis cell diagram with labels, while the right side displays step-by-step electrolysis explanation notes and chemical equations.",
     "caption_vi": "Slide màu xanh lá hiển thị câu hỏi hóa học ở phía trên kèm theo hai sơ đồ giải thích và phương trình ở phía dưới.",
     "detailed_caption_vi": "Slide trình chiếu hiển thị câu hỏi trắc nghiệm Câu 16 ở phía trên. Phía dưới, bên trái hiển thị sơ đồ bình điện phân có chú thích, trong khi bên phải hiển thị các ghi chú giải thích điện phân và phương trình hóa học từng bước.",
-    "ocr_text": "Bài tập áp dụng Câu 16. Trong quá trình điện phân dung dịch NaCl bằng điện cực trơ có màng ngăn A. Cation Na+ bị khử ở catot B. Phân tử H2O bị khử ở catot C. ion Cl- bị khử ở anot D. Phân tử H2O bị oxi hóa ở anot Trong dung dịch, NaCl điện li thành các ion Na+ và Cl-. Dưới tác dụng của điện trường, ion Na+ chạy về cực âm, ion Cl- chạy về cực dương. Catot (-) NaCl Anot (+) H2O, Na+ Cl-, H2O Cực âm: Ion Na+ không bị điện phân, thay vào đó H2O bị điện phân thành OH- và H2. Cực dương: Ion Cl- bị điện tạo ra phân tử Cl2. Quá trình điện cực: 2H2O + 2e 2OH- + H2 2Cl- - 2e Cl2 Quá trình khử Quá trình oxi hóa Phương trình điện phân: đpdd 2NaCl + 2H2O 2NaOH + H2 + Cl2 mn catot anot Cl2 dd NaCl Cực dương Mảng ngăn xốp dd NaCI dd NaOH Cực âm dd NaOH H2",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -14334,34 +14480,18 @@
   },
   {
     "frame_id": "L25_V004_f0254",
-    "visual_source_frame_id": "L25_V004_f0254",
+    "visual_source_frame_id": "L25_V004_f0252",
     "ocr_source_frame_id": "L25_V004_f0254",
-    "quality_flags": [],
-    "caption": "A dark auditorium with rows of seating and overhead stage lighting beams.",
-    "detailed_caption": "A wide shot shows a darkened auditorium or theater interior filled with rows of empty seats. Beams of light project diagonally across the lower portion of the space from lighting equipment positioned near the stage area.",
-    "caption_vi": "Một khán phòng tối với các hàng ghế ngồi và các luồng ánh sáng sân khấu phía trên.",
-    "detailed_caption_vi": "Cảnh rộng cho thấy nội thất một khán phòng hoặc nhà hát tối tăm với các hàng ghế trống. Các luồng ánh sáng chiếu chéo qua phần dưới của không gian từ các thiết bị chiếu sáng đặt gần khu vực sân khấu.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A completely black frame.",
+    "detailed_caption": "A completely black frame with no visible subjects, objects, or text.",
+    "caption_vi": "Một khung hình hoàn toàn màu đen.",
+    "detailed_caption_vi": "Khung hình hoàn toàn màu đen không có chủ thể, vật thể hay văn bản nào hiển thị.",
     "ocr_text": "",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "auditorium_0",
-        "label": "auditorium",
-        "bbox": [
-          0.0,
-          0.7569999999999999,
-          0.999,
-          0.999
-        ],
-        "description": "a dark auditorium with rows of seats",
-        "description_vi": "một khán phòng tối với các hàng ghế",
-        "attributes": [
-          "dark",
-          "empty"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -16861,7 +16991,7 @@
     "detailed_caption": "This wide shot shows a large group of students in matching blue shirts and black skirts or trousers lined up across a wooden stage. In the center, two individuals hold a long vertical flag. A projection screen behind them displays event titles in English and Vietnamese. The lower portion of the frame shows the heads of audience members seated in rows.",
     "caption_vi": "Một nhóm lớn học sinh mặc đồng phục xanh đứng trên sân khấu cầm lá cờ dọc, với khán giả ở phía trước.",
     "detailed_caption_vi": "Cảnh toàn cảnh này ghi lại một nhóm đông học sinh mặc áo sơ mi xanh và chân váy hoặc quần đen đồng bộ đang xếp hàng trên sân khấu gỗ. Ở giữa, hai người đang cầm một lá cờ dọc dài. Màn hình chiếu phía sau hiển thị tiêu đề sự kiện bằng tiếng Anh và tiếng Việt. Phần dưới khung hình là đầu của những khán giả ngồi theo hàng ghế.",
-    "ocr_text": "The Saigon International University LÊ CÔNG BỐ Journey Scholarship",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17817,33 +17947,18 @@
   },
   {
     "frame_id": "L25_V004_f0290",
-    "visual_source_frame_id": "L25_V004_f0290",
+    "visual_source_frame_id": "L25_V004_f0289",
     "ocr_source_frame_id": "L25_V004_f0290",
-    "quality_flags": [],
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
     "caption": "An overhead aerial view of a green basketball court with several players moving around.",
-    "detailed_caption": "An overhead shot shows a green basketball court marked with yellow and white lines. Multiple players wearing dark tops and shorts or green and yellow uniforms are positioned across the court, with a basketball rolling near the left side.",
+    "detailed_caption": "An overhead shot shows a green basketball court marked with yellow and white lines. Multiple players wearing dark tops and shorts or green and yellow uniforms are positioned across the court, some moving around while a basketball rests near one player.",
     "caption_vi": "Góc nhìn từ trên cao xuống một sân bóng rổ màu xanh lá với một số người chơi di chuyển xung quanh.",
-    "detailed_caption_vi": "Cảnh chụp từ trên cao cho thấy một sân bóng rổ màu xanh lá cây được đánh dấu bằng các đường kẻ màu vàng và trắng. Nhiều người chơi mặc áo tối màu và quần đùi hoặc đồng phục xanh lá vàng được bố trí trên sân, với một quả bóng rổ đang lăn gần phía bên trái.",
+    "detailed_caption_vi": "Cảnh chụp từ trên cao cho thấy một sân bóng rổ màu xanh lá cây được đánh dấu bằng các đường kẻ màu vàng và trắng. Nhiều người chơi mặc áo tối màu và quần đùi hoặc đồng phục xanh vàng được bố trí trên sân, một số đang di chuyển trong khi có một quả bóng rổ gần một người chơi.",
     "ocr_text": "SIU 11",
     "news_ticker_text": "",
     "detections": [
-      {
-        "object_id": "basketball_0",
-        "label": "basketball",
-        "bbox": [
-          0.20299999999999999,
-          0.474,
-          0.22599999999999998,
-          0.513
-        ],
-        "description": "a red basketball rolling on the court surface",
-        "description_vi": "một quả bóng rổ màu đỏ đang lăn trên bề mặt sân",
-        "attributes": [
-          "red",
-          "round"
-        ],
-        "action": "rolling"
-      },
       {
         "object_id": "basketball_court_0",
         "label": "basketball court",
@@ -17865,20 +17980,47 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.048,
-          0.764,
-          0.11699999999999999,
-          0.94
+          0.024,
+          0.78,
+          0.08299999999999999,
+          1.0
         ],
-        "description": "a player wearing a green and yellow uniform on the court",
-        "description_vi": "một người chơi mặc đồng phục xanh lá và vàng trên sân",
+        "description": "a player wearing a green and yellow uniform running on the court",
+        "description_vi": "một người chơi mặc đồng phục xanh lá và vàng đang chạy trên sân",
         "attributes": [
           "green uniform"
+        ],
+        "action": "running"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.048,
+          0.568,
+          0.16699999999999998,
+          0.6869999999999999
+        ],
+        "description": "a player wearing a dark top and shorts on a basketball court",
+        "description_vi": "một người chơi mặc áo tối màu và quần đùi trên sân bóng rổ",
+        "attributes": [
+          "dark clothing"
         ],
         "action": "playing"
       }
     ],
-    "spatial_relations": []
+    "spatial_relations": [
+      {
+        "subject_id": "person_1",
+        "predicate": "above",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "below",
+        "object_id": "person_1"
+      }
+    ]
   },
   {
     "frame_id": "L25_V004_f0291",
@@ -19606,7 +19748,7 @@
     "detailed_caption": "A medium shot captures a man wearing glasses, a white shirt, and a purple tie seated at a white desk with a laptop. To his right, a green screen displays text for a chemistry exercise with multiple-choice options and a yellow star. The background is a blue abstract graphic with the 'THANH NIÊN' logo in the top-left corner.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi trắng và cà vạt tím ngồi bàn cạnh màn hình xanh hiển thị câu hỏi hóa học.",
     "detailed_caption_vi": "Cảnh trung ghi lại một người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt tím ngồi tại bàn trắng có máy tính xách tay. Phía bên phải, màn hình xanh hiển thị nội dung bài tập hóa học với các lựa chọn trắc nghiệm và một ngôi sao vàng. Phía sau là đồ họa trừu tượng màu xanh với logo 'THANH NIÊN' ở góc trên bên trái.",
-    "ocr_text": "THANH NIEN Bài tập áp dụng Câu 17. Những kim loại nào sau đây có thể được điều chế theo phương pháp nhiệt luyện (nhờ chất khử CO, H₂) đi từ oxit kim loại tương ứng A. Al, Cu B. Mg, Fe C. Fe, Cu D. Ca, Cu",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19819,7 +19961,7 @@
     "detailed_caption": "A full-screen view of a green slide titled 'Bài tập áp dụng' at the top. The slide presents Question 17 regarding chemical reduction methods for metal oxides with multiple-choice options A, B, C, and D. A yellow star is displayed near the bottom left.",
     "caption_vi": "Slide hướng dẫn màu xanh lá cây hiển thị câu hỏi trắc nghiệm hóa học và biểu tượng ngôi sao vàng.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có tiêu đề 'Bài tập áp dụng' ở phía trên. Slide trình bày Câu 17 về các phương pháp khử hóa học đối với oxit kim loại với các lựa chọn A, B, C và D. Một ngôi sao màu vàng được hiển thị gần góc dưới bên trái.",
-    "ocr_text": "Bài tập áp dụng Câu 17. Những kim loại nào sau đây có thể được điều chế theo phương pháp nhiệt luyện (nhờ chất khử CO, H₂) đi từ oxit kim loại tương ứng A. Al, Cu B. Mg, Fe C. Fe, Cu D. Ca, Cu",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19854,7 +19996,7 @@
     "detailed_caption": "A full-screen view of a green slide titled 'Bài tập áp dụng' at the top. The slide presents Question 17 regarding chemical reduction methods for metal oxides with multiple-choice options A, B, C, and D. A yellow star is displayed near the bottom left.",
     "caption_vi": "Slide hướng dẫn màu xanh lá cây hiển thị câu hỏi trắc nghiệm hóa học và biểu tượng ngôi sao vàng.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có tiêu đề 'Bài tập áp dụng' ở phía trên. Slide trình bày Câu 17 về các phương pháp khử hóa học đối với oxit kim loại với các lựa chọn A, B, C và D. Một ngôi sao màu vàng được hiển thị gần góc dưới bên trái.",
-    "ocr_text": "Bài tập áp dụng Câu 17. Những kim loại nào sau đây có thể được điều chế theo phương pháp nhiệt luyện (nhờ chất khử CO, H₂) đi từ oxit kim loại tương ứng A. Al, Cu B. Mg, Fe C. Fe, Cu D. Ca, Cu",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19889,7 +20031,7 @@
     "detailed_caption": "A full-screen view of a green slide titled 'Bài tập áp dụng' at the top. The slide presents Question 17 regarding chemical reduction methods for metal oxides with multiple-choice options A, B, C, and D. A yellow star is displayed near the bottom left.",
     "caption_vi": "Slide hướng dẫn màu xanh lá cây hiển thị câu hỏi trắc nghiệm hóa học và biểu tượng ngôi sao vàng.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có tiêu đề 'Bài tập áp dụng' ở phía trên. Slide trình bày Câu 17 về các phương pháp khử hóa học đối với oxit kim loại với các lựa chọn A, B, C và D. Một ngôi sao màu vàng được hiển thị gần góc dưới bên trái.",
-    "ocr_text": "Bài tập áp dụng Câu 17. Những kim loại nào sau đây có thể được điều chế theo phương pháp nhiệt luyện (nhờ chất khử CO, H₂) đi từ oxit kim loại tương ứng A. Al, Cu B. Mg, Fe C. Fe, Cu D. Ca, Cu",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19924,7 +20066,7 @@
     "detailed_caption": "A full-screen view of a green slide titled 'Bài tập áp dụng' at the top. The slide presents Question 17 regarding chemical reduction methods for metal oxides with multiple-choice options A, B, C, and D. A yellow star is displayed near the bottom left.",
     "caption_vi": "Slide hướng dẫn màu xanh lá cây hiển thị câu hỏi trắc nghiệm hóa học và biểu tượng ngôi sao vàng.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có tiêu đề 'Bài tập áp dụng' ở phía trên. Slide trình bày Câu 17 về các phương pháp khử hóa học đối với oxit kim loại với các lựa chọn A, B, C và D. Một ngôi sao màu vàng được hiển thị gần góc dưới bên trái.",
-    "ocr_text": "Bài tập áp dụng Câu 17. Những kim loại nào sau đây có thể được điều chế theo phương pháp nhiệt luyện (nhờ chất khử CO, H₂) đi từ oxit kim loại tương ứng A. Al, Cu B. Mg, Fe C. Fe, Cu D. Ca, Cu",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20024,7 +20166,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20058,7 +20200,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20092,7 +20234,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20126,7 +20268,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20160,7 +20302,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20194,7 +20336,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20228,7 +20370,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20262,7 +20404,7 @@
     "detailed_caption": "A full-screen view of a green slide featuring a chemistry exercise with multiple-choice options. A yellow star and a grey banner indicating 'Đáp án B' are positioned in the middle. At the bottom, a white box presents the metal reactivity series and corresponding extraction methods.",
     "caption_vi": "Slide giáo dục màu xanh hiển thị câu hỏi hóa học có ngôi sao vàng và đáp án đúng được làm nổi bật.",
     "detailed_caption_vi": "Cảnh toàn màn hình của một slide màu xanh lá cây có bài tập hóa học với các lựa chọn trắc nghiệm. Một ngôi sao màu vàng và một biểu ngữ màu xám ghi 'Đáp án B' được đặt ở giữa. Ở dưới cùng, một hộp màu trắng trình bày dãy hoạt động hóa học của kim loại và các phương pháp điều chế tương ứng.",
-    "ocr_text": "Bài tập áp dụng • Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl₂ là A. Nhiệt phân CaCl₂ B. Điện phân CaCl₂ nóng chảy C. Dùng Na khử Ca²⁺ trong dd CaCl₂ D. Điện phân dung dịch CaCl₂ Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20640,13 +20782,15 @@
   },
   {
     "frame_id": "L25_V004_f0328",
-    "visual_source_frame_id": "L25_V004_f0328",
+    "visual_source_frame_id": "L25_V004_f0327",
     "ocr_source_frame_id": "L25_V004_f0328",
-    "quality_flags": [],
-    "caption": "A man wearing glasses and a white shirt with a purple tie sits behind a laptop, next to a slide with chemistry text and a yellow star.",
-    "detailed_caption": "This medium shot features a man wearing glasses, a white collared shirt, and a purple necktie, seated at a desk with a silver laptop in front of him. To his right, a large digital slide displays green and white text about chemical preparation methods alongside a yellow star icon and chemical symbols. The background shows a blurry studio setting with blue and purple tones.",
-    "caption_vi": "Một người đàn ông đeo kính và áo sơ mi trắng thắt cà vạt tím ngồi trước máy tính xách tay, bên cạnh màn hình hiển thị nội dung hóa học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh cho thấy một người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt màu tím, đang ngồi bên bàn làm việc có đặt máy tính xách tay. Phía bên phải là một màn hình lớn hiển thị văn bản bài tập hóa học màu xanh lá cây và trắng cùng biểu tượng ngôi sao màu vàng. Phông nền là không gian phòng thu mờ ảo với sắc xanh lam và tím.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and purple tie sits at a desk with a laptop next to a chemistry exercise slide.",
+    "detailed_caption": "A medium shot shows a man with glasses, a white shirt, and a purple tie, sitting behind a white desk with a laptop. To his right, a chemistry slide is displayed with a green header and chemical equations against a dark background, while an abstract blue background is visible on the left.",
+    "caption_vi": "Một người đàn ông mặc áo sơ mi trắng và cà vạt tím ngồi tại bàn có máy tính xách tay cạnh slide bài tập hóa học.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một người đàn ông đeo kính, áo sơ mi trắng và cà vạt tím, ngồi sau bàn trắng có máy tính xách tay. Bên phải anh ta, một slide hóa học được hiển thị với tiêu đề xanh lá và các phương trình hóa học trên nền tối.",
     "ocr_text": "THANH NIÊN Bài tập áp dụng - Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl2 là A. Nhiệt phân CaCl2 B. Điện phân CaCl2 nóng chảy C. Dùng Na khử Ca2+ trong dd CaCl2 D. Điện phân dung dịch CaCl2 Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
     "news_ticker_text": "",
     "detections": [
@@ -20655,15 +20799,15 @@
         "label": "laptop",
         "bbox": [
           0.10200000000000001,
-          0.801,
+          0.8029999999999999,
           0.34700000000000003,
-          0.992
+          0.9939999999999999
         ],
-        "description": "silver laptop on desk",
-        "description_vi": "máy tính xách tay màu bạc trên bàn",
+        "description": "a light-colored laptop sitting on a white desk",
+        "description_vi": "một chiếc máy tính xách tay màu sáng đặt trên bàn trắng",
         "attributes": [
-          "silver",
-          "portable"
+          "laptop",
+          "light-colored"
         ],
         "action": ""
       },
@@ -20671,15 +20815,14 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.08399999999999999,
-          0.211,
+          0.08299999999999999,
+          0.21400000000000002,
           0.381,
-          0.99
+          0.9939999999999999
         ],
-        "description": "man wearing glasses, white shirt, and purple tie",
-        "description_vi": "người đàn ông đeo kính, áo sơ mi trắng và cà vạt tím",
+        "description": "a man wearing glasses, a white shirt, and a purple tie sitting at a desk",
+        "description_vi": "một người đàn ông đeo kính, áo sơ mi trắng và cà vạt tím ngồi tại bàn làm việc",
         "attributes": [
-          "male",
           "glasses",
           "white shirt",
           "purple tie"
@@ -20690,17 +20833,16 @@
         "object_id": "slide_0",
         "label": "slide",
         "bbox": [
-          0.44299999999999995,
+          0.44400000000000006,
           0.014,
-          0.991,
+          0.99,
           0.5599999999999999
         ],
-        "description": "digital slide with green heading and chemistry questions",
-        "description_vi": "slide điện tử với tiêu đề xanh lá và câu hỏi hóa học",
+        "description": "an educational chemistry slide with multiple choice questions",
+        "description_vi": "một slide hóa học giáo dục với các câu hỏi trắc nghiệm",
         "attributes": [
           "green",
-          "digital",
-          "text"
+          "educational"
         ],
         "action": ""
       }
@@ -20730,13 +20872,15 @@
   },
   {
     "frame_id": "L25_V004_f0329",
-    "visual_source_frame_id": "L25_V004_f0329",
+    "visual_source_frame_id": "L25_V004_f0327",
     "ocr_source_frame_id": "L25_V004_f0329",
-    "quality_flags": [],
-    "caption": "A man wearing glasses and a white shirt with a purple tie sits behind a laptop, beside a presentation slide with chemistry questions.",
-    "detailed_caption": "This medium shot presents a man wearing glasses, a white button-down shirt, and a purple necktie, positioned behind a silver laptop on a desk. Beside him to the right is a green slide containing chemical formulas and multiple-choice questions. The background is a brightly lit studio with blue and purple bokeh lighting.",
-    "caption_vi": "Một người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt tím ngồi sau máy tính xách tay, cạnh màn hình trình chiếu bài tập hóa học.",
-    "detailed_caption_vi": "Cảnh quay trung cảnh ghi lại hình ảnh người đàn ông đeo kính, mặc áo sơ mi trắng và cà vạt tím, ngồi phía sau máy tính xách tay màu bạc. Bên cạnh anh là màn hình slide màu xanh lá cây chứa các công thức hóa học và câu hỏi trắc nghiệm. Phông nền phòng thu nổi bật với ánh sáng xanh và tím mờ ảo.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a white shirt and purple tie sits at a desk with a laptop next to a chemistry exercise slide.",
+    "detailed_caption": "A medium shot shows a man with glasses, a white shirt, and a purple tie, sitting behind a white desk with a laptop. To his right, a chemistry slide is displayed with a green header and chemical equations against a dark background, while an abstract blue background is visible on the left.",
+    "caption_vi": "Một người đàn ông mặc áo sơ mi trắng và cà vạt tím ngồi tại bàn có máy tính xách tay cạnh slide bài tập hóa học.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một người đàn ông đeo kính, áo sơ mi trắng và cà vạt tím, ngồi sau bàn trắng có máy tính xách tay. Bên phải anh ta, một slide hóa học được hiển thị với tiêu đề xanh lá và các phương trình hóa học trên nền tối.",
     "ocr_text": "THANH NIÊN Bài tập áp dụng - Câu 18. Phương pháp thích hợp điều chế kim loại Ca từ CaCl2 là A. Nhiệt phân CaCl2 B. Điện phân CaCl2 nóng chảy C. Dùng Na khử Ca2+ trong dd CaCl2 D. Điện phân dung dịch CaCl2 Đáp án B K Ba Ca Na Mg Al Điện phân nóng chảy Zn Cr Fe Ni Sn Pb Cu Hg Ag ... Nhiệt luyện, thủy luyện, điện phân dung dịch",
     "news_ticker_text": "",
     "detections": [
@@ -20745,14 +20889,15 @@
         "label": "laptop",
         "bbox": [
           0.10200000000000001,
-          0.801,
+          0.8029999999999999,
           0.34700000000000003,
-          0.992
+          0.9939999999999999
         ],
-        "description": "silver laptop",
-        "description_vi": "máy tính xách tay màu bạc",
+        "description": "a light-colored laptop sitting on a white desk",
+        "description_vi": "một chiếc máy tính xách tay màu sáng đặt trên bàn trắng",
         "attributes": [
-          "silver"
+          "laptop",
+          "light-colored"
         ],
         "action": ""
       },
@@ -20760,15 +20905,14 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.079,
+          0.08299999999999999,
           0.21400000000000002,
-          0.38,
-          0.9890000000000001
+          0.381,
+          0.9939999999999999
         ],
-        "description": "man wearing glasses, white shirt, and purple tie",
-        "description_vi": "người đàn ông đeo kính, áo sơ mi trắng và cà vạt tím",
+        "description": "a man wearing glasses, a white shirt, and a purple tie sitting at a desk",
+        "description_vi": "một người đàn ông đeo kính, áo sơ mi trắng và cà vạt tím ngồi tại bàn làm việc",
         "attributes": [
-          "male",
           "glasses",
           "white shirt",
           "purple tie"
@@ -20779,16 +20923,16 @@
         "object_id": "slide_0",
         "label": "slide",
         "bbox": [
-          0.44299999999999995,
+          0.44400000000000006,
           0.014,
-          0.991,
+          0.99,
           0.5599999999999999
         ],
-        "description": "presentation slide with green header and chemistry content",
-        "description_vi": "slide trình chiếu với tiêu đề xanh lá và nội dung hóa học",
+        "description": "an educational chemistry slide with multiple choice questions",
+        "description_vi": "một slide hóa học giáo dục với các câu hỏi trắc nghiệm",
         "attributes": [
           "green",
-          "digital"
+          "educational"
         ],
         "action": ""
       }
@@ -20883,7 +21027,7 @@
     "detailed_caption": "A medium shot shows a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The graphics are positioned against a smooth, light grey studio backdrop with a subtle floor shadow.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương kèm địa chỉ website bên dưới được đặt ở giữa nền xám nhạt.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn nhỏ hơn nằm phía dưới. Các chi tiết đồ họa nằm trên nền phông studio màu xám nhạt mịn màng có bóng đổ nhẹ ở sàn.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -20927,7 +21071,7 @@
     "detailed_caption": "A medium shot shows a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The graphics are positioned against a smooth, light grey studio backdrop with a subtle floor shadow.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương với địa chỉ website bên dưới xuất hiện ở giữa nền xám nhạt.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn phía dưới. Các yếu tố đồ họa nằm trên nền phông studio màu xám nhạt mịn màng với bóng đổ nhẹ dưới sàn.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -20943,7 +21087,7 @@
     "detailed_caption": "A medium shot shows a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The graphics are positioned against a smooth, light grey studio backdrop with a subtle floor shadow.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương với địa chỉ website bên dưới xuất hiện ở giữa nền xám nhạt.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn phía dưới. Các yếu tố đồ họa nằm trên nền phông studio màu xám nhạt mịn màng với bóng đổ nhẹ dưới sàn.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -20959,7 +21103,7 @@
     "detailed_caption": "A medium shot shows a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The graphics are positioned against a smooth, light grey studio backdrop with a subtle floor shadow.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương với địa chỉ website bên dưới xuất hiện ở giữa nền xám nhạt.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn phía dưới. Các yếu tố đồ họa nằm trên nền phông studio màu xám nhạt mịn màng với bóng đổ nhẹ dưới sàn.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -20989,7 +21133,7 @@
     "detailed_caption": "A medium shot displays a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The scene features a noticeably dimmed gradient grey studio backdrop compared to previous frames.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương kèm địa chỉ website bên dưới nằm ở giữa nền xám tối hơn.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn nhỏ hơn bên dưới. Bối cảnh là phông studio màu xám chuyển sắc tối hơn rõ rệt so với các khung hình trước.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -21005,7 +21149,7 @@
     "detailed_caption": "A medium shot displays a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The scene features a noticeably dimmed gradient grey studio backdrop compared to previous frames.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương kèm địa chỉ website bên dưới nằm ở giữa nền xám tối hơn.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn nhỏ hơn bên dưới. Bối cảnh là phông studio màu xám chuyển sắc tối hơn rõ rệt so với các khung hình trước.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -21021,7 +21165,7 @@
     "detailed_caption": "A medium shot displays a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The scene features a noticeably dimmed gradient grey studio backdrop compared to previous frames.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương kèm địa chỉ website bên dưới nằm ở giữa nền xám tối hơn.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn nhỏ hơn bên dưới. Bối cảnh là phông studio màu xám chuyển sắc tối hơn rõ rệt so với các khung hình trước.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -21037,7 +21181,7 @@
     "detailed_caption": "A medium shot displays a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The scene features a noticeably dimmed gradient grey studio backdrop compared to previous frames.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương kèm địa chỉ website bên dưới nằm ở giữa nền xám tối hơn.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn nhỏ hơn bên dưới. Bối cảnh là phông studio màu xám chuyển sắc tối hơn rõ rệt so với các khung hình trước.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []
@@ -21053,7 +21197,7 @@
     "detailed_caption": "A medium shot displays a centered blue text logo reading THANH NIEN with the smaller website address thanhnhien.vn underneath it. The scene features a noticeably dimmed gradient grey studio backdrop compared to previous frames.",
     "caption_vi": "Logo chữ THANH NIÊN màu xanh dương kèm địa chỉ website bên dưới nằm ở giữa nền xám tối hơn.",
     "detailed_caption_vi": "Cảnh quay trung cảnh hiển thị logo chữ THANH NIÊN màu xanh dương cùng dòng địa chỉ website thanhnhien.vn nhỏ hơn bên dưới. Bối cảnh là phông studio màu xám chuyển sắc tối hơn rõ rệt so với các khung hình trước.",
-    "ocr_text": "THANH NIÊN thanhnhien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [],
     "spatial_relations": []

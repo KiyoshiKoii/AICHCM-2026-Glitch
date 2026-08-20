@@ -123,7 +123,7 @@
     "detailed_caption": "A medium shot shows a man in a light-colored checkered shirt sitting behind a dark laptop on a wooden desk. To his right, a framed landscape photograph displays a mountainous region under a blue sky with clouds. A yellow and brown panel occupies the lower portion of the screen with Vietnamese text.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi họa tiết ngồi làm việc bên chiếc máy tính xách tay cạnh khung ảnh phong cảnh.",
     "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người đàn ông mặc áo sơ mi kẻ caro màu sáng đang ngồi phía sau chiếc máy tính xách tay màu đen trên bàn gỗ. Phía bên phải anh là một bức ảnh phong cảnh đóng khung hiển thị vùng núi non dưới bầu trời xanh có mây. Phần dưới màn hình là một khung màu vàng và nâu có chứa chữ tiếng Việt.",
-    "ocr_text": "Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -224,7 +224,7 @@
     "detailed_caption": "A medium shot shows a man in a light-colored checkered shirt sitting behind a dark laptop on a wooden desk. To his right, a framed landscape photograph displays a mountainous region under a blue sky with clouds. A yellow and brown panel occupies the lower portion of the screen with Vietnamese text.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi họa tiết ngồi làm việc bên chiếc máy tính xách tay cạnh khung ảnh phong cảnh.",
     "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người đàn ông mặc áo sơ mi kẻ caro màu sáng đang ngồi phía sau chiếc máy tính xách tay màu đen trên bàn gỗ. Phía bên phải anh là một bức ảnh phong cảnh đóng khung hiển thị vùng núi non dưới bầu trời xanh có mây. Phần dưới màn hình là một khung màu vàng và nâu có chứa chữ tiếng Việt.",
-    "ocr_text": "Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -316,13 +316,15 @@
   },
   {
     "frame_id": "L25_V065_f0005",
-    "visual_source_frame_id": "L25_V065_f0005",
+    "visual_source_frame_id": "L25_V065_f0002",
     "ocr_source_frame_id": "L25_V065_f0005",
-    "quality_flags": [],
-    "caption": "A teacher in a checked shirt sits behind a laptop next to a slide showing a landscape and vietnamese text.",
-    "detailed_caption": "A medium shot shows a male teacher wearing a light checked shirt seated behind a dark laptop on a wooden desk. To his right, a large presentation screen displays a landscape photo of mountains and valleys under a blue sky, overlaid with red Vietnamese title text.",
-    "caption_vi": "Một thầy giáo mặc áo sơ mi kẻ caro ngồi sau máy tính xách tay cạnh màn hình chiếu phong cảnh.",
-    "detailed_caption_vi": "Khung hình trung cảnh ghi lại một giáo viên nam mặc áo sơ mi kẻ sọc ngồi phía sau máy tính xách tay đặt trên bàn gỗ. Phía bên phải là màn hình chiếu cảnh núi non dưới bầu trời xanh kèm dòng chữ tiêu đề tiếng Việt màu đỏ.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A man in a patterned shirt sits at a desk with a laptop next to a landscape photo.",
+    "detailed_caption": "A medium shot shows a man in a light-colored checkered shirt sitting behind a dark laptop on a wooden desk. To his right, a framed landscape photograph displays a mountainous region under a blue sky with clouds. A yellow and brown panel occupies the lower portion of the screen with Vietnamese text.",
+    "caption_vi": "Một người đàn ông mặc áo sơ mi họa tiết ngồi làm việc bên chiếc máy tính xách tay cạnh khung ảnh phong cảnh.",
+    "detailed_caption_vi": "Khung hình trung cảnh cho thấy một người đàn ông mặc áo sơ mi kẻ caro màu sáng đang ngồi phía sau chiếc máy tính xách tay màu đen trên bàn gỗ. Phía bên phải anh là một bức ảnh phong cảnh đóng khung hiển thị vùng núi non dưới bầu trời xanh có mây. Phần dưới màn hình là một khung màu vàng và nâu có chứa chữ tiếng Việt.",
     "ocr_text": "THÀNH PHỐ NỘI CHUYÊN ĐỀ 3 SỐ LOẠI THỂ BA VÀ TAM BỘI KHÁC NHAU VỀ KIỂU GEN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong",
     "news_ticker_text": "",
     "detections": [
@@ -330,87 +332,86 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.087,
-          0.633,
-          0.242,
+          0.086,
+          0.63,
+          0.23900000000000002,
           0.772
         ],
-        "description": "dark laptop computer on a wooden desk",
+        "description": "dark laptop on a wooden desk",
         "description_vi": "máy tính xách tay màu tối trên bàn gỗ",
         "attributes": [
           "dark",
-          "laptop"
+          "open"
         ],
         "action": ""
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "person_0",
+        "label": "person",
         "bbox": [
-          0.365,
-          0.060000000000000005,
-          0.874,
-          0.7390000000000001
+          0.056999999999999995,
+          0.38,
+          0.192,
+          0.73
         ],
-        "description": "large projection screen showing a mountain landscape and red text",
-        "description_vi": "màn hình chiếu lớn hiển thị phong cảnh núi và chữ đỏ",
+        "description": "man in a checkered shirt sitting at a desk",
+        "description_vi": "người đàn ông mặc áo sơ mi kẻ caro ngồi tại bàn",
         "attributes": [
-          "large",
-          "projector",
-          "landscape"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.049,
-          0.382,
-          0.193,
-          0.736
-        ],
-        "description": "man wearing a light checked shirt and glasses",
-        "description_vi": "nam giáo viên mặc áo sơ mi kẻ sọc sáng màu",
-        "attributes": [
-          "man",
-          "checked",
-          "shirt",
-          "glasses"
+          "male",
+          "checkered shirt",
+          "sitting"
         ],
         "action": "sitting"
+      },
+      {
+        "object_id": "photograph_0",
+        "label": "photograph",
+        "bbox": [
+          0.365,
+          0.061000000000000006,
+          0.874,
+          0.738
+        ],
+        "description": "framed landscape photograph showing mountains under a cloudy sky",
+        "description_vi": "bức ảnh phong cảnh đóng khung hiển thị núi non dưới bầu trời nhiều mây",
+        "attributes": [
+          "framed",
+          "landscape",
+          "mountainous"
+        ],
+        "action": ""
       }
     ],
     "spatial_relations": [
       {
         "subject_id": "laptop_0",
-        "predicate": "left_of",
-        "object_id": "screen_0"
+        "predicate": "overlapping",
+        "object_id": "person_0"
       },
       {
-        "subject_id": "screen_0",
-        "predicate": "right_of",
+        "subject_id": "person_0",
+        "predicate": "overlapping",
         "object_id": "laptop_0"
       },
       {
         "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "teacher_0"
+        "predicate": "left_of",
+        "object_id": "photograph_0"
       },
       {
-        "subject_id": "teacher_0",
-        "predicate": "overlapping",
+        "subject_id": "photograph_0",
+        "predicate": "right_of",
         "object_id": "laptop_0"
       },
       {
-        "subject_id": "teacher_0",
+        "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "photograph_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "photograph_0",
         "predicate": "right_of",
-        "object_id": "teacher_0"
+        "object_id": "person_0"
       }
     ]
   },
@@ -521,7 +522,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -619,7 +620,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -717,7 +718,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -815,7 +816,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -913,7 +914,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1011,7 +1012,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1109,7 +1110,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1207,7 +1208,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1305,7 +1306,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1403,7 +1404,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1501,7 +1502,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1599,7 +1600,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -1697,7 +1698,7 @@
     "detailed_caption": "A medium shot displays a man in a light checkered shirt seated at a dark laptop on a wooden desk on the left. On the right, a large white board displays the mathematical text 2n equals 8. A lower third banner at the bottom displays text in Vietnamese.",
     "caption_vi": "Một người đàn ông mặc áo sơ mi kẻ ngồi cạnh máy tính xách tay hiển thị phương trình 2n bằng 8 trên bảng trắng.",
     "detailed_caption_vi": "Khung hình trung cảnh hiển thị một người đàn ông mặc áo sơ mi kẻ sáng màu ngồi bên chiếc máy tính xách tay màu đen trên bàn gỗ ở bên trái. Phía bên phải, một bảng trắng lớn hiển thị công thức toán học 2n bằng 8. Bảng tiêu đề ở phần dưới cùng hiển thị văn bản tiếng Việt.",
-    "ocr_text": "2n = 8 T.Bình - SinhLHP - SĐT: 093.241.9086 2 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong THANH NIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -2503,35 +2504,18 @@
   },
   {
     "frame_id": "L25_V065_f0033",
-    "visual_source_frame_id": "L25_V065_f0033",
+    "visual_source_frame_id": "L25_V065_f0032",
     "ocr_source_frame_id": "L25_V065_f0033",
-    "quality_flags": [],
-    "caption": "A dark auditorium features rows of empty seats illuminated by bright spotlights from above and the sides.",
-    "detailed_caption": "A wide shot shows a dark, empty auditorium with rows of seating facing a stage area. Bright stage lights and spotlights beam from the overhead rigging and floor level, cutting through the dim atmosphere.",
-    "caption_vi": "Một khán phòng tối với các hàng ghế trống được chiếu sáng bởi đèn rọi từ phía trên và hai bên.",
-    "detailed_caption_vi": "Toàn cảnh một khán phòng tối tăm với các hàng ghế trống hướng về phía sân khấu. Ánh đèn sân khấu và đèn rọi chiếu rọi từ trên cao và mặt sàn, tạo điểm nhấn trong không gian mờ ảo.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A completely black frame with no visible content.",
+    "detailed_caption": "A completely black screen with no visible subjects, text, or objects.",
+    "caption_vi": "Một khung hình hoàn toàn màu đen không có nội dung hiển thị.",
+    "detailed_caption_vi": "Màn hình hoàn toàn màu đen không có chủ thể, văn bản hoặc đối tượng nào hiển thị.",
     "ocr_text": "",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "seats_0",
-        "label": "seats",
-        "bbox": [
-          0.0,
-          0.759,
-          1.0,
-          1.0
-        ],
-        "description": "rows of empty auditorium seats",
-        "description_vi": "các hàng ghế khán phòng trống",
-        "attributes": [
-          "empty",
-          "seating",
-          "dark"
-        ],
-        "action": ""
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -3009,7 +2993,7 @@
     "detailed_caption": "This wide shot shows multiple people seated around a long conference table during a meeting. Two large screens mounted on the white walls display presentations. A floral arrangement sits in the center of the wooden table, alongside laptops, water bottles, and papers.",
     "caption_vi": "Một nhóm người ngồi quanh bàn họp dài trong phòng họp.",
     "detailed_caption_vi": "Khung hình rộng này cho thấy nhiều người đang ngồi quanh một chiếc bàn họp dài trong một cuộc họp. Hai màn hình lớn gắn trên tường trắng hiển thị các bài thuyết trình. Một lẵng hoa nằm ở trung tâm bàn gỗ, bên cạnh máyδt tính xách tay, chai nước và giấy tờ.",
-    "ocr_text": "SIU The Saigon International University Welcome International College of Advanced Education (ICAE), Australia January 06, 2024",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -5889,7 +5873,7 @@
     "detailed_caption": "This wide shot shows seven people standing in a row behind a covered table on a stage. Each person holds a red folder in front of them. The stage features red podium skirts labeled SIU and a backdrop screen displaying event text.",
     "caption_vi": "Bảy người đứng sau bàn trắng cầm các tập tài liệu màu đỏ trong một hội trường.",
     "detailed_caption_vi": "Cảnh toàn này cho thấy bảy người đứng thành hàng phía sau chiếc bàn được phủ khăn trắng trên sân khấu. Mỗi người đều cầm một tập hồ sơ màu đỏ trước mặt. Trên sân khấu có bục phủ vải đỏ in chữ SIU và màn hình phông nền hiển thị thông tin sự kiện.",
-    "ocr_text": "International University MOU SIGNING CEREMONY with BUSINESS PARTNERS Ho Chi Minh City, December 20, 2023 www.siu.edu.vn SIU Saigon International University www.siu.edu.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6707,7 +6691,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6807,7 +6791,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -6907,7 +6891,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7007,7 +6991,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7107,7 +7091,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7207,7 +7191,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7307,7 +7291,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7407,7 +7391,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7507,7 +7491,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7607,7 +7591,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7707,7 +7691,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7807,7 +7791,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -7907,7 +7891,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8007,7 +7991,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8107,7 +8091,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8207,7 +8191,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8307,7 +8291,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8407,7 +8391,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8507,7 +8491,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8607,7 +8591,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8707,7 +8691,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8807,7 +8791,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -8907,7 +8891,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9007,7 +8991,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9107,7 +9091,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9207,7 +9191,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9307,7 +9291,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9407,7 +9391,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9507,7 +9491,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9607,7 +9591,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9707,7 +9691,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9807,7 +9791,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -9907,7 +9891,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10007,7 +9991,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10107,7 +10091,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10207,7 +10191,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10307,7 +10291,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10407,7 +10391,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10507,7 +10491,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10607,7 +10591,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10707,7 +10691,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10807,7 +10791,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -10907,7 +10891,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11007,7 +10991,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11107,7 +11091,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11207,7 +11191,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11307,7 +11291,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11407,7 +11391,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11507,7 +11491,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11607,7 +11591,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11707,7 +11691,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11807,7 +11791,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -11907,7 +11891,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12007,7 +11991,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12107,7 +12091,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12207,7 +12191,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12307,7 +12291,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12407,7 +12391,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12507,7 +12491,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12607,7 +12591,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12707,7 +12691,7 @@
     "detailed_caption": "This medium shot shows a male teacher seated at a desk with a laptop computer in a classroom. To his right, a large white board displays biology diagrams of chromosomes with red centromere markers. The foreground features a brown teacher podium and decorative green leaves.",
     "caption_vi": "Một giáo viên ngồi bên máy tính xách tay trước bảng trắng hiển thị sơ đồ nhiễm sắc thể.",
     "detailed_caption_vi": "Cảnh trung này cho thấy một nam giáo viên ngồi làm việc bên máy tính xách tay trên bàn trong lớp học. Bên phải ông là bảng trắng lớn hiển thị sơ đồ sinh học về nhiễm sắc thể có đánh dấu tâm động màu đỏ. Phía trước là bục giảng màu nâu và các họa tiết lá cây xanh trang trí.",
-    "ocr_text": "THÀNH NIÊN Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong T.Bình - SinhLHP - SĐT: 093.241.9086 3",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -12869,7 +12853,7 @@
     "detailed_caption": "This low-angle architectural shot shows a modern multi-story school building with white walls and distinctive green window panels. A large banner on the upper exterior displays school signage and images of students. Lush green tree branches frame the left and upper sides of the view.",
     "caption_vi": "Tòa nhà trường học nhiều tầng màu trắng và xanh được nhìn từ góc thấp dưới bầu trời xanh.",
     "detailed_caption_vi": "Cảnh kiến trúc góc thấp này chụp một tòa nhà trường học hiện đại nhiều tầng với tường trắng và các ô cửa sổ màu xanh đặc trưng. Biểu ngữ lớn ở mặt tiền phía trên hiển thị tên trường và hình ảnh học sinh. Những cành cây xanh tốt khung lấy phía bên trái và trên cùng của khung hình.",
-    "ocr_text": "Trường Quốc Tế Á Châu",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -14880,7 +14864,7 @@
     "detailed_caption": "This medium shot shows a smiling female teacher in a red dress and gloves walking past a wooden table where students in white and red uniforms are eating. Large windows and wall posters fill the background of the bright dining area.",
     "caption_vi": "Cô giáo mặc đầm đỏ đang phục vụ thức ăn cho học sinh ngồi bàn.",
     "detailed_caption_vi": "Cảnh quay trung cảnh này ghi lại cô giáo mặc đầm đỏ và đeo găng tay đang mỉm cười đi qua bàn gỗ nơi các học sinh mặc đồng phục trắng đỏ đang ăn uống. Cửa sổ lớn và các poster trên tường làm nền cho không gian phòng ăn sáng sủa.",
-    "ocr_text": "FA",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -15464,7 +15448,7 @@
     "detailed_caption": "A medium shot shows a male teacher in a white lab coat standing behind two female students wearing lab coats in a science laboratory. The teacher, wearing a red tie and white gloves, guides a student who is looking into a microscope. Other students in lab coats work in the background.",
     "caption_vi": "Một giáo viên mặc áo blouse trắng hướng dẫn các nữ sinh quanh kính hiển vi trong phòng thí nghiệm.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam mặc áo blouse trắng đứng phía sau hai nữ sinh mặc áo blouse trong phòng thí nghiệm khoa học. Giáo viên đeo cà vạt đỏ và găng tay trắng, đang hướng dẫn học sinh nhìn vào kính hiển vi. Những học sinh khác mặc áo blouse đang làm việc ở phía sau.",
-    "ocr_text": "TECH",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -15948,7 +15932,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16038,13 +16022,15 @@
   },
   {
     "frame_id": "L25_V065_f0201",
-    "visual_source_frame_id": "L25_V065_f0201",
+    "visual_source_frame_id": "L25_V065_f0199",
     "ocr_source_frame_id": "L25_V065_f0201",
-    "quality_flags": [],
-    "caption": "A teacher sits at a desk with a laptop next to a large biology question slide on a screen.",
-    "detailed_caption": "A medium shot displays a male teacher in a light checked shirt sitting behind a laptop on a wooden desk. To his right, a large projector screen exhibits a multiple-choice biology question in Vietnamese with four answer choices.",
-    "caption_vi": "Thầy giáo ngồi trước máy tính xách tay bên cạnh màn hình trình bày câu hỏi trắc nghiệm sinh học.",
-    "detailed_caption_vi": "Cảnh trung cho thấy thầy giáo mặc áo sơ mi kẻ sọc ngồi sau máy tính xách tay đặt trên bàn gỗ. Phía bên phải là màn hình chiếu lớn hiển thị câu hỏi trắc nghiệm môn sinh học bằng tiếng Việt cùng bốn đáp án.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A teacher stands next to a laptop and a whiteboard displaying genetic diagrams and text.",
+    "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
+    "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
     "ocr_text": "1. Một loài thực vật có bộ nhiễm sắc thể 2n = 6. Trên mỗi cặp nhiễm sắc thể, xét một gen có hai alen. Do đột biến, trong loài đã xuất hiện 3 dạng thể ba tương ứng với các cặp nhiễm sắc thể. Theo lí thuyết, các thể ba này có tối đa bao nhiêu loại kiểu gen về các gen đang xét? A. 64. B. 36. C. 144. D. 108. T.Bình - SinhLHP - SĐT: 093.241.9086 5",
     "news_ticker_text": "",
     "detections": [
@@ -16052,194 +16038,15 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.087,
-          0.631,
+          0.08499999999999999,
+          0.632,
           0.24100000000000002,
-          0.772
+          0.7739999999999999
         ],
-        "description": "dark laptop on a wooden desk",
-        "description_vi": "máy tính xách tay tối màu trên bàn gỗ",
+        "description": "a black laptop on a wooden desk",
+        "description_vi": "một máy tính xách tay màu đen trên bàn gỗ",
         "attributes": [
-          "laptop",
-          "dark"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.242,
-          0.013,
-          0.998,
-          0.741
-        ],
-        "description": "projector screen displaying a Vietnamese biology question and multiple-choice options",
-        "description_vi": "màn hình chiếu hiển thị câu hỏi trắc nghiệm sinh học tiếng Việt và các lựa chọn",
-        "attributes": [
-          "projector",
-          "text",
-          "educational"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.038,
-          0.382,
-          0.21600000000000003,
-          0.759
-        ],
-        "description": "man in a light checked shirt seated at a desk",
-        "description_vi": "nam giáo viên mặc áo sơ mi kẻ sọc ngồi tại bàn",
-        "attributes": [
-          "man",
-          "checked shirt",
-          "sitting"
-        ],
-        "action": "sitting"
-      }
-    ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "teacher_0"
-      },
-      {
-        "subject_id": "teacher_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      },
-      {
-        "subject_id": "teacher_0",
-        "predicate": "left_of",
-        "object_id": "screen_0"
-      },
-      {
-        "subject_id": "screen_0",
-        "predicate": "right_of",
-        "object_id": "teacher_0"
-      }
-    ]
-  },
-  {
-    "frame_id": "L25_V065_f0202",
-    "visual_source_frame_id": "L25_V065_f0202",
-    "ocr_source_frame_id": "L25_V065_f0202",
-    "quality_flags": [],
-    "caption": "A teacher sits at a desk with a laptop next to a slide showing a biology question.",
-    "detailed_caption": "A medium shot shows a male teacher in a light checked shirt sitting behind a laptop on a wooden desk. Beside him on the right, a large presentation screen displays a biology multiple-choice question with four numbered answer options.",
-    "caption_vi": "Thầy giáo ngồi trước máy tính xách tay cạnh màn hình hiển thị câu hỏi sinh học.",
-    "detailed_caption_vi": "Khung hình trung cảnh ghi lại nam giáo viên mặc áo sơ mi kẻ sọc ngồi sau máy tính xách tay trên bàn gỗ. Phía bên phải là màn hình thuyết trình lớn hiển thị câu hỏi trắc nghiệm môn sinh học cùng bốn phương án trả lời.",
-    "ocr_text": "1. Một loài thực vật có bộ nhiễm sắc thể 2n = 6. Trên mỗi cặp nhiễm sắc thể, xét một gen có hai alen. Do đột biến, trong loài đã xuất hiện 3 dạng thể ba tương ứng với các cặp nhiễm sắc thể. Theo lí thuyết, các thể ba này có tối đa bao nhiêu loại kiểu gen về các gen đang xét? A. 64. B. 36. C. 144. D. 108. T.Bình - SinhLHP - SĐT: 093.241.9086 5",
-    "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.087,
-          0.631,
-          0.24100000000000002,
-          0.772
-        ],
-        "description": "dark laptop computer on a wooden desk",
-        "description_vi": "máy tính xách tay màu tối đặt trên bàn gỗ",
-        "attributes": [
-          "laptop",
-          "dark"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "screen_0",
-        "label": "screen",
-        "bbox": [
-          0.242,
-          0.013,
-          0.998,
-          0.741
-        ],
-        "description": "projector screen displaying a biology test question",
-        "description_vi": "màn hình chiếu hiển thị câu hỏi kiểm tra sinh học",
-        "attributes": [
-          "projector",
-          "text",
-          "educational"
-        ],
-        "action": ""
-      },
-      {
-        "object_id": "teacher_0",
-        "label": "teacher",
-        "bbox": [
-          0.038,
-          0.382,
-          0.21600000000000003,
-          0.759
-        ],
-        "description": "man in a light checked shirt sitting at a wooden desk",
-        "description_vi": "nam giáo viên mặc áo sơ mi kẻ sọc ngồi bên bàn gỗ",
-        "attributes": [
-          "man",
-          "checked shirt",
-          "sitting"
-        ],
-        "action": "sitting"
-      }
-    ],
-    "spatial_relations": [
-      {
-        "subject_id": "laptop_0",
-        "predicate": "overlapping",
-        "object_id": "teacher_0"
-      },
-      {
-        "subject_id": "teacher_0",
-        "predicate": "overlapping",
-        "object_id": "laptop_0"
-      },
-      {
-        "subject_id": "teacher_0",
-        "predicate": "left_of",
-        "object_id": "screen_0"
-      },
-      {
-        "subject_id": "screen_0",
-        "predicate": "right_of",
-        "object_id": "teacher_0"
-      }
-    ]
-  },
-  {
-    "frame_id": "L25_V065_f0203",
-    "visual_source_frame_id": "L25_V065_f0203",
-    "ocr_source_frame_id": "L25_V065_f0203",
-    "quality_flags": [],
-    "caption": "A man in a checkered shirt sitting behind a laptop next to a biology question slide.",
-    "detailed_caption": "Medium shot of one man in a light checkered button-down shirt sitting at a desk with a laptop, speaking with hand gestures. To his right is a large screen displaying an educational multiple-choice question in Vietnamese. The setting appears to be a brightly lit classroom or studio.",
-    "caption_vi": "Một nam giáo viên mặc áo sơ mi kẻ caro ngồi trước máy tính xách tay cạnh màn hình chiếu câu hỏi sinh học.",
-    "detailed_caption_vi": "Cảnh trung một nam giáo viên mặc áo sơ mi caro sáng màu đang ngồi làm việc trước máy tính xách tay và thuyết trình. Phía bên phải là màn hình lớn hiển thị nội dung câu hỏi trắc nghiệm sinh học. Bối cảnh diễn ra trong một phòng học hoặc phim trường sáng sủa.",
-    "ocr_text": "THÀNH NIÊN 1. Một loài thực vật có bộ nhiễm sắc thể 2n = 6. Trên mỗi cặp nhiễm sắc thể, xét một gen có hai alen. Do đột biến, trong loài đã xuất hiện 3 dạng thể ba tương ứng với các cặp nhiễm sắc thể. Theo lí thuyết, các thể ba này có tối đa bao nhiêu loại kiểu gen về các gen đang xét? A. 64. B. 36. C. 144. D. 108. T.Bình - SinhLHP - SĐT: 093.241.9086 5 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong",
-    "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "laptop_0",
-        "label": "laptop",
-        "bbox": [
-          0.08299999999999999,
-          0.633,
-          0.242,
-          0.772
-        ],
-        "description": "a black laptop on a desk",
-        "description_vi": "một chiếc máy tính xách tay màu đen trên bàn",
-        "attributes": [
-          "black",
-          "electronic device"
+          "black"
         ],
         "action": ""
       },
@@ -16247,34 +16054,34 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.019,
+          0.038,
           0.386,
-          0.21800000000000003,
-          0.759
+          0.215,
+          0.762
         ],
-        "description": "a man in a light checkered button-down shirt",
-        "description_vi": "một người đàn ông mặc áo sơ mi caro sáng màu",
+        "description": "male teacher in a patterned shirt standing by a laptop",
+        "description_vi": "giáo viên nam mặc áo sơ mi họa tiết đứng cạnh máy tính xách tay",
         "attributes": [
-          "man",
-          "checkered shirt",
-          "short hair"
+          "patterned shirt",
+          "dark hair"
         ],
-        "action": "sitting"
+        "action": "standing"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "whiteboard_0",
+        "label": "whiteboard",
         "bbox": [
-          0.254,
-          0.11,
-          1.0,
-          0.7439999999999999
+          0.255,
+          0.018000000000000002,
+          0.9890000000000001,
+          0.742
         ],
-        "description": "a large screen displaying biology questions",
-        "description_vi": "một màn hình lớn hiển thị câu hỏi sinh học",
+        "description": "a whiteboard showing genetic diagrams and Vietnamese text",
+        "description_vi": "bảng trắng hiển thị sơ đồ di truyền và văn bản tiếng Việt",
         "attributes": [
           "white",
-          "text"
+          "text",
+          "diagrams"
         ],
         "action": ""
       }
@@ -16293,20 +16100,218 @@
       {
         "subject_id": "laptop_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "whiteboard_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "whiteboard_0",
         "predicate": "right_of",
         "object_id": "laptop_0"
       },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "whiteboard_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "whiteboard_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L25_V065_f0202",
+    "visual_source_frame_id": "L25_V065_f0199",
+    "ocr_source_frame_id": "L25_V065_f0202",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A teacher stands next to a laptop and a whiteboard displaying genetic diagrams and text.",
+    "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
+    "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
+    "ocr_text": "1. Một loài thực vật có bộ nhiễm sắc thể 2n = 6. Trên mỗi cặp nhiễm sắc thể, xét một gen có hai alen. Do đột biến, trong loài đã xuất hiện 3 dạng thể ba tương ứng với các cặp nhiễm sắc thể. Theo lí thuyết, các thể ba này có tối đa bao nhiêu loại kiểu gen về các gen đang xét? A. 64. B. 36. C. 144. D. 108. T.Bình - SinhLHP - SĐT: 093.241.9086 5",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "laptop_0",
+        "label": "laptop",
+        "bbox": [
+          0.08499999999999999,
+          0.632,
+          0.24100000000000002,
+          0.7739999999999999
+        ],
+        "description": "a black laptop on a wooden desk",
+        "description_vi": "một máy tính xách tay màu đen trên bàn gỗ",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.038,
+          0.386,
+          0.215,
+          0.762
+        ],
+        "description": "male teacher in a patterned shirt standing by a laptop",
+        "description_vi": "giáo viên nam mặc áo sơ mi họa tiết đứng cạnh máy tính xách tay",
+        "attributes": [
+          "patterned shirt",
+          "dark hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "whiteboard_0",
+        "label": "whiteboard",
+        "bbox": [
+          0.255,
+          0.018000000000000002,
+          0.9890000000000001,
+          0.742
+        ],
+        "description": "a whiteboard showing genetic diagrams and Vietnamese text",
+        "description_vi": "bảng trắng hiển thị sơ đồ di truyền và văn bản tiếng Việt",
+        "attributes": [
+          "white",
+          "text",
+          "diagrams"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "left_of",
+        "object_id": "whiteboard_0"
+      },
+      {
+        "subject_id": "whiteboard_0",
+        "predicate": "right_of",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "whiteboard_0"
+      },
+      {
+        "subject_id": "whiteboard_0",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L25_V065_f0203",
+    "visual_source_frame_id": "L25_V065_f0199",
+    "ocr_source_frame_id": "L25_V065_f0203",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A teacher stands next to a laptop and a whiteboard displaying genetic diagrams and text.",
+    "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
+    "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
+    "ocr_text": "THÀNH NIÊN 1. Một loài thực vật có bộ nhiễm sắc thể 2n = 6. Trên mỗi cặp nhiễm sắc thể, xét một gen có hai alen. Do đột biến, trong loài đã xuất hiện 3 dạng thể ba tương ứng với các cặp nhiễm sắc thể. Theo lí thuyết, các thể ba này có tối đa bao nhiêu loại kiểu gen về các gen đang xét? A. 64. B. 36. C. 144. D. 108. T.Bình - SinhLHP - SĐT: 093.241.9086 5 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "laptop_0",
+        "label": "laptop",
+        "bbox": [
+          0.08499999999999999,
+          0.632,
+          0.24100000000000002,
+          0.7739999999999999
+        ],
+        "description": "a black laptop on a wooden desk",
+        "description_vi": "một máy tính xách tay màu đen trên bàn gỗ",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.038,
+          0.386,
+          0.215,
+          0.762
+        ],
+        "description": "male teacher in a patterned shirt standing by a laptop",
+        "description_vi": "giáo viên nam mặc áo sơ mi họa tiết đứng cạnh máy tính xách tay",
+        "attributes": [
+          "patterned shirt",
+          "dark hair"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "whiteboard_0",
+        "label": "whiteboard",
+        "bbox": [
+          0.255,
+          0.018000000000000002,
+          0.9890000000000001,
+          0.742
+        ],
+        "description": "a whiteboard showing genetic diagrams and Vietnamese text",
+        "description_vi": "bảng trắng hiển thị sơ đồ di truyền và văn bản tiếng Việt",
+        "attributes": [
+          "white",
+          "text",
+          "diagrams"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "laptop_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "laptop_0",
+        "predicate": "left_of",
+        "object_id": "whiteboard_0"
+      },
+      {
+        "subject_id": "whiteboard_0",
+        "predicate": "right_of",
+        "object_id": "laptop_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "whiteboard_0"
+      },
+      {
+        "subject_id": "whiteboard_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -16314,13 +16319,15 @@
   },
   {
     "frame_id": "L25_V065_f0204",
-    "visual_source_frame_id": "L25_V065_f0204",
+    "visual_source_frame_id": "L25_V065_f0199",
     "ocr_source_frame_id": "L25_V065_f0204",
-    "quality_flags": [],
-    "caption": "A man in a checkered shirt sitting behind a laptop next to a biology question slide.",
-    "detailed_caption": "Medium shot of one man in a light checkered button-down shirt sitting at a desk with a laptop. To his right is a large screen displaying an educational multiple-choice question in Vietnamese. The setting appears to be a brightly lit classroom or studio.",
-    "caption_vi": "Một nam giáo viên mặc áo sơ mi kẻ caro ngồi trước máy tính xách tay cạnh màn hình hiển thị câu hỏi.",
-    "detailed_caption_vi": "Cảnh trung một nam giáo viên mặc áo sơ mi caro sáng màu ngồi trước máy tính xách tay. Phía bên phải là màn hình lớn hiển thị nội dung câu hỏi trắc nghiệm sinh học. Bối cảnh diễn ra trong một phòng học hoặc phim trường sáng sủa.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A teacher stands next to a laptop and a whiteboard displaying genetic diagrams and text.",
+    "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
+    "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
     "ocr_text": "THÀNH NIÊN 1. Một loài thực vật có bộ nhiễm sắc thể 2n = 6. Trên mỗi cặp nhiễm sắc thể, xét một gen có hai alen. Do đột biến, trong loài đã xuất hiện 3 dạng thể ba tương ứng với các cặp nhiễm sắc thể. Theo lí thuyết, các thể ba này có tối đa bao nhiêu loại kiểu gen về các gen đang xét? A. 64. B. 36. C. 144. D. 108. T.Bình - SinhLHP - SĐT: 093.241.9086 5 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong",
     "news_ticker_text": "",
     "detections": [
@@ -16328,13 +16335,13 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.08299999999999999,
-          0.633,
-          0.242,
-          0.772
+          0.08499999999999999,
+          0.632,
+          0.24100000000000002,
+          0.7739999999999999
         ],
-        "description": "a black laptop on a desk",
-        "description_vi": "một chiếc máy tính xách tay màu đen trên bàn",
+        "description": "a black laptop on a wooden desk",
+        "description_vi": "một máy tính xách tay màu đen trên bàn gỗ",
         "attributes": [
           "black"
         ],
@@ -16346,31 +16353,32 @@
         "bbox": [
           0.038,
           0.386,
-          0.21800000000000003,
-          0.737
+          0.215,
+          0.762
         ],
-        "description": "a man in a light checkered button-down shirt",
-        "description_vi": "một người đàn ông mặc áo sơ mi caro sáng màu",
+        "description": "male teacher in a patterned shirt standing by a laptop",
+        "description_vi": "giáo viên nam mặc áo sơ mi họa tiết đứng cạnh máy tính xách tay",
         "attributes": [
-          "man",
-          "checkered shirt"
+          "patterned shirt",
+          "dark hair"
         ],
-        "action": "sitting"
+        "action": "standing"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "whiteboard_0",
+        "label": "whiteboard",
         "bbox": [
-          0.254,
-          0.11,
-          1.0,
-          0.7439999999999999
+          0.255,
+          0.018000000000000002,
+          0.9890000000000001,
+          0.742
         ],
-        "description": "a white screen displaying text",
-        "description_vi": "một màn hình trắng hiển thị văn bản",
+        "description": "a whiteboard showing genetic diagrams and Vietnamese text",
+        "description_vi": "bảng trắng hiển thị sơ đồ di truyền và văn bản tiếng Việt",
         "attributes": [
           "white",
-          "text"
+          "text",
+          "diagrams"
         ],
         "action": ""
       }
@@ -16389,20 +16397,20 @@
       {
         "subject_id": "laptop_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "whiteboard_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "whiteboard_0",
         "predicate": "right_of",
         "object_id": "laptop_0"
       },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "whiteboard_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "whiteboard_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -16410,13 +16418,15 @@
   },
   {
     "frame_id": "L25_V065_f0205",
-    "visual_source_frame_id": "L25_V065_f0205",
+    "visual_source_frame_id": "L25_V065_f0199",
     "ocr_source_frame_id": "L25_V065_f0205",
-    "quality_flags": [],
-    "caption": "A man in a checkered shirt sitting behind a laptop next to a biology question slide.",
-    "detailed_caption": "Medium shot of one man in a light checkered button-down shirt sitting at a desk with a laptop. To his right is a large screen displaying an educational multiple-choice question in Vietnamese. The setting appears to be a brightly lit classroom or studio.",
-    "caption_vi": "Một nam giáo viên mặc áo sơ mi kẻ caro ngồi trước máy tính xách tay cạnh màn hình hiển thị câu hỏi.",
-    "detailed_caption_vi": "Cảnh trung một nam giáo viên mặc áo sơ mi caro sáng màu ngồi trước máy tính xách tay. Phía bên phải là màn hình lớn hiển thị nội dung câu hỏi trắc nghiệm sinh học. Bối cảnh diễn ra trong một phòng học hoặc phim trường sáng sủa.",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A teacher stands next to a laptop and a whiteboard displaying genetic diagrams and text.",
+    "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
+    "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
     "ocr_text": "THÀNH NIÊN 1. Một loài thực vật có bộ nhiễm sắc thể 2n = 6. Trên mỗi cặp nhiễm sắc thể, xét một gen có hai alen. Do đột biến, trong loài đã xuất hiện 3 dạng thể ba tương ứng với các cặp nhiễm sắc thể. Theo lí thuyết, các thể ba này có tối đa bao nhiêu loại kiểu gen về các gen đang xét? A. 64. B. 36. C. 144. D. 108. T.Bình - SinhLHP - SĐT: 093.241.9086 5 Thầy VÕ THANH BÌNH Trường THPT chuyên Lê Hồng Phong",
     "news_ticker_text": "",
     "detections": [
@@ -16424,13 +16434,13 @@
         "object_id": "laptop_0",
         "label": "laptop",
         "bbox": [
-          0.08299999999999999,
-          0.633,
-          0.242,
-          0.772
+          0.08499999999999999,
+          0.632,
+          0.24100000000000002,
+          0.7739999999999999
         ],
-        "description": "a black laptop on a desk",
-        "description_vi": "một chiếc máy tính xách tay màu đen trên bàn",
+        "description": "a black laptop on a wooden desk",
+        "description_vi": "một máy tính xách tay màu đen trên bàn gỗ",
         "attributes": [
           "black"
         ],
@@ -16440,33 +16450,34 @@
         "object_id": "person_0",
         "label": "person",
         "bbox": [
-          0.012,
+          0.038,
           0.386,
-          0.21800000000000003,
+          0.215,
           0.762
         ],
-        "description": "a man in a light checkered button-down shirt",
-        "description_vi": "một người đàn ông mặc áo sơ mi caro sáng màu",
+        "description": "male teacher in a patterned shirt standing by a laptop",
+        "description_vi": "giáo viên nam mặc áo sơ mi họa tiết đứng cạnh máy tính xách tay",
         "attributes": [
-          "man",
-          "checkered shirt"
+          "patterned shirt",
+          "dark hair"
         ],
-        "action": "sitting"
+        "action": "standing"
       },
       {
-        "object_id": "screen_0",
-        "label": "screen",
+        "object_id": "whiteboard_0",
+        "label": "whiteboard",
         "bbox": [
-          0.254,
-          0.11,
-          1.0,
-          0.7439999999999999
+          0.255,
+          0.018000000000000002,
+          0.9890000000000001,
+          0.742
         ],
-        "description": "a white screen displaying text",
-        "description_vi": "một màn hình trắng hiển thị văn bản",
+        "description": "a whiteboard showing genetic diagrams and Vietnamese text",
+        "description_vi": "bảng trắng hiển thị sơ đồ di truyền và văn bản tiếng Việt",
         "attributes": [
           "white",
-          "text"
+          "text",
+          "diagrams"
         ],
         "action": ""
       }
@@ -16485,20 +16496,20 @@
       {
         "subject_id": "laptop_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "whiteboard_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "whiteboard_0",
         "predicate": "right_of",
         "object_id": "laptop_0"
       },
       {
         "subject_id": "person_0",
         "predicate": "left_of",
-        "object_id": "screen_0"
+        "object_id": "whiteboard_0"
       },
       {
-        "subject_id": "screen_0",
+        "subject_id": "whiteboard_0",
         "predicate": "right_of",
         "object_id": "person_0"
       }
@@ -16515,7 +16526,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16614,7 +16625,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16713,7 +16724,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16812,7 +16823,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -16911,7 +16922,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17010,7 +17021,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17109,7 +17120,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17208,7 +17219,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17307,7 +17318,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17406,7 +17417,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17505,7 +17516,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17604,7 +17615,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17703,7 +17714,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17802,7 +17813,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -17901,7 +17912,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18000,7 +18011,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18099,7 +18110,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18198,7 +18209,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18297,7 +18308,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18396,7 +18407,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18495,7 +18506,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18594,7 +18605,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18693,7 +18704,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18792,7 +18803,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18891,7 +18902,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -18990,7 +19001,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19089,7 +19100,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19188,7 +19199,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19287,7 +19298,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19386,7 +19397,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19485,7 +19496,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19584,7 +19595,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19683,7 +19694,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19782,7 +19793,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19881,7 +19892,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -19980,7 +19991,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20079,7 +20090,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20178,7 +20189,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20277,7 +20288,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20376,7 +20387,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20475,7 +20486,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20574,7 +20585,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20673,7 +20684,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20772,7 +20783,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20871,7 +20882,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -20970,7 +20981,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21069,7 +21080,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21168,7 +21179,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21267,7 +21278,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21366,7 +21377,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21465,7 +21476,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21564,7 +21575,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21663,7 +21674,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21762,7 +21773,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21861,7 +21872,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -21960,7 +21971,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22059,7 +22070,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22158,7 +22169,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22257,7 +22268,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22356,7 +22367,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22455,7 +22466,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22554,7 +22565,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22653,7 +22664,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22752,7 +22763,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22851,7 +22862,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -22950,7 +22961,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -23049,7 +23060,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -23148,7 +23159,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -23247,7 +23258,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -23346,7 +23357,7 @@
     "detailed_caption": "A medium shot shows a male teacher standing to the left of a whiteboard displaying genetic diagrams, chromosome pairs, and Vietnamese text explaining genotypes. A laptop rests on the desk in front of him. A graphic banner with text appears at the top left and bottom left.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và bảng trắng hiển thị các sơ đồ di truyền và văn bản.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam đứng bên trái bảng trắng hiển thị các sơ đồ di truyền, cặp nhiễm sắc thể và văn bản tiếng Việt giải thích về kiểu gen. Một máy tính xách tay đặt trên bàn phía trước anh ấy. Bảng hiệu đồ họa có văn bản xuất hiện ở góc trên bên trái và dưới bên trái.",
-    "ocr_text": "2n = 8 2n + 1 = 9 Số loại kiểu gen ở cặp này là 3, gồm: DD, dd, Dd. Đồng hợp Dị hợp 1 gen có n alen, số loại kiểu gen = n + C²n",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -23540,7 +23551,7 @@
     "detailed_caption": "A medium shot shows a male teacher in a checkered shirt standing next to a laptop on a wooden desk. To his right, a large screen displays an aerial photograph of forested mountains under a cloudy sky. Graphical overlays and a lower banner are visible.",
     "caption_vi": "Một giáo viên đứng cạnh máy tính xách tay và màn hình hiển thị bức ảnh phong cảnh trên không.",
     "detailed_caption_vi": "Cảnh trung cho thấy một giáo viên nam mặc áo sơ mi kẻ sọc đứng cạnh máy tính xách tay trên bàn gỗ. Phía bên phải anh ấy, một màn hình lớn hiển thị bức ảnh chụp từ trên cao của những ngọn núi rừng dưới bầu trời nhiều mây. Các lớp phủ đồ họa và biểu ngữ phía dưới có thể nhìn thấy.",
-    "ocr_text": "CẢM NHẬN THIÊN NHIÊN",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -24029,30 +24040,13 @@
     "quality_flags": [
       "visual_metadata_copied"
     ],
-    "caption": "A man walks down a brightly lit library aisle between tall bookshelves.",
-    "detailed_caption": "A very bright, overexposed medium shot shows a person walking forward along a narrow library corridor. Tall bookshelves filled with books line the left and right sides, creating a perspective towards the center.",
-    "caption_vi": "Một người đàn ông đang đi dọc lối đi sáng sủa trong thư viện giữa các kệ sách cao.",
-    "detailed_caption_vi": "Cảnh trung rất sáng, bị sáng quá mức cho thấy một người đang đi về phía trước dọc theo hành lang thư viện hẹp. Các kệ sách cao chứa đầy sách xếp dọc bên trái và bên phải, tạo ra góc nhìn hướng về phía trung tâm.",
+    "caption": "An extremely overexposed, blurry interior scene of a library corridor.",
+    "detailed_caption": "Very bright, overexposed shot of a library corridor with bookshelves on both sides. A faint silhouette of a person can be discerned in the center background. The image lacks distinct visual details due to extreme brightness.",
+    "caption_vi": "Cảnh nội thất hành lang thư viện bị lóa sáng và mờ ảo.",
+    "detailed_caption_vi": "Cảnh quay quá sáng, mờ ảo của một hành lang thư viện với các dãy kệ sách ở hai bên. Bóng mờ của một người xuất hiện ở trung tâm phía xa. Hình ảnh thiếu chi tiết rõ ràng do độ sáng quá cao.",
     "ocr_text": "",
     "news_ticker_text": "",
-    "detections": [
-      {
-        "object_id": "person_0",
-        "label": "person",
-        "bbox": [
-          0.43099999999999994,
-          0.223,
-          0.545,
-          0.999
-        ],
-        "description": "person walking down a brightly lit library aisle",
-        "description_vi": "người đang đi dọc lối đi thư viện sáng sủa",
-        "attributes": [
-          "light clothing"
-        ],
-        "action": "walking"
-      }
-    ],
+    "detections": [],
     "spatial_relations": []
   },
   {
@@ -25914,7 +25908,7 @@
     "detailed_caption": "This high-angle, overhead shot shows an outdoor basketball court with a green playing surface and red borders. Four players wearing athletic uniforms are positioned around the court near the hoop. One player holds the basketball near the center while others move across the court.",
     "caption_vi": "Góc nhìn từ trên cao của bốn cầu thủ bóng rổ đang thi đấu trên sân ngoài trời màu xanh lá và đỏ.",
     "detailed_caption_vi": "Cảnh quay từ trên cao này ghi lại một sân bóng rổ ngoài trời với mặt sân màu xanh lá cây và viền màu đỏ. Bốn người chơi mặc đồng phục thể thao đang đứng xung quanh sân gần rổ bóng rổ. Một cầu thủ đang cầm quả bóng rổ ở gần khu vực giữa sân trong khi những người khác di chuyển.",
-    "ocr_text": "SIU",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -27657,7 +27651,7 @@
     "detailed_caption": "This medium shot features the blue text THANH NIÊN centered with a website address underneath on a solid light grey background. A soft shadow is cast below the main text.",
     "caption_vi": "Chữ THANH NIÊN màu xanh dương và địa chỉ website trên nền xám nhạt.",
     "detailed_caption_vi": "Khung hình hiển thị dòng chữ THANH NIÊN màu xanh ở giữa cùng địa chỉ trang web bên dưới trên nền xám trơn, có hiệu ứng đổ bóng mờ.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -27756,7 +27750,7 @@
     "detailed_caption": "This medium shot displays the blue title text THANH NIÊN along with a website URL underneath. The text is centered on a solid, neutral grey background.",
     "caption_vi": "Dòng chữ THANH NIÊN màu xanh và tên miền website trên nền xám trung tính.",
     "detailed_caption_vi": "Khung hình hiển thị tiêu đề THANH NIÊN bằng màu xanh lam kèm theo địa chỉ trang web ở phía dưới, được đặt ở chính giữa nền xám đơn sắc.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -27790,7 +27784,7 @@
     "detailed_caption": "This medium shot displays the blue title text THANH NIÊN along with a website URL underneath. The text is centered on a solid, neutral grey background.",
     "caption_vi": "Dòng chữ THANH NIÊN màu xanh và tên miền website trên nền xám trung tính.",
     "detailed_caption_vi": "Khung hình hiển thị tiêu đề THANH NIÊN bằng màu xanh lam kèm theo địa chỉ trang web ở phía dưới, được đặt ở chính giữa nền xám đơn sắc.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -27856,7 +27850,7 @@
     "detailed_caption": "This medium shot presents the blue title text THANH NIÊN and a website address centered on a solid dark grey background.",
     "caption_vi": "Chữ THANH NIÊN màu xanh lam và địa chỉ website trên nền xám tối.",
     "detailed_caption_vi": "Khung hình hiển thị dòng chữ tiêu đề THANH NIÊN màu xanh cùng địa chỉ trang web được căn giữa trên nền xám tối đơn sắc.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -27890,7 +27884,7 @@
     "detailed_caption": "This medium shot presents the blue title text THANH NIÊN and a website address centered on a solid dark grey background.",
     "caption_vi": "Chữ THANH NIÊN màu xanh lam và địa chỉ website trên nền xám tối.",
     "detailed_caption_vi": "Khung hình hiển thị dòng chữ tiêu đề THANH NIÊN màu xanh cùng địa chỉ trang web được căn giữa trên nền xám tối đơn sắc.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -27924,7 +27918,7 @@
     "detailed_caption": "This medium shot presents the blue title text THANH NIÊN and a website address centered on a solid dark grey background.",
     "caption_vi": "Chữ THANH NIÊN màu xanh lam và địa chỉ website trên nền xám tối.",
     "detailed_caption_vi": "Khung hình hiển thị dòng chữ tiêu đề THANH NIÊN màu xanh cùng địa chỉ trang web được căn giữa trên nền xám tối đơn sắc.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
@@ -27958,7 +27952,7 @@
     "detailed_caption": "This medium shot presents the blue title text THANH NIÊN and a website address centered on a solid dark grey background.",
     "caption_vi": "Chữ THANH NIÊN màu xanh lam và địa chỉ website trên nền xám tối.",
     "detailed_caption_vi": "Khung hình hiển thị dòng chữ tiêu đề THANH NIÊN màu xanh cùng địa chỉ trang web được căn giữa trên nền xám tối đơn sắc.",
-    "ocr_text": "THANH NIÊN thanhnien.vn",
+    "ocr_text": "",
     "news_ticker_text": "",
     "detections": [
       {
