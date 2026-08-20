@@ -108,6 +108,34 @@ def test_video_selection_query_filters_the_whole_batch_by_video_prefix() -> None
     assert "Lân chào rồng" in expanded
 
 
+def test_video_selection_query_requires_a_strong_full_query_match_for_news_batches() -> None:
+    parsed = parse_temporal_query("Japan food festival is the largest in the world")
+
+    query = build_video_selection_query(
+        parsed,
+        fields=["summary_vi", "search_text"],
+        batch_ids=["L21", "L22"],
+    )
+
+    should = query["bool"]["should"]
+    assert len(should) == 1
+    match = should[0]["multi_match"]
+    assert match["query"] == parsed.shared_context
+    assert match["minimum_should_match"] == "90%"
+
+
+def test_video_selection_query_keeps_permissive_expansion_for_non_news_batches() -> None:
+    parsed = parse_temporal_query("A cycling race.\nE1: Three cyclists ride in a line.")
+
+    query = build_video_selection_query(
+        parsed,
+        fields=["summary_vi", "search_text"],
+        batch_ids=["L23"],
+    )
+
+    assert query["bool"]["should"][-1]["multi_match"]["minimum_should_match"] == "15%"
+
+
 class _FakeClient:
     def search(self, *, index, **kwargs):
         del kwargs
@@ -178,6 +206,19 @@ class _OpposingScoreClient:
         return {"hits": {"hits": hits}}
 
 
+class _CrossPolicyScoreClient:
+    def search(self, *, index, **kwargs):
+        del kwargs
+        if index == "semantic_videos_v1":
+            hits = [
+                {"_score": 2.0, "_source": {"video_id": "L22_V030"}},
+                {"_score": 100.0, "_source": {"video_id": "L26_V057"}},
+            ]
+        else:
+            hits = []
+        return {"hits": {"hits": hits}}
+
+
 def test_elasticsearch_selector_applies_user_video_ranking_weights() -> None:
     parsed = parse_temporal_query("Cuoc dua xe dap.\nE1: Ba tay dua di thanh hang doc.")
     selector = ElasticsearchVideoSelector(_OpposingScoreClient())
@@ -202,3 +243,17 @@ def test_elasticsearch_selector_applies_user_video_ranking_weights() -> None:
     assert summary_first["weights"] == {"summary": 0.8, "event": 0.2}
     assert summary_first["candidates"][0]["summary_score"] == 1.0
     assert summary_first["candidates"][0]["event_score"] == 0.1
+
+
+def test_elasticsearch_selector_normalizes_news_and_general_query_policies_separately() -> None:
+    parsed = parse_temporal_query("Japan food festival is the largest in the world")
+
+    result = ElasticsearchVideoSelector(_CrossPolicyScoreClient()).select(
+        parsed,
+        top_k=2,
+        summary_weight=1.0,
+        event_weight=0.0,
+    )
+
+    assert result["selected_video_id"] == "L22_V030"
+    assert [item["summary_score"] for item in result["candidates"]] == [1.0, 1.0]

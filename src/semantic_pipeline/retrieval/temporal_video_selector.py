@@ -29,6 +29,14 @@ except ImportError:  # pragma: no cover - covered through require_elasticsearch.
     streaming_bulk = None
 
 
+NEWS_BATCH_IDS = frozenset({"L21", "L22"})
+NEWS_FULL_QUERY_MINIMUM_SHOULD_MATCH = "90%"
+# News summaries are long multi-story documents.  This only makes strict
+# matches visible in Elasticsearch's shared candidate pool; final scores are
+# normalized independently by retrieval policy below.
+NEWS_CANDIDATE_POOL_BOOST = 100.0
+
+
 def _read_object(path: Path) -> dict[str, Any]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, dict):
@@ -246,6 +254,59 @@ def _id_filter(batch_ids: Sequence[str], video_ids: Sequence[str]) -> list[dict[
     return [{"bool": {"should": clauses, "minimum_should_match": 1}}]
 
 
+def _is_news_only_scope(batch_ids: Sequence[str], video_ids: Sequence[str]) -> bool:
+    """Whether the requested scope contains only the two news batches.
+
+    L21/L22 are multi-story news bulletins.  Their video-level ``search_text``
+    contains every story, so a permissive OR-style match lets unrelated stories
+    in the same bulletin satisfy separate words of the request.  Keep this
+    behavior scoped instead of making action-oriented batches overly strict.
+    """
+
+    batches = {item.upper() for item in batch_ids if item.strip()}
+    if batches:
+        return batches <= NEWS_BATCH_IDS
+    videos = {item.upper() for item in video_ids if item.strip()}
+    if not videos:
+        return False
+    return all(video_id.startswith(("L21_", "L22_")) for video_id in videos)
+
+
+def _scope_can_include_news(batch_ids: Sequence[str], video_ids: Sequence[str]) -> bool:
+    batches = {item.upper() for item in batch_ids if item.strip()}
+    if batches:
+        return bool(batches & NEWS_BATCH_IDS)
+    videos = {item.upper() for item in video_ids if item.strip()}
+    if videos:
+        return any(video_id.startswith(("L21_", "L22_")) for video_id in videos)
+    return True
+
+
+def _news_video_filter() -> dict[str, Any]:
+    return {
+        "bool": {
+            "should": [{"prefix": {"video_id": f"{batch}_"}} for batch in sorted(NEWS_BATCH_IDS)],
+            "minimum_should_match": 1,
+        }
+    }
+
+
+def _is_news_video_id(video_id: str) -> bool:
+    return video_id.upper().startswith(("L21_", "L22_"))
+
+
+def _profile_max_scores(scores: dict[str, float]) -> dict[bool, float]:
+    """Return independent normalizers for strict-news and general policies."""
+
+    maxima = {True: 1.0, False: 1.0}
+    for is_news in (True, False):
+        maxima[is_news] = max(
+            (score for video_id, score in scores.items() if _is_news_video_id(video_id) == is_news),
+            default=1.0,
+        ) or 1.0
+    return maxima
+
+
 def build_video_selection_query(
     parsed: ParsedTemporalQuery,
     *,
@@ -253,6 +314,8 @@ def build_video_selection_query(
     batch_ids: Sequence[str] = (),
     video_ids: Sequence[str] = (),
 ) -> dict[str, Any]:
+    news_only_scope = _is_news_only_scope(batch_ids, video_ids)
+    can_include_news = _scope_can_include_news(batch_ids, video_ids)
     expanded_parts = [parsed.shared_context]
     for event in parsed.events:
         expanded_parts.extend(
@@ -277,19 +340,42 @@ def build_video_selection_query(
             unique_parts.append(normalized)
     expanded = " ".join(unique_parts)
     should: list[dict[str, Any]] = []
-    if parsed.shared_context:
-        should.append(
-            {
-                "multi_match": {
-                    "query": parsed.shared_context,
-                    "fields": list(fields),
-                    "type": "best_fields",
-                    "boost": 8.0,
-                }
+    strict_news_match = {
+        "multi_match": {
+            "query": parsed.shared_context or expanded,
+            "fields": list(fields),
+            "type": "best_fields",
+            "minimum_should_match": NEWS_FULL_QUERY_MINIMUM_SHOULD_MATCH,
+            "boost": NEWS_CANDIDATE_POOL_BOOST,
+        }
+    }
+    if news_only_scope:
+        # Use the original, complete request as one query.  Do not duplicate
+        # it through parsed event expansions, and do not add a loose boosted
+        # context clause: either would undo the stricter story-news matching.
+        should.append(strict_news_match)
+    elif parsed.shared_context:
+        shared_context_match = {
+            "multi_match": {
+                "query": parsed.shared_context,
+                "fields": list(fields),
+                "type": "best_fields",
+                "boost": 8.0,
             }
-        )
-    should.append(
-        {
+        }
+        if can_include_news:
+            should.append(
+                {
+                    "bool": {
+                        "must": [shared_context_match],
+                        "must_not": [_news_video_filter()],
+                    }
+                }
+            )
+        else:
+            should.append(shared_context_match)
+    if not news_only_scope:
+        general_match = {
             "multi_match": {
                 "query": expanded,
                 "fields": list(fields),
@@ -297,7 +383,28 @@ def build_video_selection_query(
                 "minimum_should_match": "15%",
             }
         }
-    )
+        if can_include_news:
+            # In a broad V3C1 request, apply each scoring policy only to the
+            # batches it is designed for.  The outer ID filter still applies
+            # the user's requested batch/video scope.
+            should.append(
+                {
+                    "bool": {
+                        "must": [strict_news_match],
+                        "filter": [_news_video_filter()],
+                    }
+                }
+            )
+            should.append(
+                {
+                    "bool": {
+                        "must": [general_match],
+                        "must_not": [_news_video_filter()],
+                    }
+                }
+            )
+        else:
+            should.append(general_match)
     query: dict[str, Any] = {"bool": {"should": should, "minimum_should_match": 1}}
     filters = _id_filter(batch_ids, video_ids)
     if filters:
@@ -416,18 +523,21 @@ class ElasticsearchVideoSelector:
                     }
                 )
 
-        max_video_score = max(video_scores.values(), default=1.0) or 1.0
-        max_segment_score = max(
-            (score for values in segment_scores.values() for score in values),
-            default=1.0,
-        ) or 1.0
+        max_video_scores = _profile_max_scores(video_scores)
+        best_segment_scores = {
+            video_id: max(values, default=0.0)
+            for video_id, values in segment_scores.items()
+        }
+        max_segment_scores = _profile_max_scores(best_segment_scores)
         candidate_ids = set(video_scores) | set(segment_scores)
         scores = {
             video_id: (
-                normalized_summary_weight * video_scores.get(video_id, 0.0) / max_video_score
+                normalized_summary_weight
+                * video_scores.get(video_id, 0.0)
+                / max_video_scores[_is_news_video_id(video_id)]
                 + normalized_event_weight
-                * max(segment_scores.get(video_id, [0.0]))
-                / max_segment_score
+                * best_segment_scores.get(video_id, 0.0)
+                / max_segment_scores[_is_news_video_id(video_id)]
             )
             for video_id in candidate_ids
         }
@@ -438,9 +548,14 @@ class ElasticsearchVideoSelector:
                 "score": round(scores[video_id], 8),
                 "video_score": round(video_scores.get(video_id, 0.0), 6),
                 "best_segment_score": round(max(segment_scores.get(video_id, [0.0])), 6),
-                "summary_score": round(video_scores.get(video_id, 0.0) / max_video_score, 8),
+                "summary_score": round(
+                    video_scores.get(video_id, 0.0)
+                    / max_video_scores[_is_news_video_id(video_id)],
+                    8,
+                ),
                 "event_score": round(
-                    max(segment_scores.get(video_id, [0.0])) / max_segment_score,
+                    best_segment_scores.get(video_id, 0.0)
+                    / max_segment_scores[_is_news_video_id(video_id)],
                     8,
                 ),
                 "video_rank": video_ranks.get(video_id),
