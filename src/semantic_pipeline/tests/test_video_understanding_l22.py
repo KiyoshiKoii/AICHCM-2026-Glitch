@@ -138,6 +138,29 @@ def test_batch_discovery_is_dynamic_and_sorted(tmp_path: Path) -> None:
         "L30_V002",
         "L30_V010",
     ]
+    assert discover_batch_video_ids(
+        tmp_path / "caption",
+        "L30",
+        video_start=2,
+        video_end=2,
+    ) == ["L30_V002"]
+
+
+@pytest.mark.parametrize(
+    ("arguments", "message"),
+    [
+        (("--batch-id", "L30", "--video-start", "1"), "provided together"),
+        (("--batch-id", "L30", "--video-start", "3", "--video-end", "2"), "1 <="),
+        (("--video-id", "L30_V001", "--video-start", "1", "--video-end", "2"), "require --batch-id"),
+    ],
+)
+def test_summary_video_range_validation(
+    capsys: pytest.CaptureFixture[str],
+    arguments: tuple[str, ...],
+    message: str,
+) -> None:
+    assert main(list(arguments)) == 2
+    assert message in capsys.readouterr().out
 
 
 def test_resume_requires_ready_pilot_and_unchanged_inputs(tmp_path: Path) -> None:

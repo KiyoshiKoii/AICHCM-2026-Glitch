@@ -19,6 +19,7 @@ else:
 
 
 BATCH_ID_RE = re.compile(r"^L\d{2}$")
+VIDEO_ID_RE = re.compile(r"^(?P<batch_id>L\d{2})_V(?P<video_number>\d{3})$")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -33,6 +34,16 @@ def build_parser() -> argparse.ArgumentParser:
     selection.add_argument(
         "--batch-id",
         help="Build every video discovered under a batch such as L22",
+    )
+    parser.add_argument(
+        "--video-start",
+        type=int,
+        help="First numeric video suffix within --batch-id, for example 1 for L26_V001",
+    )
+    parser.add_argument(
+        "--video-end",
+        type=int,
+        help="Last numeric video suffix within --batch-id, for example 100 for L26_V100",
     )
     parser.add_argument("--caption-dir", type=Path, default=Path("data/metadata/caption"))
     parser.add_argument("--asr-dir", type=Path, default=Path("data/metadata/metadata_asr"))
@@ -72,9 +83,23 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def discover_batch_video_ids(caption_dir: Path, batch_id: str) -> list[str]:
+def _validate_video_range(video_start: int | None, video_end: int | None) -> None:
+    if (video_start is None) != (video_end is None):
+        raise ValueError("video-start and video-end must be provided together")
+    if video_start is not None and (video_start < 1 or video_end is None or video_end < video_start):
+        raise ValueError("video range must satisfy 1 <= video-start <= video-end")
+
+
+def discover_batch_video_ids(
+    caption_dir: Path,
+    batch_id: str,
+    *,
+    video_start: int | None = None,
+    video_end: int | None = None,
+) -> list[str]:
     if BATCH_ID_RE.fullmatch(batch_id) is None:
         raise ValueError("batch_id must use the BTC format Lxx, for example L22")
+    _validate_video_range(video_start, video_end)
     batch_dir = caption_dir / batch_id
     if not batch_dir.is_dir():
         raise FileNotFoundError(f"Caption batch directory does not exist: {batch_dir}")
@@ -83,21 +108,38 @@ def discover_batch_video_ids(caption_dir: Path, batch_id: str) -> list[str]:
         for path in batch_dir.glob(f"{batch_id}_V*.json")
         if re.fullmatch(rf"{re.escape(batch_id)}_V\d{{3}}", path.stem)
     )
+    if video_start is not None:
+        video_ids = [
+            video_id
+            for video_id in video_ids
+            if video_start <= int(VIDEO_ID_RE.fullmatch(video_id).group("video_number")) <= video_end
+        ]
     if not video_ids:
-        raise FileNotFoundError(f"No BTC caption artifacts found in: {batch_dir}")
+        selected_range = (
+            f" in video range {video_start}-{video_end}" if video_start is not None else ""
+        )
+        raise FileNotFoundError(f"No BTC caption artifacts found{selected_range} in: {batch_dir}")
     return video_ids
 
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        _validate_video_range(args.video_start, args.video_end)
+        if args.video_start is not None and args.batch_id is None:
+            raise ValueError("video-start and video-end require --batch-id")
         selected_batch = args.batch_id or batch_id_from_video_id(args.video_id)
         if args.llm_final_only and selected_batch != "L26":
             raise ValueError("llm final-only summarization is currently limited to batch L26")
         video_ids = (
             [args.video_id]
             if args.video_id
-            else discover_batch_video_ids(args.caption_dir, args.batch_id)
+            else discover_batch_video_ids(
+                args.caption_dir,
+                args.batch_id,
+                video_start=args.video_start,
+                video_end=args.video_end,
+            )
         )
         results = []
         for video_id in video_ids:
