@@ -5504,6 +5504,1514 @@
     "spatial_relations": []
   },
   {
+    "frame_id": "L26_V101_f0077",
+    "visual_source_frame_id": "L26_V101_f0077",
+    "ocr_source_frame_id": "L26_V101_f0077",
+    "quality_flags": [],
+    "caption": "A person pouring sauce into a glass bowl on a white countertop.",
+    "detailed_caption": "A close-up shot shows a hand pouring sauce from a small green bowl into a clear glass bowl containing red paste. In the background, other small condiment bowls are arranged on a white surface.",
+    "caption_vi": "Một người đang đổ sốt vào tô thủy tinh trên mặt bàn trắng.",
+    "detailed_caption_vi": "Cận cảnh bàn tay đang rót sốt từ một chiếc bát nhỏ màu xanh lá cây vào tô thủy tinh trong suốt chứa sốt đỏ. Phía sau có các bát gia vị khác được sắp xếp trên mặt bàn trắng.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.008,
+          0.251,
+          0.252,
+          0.6489999999999999
+        ],
+        "description": "small white bowl with handle containing beige liquid",
+        "description_vi": "bát trắng nhỏ có tay cầm chứa chất lỏng màu be",
+        "attributes": [
+          "white",
+          "small"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_1",
+        "label": "bowl",
+        "bbox": [
+          0.092,
+          0.0,
+          0.33199999999999996,
+          0.275
+        ],
+        "description": "small light green bowl with handle",
+        "description_vi": "bát nhỏ màu xanh lá nhạt có tay cầm",
+        "attributes": [
+          "green",
+          "small",
+          "ceramic"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "bowl_2",
+        "label": "bowl",
+        "bbox": [
+          0.225,
+          0.308,
+          0.747,
+          1.0
+        ],
+        "description": "clear glass bowl holding red sauce",
+        "description_vi": "tô thủy tinh trong suốt chứa sốt đỏ",
+        "attributes": [
+          "glass",
+          "clear",
+          "round"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.359,
+          0.0,
+          0.999,
+          0.747
+        ],
+        "description": "hand pouring liquid",
+        "description_vi": "bàn tay đang rót chất lỏng",
+        "attributes": [
+          "skin"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "left_of",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "right_of",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_1",
+        "predicate": "above",
+        "object_id": "bowl_2"
+      },
+      {
+        "subject_id": "bowl_2",
+        "predicate": "below",
+        "object_id": "bowl_1"
+      },
+      {
+        "subject_id": "bowl_1",
+        "predicate": "left_of",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "right_of",
+        "object_id": "bowl_1"
+      },
+      {
+        "subject_id": "bowl_2",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_2"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0078",
+    "visual_source_frame_id": "L26_V101_f0078",
+    "ocr_source_frame_id": "L26_V101_f0078",
+    "quality_flags": [],
+    "caption": "A person pouring dark liquid from a green dish with a spoon.",
+    "detailed_caption": "A close-up shot shows a person pouring dark soy sauce from a small green dish using a spoon held in their hand above a clear bowl.",
+    "caption_vi": "Một người đang rót nước sốt sậm màu từ đĩa xanh bằng thìa.",
+    "detailed_caption_vi": "Cận cảnh người đang rót nước tương đậm màu từ chiếc đĩa nhỏ màu xanh lá cây bằng thìa trên tay vào tô trong suốt.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.526,
+          0.263,
+          0.696,
+          0.655
+        ],
+        "description": "small green bowl containing dark liquid",
+        "description_vi": "bát xanh lá nhỏ chứa chất lỏng sẫm màu",
+        "attributes": [
+          "green",
+          "small"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.11200000000000002,
+          0.174,
+          0.5700000000000001,
+          0.431
+        ],
+        "description": "silver spoon being held",
+        "description_vi": "thìa bạc đang được cầm",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0079",
+    "visual_source_frame_id": "L26_V101_f0078",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person pouring dark liquid from a green dish with a spoon.",
+    "detailed_caption": "A close-up shot shows a person pouring dark soy sauce from a small green dish using a spoon held in their hand above a clear bowl.",
+    "caption_vi": "Một người đang rót nước sốt sậm màu từ đĩa xanh bằng thìa.",
+    "detailed_caption_vi": "Cận cảnh người đang rót nước tương đậm màu từ chiếc đĩa nhỏ màu xanh lá cây bằng thìa trên tay vào tô trong suốt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.526,
+          0.263,
+          0.696,
+          0.655
+        ],
+        "description": "small green bowl containing dark liquid",
+        "description_vi": "bát xanh lá nhỏ chứa chất lỏng sẫm màu",
+        "attributes": [
+          "green",
+          "small"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.11200000000000002,
+          0.174,
+          0.5700000000000001,
+          0.431
+        ],
+        "description": "silver spoon being held",
+        "description_vi": "thìa bạc đang được cầm",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0080",
+    "visual_source_frame_id": "L26_V101_f0080",
+    "ocr_source_frame_id": "L26_V101_f0080",
+    "quality_flags": [],
+    "caption": "A person pouring dark liquid from a white cup into a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand tipping a small white cup to pour dark liquid into a clear glass bowl filled with red sauce on a white counter.",
+    "caption_vi": "Một người đang rót chất lỏng sẫm màu từ cốc trắng vào tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh tay đang nghiêng chiếc cốc trắng nhỏ để rót nước sốt tối màu vào tô thủy tinh trong suốt chứa sốt đỏ trên mặt bàn.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.21000000000000002,
+          0.287,
+          0.762,
+          0.9939999999999999
+        ],
+        "description": "clear glass bowl with red and dark sauce",
+        "description_vi": "tô thủy tinh trong suốt chứa sốt đỏ và tối màu",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "cup_0",
+        "label": "cup",
+        "bbox": [
+          0.314,
+          0.039,
+          0.529,
+          0.45799999999999996
+        ],
+        "description": "small white ceramic cup being tilted",
+        "description_vi": "cốc sứ trắng nhỏ đang bị nghiêng",
+        "attributes": [
+          "white",
+          "small",
+          "ceramic"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "cup_0"
+      },
+      {
+        "subject_id": "cup_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0081",
+    "visual_source_frame_id": "L26_V101_f0081",
+    "ocr_source_frame_id": "L26_V101_f0081",
+    "quality_flags": [],
+    "caption": "A person holding a jar of seasoning powder with a spoon.",
+    "detailed_caption": "A close-up shot shows a person holding a white jar labeled with red text and scooping seasoning powder with a small spoon.",
+    "caption_vi": "Một người đang cầm hũ gia vị có gắn thìa múc.",
+    "detailed_caption_vi": "Cận cảnh người đang cầm một hũ màu trắng có nhãn chữ đỏ và dùng thìa nhỏ để múc gia vị bột.",
+    "ocr_text": "Aji-ngon Hạt nêm",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "jar_0",
+        "label": "jar",
+        "bbox": [
+          0.316,
+          0.35700000000000004,
+          0.646,
+          1.0
+        ],
+        "description": "white ceramic jar labeled Aji-ngon",
+        "description_vi": "hũ sứ màu trắng có nhãn Aji-ngon",
+        "attributes": [
+          "white",
+          "ceramic",
+          "labeled"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.348,
+          0.24300000000000002,
+          0.517,
+          0.553
+        ],
+        "description": "metal spoon scooping powder",
+        "description_vi": "thìa kim loại đang múc bột",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "jar_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "jar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0082",
+    "visual_source_frame_id": "L26_V101_f0081",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person holding a jar of seasoning powder with a spoon.",
+    "detailed_caption": "A close-up shot shows a person holding a white jar labeled with red text and scooping seasoning powder with a small spoon.",
+    "caption_vi": "Một người đang cầm hũ gia vị có gắn thìa múc.",
+    "detailed_caption_vi": "Cận cảnh người đang cầm một hũ màu trắng có nhãn chữ đỏ và dùng thìa nhỏ để múc gia vị bột.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "jar_0",
+        "label": "jar",
+        "bbox": [
+          0.316,
+          0.35700000000000004,
+          0.646,
+          1.0
+        ],
+        "description": "white ceramic jar labeled Aji-ngon",
+        "description_vi": "hũ sứ màu trắng có nhãn Aji-ngon",
+        "attributes": [
+          "white",
+          "ceramic",
+          "labeled"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.348,
+          0.24300000000000002,
+          0.517,
+          0.553
+        ],
+        "description": "metal spoon scooping powder",
+        "description_vi": "thìa kim loại đang múc bột",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "jar_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "jar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0083",
+    "visual_source_frame_id": "L26_V101_f0083",
+    "ocr_source_frame_id": "L26_V101_f0083",
+    "quality_flags": [],
+    "caption": "Condiments being mixed inside a clear glass bowl.",
+    "detailed_caption": "A close-up view shows white condensed milk and granules being added to red sauce in a clear glass bowl, with a metal spoon resting inside.",
+    "caption_vi": "Gia vị đang được trộn đều bên trong tô thủy tinh trong suốt.",
+    "detailed_caption_vi": "Cận cảnh sữa đặc màu trắng và các hạt gia vị được cho vào tô sốt đỏ trong suốt, có chiếc thìa kim loại đặt bên trong.",
+    "ocr_text": "HẠT NÊM HEO 1/2m",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.11000000000000001,
+          0.0,
+          0.853,
+          1.0
+        ],
+        "description": "glass bowl containing red sauce and white liquid",
+        "description_vi": "tô thủy tinh chứa sốt đỏ và chất lỏng màu trắng",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.417,
+          0.0,
+          0.608,
+          0.47100000000000003
+        ],
+        "description": "metal spoon resting in sauce bowl",
+        "description_vi": "thìa kim loại nằm trong tô sốt",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0084",
+    "visual_source_frame_id": "L26_V101_f0084",
+    "ocr_source_frame_id": "L26_V101_f0084",
+    "quality_flags": [],
+    "caption": "A person holding a jar of seasoning powder with a spoon.",
+    "detailed_caption": "A close-up view shows hands holding a white jar with red text reading AJI-NO-MOTO while a spoon scoops powder from inside.",
+    "caption_vi": "Một người đang cầm hũ gia vị màu trắng có nhãn đỏ.",
+    "detailed_caption_vi": "Cận cảnh đôi tay đang cầm hũ trắng có chữ màu đỏ AJI-NO-MOTO trong khi một chiếc thìa đang múc bột từ bên trong.",
+    "ocr_text": "AJI-NO-MOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "jar_0",
+        "label": "jar",
+        "bbox": [
+          0.368,
+          0.18800000000000003,
+          0.7,
+          0.8220000000000001
+        ],
+        "description": "white jar with red AJI-NO-MOTO label",
+        "description_vi": "hũ trắng có nhãn đỏ AJI-NO-MOTO",
+        "attributes": [
+          "white",
+          "ceramic"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.23399999999999999,
+          0.02,
+          0.584,
+          0.308
+        ],
+        "description": "metal spoon scooping white powder",
+        "description_vi": "thìa kim loại đang múc bột trắng",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "jar_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "jar_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0085",
+    "visual_source_frame_id": "L26_V101_f0085",
+    "ocr_source_frame_id": "L26_V101_f0085",
+    "quality_flags": [],
+    "caption": "A hand stirring red sauce in a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand holding a clear glass bowl containing red sauce while a utensil stirs the contents.",
+    "caption_vi": "Một tay đang khuấy sốt đỏ trong tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh bàn tay giữ tô thủy tinh trong suốt chứa sốt màu đỏ trong khi dụng cụ đang khuấy đều bên trong.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.42300000000000004,
+          0.0,
+          0.999,
+          0.498
+        ],
+        "description": "glass bowl containing red mixture",
+        "description_vi": "tô thủy tinh chứa hỗn hợp đỏ",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0086",
+    "visual_source_frame_id": "L26_V101_f0085",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A hand stirring red sauce in a glass bowl.",
+    "detailed_caption": "A close-up shot shows a hand holding a clear glass bowl containing red sauce while a utensil stirs the contents.",
+    "caption_vi": "Một tay đang khuấy sốt đỏ trong tô thủy tinh.",
+    "detailed_caption_vi": "Cận cảnh bàn tay giữ tô thủy tinh trong suốt chứa sốt màu đỏ trong khi dụng cụ đang khuấy đều bên trong.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.42300000000000004,
+          0.0,
+          0.999,
+          0.498
+        ],
+        "description": "glass bowl containing red mixture",
+        "description_vi": "tô thủy tinh chứa hỗn hợp đỏ",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0087",
+    "visual_source_frame_id": "L26_V101_f0087",
+    "ocr_source_frame_id": "L26_V101_f0087",
+    "quality_flags": [],
+    "caption": "A person adjusting the stove knob in a kitchen.",
+    "detailed_caption": "A medium shot shows a person in a white chef coat turning a black knob on a glass induction stovetop, with an orange pot positioned nearby.",
+    "caption_vi": "Một người đang chỉnh núm vặn bếp trong nhà bếp.",
+    "detailed_caption_vi": "Cận cảnh người mặc áo đầu bếp màu trắng đang vặn núm điều khiển màu đen trên mặt bếp từ bằng kính, cạnh đó có một chiếc nồi màu cam.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "knob_0",
+        "label": "knob",
+        "bbox": [
+          0.495,
+          0.662,
+          0.564,
+          0.755
+        ],
+        "description": "black control knob on the stove",
+        "description_vi": "núm điều khiển màu đen trên bếp",
+        "attributes": [
+          "black"
+        ],
+        "action": "turning"
+      },
+      {
+        "object_id": "stove_0",
+        "label": "stove",
+        "bbox": [
+          0.375,
+          0.47100000000000003,
+          1.0,
+          1.0
+        ],
+        "description": "black glass induction cooktop with burners and knobs",
+        "description_vi": "bếp từ kính đen có mâm nhiệt và núm vặn",
+        "attributes": [
+          "black",
+          "glass"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "knob_0",
+        "predicate": "overlapping",
+        "object_id": "stove_0"
+      },
+      {
+        "subject_id": "stove_0",
+        "predicate": "overlapping",
+        "object_id": "knob_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0088",
+    "visual_source_frame_id": "L26_V101_f0088",
+    "ocr_source_frame_id": "L26_V101_f0088",
+    "quality_flags": [],
+    "caption": "An empty red frying pan on a black stove.",
+    "detailed_caption": "A close-up shot shows an empty round frying pan with a red exterior and a black non-stick interior resting on a stovetop.",
+    "caption_vi": "Một chiếc chảo rán màu đỏ trống không trên bếp đen.",
+    "detailed_caption_vi": "Cận cảnh chiếc chảo rán tròn vỏ màu đỏ và lòng chống dính màu đen đang đặt trên mặt bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.05,
+          0.023,
+          1.0,
+          1.0
+        ],
+        "description": "red frying pan with black non-stick interior",
+        "description_vi": "chảo rán màu đỏ với lòng chống dính màu đen",
+        "attributes": [
+          "red",
+          "black",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0089",
+    "visual_source_frame_id": "L26_V101_f0088",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An empty red frying pan on a black stove.",
+    "detailed_caption": "A close-up shot shows an empty round frying pan with a red exterior and a black non-stick interior resting on a stovetop.",
+    "caption_vi": "Một chiếc chảo rán màu đỏ trống không trên bếp đen.",
+    "detailed_caption_vi": "Cận cảnh chiếc chảo rán tròn vỏ màu đỏ và lòng chống dính màu đen đang đặt trên mặt bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.05,
+          0.023,
+          1.0,
+          1.0
+        ],
+        "description": "red frying pan with black non-stick interior",
+        "description_vi": "chảo rán màu đỏ với lòng chống dính màu đen",
+        "attributes": [
+          "red",
+          "black",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0090",
+    "visual_source_frame_id": "L26_V101_f0090",
+    "ocr_source_frame_id": "L26_V101_f0090",
+    "quality_flags": [],
+    "caption": "Two chefs standing in a bright modern kitchen.",
+    "detailed_caption": "A wide shot shows two men in a modern kitchen. The man on the left wears a white chef uniform and stirs a bowl with chopsticks near a stove, while the man on the right wears a plaid shirt and white apron, looking toward the pan.",
+    "caption_vi": "Hai đầu bếp đang đứng trong một nhà bếp hiện đại.",
+    "detailed_caption_vi": "Toàn cảnh hai người đàn ông trong căn bếp hiện đại. Người bên trái mặc đồng phục đầu bếp trắng đang dùng đũa khuấy tô cạnh bếp, còn người bên phải mặc áo sơ mi kẻ caro và tạp dề trắng đang nhìn về phía chảo.",
+    "ocr_text": "NGON",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.368,
+          0.7220000000000001,
+          0.48,
+          0.785
+        ],
+        "description": "red pan heating on stove",
+        "description_vi": "chảo đỏ đang làm nóng trên bếp",
+        "attributes": [
+          "red"
+        ],
+        "action": "heating"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.274,
+          0.23199999999999998,
+          0.532,
+          0.792
+        ],
+        "description": "chef in white uniform stirring bowl with chopsticks",
+        "description_vi": "đầu bếp mặc đồng phục trắng đang khuấy bát bằng đũa",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.635,
+          0.212,
+          0.8039999999999999,
+          0.7939999999999999
+        ],
+        "description": "man in plaid shirt and white apron standing by the stove",
+        "description_vi": "người đàn ông mặc áo sơ mi kẻ caro và tạp dề trắng đứng cạnh bếp",
+        "attributes": [
+          "plaid",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0091",
+    "visual_source_frame_id": "L26_V101_f0091",
+    "ocr_source_frame_id": "L26_V101_f0091",
+    "quality_flags": [],
+    "caption": "Marinated meat pieces cooking in a pan.",
+    "detailed_caption": "A close-up shot shows marinated meat pieces sizzling in oil inside a black and red frying pan on a stovetop.",
+    "caption_vi": "Những miếng thịt ướp đang được nấu trong chảo.",
+    "detailed_caption_vi": "Cận cảnh những miếng thịt đã tẩm ướp đang xèo xèo trong dầu bên trong chiếc chảo rán màu đen và đỏ trên bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.134,
+          0.222,
+          0.606,
+          0.9510000000000001
+        ],
+        "description": "marinated pieces of meat cooking in oil",
+        "description_vi": "những miếng thịt tẩm ướp đang nấu trong dầu",
+        "attributes": [
+          "raw",
+          "marinated",
+          "red"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.019,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "red frying pan with black interior",
+        "description_vi": "chảo rán màu đỏ với lòng chảo đen",
+        "attributes": [
+          "red",
+          "black",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0092",
+    "visual_source_frame_id": "L26_V101_f0091",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Marinated meat pieces cooking in a pan.",
+    "detailed_caption": "A close-up shot shows marinated meat pieces sizzling in oil inside a black and red frying pan on a stovetop.",
+    "caption_vi": "Những miếng thịt ướp đang được nấu trong chảo.",
+    "detailed_caption_vi": "Cận cảnh những miếng thịt đã tẩm ướp đang xèo xèo trong dầu bên trong chiếc chảo rán màu đen và đỏ trên bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.134,
+          0.222,
+          0.606,
+          0.9510000000000001
+        ],
+        "description": "marinated pieces of meat cooking in oil",
+        "description_vi": "những miếng thịt tẩm ướp đang nấu trong dầu",
+        "attributes": [
+          "raw",
+          "marinated",
+          "red"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.019,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "red frying pan with black interior",
+        "description_vi": "chảo rán màu đỏ với lòng chảo đen",
+        "attributes": [
+          "red",
+          "black",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0093",
+    "visual_source_frame_id": "L26_V101_f0093",
+    "ocr_source_frame_id": "L26_V101_f0093",
+    "quality_flags": [],
+    "caption": "A chef holding a bowl of marinated meat over a pan.",
+    "detailed_caption": "A medium shot shows two men in chef attire; the man on the left uses chopsticks to pick up marinated meat from a glass bowl and place it into a hot pan on the stove.",
+    "caption_vi": "Đầu bếp đang cầm tô thịt ướp phía trên chảo.",
+    "detailed_caption_vi": "Trung cảnh hai người mặc trang phục đầu bếp; người bên trái dùng đũa gắp thịt tẩm ướp từ tô thủy tinh cho vào chảo nóng trên bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.348,
+          0.219,
+          0.627,
+          0.49699999999999994
+        ],
+        "description": "clear glass bowl holding marinated meat",
+        "description_vi": "tô thủy tinh trong suốt chứa thịt ướp",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.385,
+          0.55,
+          0.796,
+          1.0
+        ],
+        "description": "red and black frying pan on stove",
+        "description_vi": "chảo rán đỏ đen trên bếp",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": "heating"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "above",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "below",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0094",
+    "visual_source_frame_id": "L26_V101_f0094",
+    "ocr_source_frame_id": "L26_V101_f0094",
+    "quality_flags": [],
+    "caption": "Marinated meat sizzling in a pan.",
+    "detailed_caption": "A close-up shot shows marinated meat pieces frying in hot oil inside a non-stick pan, with juices and bubbling oil surrounding them.",
+    "caption_vi": "Thịt tẩm ướp đang xèo xèo trong chảo.",
+    "detailed_caption_vi": "Cận cảnh những miếng thịt ướp đang chiên trong dầu nóng trong chảo chống dính, xung quanh có nước sốt và dầu đang sôi sủi bọt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "marinated meat pieces frying in oil",
+        "description_vi": "những miếng thịt ướp đang chiên trong dầu",
+        "attributes": [
+          "marinated",
+          "cooked"
+        ],
+        "action": "frying"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0095",
+    "visual_source_frame_id": "L26_V101_f0094",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Marinated meat sizzling in a pan.",
+    "detailed_caption": "A close-up shot shows marinated meat pieces frying in hot oil inside a non-stick pan, with juices and bubbling oil surrounding them.",
+    "caption_vi": "Thịt tẩm ướp đang xèo xèo trong chảo.",
+    "detailed_caption_vi": "Cận cảnh những miếng thịt ướp đang chiên trong dầu nóng trong chảo chống dính, xung quanh có nước sốt và dầu đang sôi sủi bọt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "marinated meat pieces frying in oil",
+        "description_vi": "những miếng thịt ướp đang chiên trong dầu",
+        "attributes": [
+          "marinated",
+          "cooked"
+        ],
+        "action": "frying"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0096",
+    "visual_source_frame_id": "L26_V101_f0096",
+    "ocr_source_frame_id": "L26_V101_f0096",
+    "quality_flags": [],
+    "caption": "Two chefs preparing food in a bright kitchen.",
+    "detailed_caption": "A wide shot shows a chef in a white uniform stirring a pan on the induction stove with chopsticks, while another chef in an apron stands next to him watching.",
+    "caption_vi": "Hai đầu bếp đang chuẩn bị món ăn trong căn bếp sáng sủa.",
+    "detailed_caption_vi": "Toàn cảnh đầu bếp mặc đồng phục trắng đang dùng đũa đảo thức ăn trong chảo trên bếp từ, trong khi một đầu bếp khác mặc tạp dề đứng cạnh quan sát.",
+    "ocr_text": "NGON",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.365,
+          0.7220000000000001,
+          0.477,
+          0.787
+        ],
+        "description": "red frying pan on active stove",
+        "description_vi": "chảo rán đỏ trên bếp đang hoạt động",
+        "attributes": [
+          "red"
+        ],
+        "action": "heating"
+      },
+      {
+        "object_id": "person_0",
+        "label": "person",
+        "bbox": [
+          0.323,
+          0.235,
+          0.524,
+          0.7989999999999999
+        ],
+        "description": "chef in white uniform stirring food in pan",
+        "description_vi": "đầu bếp mặc đồng phục trắng đang đảo thức ăn trong chảo",
+        "attributes": [
+          "white"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "person_1",
+        "label": "person",
+        "bbox": [
+          0.608,
+          0.21500000000000002,
+          0.786,
+          0.796
+        ],
+        "description": "assistant chef in plaid shirt and white apron",
+        "description_vi": "đầu bếp phụ mặc áo sơ mi kẻ caro và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "person_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "person_0",
+        "predicate": "left_of",
+        "object_id": "person_1"
+      },
+      {
+        "subject_id": "person_1",
+        "predicate": "right_of",
+        "object_id": "person_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0097",
+    "visual_source_frame_id": "L26_V101_f0097",
+    "ocr_source_frame_id": "L26_V101_f0097",
+    "quality_flags": [],
+    "caption": "Close-up of marinated meat pieces frying in a pan.",
+    "detailed_caption": "A close-up shot shows multiple pieces of seasoned meat cooking in oil inside a frying pan, being stirred with wooden chopsticks.",
+    "caption_vi": "Cận cảnh các miếng thịt ướp đang chiên trong chảo.",
+    "detailed_caption_vi": "Cận cảnh nhiều miếng thịt được nêm gia vị đang nấu trong dầu bên trong chảo rán, được đảo bằng đôi đũa gỗ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.22999999999999998,
+          0.183,
+          0.843,
+          0.9939999999999999
+        ],
+        "description": "pieces of marinated meat cooking in a pan",
+        "description_vi": "các miếng thịt tẩm ướp đang nấu trong chảo",
+        "attributes": [
+          "marinated",
+          "browned"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "red frying pan with black interior",
+        "description_vi": "chảo rán màu đỏ với lòng chảo đen",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0098",
+    "visual_source_frame_id": "L26_V101_f0097",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Close-up of marinated meat pieces frying in a pan.",
+    "detailed_caption": "A close-up shot shows multiple pieces of seasoned meat cooking in oil inside a frying pan, being stirred with wooden chopsticks.",
+    "caption_vi": "Cận cảnh các miếng thịt ướp đang chiên trong chảo.",
+    "detailed_caption_vi": "Cận cảnh nhiều miếng thịt được nêm gia vị đang nấu trong dầu bên trong chảo rán, được đảo bằng đôi đũa gỗ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.22999999999999998,
+          0.183,
+          0.843,
+          0.9939999999999999
+        ],
+        "description": "pieces of marinated meat cooking in a pan",
+        "description_vi": "các miếng thịt tẩm ướp đang nấu trong chảo",
+        "attributes": [
+          "marinated",
+          "browned"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "red frying pan with black interior",
+        "description_vi": "chảo rán màu đỏ với lòng chảo đen",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0099",
+    "visual_source_frame_id": "L26_V101_f0099",
+    "ocr_source_frame_id": "L26_V101_f0099",
+    "quality_flags": [],
+    "caption": "Transferring food from a red pan onto a white plate.",
+    "detailed_caption": "A close-up shot shows cooked food being poured from a red frying pan onto a clean white ceramic plate.",
+    "caption_vi": "Đổ thức ăn từ chảo đỏ ra đĩa trắng.",
+    "detailed_caption_vi": "Cận cảnh thức ăn đã nấu chín đang được đổ từ chiếc chảo rán màu đỏ lên một chiếc đĩa sứ màu trắng sạch sẽ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.545,
+          0.0,
+          1.0,
+          0.597
+        ],
+        "description": "red pan being tilted",
+        "description_vi": "chảo đỏ đang bị nghiêng",
+        "attributes": [
+          "red"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.0,
+          0.326,
+          0.999,
+          1.0
+        ],
+        "description": "large white ceramic plate",
+        "description_vi": "đĩa sứ màu trắng lớn",
+        "attributes": [
+          "white",
+          "ceramic",
+          "round"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "pan_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "pan_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0100",
+    "visual_source_frame_id": "L26_V101_f0100",
+    "ocr_source_frame_id": "L26_V101_f0100",
+    "quality_flags": [],
+    "caption": "Pouring cooking oil into an empty frying pan.",
+    "detailed_caption": "A close-up shot shows cooking oil being poured from a spout into an empty red and black frying pan resting on an induction stove.",
+    "caption_vi": "Rót dầu ăn vào chảo rán trống.",
+    "detailed_caption_vi": "Cận cảnh dầu ăn đang được rót từ vòi vào chiếc chảo rán đỏ đen trống không đang đặt trên bếp từ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.121,
+          0.103,
+          0.874,
+          1.0
+        ],
+        "description": "red frying pan with black interior",
+        "description_vi": "chảo rán màu đỏ với lòng chảo đen",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0101",
+    "visual_source_frame_id": "L26_V101_f0100",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Pouring cooking oil into an empty frying pan.",
+    "detailed_caption": "A close-up shot shows cooking oil being poured from a spout into an empty red and black frying pan resting on an induction stove.",
+    "caption_vi": "Rót dầu ăn vào chảo rán trống.",
+    "detailed_caption_vi": "Cận cảnh dầu ăn đang được rót từ vòi vào chiếc chảo rán đỏ đen trống không đang đặt trên bếp từ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.121,
+          0.103,
+          0.874,
+          1.0
+        ],
+        "description": "red frying pan with black interior",
+        "description_vi": "chảo rán màu đỏ với lòng chảo đen",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0102",
+    "visual_source_frame_id": "L26_V101_f0102",
+    "ocr_source_frame_id": "L26_V101_f0102",
+    "quality_flags": [],
+    "caption": "A chef holding a bowl of marinated meat above a pan.",
+    "detailed_caption": "A medium shot shows a chef holding a glass bowl of seasoned meat with chopsticks, preparing to add it to a frying pan on the stove.",
+    "caption_vi": "Đầu bếp đang cầm tô thịt ướp phía trên chảo.",
+    "detailed_caption_vi": "Trung cảnh đầu bếp cầm tô thủy tinh đựng thịt đã nêm gia vị bằng đũa, chuẩn bị cho vào chảo rán trên bếp.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.296,
+          0.102,
+          0.624,
+          0.461
+        ],
+        "description": "clear glass bowl with seasoned meat",
+        "description_vi": "tô thủy tinh trong suốt đựng thịt nêm gia vị",
+        "attributes": [
+          "glass",
+          "clear"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.351,
+          0.624,
+          0.808,
+          0.9600000000000001
+        ],
+        "description": "red frying pan on stove",
+        "description_vi": "chảo rán màu đỏ trên bếp",
+        "attributes": [
+          "red"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "above",
+        "object_id": "pan_0"
+      },
+      {
+        "subject_id": "pan_0",
+        "predicate": "below",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0103",
+    "visual_source_frame_id": "L26_V101_f0103",
+    "ocr_source_frame_id": "L26_V101_f0103",
+    "quality_flags": [],
+    "caption": "Marinated meat frying in a hot pan.",
+    "detailed_caption": "A close-up shot shows marinated meat pieces cooking in oil inside a black non-stick frying pan, surrounded by bubbling juices.",
+    "caption_vi": "Thịt ướp đang chiên trong chảo nóng.",
+    "detailed_caption_vi": "Cận cảnh các miếng thịt tẩm ướp đang nấu trong dầu bên trong chảo rán chống dính màu đen, xung quanh có nước sốt sôi sủi bọt.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.142,
+          0.075,
+          0.9349999999999999,
+          0.917
+        ],
+        "description": "pieces of marinated meat cooking in oil",
+        "description_vi": "các miếng thịt tẩm ướp đang nấu trong dầu",
+        "attributes": [
+          "marinated"
+        ],
+        "action": "cooking"
+      },
+      {
+        "object_id": "pan_0",
+        "label": "pan",
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "description": "red frying pan with black interior",
+        "description_vi": "chảo rán màu đỏ với lòng chảo đen",
+        "attributes": [
+          "red",
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0104",
+    "visual_source_frame_id": "L26_V101_f0104",
+    "ocr_source_frame_id": "L26_V101_f0104",
+    "quality_flags": [],
+    "caption": "Marinated meat pieces cooking in a pan.",
+    "detailed_caption": "A close-up shot shows seasoned meat pieces frying in oil inside a red frying pan, being adjusted with wooden chopsticks.",
+    "caption_vi": "Những miếng thịt ướp đang nấu trong chảo.",
+    "detailed_caption_vi": "Cận cảnh những miếng thịt tẩm gia vị đang chiên trong dầu bên trong chảo rán màu đỏ, được chỉnh sửa bằng đôi đũa gỗ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.0,
+          0.039,
+          0.9289999999999999,
+          0.9199999999999999
+        ],
+        "description": "seasoned meat pieces frying in a pan",
+        "description_vi": "những miếng thịt tẩm gia vị đang chiên trong chảo",
+        "attributes": [
+          "marinated"
+        ],
+        "action": "frying"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
     "frame_id": "L26_V101_f0105",
     "visual_source_frame_id": "L26_V101_f0105",
     "ocr_source_frame_id": "L26_V101_f0105",
@@ -7339,5 +8847,2095 @@
         "object_id": "meat_0"
       }
     ]
+  },
+  {
+    "frame_id": "L26_V101_f0129",
+    "visual_source_frame_id": "L26_V101_f0129",
+    "ocr_source_frame_id": "L26_V101_f0129",
+    "quality_flags": [],
+    "caption": "A pair of chopsticks and a spoon handling glazed meat on a banana leaf on a plate.",
+    "detailed_caption": "A close-up shot shows a plate holding glazed meat served on a banana leaf. Chopsticks are held on the left side to pick up a piece of the meat, while a spoon is held on the right side. The background shows a white plate and light-colored surface.",
+    "caption_vi": "Đôi đũa và chiếc thìa đang gắp miếng thịt bóng sốt trên lá chuối đặt trong đĩa.",
+    "detailed_caption_vi": "Cận cảnh đĩa thịt sốt bóng đặt trên lớp lá chuối xanh. Tay người cầm đũa ở bên trái và thìa ở bên phải tương tác với món ăn. Bối cảnh xung quanh là bàn ăn sáng sủa.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chopsticks_0",
+        "label": "chopsticks",
+        "bbox": [
+          0.34700000000000003,
+          0.0,
+          0.497,
+          0.8310000000000001
+        ],
+        "description": "wooden chopsticks picking up glazed meat",
+        "description_vi": "đôi đũa gỗ đang gắp thịt sốt",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": "picking up meat"
+      },
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.15,
+          0.002,
+          0.9869999999999999,
+          0.9550000000000001
+        ],
+        "description": "glazed brownish meat pieces on banana leaf",
+        "description_vi": "những miếng thịt màu nâu bóng trên lá chuối",
+        "attributes": [
+          "glazed",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.099,
+          0.0,
+          0.999,
+          1.0
+        ],
+        "description": "round white ceramic plate",
+        "description_vi": "đĩa gốm trắng tròn",
+        "attributes": [
+          "white",
+          "ceramic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.515,
+          0.36100000000000004,
+          0.962,
+          0.8520000000000001
+        ],
+        "description": "silver spoon with sauce",
+        "description_vi": "thìa bạc có dính sốt",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "scooping sauce"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "left_of",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "right_of",
+        "object_id": "chopsticks_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0130",
+    "visual_source_frame_id": "L26_V101_f0130",
+    "ocr_source_frame_id": "L26_V101_f0130",
+    "quality_flags": [],
+    "caption": "A person holds a small bowl of sesame seeds above a plate of glazed meat and salad.",
+    "detailed_caption": "A close-up shot shows a person holding a small white bowl filled with sesame seeds, poised to sprinkle them. Below, a plate contains glazed meat, fresh lettuce, apple slices, and edible flowers. Additional small bowls with seasonings sit in the background.",
+    "caption_vi": "Người đang cầm bát nhỏ đựng hạt mè trên đĩa thịt sốt và salad.",
+    "detailed_caption_vi": "Cận cảnh bàn ăn với đĩa thịt sốt bóng, rau xà lách tươi và lát táo ở phía dưới. Phía trên, tay người cầm một chén nhỏ đựng hạt mè chuẩn bị rắc lên món ăn. Xung quanh có thêm các bát gia vị nhỏ.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.548,
+          0.0,
+          0.8130000000000001,
+          0.33499999999999996
+        ],
+        "description": "small white fluted bowl containing sesame seeds",
+        "description_vi": "bát nhỏ màu trắng có rãnh đựng hạt mè",
+        "attributes": [
+          "white",
+          "small",
+          "ceramic"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.24500000000000002,
+          0.624,
+          0.9970000000000001,
+          0.883
+        ],
+        "description": "glazed brownish meat pieces on plate",
+        "description_vi": "miếng thịt nâu bóng trên đĩa",
+        "attributes": [
+          "glazed",
+          "brown"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "salad_0",
+        "label": "salad",
+        "bbox": [
+          0.0,
+          0.354,
+          0.42000000000000004,
+          0.804
+        ],
+        "description": "fresh green lettuce with apple slices and edible flowers",
+        "description_vi": "xà lách xanh tươi kèm lát táo và hoa ăn được",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "above",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "below",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0131",
+    "visual_source_frame_id": "L26_V101_f0131",
+    "ocr_source_frame_id": "L26_V101_f0131",
+    "quality_flags": [],
+    "caption": "A plated dish of glazed meat sprinkled with sesame seeds, served with lettuce, apple slices, and edible flowers.",
+    "detailed_caption": "An overhead view shows a large ceramic plate containing dark glazed meat topped with white sesame seeds and red chili strips. Next to the meat are crisp apple slices and a garnish of green lettuce decorated with colorful edible flowers.",
+    "caption_vi": "Món thịt sốt rắc mè trắng được bày trên đĩa cùng xà lách, lát táo và hoa trang trí.",
+    "detailed_caption_vi": "Góc nhìn từ trên xuống cho thấy đĩa thức ăn gồm thịt sốt đậm màu rắc mè trắng và ớt sợi. Bên cạnh là những lát táo thái mỏng cùng rau xà lách tươi được trang trí thêm các bông hoa nhỏ nhiều màu sắc.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.10400000000000001,
+          0.268,
+          0.616,
+          0.9640000000000001
+        ],
+        "description": "glazed meat pieces topped with sesame seeds and chili",
+        "description_vi": "thịt sốt rắc hạt mè và ớt sợi",
+        "attributes": [
+          "glazed",
+          "brown",
+          "sesame"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.074,
+          0.0,
+          0.775,
+          1.0
+        ],
+        "description": "large round beige serving plate",
+        "description_vi": "đĩa lớn hình tròn màu be",
+        "attributes": [
+          "beige",
+          "ceramic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "salad_0",
+        "label": "salad",
+        "bbox": [
+          0.236,
+          0.0,
+          0.768,
+          0.599
+        ],
+        "description": "green lettuce garnish with yellow and purple flowers and apple slices",
+        "description_vi": "xà lách xanh trang trí hoa vàng tím và lát táo",
+        "attributes": [
+          "green",
+          "floral"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0132",
+    "visual_source_frame_id": "L26_V101_f0131",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A plated dish of glazed meat sprinkled with sesame seeds, served with lettuce, apple slices, and edible flowers.",
+    "detailed_caption": "An overhead view shows a large ceramic plate containing dark glazed meat topped with white sesame seeds and red chili strips. Next to the meat are crisp apple slices and a garnish of green lettuce decorated with colorful edible flowers.",
+    "caption_vi": "Món thịt sốt rắc mè trắng được bày trên đĩa cùng xà lách, lát táo và hoa trang trí.",
+    "detailed_caption_vi": "Góc nhìn từ trên xuống cho thấy đĩa thức ăn gồm thịt sốt đậm màu rắc mè trắng và ớt sợi. Bên cạnh là những lát táo thái mỏng cùng rau xà lách tươi được trang trí thêm các bông hoa nhỏ nhiều màu sắc.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.10400000000000001,
+          0.268,
+          0.616,
+          0.9640000000000001
+        ],
+        "description": "glazed meat pieces topped with sesame seeds and chili",
+        "description_vi": "thịt sốt rắc hạt mè và ớt sợi",
+        "attributes": [
+          "glazed",
+          "brown",
+          "sesame"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.074,
+          0.0,
+          0.775,
+          1.0
+        ],
+        "description": "large round beige serving plate",
+        "description_vi": "đĩa lớn hình tròn màu be",
+        "attributes": [
+          "beige",
+          "ceramic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "salad_0",
+        "label": "salad",
+        "bbox": [
+          0.236,
+          0.0,
+          0.768,
+          0.599
+        ],
+        "description": "green lettuce garnish with yellow and purple flowers and apple slices",
+        "description_vi": "xà lách xanh trang trí hoa vàng tím và lát táo",
+        "attributes": [
+          "green",
+          "floral"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0133",
+    "visual_source_frame_id": "L26_V101_f0133",
+    "ocr_source_frame_id": "L26_V101_f0133",
+    "quality_flags": [],
+    "caption": "Two male chefs in a brightly lit kitchen stand behind a counter with a finished dish.",
+    "detailed_caption": "A medium shot shows two male chefs standing side by side in a modern kitchen. The chef on the left wears a white chef's jacket with red trim, while the chef on the right wears a plaid shirt and a white apron. On the counter in front of them is a finished plated dish and a pan on an induction cooktop.",
+    "caption_vi": "Hai nam đầu bếp trong gian bếp sáng sủa đứng phía sau quầy có bày món ăn hoàn thành.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai nam đầu bếp đứng cạnh nhau trong phòng bếp hiện đại. Đầu bếp bên trái mặc áo khoác trắng viền đỏ, còn đầu bếp bên phải mặc áo sơ mi kẻ caro với tạp dề trắng. Trên bàn phía trước có một đĩa thức ăn và bếp từ.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO Friendly",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.254,
+          0.135,
+          0.504,
+          0.8470000000000001
+        ],
+        "description": "man on the left wearing white chef jacket with red piping",
+        "description_vi": "nam đầu bếp bên trái mặc áo trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red",
+          "jacket"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.612,
+          0.143,
+          0.851,
+          0.845
+        ],
+        "description": "man on the right wearing plaid shirt and white apron",
+        "description_vi": "nam đầu bếp bên phải mặc áo sơ mi kẻ caro và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "shirt",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.0,
+          0.723,
+          0.313,
+          0.9329999999999999
+        ],
+        "description": "black induction cooktop with orange pan",
+        "description_vi": "bếp từ đen có đặt chảo màu cam",
+        "attributes": [
+          "black",
+          "induction"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "refrigerator_0",
+        "label": "refrigerator",
+        "bbox": [
+          0.873,
+          0.125,
+          1.0,
+          1.0
+        ],
+        "description": "silver double-door refrigerator",
+        "description_vi": "tủ lạnh hai cửa màu bạc",
+        "attributes": [
+          "silver",
+          "metallic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0134",
+    "visual_source_frame_id": "L26_V101_f0133",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two male chefs in a brightly lit kitchen stand behind a counter with a finished dish.",
+    "detailed_caption": "A medium shot shows two male chefs standing side by side in a modern kitchen. The chef on the left wears a white chef's jacket with red trim, while the chef on the right wears a plaid shirt and a white apron. On the counter in front of them is a finished plated dish and a pan on an induction cooktop.",
+    "caption_vi": "Hai nam đầu bếp trong gian bếp sáng sủa đứng phía sau quầy có bày món ăn hoàn thành.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai nam đầu bếp đứng cạnh nhau trong phòng bếp hiện đại. Đầu bếp bên trái mặc áo khoác trắng viền đỏ, còn đầu bếp bên phải mặc áo sơ mi kẻ caro với tạp dề trắng. Trên bàn phía trước có một đĩa thức ăn và bếp từ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.254,
+          0.135,
+          0.504,
+          0.8470000000000001
+        ],
+        "description": "man on the left wearing white chef jacket with red piping",
+        "description_vi": "nam đầu bếp bên trái mặc áo trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red",
+          "jacket"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.612,
+          0.143,
+          0.851,
+          0.845
+        ],
+        "description": "man on the right wearing plaid shirt and white apron",
+        "description_vi": "nam đầu bếp bên phải mặc áo sơ mi kẻ caro và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "shirt",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.0,
+          0.723,
+          0.313,
+          0.9329999999999999
+        ],
+        "description": "black induction cooktop with orange pan",
+        "description_vi": "bếp từ đen có đặt chảo màu cam",
+        "attributes": [
+          "black",
+          "induction"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "refrigerator_0",
+        "label": "refrigerator",
+        "bbox": [
+          0.873,
+          0.125,
+          1.0,
+          1.0
+        ],
+        "description": "silver double-door refrigerator",
+        "description_vi": "tủ lạnh hai cửa màu bạc",
+        "attributes": [
+          "silver",
+          "metallic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0135",
+    "visual_source_frame_id": "L26_V101_f0133",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two male chefs in a brightly lit kitchen stand behind a counter with a finished dish.",
+    "detailed_caption": "A medium shot shows two male chefs standing side by side in a modern kitchen. The chef on the left wears a white chef's jacket with red trim, while the chef on the right wears a plaid shirt and a white apron. On the counter in front of them is a finished plated dish and a pan on an induction cooktop.",
+    "caption_vi": "Hai nam đầu bếp trong gian bếp sáng sủa đứng phía sau quầy có bày món ăn hoàn thành.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai nam đầu bếp đứng cạnh nhau trong phòng bếp hiện đại. Đầu bếp bên trái mặc áo khoác trắng viền đỏ, còn đầu bếp bên phải mặc áo sơ mi kẻ caro với tạp dề trắng. Trên bàn phía trước có một đĩa thức ăn và bếp từ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.254,
+          0.135,
+          0.504,
+          0.8470000000000001
+        ],
+        "description": "man on the left wearing white chef jacket with red piping",
+        "description_vi": "nam đầu bếp bên trái mặc áo trắng viền đỏ",
+        "attributes": [
+          "white",
+          "red",
+          "jacket"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.612,
+          0.143,
+          0.851,
+          0.845
+        ],
+        "description": "man on the right wearing plaid shirt and white apron",
+        "description_vi": "nam đầu bếp bên phải mặc áo sơ mi kẻ caro và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "shirt",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.0,
+          0.723,
+          0.313,
+          0.9329999999999999
+        ],
+        "description": "black induction cooktop with orange pan",
+        "description_vi": "bếp từ đen có đặt chảo màu cam",
+        "attributes": [
+          "black",
+          "induction"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "refrigerator_0",
+        "label": "refrigerator",
+        "bbox": [
+          0.873,
+          0.125,
+          1.0,
+          1.0
+        ],
+        "description": "silver double-door refrigerator",
+        "description_vi": "tủ lạnh hai cửa màu bạc",
+        "attributes": [
+          "silver",
+          "metallic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0136",
+    "visual_source_frame_id": "L26_V101_f0136",
+    "ocr_source_frame_id": "L26_V101_f0136",
+    "quality_flags": [],
+    "caption": "A male chef wearing a plaid shirt and white apron speaks in a kitchen setting.",
+    "detailed_caption": "A medium close-up shot focuses on a male chef with dark hair, wearing a red plaid shirt and a white apron with a red logo. He is gesturing with his hand while speaking, standing in front of a stainless steel refrigerator.",
+    "caption_vi": "Nam đầu bếp mặc áo sơ mi kẻ caro và tạp dề trắng đang nói chuyện trong phòng bếp.",
+    "detailed_caption_vi": "Cận cảnh nam đầu bếp tóc tối màu, mặc áo sơ mi kẻ caro đỏ và tạp dề trắng có in logo đỏ. Anh đang giơ tay diễn đạt khi nói chuyện, bối cảnh phía sau là tủ lạnh inox.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.181,
+          0.11,
+          0.693,
+          1.0
+        ],
+        "description": "man wearing red plaid shirt and white apron",
+        "description_vi": "nam đầu bếp mặc áo sơ mi kẻ caro đỏ và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "shirt",
+          "apron",
+          "red"
+        ],
+        "action": "speaking and gesturing"
+      },
+      {
+        "object_id": "refrigerator_0",
+        "label": "refrigerator",
+        "bbox": [
+          0.5599999999999999,
+          0.041999999999999996,
+          1.0,
+          1.0
+        ],
+        "description": "stainless steel refrigerator with vertical handles",
+        "description_vi": "tủ lạnh bằng thép không gỉ có tay cầm dọc",
+        "attributes": [
+          "silver",
+          "metallic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "overlapping",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "overlapping",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0137",
+    "visual_source_frame_id": "L26_V101_f0136",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A male chef wearing a plaid shirt and white apron speaks in a kitchen setting.",
+    "detailed_caption": "A medium close-up shot focuses on a male chef with dark hair, wearing a red plaid shirt and a white apron with a red logo. He is gesturing with his hand while speaking, standing in front of a stainless steel refrigerator.",
+    "caption_vi": "Nam đầu bếp mặc áo sơ mi kẻ caro và tạp dề trắng đang nói chuyện trong phòng bếp.",
+    "detailed_caption_vi": "Cận cảnh nam đầu bếp tóc tối màu, mặc áo sơ mi kẻ caro đỏ và tạp dề trắng có in logo đỏ. Anh đang giơ tay diễn đạt khi nói chuyện, bối cảnh phía sau là tủ lạnh inox.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.181,
+          0.11,
+          0.693,
+          1.0
+        ],
+        "description": "man wearing red plaid shirt and white apron",
+        "description_vi": "nam đầu bếp mặc áo sơ mi kẻ caro đỏ và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "shirt",
+          "apron",
+          "red"
+        ],
+        "action": "speaking and gesturing"
+      },
+      {
+        "object_id": "refrigerator_0",
+        "label": "refrigerator",
+        "bbox": [
+          0.5599999999999999,
+          0.041999999999999996,
+          1.0,
+          1.0
+        ],
+        "description": "stainless steel refrigerator with vertical handles",
+        "description_vi": "tủ lạnh bằng thép không gỉ có tay cầm dọc",
+        "attributes": [
+          "silver",
+          "metallic"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "overlapping",
+        "object_id": "refrigerator_0"
+      },
+      {
+        "subject_id": "refrigerator_0",
+        "predicate": "overlapping",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0138",
+    "visual_source_frame_id": "L26_V101_f0138",
+    "ocr_source_frame_id": "L26_V101_f0138",
+    "quality_flags": [],
+    "caption": "Two male chefs stand in a kitchen with a finished dish on the counter.",
+    "detailed_caption": "A medium shot captures two male chefs in a studio kitchen. The chef on the left wears a white chef uniform with red piping, and the chef on the right wears a red plaid shirt and a white apron, pointing toward a small dish on the counter.",
+    "caption_vi": "Hai nam đầu bếp đứng trong phòng bếp với đĩa thức ăn hoàn thành trên quầy.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai nam đầu bếp trong gian bếp. Đầu bếp bên trái mặc đồng phục trắng viền đỏ, đầu bếp bên phải mặc áo kẻ caro đỏ cùng tạp dề trắng đang chỉ tay về phía đĩa thức ăn trên bàn.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.259,
+          0.165,
+          0.508,
+          0.8470000000000001
+        ],
+        "description": "man on the left in white chef uniform",
+        "description_vi": "nam đầu bếp bên trái mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.55,
+          0.17,
+          0.8140000000000001,
+          0.821
+        ],
+        "description": "man on the right in red plaid shirt and white apron pointing",
+        "description_vi": "nam đầu bếp bên phải mặc áo kẻ caro đỏ và tạp dề trắng đang chỉ tay",
+        "attributes": [
+          "plaid",
+          "apron",
+          "red"
+        ],
+        "action": "pointing"
+      },
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.0,
+          0.725,
+          0.313,
+          0.9329999999999999
+        ],
+        "description": "black induction cooktop with orange pan",
+        "description_vi": "bếp từ màu đen có chảo cam",
+        "attributes": [
+          "black",
+          "induction"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0139",
+    "visual_source_frame_id": "L26_V101_f0138",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two male chefs stand in a kitchen with a finished dish on the counter.",
+    "detailed_caption": "A medium shot captures two male chefs in a studio kitchen. The chef on the left wears a white chef uniform with red piping, and the chef on the right wears a red plaid shirt and a white apron, pointing toward a small dish on the counter.",
+    "caption_vi": "Hai nam đầu bếp đứng trong phòng bếp với đĩa thức ăn hoàn thành trên quầy.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai nam đầu bếp trong gian bếp. Đầu bếp bên trái mặc đồng phục trắng viền đỏ, đầu bếp bên phải mặc áo kẻ caro đỏ cùng tạp dề trắng đang chỉ tay về phía đĩa thức ăn trên bàn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.259,
+          0.165,
+          0.508,
+          0.8470000000000001
+        ],
+        "description": "man on the left in white chef uniform",
+        "description_vi": "nam đầu bếp bên trái mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.55,
+          0.17,
+          0.8140000000000001,
+          0.821
+        ],
+        "description": "man on the right in red plaid shirt and white apron pointing",
+        "description_vi": "nam đầu bếp bên phải mặc áo kẻ caro đỏ và tạp dề trắng đang chỉ tay",
+        "attributes": [
+          "plaid",
+          "apron",
+          "red"
+        ],
+        "action": "pointing"
+      },
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.0,
+          0.725,
+          0.313,
+          0.9329999999999999
+        ],
+        "description": "black induction cooktop with orange pan",
+        "description_vi": "bếp từ màu đen có chảo cam",
+        "attributes": [
+          "black",
+          "induction"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0140",
+    "visual_source_frame_id": "L26_V101_f0138",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two male chefs stand in a kitchen with a finished dish on the counter.",
+    "detailed_caption": "A medium shot captures two male chefs in a studio kitchen. The chef on the left wears a white chef uniform with red piping, and the chef on the right wears a red plaid shirt and a white apron, pointing toward a small dish on the counter.",
+    "caption_vi": "Hai nam đầu bếp đứng trong phòng bếp với đĩa thức ăn hoàn thành trên quầy.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai nam đầu bếp trong gian bếp. Đầu bếp bên trái mặc đồng phục trắng viền đỏ, đầu bếp bên phải mặc áo kẻ caro đỏ cùng tạp dề trắng đang chỉ tay về phía đĩa thức ăn trên bàn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.259,
+          0.165,
+          0.508,
+          0.8470000000000001
+        ],
+        "description": "man on the left in white chef uniform",
+        "description_vi": "nam đầu bếp bên trái mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.55,
+          0.17,
+          0.8140000000000001,
+          0.821
+        ],
+        "description": "man on the right in red plaid shirt and white apron pointing",
+        "description_vi": "nam đầu bếp bên phải mặc áo kẻ caro đỏ và tạp dề trắng đang chỉ tay",
+        "attributes": [
+          "plaid",
+          "apron",
+          "red"
+        ],
+        "action": "pointing"
+      },
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.0,
+          0.725,
+          0.313,
+          0.9329999999999999
+        ],
+        "description": "black induction cooktop with orange pan",
+        "description_vi": "bếp từ màu đen có chảo cam",
+        "attributes": [
+          "black",
+          "induction"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "cooktop_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0141",
+    "visual_source_frame_id": "L26_V101_f0141",
+    "ocr_source_frame_id": "L26_V101_f0141",
+    "quality_flags": [],
+    "caption": "A close-up view of glazed meat garnished with sesame seeds and chili strips, alongside apple slices and salad.",
+    "detailed_caption": "A macro shot focuses on a plate of brown glazed meat topped with white sesame seeds and thin red chili strips. In the background, thin apple slices and fresh green lettuce decorated with small colorful flowers are visible.",
+    "caption_vi": "Cận cảnh đĩa thịt sốt bóng rắc mè trắng và ớt sợi, bên cạnh là lát táo và salad.",
+    "detailed_caption_vi": "Góc chụp cận cảnh món thịt sốt màu nâu được rắc hạt mè trắng và những sợi ớt đỏ lên trên. Phía bên trái và phía sau là các lát táo thái mỏng cùng xà lách tươi trang trí hoa nhiều màu.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "apple_0",
+        "label": "apple",
+        "bbox": [
+          0.047,
+          0.515,
+          0.45499999999999996,
+          0.844
+        ],
+        "description": "thin apple slices on the side of the plate",
+        "description_vi": "lát táo thái mỏng ở cạnh đĩa",
+        "attributes": [
+          "yellow",
+          "sliced"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.354,
+          0.33499999999999996,
+          0.998,
+          0.992
+        ],
+        "description": "glazed meat with sesame and chili on banana leaf",
+        "description_vi": "thịt sốt bóng có mè và ớt trên lá chuối",
+        "attributes": [
+          "glazed",
+          "brown",
+          "sesame"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "salad_0",
+        "label": "salad",
+        "bbox": [
+          0.119,
+          0.0,
+          0.8310000000000001,
+          0.599
+        ],
+        "description": "green lettuce garnish with edible flowers",
+        "description_vi": "xà lách xanh trang trí hoa ăn được",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "apple_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "apple_0"
+      },
+      {
+        "subject_id": "apple_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "apple_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0142",
+    "visual_source_frame_id": "L26_V101_f0141",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A close-up view of glazed meat garnished with sesame seeds and chili strips, alongside apple slices and salad.",
+    "detailed_caption": "A macro shot focuses on a plate of brown glazed meat topped with white sesame seeds and thin red chili strips. In the background, thin apple slices and fresh green lettuce decorated with small colorful flowers are visible.",
+    "caption_vi": "Cận cảnh đĩa thịt sốt bóng rắc mè trắng và ớt sợi, bên cạnh là lát táo và salad.",
+    "detailed_caption_vi": "Góc chụp cận cảnh món thịt sốt màu nâu được rắc hạt mè trắng và những sợi ớt đỏ lên trên. Phía bên trái và phía sau là các lát táo thái mỏng cùng xà lách tươi trang trí hoa nhiều màu.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "apple_0",
+        "label": "apple",
+        "bbox": [
+          0.047,
+          0.515,
+          0.45499999999999996,
+          0.844
+        ],
+        "description": "thin apple slices on the side of the plate",
+        "description_vi": "lát táo thái mỏng ở cạnh đĩa",
+        "attributes": [
+          "yellow",
+          "sliced"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.354,
+          0.33499999999999996,
+          0.998,
+          0.992
+        ],
+        "description": "glazed meat with sesame and chili on banana leaf",
+        "description_vi": "thịt sốt bóng có mè và ớt trên lá chuối",
+        "attributes": [
+          "glazed",
+          "brown",
+          "sesame"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "salad_0",
+        "label": "salad",
+        "bbox": [
+          0.119,
+          0.0,
+          0.8310000000000001,
+          0.599
+        ],
+        "description": "green lettuce garnish with edible flowers",
+        "description_vi": "xà lách xanh trang trí hoa ăn được",
+        "attributes": [
+          "green",
+          "fresh"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "apple_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "apple_0"
+      },
+      {
+        "subject_id": "apple_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "apple_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "salad_0"
+      },
+      {
+        "subject_id": "salad_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0143",
+    "visual_source_frame_id": "L26_V101_f0143",
+    "ocr_source_frame_id": "L26_V101_f0143",
+    "quality_flags": [],
+    "caption": "A macro view of glazed meat topped with sesame seeds and chili slices.",
+    "detailed_caption": "An extreme close-up shot highlights pieces of cooked brown meat coated in a glossy sauce, sprinkled with white sesame seeds and garnished with thin red chili strips. Fresh green lettuce and colorful edible flowers appear blurred in the background.",
+    "caption_vi": "Cận cảnh cực gần món thịt sốt bóng rắc mè trắng và ớt.",
+    "detailed_caption_vi": "Góc chụp siêu cận cảnh tập trung vào các miếng thịt nâu được phủ sốt bóng, rắc hạt mè trắng và trang trí bằng ớt cắt sợi. Phía sau mờ ảo là rau xanh và hoa trang trí.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.0,
+          0.48400000000000004,
+          1.0,
+          1.0
+        ],
+        "description": "glossy glazed meat pieces with sesame seeds and chili",
+        "description_vi": "miếng thịt sốt bóng có mè trắng và ớt",
+        "attributes": [
+          "glazed",
+          "brown",
+          "glossy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0144",
+    "visual_source_frame_id": "L26_V101_f0144",
+    "ocr_source_frame_id": "L26_V101_f0144",
+    "quality_flags": [],
+    "caption": "An extreme close-up of glazed meat garnished with sesame seeds and chili strips.",
+    "detailed_caption": "A macro shot shows glossy brown meat pieces covered in a sticky sauce, heavily sprinkled with white sesame seeds and fine red chili slivers. The background shows softly out-of-focus green herbs and flower petals.",
+    "caption_vi": "Cận cảnh cực gần thịt sốt bóng được rắc hạt mè và ớt sợi.",
+    "detailed_caption_vi": "Khung hình macro hiển thị các miếng thịt nâu bóng phủ nước sốt, rắc đầy hạt mè trắng và ớt đỏ cắt sợi mảnh. Hậu cảnh là rau thơm và hoa mờ ảo.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.0,
+          0.29000000000000004,
+          1.0,
+          1.0
+        ],
+        "description": "brown glazed meat with white sesame seeds and red chili",
+        "description_vi": "thịt sốt nâu bóng với mè trắng và ớt đỏ",
+        "attributes": [
+          "glazed",
+          "brown",
+          "glossy"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0145",
+    "visual_source_frame_id": "L26_V101_f0145",
+    "ocr_source_frame_id": "L26_V101_f0145",
+    "quality_flags": [],
+    "caption": "A pair of chopsticks held over a plate of glazed meat and salad on a table.",
+    "detailed_caption": "An elevated shot shows a pair of wooden chopsticks held by a hand, reaching toward a large plate of glazed meat served with lettuce and apple slices. A small bowl of dipping sauce and a fresh apple are placed on the light-colored marble table.",
+    "caption_vi": "Đôi đũa đang gắp trên đĩa thịt sốt và salad đặt trên bàn.",
+    "detailed_caption_vi": "Góc nhìn từ trên cao cho thấy đôi đũa gỗ trên tay người đang chuẩn bị gắp thức ăn từ đĩa thịt sốt lớn có kèm xà lách và táo. Trên mặt bàn đá còn có một chén nước chấm nhỏ và quả táo tươi.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "apple_0",
+        "label": "apple",
+        "bbox": [
+          0.064,
+          0.039,
+          0.20600000000000002,
+          0.28099999999999997
+        ],
+        "description": "whole red apple on a cutting board",
+        "description_vi": "quả táo đỏ nguyên vẹn trên thớt",
+        "attributes": [
+          "red",
+          "whole"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chopsticks_0",
+        "label": "chopsticks",
+        "bbox": [
+          0.5589999999999999,
+          0.324,
+          0.9970000000000001,
+          0.599
+        ],
+        "description": "wooden chopsticks held by a hand",
+        "description_vi": "đôi đũa gỗ trên tay người",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": "reaching toward food"
+      },
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.368,
+          0.319,
+          0.667,
+          0.8220000000000001
+        ],
+        "description": "glazed meat pieces on banana leaf",
+        "description_vi": "miếng thịt sốt trên lá chuối",
+        "attributes": [
+          "glazed",
+          "brown"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0146",
+    "visual_source_frame_id": "L26_V101_f0145",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A pair of chopsticks held over a plate of glazed meat and salad on a table.",
+    "detailed_caption": "An elevated shot shows a pair of wooden chopsticks held by a hand, reaching toward a large plate of glazed meat served with lettuce and apple slices. A small bowl of dipping sauce and a fresh apple are placed on the light-colored marble table.",
+    "caption_vi": "Đôi đũa đang gắp trên đĩa thịt sốt và salad đặt trên bàn.",
+    "detailed_caption_vi": "Góc nhìn từ trên cao cho thấy đôi đũa gỗ trên tay người đang chuẩn bị gắp thức ăn từ đĩa thịt sốt lớn có kèm xà lách và táo. Trên mặt bàn đá còn có một chén nước chấm nhỏ và quả táo tươi.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "apple_0",
+        "label": "apple",
+        "bbox": [
+          0.064,
+          0.039,
+          0.20600000000000002,
+          0.28099999999999997
+        ],
+        "description": "whole red apple on a cutting board",
+        "description_vi": "quả táo đỏ nguyên vẹn trên thớt",
+        "attributes": [
+          "red",
+          "whole"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "chopsticks_0",
+        "label": "chopsticks",
+        "bbox": [
+          0.5589999999999999,
+          0.324,
+          0.9970000000000001,
+          0.599
+        ],
+        "description": "wooden chopsticks held by a hand",
+        "description_vi": "đôi đũa gỗ trên tay người",
+        "attributes": [
+          "wooden",
+          "brown"
+        ],
+        "action": "reaching toward food"
+      },
+      {
+        "object_id": "meat_0",
+        "label": "meat",
+        "bbox": [
+          0.368,
+          0.319,
+          0.667,
+          0.8220000000000001
+        ],
+        "description": "glazed meat pieces on banana leaf",
+        "description_vi": "miếng thịt sốt trên lá chuối",
+        "attributes": [
+          "glazed",
+          "brown"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chopsticks_0",
+        "predicate": "overlapping",
+        "object_id": "meat_0"
+      },
+      {
+        "subject_id": "meat_0",
+        "predicate": "overlapping",
+        "object_id": "chopsticks_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0147",
+    "visual_source_frame_id": "L26_V101_f0147",
+    "ocr_source_frame_id": "L26_V101_f0147",
+    "quality_flags": [],
+    "caption": "Two male chefs stand in a kitchen, with one gesturing while speaking.",
+    "detailed_caption": "A medium shot displays two male chefs in a bright studio kitchen. The chef on the left wears a white uniform with red accents, and the chef on the right wears a plaid shirt and white apron while gesturing with both hands.",
+    "caption_vi": "Hai nam đầu bếp đứng trong phòng bếp, một người đang ra hiệu bằng tay khi nói chuyện.",
+    "detailed_caption_vi": "Ảnh trung cảnh hai nam đầu bếp trong gian bếp sáng sủa. Đầu bếp bên trái mặc đồng phục trắng viền đỏ đứng yên, trong khi đầu bếp bên phải mặc áo sơ mi kẻ caro cùng tạp dề trắng đang cử động hai tay diễn tả.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.184,
+          0.104,
+          0.484,
+          1.0
+        ],
+        "description": "man on the left wearing white chef uniform",
+        "description_vi": "nam đầu bếp bên trái mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.537,
+          0.191,
+          0.7889999999999999,
+          1.0
+        ],
+        "description": "man on the right wearing plaid shirt and white apron gesturing",
+        "description_vi": "nam đầu bếp bên phải mặc áo kẻ caro và tạp dề trắng đang ra hiệu",
+        "attributes": [
+          "plaid",
+          "apron",
+          "red"
+        ],
+        "action": "gesturing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0148",
+    "visual_source_frame_id": "L26_V101_f0148",
+    "ocr_source_frame_id": "L26_V101_f0148",
+    "quality_flags": [],
+    "caption": "Two male chefs stand behind a kitchen counter with an induction cooktop.",
+    "detailed_caption": "A medium shot shows two male chefs posing in a kitchen. The chef on the left is dressed in a white uniform, while the chef on the right wears a red plaid shirt and a white apron. A black induction cooktop is set into the white counter in front of them.",
+    "caption_vi": "Hai nam đầu bếp đứng sau quầy bếp có bếp từ.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại hai nam đầu bếp trong gian bếp. Đầu bếp bên trái mặc đồ đầu bếp trắng, đầu bếp bên phải mặc áo kẻ caro đỏ với tạp dề trắng. Phía trước họ là bàn bếp màu trắng có lắp bếp từ màu đen.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO Ai-ngon",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.20800000000000002,
+          0.125,
+          0.43899999999999995,
+          0.8560000000000001
+        ],
+        "description": "man on the left in white chef uniform",
+        "description_vi": "nam đầu bếp bên trái mặc đồng phục trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.548,
+          0.161,
+          0.734,
+          0.821
+        ],
+        "description": "man on the right in plaid shirt and white apron",
+        "description_vi": "nam đầu bếp bên phải mặc áo sơ mi kẻ caro và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "cooktop_0",
+        "label": "cooktop",
+        "bbox": [
+          0.484,
+          0.8029999999999999,
+          0.861,
+          0.9510000000000001
+        ],
+        "description": "black dual-burner induction cooktop",
+        "description_vi": "bếp từ đôi màu đen",
+        "attributes": [
+          "black",
+          "induction"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "cooktop_0"
+      },
+      {
+        "subject_id": "cooktop_0",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0149",
+    "visual_source_frame_id": "L26_V101_f0149",
+    "ocr_source_frame_id": "L26_V101_f0149",
+    "quality_flags": [],
+    "caption": "Two male chefs stand in a kitchen with a product packet on the counter.",
+    "detailed_caption": "A medium shot captures two male chefs standing in a modern kitchen. The chef on the left wears a white uniform, and the chef on the right wears a red plaid shirt and a white apron. A product packet rests on the white counter near the cooktop.",
+    "caption_vi": "Hai nam đầu bếp đứng trong phòng bếp với gói sản phẩm đặt trên quầy.",
+    "detailed_caption_vi": "Ảnh chụp trung cảnh hai nam đầu bếp trong gian bếp hiện đại. Người bên trái mặc đồ trắng, người bên phải mặc áo kẻ caro đỏ và tạp dề trắng. Trên mặt bàn trắng cạnh bếp có đặt một gói sản phẩm.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO Aji-ngon",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.16,
+          0.132,
+          0.376,
+          0.7859999999999999
+        ],
+        "description": "man on the left in white chef jacket",
+        "description_vi": "nam đầu bếp bên trái mặc áo khoác trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.508,
+          0.135,
+          0.738,
+          0.793
+        ],
+        "description": "man on the right in plaid shirt and white apron",
+        "description_vi": "nam đầu bếp bên phải mặc áo kẻ caro và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "product_packet_0",
+        "label": "product packet",
+        "bbox": [
+          0.0,
+          0.7180000000000001,
+          0.059,
+          0.8989999999999999
+        ],
+        "description": "yellow and red product packaging on the counter",
+        "description_vi": "gói sản phẩm màu vàng đỏ trên quầy",
+        "attributes": [
+          "yellow",
+          "red",
+          "packet"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "product_packet_0",
+        "predicate": "left_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "right_of",
+        "object_id": "product_packet_0"
+      },
+      {
+        "subject_id": "product_packet_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "product_packet_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0150",
+    "visual_source_frame_id": "L26_V101_f0150",
+    "ocr_source_frame_id": "L26_V101_f0150",
+    "quality_flags": [],
+    "caption": "Two male chefs stand in a kitchen with a QR code graphic overlaid on the right.",
+    "detailed_caption": "A medium shot shows two male chefs presenting in a studio kitchen. A red and white graphic containing a QR code and website information is displayed on the right side of the screen.",
+    "caption_vi": "Hai nam đầu bếp đứng trong phòng bếp với bảng thông tin mã QR hiển thị ở góc phải.",
+    "detailed_caption_vi": "Ảnh trung cảnh ghi lại hai nam đầu bếp đang trình bày trong phòng thu bếp. Phía bên phải màn hình có chèn khung đồ họa màu đỏ trắng chứa mã QR và thông tin trang web.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO Món Ngon Mỗi Ngày monngonmoingay.com Món Ngon Mỗi Ngày",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.213,
+          0.13899999999999998,
+          0.38,
+          0.616
+        ],
+        "description": "man on the left in white chef jacket",
+        "description_vi": "nam đầu bếp bên trái mặc áo khoác trắng",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.46900000000000003,
+          0.14600000000000002,
+          0.619,
+          0.619
+        ],
+        "description": "man on the right in plaid shirt and white apron",
+        "description_vi": "nam đầu bếp bên phải mặc áo kẻ caro và tạp dề trắng",
+        "attributes": [
+          "plaid",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V101_f0151",
+    "visual_source_frame_id": "L26_V101_f0151",
+    "ocr_source_frame_id": "L26_V101_f0151",
+    "quality_flags": [],
+    "caption": "A recipe slide with text in Vietnamese listing ingredients against a white wooden background.",
+    "detailed_caption": "A recipe screen displays a red header with white Vietnamese text reading NGUYÊN LIỆU. Below the header, two columns list various ingredients and quantities such as pork cheek, minced shallot, minced garlic, apple juice, and condiments.",
+    "caption_vi": "Màn hình công thức nấu ăn hiển thị danh sách nguyên liệu bằng tiếng Việt trên nền gỗ trắng.",
+    "detailed_caption_vi": "Slide công thức có tiêu đề màu đỏ với chữ NGUYÊN LIỆU màu trắng ở giữa. Phía dưới chia thành hai cột liệt kê các nguyên liệu và định lượng như thịt má heo, hành tím băm, tỏi băm, nước táo hộp cùng các loại gia vị.",
+    "ocr_text": "NGUYÊN LIỆU • THỊT MÁ HEO 500g • HÀNH TÍM BĂM 1M • TỎI BĂM 1/2M • NƯỚC TÁO HỘP 200ml • TƯƠNG CÀ 4M • TƯƠNG ỚT 2M • MÈ TRẮNG RANG 1M • BỘT ỚT HÀN QUỐC 1M • SỮA ĐẶC CÓ ĐƯỜNG 1M • DẦU HÀO, BỘT NGŨ VỊ HƯƠNG • BAKING SODA, RƯỢU TRẮNG • BỘT NGỌT • HẠT NÊM HEO",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "recipe_card_0",
+        "label": "recipe card",
+        "bbox": [
+          0.298,
+          0.14400000000000002,
+          0.701,
+          0.28099999999999997
+        ],
+        "description": "recipe screen with ingredients list in Vietnamese",
+        "description_vi": "bảng công thức liệt kê nguyên liệu bằng tiếng Việt",
+        "attributes": [
+          "text",
+          "white",
+          "red"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0152",
+    "visual_source_frame_id": "L26_V101_f0151",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A recipe slide with text in Vietnamese listing ingredients against a white wooden background.",
+    "detailed_caption": "A recipe screen displays a red header with white Vietnamese text reading NGUYÊN LIỆU. Below the header, two columns list various ingredients and quantities such as pork cheek, minced shallot, minced garlic, apple juice, and condiments.",
+    "caption_vi": "Màn hình công thức nấu ăn hiển thị danh sách nguyên liệu bằng tiếng Việt trên nền gỗ trắng.",
+    "detailed_caption_vi": "Slide công thức có tiêu đề màu đỏ với chữ NGUYÊN LIỆU màu trắng ở giữa. Phía dưới chia thành hai cột liệt kê các nguyên liệu và định lượng như thịt má heo, hành tím băm, tỏi băm, nước táo hộp cùng các loại gia vị.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "recipe_card_0",
+        "label": "recipe card",
+        "bbox": [
+          0.298,
+          0.14400000000000002,
+          0.701,
+          0.28099999999999997
+        ],
+        "description": "recipe screen with ingredients list in Vietnamese",
+        "description_vi": "bảng công thức liệt kê nguyên liệu bằng tiếng Việt",
+        "attributes": [
+          "text",
+          "white",
+          "red"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0153",
+    "visual_source_frame_id": "L26_V101_f0151",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A recipe slide with text in Vietnamese listing ingredients against a white wooden background.",
+    "detailed_caption": "A recipe screen displays a red header with white Vietnamese text reading NGUYÊN LIỆU. Below the header, two columns list various ingredients and quantities such as pork cheek, minced shallot, minced garlic, apple juice, and condiments.",
+    "caption_vi": "Màn hình công thức nấu ăn hiển thị danh sách nguyên liệu bằng tiếng Việt trên nền gỗ trắng.",
+    "detailed_caption_vi": "Slide công thức có tiêu đề màu đỏ với chữ NGUYÊN LIỆU màu trắng ở giữa. Phía dưới chia thành hai cột liệt kê các nguyên liệu và định lượng như thịt má heo, hành tím băm, tỏi băm, nước táo hộp cùng các loại gia vị.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "recipe_card_0",
+        "label": "recipe card",
+        "bbox": [
+          0.298,
+          0.14400000000000002,
+          0.701,
+          0.28099999999999997
+        ],
+        "description": "recipe screen with ingredients list in Vietnamese",
+        "description_vi": "bảng công thức liệt kê nguyên liệu bằng tiếng Việt",
+        "attributes": [
+          "text",
+          "white",
+          "red"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V101_f0154",
+    "visual_source_frame_id": "L26_V101_f0151",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A recipe slide with text in Vietnamese listing ingredients against a white wooden background.",
+    "detailed_caption": "A recipe screen displays a red header with white Vietnamese text reading NGUYÊN LIỆU. Below the header, two columns list various ingredients and quantities such as pork cheek, minced shallot, minced garlic, apple juice, and condiments.",
+    "caption_vi": "Màn hình công thức nấu ăn hiển thị danh sách nguyên liệu bằng tiếng Việt trên nền gỗ trắng.",
+    "detailed_caption_vi": "Slide công thức có tiêu đề màu đỏ với chữ NGUYÊN LIỆU màu trắng ở giữa. Phía dưới chia thành hai cột liệt kê các nguyên liệu và định lượng như thịt má heo, hành tím băm, tỏi băm, nước táo hộp cùng các loại gia vị.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "recipe_card_0",
+        "label": "recipe card",
+        "bbox": [
+          0.298,
+          0.14400000000000002,
+          0.701,
+          0.28099999999999997
+        ],
+        "description": "recipe screen with ingredients list in Vietnamese",
+        "description_vi": "bảng công thức liệt kê nguyên liệu bằng tiếng Việt",
+        "attributes": [
+          "text",
+          "white",
+          "red"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
   }
 ]

@@ -3796,6 +3796,2440 @@
     ]
   },
   {
+    "frame_id": "L26_V102_f0050",
+    "visual_source_frame_id": "L26_V102_f0050",
+    "ocr_source_frame_id": "L26_V102_f0050",
+    "quality_flags": [],
+    "caption": "A person holds a white bowl filled with cooked chickpeas in a kitchen.",
+    "detailed_caption": "A close-up shot shows a person's hands holding a white ceramic bowl filled with cooked chickpeas. The chickpeas are yellowish-brown and piled inside the bowl, which is held against a blurred kitchen background.",
+    "caption_vi": "Một người cầm một tô màu trắng chứa đầy đậu gà đã nấu chín trong gian bếp.",
+    "detailed_caption_vi": "Cận cảnh đôi tay của một người đang cầm một chiếc tô sứ màu trắng đựng đầy đậu gà đã luộc chín. Những hạt đậu gà có màu vàng nâu được chất đống bên trong tô, với khung cảnh nhà bếp mờ phía sau.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.236,
+          0.171,
+          0.745,
+          0.908
+        ],
+        "description": "a white ceramic bowl filled with cooked chickpeas",
+        "description_vi": "một chiếc tô sứ màu trắng đựng đầy đậu gà đã nấu chín",
+        "attributes": [
+          "white",
+          "ceramic",
+          "round"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "chickpeas_0",
+        "label": "chickpeas",
+        "bbox": [
+          0.275,
+          0.29000000000000004,
+          0.688,
+          0.624
+        ],
+        "description": "cooked yellow-brown chickpeas inside a bowl",
+        "description_vi": "đậu gà màu vàng nâu đã nấu chín bên trong tô",
+        "attributes": [
+          "yellow",
+          "brown",
+          "cooked"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.233,
+          0.528,
+          0.999,
+          1.0
+        ],
+        "description": "a person's hand holding the white bowl",
+        "description_vi": "bàn tay của một người đang giữ chiếc tô trắng",
+        "attributes": [],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "chickpeas_0"
+      },
+      {
+        "subject_id": "chickpeas_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "chickpeas_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "chickpeas_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0051",
+    "visual_source_frame_id": "L26_V102_f0051",
+    "ocr_source_frame_id": "L26_V102_f0051",
+    "quality_flags": [],
+    "caption": "A person holds a white bowl of cooked chickpeas in a kitchen.",
+    "detailed_caption": "A close-up shot features a person holding a white bowl containing cooked chickpeas. The round white bowl is held by hands, displaying the mound of yellowish-brown chickpeas inside.",
+    "caption_vi": "Một người cầm chiếc tô trắng đựng đậu gà nấu chín trong nhà bếp.",
+    "detailed_caption_vi": "Cận cảnh một người đang cầm chiếc tô trắng chứa đầy đậu gà đã nấu. Tô sứ màu tròn được giữ trên tay, bên trong là lớp đậu gà màu vàng nâu.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.181,
+          0.10700000000000001,
+          0.775,
+          0.9930000000000001
+        ],
+        "description": "a white bowl filled with cooked chickpeas",
+        "description_vi": "một chiếc tô màu trắng đựng đầy đậu gà đã nấu",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "chickpeas_0",
+        "label": "chickpeas",
+        "bbox": [
+          0.207,
+          0.237,
+          0.721,
+          0.73
+        ],
+        "description": "cooked chickpeas in a white bowl",
+        "description_vi": "đậu gà đã nấu trong tô trắng",
+        "attributes": [
+          "cooked",
+          "yellow"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "hand_0",
+        "label": "hand",
+        "bbox": [
+          0.288,
+          0.552,
+          1.0,
+          1.0
+        ],
+        "description": "a person's hand holding the bowl",
+        "description_vi": "bàn tay của một người đang cầm chiếc tô",
+        "attributes": [],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "chickpeas_0"
+      },
+      {
+        "subject_id": "chickpeas_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "chickpeas_0",
+        "predicate": "overlapping",
+        "object_id": "hand_0"
+      },
+      {
+        "subject_id": "hand_0",
+        "predicate": "overlapping",
+        "object_id": "chickpeas_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0052",
+    "visual_source_frame_id": "L26_V102_f0052",
+    "ocr_source_frame_id": "L26_V102_f0052",
+    "quality_flags": [],
+    "caption": "A female chef in a white uniform stands in a kitchen with a red logo sign on the wall behind her.",
+    "detailed_caption": "A medium shot shows a woman wearing a white chef uniform with red piping standing in a kitchen. Behind her is a light wooden wall with a rectangular red sign featuring white text and a logo. The kitchen features white tiled walls at the bottom.",
+    "caption_vi": "Một nữ đầu bếp mặc đồng phục màu trắng đứng trong nhà bếp với biển hiệu logo màu đỏ trên tường phía sau.",
+    "detailed_caption_vi": "Cảnh trung cho thấy một phụ nữ mặc đồng phục đầu bếp màu trắng viền đỏ đang đứng trong không gian nhà bếp. Phía sau cô là bức tường gỗ sáng màu có treo một biển hiệu hình chữ nhật màu đỏ với chữ trắng và logo.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.33799999999999997,
+          0.263,
+          0.778,
+          1.0
+        ],
+        "description": "a woman wearing a white chef uniform with red piping",
+        "description_vi": "một người phụ nữ mặc đồng phục đầu bếp trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform",
+          "red trim"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.687,
+          0.031,
+          0.9189999999999999,
+          0.594
+        ],
+        "description": "a red rectangular sign with white text and logo on the wall",
+        "description_vi": "một biển hiệu chữ nhật màu đỏ có chữ trắng và logo trên tường",
+        "attributes": [
+          "red",
+          "rectangular",
+          "logo"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "overlapping",
+        "object_id": "sign_0"
+      },
+      {
+        "subject_id": "sign_0",
+        "predicate": "overlapping",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0053",
+    "visual_source_frame_id": "L26_V102_f0053",
+    "ocr_source_frame_id": "L26_V102_f0053",
+    "quality_flags": [],
+    "caption": "A person uses a spoon to pour chickpeas from a white bowl into a clear blender cup.",
+    "detailed_caption": "A close-up shot shows a person's hands holding a white bowl and a spoon, pouring cooked chickpeas into a tall, clear blender cup. A red graphic overlay with white text is visible at the bottom left corner.",
+    "caption_vi": "Một người dùng muỗng đổ đậu gà từ tô trắng vào cối xay sinh tố trong suốt.",
+    "detailed_caption_vi": "Cận cảnh đôi tay của một người đang cầm chiếc tô trắng và một chiếc muỗng, đổ đậu gà đã nấu vào một chiếc cối xay trong suốt cao. Có một khung đồ họa màu đỏ với chữ trắng ở góc dưới bên trái.",
+    "ocr_text": "HTV Online MẸO ĐẬU GÀ CÓ NHIỀU CHẤT XƠ, CHẤT ĐẠM THỰC VẬT RẤT TỐT CHO SỨC KHỎE BRAUN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_cup_0",
+        "label": "blender cup",
+        "bbox": [
+          0.354,
+          0.568,
+          0.706,
+          1.0
+        ],
+        "description": "a tall clear plastic blender cup on a counter",
+        "description_vi": "một chiếc cối xay sinh tố nhựa trong suốt cao đặt trên mặt bàn",
+        "attributes": [
+          "transparent",
+          "tall",
+          "plastic"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.522,
+          0.0,
+          0.889,
+          0.652
+        ],
+        "description": "a white bowl held in a person's hands",
+        "description_vi": "một chiếc tô trắng được cầm trên tay",
+        "attributes": [
+          "white"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.45,
+          0.041999999999999996,
+          0.738,
+          0.489
+        ],
+        "description": "a metal spoon being used to transfer chickpeas",
+        "description_vi": "một chiếc muỗng bằng kim loại đang được dùng để múc đậu gà",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "spoon_0",
+        "predicate": "above",
+        "object_id": "blender_cup_0"
+      },
+      {
+        "subject_id": "blender_cup_0",
+        "predicate": "below",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0054",
+    "visual_source_frame_id": "L26_V102_f0054",
+    "ocr_source_frame_id": "L26_V102_f0054",
+    "quality_flags": [],
+    "caption": "A person pours chickpeas from a white bowl into a clear blender container using a spoon.",
+    "detailed_caption": "A close-up shot shows a person pouring cooked chickpeas from a white ceramic bowl into a tall, clear plastic blender container with the help of a metal spoon. A red informational graphic is displayed in the lower-left area.",
+    "caption_vi": "Một người đang đổ đậu gà từ tô trắng vào cối xay trong suốt bằng muỗng.",
+    "detailed_caption_vi": "Cận cảnh một người đang dùng muỗng đổ đậu gà đã luộc từ tô sứ trắng vào cối xay nhựa trong suốt. Một hộp thoại thông tin màu đỏ xuất hiện ở góc dưới bên trái.",
+    "ocr_text": "HTV Online MẸO ĐẬU GÀ CÓ NHIỀU CHẤT XƠ, CHẤT ĐẠM THỰC VẬT RẤT TỐT CHO SỨC KHỎE BRAUN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.351,
+          0.551,
+          0.7,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container",
+        "description_vi": "một chiếc cối xay nhựa trong suốt cao",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.5389999999999999,
+          0.0,
+          0.868,
+          0.651
+        ],
+        "description": "a white bowl tilted by a person's hands",
+        "description_vi": "một chiếc tô màu trắng được nghiêng bởi tay người",
+        "attributes": [
+          "white"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.354,
+          0.11,
+          0.667,
+          0.599
+        ],
+        "description": "a metal spoon inside the bowl",
+        "description_vi": "một chiếc muỗng kim loại bên trong tô",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0055",
+    "visual_source_frame_id": "L26_V102_f0055",
+    "ocr_source_frame_id": "L26_V102_f0055",
+    "quality_flags": [],
+    "caption": "A person empties a white bowl of chickpeas into a tall blender container on a white counter.",
+    "detailed_caption": "A close-up shot shows a person's hands tilting a white bowl to empty the remaining chickpeas into a tall, clear blender container. On the white countertop in the background, a small bowl of broth and a glass pitcher of oil are visible.",
+    "caption_vi": "Một người dốc sạch tô đậu gà trắng vào cối xay trên mặt bàn màu trắng.",
+    "detailed_caption_vi": "Cận cảnh đôi tay của một người đang nghiêng chiếc tô trắng để đổ hết số đậu gà còn lại vào cối xay nhựa trong suốt. Trên mặt bàn trắng phía sau có một tô nước dùng nhỏ và một bình thủy tinh đựng dầu.",
+    "ocr_text": "HTV Online MẸO ĐẬU GÀ CÓ NHIỀU CHẤT XƠ, CHẤT ĐẠM THỰC VẬT RẤT TỐT CHO SỨC KHỎE BRAUN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.41100000000000003,
+          0.33499999999999996,
+          0.628,
+          0.908
+        ],
+        "description": "a tall clear plastic blender container filled with chickpeas",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa đầy đậu gà",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.35,
+          0.0,
+          0.611,
+          0.33299999999999996
+        ],
+        "description": "a white bowl being turned upside down",
+        "description_vi": "một chiếc tô trắng đang bị úp ngược xuống",
+        "attributes": [
+          "white"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "pitcher_0",
+        "label": "pitcher",
+        "bbox": [
+          0.229,
+          0.012,
+          0.348,
+          0.247
+        ],
+        "description": "a glass pitcher filled with yellow oil",
+        "description_vi": "một bình thủy tinh chứa dầu màu vàng",
+        "attributes": [
+          "glass",
+          "transparent"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0056",
+    "visual_source_frame_id": "L26_V102_f0056",
+    "ocr_source_frame_id": "L26_V102_f0056",
+    "quality_flags": [],
+    "caption": "Two chefs stand behind a kitchen counter with utensils and ingredients displayed.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform standing on the left at a kitchen counter, while a male chef in a white t-shirt and white apron stands on the right. The kitchen features white tiled walls, wooden cabinets, a stovetop, and various cooking utensils.",
+    "caption_vi": "Hai đầu bếp đứng phía sau quầy bếp có bày trí dụng cụ và nguyên liệu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một nữ đầu bếp mặc đồng phục trắng đứng bên trái bàn bếp, trong khi nam đầu bếp mặc áo thun trắng và đeo tạp dề đứng bên phải. Phía sau là tường ốp gạch trắng, tủ gỗ, bếp từ và nhiều dụng cụ nấu ăn.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.129,
+          0.283,
+          0.403,
+          0.78
+        ],
+        "description": "a woman in a white chef uniform standing at the counter",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng đứng tại quầy",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.599,
+          0.206,
+          0.765,
+          0.7859999999999999
+        ],
+        "description": "a man in a white t-shirt and apron standing on the right",
+        "description_vi": "một nam nhân mặc áo thun trắng và tạp dề đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.089,
+          0.72,
+          0.159,
+          0.883
+        ],
+        "description": "a colorful food product package on the counter",
+        "description_vi": "một gói sản phẩm thực phẩm nhiều màu sắc trên quầy",
+        "attributes": [
+          "colorful",
+          "packaged"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "stovetop_0",
+        "label": "stovetop",
+        "bbox": [
+          0.34700000000000003,
+          0.764,
+          0.654,
+          0.833
+        ],
+        "description": "a black built-in induction stovetop on the counter",
+        "description_vi": "một bếp từ âm màu đen trên mặt bàn",
+        "attributes": [
+          "black",
+          "built-in"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "stovetop_0"
+      },
+      {
+        "subject_id": "stovetop_0",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0057",
+    "visual_source_frame_id": "L26_V102_f0056",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two chefs stand behind a kitchen counter with utensils and ingredients displayed.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform standing on the left at a kitchen counter, while a male chef in a white t-shirt and white apron stands on the right. The kitchen features white tiled walls, wooden cabinets, a stovetop, and various cooking utensils.",
+    "caption_vi": "Hai đầu bếp đứng phía sau quầy bếp có bày trí dụng cụ và nguyên liệu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một nữ đầu bếp mặc đồng phục trắng đứng bên trái bàn bếp, trong khi nam đầu bếp mặc áo thun trắng và đeo tạp dề đứng bên phải. Phía sau là tường ốp gạch trắng, tủ gỗ, bếp từ và nhiều dụng cụ nấu ăn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.129,
+          0.283,
+          0.403,
+          0.78
+        ],
+        "description": "a woman in a white chef uniform standing at the counter",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng đứng tại quầy",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.599,
+          0.206,
+          0.765,
+          0.7859999999999999
+        ],
+        "description": "a man in a white t-shirt and apron standing on the right",
+        "description_vi": "một nam nhân mặc áo thun trắng và tạp dề đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.089,
+          0.72,
+          0.159,
+          0.883
+        ],
+        "description": "a colorful food product package on the counter",
+        "description_vi": "một gói sản phẩm thực phẩm nhiều màu sắc trên quầy",
+        "attributes": [
+          "colorful",
+          "packaged"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "stovetop_0",
+        "label": "stovetop",
+        "bbox": [
+          0.34700000000000003,
+          0.764,
+          0.654,
+          0.833
+        ],
+        "description": "a black built-in induction stovetop on the counter",
+        "description_vi": "một bếp từ âm màu đen trên mặt bàn",
+        "attributes": [
+          "black",
+          "built-in"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "stovetop_0"
+      },
+      {
+        "subject_id": "stovetop_0",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0058",
+    "visual_source_frame_id": "L26_V102_f0056",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two chefs stand behind a kitchen counter with utensils and ingredients displayed.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform standing on the left at a kitchen counter, while a male chef in a white t-shirt and white apron stands on the right. The kitchen features white tiled walls, wooden cabinets, a stovetop, and various cooking utensils.",
+    "caption_vi": "Hai đầu bếp đứng phía sau quầy bếp có bày trí dụng cụ và nguyên liệu.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh một nữ đầu bếp mặc đồng phục trắng đứng bên trái bàn bếp, trong khi nam đầu bếp mặc áo thun trắng và đeo tạp dề đứng bên phải. Phía sau là tường ốp gạch trắng, tủ gỗ, bếp từ và nhiều dụng cụ nấu ăn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.129,
+          0.283,
+          0.403,
+          0.78
+        ],
+        "description": "a woman in a white chef uniform standing at the counter",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng đứng tại quầy",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.599,
+          0.206,
+          0.765,
+          0.7859999999999999
+        ],
+        "description": "a man in a white t-shirt and apron standing on the right",
+        "description_vi": "một nam nhân mặc áo thun trắng và tạp dề đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.089,
+          0.72,
+          0.159,
+          0.883
+        ],
+        "description": "a colorful food product package on the counter",
+        "description_vi": "một gói sản phẩm thực phẩm nhiều màu sắc trên quầy",
+        "attributes": [
+          "colorful",
+          "packaged"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "stovetop_0",
+        "label": "stovetop",
+        "bbox": [
+          0.34700000000000003,
+          0.764,
+          0.654,
+          0.833
+        ],
+        "description": "a black built-in induction stovetop on the counter",
+        "description_vi": "một bếp từ âm màu đen trên mặt bàn",
+        "attributes": [
+          "black",
+          "built-in"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "stovetop_0"
+      },
+      {
+        "subject_id": "stovetop_0",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0059",
+    "visual_source_frame_id": "L26_V102_f0059",
+    "ocr_source_frame_id": "L26_V102_f0059",
+    "quality_flags": [],
+    "caption": "A person uses a spoon to scrape creamy paste from a small pink bowl into a blender container.",
+    "detailed_caption": "A close-up shot shows a person's hands using a metal spoon to transfer a thick, creamy brownish paste from a small pink bowl into a tall, clear blender container holding chickpeas.",
+    "caption_vi": "Một người dùng muỗng quét hỗn hợp sệt màu nâu từ chiếc tô hồng nhỏ vào cối xay.",
+    "detailed_caption_vi": "Cận cảnh đôi tay của một người đang dùng muỗng kim loại để múc và đổ hỗn hợp sệt đặc màu nâu từ chiếc tô nhỏ màu hồng vào cối xay nhựa trong suốt đang chứa sẵn đậu gà.",
+    "ocr_text": "HTV Online mil oz BRAUN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.404,
+          0.37800000000000006,
+          0.753,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container holding chickpeas and paste",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa đậu gà và hỗn hợp sệt",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.571,
+          0.0,
+          0.772,
+          0.423
+        ],
+        "description": "a small pink bowl tilted by a person",
+        "description_vi": "một chiếc tô hồng nhỏ được nghiêng bởi người",
+        "attributes": [
+          "pink",
+          "small"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.45499999999999996,
+          0.0,
+          0.658,
+          0.258
+        ],
+        "description": "a metal spoon used to scrape paste",
+        "description_vi": "một chiếc muỗng kim loại dùng để quét hỗn hợp",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "spoon_0",
+        "predicate": "above",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "below",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0060",
+    "visual_source_frame_id": "L26_V102_f0060",
+    "ocr_source_frame_id": "L26_V102_f0060",
+    "quality_flags": [],
+    "caption": "A tall clear blender container holds chickpeas, paste, and lemon zest on a white counter.",
+    "detailed_caption": "A close-up shot shows a tall clear blender container filled with chickpeas and a brownish paste on a white countertop. A white plate with grated yellow lemon zest and a spoon rests in the background.",
+    "caption_vi": "Cối xay trong suốt chứa đậu gà, hỗn hợp sệt và vỏ chanh bào trên mặt bàn trắng.",
+    "detailed_caption_vi": "Cận cảnh một chiếc cối xay nhựa trong suốt cao chứa đậu gà và hỗn hợp sệt màu nâu trên mặt bàn bếp màu trắng. Phía sau có một chiếc đĩa trắng đựng vỏ chanh bào màu vàng và một chiếc muỗng.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.378,
+          0.0,
+          0.734,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container with ingredients",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa các nguyên liệu",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.716,
+          0.305,
+          1.0,
+          0.669
+        ],
+        "description": "a white plate with grated yellow lemon zest",
+        "description_vi": "một chiếc đĩa trắng đựng vỏ chanh bào màu vàng",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.721,
+          0.442,
+          1.0,
+          0.762
+        ],
+        "description": "a metal spoon resting near the white plate",
+        "description_vi": "một chiếc muỗng kim loại đặt gần chiếc đĩa trắng",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0061",
+    "visual_source_frame_id": "L26_V102_f0060",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A tall clear blender container holds chickpeas, paste, and lemon zest on a white counter.",
+    "detailed_caption": "A close-up shot shows a tall clear blender container filled with chickpeas and a brownish paste on a white countertop. A white plate with grated yellow lemon zest and a spoon rests in the background.",
+    "caption_vi": "Cối xay trong suốt chứa đậu gà, hỗn hợp sệt và vỏ chanh bào trên mặt bàn trắng.",
+    "detailed_caption_vi": "Cận cảnh một chiếc cối xay nhựa trong suốt cao chứa đậu gà và hỗn hợp sệt màu nâu trên mặt bàn bếp màu trắng. Phía sau có một chiếc đĩa trắng đựng vỏ chanh bào màu vàng và một chiếc muỗng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.378,
+          0.0,
+          0.734,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container with ingredients",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa các nguyên liệu",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "plate_0",
+        "label": "plate",
+        "bbox": [
+          0.716,
+          0.305,
+          1.0,
+          0.669
+        ],
+        "description": "a white plate with grated yellow lemon zest",
+        "description_vi": "một chiếc đĩa trắng đựng vỏ chanh bào màu vàng",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.721,
+          0.442,
+          1.0,
+          0.762
+        ],
+        "description": "a metal spoon resting near the white plate",
+        "description_vi": "một chiếc muỗng kim loại đặt gần chiếc đĩa trắng",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "plate_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "plate_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0062",
+    "visual_source_frame_id": "L26_V102_f0062",
+    "ocr_source_frame_id": "L26_V102_f0062",
+    "quality_flags": [],
+    "caption": "A person pours liquid from a white bowl onto a spoon held over a blender container.",
+    "detailed_caption": "A close-up shot features a person's hands pouring clear liquid from a white bowl onto a metal spoon, which rests above a tall clear blender container. The blender contains yellow lemon zest and paste at the bottom.",
+    "caption_vi": "Một người đang rót chất lỏng từ tô trắng lên chiếc muỗng đặt trên cối xay.",
+    "detailed_caption_vi": "Cận cảnh đôi tay của một người đang rót chất lỏng trong từ tô trắng lên một chiếc muỗng kim loại đặt ngang trên miệng cối xay trong suốt. Cối xay có chứa vỏ chanh bào và hỗn hợp sệt ở đáy.",
+    "ocr_text": "HTV Online BRAUN",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.24500000000000002,
+          0.37399999999999994,
+          0.752,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container with ingredients inside",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa nguyên liệu bên trong",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.41500000000000004,
+          0.0,
+          0.8029999999999999,
+          0.491
+        ],
+        "description": "a white bowl being tilted to pour liquid",
+        "description_vi": "một chiếc tô trắng đang được nghiêng để rót chất lỏng",
+        "attributes": [
+          "white"
+        ],
+        "action": "pouring"
+      },
+      {
+        "object_id": "spoon_0",
+        "label": "spoon",
+        "bbox": [
+          0.191,
+          0.382,
+          0.583,
+          0.571
+        ],
+        "description": "a metal spoon catching liquid over the blender",
+        "description_vi": "một chiếc muỗng kim loại hứng chất lỏng phía trên cối xay",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "holding"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "overlapping",
+        "object_id": "spoon_0"
+      },
+      {
+        "subject_id": "spoon_0",
+        "predicate": "overlapping",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0063",
+    "visual_source_frame_id": "L26_V102_f0063",
+    "ocr_source_frame_id": "L26_V102_f0063",
+    "quality_flags": [],
+    "caption": "A female chef uses an immersion blender in a container while a male chef watches in a kitchen.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform operating an immersion blender inside a tall container on a white counter. A male chef in a white t-shirt and apron stands to her right, watching the process in a bright, modern kitchen.",
+    "caption_vi": "Nữ đầu bếp sử dụng máy xay cầm tay trong một chiếc cối trong khi nam đầu bếp đứng nhìn.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh nữ đầu bếp mặc đồng phục trắng đang dùng máy xay cầm tay xay nguyên liệu trong cối cao đặt trên quầy. Nam đầu bếp mặc áo thun và tạp dề trắng đứng bên phải theo dõi.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.25,
+          0.254,
+          0.42300000000000004,
+          0.78
+        ],
+        "description": "a woman in a white chef uniform operating a blender",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng đang vận hành máy xay",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.627,
+          0.209,
+          0.791,
+          0.7949999999999999
+        ],
+        "description": "a man in a white apron standing on the right",
+        "description_vi": "một nam đầu bếp mặc tạp dề trắng đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.279,
+          0.495,
+          0.311,
+          0.759
+        ],
+        "description": "a hand-held immersion blender unit being used",
+        "description_vi": "một thiết bị máy xay cầm tay đang được sử dụng",
+        "attributes": [
+          "white",
+          "silver"
+        ],
+        "action": "blending"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "immersion_blender_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0064",
+    "visual_source_frame_id": "L26_V102_f0063",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female chef uses an immersion blender in a container while a male chef watches in a kitchen.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform operating an immersion blender inside a tall container on a white counter. A male chef in a white t-shirt and apron stands to her right, watching the process in a bright, modern kitchen.",
+    "caption_vi": "Nữ đầu bếp sử dụng máy xay cầm tay trong một chiếc cối trong khi nam đầu bếp đứng nhìn.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh nữ đầu bếp mặc đồng phục trắng đang dùng máy xay cầm tay xay nguyên liệu trong cối cao đặt trên quầy. Nam đầu bếp mặc áo thun và tạp dề trắng đứng bên phải theo dõi.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.25,
+          0.254,
+          0.42300000000000004,
+          0.78
+        ],
+        "description": "a woman in a white chef uniform operating a blender",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng đang vận hành máy xay",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.627,
+          0.209,
+          0.791,
+          0.7949999999999999
+        ],
+        "description": "a man in a white apron standing on the right",
+        "description_vi": "một nam đầu bếp mặc tạp dề trắng đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.279,
+          0.495,
+          0.311,
+          0.759
+        ],
+        "description": "a hand-held immersion blender unit being used",
+        "description_vi": "một thiết bị máy xay cầm tay đang được sử dụng",
+        "attributes": [
+          "white",
+          "silver"
+        ],
+        "action": "blending"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "immersion_blender_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0065",
+    "visual_source_frame_id": "L26_V102_f0065",
+    "ocr_source_frame_id": "L26_V102_f0065",
+    "quality_flags": [],
+    "caption": "An immersion blender blends ingredients in a tall container next to a bowl of broth.",
+    "detailed_caption": "A close-up shot shows an immersion blender operating inside a tall clear container, blending brownish paste and chickpeas. Next to it is a white bowl containing a clear broth and a spoon on a white countertop.",
+    "caption_vi": "Máy xay cầm tay đang xay nguyên liệu trong cối cao bên cạnh tô nước dùng.",
+    "detailed_caption_vi": "Cận cảnh máy xay cầm tay đang hoạt động bên trong một chiếc cối trong suốt cao, xay hỗn hợp sệt và đậu gà. Ngay bên cạnh là một chiếc tô trắng đựng nước dùng trong và chiếc muỗng đặt trên mặt bàn bếp trắng.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.493,
+          0.009000000000000001,
+          0.8130000000000001,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container with blended food",
+        "description_vi": "cối xay nhựa trong suốt cao chứa thực phẩm đã xay",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.211,
+          0.248,
+          0.503,
+          0.706
+        ],
+        "description": "a white bowl filled with clear broth",
+        "description_vi": "một chiếc tô màu trắng đựng nước dùng trong",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.575,
+          0.0,
+          0.749,
+          0.6639999999999999
+        ],
+        "description": "an immersion blender blending mixture in a container",
+        "description_vi": "máy xay cầm tay đang xay hỗn hợp trong cối",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "blending"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "left_of",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "right_of",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0066",
+    "visual_source_frame_id": "L26_V102_f0065",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "An immersion blender blends ingredients in a tall container next to a bowl of broth.",
+    "detailed_caption": "A close-up shot shows an immersion blender operating inside a tall clear container, blending brownish paste and chickpeas. Next to it is a white bowl containing a clear broth and a spoon on a white countertop.",
+    "caption_vi": "Máy xay cầm tay đang xay nguyên liệu trong cối cao bên cạnh tô nước dùng.",
+    "detailed_caption_vi": "Cận cảnh máy xay cầm tay đang hoạt động bên trong một chiếc cối trong suốt cao, xay hỗn hợp sệt và đậu gà. Ngay bên cạnh là một chiếc tô trắng đựng nước dùng trong và chiếc muỗng đặt trên mặt bàn bếp trắng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.493,
+          0.009000000000000001,
+          0.8130000000000001,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container with blended food",
+        "description_vi": "cối xay nhựa trong suốt cao chứa thực phẩm đã xay",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.211,
+          0.248,
+          0.503,
+          0.706
+        ],
+        "description": "a white bowl filled with clear broth",
+        "description_vi": "một chiếc tô màu trắng đựng nước dùng trong",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.575,
+          0.0,
+          0.749,
+          0.6639999999999999
+        ],
+        "description": "an immersion blender blending mixture in a container",
+        "description_vi": "máy xay cầm tay đang xay hỗn hợp trong cối",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "blending"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "bowl_0",
+        "predicate": "left_of",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "right_of",
+        "object_id": "bowl_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0067",
+    "visual_source_frame_id": "L26_V102_f0067",
+    "ocr_source_frame_id": "L26_V102_f0067",
+    "quality_flags": [],
+    "caption": "Two chefs stand in a kitchen with a female chef operating a handheld blender.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform holding a handheld blender inside a small container on a counter. A male chef in a white apron stands to her right, watching in a brightly lit kitchen.",
+    "caption_vi": "Hai đầu bếp trong nhà bếp với nữ đầu bếp đang dùng máy xay cầm tay.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh nữ đầu bếp mặc đồng phục trắng đang cầm máy xay cầm tay trong một cối nhỏ trên bàn. Nam đầu bếp mặc tạp dề trắng đứng bên phải quan sát trong gian bếp sáng sủa.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.177,
+          0.258,
+          0.421,
+          0.78
+        ],
+        "description": "a woman in a white chef uniform using a blender",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng đang dùng máy xay",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.563,
+          0.212,
+          0.741,
+          0.7859999999999999
+        ],
+        "description": "a man in a white apron standing on the right",
+        "description_vi": "một nam đầu bếp mặc tạp dề trắng đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0068",
+    "visual_source_frame_id": "L26_V102_f0067",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two chefs stand in a kitchen with a female chef operating a handheld blender.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform holding a handheld blender inside a small container on a counter. A male chef in a white apron stands to her right, watching in a brightly lit kitchen.",
+    "caption_vi": "Hai đầu bếp trong nhà bếp với nữ đầu bếp đang dùng máy xay cầm tay.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh nữ đầu bếp mặc đồng phục trắng đang cầm máy xay cầm tay trong một cối nhỏ trên bàn. Nam đầu bếp mặc tạp dề trắng đứng bên phải quan sát trong gian bếp sáng sủa.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.177,
+          0.258,
+          0.421,
+          0.78
+        ],
+        "description": "a woman in a white chef uniform using a blender",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng đang dùng máy xay",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.563,
+          0.212,
+          0.741,
+          0.7859999999999999
+        ],
+        "description": "a man in a white apron standing on the right",
+        "description_vi": "một nam đầu bếp mặc tạp dề trắng đứng bên phải",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "standing"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "chef_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0069",
+    "visual_source_frame_id": "L26_V102_f0069",
+    "ocr_source_frame_id": "L26_V102_f0069",
+    "quality_flags": [],
+    "caption": "A person pours oil from a small glass measuring cup into a blender container.",
+    "detailed_caption": "A close-up shot shows a person's hands holding a small glass measuring cup filled with yellow oil, positioning it over a tall, clear blender container that has an immersion blender inside.",
+    "caption_vi": "Một người đang rót dầu từ cốc đo bằng thủy tinh nhỏ vào cối xay.",
+    "detailed_caption_vi": "Cận cảnh đôi tay của một người đang cầm chiếc cốc đo thủy tinh nhỏ chứa đầy dầu màu vàng, chuẩn bị rót vào cối xay trong suốt cao có gắn máy xay cầm tay bên trong.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.404,
+          0.642,
+          0.7230000000000001,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container",
+        "description_vi": "một chiếc cối xay nhựa trong suốt cao",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.497,
+          0.0,
+          0.6839999999999999,
+          1.0
+        ],
+        "description": "a metal immersion blender shaft",
+        "description_vi": "trục máy xay cầm tay bằng kim loại",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "measuring_cup_0",
+        "label": "measuring cup",
+        "bbox": [
+          0.442,
+          0.356,
+          0.628,
+          0.63
+        ],
+        "description": "a small glass measuring cup filled with yellow oil",
+        "description_vi": "một cốc đo thủy tinh nhỏ chứa đầy dầu màu vàng",
+        "attributes": [
+          "glass",
+          "transparent"
+        ],
+        "action": "pouring"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "measuring_cup_0",
+        "predicate": "above",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "below",
+        "object_id": "measuring_cup_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "measuring_cup_0"
+      },
+      {
+        "subject_id": "measuring_cup_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0070",
+    "visual_source_frame_id": "L26_V102_f0070",
+    "ocr_source_frame_id": "L26_V102_f0070",
+    "quality_flags": [],
+    "caption": "A female chef in a white uniform stands in front of a red logo sign.",
+    "detailed_caption": "A medium shot shows a woman in a white chef uniform with red details speaking to the camera in a kitchen setting. Behind her is a light wooden wall with a prominent red and white logo sign.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng đứng trước biển hiệu logo màu đỏ.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh người phụ nữ mặc đồng phục đầu bếp trắng có viền đỏ đang nói chuyện trước ống kính trong không gian bếp. Phía sau cô là bức tường gỗ sáng màu với biển hiệu logo đỏ trắng nổi bật.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.286,
+          0.26,
+          0.716,
+          1.0
+        ],
+        "description": "a woman wearing a white chef uniform with red trim",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.688,
+          0.031,
+          0.922,
+          0.594
+        ],
+        "description": "a red and white logo sign on the wooden wall",
+        "description_vi": "biển hiệu logo đỏ và trắng trên tường gỗ",
+        "attributes": [
+          "red",
+          "white",
+          "logo"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0071",
+    "visual_source_frame_id": "L26_V102_f0070",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female chef in a white uniform stands in front of a red logo sign.",
+    "detailed_caption": "A medium shot shows a woman in a white chef uniform with red details speaking to the camera in a kitchen setting. Behind her is a light wooden wall with a prominent red and white logo sign.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng đứng trước biển hiệu logo màu đỏ.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh người phụ nữ mặc đồng phục đầu bếp trắng có viền đỏ đang nói chuyện trước ống kính trong không gian bếp. Phía sau cô là bức tường gỗ sáng màu với biển hiệu logo đỏ trắng nổi bật.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.286,
+          0.26,
+          0.716,
+          1.0
+        ],
+        "description": "a woman wearing a white chef uniform with red trim",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng viền đỏ",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.688,
+          0.031,
+          0.922,
+          0.594
+        ],
+        "description": "a red and white logo sign on the wooden wall",
+        "description_vi": "biển hiệu logo đỏ và trắng trên tường gỗ",
+        "attributes": [
+          "red",
+          "white",
+          "logo"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0072",
+    "visual_source_frame_id": "L26_V102_f0072",
+    "ocr_source_frame_id": "L26_V102_f0072",
+    "quality_flags": [],
+    "caption": "A person uses an immersion blender in a tall container while another holds a spoon.",
+    "detailed_caption": "A close-up shot shows two people preparing food; one person holds and operates an immersion blender inside a tall clear container, while another person holds a spoon near a small white bowl on the counter.",
+    "caption_vi": "Một người dùng máy xay cầm tay trong cối cao trong khi người khác cầm muỗng.",
+    "detailed_caption_vi": "Cận cảnh hai người đang chuẩn bị món ăn; một người đang cầm và vận hành máy xay cầm tay trong cối trong suốt cao, trong khi người khác cầm một chiếc muỗng gần chiếc tô trắng nhỏ trên mặt bàn.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.45899999999999996,
+          0.295,
+          0.606,
+          0.8340000000000001
+        ],
+        "description": "a tall clear plastic blender container with blended food",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa thức ăn đã xay",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.312,
+          0.75,
+          0.489,
+          0.969
+        ],
+        "description": "a small white bowl with liquid on the counter",
+        "description_vi": "một chiếc tô trắng nhỏ đựng chất lỏng trên quầy",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.483,
+          0.0,
+          0.577,
+          0.35900000000000004
+        ],
+        "description": "a white and metal immersion blender",
+        "description_vi": "máy xay cầm tay màu trắng và kim loại",
+        "attributes": [
+          "white",
+          "silver"
+        ],
+        "action": "blending"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0073",
+    "visual_source_frame_id": "L26_V102_f0072",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A person uses an immersion blender in a tall container while another holds a spoon.",
+    "detailed_caption": "A close-up shot shows two people preparing food; one person holds and operates an immersion blender inside a tall clear container, while another person holds a spoon near a small white bowl on the counter.",
+    "caption_vi": "Một người dùng máy xay cầm tay trong cối cao trong khi người khác cầm muỗng.",
+    "detailed_caption_vi": "Cận cảnh hai người đang chuẩn bị món ăn; một người đang cầm và vận hành máy xay cầm tay trong cối trong suốt cao, trong khi người khác cầm một chiếc muỗng gần chiếc tô trắng nhỏ trên mặt bàn.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.45899999999999996,
+          0.295,
+          0.606,
+          0.8340000000000001
+        ],
+        "description": "a tall clear plastic blender container with blended food",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa thức ăn đã xay",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "bowl_0",
+        "label": "bowl",
+        "bbox": [
+          0.312,
+          0.75,
+          0.489,
+          0.969
+        ],
+        "description": "a small white bowl with liquid on the counter",
+        "description_vi": "một chiếc tô trắng nhỏ đựng chất lỏng trên quầy",
+        "attributes": [
+          "white",
+          "round"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.483,
+          0.0,
+          0.577,
+          0.35900000000000004
+        ],
+        "description": "a white and metal immersion blender",
+        "description_vi": "máy xay cầm tay màu trắng và kim loại",
+        "attributes": [
+          "white",
+          "silver"
+        ],
+        "action": "blending"
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0074",
+    "visual_source_frame_id": "L26_V102_f0074",
+    "ocr_source_frame_id": "L26_V102_f0074",
+    "quality_flags": [],
+    "caption": "Two chefs work together at a kitchen counter with ingredients and cooking equipment.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform standing on the left holding a handheld blender, while a male chef in a white apron leans over the counter to assist with blending. The kitchen has white tiled walls, a stovetop, and shelves with jars.",
+    "caption_vi": "Hai đầu bếp làm việc cùng nhau tại quầy bếp với các nguyên liệu và dụng cụ.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh nữ đầu bếp mặc đồng phục trắng đứng bên trái cầm máy xay cầm tay, trong khi nam đầu bếp mặc tạp dề trắng cúi người qua bàn để hỗ trợ xay. Nhà bếp có tường ốp gạch trắng, bếp nấu và kệ đựng hũ.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO. Blendy Blendy Bánh Rán",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.25,
+          0.263,
+          0.40599999999999997,
+          0.78
+        ],
+        "description": "a woman in a white uniform holding a blender",
+        "description_vi": "một phụ nữ mặc đồng phục trắng đang cầm máy xay",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.34700000000000003,
+          0.33399999999999996,
+          0.6839999999999999,
+          0.7859999999999999
+        ],
+        "description": "a man in a white apron leaning over the counter",
+        "description_vi": "một nam đầu bếp mặc tạp dề trắng đang cúi người trên quầy",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.088,
+          0.719,
+          0.158,
+          0.8810000000000001
+        ],
+        "description": "a colorful food product package on the counter",
+        "description_vi": "một gói sản phẩm thực phẩm nhiều màu sắc trên quầy",
+        "attributes": [
+          "colorful"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "overlapping",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "overlapping",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0075",
+    "visual_source_frame_id": "L26_V102_f0074",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "Two chefs work together at a kitchen counter with ingredients and cooking equipment.",
+    "detailed_caption": "A medium shot shows a female chef in a white uniform standing on the left holding a handheld blender, while a male chef in a white apron leans over the counter to assist with blending. The kitchen has white tiled walls, a stovetop, and shelves with jars.",
+    "caption_vi": "Hai đầu bếp làm việc cùng nhau tại quầy bếp với các nguyên liệu và dụng cụ.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh nữ đầu bếp mặc đồng phục trắng đứng bên trái cầm máy xay cầm tay, trong khi nam đầu bếp mặc tạp dề trắng cúi người qua bàn để hỗ trợ xay. Nhà bếp có tường ốp gạch trắng, bếp nấu và kệ đựng hũ.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.25,
+          0.263,
+          0.40599999999999997,
+          0.78
+        ],
+        "description": "a woman in a white uniform holding a blender",
+        "description_vi": "một phụ nữ mặc đồng phục trắng đang cầm máy xay",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "chef_1",
+        "label": "chef",
+        "bbox": [
+          0.34700000000000003,
+          0.33399999999999996,
+          0.6839999999999999,
+          0.7859999999999999
+        ],
+        "description": "a man in a white apron leaning over the counter",
+        "description_vi": "một nam đầu bếp mặc tạp dề trắng đang cúi người trên quầy",
+        "attributes": [
+          "white",
+          "apron"
+        ],
+        "action": "working"
+      },
+      {
+        "object_id": "package_0",
+        "label": "package",
+        "bbox": [
+          0.088,
+          0.719,
+          0.158,
+          0.8810000000000001
+        ],
+        "description": "a colorful food product package on the counter",
+        "description_vi": "một gói sản phẩm thực phẩm nhiều màu sắc trên quầy",
+        "attributes": [
+          "colorful"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "chef_0",
+        "predicate": "overlapping",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "overlapping",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "chef_0"
+      },
+      {
+        "subject_id": "chef_0",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      },
+      {
+        "subject_id": "package_0",
+        "predicate": "left_of",
+        "object_id": "chef_1"
+      },
+      {
+        "subject_id": "chef_1",
+        "predicate": "right_of",
+        "object_id": "package_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0076",
+    "visual_source_frame_id": "L26_V102_f0076",
+    "ocr_source_frame_id": "L26_V102_f0076",
+    "quality_flags": [],
+    "caption": "A person uses an immersion blender in a tall container on a white counter.",
+    "detailed_caption": "A close-up shot shows a tall clear container filled with thick blended mixture, with an immersion blender inserted inside. A person's hand is visible gesturing near the counter next to a stovetop.",
+    "caption_vi": "Một người đang sử dụng máy xay cầm tay trong cối cao đặt trên mặt bàn trắng.",
+    "detailed_caption_vi": "Cận cảnh chiếc cối trong suốt cao chứa đầy hỗn hợp sệt đã xay, với máy xay cầm tay cắm bên trong. Bàn tay của một người đang cử động gần khu vực mặt bàn cạnh bếp nấu.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.41100000000000003,
+          0.226,
+          0.619,
+          0.925
+        ],
+        "description": "a tall clear plastic blender container with thick mixture",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa hỗn hợp đặc",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": ""
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.378,
+          0.0,
+          0.5,
+          0.412
+        ],
+        "description": "a silver and white immersion blender shaft",
+        "description_vi": "trục máy xay cầm tay màu bạc và trắng",
+        "attributes": [
+          "silver",
+          "metal"
+        ],
+        "action": "blending"
+      },
+      {
+        "object_id": "stovetop_0",
+        "label": "stovetop",
+        "bbox": [
+          0.852,
+          0.6829999999999999,
+          1.0,
+          0.997
+        ],
+        "description": "a black induction stovetop burner",
+        "description_vi": "mặt bếp từ màu đen",
+        "attributes": [
+          "black"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "blender_container_0"
+      },
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "left_of",
+        "object_id": "stovetop_0"
+      },
+      {
+        "subject_id": "stovetop_0",
+        "predicate": "right_of",
+        "object_id": "blender_container_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0077",
+    "visual_source_frame_id": "L26_V102_f0077",
+    "ocr_source_frame_id": "L26_V102_f0077",
+    "quality_flags": [],
+    "caption": "A person uses an immersion blender to scoop thick blended mixture from a container.",
+    "detailed_caption": "A close-up shot shows a person's hands holding a tall clear container while using an immersion blender attachment to scoop out thick, light-yellow blended food paste.",
+    "caption_vi": "Một người đang dùng đầu máy xay cầm tay để múc hỗn hợp đặc ra khỏi cối.",
+    "detailed_caption_vi": "Cận cảnh đôi tay của một người đang giữ cối xay trong suốt cao trong khi dùng đầu thiết bị máy xay cầm tay để múc phần hỗn hợp thực phẩm màu vàng nhạt đã xay đặc.",
+    "ocr_text": "HTV Online",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "blender_container_0",
+        "label": "blender container",
+        "bbox": [
+          0.383,
+          0.056,
+          0.7,
+          1.0
+        ],
+        "description": "a tall clear plastic blender container with thick paste",
+        "description_vi": "một cối xay nhựa trong suốt cao chứa hỗn hợp sệt",
+        "attributes": [
+          "transparent",
+          "tall"
+        ],
+        "action": "holding"
+      },
+      {
+        "object_id": "immersion_blender_0",
+        "label": "immersion blender",
+        "bbox": [
+          0.438,
+          0.0,
+          0.933,
+          0.37800000000000006
+        ],
+        "description": "a metal immersion blender attachment scooping food",
+        "description_vi": "đầu máy xay cầm tay bằng kim loại đang múc thức ăn",
+        "attributes": [
+          "metal",
+          "silver"
+        ],
+        "action": "scooping"
+      }
+    ],
+    "spatial_relations": [
+      {
+        "subject_id": "blender_container_0",
+        "predicate": "overlapping",
+        "object_id": "immersion_blender_0"
+      },
+      {
+        "subject_id": "immersion_blender_0",
+        "predicate": "overlapping",
+        "object_id": "blender_container_0"
+      }
+    ]
+  },
+  {
+    "frame_id": "L26_V102_f0078",
+    "visual_source_frame_id": "L26_V102_f0078",
+    "ocr_source_frame_id": "L26_V102_f0078",
+    "quality_flags": [],
+    "caption": "A female chef in a white uniform stands in front of a red logo sign in a kitchen.",
+    "detailed_caption": "A medium shot shows a woman wearing a white chef uniform with red trim, speaking while facing the camera. Behind her is a light wooden wall with a rectangular red and white logo sign.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng đứng trước biển hiệu logo đỏ trong nhà bếp.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh người phụ nữ mặc đồng phục đầu bếp trắng viền đỏ đang nói chuyện hướng về phía camera. Phía sau cô là bức tường gỗ sáng màu gắn biển hiệu hình chữ nhật màu đỏ trắng.",
+    "ocr_text": "HTV Online MÓN NGON mỗi ngày Eat Well, Live Well. Aj AJINOMOTO.",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.323,
+          0.26,
+          0.742,
+          1.0
+        ],
+        "description": "a woman wearing a white chef uniform with red collar trim",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng viền cổ đỏ",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.688,
+          0.031,
+          0.922,
+          0.594
+        ],
+        "description": "a red and white rectangular logo sign on the wall",
+        "description_vi": "biển hiệu logo chữ nhật màu đỏ và trắng trên tường",
+        "attributes": [
+          "red",
+          "rectangular",
+          "logo"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
+    "frame_id": "L26_V102_f0079",
+    "visual_source_frame_id": "L26_V102_f0078",
+    "ocr_source_frame_id": "",
+    "quality_flags": [
+      "visual_metadata_copied"
+    ],
+    "caption": "A female chef in a white uniform stands in front of a red logo sign in a kitchen.",
+    "detailed_caption": "A medium shot shows a woman wearing a white chef uniform with red trim, speaking while facing the camera. Behind her is a light wooden wall with a rectangular red and white logo sign.",
+    "caption_vi": "Nữ đầu bếp mặc đồng phục trắng đứng trước biển hiệu logo đỏ trong nhà bếp.",
+    "detailed_caption_vi": "Cảnh trung ghi lại hình ảnh người phụ nữ mặc đồng phục đầu bếp trắng viền đỏ đang nói chuyện hướng về phía camera. Phía sau cô là bức tường gỗ sáng màu gắn biển hiệu hình chữ nhật màu đỏ trắng.",
+    "ocr_text": "",
+    "news_ticker_text": "",
+    "detections": [
+      {
+        "object_id": "chef_0",
+        "label": "chef",
+        "bbox": [
+          0.323,
+          0.26,
+          0.742,
+          1.0
+        ],
+        "description": "a woman wearing a white chef uniform with red collar trim",
+        "description_vi": "một phụ nữ mặc đồng phục đầu bếp trắng viền cổ đỏ",
+        "attributes": [
+          "white",
+          "uniform"
+        ],
+        "action": "speaking"
+      },
+      {
+        "object_id": "sign_0",
+        "label": "sign",
+        "bbox": [
+          0.688,
+          0.031,
+          0.922,
+          0.594
+        ],
+        "description": "a red and white rectangular logo sign on the wall",
+        "description_vi": "biển hiệu logo chữ nhật màu đỏ và trắng trên tường",
+        "attributes": [
+          "red",
+          "rectangular",
+          "logo"
+        ],
+        "action": ""
+      }
+    ],
+    "spatial_relations": []
+  },
+  {
     "frame_id": "L26_V102_f0080",
     "visual_source_frame_id": "L26_V102_f0080",
     "ocr_source_frame_id": "L26_V102_f0080",
