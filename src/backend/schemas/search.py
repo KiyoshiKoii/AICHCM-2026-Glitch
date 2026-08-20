@@ -300,6 +300,28 @@ class TemporalVideoSearchRequest(BaseModel):
         return self
 
 
+class ASRSearchRequest(BaseModel):
+    query: str = Field(min_length=2, max_length=2000)
+    top_k: int = Field(default=50, ge=1, le=200)
+    batch_ids: list[str] = Field(default_factory=list, max_length=10)
+    video_ids: list[str] = Field(default_factory=list, max_length=100)
+
+    @field_validator("query")
+    @classmethod
+    def normalize_query(cls, value: str) -> str:
+        return " ".join(value.split())
+
+    @field_validator("batch_ids", mode="before")
+    @classmethod
+    def normalize_batch_filters(cls, value: Any) -> list[str]:
+        return _normalize_batch_ids(value)
+
+    @field_validator("video_ids", mode="before")
+    @classmethod
+    def normalize_video_filters(cls, value: Any) -> list[str]:
+        return _normalize_video_ids(value)
+
+
 class UpstreamResult(BaseModel):
     frame_id: str = Field(min_length=1)
     score: float | None = None

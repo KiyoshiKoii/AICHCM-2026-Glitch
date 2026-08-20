@@ -52,6 +52,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             source="dev2",
             base_url=active_settings.dev2_base_url,
             text_path=active_settings.dev2_text_path,
+            asr_path=active_settings.dev2_asr_path,
             temporal_path=active_settings.dev2_temporal_path,
         )
         app.state.search_service = SearchService(

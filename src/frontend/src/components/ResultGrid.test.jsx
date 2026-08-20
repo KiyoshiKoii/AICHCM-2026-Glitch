@@ -52,4 +52,17 @@ describe('ResultGrid', () => {
 
     expect(onCardClick).toHaveBeenCalledWith(result);
   });
+
+  it('keeps separate ASR passages that share one thumbnail keyframe', () => {
+    const first = makeResult(1, {
+      metadata: { asr_id: 'asr-1', transcript: 'đoạn thoại thứ nhất' },
+    });
+    const second = makeResult(1, {
+      metadata: { asr_id: 'asr-2', transcript: 'đoạn thoại thứ hai' },
+    });
+
+    render(<ResultGrid results={[first, second]} />);
+
+    expect(screen.getAllByRole('img')).toHaveLength(2);
+  });
 });

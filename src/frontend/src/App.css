@@ -847,6 +847,22 @@
   font-weight: 700;
 }
 
+.asr-time-range {
+  margin-top: 3px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.asr-transcript {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 2px;
+  color: var(--text);
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .vqa-results-heading {
   margin: 0 0 4px;
 }

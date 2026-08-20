@@ -81,6 +81,21 @@ describe('SearchBar', () => {
     expect(onSearch).not.toHaveBeenCalled();
   });
 
+  it('searches timestamped transcripts in ASR mode', async () => {
+    const user = userEvent.setup();
+    const onAsrSearch = vi.fn();
+    render(<SearchBar onAsrSearch={onAsrSearch} filters={{ batchIds: ['L26'], videoIds: [] }} />);
+
+    await user.click(screen.getByRole('tab', { name: /asr search/i }));
+    await user.type(screen.getByRole('textbox'), '  cho dầu vào chảo  ');
+    await user.click(screen.getByRole('button', { name: /tìm lời thoại/i }));
+
+    expect(onAsrSearch).toHaveBeenCalledWith(
+      'cho dầu vào chảo',
+      { batchIds: ['L26'], videoIds: [] },
+    );
+  });
+
   it('calls onImageSearch from Image Search mode', async () => {
     const user = userEvent.setup();
     const onSearch = vi.fn();

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const TABS = [
   { id: 'text', label: 'Text Search' },
+  { id: 'asr', label: 'ASR Search' },
   { id: 'vqa', label: 'VQA' },
   { id: 'image', label: 'Image Search' },
   { id: 'temporal', label: 'Temporal Events' },
@@ -11,6 +12,7 @@ function SearchBar({
   onSearch,
   onImageSearch,
   onVqaSearch,
+  onAsrSearch,
   onTemporalVideoSearch,
   onTemporalEventSearch,
   selectedTemporalVideo = null,
@@ -70,6 +72,12 @@ function SearchBar({
       return;
     }
 
+    if (activeTab === 'asr') {
+      const trimmed = query.trim();
+      if (trimmed) onAsrSearch?.(trimmed, filters);
+      return;
+    }
+
     const trimmed = query.trim();
     if (!trimmed) return;
     onSearch?.(
@@ -119,14 +127,23 @@ function SearchBar({
 
       {activeTab !== 'image' && activeTab !== 'temporal' && (
         <label className="search-field-label">
-          <span>{activeTab === 'vqa' ? 'Event description' : 'Search query'}</span>
+          <span>
+            {activeTab === 'vqa'
+              ? 'Event description'
+              : activeTab === 'asr'
+                ? 'Nội dung lời thoại'
+                : 'Search query'}
+          </span>
           <textarea
             className="search-textarea"
             rows={activeTab === 'vqa' ? 3 : 4}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Mô tả cảnh cần tìm (VD: người đàn ông làm rơi ví)"
+            aria-label={activeTab === 'asr' ? 'ASR query' : undefined}
+            placeholder={activeTab === 'asr'
+              ? 'Nhập lời thoại hoặc nội dung âm thanh cần tìm'
+              : 'Mô tả cảnh cần tìm (VD: người đàn ông làm rơi ví)'}
           />
         </label>
       )}
@@ -300,7 +317,7 @@ function SearchBar({
         </div>
       )}
 
-      {activeTab !== 'image' && activeTab !== 'temporal' && (
+      {(activeTab === 'text' || activeTab === 'vqa') && (
         <label className="search-rerank-toggle">
           <input
             type="checkbox"
@@ -313,7 +330,9 @@ function SearchBar({
 
       <div className="search-actions">
         <button type="submit" className="btn btn-primary">
-          {activeTab === 'vqa'
+          {activeTab === 'asr'
+            ? 'Tìm lời thoại'
+            : activeTab === 'vqa'
             ? 'Trả lời'
             : activeTab === 'temporal'
               ? selectedTemporalVideo

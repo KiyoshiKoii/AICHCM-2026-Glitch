@@ -185,6 +185,89 @@ class SearchService:
             )
         )
 
+    async def search_asr(
+        self,
+        query: str,
+        top_k: int,
+        *,
+        batch_ids: list[str] | None = None,
+        video_ids: list[str] | None = None,
+    ) -> TextSearchResponse:
+        """Find timestamped transcript passages and attach a playable keyframe."""
+
+        try:
+            payload = await self.dev2.search_asr(
+                {
+                    "query": query,
+                    "batch_ids": batch_ids or [],
+                    "video_ids": video_ids or [],
+                    "top_k": top_k,
+                }
+            )
+        except Exception as exc:
+            raise UpstreamError(f"Failed to fetch ASR passages from Dev2: {exc}") from exc
+
+        raw_results = payload.get("data") if isinstance(payload, dict) else None
+        if not isinstance(raw_results, list):
+            raise UpstreamError("Dev2 ASR response must contain a data array")
+
+        from backend.utils.keyframe_mapper import get_nearest_keyframe_position
+        from backend.utils.thumbnail import build_thumbnail_url
+
+        results: list[SearchHit] = []
+        for index, raw in enumerate(raw_results):
+            if not isinstance(raw, dict):
+                raise UpstreamError(f"Dev2 ASR result at index {index} is not an object")
+            video_id = str(raw.get("video_id", "")).strip().upper()
+            transcript = str(raw.get("text", "")).strip()
+            if not video_id or not transcript:
+                raise UpstreamError(f"Dev2 ASR result at index {index} is missing video_id/text")
+            try:
+                start_ms = max(0, int(raw.get("start_ms", 0)))
+                end_ms = max(start_ms, int(raw.get("end_ms", start_ms)))
+                score = float(raw.get("score", 0.0))
+            except (TypeError, ValueError) as exc:
+                raise UpstreamError(f"Dev2 ASR result at index {index} has invalid numeric data") from exc
+
+            nearest = get_nearest_keyframe_position(video_id, start_ms)
+            if nearest:
+                keyframe_n, position = nearest
+                native_frame_idx = position["frame_index"]
+                fps = position["fps"]
+            else:
+                keyframe_n, native_frame_idx, fps = 1, 0, None
+            frame_id = f"{video_id}_f{keyframe_n:04d}"
+            results.append(
+                SearchHit(
+                    frame_id=frame_id,
+                    video_name=video_id,
+                    frame_index=native_frame_idx,
+                    score=score,
+                    thumbnail_url=build_thumbnail_url(frame_id, self.settings.thumbnail_base_url),
+                    metadata={
+                        "asr_id": raw.get("asr_id"),
+                        "transcript": transcript,
+                        "timestamp_ms": start_ms,
+                        "seek_timestamp_ms": start_ms,
+                        "asr_start_ms": start_ms,
+                        "asr_end_ms": end_ms,
+                        "start_segment_index": raw.get("start_segment_index"),
+                        "end_segment_index": raw.get("end_segment_index"),
+                        "fps": fps,
+                    },
+                )
+            )
+
+        return TextSearchResponse(
+            status="success",
+            message="Retrieved timestamped ASR passages",
+            data=SearchData(
+                total_results=len(results),
+                results=results,
+                llm_reranked_results=None,
+            ),
+        )
+
     async def search_image(
         self,
         *,

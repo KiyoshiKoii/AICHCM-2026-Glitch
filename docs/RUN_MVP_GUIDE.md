@@ -224,6 +224,48 @@ python .\src\semantic_pipeline\retrieval\video_selector_cli.py bootstrap `
 
 Để chỉ cập nhật một batch, thêm `--batch-id L26`.
 
+### 2.4. Tạo timestamped ASR index
+
+ASR Search đọc transcript theo từng video trong
+`data/metadata/metadata_asr`. Mỗi document giữ nguyên khoảng `start_ms/end_ms`,
+vì vậy kết quả có thể mở video đúng đầu đoạn thoại thay vì chỉ về keyframe.
+Chạy bootstrap sau khi có ASR metadata mới:
+
+**Git Bash**
+
+```bash
+conda activate aichcm2026
+PYTHONPATH=src python -m semantic_pipeline.retrieval.asr_cli bootstrap \
+  --asr-dir data/metadata/metadata_asr
+```
+
+**PowerShell**
+
+```powershell
+conda activate aichcm2026
+$env:PYTHONPATH='src'
+python -m semantic_pipeline.retrieval.asr_cli bootstrap `
+  --asr-dir .\data\metadata\metadata_asr
+```
+
+Để chỉ nạp hoặc cập nhật một batch, thêm `--batch-id L26`. Có thể kiểm tra index
+trực tiếp trước khi mở UI bằng lệnh sau:
+
+**Git Bash**
+
+```bash
+PYTHONPATH=src python -m semantic_pipeline.retrieval.asr_cli search \
+  "cho dầu vào chảo" --batch-id L26 --top-k 10
+```
+
+**PowerShell**
+
+```powershell
+$env:PYTHONPATH='src'
+python -m semantic_pipeline.retrieval.asr_cli search `
+  "cho dầu vào chảo" --batch-id L26 --top-k 10
+```
+
 ---
 
 ## 3. Khởi động MVP hằng ngày

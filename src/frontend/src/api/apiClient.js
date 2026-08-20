@@ -109,6 +109,27 @@ export const searchTemporalEvents = async (
   return response.json();
 };
 
+export const searchAsr = async (
+  query,
+  topK = 50,
+  { batchIds = [], videoIds = [] } = {},
+) => {
+  const response = await fetch('/api/v1/search/asr', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query,
+      top_k: topK,
+      batch_ids: batchIds,
+      video_ids: videoIds,
+    }),
+  });
+  if (!response.ok) {
+    throw new Error(`ASR search failed with status ${response.status}`);
+  }
+  return response.json();
+};
+
 export const getFrameTimeline = async (frameId) => {
   const response = await fetch(`/api/v1/frames/timeline/${frameId}`, {
     method: 'GET',

@@ -50,6 +50,7 @@ class InternalPipelineClient:
         text_path: str,
         image_path: str | None = None,
         temporal_path: str | None = None,
+        asr_path: str | None = None,
     ) -> None:
         self.source = source
         self._client = client
@@ -59,6 +60,11 @@ class InternalPipelineClient:
             f"{base_url.rstrip('/')}/{temporal_path.lstrip('/')}"
             if temporal_path
             else self._text_url.rsplit("/search/text", 1)[0] + "/search/temporal-events"
+        )
+        self._asr_url = (
+            f"{base_url.rstrip('/')}/{asr_path.lstrip('/')}"
+            if asr_path
+            else self._text_url.rsplit("/search/text", 1)[0] + "/search/asr"
         )
         self._temporal_video_url = self._temporal_url.rsplit(
             "/search/temporal-events", 1
@@ -79,6 +85,14 @@ class InternalPipelineClient:
             return response.json()
         except (httpx.HTTPError, ValueError) as exc:
             raise UpstreamError(f"{self.source} temporal API failed: {exc}") from exc
+
+    async def search_asr(self, payload: dict[str, Any]) -> Any:
+        try:
+            response = await self._client.post(self._asr_url, json=payload)
+            response.raise_for_status()
+            return response.json()
+        except (httpx.HTTPError, ValueError) as exc:
+            raise UpstreamError(f"{self.source} ASR API failed: {exc}") from exc
 
     async def search_temporal_videos(self, payload: dict[str, Any]) -> Any:
         try:

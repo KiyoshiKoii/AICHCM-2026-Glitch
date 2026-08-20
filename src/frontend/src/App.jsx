@@ -10,6 +10,7 @@ import LoadingSpinner from './components/LoadingSpinner.jsx';
 import {
   answerVqa,
   searchByText,
+  searchAsr,
   searchByImage,
   searchTemporalEvents,
   searchTemporalVideos,
@@ -127,6 +128,28 @@ function App() {
     }
   };
 
+  const runAsrSearch = async (query, filters = searchFilters) => {
+    setIsLoading(true);
+    setCurrentPage(1);
+    setLastQuery({ mode: 'asr', query, filters });
+    setVqaQuestion(null);
+    setSelectedFrame(null);
+    setTemporalVideoCandidates([]);
+    setSelectedTemporalVideo(null);
+    setLlmResults([]);
+    setResults([]);
+    setFrameContext(null);
+    try {
+      const response = await searchAsr(query, 50, filters);
+      setResults(response.data?.results || []);
+    } catch (err) {
+      console.error(err);
+      alert('Không thể tìm kiếm ASR. Hãy kiểm tra Elasticsearch và ASR index.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const runTemporalEventSearch = async (query, videoId, filters = searchFilters) => {
     setIsLoading(true);
     setCurrentPage(1);
@@ -227,6 +250,7 @@ function App() {
           onSearch={runSearch}
           onImageSearch={runSearch}
           onVqaSearch={runVqaSearch}
+          onAsrSearch={runAsrSearch}
           onTemporalVideoSearch={runTemporalVideoSearch}
           onTemporalEventSearch={runTemporalEventSearch}
           selectedTemporalVideo={selectedTemporalVideo}

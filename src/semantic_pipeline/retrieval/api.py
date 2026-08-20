@@ -71,6 +71,7 @@ class InteractionQuery(BaseModel):
 
 
 from semantic_pipeline.retrieval.elasticsearch_backend import ElasticsearchTextSearch
+from semantic_pipeline.retrieval.asr_search import ElasticsearchASRSearch
 from semantic_pipeline.retrieval.temporal_event_search import (
     TemporalEventSearch,
     discover_temporal_corpus,
@@ -131,6 +132,27 @@ class TextSearchRequest(BaseModel):
                 seen.add(normalized)
                 result.append(normalized)
         return result
+
+
+class ASRSearchRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    query: str = Field(min_length=2, max_length=2_000)
+    batch_ids: list[str] = Field(default_factory=list, max_length=10)
+    video_ids: list[str] = Field(default_factory=list, max_length=100)
+    top_k: int = Field(default=50, ge=1, le=200)
+
+    @field_validator("query")
+    @classmethod
+    def normalize_query(cls, value: str) -> str:
+        return " ".join(value.split())
+
+    @field_validator("batch_ids", "video_ids", mode="before")
+    @classmethod
+    def normalize_ids(cls, values):
+        if isinstance(values, str):
+            values = re.split(r"[,;\s]+", values)
+        return [str(value).strip().upper() for value in values or [] if str(value).strip()]
 
 
 class TemporalEventRequest(BaseModel):
@@ -238,6 +260,23 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
             raise HTTPException(status_code=422, detail=str(exc)) from exc
         except Exception as exc:
             raise HTTPException(status_code=503, detail=f"Elasticsearch search failed: {exc}") from exc
+
+    @app.post("/internal/search/asr")
+    def search_asr(body: ASRSearchRequest) -> dict:
+        try:
+            return {
+                "status": "success",
+                "data": ElasticsearchASRSearch(get_backend().client).search(
+                    body.query,
+                    batch_ids=body.batch_ids,
+                    video_ids=body.video_ids,
+                    top_k=body.top_k,
+                ),
+            }
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        except Exception as exc:
+            raise HTTPException(status_code=503, detail=f"Elasticsearch ASR search failed: {exc}") from exc
 
     @app.post("/internal/search/temporal-events")
     def search_temporal_events(body: TemporalEventRequest) -> dict:

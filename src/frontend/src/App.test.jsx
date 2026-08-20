@@ -21,6 +21,7 @@ vi.mock('./api/apiClient.js', () => ({
   answerVqa: vi.fn(),
   getFrameContext: vi.fn(),
   getFrameTimeline: vi.fn(),
+  searchAsr: vi.fn(),
   searchTemporalEvents: vi.fn(),
   searchTemporalVideos: vi.fn(),
 }));

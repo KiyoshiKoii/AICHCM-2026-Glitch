@@ -10,6 +10,7 @@ function Sidebar({
   onSearch,
   onImageSearch,
   onVqaSearch,
+  onAsrSearch,
   onTemporalVideoSearch,
   onTemporalEventSearch,
   selectedTemporalVideo,
@@ -43,6 +44,7 @@ function Sidebar({
         onSearch={onSearch}
         onImageSearch={onImageSearch}
         onVqaSearch={onVqaSearch}
+        onAsrSearch={onAsrSearch}
         onTemporalVideoSearch={onTemporalVideoSearch}
         onTemporalEventSearch={onTemporalEventSearch}
         selectedTemporalVideo={selectedTemporalVideo}

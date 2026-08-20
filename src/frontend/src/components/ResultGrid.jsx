@@ -3,13 +3,15 @@ import ImageCard from './ImageCard.jsx';
 const MAX_RESULTS = 20;
 
 function ResultGrid({ results, onCardDoubleClick, onCardClick }) {
-  // Deduplicate by frame_id to prevent React key collisions and visual bugs
+  // ASR may return multiple passages whose thumbnails use the same keyframe.
+  // Keep those passages distinct while preserving frame deduplication elsewhere.
   const uniqueResults = [];
-  const seenFrameIds = new Set();
+  const seenResultIds = new Set();
   
   for (const result of (results ?? [])) {
-    if (result?.frame_id && result?.thumbnail_url && !seenFrameIds.has(result.frame_id)) {
-      seenFrameIds.add(result.frame_id);
+    const resultId = result?.metadata?.asr_id || result?.frame_id;
+    if (result?.frame_id && result?.thumbnail_url && !seenResultIds.has(resultId)) {
+      seenResultIds.add(resultId);
       uniqueResults.push(result);
     }
   }
@@ -20,7 +22,7 @@ function ResultGrid({ results, onCardDoubleClick, onCardClick }) {
     <div className="result-grid">
       {visibleResults.map((result, index) => (
         <ImageCard
-          key={`${result.frame_id}-${index}`}
+          key={`${result.metadata?.asr_id || result.frame_id}-${index}`}
           result={result}
           onDoubleClick={onCardDoubleClick}
           onClick={() => onCardClick?.(result)}

@@ -29,6 +29,7 @@ class Settings(BaseSettings):
     
     dev2_base_url: str = "http://localhost:8002"
     dev2_text_path: str = "/internal/search/text"
+    dev2_asr_path: str = "/internal/search/asr"
     dev2_temporal_path: str = "/internal/search/temporal-events"
 
     upstream_top_k: int = Field(default=200, ge=20, le=1000)

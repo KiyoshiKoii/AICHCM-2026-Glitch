@@ -102,6 +102,24 @@ describe('VideoFrameModal', () => {
     pause.mockRestore();
   });
 
+  it('opens an ASR result at the exact transcript timestamp', async () => {
+    const pause = vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
+    render(
+      <VideoFrameModal
+        result={{ ...result, metadata: { seek_timestamp_ms: 2345 } }}
+        onClose={vi.fn()}
+      />,
+    );
+
+    const video = document.querySelector('video');
+    Object.defineProperty(video, 'readyState', { configurable: true, value: 1 });
+    fireEvent.loadedMetadata(video);
+
+    await waitFor(() => expect(video.currentTime).toBeCloseTo(2.345));
+    expect(pause).toHaveBeenCalled();
+    pause.mockRestore();
+  });
+
   it('closes when Escape is pressed', async () => {
     const onClose = vi.fn();
     render(<VideoFrameModal result={result} onClose={onClose} />);

@@ -68,3 +68,19 @@ def get_keyframe_ordinals(video_name: str) -> tuple[int, ...]:
     """Return available keyframe ordinals in timeline order."""
 
     return tuple(sorted(_load_video_timeline(video_name)))
+
+
+def get_nearest_keyframe_position(
+    video_name: str,
+    timestamp_ms: int,
+) -> tuple[int, KeyframePosition] | None:
+    """Return the keyframe nearest an arbitrary audio/video timestamp."""
+
+    timeline = _load_video_timeline(video_name)
+    if not timeline:
+        return None
+    ordinal = min(
+        timeline,
+        key=lambda item: (abs(timeline[item]["timestamp_ms"] - timestamp_ms), item),
+    )
+    return ordinal, timeline[ordinal]

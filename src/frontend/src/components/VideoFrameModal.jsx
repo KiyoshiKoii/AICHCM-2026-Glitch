@@ -145,8 +145,15 @@ function VideoFrameModal({ result, onClose }) {
 
   const seekInitialFrame = () => {
     if (initialSeekDoneRef.current) return;
-    const initialFrame = context?.center_frame || result;
-    const timestampMs = Number(initialFrame?.timestamp_ms ?? result?.metadata?.timestamp_ms);
+    const exactSeekTimestamp = Number(result?.metadata?.seek_timestamp_ms);
+    const initialFrame = {
+      ...result,
+      ...(context?.center_frame || {}),
+      timestamp_ms: Number.isFinite(exactSeekTimestamp)
+        ? exactSeekTimestamp
+        : context?.center_frame?.timestamp_ms ?? result?.metadata?.timestamp_ms,
+    };
+    const timestampMs = Number(initialFrame.timestamp_ms);
     if (!Number.isFinite(timestampMs)) return;
     initialSeekDoneRef.current = true;
     seekToFrame(initialFrame);

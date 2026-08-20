@@ -8,6 +8,7 @@ from backend.core.errors import (
     UnsupportedImageTypeError,
 )
 from backend.schemas.search import (
+    ASRSearchRequest,
     TemporalEventSearchRequest,
     TemporalVideoSearchRequest,
     TextSearchRequest,
@@ -71,6 +72,19 @@ async def search_temporal_events(
         batch_ids=body.batch_ids,
         video_ids=body.video_ids,
         top_k_videos=body.top_k_videos,
+    )
+
+
+@router.post("/asr", response_model=TextSearchResponse)
+async def search_asr(
+    body: ASRSearchRequest,
+    service: Annotated[SearchService, Depends(get_search_service)],
+) -> TextSearchResponse:
+    return await service.search_asr(
+        body.query,
+        body.top_k,
+        batch_ids=body.batch_ids,
+        video_ids=body.video_ids,
     )
 
 
