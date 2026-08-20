@@ -31,3 +31,67 @@ def test_build_frame_context_boundary_early():
 def test_build_frame_context_invalid_id():
     with pytest.raises(FrameIdError):
         build_frame_context("invalid_id", thumbnail_base_url="/media/thumbnails", radius=2)
+
+
+def test_build_frame_context_includes_native_video_positions(monkeypatch):
+    positions = {
+        2: {"frame_index": 21, "timestamp_ms": 840, "fps": 25.0},
+        4: {"frame_index": 83, "timestamp_ms": 3320, "fps": 25.0},
+        7: {"frame_index": 165, "timestamp_ms": 6600, "fps": 25.0},
+    }
+    monkeypatch.setattr(
+        "backend.utils.frame_id.get_keyframe_ordinals",
+        lambda _video_name: tuple(positions),
+    )
+    monkeypatch.setattr(
+        "backend.utils.frame_id.get_keyframe_position",
+        lambda _video_name, ordinal: positions.get(ordinal),
+    )
+
+    result = build_frame_context(
+        "L26_V001_f0004",
+        thumbnail_base_url="/media/thumbnails",
+        radius=1,
+    )
+
+    assert result.data.before_frames[0].frame_id == "L26_V001_f0002"
+    assert result.data.center_frame.frame_index == 83
+    assert result.data.center_frame.timestamp_ms == 3320
+    assert result.data.center_frame.fps == 25.0
+    assert result.data.after_frames[0].frame_id == "L26_V001_f0007"
+
+
+def test_build_frame_context_can_return_the_full_timeline(monkeypatch):
+    positions = {
+        ordinal: {
+            "frame_index": ordinal * 25,
+            "timestamp_ms": ordinal * 1_000,
+            "fps": 25.0,
+        }
+        for ordinal in range(1, 8)
+    }
+    monkeypatch.setattr(
+        "backend.utils.frame_id.get_keyframe_ordinals",
+        lambda _video_name: tuple(positions),
+    )
+    monkeypatch.setattr(
+        "backend.utils.frame_id.get_keyframe_position",
+        lambda _video_name, ordinal: positions.get(ordinal),
+    )
+
+    result = build_frame_context(
+        "L26_V001_f0004",
+        thumbnail_base_url="/media/thumbnails",
+        radius=None,
+    )
+
+    assert [item.frame_id for item in result.data.before_frames] == [
+        "L26_V001_f0001",
+        "L26_V001_f0002",
+        "L26_V001_f0003",
+    ]
+    assert [item.frame_id for item in result.data.after_frames] == [
+        "L26_V001_f0005",
+        "L26_V001_f0006",
+        "L26_V001_f0007",
+    ]

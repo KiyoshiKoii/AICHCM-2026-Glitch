@@ -109,6 +109,20 @@ export const searchTemporalEvents = async (
   return response.json();
 };
 
+export const getFrameTimeline = async (frameId) => {
+  const response = await fetch(`/api/v1/frames/timeline/${frameId}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Frame timeline failed with status ${response.status}`);
+  }
+  return response.json();
+};
+
 export const searchTemporalVideos = async (
   query,
   { summaryWeight = 0.75, kisWeight = 0.25 } = {},

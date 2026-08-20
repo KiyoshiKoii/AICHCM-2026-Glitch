@@ -23,7 +23,7 @@ function ResultGrid({ results, onCardDoubleClick, onCardClick }) {
           key={`${result.frame_id}-${index}`}
           result={result}
           onDoubleClick={onCardDoubleClick}
-          onClick={() => onCardClick?.(result.thumbnail_url)}
+          onClick={() => onCardClick?.(result)}
         />
       ))}
     </div>

@@ -17,3 +17,14 @@ async def frame_context(
         thumbnail_base_url=request.app.state.settings.thumbnail_base_url,
         radius=window,
     )
+
+
+@router.get("/timeline/{frame_id}", response_model=FrameContextResponse)
+async def frame_timeline(request: Request, frame_id: str) -> FrameContextResponse:
+    """Return every mapped keyframe in the selected video's timeline."""
+
+    return build_frame_context(
+        frame_id,
+        thumbnail_base_url=request.app.state.settings.thumbnail_base_url,
+        radius=None,
+    )
