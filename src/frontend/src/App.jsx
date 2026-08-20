@@ -5,6 +5,7 @@ import ResultGrid from './components/ResultGrid.jsx';
 import Pagination from './components/Pagination.jsx';
 import TimelineViewer from './components/TimelineViewer.jsx';
 import TemporalVideoCandidates from './components/TemporalVideoCandidates.jsx';
+import VideoFrameModal from './components/VideoFrameModal.jsx';
 import LoadingSpinner from './components/LoadingSpinner.jsx';
 import {
   answerVqa,
@@ -28,7 +29,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastQuery, setLastQuery] = useState(null);
   const [vqaQuestion, setVqaQuestion] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedFrame, setSelectedFrame] = useState(null);
   const [searchFilters, setSearchFilters] = useState({ batchIds: [], videoIds: [] });
   const [filterResetKey, setFilterResetKey] = useState(0);
   const [temporalVideoCandidates, setTemporalVideoCandidates] = useState([]);
@@ -48,6 +49,7 @@ function App() {
         : { mode: 'text', query: input, useRerank, weights, filters },
     );
     setVqaQuestion(null);
+    setSelectedFrame(null);
     setTemporalVideoCandidates([]);
     setSelectedTemporalVideo(null);
     try {
@@ -72,6 +74,7 @@ function App() {
     setCurrentPage(1);
     setLastQuery({ mode: 'vqa', query, question, useRerank });
     setVqaQuestion(question);
+    setSelectedFrame(null);
     setTemporalVideoCandidates([]);
     setSelectedTemporalVideo(null);
     setLlmResults([]);
@@ -106,6 +109,7 @@ function App() {
     setCurrentPage(1);
     setLastQuery({ mode: 'temporal-video', query, weights, filters });
     setVqaQuestion(null);
+    setSelectedFrame(null);
     setLlmResults([]);
     setResults([]);
     setFrameContext(null);
@@ -129,6 +133,7 @@ function App() {
     const scopedFilters = { ...filters, videoIds: [videoId] };
     setLastQuery({ mode: 'temporal-event', query, filters: scopedFilters });
     setVqaQuestion(null);
+    setSelectedFrame(null);
     setLlmResults([]);
     setResults([]);
     try {
@@ -194,6 +199,7 @@ function App() {
     setCurrentPage(1);
     setLastQuery(null);
     setVqaQuestion(null);
+    setSelectedFrame(null);
     setSearchFilters({ batchIds: [], videoIds: [] });
     setFilterResetKey((current) => current + 1);
     setTemporalVideoCandidates([]);
@@ -263,7 +269,7 @@ function App() {
                   <ResultGrid 
                     results={pageLlmResults} 
                     onCardDoubleClick={handleCardDoubleClick} 
-                    onCardClick={(url) => setSelectedImage(url)} 
+                    onCardClick={setSelectedFrame}
                   />
                   <hr style={{ margin: '2rem 1rem', borderColor: '#333' }} />
                   <h3 style={{ marginLeft: '1rem', color: '#888' }}>🔍 Kết quả RRF (Khoảng cách Vector)</h3>
@@ -272,7 +278,7 @@ function App() {
               <ResultGrid 
                 results={pageResults} 
                 onCardDoubleClick={handleCardDoubleClick} 
-                onCardClick={(url) => setSelectedImage(url)} 
+                onCardClick={setSelectedFrame}
               />
             </>
           )}
@@ -282,14 +288,7 @@ function App() {
             <TimelineViewer frameContext={frameContext} />
           )}
 
-          {selectedImage && (
-            <div className="image-modal-overlay" onClick={() => setSelectedImage(null)}>
-              <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
-                <button className="image-modal-close" onClick={() => setSelectedImage(null)}>&times;</button>
-                <img src={selectedImage} alt="Enlarged view" className="image-modal-img" />
-              </div>
-            </div>
-          )}
+          <VideoFrameModal result={selectedFrame} onClose={() => setSelectedFrame(null)} />
         </main>
       </div>
     </div>

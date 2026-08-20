@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import ResultGrid from './ResultGrid.jsx';
 
 const makeResult = (i, overrides = {}) => ({
@@ -39,5 +40,16 @@ describe('ResultGrid', () => {
     const { container } = render(<ResultGrid />);
     expect(screen.queryAllByRole('img')).toHaveLength(0);
     expect(container.querySelector('.result-grid')).toBeInTheDocument();
+  });
+
+  it('passes the complete result when a thumbnail is clicked', async () => {
+    const user = userEvent.setup();
+    const onCardClick = vi.fn();
+    const result = makeResult(12);
+    render(<ResultGrid results={[result]} onCardClick={onCardClick} />);
+
+    await user.click(screen.getByRole('img'));
+
+    expect(onCardClick).toHaveBeenCalledWith(result);
   });
 });
