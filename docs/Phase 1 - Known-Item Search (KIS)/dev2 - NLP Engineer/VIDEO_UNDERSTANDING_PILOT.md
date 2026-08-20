@@ -44,6 +44,17 @@ Run every video discovered from caption artifacts in one batch:
 python src/semantic_pipeline/video_understanding/cli.py --batch-id L22
 ```
 
+Run only an inclusive video-number range from one batch:
+
+```powershell
+python src/semantic_pipeline/video_understanding/cli.py `
+  --batch-id L22 `
+  --video-start 1 `
+  --video-end 100
+```
+
+`--video-start` and `--video-end` must be used together with `--batch-id`.
+
 ## Run with Gemini summarization
 
 The environment must provide `GEMINI_API_KEY`. The optional

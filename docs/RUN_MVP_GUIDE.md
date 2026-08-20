@@ -150,14 +150,14 @@ Khởi động Elasticsearch:
 **Git Bash**
 
 ```bash
-docker compose -f src/semantic_pipeline/retrieval/docker-compose.elasticsearch.yml up -d
+docker compose -f src/semantic_pipeline/retrieval/docker-compose.elasticsearch.yml up -d --wait
 docker compose -f src/semantic_pipeline/retrieval/docker-compose.elasticsearch.yml ps
 ```
 
 **PowerShell**
 
 ```powershell
-docker compose -f .\src\semantic_pipeline\retrieval\docker-compose.elasticsearch.yml up -d
+docker compose -f .\src\semantic_pipeline\retrieval\docker-compose.elasticsearch.yml up -d --wait
 docker compose -f .\src\semantic_pipeline\retrieval\docker-compose.elasticsearch.yml ps
 ```
 
@@ -205,6 +205,37 @@ Có thể lặp `--batch-id` để nạp nhiều batch trong cùng một lệnh.
 Bước này đọc các file
 `data/processed/video_understanding/LXX/LXX_VYYY/pilot/video_summary.json`.
 Chạy lại sau khi sinh thêm summary.
+
+Khi cần sinh summary theo một khoảng video trước khi nạp index, dùng
+`--video-start` và `--video-end` cùng `--batch-id`. Ví dụ dưới đây chỉ xử lý
+`L27_V001` đến `L27_V100`; `--resume` bỏ qua output có input chưa thay đổi.
+
+**Git Bash**
+
+```bash
+conda activate aichcm2026
+python src/semantic_pipeline/video_understanding/cli.py \
+  --batch-id L27 \
+  --video-start 1 \
+  --video-end 100 \
+  --llm \
+  --resume
+```
+
+**PowerShell**
+
+```powershell
+conda activate aichcm2026
+python .\src\semantic_pipeline\video_understanding\cli.py `
+  --batch-id L27 `
+  --video-start 1 `
+  --video-end 100 `
+  --llm `
+  --resume
+```
+
+Với L26 có thể thay `--llm` bằng `--llm-final-only` để chỉ gọi Gemini cho
+summary cuối. Không truyền range thì toàn bộ video có caption trong batch được xử lý.
 
 **Git Bash**
 
@@ -293,13 +324,15 @@ Visual Pipeline dùng Qdrant embedded nên lúc khởi động có thể cần n
 mất thời gian nếu local database lớn. Không chạy `database.py` đồng thời với
 server này.
 
-### Terminal 2 — Semantic Pipeline (`8002`)
+### Terminal 2 — Semantic Pipeline và Elasticsearch ASR (`8002`)
 
 **Git Bash**
 
 ```bash
 conda activate aichcm2026
-docker compose -f src/semantic_pipeline/retrieval/docker-compose.elasticsearch.yml up -d
+docker compose -f src/semantic_pipeline/retrieval/docker-compose.elasticsearch.yml up -d --wait
+PYTHONPATH=src python -m semantic_pipeline.retrieval.asr_cli bootstrap \
+  --asr-dir data/metadata/metadata_asr
 uvicorn semantic_pipeline.retrieval.api:app \
   --app-dir src \
   --host 127.0.0.1 \
@@ -310,15 +343,25 @@ uvicorn semantic_pipeline.retrieval.api:app \
 
 ```powershell
 conda activate aichcm2026
-docker compose -f .\src\semantic_pipeline\retrieval\docker-compose.elasticsearch.yml up -d
+docker compose -f .\src\semantic_pipeline\retrieval\docker-compose.elasticsearch.yml up -d --wait
+$env:PYTHONPATH='src'
+python -m semantic_pipeline.retrieval.asr_cli bootstrap `
+  --asr-dir .\data\metadata\metadata_asr
 uvicorn semantic_pipeline.retrieval.api:app `
   --app-dir .\src `
   --host 127.0.0.1 `
   --port 8002
 ```
 
-Semantic API mặc định đọc alias `semantic_frames`. Không cần đặt
-`PYTHONPATH` hoặc `ELASTICSEARCH_INDEX` khi chạy theo guide này.
+Lệnh `asr_cli bootstrap` tạo hoặc cập nhật index `semantic_asr_segments_v1` từ
+toàn bộ transcript trước khi Semantic API khởi động. Lệnh này idempotent, nhưng
+có thể bỏ qua trong các lần chạy hằng ngày nếu index đã tồn tại và thư mục ASR
+không thay đổi. Chạy lại sau khi thêm hoặc sửa ASR metadata; có thể thêm
+`--batch-id L26` để chỉ cập nhật một batch.
+
+Semantic API mặc định đọc alias frame `semantic_frames` và ASR index
+`semantic_asr_segments_v1`. Không cần đặt `ELASTICSEARCH_INDEX` khi chạy theo
+guide này. Biến `PYTHONPATH` ở trên chỉ phục vụ lệnh ASR CLI trong cùng terminal.
 
 ### Terminal 3 — Backend Gateway (`8000`)
 
