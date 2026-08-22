@@ -5,7 +5,8 @@ MVP gồm bốn dịch vụ:
 
 | Dịch vụ | Port | Vai trò |
 | --- | ---: | --- |
-| Visual Pipeline | `8001` | CLIP + Qdrant, tìm kiếm theo hình ảnh |
+| Visual Pipeline | `8001` | CLIP, tìm kiếm theo hình ảnh |
+| Qdrant | `6333` | Vector index của Visual Pipeline (Docker) |
 | Semantic Pipeline | `8002` | Elasticsearch, caption và TRAKE video selection |
 | Backend Gateway | `8000` | Phân tích query, hợp nhất kết quả, phục vụ media |
 | Frontend | `5173` | Web UI |
@@ -92,6 +93,7 @@ GEMINI_RERANK_MODEL=gemini-model-name
 GEMINI_VQA_MODEL=gemini-model-name
 GEMINI_VISUAL_MODEL=gemini-model-name
 VISUAL_CLIP_MODEL=openai/clip-vit-base-patch32
+QDRANT_URL=http://127.0.0.1:6333
 ```
 
 Không commit API key lên Git.
@@ -106,9 +108,9 @@ Không commit API key lên Git.
 | `data/npy_features/` | Vector CLIP đã trích xuất |
 | `data/metadata/caption/` | Caption/OCR cho Elasticsearch |
 | `data/processed/video_understanding/` | Summary/timeline cho TRAKE |
-| `src/visual_pipeline/local_qdrant_db/` | Qdrant local của Visual Pipeline |
+| Docker volume `visual_qdrant_data` | Qdrant index của Visual Pipeline |
 
-Keyframes, videos, NPY features và local Qdrant không được Git quản lý đầy đủ.
+Keyframes, videos, NPY features và Qdrant index không được Git quản lý đầy đủ.
 Thành viên mới có thể tải dữ liệu dùng chung từ
 [Google Sheet dữ liệu của nhóm](https://docs.google.com/spreadsheets/d/1rfn1fieTThS_Ki3SIoJ6uXOx2AhMq7wGCak6W4jZyZM/edit?gid=0#gid=0).
 
@@ -119,10 +121,27 @@ Thành viên mới có thể tải dữ liệu dùng chung từ
 Không chạy lại toàn bộ phần này trong mỗi lần khởi động. Chỉ chạy khi setup máy
 mới hoặc khi dữ liệu/index đã thay đổi.
 
-### 2.1. Tạo CLIP features và Qdrant local
+### 2.1. Tạo CLIP features và Qdrant index
 
-Nếu đã có cả `data/npy_features/` và
-`src/visual_pipeline/local_qdrant_db/`, bỏ qua bước này.
+Qdrant chạy bằng Docker để không phải mở embedded database lớn trên Windows mỗi
+lần bật Visual Pipeline. Bật container trước, sau đó mới tạo/cập nhật index.
+
+**Git Bash**
+
+```bash
+docker compose -f src/visual_pipeline/docker-compose.qdrant.yml up -d
+curl -f http://127.0.0.1:6333/readyz
+```
+
+**PowerShell**
+
+```powershell
+docker compose -f .\src\visual_pipeline\docker-compose.qdrant.yml up -d
+Invoke-RestMethod http://127.0.0.1:6333/readyz
+```
+
+Nếu đã có `data/npy_features/` và Qdrant volume từ lần chạy trước, chỉ cần bật
+container; không cần chạy lại `extractor.py` hay `database.py`.
 
 **Git Bash**
 
@@ -141,7 +160,8 @@ python .\src\visual_pipeline\database.py
 ```
 
 > `database.py` tạo lại collection Qdrant từ các file NPY. Chỉ chạy lại khi
-> cần cập nhật Visual index và phải tắt Visual Pipeline trước khi chạy.
+> cần cập nhật Visual index và phải tắt Visual Pipeline trước khi chạy. Không
+> chạy đồng thời hai lệnh `database.py`, vì lệnh này xoá rồi nạp lại collection.
 
 ### 2.2. Tạo Elasticsearch frame index
 
@@ -320,9 +340,10 @@ conda activate aichcm2026
 python .\src\visual_pipeline\server.py
 ```
 
-Visual Pipeline dùng Qdrant embedded nên lúc khởi động có thể cần nhiều RAM và
-mất thời gian nếu local database lớn. Không chạy `database.py` đồng thời với
-server này.
+Đảm bảo Qdrant Docker đã chạy và `.env` có
+`QDRANT_URL=http://127.0.0.1:6333` trước khi mở Visual Pipeline. Qdrant dùng
+named volume nên khởi động API không còn phải mở RocksDB local nhiều GB. Không
+chạy `database.py` đồng thời với server này.
 
 ### Terminal 2 — Semantic Pipeline và Elasticsearch ASR (`8002`)
 
@@ -418,6 +439,7 @@ Backend port `8000`.
 
 ```bash
 curl -f http://127.0.0.1:9200/_cluster/health
+curl -f http://127.0.0.1:6333/readyz
 curl -f http://127.0.0.1:8001/docs >/dev/null
 curl -f http://127.0.0.1:8002/health
 curl -f http://127.0.0.1:8000/docs >/dev/null
@@ -428,6 +450,7 @@ curl -f http://127.0.0.1:5173/ >/dev/null
 
 ```powershell
 Invoke-RestMethod http://127.0.0.1:9200/_cluster/health
+Invoke-RestMethod http://127.0.0.1:6333/readyz
 Invoke-WebRequest http://127.0.0.1:8001/docs -UseBasicParsing
 Invoke-RestMethod http://127.0.0.1:8002/health
 Invoke-WebRequest http://127.0.0.1:8000/docs -UseBasicParsing
@@ -478,21 +501,23 @@ Muốn dùng checkpoint riêng, thêm
 ## 6. Tắt hệ thống
 
 Trong bốn terminal dịch vụ, nhấn `Ctrl+C`. Đảm bảo Visual Pipeline đã dừng hoàn
-toàn để giải phóng VRAM và file lock của Qdrant.
+toàn để giải phóng VRAM.
 
-Sau đó tắt Elasticsearch:
+Sau đó tắt Elasticsearch và Qdrant:
 
 **Git Bash**
 
 ```bash
 docker compose -f src/semantic_pipeline/retrieval/docker-compose.elasticsearch.yml down
+docker compose -f src/visual_pipeline/docker-compose.qdrant.yml down
 ```
 
 **PowerShell**
 
 ```powershell
 docker compose -f .\src\semantic_pipeline\retrieval\docker-compose.elasticsearch.yml down
+docker compose -f .\src\visual_pipeline\docker-compose.qdrant.yml down
 ```
 
 Lệnh `down` giữ nguyên Docker volume. Không thêm `-v` trừ khi thực sự muốn xóa
-toàn bộ Elasticsearch data và tạo index lại từ đầu.
+toàn bộ Elasticsearch hoặc Qdrant data và tạo index lại từ đầu.

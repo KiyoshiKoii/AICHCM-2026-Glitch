@@ -19,6 +19,8 @@ Cấu trúc thư mục chuẩn (mặc định):
 import os
 from pathlib import Path
 
+from qdrant_client import QdrantClient
+
 # ──────────────────────────────────────────────────────────────────────────────
 # ROOT — thư mục chứa script này (src/visual_pipeline/)
 # ──────────────────────────────────────────────────────────────────────────────
@@ -56,16 +58,40 @@ KEYFRAME_DIR = os.path.join(DATA_DIR, "keyframes")
 # Thư mục lưu file .npy (vector features) — tự tạo nếu chưa có
 NPY_DIR = os.path.join(DATA_DIR, "npy_features")
 
-# Thư mục lưu Qdrant local database — tự tạo nếu chưa có
+# Thư mục lưu Qdrant local database — chỉ dùng khi không đặt QDRANT_URL.
 QDRANT_DB_PATH = os.path.join(BASE_DIR, "local_qdrant_db")
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Cấu hình Model & DB
 # ──────────────────────────────────────────────────────────────────────────────
 CLIP_MODEL_ID = _get_env_value("VISUAL_CLIP_MODEL") or "openai/clip-vit-base-patch32"
+# Khi chạy Qdrant bằng Docker, đặt ví dụ:
+#   QDRANT_URL=http://127.0.0.1:6333
+# Không đặt biến này sẽ giữ tương thích với local embedded database cũ.
+QDRANT_URL = _get_env_value("QDRANT_URL")
+QDRANT_TIMEOUT_SECONDS = float(_get_env_value("QDRANT_TIMEOUT_SECONDS") or "10")
 COLLECTION_NAME = "kis_images"
 VECTOR_SIZE = 512
 BATCH_SIZE = 32
+
+
+def qdrant_target_description() -> str:
+    """Return a safe, human-readable description of the active Qdrant target."""
+    return QDRANT_URL or QDRANT_DB_PATH
+
+
+def create_qdrant_client() -> QdrantClient:
+    """Create a Qdrant client for Docker/remote Qdrant or the legacy local DB.
+
+    A URL is deliberately opt-in so existing environments keep working until
+    they add ``QDRANT_URL``.  Docker mode avoids opening the multi-GB embedded
+    RocksDB from every Python process on Windows.
+    """
+    if QDRANT_URL:
+        return QdrantClient(url=QDRANT_URL, timeout=QDRANT_TIMEOUT_SECONDS)
+
+    os.makedirs(QDRANT_DB_PATH, exist_ok=True)
+    return QdrantClient(path=QDRANT_DB_PATH)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Tiện ích: In tóm tắt cấu hình khi cần debug
@@ -79,7 +105,8 @@ def print_config():
     print(f"  DATA_DIR      : {DATA_DIR}")
     print(f"  KEYFRAME_DIR  : {KEYFRAME_DIR}")
     print(f"  NPY_DIR       : {NPY_DIR}")
-    print(f"  QDRANT_DB_PATH: {QDRANT_DB_PATH}")
+    print(f"  QDRANT TARGET : {qdrant_target_description()}")
+    print(f"  QDRANT MODE   : {'Docker/remote' if QDRANT_URL else 'local embedded'}")
     print(f"  MODEL         : {CLIP_MODEL_ID}")
     print(f"  COLLECTION    : {COLLECTION_NAME}")
     print(f"  VECTOR_SIZE   : {VECTOR_SIZE}")
@@ -91,7 +118,7 @@ def print_config():
     dirs = {
         "keyframes": KEYFRAME_DIR,
         "npy_features": NPY_DIR,
-        "local_qdrant_db": QDRANT_DB_PATH,
+        "local_qdrant_db (legacy)": QDRANT_DB_PATH,
     }
     for name, path in dirs.items():
         if os.path.exists(path):

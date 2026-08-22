@@ -2,13 +2,12 @@ import os
 import sys
 import uuid
 import numpy as np
-from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 
 from config import (
-    KEYFRAME_DIR, NPY_DIR, QDRANT_DB_PATH,
+    KEYFRAME_DIR, NPY_DIR,
     COLLECTION_NAME, VECTOR_SIZE,
-    print_config
+    create_qdrant_client, print_config, qdrant_target_description,
 )
 
 # Fix encoding cho in tiếng Việt trên Terminal Windows
@@ -36,11 +35,10 @@ if not npy_files:
     sys.exit(0)
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Khởi tạo Qdrant Client (Local Storage — không cần Docker)
+# Khởi tạo Qdrant Client (Docker/remote khi có QDRANT_URL, nếu không local).
 # ──────────────────────────────────────────────────────────────────────────────
-os.makedirs(QDRANT_DB_PATH, exist_ok=True)
-print(f"Đang khởi tạo Qdrant DB tại: {QDRANT_DB_PATH}")
-client = QdrantClient(path=QDRANT_DB_PATH)
+print(f"Đang khởi tạo Qdrant DB tại: {qdrant_target_description()}")
+client = create_qdrant_client()
 
 # Reset Collection (xóa & tạo lại để tránh trùng dữ liệu)
 if client.collection_exists(collection_name=COLLECTION_NAME):
@@ -133,7 +131,7 @@ if points_buffer:
 collection_info = client.get_collection(collection_name=COLLECTION_NAME)
 print(f"\n{'='*55}")
 print(f"✅ HOÀN TẤT! DB đang lưu: {collection_info.points_count} vector")
-print(f"   DB path: {QDRANT_DB_PATH}")
+print(f"   DB target: {qdrant_target_description()}")
 
 # Đóng client chủ động để tránh cảnh báo rác của Python khi thoát trên Windows
 client.close()

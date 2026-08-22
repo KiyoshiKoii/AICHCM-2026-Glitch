@@ -1,0 +1,12 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "127.0.0.1:6333:6333" # HTTP API used by visual_pipeline
+      - "127.0.0.1:6334:6334" # gRPC API, useful for diagnostics
+    volumes:
+      - visual_qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+volumes:
+  visual_qdrant_data:

@@ -8,13 +8,26 @@ import uvicorn
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from transformers import CLIPProcessor, CLIPModel
-from qdrant_client import QdrantClient
 from qdrant_client.models import FieldCondition, Filter, MatchAny
 
 try:
-    from config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME, KEYFRAME_DIR
+    from config import (
+        CLIP_MODEL_ID,
+        COLLECTION_NAME,
+        KEYFRAME_DIR,
+        create_qdrant_client,
+        qdrant_target_description,
+    )
+    from text_processing import prepare_clip_text_inputs
 except ImportError:
-    from .config import CLIP_MODEL_ID, QDRANT_DB_PATH, COLLECTION_NAME, KEYFRAME_DIR
+    from .config import (
+        CLIP_MODEL_ID,
+        COLLECTION_NAME,
+        KEYFRAME_DIR,
+        create_qdrant_client,
+        qdrant_target_description,
+    )
+    from .text_processing import prepare_clip_text_inputs
 
 # Fix encoding issue for Vietnamese characters in Windows Terminal
 if sys.stdout.encoding != 'utf-8':
@@ -30,8 +43,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 print(f"Model CLIP đã sẵn sàng trên {device.upper()}.")
 
-print(f"Đang kết nối Qdrant DB tại: {QDRANT_DB_PATH}")
-client = QdrantClient(path=QDRANT_DB_PATH)
+print(f"Đang kết nối Qdrant DB tại: {qdrant_target_description()}")
+client = create_qdrant_client()
 print("Qdrant Client đã sẵn sàng.")
 
 class SearchRequest(BaseModel):
@@ -144,7 +157,7 @@ async def search_visual(req: SearchRequest):
         if not prompts:
             raise ValueError("visual_prompt không được để trống")
 
-        inputs = processor(text=prompts, return_tensors="pt", padding=True).to(device)
+        inputs = prepare_clip_text_inputs(processor, model, prompts, device)
 
         with torch.no_grad():
             # get_text_features() symmetric với get_image_features() trong extractor.py
