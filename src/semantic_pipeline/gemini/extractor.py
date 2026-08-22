@@ -40,7 +40,11 @@ from ..core.frame_deduplication import (
 )
 from ..core.frame_id import frame_id_from_path, parse_frame_id
 from ..core.json_io import write_json_atomically
-from ..core.request_limits import is_rate_limit_error, is_transient_service_error
+from ..core.request_limits import (
+    is_daily_quota_error,
+    is_rate_limit_error,
+    is_transient_service_error,
+)
 from ..core.spatial_reasoning import (
     RawDetection,
     infer_spatial_relations,
@@ -738,6 +742,32 @@ class GeminiVisualExtractor:
             youtube_metadata_path
         )
 
+    def _generation_config(
+        self,
+        *,
+        response_schema: dict[str, Any],
+        max_output_tokens: int,
+    ) -> Any:
+        """Build a deterministic extraction config with minimal reasoning.
+
+        Gemini 3 models use ``thinking_level`` rather than the legacy
+        ``thinking_budget`` parameter.  Caption/OCR extraction is
+        schema-bound perception work, so request the minimal supported
+        reasoning level and reserve output capacity for the JSON payload.
+        """
+
+        config: dict[str, Any] = {
+            "response_mime_type": "application/json",
+            "response_schema": response_schema,
+            "temperature": 0.0,
+            "max_output_tokens": max_output_tokens,
+        }
+        if self.model_name.startswith("gemini-3"):
+            config["thinking_config"] = types.ThinkingConfig(thinking_level="minimal")
+        elif self.model_name.startswith("gemini-2.5"):
+            config["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+        return types.GenerateContentConfig(**config)
+
     @staticmethod
     def batch_paths(
         image_paths: Iterable[Path],
@@ -806,17 +836,20 @@ class GeminiVisualExtractor:
         response = self.client.models.generate_content(
             model=self.model_name,
             contents=contents,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
+            config=self._generation_config(
                 response_schema=GEMINI_RESPONSE_SCHEMA,
-                temperature=0.0,
                 max_output_tokens=self.max_output_tokens,
             ),
         )
         response_text = getattr(response, "text", None)
         if not isinstance(response_text, str) or not response_text.strip():
+            candidates = getattr(response, "candidates", None) or []
+            finish_reasons = [
+                str(getattr(candidate, "finish_reason", "unknown")) for candidate in candidates
+            ]
             raise RuntimeError(
-                "Gemini returned empty response text; the batch can be retried"
+                "Gemini returned empty response text; "
+                f"finish_reasons={finish_reasons or ['none']}; the batch can be retried"
             )
         payload, malformed_detections = sanitise_gemini_payload(response_text)
         if malformed_detections:
@@ -904,10 +937,8 @@ class GeminiVisualExtractor:
         response = self.client.models.generate_content(
             model=self.model_name,
             contents=contents,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
+            config=self._generation_config(
                 response_schema=GEMINI_OCR_RESPONSE_SCHEMA,
-                temperature=0.0,
                 max_output_tokens=min(self.max_output_tokens, 8_192),
             ),
         )
@@ -1257,7 +1288,7 @@ def run_extraction(
         *,
         mode: str,
     ) -> None:
-        nonlocal processed, api_frames, completed_batches
+        nonlocal processed, api_frames, completed_batches, daily_quota_reported
         next_batch_index = 0
         nonlocal previous_window_started
         transient_retry_counts: dict[tuple[str, str, tuple[str, ...]], int] = {}
@@ -1302,6 +1333,14 @@ def run_extraction(
                     try:
                         records = future.result()
                     except Exception as error:
+                        if is_daily_quota_error(error):
+                            daily_quota_reported = True
+                            unexpected_error = RuntimeError(
+                                "Gemini daily request quota is exhausted for the configured model; "
+                                "wait for the provider reset or choose a model with available quota. "
+                                f"Original error: {error}"
+                            )
+                            continue
                         if is_rate_limit_error(error):
                             attempt = rate_retry_counts.get(retry_key, 0) + 1
                             if attempt <= MAX_RATE_LIMIT_RETRIES:

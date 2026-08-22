@@ -503,9 +503,41 @@ def test_load_visual_model_requires_environment(monkeypatch):
         load_gemini_visual_model()
 
 
+def test_gemini_3_extraction_uses_minimal_thinking_level():
+    extractor = object.__new__(GeminiVisualExtractor)
+    extractor.model_name = "gemini-3.5-flash-lite"
+
+    config = extractor._generation_config(
+        response_schema=gemini_visual_extractor.GEMINI_RESPONSE_SCHEMA,
+        max_output_tokens=8_192,
+    )
+
+    assert config.thinking_config.thinking_level.value == "MINIMAL"
+    assert config.thinking_config.thinking_budget is None
+    assert config.max_output_tokens == 8_192
+
+
+def test_legacy_extraction_model_keeps_default_thinking_config():
+    extractor = object.__new__(GeminiVisualExtractor)
+    extractor.model_name = "gemini-2.0-flash"
+
+    config = extractor._generation_config(
+        response_schema=gemini_visual_extractor.GEMINI_RESPONSE_SCHEMA,
+        max_output_tokens=8_192,
+    )
+
+    assert config.thinking_config is None
+
+
 def test_distinguishes_daily_quota_errors_from_rpm_errors():
     assert is_daily_quota_error(
         RuntimeError("429 quota_exceeded GenerateRequestsPerDayPerProject")
+    )
+    assert is_daily_quota_error(
+        RuntimeError("429 RESOURCE_EXHAUSTED GenerateRequestsPerDayPerProject RetryInfo")
+    )
+    assert not is_rate_limit_error(
+        RuntimeError("429 RESOURCE_EXHAUSTED GenerateRequestsPerDayPerProject RetryInfo")
     )
     assert not is_daily_quota_error(
         RuntimeError("429 quota_exceeded GenerateRequestsPerMinutePerProject")

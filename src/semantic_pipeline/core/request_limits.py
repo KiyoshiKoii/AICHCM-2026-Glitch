@@ -80,10 +80,6 @@ class DailyRequestBudget:
 def is_daily_quota_error(error: Exception) -> bool:
     """Recognize Gemini's explicit daily-quota response without stopping on RPM."""
     message = str(error).casefold().replace("-", "_").replace(" ", "_")
-    # A generic ``quota_exceeded``/``RESOURCE_EXHAUSTED`` token is also used
-    # for RPM throttling. Minute-level metrics must always take the retry path.
-    if is_rate_limit_error(error):
-        return False
     daily_markers = (
         "requestsperday",
         "requests_per_day",
@@ -97,6 +93,8 @@ def is_daily_quota_error(error: Exception) -> bool:
 
 def is_rate_limit_error(error: Exception) -> bool:
     """Recognize per-minute/per-second quota responses that are safe to retry."""
+    if is_daily_quota_error(error):
+        return False
     message = str(error).casefold().replace("-", "_").replace(" ", "_")
     rate_markers = (
         "rate_limit_exceeded",
