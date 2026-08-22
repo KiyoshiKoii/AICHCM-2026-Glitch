@@ -114,7 +114,16 @@ def test_gemini_response_schema_uses_only_supported_minimal_fields():
                     "properties": {
                         "subject_english_phrase": {"type": "STRING"},
                         "subject_vietnamese_phrase": {"type": "STRING"},
-                        "predicate": {"type": "STRING"},
+                        "predicate": {
+                            "type": "STRING",
+                            "enum": [
+                                "left_of",
+                                "right_of",
+                                "above",
+                                "below",
+                                "overlapping",
+                            ],
+                        },
                         "object_english_phrase": {"type": "STRING"},
                         "object_vietnamese_phrase": {"type": "STRING"},
                     },
@@ -212,6 +221,65 @@ def test_parse_llm_json_keeps_subject_action_object_bound():
     assert interaction.action_english_phrase == "riding"
     assert interaction.subject_english_phrase == "person wearing a blue shirt"
     assert interaction.object_english_phrase == "blue motorcycle"
+
+
+def test_parse_llm_json_discards_only_unsupported_spatial_predicate():
+    parsed = parse_llm_json(
+        json.dumps(
+            {
+                "visual_prompt": "three cyclists in a line with one rider between two others",
+                "semantic_keywords": ["three cyclists", "cyclists in a line"],
+                "object_queries": [],
+                "spatial_queries": [
+                    {
+                        "subject_english_phrase": "middle cyclist",
+                        "subject_vietnamese_phrase": "tay đua ở giữa",
+                        "predicate": "between",
+                        "object_english_phrase": "two other cyclists",
+                        "object_vietnamese_phrase": "hai tay đua còn lại",
+                    }
+                ],
+                "interaction_queries": [],
+                "ocr_queries": [],
+                "program_queries": [],
+            },
+            ensure_ascii=False,
+        )
+    )
+
+    assert parsed.visual_prompt == "three cyclists in a line with one rider between two others"
+    assert parsed.semantic_keywords == ["three cyclists", "cyclists in a line"]
+    assert parsed.spatial_queries == []
+
+
+def test_parse_llm_json_discards_only_overlong_interaction_phrase():
+    parsed = parse_llm_json(
+        json.dumps(
+            {
+                "visual_prompt": "a man sitting beside a colorful bookshelf",
+                "semantic_keywords": ["seated man", "colorful bookshelf"],
+                "object_queries": [],
+                "spatial_queries": [],
+                "interaction_queries": [
+                    {
+                        "subject_english_phrase": "man",
+                        "subject_vietnamese_phrase": "nam giới",
+                        "action_english_phrase": "sitting beside",
+                        "action_vietnamese_phrase": "đang ngồi cạnh " + ("kệ sách nhiều màu " * 20),
+                        "object_english_phrase": "colorful bookshelf",
+                        "object_vietnamese_phrase": "kệ sách nhiều màu sắc",
+                    }
+                ],
+                "ocr_queries": [],
+                "program_queries": [],
+            },
+            ensure_ascii=False,
+        )
+    )
+
+    assert parsed.visual_prompt == "a man sitting beside a colorful bookshelf"
+    assert parsed.semantic_keywords == ["seated man", "colorful bookshelf"]
+    assert parsed.interaction_queries == []
 
 
 def test_fallback_parser_extracts_explicit_vietnamese_interaction():

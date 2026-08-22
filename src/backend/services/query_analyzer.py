@@ -9,13 +9,22 @@ import httpx
 from pydantic import ValidationError
 
 from backend.core.errors import LLMParserError
-from backend.schemas.search import ParsedQuery
+from backend.schemas.search import InteractionQuery, ObjectQuery, ParsedQuery, SpatialQuery
 
 try:
     from google import genai
     from google.genai import types
 except ImportError:
     genai = None
+
+
+SUPPORTED_SPATIAL_PREDICATES = (
+    "left_of",
+    "right_of",
+    "above",
+    "below",
+    "overlapping",
+)
 
 SYSTEM_PROMPT = """You are a query planner for a Vietnamese video retrieval system.
 Convert the user's Vietnamese query into the JSON fields required by the supplied schema.
@@ -53,7 +62,8 @@ Convert the user's Vietnamese query into the JSON fields required by the supplie
   query says that one entity performs an action involving another entity, such as riding a
   motorcycle, holding an umbrella, carrying a box, escorting a person, operating a screen,
   or feeding an animal. Keep attributes bound to the correct subject/object and keep the
-  action separate. Do not emit an interaction when entities are merely nearby or both occur
+  action separate. Each action phrase must be a concise verb phrase (normally 1-8 words),
+  never a copy or summary of the full query. Do not emit an interaction when entities are merely nearby or both occur
   in the scene. For example, "a person riding a blue motorcycle" becomes one interaction;
   "a person standing beside a blue motorcycle" belongs in spatial_queries instead. The
   interaction is semantic and does not require inventing a spatial predicate.
@@ -109,7 +119,10 @@ GEMINI_QUERY_RESPONSE_SCHEMA = {
                 "properties": {
                     "subject_english_phrase": {"type": "STRING"},
                     "subject_vietnamese_phrase": {"type": "STRING"},
-                    "predicate": {"type": "STRING"},
+                    "predicate": {
+                        "type": "STRING",
+                        "enum": list(SUPPORTED_SPATIAL_PREDICATES),
+                    },
                     "object_english_phrase": {"type": "STRING"},
                     "object_vietnamese_phrase": {"type": "STRING"},
                 },
@@ -219,12 +232,44 @@ def parse_llm_json(raw_content: str) -> ParsedQuery:
     for candidate in candidates:
         if not isinstance(candidate, dict):
             continue
+        candidate = _discard_invalid_structured_queries(candidate)
         try:
             return ParsedQuery.model_validate(candidate)
         except ValidationError as exc:
             raise LLMParserError(f"LLM JSON does not match the required schema: {exc}") from exc
 
     raise LLMParserError("LLM response does not contain a valid JSON object")
+
+
+def _discard_invalid_structured_queries(candidate: dict[str, Any]) -> dict[str, Any]:
+    """Keep a useful Gemini plan when one optional structured item is invalid.
+
+    Object, spatial, and interaction clauses are optional retrieval boosts.
+    Gemini occasionally emits an unsupported predicate or copies the whole
+    query into a phrase field.  Drop only such an item instead of discarding
+    the valid visual prompt and semantic keywords.  The original user query is
+    still appended by the search orchestrator.
+    """
+
+    query_models = {
+        "object_queries": ObjectQuery,
+        "spatial_queries": SpatialQuery,
+        "interaction_queries": InteractionQuery,
+    }
+    sanitized = dict(candidate)
+    changed = False
+    for field_name, model_type in query_models.items():
+        raw_items = candidate.get(field_name)
+        if not isinstance(raw_items, list):
+            continue
+        valid_items: list[dict[str, Any]] = []
+        for item in raw_items:
+            try:
+                valid_items.append(model_type.model_validate(item).model_dump(mode="json"))
+            except (ValidationError, TypeError, ValueError):
+                changed = True
+        sanitized[field_name] = valid_items
+    return sanitized if changed else candidate
 
 
 def _fold_vietnamese(value: str) -> str:
