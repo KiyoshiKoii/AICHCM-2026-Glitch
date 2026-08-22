@@ -4,11 +4,17 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 import time
 from collections import Counter
 from typing import Any, Iterable
 
 from semantic_pipeline.core.environment import get_env_value
+from semantic_pipeline.core.request_limits import (
+    is_daily_quota_error,
+    is_rate_limit_error,
+    is_transient_service_error,
+)
 
 from .models import ASRSegment, MicroScene, RuntimeFrame, StoryCandidate
 from .llm_schemas import VIDEO_SUMMARY_SCHEMA, WINDOW_SUMMARY_SCHEMA
@@ -307,7 +313,8 @@ class VideoSummarizer:
             response_json_schema=schema,
         )
         response = None
-        for attempt, delay in enumerate((0.0, 5.0, 15.0, 30.0, 60.0)):
+        retry_delays = (0.0, 5.0, 15.0, 30.0, 60.0)
+        for attempt, delay in enumerate(retry_delays):
             if delay:
                 time.sleep(delay)
             self._last_request_at = time.monotonic()
@@ -320,10 +327,20 @@ class VideoSummarizer:
                 )
                 break
             except Exception as exc:
-                message = str(exc)
-                quota_error = "429" in message or "RESOURCE_EXHAUSTED" in message
-                if not quota_error or attempt == 4:
+                if is_daily_quota_error(exc):
+                    raise RuntimeError(
+                        "Gemini daily request quota is exhausted for the configured summary model; "
+                        "wait for the provider reset or choose a model with available quota."
+                    ) from exc
+                retryable = is_rate_limit_error(exc) or is_transient_service_error(exc)
+                if not retryable or attempt == len(retry_delays) - 1:
                     raise
+                next_delay = retry_delays[attempt + 1]
+                print(
+                    f"Gemini {response_kind} temporarily unavailable; "
+                    f"retrying attempt {attempt + 2}/{len(retry_delays)} in {next_delay:.0f}s.",
+                    file=sys.stderr,
+                )
         if response is None:  # pragma: no cover - defensive for unusual clients.
             raise RuntimeError(f"Gemini {response_kind} request returned no response")
         text = getattr(response, "text", None)

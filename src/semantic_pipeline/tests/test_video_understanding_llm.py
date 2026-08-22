@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from types import SimpleNamespace
+
 import pytest
 
 from semantic_pipeline.video_understanding.llm_schemas import (
@@ -203,6 +205,36 @@ def test_final_only_mode_builds_window_candidates_without_llm() -> None:
 
     assert len(candidates) == 1
     assert candidates[0].objects == ["cook", "mushroom", "bowl"]
+
+
+def test_summary_retries_temporary_gemini_overload(monkeypatch) -> None:
+    responses = [
+        RuntimeError("503 UNAVAILABLE model is currently experiencing high demand"),
+        SimpleNamespace(text='{"events": []}'),
+    ]
+
+    class FakeModels:
+        def generate_content(self, **_kwargs):
+            result = responses.pop(0)
+            if isinstance(result, Exception):
+                raise result
+            return result
+
+    summarizer = object.__new__(VideoSummarizer)
+    summarizer.client = SimpleNamespace(models=FakeModels())
+    summarizer.model = "gemini-3.5-flash-lite"
+    summarizer._last_request_at = 0.0
+    summarizer._request_interval_seconds = 0.0
+    summarizer.request_count = 0
+
+    monkeypatch.setattr(
+        "semantic_pipeline.video_understanding.summarizer.types",
+        SimpleNamespace(GenerateContentConfig=lambda **kwargs: kwargs),
+    )
+    monkeypatch.setattr("semantic_pipeline.video_understanding.summarizer.time.sleep", lambda _delay: None)
+
+    assert summarizer._generate_json("prompt", schema={}, response_kind="window") == {"events": []}
+    assert summarizer.request_count == 2
 
 
 def test_program_intro_is_not_a_news_event() -> None:
