@@ -6,6 +6,7 @@ function ImageCard({ result = {}, onDoubleClick, onClick }) {
     frame_index: frameIndex,
     answer,
     confidence,
+    event_id: eventId,
     metadata = {},
   } = result;
 
@@ -26,6 +27,10 @@ function ImageCard({ result = {}, onDoubleClick, onClick }) {
   };
   const hasAsrRange = Number.isFinite(Number(metadata.asr_start_ms))
     && Number.isFinite(Number(metadata.asr_end_ms));
+  const temporalEventId = eventId || metadata.event_id;
+  const temporalCandidateRank = metadata.anchor_type === 'kis_candidate'
+    ? metadata.rank
+    : null;
 
   return (
     <figure
@@ -35,8 +40,19 @@ function ImageCard({ result = {}, onDoubleClick, onClick }) {
     >
       <img src={thumbnailUrl} alt={frameId ?? 'unknown frame'} loading="lazy" />
       <figcaption>
+        {temporalEventId && (
+          <span className="temporal-event-badge">
+            {temporalEventId}{temporalCandidateRank ? ` · KIS #${temporalCandidateRank}` : ''}
+          </span>
+        )}
         <span className="video-name">{videoLabel}</span>
         <span className="timestamp">{frameDisplay}</span>
+        {metadata.event_description && (
+          <span className="temporal-event-description">{metadata.event_description}</span>
+        )}
+        {metadata.caption && metadata.anchor_type === 'kis_candidate' && (
+          <span className="temporal-event-caption">{metadata.caption}</span>
+        )}
         {hasAsrRange && (
           <span className="asr-time-range">
             Audio {formatTimestamp(metadata.asr_start_ms)}–{formatTimestamp(metadata.asr_end_ms)}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import ResultGrid from './components/ResultGrid.jsx';
@@ -11,17 +11,15 @@ import {
   answerVqa,
   searchByText,
   searchAsr,
-  searchByImage,
   searchTemporalEvents,
   searchTemporalVideos,
   getFrameContext,
 } from './api/apiClient.js';
 import './App.css';
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 15;
 
 function App() {
-  const [dataset, setDataset] = useState('V3C1');
   const [results, setResults] = useState([]);
   const [llmResults, setLlmResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -32,9 +30,32 @@ function App() {
   const [vqaQuestion, setVqaQuestion] = useState(null);
   const [selectedFrame, setSelectedFrame] = useState(null);
   const [searchFilters, setSearchFilters] = useState({ batchIds: [], videoIds: [] });
-  const [filterResetKey, setFilterResetKey] = useState(0);
   const [temporalVideoCandidates, setTemporalVideoCandidates] = useState([]);
   const [selectedTemporalVideo, setSelectedTemporalVideo] = useState(null);
+  const activeSearchController = useRef(null);
+
+  const beginSearch = () => {
+    activeSearchController.current?.abort();
+    const controller = new AbortController();
+    activeSearchController.current = controller;
+    setIsLoading(true);
+    return controller;
+  };
+
+  const finishSearch = (controller) => {
+    if (activeSearchController.current === controller) {
+      activeSearchController.current = null;
+      setIsLoading(false);
+    }
+  };
+
+  const isAborted = (error) => error?.name === 'AbortError';
+
+  const cancelSearch = () => {
+    activeSearchController.current?.abort();
+    activeSearchController.current = null;
+    setIsLoading(false);
+  };
 
   const runSearch = async (
     input,
@@ -42,36 +63,36 @@ function App() {
     weights = { textWeight: 0.5, visualWeight: 0.5 },
     filters = searchFilters,
   ) => {
-    setIsLoading(true);
+    const controller = beginSearch();
     setCurrentPage(1);
-    setLastQuery(
-      input instanceof File
-        ? input
-        : { mode: 'text', query: input, useRerank, weights, filters },
-    );
+    setLastQuery({ mode: 'text', query: input, useRerank, weights, filters });
     setVqaQuestion(null);
     setSelectedFrame(null);
     setTemporalVideoCandidates([]);
     setSelectedTemporalVideo(null);
     try {
-      let response;
-      if (input instanceof File) {
-        response = await searchByImage(input);
-      } else {
-        response = await searchByText(input, 100, useRerank, weights, filters);
-      }
+      const response = await searchByText(
+        input,
+        100,
+        useRerank,
+        weights,
+        filters,
+        controller.signal,
+      );
+      if (activeSearchController.current !== controller) return;
       setResults(response.data.results || []);
       setLlmResults(response.data.llm_reranked_results || []);
     } catch (err) {
+      if (isAborted(err)) return;
       console.error(err);
       alert('Lỗi trong quá trình tìm kiếm! Xem console để biết thêm chi tiết.');
     } finally {
-      setIsLoading(false);
+      finishSearch(controller);
     }
   };
 
   const runVqaSearch = async ({ query, question, useRerank = false }) => {
-    setIsLoading(true);
+    const controller = beginSearch();
     setCurrentPage(1);
     setLastQuery({ mode: 'vqa', query, question, useRerank });
     setVqaQuestion(question);
@@ -81,7 +102,8 @@ function App() {
     setLlmResults([]);
     setResults([]);
     try {
-      const response = await answerVqa(query, question, 50, 10, useRerank);
+      const response = await answerVqa(query, question, 50, 10, useRerank, controller.signal);
+      if (activeSearchController.current !== controller) return;
       const data = response.data || {};
       const answeredCandidates = data.candidates || [];
       const hasRerankedResults = Boolean(
@@ -94,10 +116,11 @@ function App() {
       setLlmResults(hasRerankedResults ? answeredCandidates : []);
       setResults(hasRerankedResults ? (data.results || []) : answeredCandidates);
     } catch (err) {
+      if (isAborted(err)) return;
       console.error(err);
       alert('Lỗi trong quá trình trả lời VQA! Xem console để biết thêm chi tiết.');
     } finally {
-      setIsLoading(false);
+      finishSearch(controller);
     }
   };
 
@@ -106,7 +129,7 @@ function App() {
     weights = { summaryWeight: 0.75, kisWeight: 0.25 },
     filters = searchFilters,
   ) => {
-    setIsLoading(true);
+    const controller = beginSearch();
     setCurrentPage(1);
     setLastQuery({ mode: 'temporal-video', query, weights, filters });
     setVqaQuestion(null);
@@ -117,19 +140,21 @@ function App() {
     setSelectedTemporalVideo(null);
     setTemporalVideoCandidates([]);
     try {
-      const response = await searchTemporalVideos(query, weights, filters);
+      const response = await searchTemporalVideos(query, weights, filters, controller.signal);
+      if (activeSearchController.current !== controller) return;
       const data = response.data || {};
       setTemporalVideoCandidates(data.candidates || data.video_selection?.candidates || []);
     } catch (err) {
+      if (isAborted(err)) return;
       console.error(err);
       alert('Không thể tìm video TRAKE. Kiểm tra console để biết thêm chi tiết.');
     } finally {
-      setIsLoading(false);
+      finishSearch(controller);
     }
   };
 
   const runAsrSearch = async (query, filters = searchFilters) => {
-    setIsLoading(true);
+    const controller = beginSearch();
     setCurrentPage(1);
     setLastQuery({ mode: 'asr', query, filters });
     setVqaQuestion(null);
@@ -140,18 +165,20 @@ function App() {
     setResults([]);
     setFrameContext(null);
     try {
-      const response = await searchAsr(query, 50, filters);
+      const response = await searchAsr(query, 50, filters, controller.signal);
+      if (activeSearchController.current !== controller) return;
       setResults(response.data?.results || []);
     } catch (err) {
+      if (isAborted(err)) return;
       console.error(err);
       alert('Không thể tìm kiếm ASR. Hãy kiểm tra Elasticsearch và ASR index.');
     } finally {
-      setIsLoading(false);
+      finishSearch(controller);
     }
   };
 
   const runTemporalEventSearch = async (query, videoId, filters = searchFilters) => {
-    setIsLoading(true);
+    const controller = beginSearch();
     setCurrentPage(1);
     const scopedFilters = { ...filters, videoIds: [videoId] };
     setLastQuery({ mode: 'temporal-event', query, filters: scopedFilters });
@@ -160,7 +187,8 @@ function App() {
     setLlmResults([]);
     setResults([]);
     try {
-      const response = await searchTemporalEvents(query, scopedFilters);
+      const response = await searchTemporalEvents(query, scopedFilters, controller.signal);
+      if (activeSearchController.current !== controller) return;
       const data = response.data || {};
       const temporalResults = (data.events || []).map((item) => ({
         ...item,
@@ -169,6 +197,8 @@ function App() {
         score: item.video_score ?? item.score,
         thumbnail_url: item.thumbnail_url || `/media/thumbnails/${item.frame_id}.jpg`,
         metadata: {
+          event_id: item.event_id,
+          event_description: item.description,
           rank: item.rank,
           timestamp_ms: item.timestamp_ms,
           anchor_type: item.anchor_type,
@@ -176,14 +206,17 @@ function App() {
           event_score: item.score,
           reason_vi: item.reason_vi,
           matched_context_entities: item.matched_context_entities,
+          caption: item.caption,
+          source_ranks: item.source_ranks,
         },
       }));
       setResults(temporalResults);
     } catch (err) {
+      if (isAborted(err)) return;
       console.error(err);
       alert(`Không thể tìm sự kiện trong ${videoId}. Kiểm tra console để biết thêm chi tiết.`);
     } finally {
-      setIsLoading(false);
+      finishSearch(controller);
     }
   };
 
@@ -215,20 +248,6 @@ function App() {
     }
   };
 
-  const handleNewSearch = () => {
-    setResults([]);
-    setLlmResults([]);
-    setFrameContext(null);
-    setCurrentPage(1);
-    setLastQuery(null);
-    setVqaQuestion(null);
-    setSelectedFrame(null);
-    setSearchFilters({ batchIds: [], videoIds: [] });
-    setFilterResetKey((current) => current + 1);
-    setTemporalVideoCandidates([]);
-    setSelectedTemporalVideo(null);
-  };
-
   const totalPages = Math.ceil(results.length / PAGE_SIZE) || 1;
   const pageResults = results.slice(
     (currentPage - 1) * PAGE_SIZE,
@@ -238,17 +257,14 @@ function App() {
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE
   );
+  const isTemporalEventWorkspace = Boolean(selectedTemporalVideo);
 
   return (
     <div className="app">
       <Navbar />
       <div className="app-body">
         <Sidebar
-          dataset={dataset}
-          onDatasetChange={setDataset}
-          onNewSearch={handleNewSearch}
           onSearch={runSearch}
-          onImageSearch={runSearch}
           onVqaSearch={runVqaSearch}
           onAsrSearch={runAsrSearch}
           onTemporalVideoSearch={runTemporalVideoSearch}
@@ -257,18 +273,65 @@ function App() {
           onClearTemporalVideo={clearTemporalVideo}
           filters={searchFilters}
           onFiltersChange={setSearchFilters}
-          filterResetKey={filterResetKey}
         />
         <main className="main-content">
-          {isLoading ? (
-            <LoadingSpinner label="Đang tìm kiếm..." />
+          {isTemporalEventWorkspace ? (
+            <section className="temporal-event-workspace" aria-label="Temporal event workspace">
+              <header className="temporal-event-workspace-header">
+                <button
+                  type="button"
+                  className="temporal-event-back"
+                  onClick={clearTemporalVideo}
+                >
+                  ← Quay lại chọn video
+                </button>
+                <div>
+                  <span className="temporal-step-kicker">Bước 2 · Tìm sự kiện</span>
+                  <h1>{selectedTemporalVideo.video_id}</h1>
+                  <p>Nhập E1…En ở thanh bên trái, rồi tìm KIS chỉ trong video này.</p>
+                </div>
+              </header>
+              {isLoading ? (
+                <LoadingSpinner label="Đang tìm frame KIS trong video..." onCancel={cancelSearch} />
+              ) : results.length > 0 ? (
+                <>
+                  <section className="temporal-event-results-heading" aria-label="Temporal KIS results">
+                    <span className="temporal-step-kicker">KIS visual + caption</span>
+                    <h2>Ứng viên theo từng sự kiện</h2>
+                    <p>Click để xem thông tin frame, double-click để mở video đúng vị trí.</p>
+                  </section>
+                  <ResultGrid
+                    results={results}
+                    onCardDoubleClick={handleCardDoubleClick}
+                    onCardClick={setSelectedFrame}
+                    groupTemporalEvents
+                  />
+                </>
+              ) : (
+                <div className="temporal-event-empty">
+                  <strong>Sẵn sàng tìm event</strong>
+                  <span>Thêm mô tả E1…En ở thanh bên trái rồi bấm nút tìm sự kiện.</span>
+                </div>
+              )}
+            </section>
+          ) : isLoading ? (
+            <LoadingSpinner label="Đang tìm kiếm..." onCancel={cancelSearch} />
           ) : (
             <>
-              <TemporalVideoCandidates
-                candidates={temporalVideoCandidates}
-                selectedVideoId={selectedTemporalVideo?.video_id}
-                onSelect={selectTemporalVideo}
-              />
+              {!selectedTemporalVideo && (
+                <TemporalVideoCandidates
+                  candidates={temporalVideoCandidates}
+                  selectedVideoId={selectedTemporalVideo?.video_id}
+                  onSelect={selectTemporalVideo}
+                />
+              )}
+              {lastQuery?.mode === 'temporal-event' && results.length > 0 && (
+                <section className="temporal-event-results-heading" aria-label="Temporal KIS results">
+                  <span className="temporal-step-kicker">Bước 2 · KIS trong video đã chọn</span>
+                  <h2>Ứng viên cho từng sự kiện trong {selectedTemporalVideo?.video_id}</h2>
+                  <p>Click để xem thông tin frame, double-click để mở video đúng vị trí.</p>
+                </section>
+              )}
               {vqaQuestion && (
                 <div className="vqa-results-heading">
                   <h3>🤖 VQA answers from Gemini</h3>
@@ -303,6 +366,7 @@ function App() {
                 results={pageResults} 
                 onCardDoubleClick={handleCardDoubleClick} 
                 onCardClick={setSelectedFrame}
+                groupTemporalEvents={lastQuery?.mode === 'temporal-event'}
               />
             </>
           )}

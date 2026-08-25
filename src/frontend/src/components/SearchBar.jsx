@@ -4,13 +4,11 @@ const TABS = [
   { id: 'text', label: 'Text Search' },
   { id: 'asr', label: 'ASR Search' },
   { id: 'vqa', label: 'VQA' },
-  { id: 'image', label: 'Image Search' },
   { id: 'temporal', label: 'Temporal Events' },
 ];
 
 function SearchBar({
   onSearch,
-  onImageSearch,
   onVqaSearch,
   onAsrSearch,
   onTemporalVideoSearch,
@@ -22,23 +20,15 @@ function SearchBar({
   const [activeTab, setActiveTab] = useState('text');
   const [query, setQuery] = useState('');
   const [question, setQuestion] = useState('');
-  const [imageFile, setImageFile] = useState(null);
   const [useRerank, setUseRerank] = useState(false);
   const [textWeightPercent, setTextWeightPercent] = useState(50);
   const [temporalContext, setTemporalContext] = useState('');
   const [temporalEvents, setTemporalEvents] = useState(['']);
   const [summaryWeightPercent, setSummaryWeightPercent] = useState(75);
-
-  const handleImageChange = (event) => {
-    setImageFile(event.target.files?.[0] ?? null);
-  };
+  const [temporalSearchMode, setTemporalSearchMode] = useState('summary-kis');
 
   const handleSubmit = (event) => {
     event?.preventDefault();
-    if (activeTab === 'image') {
-      if (imageFile) onImageSearch?.(imageFile);
-      return;
-    }
     if (activeTab === 'vqa') {
       const trimmed = query.trim();
       const trimmedQuestion = question.trim();
@@ -49,23 +39,25 @@ function SearchBar({
     }
     if (activeTab === 'temporal') {
       const context = temporalContext.trim();
-      if (!context) return;
       const events = temporalEvents.map((item) => item.trim()).filter(Boolean);
+      const isEventOnly = temporalSearchMode === 'events-only';
+      if (!events.length || (!selectedTemporalVideo && !isEventOnly && !context)) return;
       const structuredQuery = [
-        context,
+        ...(!isEventOnly && context ? [context] : []),
         ...events.map((item, index) => `E${index + 1}: ${item}`),
       ].join('\n');
 
       if (selectedTemporalVideo) {
-        if (!events.length) return;
         onTemporalEventSearch?.(structuredQuery, selectedTemporalVideo.video_id, filters);
       } else {
         onTemporalVideoSearch?.(
           structuredQuery,
-          {
-            summaryWeight: summaryWeightPercent / 100,
-            kisWeight: (100 - summaryWeightPercent) / 100,
-          },
+          isEventOnly
+            ? { summaryWeight: 0, kisWeight: 1 }
+            : {
+                summaryWeight: summaryWeightPercent / 100,
+                kisWeight: (100 - summaryWeightPercent) / 100,
+              },
           filters,
         );
       }
@@ -125,7 +117,7 @@ function SearchBar({
         ))}
       </div>
 
-      {activeTab !== 'image' && activeTab !== 'temporal' && (
+      {activeTab !== 'temporal' && (
         <label className="search-field-label">
           <span>
             {activeTab === 'vqa'
@@ -179,6 +171,26 @@ function SearchBar({
             </div>
           )}
 
+          {!selectedTemporalVideo && (
+            <div className="temporal-search-mode" role="group" aria-label="Video selection mode">
+              <button
+                type="button"
+                className={temporalSearchMode === 'summary-kis' ? 'active' : ''}
+                onClick={() => setTemporalSearchMode('summary-kis')}
+              >
+                Summary + Events
+              </button>
+              <button
+                type="button"
+                className={temporalSearchMode === 'events-only' ? 'active' : ''}
+                onClick={() => setTemporalSearchMode('events-only')}
+              >
+                Chỉ Events
+              </button>
+            </div>
+          )}
+
+          {!selectedTemporalVideo && temporalSearchMode === 'summary-kis' && (
           <label className="search-field-label">
             <span>Summary chung của video</span>
             <textarea
@@ -196,6 +208,7 @@ function SearchBar({
                 : 'Dùng để xếp hạng video trước; chưa định vị khoảnh khắc ở bước này.'}
             </small>
           </label>
+          )}
 
           <div className="temporal-events-header">
             <div>
@@ -240,7 +253,7 @@ function SearchBar({
             ))}
           </div>
 
-          {!selectedTemporalVideo && (
+          {!selectedTemporalVideo && temporalSearchMode === 'summary-kis' && (
             <div className="fusion-weight-control temporal-fusion-control">
               <div className="fusion-weight-header">
                 <span>Video ranking weight</span>
@@ -278,17 +291,6 @@ function SearchBar({
             onChange={(event) => setQuestion(event.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Câu hỏi cần trả lời từ ảnh"
-          />
-        </label>
-      )}
-
-      {activeTab === 'image' && (
-        <label className="search-file-label">
-          <span>{imageFile ? imageFile.name : 'Chọn ảnh truy vấn'}</span>
-          <input
-            type="file"
-            accept="image/jpeg,image/png"
-            onChange={handleImageChange}
           />
         </label>
       )}

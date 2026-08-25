@@ -668,10 +668,189 @@
   gap: 16px;
 }
 
+.temporal-event-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  width: fit-content;
+  margin-bottom: 5px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.temporal-event-description,
+.temporal-event-caption {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.temporal-event-result-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.temporal-event-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.temporal-event-workspace-header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.temporal-event-workspace-header h1 {
+  margin: 2px 0 4px;
+  color: var(--text-h);
+  font-size: 30px;
+}
+
+.temporal-event-workspace-header p {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.temporal-event-back {
+  align-self: flex-start;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--text-h);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.temporal-event-back:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.temporal-event-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 32px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+}
+
+.temporal-event-empty strong {
+  color: var(--text-h);
+  font-size: 17px;
+}
+
+.loading-spinner button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.temporal-event-result-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.temporal-event-result-group > header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temporal-event-result-group > header > span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.temporal-event-result-group > header > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.temporal-event-result-group > header strong {
+  color: var(--text-h);
+  font-size: 14px;
+}
+
+.temporal-event-result-group > header small {
+  color: var(--text);
+  font-size: 12px;
+}
+
+.temporal-event-caption {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 11px;
+}
+
 .temporal-video-results {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.temporal-search-mode {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.temporal-search-mode button {
+  padding: 9px 8px;
+  border: 0;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.temporal-search-mode button:last-child {
+  border-right: 0;
+}
+
+.temporal-search-mode button.active {
+  background: var(--accent-bg);
+  color: var(--accent);
 }
 
 .temporal-video-results-heading {
@@ -685,6 +864,24 @@
   margin: 2px 0 0;
   color: var(--text-h);
   font-size: 20px;
+}
+
+.temporal-event-results-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.temporal-event-results-heading h2 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 20px;
+}
+
+.temporal-event-results-heading p {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
 }
 
 .temporal-video-results-heading > span {
@@ -731,6 +928,13 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
+}
+
+.temporal-video-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .temporal-video-rank {

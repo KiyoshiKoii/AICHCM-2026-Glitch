@@ -20,10 +20,10 @@ describe('ResultGrid', () => {
     expect(screen.getAllByRole('img')).toHaveLength(3);
   });
 
-  it('truncates to the top 20 results when more are provided', () => {
+  it('truncates to the top 15 results when more are provided', () => {
     const results = Array.from({ length: 35 }, (_, i) => makeResult(i));
     render(<ResultGrid results={results} />);
-    expect(screen.getAllByRole('img')).toHaveLength(20);
+    expect(screen.getAllByRole('img')).toHaveLength(15);
   });
 
   it('skips entries missing the must-have frame_id or thumbnail_url fields', () => {
@@ -64,5 +64,46 @@ describe('ResultGrid', () => {
     render(<ResultGrid results={[first, second]} />);
 
     expect(screen.getAllByRole('img')).toHaveLength(2);
+  });
+
+  it('labels KIS candidates with their temporal event', () => {
+    render(<ResultGrid results={[makeResult(1, {
+      event_id: 'E2',
+      metadata: {
+        anchor_type: 'kis_candidate',
+        rank: 3,
+        event_description: 'the first fish touches the oil',
+      },
+    })]} />);
+
+    expect(screen.getByText('E2 · KIS #3')).toBeInTheDocument();
+    expect(screen.getByText('the first fish touches the oil')).toBeInTheDocument();
+  });
+
+  it('groups temporal KIS candidates by event', () => {
+    const results = [
+      makeResult(1, { event_id: 'E1', metadata: { event_description: 'first action' } }),
+      makeResult(2, { event_id: 'E1', metadata: { event_description: 'first action' } }),
+      makeResult(3, { event_id: 'E2', metadata: { event_description: 'second action' } }),
+    ];
+
+    render(<ResultGrid results={results} groupTemporalEvents />);
+
+    expect(screen.getAllByText('first action')).toHaveLength(3);
+    expect(screen.getAllByText('second action')).toHaveLength(2);
+    expect(screen.getByText('2 frame ứng viên')).toBeInTheDocument();
+    expect(screen.getByText('1 frame ứng viên')).toBeInTheDocument();
+  });
+
+  it('keeps the same frame when it belongs to different events', () => {
+    const sharedFrame = makeResult(7);
+    render(<ResultGrid results={[
+      { ...sharedFrame, event_id: 'E1', metadata: { event_description: 'first event' } },
+      { ...sharedFrame, event_id: 'E3', metadata: { event_description: 'third event' } },
+    ]} groupTemporalEvents />);
+
+    expect(screen.getAllByRole('img')).toHaveLength(2);
+    expect(screen.getAllByText('E1')).toHaveLength(2);
+    expect(screen.getAllByText('E3')).toHaveLength(2);
   });
 });

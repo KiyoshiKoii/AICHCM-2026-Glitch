@@ -5,22 +5,19 @@ import SearchBar from './SearchBar.jsx';
 
 const getTextInput = () =>
   screen.getByPlaceholderText(/mô tả cảnh cần tìm/i);
-const getFileInput = (container) => container.querySelector('input[type="file"]');
 const getSubmitButton = () => screen.getByRole('button', { name: /tìm kiếm/i });
 
 describe('SearchBar', () => {
   it('renders a text input and a submit button', () => {
-    const { container } = render(<SearchBar />);
+    render(<SearchBar />);
     expect(getTextInput()).toBeInTheDocument();
-    expect(getFileInput(container)).not.toBeInTheDocument();
     expect(getSubmitButton()).toBeInTheDocument();
   });
 
   it('calls onSearch with the trimmed query on submit', async () => {
     const user = userEvent.setup();
     const onSearch = vi.fn();
-    const onImageSearch = vi.fn();
-    render(<SearchBar onSearch={onSearch} onImageSearch={onImageSearch} />);
+    render(<SearchBar onSearch={onSearch} />);
 
     await user.type(getTextInput(), '  người đàn ông làm rơi ví  ');
     await user.click(getSubmitButton());
@@ -31,7 +28,6 @@ describe('SearchBar', () => {
       { textWeight: 0.5, visualWeight: 0.5 },
       { batchIds: [], videoIds: [] },
     );
-    expect(onImageSearch).not.toHaveBeenCalled();
   });
 
   it('passes useRerank when Gemini re-rank is enabled', async () => {
@@ -94,23 +90,6 @@ describe('SearchBar', () => {
       'cho dầu vào chảo',
       { batchIds: ['L26'], videoIds: [] },
     );
-  });
-
-  it('calls onImageSearch from Image Search mode', async () => {
-    const user = userEvent.setup();
-    const onSearch = vi.fn();
-    const onImageSearch = vi.fn();
-    const { container } = render(
-      <SearchBar onSearch={onSearch} onImageSearch={onImageSearch} />
-    );
-    const file = new File(['fake-image-bytes'], 'query.jpg', { type: 'image/jpeg' });
-
-    await user.click(screen.getByRole('tab', { name: /image search/i }));
-    await user.upload(getFileInput(container), file);
-    await user.click(getSubmitButton());
-
-    expect(onImageSearch).toHaveBeenCalledWith(file);
-    expect(onSearch).not.toHaveBeenCalled();
   });
 
   it('calls onVqaSearch with description and question in VQA mode', async () => {

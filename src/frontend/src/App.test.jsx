@@ -15,7 +15,7 @@ vi.mock('./api/apiClient.js', () => ({
         }],
         llm_reranked_results: [],
       },
-    }), 25);
+    }), 100);
   })),
   searchByImage: vi.fn(),
   answerVqa: vi.fn(),
@@ -44,5 +44,18 @@ describe('App loading states', () => {
     });
 
     expect(screen.getAllByRole('img').length).toBeGreaterThan(0);
+  });
+
+  it('cancels an in-flight search without clearing the entered query', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    const searchInput = screen.getByPlaceholderText(/mô tả cảnh cần tìm/i);
+    await user.type(searchInput, 'truy vấn cần chỉnh lại');
+    await user.click(screen.getByRole('button', { name: /tìm kiếm/i }));
+    await user.click(screen.getByRole('button', { name: /hủy/i }));
+
+    expect(screen.queryByRole('status')).not.toBeInTheDocument();
+    expect(searchInput).toHaveValue('truy vấn cần chỉnh lại');
   });
 });

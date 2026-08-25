@@ -28,6 +28,26 @@ describe('Temporal Events form', () => {
     );
   });
 
+  it('searches videos from aggregate event evidence without a summary', async () => {
+    const user = userEvent.setup();
+    const onTemporalVideoSearch = vi.fn();
+    const { container } = render(
+      <SearchBar onTemporalVideoSearch={onTemporalVideoSearch} />,
+    );
+
+    await user.click(screen.getByRole('tab', { name: /temporal events/i }));
+    await user.click(screen.getByRole('button', { name: /chỉ events/i }));
+    expect(screen.queryByLabelText('Video context')).not.toBeInTheDocument();
+    await user.type(screen.getByLabelText('Event 1'), 'người đầu bếp cho dầu vào chảo');
+    await user.click(container.querySelector('button[type="submit"]'));
+
+    expect(onTemporalVideoSearch).toHaveBeenCalledWith(
+      'E1: người đầu bếp cho dầu vào chảo',
+      { summaryWeight: 0, kisWeight: 1 },
+      { batchIds: [], videoIds: [] },
+    );
+  });
+
   it('scopes event search to the video selected by the user', async () => {
     const user = userEvent.setup();
     const onTemporalEventSearch = vi.fn();

@@ -20,18 +20,33 @@ function TemporalVideoCandidates({ candidates = [], selectedVideoId = null, onSe
         {candidates.map((candidate, index) => {
           const videoId = candidate.video_id;
           const isSelected = selectedVideoId === videoId;
+          const summary = candidate.summary_vi || candidate.summary_en;
+          const firstEventEvidence = candidate.kis_evidence?.find(
+            (item) => item?.event_id === 'E1',
+          ) || candidate.kis_evidence?.[0];
+          const eventThumbnailUrl = firstEventEvidence?.thumbnail_url
+            || (firstEventEvidence?.frame_id
+              ? `/media/thumbnails/${firstEventEvidence.frame_id}.jpg`
+              : null);
           return (
             <article
               className={isSelected ? 'temporal-video-card selected' : 'temporal-video-card'}
               key={videoId}
             >
               <div className="temporal-video-preview">
-                <video
-                  controls
-                  preload="metadata"
-                  src={candidate.video_url || `/media/videos/${videoId}.mp4`}
-                  aria-label={`Preview ${videoId}`}
-                />
+                {eventThumbnailUrl ? (
+                  <img
+                    src={eventThumbnailUrl}
+                    alt={`E1 candidate for ${videoId}`}
+                  />
+                ) : (
+                  <video
+                    controls
+                    preload="metadata"
+                    src={candidate.video_url || `/media/videos/${videoId}.mp4`}
+                    aria-label={`Preview ${videoId}`}
+                  />
+                )}
                 <span className="temporal-video-rank">#{index + 1}</span>
               </div>
 
@@ -42,7 +57,11 @@ function TemporalVideoCandidates({ candidates = [], selectedVideoId = null, onSe
                     Tổng {formatScore(candidate.score)}
                   </span>
                 </div>
-                <p>{candidate.summary_vi || 'Chưa có mô tả video.'}</p>
+                <p>{summary || (
+                  candidate.kis_score > 0
+                    ? 'Chưa có summary được lập chỉ mục; video này được đề xuất từ KIS.'
+                    : 'Chưa có mô tả video.'
+                )}</p>
                 <div className="temporal-video-score-row">
                   <span>Summary {formatScore(candidate.summary_score)}</span>
                   <span>KIS {formatScore(candidate.kis_score ?? candidate.event_score)}</span>

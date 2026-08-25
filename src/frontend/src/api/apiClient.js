@@ -9,9 +9,11 @@ export const searchByText = async (
   useRerank = false,
   { textWeight = 0.5, visualWeight = 0.5 } = {},
   { batchIds = [], videoIds = [] } = {},
+  signal,
 ) => {
   const response = await fetch('/api/v1/search/text', {
     method: 'POST',
+    signal,
     headers: {
       'Content-Type': 'application/json',
     },
@@ -32,13 +34,14 @@ export const searchByText = async (
   return response.json();
 };
 
-export const searchByImage = async (imageFile, topK = 100) => {
+export const searchByImage = async (imageFile, topK = 100, signal) => {
   const formData = new FormData();
   formData.append('image_file', imageFile);
   formData.append('top_k', topK.toString());
 
   const response = await fetch('/api/v1/search/image', {
     method: 'POST',
+    signal,
     body: formData, // FormData tự động set Content-Type multipart/form-data
   });
 
@@ -54,9 +57,11 @@ export const answerVqa = async (
   retrievalTopK = 50,
   answerTopK = 10,
   useRerank = false,
+  signal,
 ) => {
   const response = await fetch('/api/v1/vqa', {
     method: 'POST',
+    signal,
     headers: {
       'Content-Type': 'application/json',
     },
@@ -92,9 +97,11 @@ export const getFrameContext = async (frameId, window = 5) => {
 export const searchTemporalEvents = async (
   query,
   { batchIds = [], videoIds = [], topKVideos = 20 } = {},
+  signal,
 ) => {
   const response = await fetch('/api/v1/search/temporal-events', {
     method: 'POST',
+    signal,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query,
@@ -113,6 +120,7 @@ export const searchAsr = async (
   query,
   topK = 50,
   { batchIds = [], videoIds = [] } = {},
+  signal,
 ) => {
   const response = await fetch('/api/v1/search/asr', {
     method: 'POST',
@@ -123,6 +131,7 @@ export const searchAsr = async (
       batch_ids: batchIds,
       video_ids: videoIds,
     }),
+    signal,
   });
   if (!response.ok) {
     throw new Error(`ASR search failed with status ${response.status}`);
@@ -148,9 +157,11 @@ export const searchTemporalVideos = async (
   query,
   { summaryWeight = 0.75, kisWeight = 0.25 } = {},
   { batchIds = [], videoIds = [], topKVideos = 20 } = {},
+  signal,
 ) => {
   const response = await fetch('/api/v1/search/temporal-videos', {
     method: 'POST',
+    signal,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query,
