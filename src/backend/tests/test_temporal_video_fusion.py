@@ -77,6 +77,7 @@ def test_fuse_summary_and_kis_can_promote_visual_match() -> None:
     assert candidates[0]["kis_evidence"][0]["frame_id"] == "L26_V002_f0001"
 
 
+
 class _Parser:
     async def parse(self, query: str) -> ParsedQuery:
         return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
@@ -124,6 +125,35 @@ class _SemanticPipeline:
 
 
 @pytest.mark.asyncio
+async def test_selected_temporal_video_uses_scoped_kis_candidates() -> None:
+    visual = _VisualPipeline()
+    semantic = _SemanticPipeline()
+    service = SearchService(
+        settings=Settings(),
+        parser=_Parser(),
+        dev1=visual,
+        dev2=semantic,
+    )
+
+    response = await service.search_temporal_events(
+        "A cooking video\nE1: A cook wraps fish in a green leaf",
+        batch_ids=["L26"],
+        video_ids=["L26_V002"],
+    )
+
+    data = response["data"]
+    assert data["mode"] == "temporal_events_kis_selected_video"
+    assert data["selected_video"]["video_id"] == "L26_V002"
+    assert data["events"][0]["event_id"] == "E1"
+    assert data["events"][0]["frame_id"] == "L26_V002_f0001"
+    assert data["events"][0]["native_frame_idx"] == 0
+    assert visual.payloads[0]["video_ids"] == ["L26_V002"]
+    assert semantic.text_payloads[0]["video_ids"] == ["L26_V002"]
+    assert visual.payloads[0]["top_k"] == 20
+    assert "interaction_queries" in semantic.text_payloads[0]
+
+
+@pytest.mark.asyncio
 async def test_temporal_video_search_uses_visual_and_caption_kis() -> None:
     visual = _VisualPipeline()
     semantic = _SemanticPipeline()
@@ -145,7 +175,7 @@ async def test_temporal_video_search_uses_visual_and_caption_kis() -> None:
     assert response["data"]["selected_video_id"] == "L26_V002"
     assert response["data"]["weights"] == {"summary": 0.4, "kis": 0.6}
     assert response["data"]["candidates"][0]["kis_score"] == 1.0
-    assert visual.payloads[0]["visual_prompt"] == "hands wrapping fish in a green leaf"
-    assert semantic.text_payloads[0]["collapse_visual_duplicates"] is True
+    assert visual.payloads[0]["visual_prompt"] == "A cook wraps fish in a green leaf"
+    assert "interaction_queries" in semantic.text_payloads[0]
     assert semantic.temporal_payloads[0]["summary_weight"] == 1.0
     assert semantic.temporal_payloads[0]["event_weight"] == 0.0

@@ -1,4 +1,5 @@
 import asyncio
+import re
 from typing import Any, Protocol
 
 from backend.config import Settings
@@ -306,7 +307,20 @@ class SearchService:
         video_ids: list[str] | None = None,
         top_k_videos: int = 20,
     ) -> dict[str, Any]:
-        """Run the same-video ordered event mode through Dev2."""
+        """Locate event evidence, using scoped KIS after a video is chosen.
+
+        The selected-video phase is an inspection workflow: users need several
+        strong visual/caption candidates for each event, not a premature claim
+        of the exact transition frame.  Qwen/dense verification remains an
+        optional later refinement inside the Semantic Pipeline.
+        """
+        selected_video_ids = [item.upper() for item in (video_ids or []) if item.strip()]
+        if selected_video_ids:
+            return await self._search_selected_video_events_with_kis(
+                query,
+                batch_ids=batch_ids or [],
+                video_ids=selected_video_ids,
+            )
 
         try:
             payload = await self.dev2.search_temporal_events(
@@ -343,6 +357,120 @@ class SearchService:
                     str(candidate["frame_id"]), self.settings.thumbnail_base_url
                 )
         return payload
+
+    async def _search_selected_video_events_with_kis(
+        self,
+        query: str,
+        *,
+        batch_ids: list[str],
+        video_ids: list[str],
+        candidates_per_event: int = 10,
+    ) -> dict[str, Any]:
+        """Return KIS candidates for every explicitly selected TRAKE event."""
+        specs = build_kis_queries(query, None)
+        rankings = await asyncio.gather(
+            *(
+                self._search_event_with_standard_kis(
+                    spec,
+                    top_k=candidates_per_event,
+                    batch_ids=batch_ids,
+                    video_ids=video_ids,
+                )
+                for spec in specs
+            )
+        )
+
+        events: list[dict[str, Any]] = []
+        for spec, hits in zip(specs, rankings):
+            for rank, hit in enumerate(hits, start=1):
+                metadata = hit.metadata if isinstance(hit.metadata, dict) else {}
+                events.append(
+                    {
+                        "event_id": spec.event_id,
+                        "description": spec.description,
+                        "rank": rank,
+                        "frame_id": hit.frame_id,
+                        "video_id": video_ids[0],
+                        "native_frame_idx": (
+                            hit.frame_index
+                            if isinstance(hit.frame_index, int)
+                            else self._kis_frame_index(hit.frame_id, metadata)
+                        ),
+                        "score": float(hit.score),
+                        "confidence": float(hit.score),
+                        "anchor_type": "kis_candidate",
+                        "reason_vi": "KIS visual + caption candidate within selected video",
+                        "matched_context_entities": [],
+                        "thumbnail_url": hit.thumbnail_url,
+                        "source_ranks": metadata.get("source_ranks", {}),
+                        "caption": self._kis_caption(metadata),
+                    }
+                )
+
+        return {
+            "status": "success",
+            "data": {
+                "mode": "temporal_events_kis_selected_video",
+                "query": query,
+                "selected_video": {"video_id": video_ids[0]},
+                "events": events,
+                "kis": {
+                    "queries": [
+                        {
+                            "event_id": spec.event_id,
+                            "description": spec.description,
+                            "visual_prompt": spec.visual_prompt,
+                        }
+                        for spec in specs
+                    ],
+                    "candidates_per_event": candidates_per_event,
+                },
+            },
+        }
+
+    async def _search_event_with_standard_kis(
+        self,
+        spec: KISQuery,
+        *,
+        top_k: int,
+        batch_ids: list[str],
+        video_ids: list[str],
+    ) -> list[SearchHit]:
+        """Reuse the public KIS path, including Gemini interaction parsing."""
+        response = await self.search_text(
+            spec.description,
+            top_k,
+            use_rerank=False,
+            text_weight=0.5,
+            visual_weight=0.5,
+            batch_ids=batch_ids,
+            video_ids=video_ids,
+        )
+        return response.data.results
+
+    @staticmethod
+    def _kis_frame_index(frame_id: str, metadata: dict[str, Any]) -> int:
+        """Use native frame metadata when available, then fall back to ID."""
+        raw_index = metadata.get("frame_index")
+        if isinstance(raw_index, int):
+            return raw_index
+        if isinstance(raw_index, str) and raw_index.isdigit():
+            return int(raw_index)
+        match = re.search(r"_f(\d+)", frame_id, flags=re.IGNORECASE)
+        return int(match.group(1)) if match else 0
+
+    @staticmethod
+    def _kis_caption(metadata: dict[str, Any]) -> str:
+        for field in (
+            "detailed_caption_vi",
+            "caption_vi",
+            "detailed_caption",
+            "caption",
+        ):
+            value = metadata.get(field)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+        return ""
 
     async def search_temporal_videos(
         self,
@@ -389,7 +517,7 @@ class SearchService:
         if kis_queries:
             ranking_results = await asyncio.gather(
                 *(
-                    self._search_temporal_kis_query(
+                    self._search_event_with_standard_kis(
                         spec,
                         top_k=frame_pool,
                         batch_ids=batch_ids or [],
@@ -401,8 +529,49 @@ class SearchService:
             kis_rankings = list(zip(kis_queries, ranking_results))
 
         kis_scores, kis_evidence = aggregate_kis_rankings(kis_rankings)
+        # Summary search returns only documents matching the query. A KIS hit
+        # can therefore point to a valid video whose stored summary is outside
+        # that result pool. Hydrate its card by exact ID without changing its
+        # summary score (zero) or its KIS score.
+        enriched_summaries = [dict(item) for item in summary_candidates if isinstance(item, dict)]
+        by_video_id = {
+            str(item.get("video_id", "")).upper(): item
+            for item in enriched_summaries
+            if str(item.get("video_id", "")).strip()
+        }
+        summary_lookup_ids = sorted(
+            video_id
+            for video_id in set(by_video_id) | set(kis_scores)
+            if not str(by_video_id.get(video_id, {}).get("summary_vi", "")).strip()
+        )
+        if summary_lookup_ids:
+            try:
+                summary_payload = await self.dev2.get_video_summaries(summary_lookup_ids)
+                summary_data = summary_payload.get("data", {}) if isinstance(summary_payload, dict) else {}
+                looked_up = summary_data.get("summaries", {}) if isinstance(summary_data, dict) else {}
+                if isinstance(looked_up, dict):
+                    for video_id, source in looked_up.items():
+                        if not isinstance(source, dict):
+                            continue
+                        normalized_id = str(video_id).upper()
+                        candidate = by_video_id.get(normalized_id)
+                        if candidate is None:
+                            candidate = {"video_id": normalized_id, "summary_score": 0.0}
+                            by_video_id[normalized_id] = candidate
+                            enriched_summaries.append(candidate)
+                        candidate.update(
+                            {
+                                field: source[field]
+                                for field in ("summary_vi", "summary_en", "content_profile")
+                                if source.get(field)
+                            }
+                        )
+            except Exception:
+                # Keep retrieval available if an older semantic service does
+                # not expose summary hydration yet; the card will say so.
+                pass
         candidates = fuse_summary_and_kis(
-            summary_candidates,
+            enriched_summaries,
             kis_scores,
             kis_evidence,
             summary_weight=summary_weight,
@@ -442,50 +611,3 @@ class SearchService:
             }
         )
         return payload
-
-    async def _search_temporal_kis_query(
-        self,
-        spec: KISQuery,
-        *,
-        top_k: int,
-        batch_ids: list[str],
-        video_ids: list[str],
-    ) -> list[SearchHit]:
-        """Run one temporal subquery through visual embeddings and captions."""
-
-        dev1_task = self.dev1.search_text(
-            {
-                "visual_prompt": spec.visual_prompt,
-                "prompt_variants": list(spec.prompt_variants),
-                "batch_ids": batch_ids,
-                "video_ids": video_ids,
-                "top_k": top_k,
-            }
-        )
-        dev2_task = self.dev2.search_text(
-            {
-                "keywords": list(spec.semantic_keywords),
-                "batch_ids": batch_ids,
-                "video_ids": video_ids,
-                "collapse_visual_duplicates": True,
-                "top_k": top_k,
-            }
-        )
-        dev1_res, dev2_res = await asyncio.gather(dev1_task, dev2_task, return_exceptions=True)
-        rankings = {}
-        if not isinstance(dev1_res, Exception):
-            rankings["dev1"] = _filter_upstream_results(
-                normalize_upstream_results(dev1_res, source="dev1"), batch_ids, video_ids
-            )
-        if not isinstance(dev2_res, Exception):
-            rankings["dev2"] = _filter_upstream_results(
-                normalize_upstream_results(dev2_res, source="dev2"), batch_ids, video_ids
-            )
-        if not rankings:
-            return []
-        return reciprocal_rank_fusion(
-            rankings,
-            limit=top_k,
-            thumbnail_base_url=self.settings.thumbnail_base_url,
-            source_weights={"dev1": 0.5, "dev2": 0.5},
-        )

@@ -81,7 +81,10 @@ from semantic_pipeline.retrieval.temporal_query_expander import (
     temporal_query_to_retrieval_spec,
 )
 from semantic_pipeline.retrieval.temporal_query_parser import parse_temporal_query
-from semantic_pipeline.retrieval.temporal_video_selector import ElasticsearchVideoSelector
+from semantic_pipeline.retrieval.temporal_video_selector import (
+    ElasticsearchVideoSelector,
+    VIDEO_INDEX_NAME,
+)
 from semantic_pipeline.retrieval.qwen_video_verifier import QwenTemporalVerifier
 from semantic_pipeline.retrieval.dense_motion_verifier import DenseMotionTemporalVerifier
 
@@ -212,6 +215,19 @@ class TemporalVideoRequest(BaseModel):
         if self.summary_weight + self.event_weight <= 0:
             raise ValueError("summary_weight and event_weight cannot both be zero")
         return self
+
+
+class VideoSummariesRequest(BaseModel):
+    """Fetch already-indexed summaries by exact video ID for UI enrichment."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    video_ids: list[str] = Field(min_length=1, max_length=100)
+
+    @field_validator("video_ids")
+    @classmethod
+    def normalize_ids(cls, values: list[str]) -> list[str]:
+        return list(dict.fromkeys(str(value).strip().upper() for value in values if str(value).strip()))
 
 
 def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI:
@@ -386,6 +402,23 @@ def create_app(search_backend: ElasticsearchTextSearch | None = None) -> FastAPI
             raise HTTPException(status_code=422, detail=str(exc)) from exc
         except Exception as exc:
             raise HTTPException(status_code=503, detail=f"Temporal video search failed: {exc}") from exc
+
+    @app.post("/internal/videos/summaries")
+    def get_video_summaries(body: VideoSummariesRequest) -> dict:
+        try:
+            response = get_backend().client.mget(
+                index=VIDEO_INDEX_NAME,
+                ids=body.video_ids,
+                _source=["video_id", "summary_vi", "summary_en", "content_profile"],
+            )
+            summaries = {
+                str(document.get("_source", {}).get("video_id", "")).upper(): document["_source"]
+                for document in response.get("docs", [])
+                if document.get("found") and isinstance(document.get("_source"), dict)
+            }
+            return {"status": "success", "data": {"summaries": summaries}}
+        except Exception as exc:
+            raise HTTPException(status_code=503, detail=f"Video summary lookup failed: {exc}") from exc
 
     return app
 

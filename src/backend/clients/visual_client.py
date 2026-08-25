@@ -69,6 +69,9 @@ class InternalPipelineClient:
         self._temporal_video_url = self._temporal_url.rsplit(
             "/search/temporal-events", 1
         )[0] + "/search/temporal-videos"
+        self._video_summaries_url = self._temporal_video_url.rsplit(
+            "/search/temporal-videos", 1
+        )[0] + "/videos/summaries"
 
     async def search_text(self, payload: dict[str, Any]) -> Any:
         try:
@@ -101,6 +104,17 @@ class InternalPipelineClient:
             return response.json()
         except (httpx.HTTPError, ValueError) as exc:
             raise UpstreamError(f"{self.source} temporal video API failed: {exc}") from exc
+
+    async def get_video_summaries(self, video_ids: list[str]) -> Any:
+        try:
+            response = await self._client.post(
+                self._video_summaries_url,
+                json={"video_ids": video_ids},
+            )
+            response.raise_for_status()
+            return response.json()
+        except (httpx.HTTPError, ValueError) as exc:
+            raise UpstreamError(f"{self.source} video summaries API failed: {exc}") from exc
 
     async def search_image(
         self,

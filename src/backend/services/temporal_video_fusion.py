@@ -206,6 +206,9 @@ def fuse_summary_and_kis(
         for candidate in summary_candidates
         if str(candidate.get("video_id", "")).strip()
     }
+    # KIS and summary rank over different evidence sources. Keep their union
+    # so the user-controlled fusion weight can promote a strong KIS match,
+    # even when that video did not make the lexical summary result pool.
     candidate_ids = set(summaries) | set(kis_scores)
     fused: list[dict[str, Any]] = []
     for video_id in candidate_ids:
