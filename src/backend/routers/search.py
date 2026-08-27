@@ -72,6 +72,8 @@ async def search_temporal_events(
         batch_ids=body.batch_ids,
         video_ids=body.video_ids,
         top_k_videos=body.top_k_videos,
+        text_weight=body.text_weight,
+        visual_weight=body.visual_weight,
     )
 
 
@@ -98,6 +100,9 @@ async def search_temporal_videos(
         batch_ids=body.batch_ids,
         video_ids=body.video_ids,
         top_k_videos=body.top_k_videos,
+        text_weight=body.text_weight,
+        visual_weight=body.visual_weight,
         summary_weight=body.summary_weight,
         kis_weight=body.kis_weight,
+        use_rerank=body.use_rerank,
     )

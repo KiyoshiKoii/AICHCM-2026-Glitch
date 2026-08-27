@@ -150,6 +150,7 @@ def aggregate_kis_rankings(
                     "frame_id": hit.frame_id,
                     "rank": rank,
                     "score": round(relative_score, 8),
+                    "thumbnail_url": hit.thumbnail_url,
                     "caption": str(caption)[:500],
                     "source_ranks": metadata.get("source_ranks", {}),
                 }

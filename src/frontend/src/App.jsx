@@ -126,12 +126,18 @@ function App() {
 
   const runTemporalVideoSearch = async (
     query,
-    weights = { summaryWeight: 0.75, kisWeight: 0.25 },
+    weights = {
+      summaryWeight: 0.75,
+      kisWeight: 0.25,
+      textWeight: 0.5,
+      visualWeight: 0.5,
+    },
     filters = searchFilters,
+    useRerank = false,
   ) => {
     const controller = beginSearch();
     setCurrentPage(1);
-    setLastQuery({ mode: 'temporal-video', query, weights, filters });
+    setLastQuery({ mode: 'temporal-video', query, weights, filters, useRerank });
     setVqaQuestion(null);
     setSelectedFrame(null);
     setLlmResults([]);
@@ -140,7 +146,13 @@ function App() {
     setSelectedTemporalVideo(null);
     setTemporalVideoCandidates([]);
     try {
-      const response = await searchTemporalVideos(query, weights, filters, controller.signal);
+      const response = await searchTemporalVideos(
+        query,
+        weights,
+        filters,
+        useRerank,
+        controller.signal,
+      );
       if (activeSearchController.current !== controller) return;
       const data = response.data || {};
       setTemporalVideoCandidates(data.candidates || data.video_selection?.candidates || []);
@@ -177,17 +189,27 @@ function App() {
     }
   };
 
-  const runTemporalEventSearch = async (query, videoId, filters = searchFilters) => {
+  const runTemporalEventSearch = async (
+    query,
+    videoId,
+    filters = searchFilters,
+    kisWeights = { textWeight: 0.5, visualWeight: 0.5 },
+  ) => {
     const controller = beginSearch();
     setCurrentPage(1);
     const scopedFilters = { ...filters, videoIds: [videoId] };
-    setLastQuery({ mode: 'temporal-event', query, filters: scopedFilters });
+    setLastQuery({ mode: 'temporal-event', query, filters: scopedFilters, kisWeights });
     setVqaQuestion(null);
     setSelectedFrame(null);
     setLlmResults([]);
     setResults([]);
     try {
-      const response = await searchTemporalEvents(query, scopedFilters, controller.signal);
+      const response = await searchTemporalEvents(
+        query,
+        scopedFilters,
+        kisWeights,
+        controller.signal,
+      );
       if (activeSearchController.current !== controller) return;
       const data = response.data || {};
       const temporalResults = (data.events || []).map((item) => ({

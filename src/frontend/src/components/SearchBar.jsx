@@ -21,10 +21,12 @@ function SearchBar({
   const [query, setQuery] = useState('');
   const [question, setQuestion] = useState('');
   const [useRerank, setUseRerank] = useState(false);
+  const [useTemporalRerank, setUseTemporalRerank] = useState(false);
   const [textWeightPercent, setTextWeightPercent] = useState(50);
   const [temporalContext, setTemporalContext] = useState('');
   const [temporalEvents, setTemporalEvents] = useState(['']);
   const [summaryWeightPercent, setSummaryWeightPercent] = useState(75);
+  const [temporalTextWeightPercent, setTemporalTextWeightPercent] = useState(50);
   const [temporalSearchMode, setTemporalSearchMode] = useState('summary-kis');
 
   const handleSubmit = (event) => {
@@ -46,19 +48,30 @@ function SearchBar({
         ...(!isEventOnly && context ? [context] : []),
         ...events.map((item, index) => `E${index + 1}: ${item}`),
       ].join('\n');
+      const temporalKisWeights = {
+        textWeight: temporalTextWeightPercent / 100,
+        visualWeight: (100 - temporalTextWeightPercent) / 100,
+      };
 
       if (selectedTemporalVideo) {
-        onTemporalEventSearch?.(structuredQuery, selectedTemporalVideo.video_id, filters);
+        onTemporalEventSearch?.(
+          structuredQuery,
+          selectedTemporalVideo.video_id,
+          filters,
+          temporalKisWeights,
+        );
       } else {
         onTemporalVideoSearch?.(
           structuredQuery,
           isEventOnly
-            ? { summaryWeight: 0, kisWeight: 1 }
+            ? { summaryWeight: 0, kisWeight: 1, ...temporalKisWeights }
             : {
                 summaryWeight: summaryWeightPercent / 100,
                 kisWeight: (100 - summaryWeightPercent) / 100,
+                ...temporalKisWeights,
               },
           filters,
+          useTemporalRerank,
         );
       }
       return;
@@ -277,6 +290,41 @@ function SearchBar({
                 <span>KIS visual + caption</span>
               </div>
             </div>
+          )}
+
+          <div className="fusion-weight-control temporal-fusion-control">
+            <div className="fusion-weight-header">
+              <span>KIS fusion weight</span>
+              <span>
+                Text/caption {temporalTextWeightPercent}% · Visual {100 - temporalTextWeightPercent}%
+              </span>
+            </div>
+            <input
+              id="temporal-kis-text-weight-slider"
+              className="fusion-weight-slider"
+              type="range"
+              min="0"
+              max="100"
+              step="5"
+              value={temporalTextWeightPercent}
+              onChange={(event) => setTemporalTextWeightPercent(Number(event.target.value))}
+              aria-label="Temporal KIS text weight"
+            />
+            <div className="fusion-weight-scale" aria-hidden="true">
+              <span>Text/caption</span>
+              <span>Visual Qwen</span>
+            </div>
+          </div>
+
+          {!selectedTemporalVideo && (
+            <label className="search-rerank-toggle temporal-rerank-toggle">
+              <input
+                type="checkbox"
+                checked={useTemporalRerank}
+                onChange={(event) => setUseTemporalRerank(event.target.checked)}
+              />
+              <span>Gemini re-rank từng event (tốn thêm request)</span>
+            </label>
           )}
         </section>
       )}

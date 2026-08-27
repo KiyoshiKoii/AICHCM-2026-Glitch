@@ -216,7 +216,7 @@ class TextSearchRequest(BaseModel):
         default=0.5,
         ge=0.0,
         le=1.0,
-        description="Relative weight of visual/CLIP retrieval.",
+        description="Relative weight of visual/Qwen retrieval.",
     )
     use_rerank: bool = Field(
         default=False,
@@ -250,6 +250,8 @@ class TemporalEventSearchRequest(BaseModel):
     batch_ids: list[str] = Field(default_factory=list, max_length=10)
     video_ids: list[str] = Field(default_factory=list, max_length=100)
     top_k_videos: int = Field(default=20, ge=1, le=100)
+    text_weight: float = Field(default=0.5, ge=0.0, le=1.0)
+    visual_weight: float = Field(default=0.5, ge=0.0, le=1.0)
 
     @field_validator("query")
     @classmethod
@@ -264,6 +266,12 @@ class TemporalEventSearchRequest(BaseModel):
     def normalize_temporal_ids(cls, value: Any) -> Any:
         return _normalize_filter_values(value)
 
+    @model_validator(mode="after")
+    def validate_kis_fusion_weights(self) -> "TemporalEventSearchRequest":
+        if self.text_weight + self.visual_weight <= 0:
+            raise ValueError("text_weight and visual_weight cannot both be zero")
+        return self
+
 
 class TemporalVideoSearchRequest(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
@@ -271,7 +279,7 @@ class TemporalVideoSearchRequest(BaseModel):
     query: str = Field(min_length=2, max_length=5000)
     batch_ids: list[str] = Field(default_factory=list, max_length=10)
     video_ids: list[str] = Field(default_factory=list, max_length=100)
-    top_k_videos: int = Field(default=20, ge=1, le=100)
+    top_k_videos: int = Field(default=100, ge=1, le=100)
     summary_weight: float = Field(default=0.75, ge=0.0, le=1.0)
     kis_weight: float = Field(
         default=0.25,
@@ -279,6 +287,9 @@ class TemporalVideoSearchRequest(BaseModel):
         le=1.0,
         validation_alias=AliasChoices("kis_weight", "event_weight"),
     )
+    use_rerank: bool = False
+    text_weight: float = Field(default=0.5, ge=0.0, le=1.0)
+    visual_weight: float = Field(default=0.5, ge=0.0, le=1.0)
 
     @field_validator("query")
     @classmethod
@@ -297,6 +308,8 @@ class TemporalVideoSearchRequest(BaseModel):
     def validate_fusion_weights(self) -> "TemporalVideoSearchRequest":
         if self.summary_weight + self.kis_weight <= 0:
             raise ValueError("summary_weight and kis_weight cannot both be zero")
+        if self.text_weight + self.visual_weight <= 0:
+            raise ValueError("text_weight and visual_weight cannot both be zero")
         return self
 
 

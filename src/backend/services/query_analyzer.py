@@ -381,7 +381,11 @@ _FALLBACK_COLOR_TRANSLATIONS = {
     "xam": "gray",
 }
 _FALLBACK_ACTION_PATTERNS = (
-    ("riding", re.compile(r"\b(?:chay|lai|di|cuoi)\s+(?P<object>.+)$")),
+    # ``đi`` is deliberately restricted to vehicle phrases.  The broad
+    # ``đi <anything>`` form mistakes scene nouns such as ``lối đi hẹp``
+    # (narrow walkway) for a riding action and can overwrite a valid LLM plan.
+    ("riding", re.compile(r"\b(?:chay|lai|cuoi)\s+(?P<object>.+)$")),
+    ("riding", re.compile(r"\bdi\s+(?P<object>xe(?:\s+(?:may|dap))?|mo to)\b")),
     ("holding", re.compile(r"\b(?:cam|nam|om)\s+(?P<object>.+)$")),
     ("carrying", re.compile(r"\b(?:mang|khieng|xach|be)\s+(?P<object>.+)$")),
     ("operating", re.compile(r"\b(?:dieu khien|van hanh)\s+(?P<object>.+)$")),

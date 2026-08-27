@@ -16,8 +16,17 @@ class FakeParser:
         return ParsedQuery(visual_prompt=query, semantic_keywords=[query])
 
 
+class RewritingParser:
+    async def parse(self, query: str) -> ParsedQuery:
+        return ParsedQuery(visual_prompt="a translated, shortened visual prompt", semantic_keywords=[query])
+
+
 class FakePipeline:
+    def __init__(self) -> None:
+        self.calls: list[dict] = []
+
     async def search_text(self, payload: dict) -> list[dict]:
+        self.calls.append(payload)
         return [{"frame_id": "L21_V001_f0001", "score": 0.9}]
 
 
@@ -95,6 +104,21 @@ def test_temporal_video_request_exposes_summary_kis_weights():
 
     assert request.summary_weight == 0.6
     assert request.kis_weight == 0.4
+    assert request.use_rerank is False
+    assert request.text_weight == 0.5
+    assert request.visual_weight == 0.5
+
+
+def test_temporal_video_request_defaults_to_one_hundred_candidates():
+    request = TemporalVideoSearchRequest(query="A cycling race")
+
+    assert request.top_k_videos == 100
+
+
+def test_temporal_video_request_accepts_gemini_rerank_toggle():
+    request = TemporalVideoSearchRequest(query="A cycling race", use_rerank=True)
+
+    assert request.use_rerank is True
 
 
 def test_temporal_video_request_accepts_legacy_event_weight():
@@ -109,6 +133,15 @@ def test_temporal_video_request_rejects_zero_fusion_weights():
             query="A cycling race",
             summary_weight=0.0,
             kis_weight=0.0,
+        )
+
+
+def test_temporal_video_request_rejects_zero_kis_text_visual_weights():
+    with pytest.raises(ValueError, match="text_weight and visual_weight"):
+        TemporalVideoSearchRequest(
+            query="A cycling race",
+            text_weight=0.0,
+            visual_weight=0.0,
         )
 
 
@@ -130,6 +163,25 @@ async def test_search_runs_gemini_reranking_when_enabled():
 
     assert reranker.calls == [("a person", ["L21_V001_f0001"])]
     assert response.data.llm_reranked_results is not None
+
+
+@pytest.mark.asyncio
+@pytest.mark.asyncio
+async def test_qwen_visual_pipeline_always_uses_raw_user_query():
+    dev1 = FakePipeline()
+    service = SearchService(
+        settings=Settings(),
+        parser=RewritingParser(),
+        dev1=dev1,
+        dev2=FakePipeline(),
+    )
+    await service.search_text(
+        "nguyên câu truy vấn dài của người dùng",
+        10,
+        use_rerank=False,
+    )
+
+    assert dev1.calls[0]["visual_prompt"] == "nguyên câu truy vấn dài của người dùng"
 
 
 @pytest.mark.asyncio

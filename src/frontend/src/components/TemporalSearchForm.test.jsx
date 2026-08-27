@@ -19,12 +19,17 @@ describe('Temporal Events form', () => {
       screen.getByRole('slider', { name: /summary video ranking weight/i }),
       { target: { value: '60' } },
     );
+    fireEvent.change(
+      screen.getByRole('slider', { name: /temporal kis text weight/i }),
+      { target: { value: '35' } },
+    );
     await user.click(container.querySelector('button[type="submit"]'));
 
     expect(onTemporalVideoSearch).toHaveBeenCalledWith(
       'Video múa lân trên cột cao\nE1: Lân chào ban giám khảo',
-      { summaryWeight: 0.6, kisWeight: 0.4 },
+      { summaryWeight: 0.6, kisWeight: 0.4, textWeight: 0.35, visualWeight: 0.65 },
       { batchIds: [], videoIds: [] },
+      false,
     );
   });
 
@@ -43,8 +48,30 @@ describe('Temporal Events form', () => {
 
     expect(onTemporalVideoSearch).toHaveBeenCalledWith(
       'E1: người đầu bếp cho dầu vào chảo',
-      { summaryWeight: 0, kisWeight: 1 },
+      { summaryWeight: 0, kisWeight: 1, textWeight: 0.5, visualWeight: 0.5 },
       { batchIds: [], videoIds: [] },
+      false,
+    );
+  });
+
+  it('lets the user opt in to Gemini reranking for every event', async () => {
+    const user = userEvent.setup();
+    const onTemporalVideoSearch = vi.fn();
+    const { container } = render(
+      <SearchBar onTemporalVideoSearch={onTemporalVideoSearch} />,
+    );
+
+    await user.click(screen.getByRole('tab', { name: /temporal events/i }));
+    await user.type(screen.getByLabelText('Video context'), 'Video múa lân trên cột cao');
+    await user.type(screen.getByLabelText('Event 1'), 'Lân chào ban giám khảo');
+    await user.click(screen.getByRole('checkbox', { name: /gemini re-rank từng event/i }));
+    await user.click(container.querySelector('button[type="submit"]'));
+
+    expect(onTemporalVideoSearch).toHaveBeenCalledWith(
+      'Video múa lân trên cột cao\nE1: Lân chào ban giám khảo',
+      { summaryWeight: 0.75, kisWeight: 0.25, textWeight: 0.5, visualWeight: 0.5 },
+      { batchIds: [], videoIds: [] },
+      true,
     );
   });
 
@@ -67,12 +94,17 @@ describe('Temporal Events form', () => {
     );
     expect(screen.getByText('L24_V033')).toBeInTheDocument();
     await user.type(screen.getByLabelText('Event 1'), 'Khoảnh khắc lân bắt đầu xoay');
+    fireEvent.change(
+      screen.getByRole('slider', { name: /temporal kis text weight/i }),
+      { target: { value: '25' } },
+    );
     await user.click(screen.getByRole('button', { name: /tìm sự kiện trong L24_V033/i }));
 
     expect(onTemporalEventSearch).toHaveBeenCalledWith(
       'Video múa lân trên cột cao\nE1: Khoảnh khắc lân bắt đầu xoay',
       'L24_V033',
       { batchIds: [], videoIds: [] },
+      { textWeight: 0.25, visualWeight: 0.75 },
     );
   });
 

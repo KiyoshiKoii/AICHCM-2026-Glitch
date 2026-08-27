@@ -97,6 +97,7 @@ export const getFrameContext = async (frameId, window = 5) => {
 export const searchTemporalEvents = async (
   query,
   { batchIds = [], videoIds = [], topKVideos = 20 } = {},
+  { textWeight = 0.5, visualWeight = 0.5 } = {},
   signal,
 ) => {
   const response = await fetch('/api/v1/search/temporal-events', {
@@ -108,6 +109,8 @@ export const searchTemporalEvents = async (
       batch_ids: batchIds,
       video_ids: videoIds,
       top_k_videos: topKVideos,
+      text_weight: textWeight,
+      visual_weight: visualWeight,
     }),
   });
   if (!response.ok) {
@@ -155,8 +158,14 @@ export const getFrameTimeline = async (frameId) => {
 
 export const searchTemporalVideos = async (
   query,
-  { summaryWeight = 0.75, kisWeight = 0.25 } = {},
-  { batchIds = [], videoIds = [], topKVideos = 20 } = {},
+  {
+    summaryWeight = 0.75,
+    kisWeight = 0.25,
+    textWeight = 0.5,
+    visualWeight = 0.5,
+  } = {},
+  { batchIds = [], videoIds = [], topKVideos = 100 } = {},
+  useRerank = false,
   signal,
 ) => {
   const response = await fetch('/api/v1/search/temporal-videos', {
@@ -168,8 +177,11 @@ export const searchTemporalVideos = async (
       batch_ids: batchIds,
       video_ids: videoIds,
       top_k_videos: topKVideos,
+      text_weight: textWeight,
+      visual_weight: visualWeight,
       summary_weight: summaryWeight,
       kis_weight: kisWeight,
+      use_rerank: useRerank,
     }),
   });
   if (!response.ok) {

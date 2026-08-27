@@ -102,9 +102,12 @@ class SearchService:
             program_queries = []
 
         try:
+            # The visual service is Qwen-only and intentionally receives the
+            # complete raw user wording. Gemini parsing above remains for the
+            # semantic/Elasticsearch route and optional Gemini reranking.
             dev1_task = self.dev1.search_text(
                 {
-                    "visual_prompt": visual_prompt,
+                    "visual_prompt": query,
                     "batch_ids": batch_ids,
                     "video_ids": video_ids,
                     "top_k": top_k * 2,
@@ -306,6 +309,8 @@ class SearchService:
         batch_ids: list[str] | None = None,
         video_ids: list[str] | None = None,
         top_k_videos: int = 20,
+        text_weight: float = 0.5,
+        visual_weight: float = 0.5,
     ) -> dict[str, Any]:
         """Locate event evidence, using scoped KIS after a video is chosen.
 
@@ -320,6 +325,8 @@ class SearchService:
                 query,
                 batch_ids=batch_ids or [],
                 video_ids=selected_video_ids,
+                text_weight=text_weight,
+                visual_weight=visual_weight,
             )
 
         try:
@@ -365,6 +372,8 @@ class SearchService:
         batch_ids: list[str],
         video_ids: list[str],
         candidates_per_event: int = 10,
+        text_weight: float = 0.5,
+        visual_weight: float = 0.5,
     ) -> dict[str, Any]:
         """Return KIS candidates for every explicitly selected TRAKE event."""
         specs = build_kis_queries(query, None)
@@ -375,6 +384,8 @@ class SearchService:
                     top_k=candidates_per_event,
                     batch_ids=batch_ids,
                     video_ids=video_ids,
+                    text_weight=text_weight,
+                    visual_weight=visual_weight,
                 )
                 for spec in specs
             )
@@ -424,6 +435,10 @@ class SearchService:
                         for spec in specs
                     ],
                     "candidates_per_event": candidates_per_event,
+                    "weights": {
+                        "text": text_weight,
+                        "visual": visual_weight,
+                    },
                 },
             },
         }
@@ -435,18 +450,25 @@ class SearchService:
         top_k: int,
         batch_ids: list[str],
         video_ids: list[str],
+        use_rerank: bool = False,
+        text_weight: float = 0.5,
+        visual_weight: float = 0.5,
     ) -> list[SearchHit]:
         """Reuse the public KIS path, including Gemini interaction parsing."""
         response = await self.search_text(
             spec.description,
             top_k,
-            use_rerank=False,
-            text_weight=0.5,
-            visual_weight=0.5,
+            use_rerank=use_rerank,
+            text_weight=text_weight,
+            visual_weight=visual_weight,
             batch_ids=batch_ids,
             video_ids=video_ids,
         )
-        return response.data.results
+        # The regular KIS endpoint keeps the RRF baseline and Gemini order in
+        # separate response fields for UI comparison.  TRAKE needs the latter
+        # to influence the video score, but only when the user explicitly
+        # enables it.
+        return response.data.llm_reranked_results or response.data.results
 
     @staticmethod
     def _kis_frame_index(frame_id: str, metadata: dict[str, Any]) -> int:
@@ -478,9 +500,12 @@ class SearchService:
         *,
         batch_ids: list[str] | None = None,
         video_ids: list[str] | None = None,
-        top_k_videos: int = 20,
+        top_k_videos: int = 100,
         summary_weight: float = 0.75,
         kis_weight: float = 0.25,
+        use_rerank: bool = False,
+        text_weight: float = 0.5,
+        visual_weight: float = 0.5,
     ) -> dict[str, Any]:
         """Rank videos by summary evidence and the existing frame-level KIS."""
 
@@ -511,7 +536,13 @@ class SearchService:
         if not isinstance(summary_candidates, list):
             summary_candidates = []
 
-        kis_queries = build_kis_queries(query, data.get("query_plan")) if kis_weight > 0 else []
+        # Keep frame-level video selection on the exact E1...En wording,
+        # matching the regular KIS search and the later selected-video search.
+        # The temporal query plan remains useful for summary retrieval above,
+        # but rewriting an event here made a card's evidence diverge from the
+        # same event queried after the user selects that video.
+        kis_queries = build_kis_queries(query, None) if kis_weight > 0 else []
+        rerank_kis_events = bool(use_rerank and kis_queries)
         frame_pool = min(500, max(200, top_k_videos * 15))
         kis_rankings: list[tuple[KISQuery, list[SearchHit]]] = []
         if kis_queries:
@@ -522,6 +553,9 @@ class SearchService:
                         top_k=frame_pool,
                         batch_ids=batch_ids or [],
                         video_ids=video_ids or [],
+                        use_rerank=rerank_kis_events,
+                        text_weight=text_weight,
+                        visual_weight=visual_weight,
                     )
                     for spec in kis_queries
                 )
@@ -593,6 +627,11 @@ class SearchService:
                     "query_count": len(kis_queries),
                     "frame_pool": frame_pool,
                     "video_hits": len(kis_scores),
+                    "gemini_rerank": rerank_kis_events,
+                    "weights": {
+                        "text": text_weight,
+                        "visual": visual_weight,
+                    },
                     "queries": [
                         {
                             "event_id": spec.event_id,

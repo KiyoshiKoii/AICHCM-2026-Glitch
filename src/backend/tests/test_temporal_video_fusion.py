@@ -57,6 +57,7 @@ def test_aggregate_kis_rankings_rewards_cross_event_video_coverage() -> None:
     assert scores["L26_V002"] > scores["L26_V001"]
     assert scores["L26_V002"] > scores["L26_V003"]
     assert {item["event_id"] for item in evidence["L26_V002"]} == {"E1", "E2"}
+    assert all("thumbnail_url" in item for item in evidence["L26_V002"])
 
 
 def test_fuse_summary_and_kis_can_promote_visual_match() -> None:
@@ -124,6 +125,17 @@ class _SemanticPipeline:
         }
 
 
+class _Reranker:
+    client = object()
+
+    def __init__(self) -> None:
+        self.queries: list[str] = []
+
+    async def rerank(self, query: str, hits: list[SearchHit]) -> list[SearchHit]:
+        self.queries.append(query)
+        return hits
+
+
 @pytest.mark.asyncio
 async def test_selected_temporal_video_uses_scoped_kis_candidates() -> None:
     visual = _VisualPipeline()
@@ -139,6 +151,8 @@ async def test_selected_temporal_video_uses_scoped_kis_candidates() -> None:
         "A cooking video\nE1: A cook wraps fish in a green leaf",
         batch_ids=["L26"],
         video_ids=["L26_V002"],
+        text_weight=0.2,
+        visual_weight=0.8,
     )
 
     data = response["data"]
@@ -147,6 +161,7 @@ async def test_selected_temporal_video_uses_scoped_kis_candidates() -> None:
     assert data["events"][0]["event_id"] == "E1"
     assert data["events"][0]["frame_id"] == "L26_V002_f0001"
     assert data["events"][0]["native_frame_idx"] == 0
+    assert data["kis"]["weights"] == {"text": 0.2, "visual": 0.8}
     assert visual.payloads[0]["video_ids"] == ["L26_V002"]
     assert semantic.text_payloads[0]["video_ids"] == ["L26_V002"]
     assert visual.payloads[0]["top_k"] == 20
@@ -179,3 +194,82 @@ async def test_temporal_video_search_uses_visual_and_caption_kis() -> None:
     assert "interaction_queries" in semantic.text_payloads[0]
     assert semantic.temporal_payloads[0]["summary_weight"] == 1.0
     assert semantic.temporal_payloads[0]["event_weight"] == 0.0
+
+
+@pytest.mark.asyncio
+async def test_temporal_video_search_applies_kis_text_visual_weights() -> None:
+    visual = _VisualPipeline()
+    semantic = _SemanticPipeline()
+    service = SearchService(
+        settings=Settings(),
+        parser=_Parser(),
+        dev1=visual,
+        dev2=semantic,
+    )
+    calls: list[dict[str, float]] = []
+    original_search_text = service.search_text
+
+    async def record_search_text(*args, **kwargs):
+        calls.append(
+            {
+                "text_weight": kwargs["text_weight"],
+                "visual_weight": kwargs["visual_weight"],
+            }
+        )
+        return await original_search_text(*args, **kwargs)
+
+    service.search_text = record_search_text  # type: ignore[method-assign]
+    response = await service.search_temporal_videos(
+        "A cooking show\nE1: A cook wraps fish in a green leaf",
+        batch_ids=["L26"],
+        top_k_videos=2,
+        text_weight=0.3,
+        visual_weight=0.7,
+    )
+
+    assert calls == [{"text_weight": 0.3, "visual_weight": 0.7}]
+    assert response["data"]["kis"]["weights"] == {"text": 0.3, "visual": 0.7}
+
+
+@pytest.mark.asyncio
+async def test_temporal_video_search_uses_raw_event_wording_for_kis() -> None:
+    visual = _VisualPipeline()
+    semantic = _SemanticPipeline()
+    service = SearchService(
+        settings=Settings(),
+        parser=_Parser(),
+        dev1=visual,
+        dev2=semantic,
+    )
+
+    await service.search_temporal_videos(
+        "A cooking show\nE1: Exact wording from the user",
+        batch_ids=["L26"],
+        top_k_videos=2,
+    )
+
+    assert visual.payloads[0]["visual_prompt"] == "Exact wording from the user"
+
+
+@pytest.mark.asyncio
+async def test_temporal_video_search_reranks_each_event_only_when_enabled() -> None:
+    visual = _VisualPipeline()
+    semantic = _SemanticPipeline()
+    service = SearchService(
+        settings=Settings(),
+        parser=_Parser(),
+        dev1=visual,
+        dev2=semantic,
+    )
+    reranker = _Reranker()
+    service.reranker = reranker
+
+    response = await service.search_temporal_videos(
+        "A cooking show\nE1: A cook wraps fish in a green leaf",
+        batch_ids=["L26"],
+        top_k_videos=2,
+        use_rerank=True,
+    )
+
+    assert reranker.queries == ["A cook wraps fish in a green leaf"]
+    assert response["data"]["kis"]["gemini_rerank"] is True
