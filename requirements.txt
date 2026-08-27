@@ -1,9 +1,10 @@
-# Lưu ý: Cài đặt PyTorch thủ công theo cấu hình máy (xem hướng dẫn ở task.md)
-
-# Florence-2 lỗi với transformers >= 4.45 (bug trust_remote_code). Cần patch configuration_florence2.py.
-transformers==4.49.0
+# Cài PyTorch theo đúng CUDA của máy trước. Qwen3-VL cần transformers mới.
+# Visual serving mặc định dùng Qwen3-VL-Embedding-2B; CLIP chỉ còn là dữ liệu legacy.
+transformers==4.57.3
 numpy<2.0.0
-sentence-transformers
+sentence-transformers>=5.4.0
+qwen-vl-utils==0.0.14
+av>=14.0.0
 qdrant-client
 fastapi
 uvicorn
@@ -31,7 +32,7 @@ vietocr             # Nhận diện chữ tiếng Việt
 setuptools          # Fix lỗi thiếu pkg_resources của thư viện gdown cũ
 google-genai        # Client Gemini cho reranking và VQA
 
-# --- Optional local VLM verifier for TRAKE ---
+# --- Qwen visual retrieval and optional TRAKE verifier ---
 accelerate
 bitsandbytes
 

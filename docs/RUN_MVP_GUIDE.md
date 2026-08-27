@@ -5,7 +5,7 @@ MVP gồm bốn dịch vụ:
 
 | Dịch vụ | Port | Vai trò |
 | --- | ---: | --- |
-| Visual Pipeline | `8001` | CLIP, tìm kiếm theo hình ảnh |
+| Visual Pipeline | `8001` | Qwen3-VL Embed, tìm kiếm keyframe theo câu query gốc |
 | Qdrant | `6333` | Vector index của Visual Pipeline (Docker) |
 | Semantic Pipeline | `8002` | Elasticsearch, caption và TRAKE video selection |
 | Backend Gateway | `8000` | Phân tích query, hợp nhất kết quả, phục vụ media |
@@ -92,7 +92,6 @@ GEMINI_QUERY_MODEL=gemini-model-name
 GEMINI_RERANK_MODEL=gemini-model-name
 GEMINI_VQA_MODEL=gemini-model-name
 GEMINI_VISUAL_MODEL=gemini-model-name
-VISUAL_CLIP_MODEL=openai/clip-vit-base-patch32
 QDRANT_URL=http://127.0.0.1:6333
 ```
 
@@ -102,10 +101,10 @@ Không commit API key lên Git.
 
 | Đường dẫn | Dùng cho |
 | --- | --- |
-| `data/keyframes/` | Thumbnail, CLIP và filmstrip của video player |
+| `data/keyframes/` | Thumbnail và filmstrip của video player |
 | `data/videos/` | Phát và seek video từ UI |
 | `data/map-keyframes/` | Đổi keyframe sang frame gốc, timestamp và FPS |
-| `data/npy_features/` | Vector CLIP đã trích xuất |
+| `data/npy_features_qwen3_vl_2b/` | Vector Qwen3-VL đã trích xuất từ Kaggle |
 | `data/metadata/caption/` | Caption/OCR cho Elasticsearch |
 | `data/processed/video_understanding/` | Summary/timeline cho TRAKE |
 | Docker volume `visual_qdrant_data` | Qdrant index của Visual Pipeline |
@@ -121,7 +120,7 @@ Thành viên mới có thể tải dữ liệu dùng chung từ
 Không chạy lại toàn bộ phần này trong mỗi lần khởi động. Chỉ chạy khi setup máy
 mới hoặc khi dữ liệu/index đã thay đổi.
 
-### 2.1. Tạo CLIP features và Qdrant index
+### 2.1. Nạp Qwen3-VL index vào Qdrant
 
 Qdrant chạy bằng Docker để không phải mở embedded database lớn trên Windows mỗi
 lần bật Visual Pipeline. Bật container trước, sau đó mới tạo/cập nhật index.
@@ -140,28 +139,25 @@ docker compose -f .\src\visual_pipeline\docker-compose.qdrant.yml up -d
 Invoke-RestMethod http://127.0.0.1:6333/readyz
 ```
 
-Nếu đã có `data/npy_features/` và Qdrant volume từ lần chạy trước, chỉ cần bật
-container; không cần chạy lại `extractor.py` hay `database.py`.
-
-**Git Bash**
+Sau khi đã tải các artifacts từ Kaggle vào
+`data/npy_features_qwen3_vl_2b/`, nạp toàn bộ Qwen vectors bằng Git Bash:
 
 ```bash
 conda activate aichcm2026
-python src/visual_pipeline/extractor.py
-python src/visual_pipeline/database.py
+
+export PYTHONPATH=src
+export QDRANT_URL=http://127.0.0.1:6333
+export QDRANT_TIMEOUT_SECONDS=120
+export QWEN3_VL_EMBED_FEATURE_DIR=data/npy_features_qwen3_vl_2b
+
+python -m visual_pipeline.qwen3_embedding.database \
+  --all-videos \
+  --recreate
 ```
 
-**PowerShell**
-
-```powershell
-conda activate aichcm2026
-python .\src\visual_pipeline\extractor.py
-python .\src\visual_pipeline\database.py
-```
-
-> `database.py` tạo lại collection Qdrant từ các file NPY. Chỉ chạy lại khi
-> cần cập nhật Visual index và phải tắt Visual Pipeline trước khi chạy. Không
-> chạy đồng thời hai lệnh `database.py`, vì lệnh này xoá rồi nạp lại collection.
+`--recreate` chỉ tạo lại collection Qwen. Dữ liệu/collection CLIP cũ được giữ
+nguyên nhưng không còn được Visual Pipeline phục vụ. Không chạy lại lệnh này
+mỗi lần mở MVP; Qdrant Docker giữ index trong named volume.
 
 ### 2.2. Tạo Elasticsearch frame index
 
@@ -330,15 +326,36 @@ chạy đúng dịch vụ tương ứng.
 
 ```bash
 conda activate aichcm2026
-python src/visual_pipeline/server.py
+export PYTHONPATH=src
+export QDRANT_URL=http://127.0.0.1:6333
+export QDRANT_TIMEOUT_SECONDS=120
+export QWEN3_VL_EMBED_MODEL=data/models/Qwen3-VL-Embedding-2B
+export QWEN3_VL_EMBED_FEATURE_DIR=data/npy_features_qwen3_vl_2b
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+
+python -m visual_pipeline.server
 ```
 
 **PowerShell**
 
 ```powershell
 conda activate aichcm2026
-python .\src\visual_pipeline\server.py
+
+$env:PYTHONPATH='src'
+$env:QDRANT_URL='http://127.0.0.1:6333'
+$env:QDRANT_TIMEOUT_SECONDS='120'
+$env:QWEN3_VL_EMBED_MODEL='data/models/Qwen3-VL-Embedding-2B'
+$env:QWEN3_VL_EMBED_FEATURE_DIR='data/npy_features_qwen3_vl_2b'
+$env:HF_HUB_OFFLINE='1'
+$env:TRANSFORMERS_OFFLINE='1'
+
+python -m visual_pipeline.server
 ```
+
+Visual Pipeline luôn dùng Qwen và nhận nguyên câu query người dùng. Trên GPU
+8 GB, server tự dùng `float16`. Nếu muốn bắt Qwen chạy CPU, thêm
+`QWEN3_VL_EMBED_DEVICE=cpu` trước lệnh cuối.
 
 Đảm bảo Qdrant Docker đã chạy và `.env` có
 `QDRANT_URL=http://127.0.0.1:6333` trước khi mở Visual Pipeline. Qdrant dùng

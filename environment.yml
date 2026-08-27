@@ -7,10 +7,12 @@ dependencies:
   - python=3.11
   - pip
   - pip:
-    # Lưu ý: Cài đặt PyTorch thủ công theo cấu hình máy
-    - transformers==4.49.0
+    # Cài PyTorch theo CUDA của máy trước. Qwen3-VL cần transformers mới.
+    - transformers==4.57.3
     - numpy<2.0.0
-    - sentence-transformers
+    - sentence-transformers>=5.4.0
+    - qwen-vl-utils==0.0.14
+    - av>=14.0.0
     - qdrant-client
     - fastapi
     - uvicorn

@@ -7,6 +7,7 @@ __pycache__/
 # Environments
 .env
 .venv
+.venv-qwen3/
 env/
 venv/
 ENV/
@@ -68,6 +69,10 @@ data/videos/
 # Dev 4 (Audio Pipeline) - WAV tạm sinh ra khi chạy ASR + model đã convert (~3GB)
 data/audio_cache/
 data/models/
+
+# Qwen3-VL-Embedding pilot artifacts (large, reproducible, local only)
+data/npy_features_qwen3_vl_2b/
+data/qdrant_qwen3_vl_2b/
 
 # Generated processed outputs are local and reproducible. Keep only the
 # directory contract and final video summaries in version control.
