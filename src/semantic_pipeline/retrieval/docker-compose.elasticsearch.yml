@@ -1,6 +1,6 @@
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:9.4.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:9.4.2
     environment:
       - discovery.type=single-node
       # Local development only; port exposure is restricted to loopback.
@@ -8,6 +8,10 @@ services:
       - xpack.security.enrollment.enabled=false
       - xpack.ml.enabled=false
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      # Long multi-event temporal queries expand into many multi_match terms
+      # across several fields; the default 1024 clause cap rejects those with
+      # a 400 (too_many_nested_clauses). Static setting, requires a restart.
+      - indices.query.bool.max_clause_count=4096
     ports:
       - "127.0.0.1:9200:9200"
     volumes:
