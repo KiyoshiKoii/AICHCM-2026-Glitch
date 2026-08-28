@@ -389,6 +389,21 @@ def bulk_ingest(
     return {"indexed": indexed, "documents_in_index": total}
 
 
+# Each word in a keyword fans out into several field-weighted should-clauses
+# in build_lexical_query below (combined_fields x2, multi_match x2, a nested
+# detections clause, plus 3 phrase clauses for multi-word terms), and
+# Elasticsearch enforces its default maxClauseCount (1024) across the whole
+# rewritten query tree -- shared with object/spatial/interaction clauses
+# below, not a per-field or per-query-part budget. The caller may also
+# append the full raw user sentence as one keyword for recall, so a single
+# detailed query can already carry 20-30+ words in one term. 20 words is the
+# largest budget verified (via a schema-max stress test: 20 keywords, 5
+# object/spatial/interaction queries each, 8 OCR queries, 5 program queries)
+# to stay clear of the clause ceiling; raise it only after re-running that
+# stress test.
+MAX_LEXICAL_KEYWORD_WORDS = 20
+
+
 def _clean_keywords(keywords: Sequence[str]) -> list[str]:
     result: list[str] = []
     seen: set[str] = set()
@@ -401,6 +416,20 @@ def _clean_keywords(keywords: Sequence[str]) -> list[str]:
             seen.add(key)
             result.append(text)
     return result[:20]
+
+
+def _bound_keyword_words(terms: list[str], max_words: int) -> list[str]:
+    """Keep terms while a shared word budget lasts, truncating the last one."""
+
+    bounded: list[str] = []
+    budget = max_words
+    for term in terms:
+        if budget <= 0:
+            break
+        words = term.split()
+        bounded.append(" ".join(words[:budget]))
+        budget -= len(words)
+    return bounded
 
 
 def _clean_object_queries(
@@ -702,7 +731,7 @@ def build_lexical_query(
     literal matching.
     """
 
-    terms = _clean_keywords(keywords)
+    terms = _bound_keyword_words(_clean_keywords(keywords), MAX_LEXICAL_KEYWORD_WORDS)
     objects = _clean_object_queries(object_queries)
     ocr_terms = _clean_keywords(ocr_queries or ())
     program_terms = _clean_keywords(program_queries or ())

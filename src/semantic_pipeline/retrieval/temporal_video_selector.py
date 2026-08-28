@@ -35,6 +35,14 @@ NEWS_FULL_QUERY_MINIMUM_SHOULD_MATCH = "90%"
 # matches visible in Elasticsearch's shared candidate pool; final scores are
 # normalized independently by retrieval policy below.
 NEWS_CANDIDATE_POOL_BOOST = 100.0
+# Each analyzed word in the expanded query becomes a BooleanQuery clause per
+# matched field, and Lucene's default maxClauseCount (1024) is shared across
+# the whole rewritten query tree -- not just one multi_match. Two detailed
+# TRAKE events (Gemini expansion adds ~2 retrieval_prompts, ~2 target and
+# ~2-3 context predicates per event) already produce ~170 words, which alone
+# blows the limit against SEGMENT_FIELDS' 7 fields (~170*7 > 1024). Cap the
+# expansion so a multi-event query never approaches that ceiling.
+MAX_EXPANDED_QUERY_WORDS = 70
 
 
 def _read_object(path: Path) -> dict[str, Any]:
@@ -332,12 +340,16 @@ def build_video_selection_query(
     # video description.  Keep every distinct expansion exactly once.
     unique_parts: list[str] = []
     seen_parts: set[str] = set()
+    word_budget = MAX_EXPANDED_QUERY_WORDS
     for part in expanded_parts:
         normalized = " ".join(part.split()).strip()
         key = normalized.casefold()
-        if normalized and key not in seen_parts:
-            seen_parts.add(key)
-            unique_parts.append(normalized)
+        if not normalized or key in seen_parts or word_budget <= 0:
+            continue
+        seen_parts.add(key)
+        part_words = normalized.split()
+        unique_parts.append(" ".join(part_words[:word_budget]))
+        word_budget -= len(part_words)
     expanded = " ".join(unique_parts)
     should: list[dict[str, Any]] = []
     strict_news_match = {
