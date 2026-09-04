@@ -133,11 +133,11 @@ function App() {
       visualWeight: 0.5,
     },
     filters = searchFilters,
-    useRerank = false,
+    eventOptions = [],
   ) => {
     const controller = beginSearch();
     setCurrentPage(1);
-    setLastQuery({ mode: 'temporal-video', query, weights, filters, useRerank });
+    setLastQuery({ mode: 'temporal-video', query, weights, filters, eventOptions });
     setVqaQuestion(null);
     setSelectedFrame(null);
     setLlmResults([]);
@@ -150,7 +150,7 @@ function App() {
         query,
         weights,
         filters,
-        useRerank,
+        eventOptions,
         controller.signal,
       );
       if (activeSearchController.current !== controller) return;
@@ -193,12 +193,12 @@ function App() {
     query,
     videoId,
     filters = searchFilters,
-    kisWeights = { textWeight: 0.5, visualWeight: 0.5 },
+    eventOptions = [],
   ) => {
     const controller = beginSearch();
     setCurrentPage(1);
     const scopedFilters = { ...filters, videoIds: [videoId] };
-    setLastQuery({ mode: 'temporal-event', query, filters: scopedFilters, kisWeights });
+    setLastQuery({ mode: 'temporal-event', query, filters: scopedFilters, eventOptions });
     setVqaQuestion(null);
     setSelectedFrame(null);
     setLlmResults([]);
@@ -207,7 +207,8 @@ function App() {
       const response = await searchTemporalEvents(
         query,
         scopedFilters,
-        kisWeights,
+        { textWeight: 0.5, visualWeight: 0.5 },
+        eventOptions,
         controller.signal,
       );
       if (activeSearchController.current !== controller) return;
@@ -229,8 +230,10 @@ function App() {
           reason_vi: item.reason_vi,
           matched_context_entities: item.matched_context_entities,
           caption: item.caption,
-          source_ranks: item.source_ranks,
-        },
+           source_ranks: item.source_ranks,
+           camera_motion: item.camera_motion,
+           event_order: item.event_order,
+         },
       }));
       setResults(temporalResults);
     } catch (err) {

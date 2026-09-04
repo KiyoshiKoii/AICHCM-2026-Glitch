@@ -7,7 +7,7 @@ export const searchByText = async (
   query,
   topK = 100,
   useRerank = false,
-  { textWeight = 0.5, visualWeight = 0.5 } = {},
+  { textWeight = 0.5, visualWeight = 0.5, asrWeight = 0 } = {},
   { batchIds = [], videoIds = [] } = {},
   signal,
 ) => {
@@ -23,6 +23,7 @@ export const searchByText = async (
       use_rerank: useRerank,
       text_weight: textWeight,
       visual_weight: visualWeight,
+      asr_weight: asrWeight,
       batch_ids: batchIds,
       video_ids: videoIds,
     }),
@@ -94,10 +95,21 @@ export const getFrameContext = async (frameId, window = 5) => {
   return response.json();
 };
 
+const serializeTemporalEventOptions = (eventOptions = []) => eventOptions.map((option) => ({
+  event_id: option.eventId,
+  text_weight: option.textWeight,
+  visual_weight: option.visualWeight,
+  use_rerank: option.useRerank,
+  requires_after_previous: option.requiresAfterPrevious,
+  verify_camera_motion: option.verifyCameraMotion,
+  motion_weight: option.motionWeight,
+}));
+
 export const searchTemporalEvents = async (
   query,
   { batchIds = [], videoIds = [], topKVideos = 20 } = {},
   { textWeight = 0.5, visualWeight = 0.5 } = {},
+  eventOptions = [],
   signal,
 ) => {
   const response = await fetch('/api/v1/search/temporal-events', {
@@ -111,6 +123,7 @@ export const searchTemporalEvents = async (
       top_k_videos: topKVideos,
       text_weight: textWeight,
       visual_weight: visualWeight,
+      event_options: serializeTemporalEventOptions(eventOptions),
     }),
   });
   if (!response.ok) {
@@ -165,7 +178,7 @@ export const searchTemporalVideos = async (
     visualWeight = 0.5,
   } = {},
   { batchIds = [], videoIds = [], topKVideos = 100 } = {},
-  useRerank = false,
+  eventOptions = [],
   signal,
 ) => {
   const response = await fetch('/api/v1/search/temporal-videos', {
@@ -181,7 +194,7 @@ export const searchTemporalVideos = async (
       visual_weight: visualWeight,
       summary_weight: summaryWeight,
       kis_weight: kisWeight,
-      use_rerank: useRerank,
+      event_options: serializeTemporalEventOptions(eventOptions),
     }),
   });
   if (!response.ok) {

@@ -2,10 +2,21 @@ import { useState } from 'react';
 
 const TABS = [
   { id: 'text', label: 'Text Search' },
+  { id: 'kis-asr', label: 'KIS + ASR' },
   { id: 'asr', label: 'ASR Search' },
   { id: 'vqa', label: 'VQA' },
   { id: 'temporal', label: 'Temporal Events' },
 ];
+
+const createTemporalEvent = () => ({
+  description: '',
+  textWeightPercent: 50,
+  useRerank: false,
+  requiresAfterPrevious: false,
+  verifyCameraMotion: false,
+  motionWeightPercent: 70,
+  settingsOpen: false,
+});
 
 function SearchBar({
   onSearch,
@@ -21,12 +32,11 @@ function SearchBar({
   const [query, setQuery] = useState('');
   const [question, setQuestion] = useState('');
   const [useRerank, setUseRerank] = useState(false);
-  const [useTemporalRerank, setUseTemporalRerank] = useState(false);
   const [textWeightPercent, setTextWeightPercent] = useState(50);
+  const [kisFusionWeightPercent, setKisFusionWeightPercent] = useState(65);
   const [temporalContext, setTemporalContext] = useState('');
-  const [temporalEvents, setTemporalEvents] = useState(['']);
+  const [temporalEvents, setTemporalEvents] = useState([createTemporalEvent()]);
   const [summaryWeightPercent, setSummaryWeightPercent] = useState(75);
-  const [temporalTextWeightPercent, setTemporalTextWeightPercent] = useState(50);
   const [temporalSearchMode, setTemporalSearchMode] = useState('summary-kis');
 
   const handleSubmit = (event) => {
@@ -41,37 +51,43 @@ function SearchBar({
     }
     if (activeTab === 'temporal') {
       const context = temporalContext.trim();
-      const events = temporalEvents.map((item) => item.trim()).filter(Boolean);
+      const events = temporalEvents
+        .map((item, index) => ({ ...item, eventId: `E${index + 1}`, description: item.description.trim() }))
+        .filter((item) => item.description);
       const isEventOnly = temporalSearchMode === 'events-only';
       if (!events.length || (!selectedTemporalVideo && !isEventOnly && !context)) return;
       const structuredQuery = [
         ...(!isEventOnly && context ? [context] : []),
-        ...events.map((item, index) => `E${index + 1}: ${item}`),
+        ...events.map((item) => `${item.eventId}: ${item.description}`),
       ].join('\n');
-      const temporalKisWeights = {
-        textWeight: temporalTextWeightPercent / 100,
-        visualWeight: (100 - temporalTextWeightPercent) / 100,
-      };
+      const eventOptions = events.map((item) => ({
+        eventId: item.eventId,
+        textWeight: item.textWeightPercent / 100,
+        visualWeight: (100 - item.textWeightPercent) / 100,
+        useRerank: item.useRerank,
+        requiresAfterPrevious: item.requiresAfterPrevious,
+        verifyCameraMotion: item.verifyCameraMotion,
+        motionWeight: item.motionWeightPercent / 100,
+      }));
 
       if (selectedTemporalVideo) {
         onTemporalEventSearch?.(
           structuredQuery,
           selectedTemporalVideo.video_id,
           filters,
-          temporalKisWeights,
+          eventOptions,
         );
       } else {
         onTemporalVideoSearch?.(
           structuredQuery,
           isEventOnly
-            ? { summaryWeight: 0, kisWeight: 1, ...temporalKisWeights }
+            ? { summaryWeight: 0, kisWeight: 1 }
             : {
                 summaryWeight: summaryWeightPercent / 100,
                 kisWeight: (100 - summaryWeightPercent) / 100,
-                ...temporalKisWeights,
               },
           filters,
-          useTemporalRerank,
+          eventOptions,
         );
       }
       return;
@@ -85,13 +101,22 @@ function SearchBar({
 
     const trimmed = query.trim();
     if (!trimmed) return;
+    const isKisAsrFusion = activeTab === 'kis-asr';
+    const kisWeight = isKisAsrFusion ? kisFusionWeightPercent / 100 : 1;
+    const asrWeight = isKisAsrFusion ? 1 - kisWeight : 0;
     onSearch?.(
       trimmed,
       useRerank,
-      {
-        textWeight: textWeightPercent / 100,
-        visualWeight: (100 - textWeightPercent) / 100,
-      },
+      isKisAsrFusion
+        ? {
+            textWeight: (textWeightPercent / 100) * kisWeight,
+            visualWeight: ((100 - textWeightPercent) / 100) * kisWeight,
+            asrWeight,
+          }
+        : {
+            textWeight: textWeightPercent / 100,
+            visualWeight: (100 - textWeightPercent) / 100,
+          },
       filters,
     );
   };
@@ -103,9 +128,9 @@ function SearchBar({
     }
   };
 
-  const updateTemporalEvent = (index, value) => {
+  const updateTemporalEvent = (index, changes) => {
     setTemporalEvents((events) => events.map((item, position) => (
-      position === index ? value : item
+      position === index ? { ...item, ...changes } : item
     )));
   };
 
@@ -235,7 +260,8 @@ function SearchBar({
             <button
               type="button"
               className="temporal-event-add"
-              onClick={() => setTemporalEvents((events) => [...events, ''])}
+              onClick={() => setTemporalEvents((events) => [...events, createTemporalEvent()])}
+              disabled={temporalEvents.length >= 8}
             >
               + Add event
             </button>
@@ -248,11 +274,101 @@ function SearchBar({
                 <textarea
                   className="search-textarea temporal-event-input"
                   rows={2}
-                  value={item}
-                  onChange={(event) => updateTemporalEvent(index, event.target.value)}
+                  value={item.description}
+                  onChange={(event) => updateTemporalEvent(index, { description: event.target.value })}
                   placeholder="Mô tả khoảnh khắc hoặc hành động cần tìm"
                   aria-label={`Event ${index + 1}`}
                 />
+                <button
+                  type="button"
+                  className={item.settingsOpen ? 'temporal-event-settings-toggle active' : 'temporal-event-settings-toggle'}
+                  onClick={() => updateTemporalEvent(index, { settingsOpen: !item.settingsOpen })}
+                  aria-expanded={item.settingsOpen}
+                  aria-label={`Advanced settings for event ${index + 1}`}
+                  title="Event settings"
+                >
+                  Settings
+                </button>
+                {item.settingsOpen && (
+                  <section className="temporal-event-advanced" aria-label={`Event ${index + 1} advanced settings`}>
+                    <div className="fusion-weight-control temporal-event-weight-control">
+                      <div className="fusion-weight-header">
+                        <span>KIS fusion</span>
+                        <span>
+                          Text/caption {item.textWeightPercent}% / Visual {100 - item.textWeightPercent}%
+                        </span>
+                      </div>
+                      <input
+                        className="fusion-weight-slider"
+                        type="range"
+                        min="0"
+                        max="100"
+                        step="5"
+                        value={item.textWeightPercent}
+                        onChange={(event) => updateTemporalEvent(index, { textWeightPercent: Number(event.target.value) })}
+                        aria-label={`Event ${index + 1} KIS text weight`}
+                      />
+                      <div className="fusion-weight-scale" aria-hidden="true">
+                        <span>Text/caption</span>
+                        <span>Visual Qwen</span>
+                      </div>
+                    </div>
+
+                    <label className="search-rerank-toggle temporal-event-toggle">
+                      <input
+                        type="checkbox"
+                        checked={item.useRerank}
+                        onChange={(event) => updateTemporalEvent(index, { useRerank: event.target.checked })}
+                      />
+                      <span>Gemini re-rank this event (uses an extra request)</span>
+                    </label>
+
+                    {index > 0 && (
+                      <label className="search-rerank-toggle temporal-event-toggle">
+                        <input
+                          type="checkbox"
+                          checked={item.requiresAfterPrevious}
+                          onChange={(event) => updateTemporalEvent(index, { requiresAfterPrevious: event.target.checked })}
+                        />
+                        <span>E{index + 1} must occur after E{index}</span>
+                      </label>
+                    )}
+
+                    <label className="search-rerank-toggle temporal-event-toggle">
+                      <input
+                        type="checkbox"
+                        checked={item.verifyCameraMotion}
+                        onChange={(event) => updateTemporalEvent(index, { verifyCameraMotion: event.target.checked })}
+                      />
+                      <span>Verify shot transition / camera motion</span>
+                    </label>
+
+                    {item.verifyCameraMotion && (
+                      <div className="fusion-weight-control temporal-event-weight-control temporal-motion-weight-control">
+                        <div className="fusion-weight-header">
+                          <span>KIS / Camera motion</span>
+                          <span>
+                            KIS {100 - item.motionWeightPercent}% / Motion {item.motionWeightPercent}%
+                          </span>
+                        </div>
+                        <input
+                          className="fusion-weight-slider"
+                          type="range"
+                          min="0"
+                          max="100"
+                          step="5"
+                          value={item.motionWeightPercent}
+                          onChange={(event) => updateTemporalEvent(index, { motionWeightPercent: Number(event.target.value) })}
+                          aria-label={`Event ${index + 1} camera motion weight`}
+                        />
+                        <div className="fusion-weight-scale" aria-hidden="true">
+                          <span>KIS</span>
+                          <span>Camera motion</span>
+                        </div>
+                      </div>
+                    )}
+                  </section>
+                )}
                 <button
                   type="button"
                   className="temporal-event-remove"
@@ -292,40 +408,6 @@ function SearchBar({
             </div>
           )}
 
-          <div className="fusion-weight-control temporal-fusion-control">
-            <div className="fusion-weight-header">
-              <span>KIS fusion weight</span>
-              <span>
-                Text/caption {temporalTextWeightPercent}% · Visual {100 - temporalTextWeightPercent}%
-              </span>
-            </div>
-            <input
-              id="temporal-kis-text-weight-slider"
-              className="fusion-weight-slider"
-              type="range"
-              min="0"
-              max="100"
-              step="5"
-              value={temporalTextWeightPercent}
-              onChange={(event) => setTemporalTextWeightPercent(Number(event.target.value))}
-              aria-label="Temporal KIS text weight"
-            />
-            <div className="fusion-weight-scale" aria-hidden="true">
-              <span>Text/caption</span>
-              <span>Visual Qwen</span>
-            </div>
-          </div>
-
-          {!selectedTemporalVideo && (
-            <label className="search-rerank-toggle temporal-rerank-toggle">
-              <input
-                type="checkbox"
-                checked={useTemporalRerank}
-                onChange={(event) => setUseTemporalRerank(event.target.checked)}
-              />
-              <span>Gemini re-rank từng event (tốn thêm request)</span>
-            </label>
-          )}
         </section>
       )}
 
@@ -343,14 +425,18 @@ function SearchBar({
         </label>
       )}
 
-      {activeTab === 'text' && (
+      {(activeTab === 'text' || activeTab === 'kis-asr') && (
         <div className="fusion-weight-control">
           <div className="fusion-weight-header">
-            <span>Fusion weight</span>
-            <span>Text {textWeightPercent}% · Visual {100 - textWeightPercent}%</span>
+            <span>{activeTab === 'kis-asr' ? 'KIS split' : 'Fusion weight'}</span>
+            <span>
+              {activeTab === 'kis-asr'
+                ? `Caption ${textWeightPercent}% · Visual ${100 - textWeightPercent}%`
+                : `Text ${textWeightPercent}% · Visual ${100 - textWeightPercent}%`}
+            </span>
           </div>
           <input
-            id="text-weight-slider"
+            id={activeTab === 'kis-asr' ? 'kis-asr-text-weight-slider' : 'text-weight-slider'}
             className="fusion-weight-slider"
             type="range"
             min="0"
@@ -358,16 +444,39 @@ function SearchBar({
             step="5"
             value={textWeightPercent}
             onChange={(event) => setTextWeightPercent(Number(event.target.value))}
-            aria-label="Text search weight"
+            aria-label={activeTab === 'kis-asr' ? 'KIS caption and visual weight' : 'Text search weight'}
           />
           <div className="fusion-weight-scale" aria-hidden="true">
-            <span>Text</span>
-            <span>Visual</span>
+            <span>{activeTab === 'kis-asr' ? 'Caption' : 'Text'}</span>
+            <span>Visual Qwen</span>
           </div>
+          {activeTab === 'kis-asr' && (
+            <>
+              <div className="fusion-weight-header kis-asr-weight-header">
+                <span>KIS / ASR evidence</span>
+                <span>KIS {kisFusionWeightPercent}% / ASR {100 - kisFusionWeightPercent}%</span>
+              </div>
+              <input
+                id="kis-asr-weight-slider"
+                className="fusion-weight-slider"
+                type="range"
+                min="0"
+                max="100"
+                step="5"
+                value={kisFusionWeightPercent}
+                onChange={(event) => setKisFusionWeightPercent(Number(event.target.value))}
+                aria-label="KIS and ASR fusion weight"
+              />
+              <div className="fusion-weight-scale" aria-hidden="true">
+                <span>KIS visual + caption</span>
+                <span>ASR</span>
+              </div>
+            </>
+          )}
         </div>
       )}
 
-      {(activeTab === 'text' || activeTab === 'vqa') && (
+      {(activeTab === 'text' || activeTab === 'kis-asr' || activeTab === 'vqa') && (
         <label className="search-rerank-toggle">
           <input
             type="checkbox"

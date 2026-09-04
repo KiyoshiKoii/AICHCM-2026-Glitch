@@ -379,9 +379,60 @@
 
 .temporal-event-row {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
   align-items: start;
   gap: 7px;
+}
+
+.temporal-event-settings-toggle {
+  min-width: 34px;
+  min-height: 34px;
+  border: 1px solid #e3e6ee;
+  border-radius: 8px;
+  background: #fff;
+  color: #5c6474;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.temporal-event-settings-toggle:hover,
+.temporal-event-settings-toggle.active {
+  border-color: #f47b12;
+  color: #d96200;
+  background: #fff4e9;
+}
+
+.temporal-event-advanced {
+  grid-column: 2 / -1;
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #f1dec9;
+  border-radius: 9px;
+  background: #fffaf5;
+}
+
+.temporal-event-row > .temporal-event-remove {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.temporal-event-weight-control {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.temporal-event-toggle {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.temporal-motion-weight-control {
+  border-top: 1px solid #f1dec9;
+  padding-top: 8px;
 }
 
 .temporal-event-label {
@@ -470,6 +521,10 @@
 .fusion-weight-header span:first-child {
   font-weight: 700;
   color: var(--text-h);
+}
+
+.kis-asr-weight-header {
+  margin-top: 8px;
 }
 
 .fusion-weight-slider {
