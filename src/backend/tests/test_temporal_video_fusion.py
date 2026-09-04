@@ -4,6 +4,7 @@ import pytest
 
 from backend.config import Settings
 from backend.schemas.search import ParsedQuery, SearchHit
+from backend.services.camera_motion_verifier import CameraMotionResult
 from backend.services.search_orchestrator import SearchService
 from backend.services.temporal_video_fusion import (
     KISQuery,
@@ -43,6 +44,83 @@ def test_build_kis_queries_reuses_one_shot_temporal_visual_plan() -> None:
     assert "filling rests on the leaf" in queries[0].semantic_keywords
 
 
+def test_build_kis_queries_routes_explicit_shot_sequence_to_observable_stages() -> None:
+    queries = build_kis_queries(
+        "Cảnh phim lần lượt giới thiệu nguyên liệu qua 3 chuyển cảnh: "
+        "máy quay chéo lên tới nguyên liệu hải sản đầu tiên; "
+        "quay cận nguyên liệu hải sản thứ hai rồi chuyển sang rau củ nhiều màu; "
+        "cuối cùng là toàn cảnh nguyên liệu.",
+        None,
+        infer_sequence=True,
+    )
+
+    assert [item.event_id for item in queries] == ["S1", "S2", "S3", "S4"]
+    assert [item.sequence_position for item in queries] == [1, 2, 3, 4]
+    assert "cá thác lác" in queries[1].visual_prompt
+    assert queries[2].description == "chuyển sang rau củ nhiều màu"
+
+
+def test_build_kis_queries_keeps_plain_kis_query_on_single_frame_path() -> None:
+    queries = build_kis_queries("hai người mang cây dù", None)
+
+    assert len(queries) == 1
+    assert queries[0].description == "hai người mang cây dù"
+    assert queries[0].sequence_position is None
+
+
+def test_aggregate_kis_rankings_rewards_ordered_compact_chain() -> None:
+    stages = [
+        KISQuery(
+            f"S{index}",
+            f"stage {index}",
+            f"stage {index}",
+            (),
+            (),
+            index,
+            requires_after_previous=index > 1,
+        )
+        for index in range(1, 4)
+    ]
+
+    def positioned_hit(frame_id: str, score: float, position: int) -> SearchHit:
+        return SearchHit(
+            frame_id=frame_id,
+            frame_index=position,
+            score=score,
+            thumbnail_url="",
+        )
+
+    scores, evidence = aggregate_kis_rankings(
+        [
+            (
+                stages[0],
+                [
+                    positioned_hit("L26_V002_f0003", 1.0, 300),
+                    positioned_hit("L26_V001_f0001", 0.9, 100),
+                ],
+            ),
+            (
+                stages[1],
+                [
+                    positioned_hit("L26_V002_f0002", 1.0, 200),
+                    positioned_hit("L26_V001_f0002", 0.9, 110),
+                ],
+            ),
+            (
+                stages[2],
+                [
+                    positioned_hit("L26_V002_f0001", 1.0, 100),
+                    positioned_hit("L26_V001_f0003", 0.9, 120),
+                ],
+            ),
+        ]
+    )
+
+    assert scores["L26_V001"] > scores["L26_V002"]
+    assert all(item["sequence_selected"] for item in evidence["L26_V001"])
+    assert not any(item["sequence_selected"] for item in evidence["L26_V002"])
+
+
 def test_aggregate_kis_rankings_rewards_cross_event_video_coverage() -> None:
     first = KISQuery("E1", "first", "first", (), ("first",))
     second = KISQuery("E2", "second", "second", (), ("second",))
@@ -58,6 +136,67 @@ def test_aggregate_kis_rankings_rewards_cross_event_video_coverage() -> None:
     assert scores["L26_V002"] > scores["L26_V003"]
     assert {item["event_id"] for item in evidence["L26_V002"]} == {"E1", "E2"}
     assert all("thumbnail_url" in item for item in evidence["L26_V002"])
+
+
+def test_selected_video_order_constraint_promotes_later_event_frame() -> None:
+    service = SearchService.__new__(SearchService)
+    first = KISQuery("E1", "first", "first", (), ())
+    second = KISQuery(
+        "E2",
+        "second",
+        "second",
+        (),
+        (),
+        sequence_position=2,
+        requires_after_previous=True,
+    )
+    rankings = [
+        [SearchHit(frame_id="L26_V074_f0010", frame_index=100, score=1.0, thumbnail_url="")],
+        [
+            SearchHit(frame_id="L26_V074_f0009", frame_index=90, score=1.0, thumbnail_url=""),
+            SearchHit(frame_id="L26_V074_f0011", frame_index=110, score=0.9, thumbnail_url=""),
+        ],
+    ]
+
+    result = service._apply_selected_event_order([first, second], rankings)
+
+    assert result[1][0].frame_id == "L26_V074_f0011"
+    assert result[1][0].metadata["event_order"]["satisfies_order"] is True
+    assert result[1][1].metadata["event_order"]["satisfies_order"] is False
+
+
+@pytest.mark.asyncio
+async def test_camera_verification_keeps_kis_order_when_video_is_unavailable() -> None:
+    class _UnavailableVerifier:
+        @staticmethod
+        def has_explicit_camera_constraint(_: str) -> bool:
+            return True
+
+        @staticmethod
+        def verify(**_: object) -> CameraMotionResult:
+            return CameraMotionResult(
+                score=0.5,
+                reason="Video file is unavailable.",
+                details={"available": False},
+            )
+
+    service = SearchService.__new__(SearchService)
+    service.camera_motion_verifier = _UnavailableVerifier()
+    spec = KISQuery(
+        "E1",
+        "camera tilts up",
+        "camera tilts up",
+        (),
+        (),
+        verify_camera_motion=True,
+        motion_weight=1.0,
+    )
+    hits = [SearchHit(frame_id="L26_V074_f0010", frame_index=100, score=0.9, thumbnail_url="")]
+
+    result = await service._apply_camera_motion_verification(spec, hits)
+
+    assert result[0].score == 0.9
+    assert "camera_motion" not in result[0].metadata
 
 
 def test_fuse_summary_and_kis_can_promote_visual_match() -> None:
@@ -166,6 +305,73 @@ async def test_selected_temporal_video_uses_scoped_kis_candidates() -> None:
     assert semantic.text_payloads[0]["video_ids"] == ["L26_V002"]
     assert visual.payloads[0]["top_k"] == 20
     assert "interaction_queries" in semantic.text_payloads[0]
+
+
+@pytest.mark.asyncio
+async def test_selected_temporal_video_applies_controls_per_event() -> None:
+    visual = _VisualPipeline()
+    semantic = _SemanticPipeline()
+    service = SearchService(
+        settings=Settings(),
+        parser=_Parser(),
+        dev1=visual,
+        dev2=semantic,
+    )
+    reranker = _Reranker()
+    service.reranker = reranker
+    calls: list[tuple[str, float, float, bool]] = []
+    original_search_text = service.search_text
+
+    async def record_search_text(*args, **kwargs):
+        calls.append((args[0], kwargs["text_weight"], kwargs["visual_weight"], kwargs["use_rerank"]))
+        return await original_search_text(*args, **kwargs)
+
+    service.search_text = record_search_text  # type: ignore[method-assign]
+    response = await service.search_temporal_events(
+        "Cycling video\nE1: riders enter the bridge\nE2: riders leave the bridge",
+        batch_ids=["L23"],
+        video_ids=["L23_V001"],
+        event_options=[
+            {
+                "event_id": "E1",
+                "text_weight": 0.2,
+                "visual_weight": 0.8,
+                "use_rerank": True,
+            },
+            {
+                "event_id": "E2",
+                "text_weight": 0.7,
+                "visual_weight": 0.3,
+                "requires_after_previous": True,
+            },
+        ],
+    )
+
+    assert sorted(calls) == [
+        ("riders enter the bridge", 0.2, 0.8, True),
+        ("riders leave the bridge", 0.7, 0.3, False),
+    ]
+    assert reranker.queries == ["riders enter the bridge"]
+    assert response["data"]["kis"]["queries"] == [
+        {
+            "event_id": "E1",
+            "description": "riders enter the bridge",
+            "visual_prompt": "riders enter the bridge",
+            "weights": {"text": 0.2, "visual": 0.8},
+            "requires_after_previous": False,
+            "verify_camera_motion": False,
+            "motion_weight": 0.7,
+        },
+        {
+            "event_id": "E2",
+            "description": "riders leave the bridge",
+            "visual_prompt": "riders leave the bridge",
+            "weights": {"text": 0.7, "visual": 0.3},
+            "requires_after_previous": True,
+            "verify_camera_motion": False,
+            "motion_weight": 0.7,
+        },
+    ]
 
 
 @pytest.mark.asyncio

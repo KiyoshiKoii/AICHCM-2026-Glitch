@@ -77,6 +77,26 @@ describe('SearchBar', () => {
     expect(onSearch).not.toHaveBeenCalled();
   });
 
+  it('searches one frame with visual, caption and ASR evidence in KIS + ASR mode', async () => {
+    const user = userEvent.setup();
+    const onSearch = vi.fn();
+    render(<SearchBar onSearch={onSearch} />);
+
+    await user.click(screen.getByRole('tab', { name: 'KIS + ASR' }));
+    await user.type(getTextInput(), 'squid with white wine');
+    fireEvent.change(screen.getByRole('slider', { name: /kis and asr fusion weight/i }), {
+      target: { value: '60' },
+    });
+    await user.click(getSubmitButton());
+
+    expect(onSearch).toHaveBeenCalledWith(
+      'squid with white wine',
+      false,
+      { textWeight: 0.3, visualWeight: 0.3, asrWeight: 0.4 },
+      { batchIds: [], videoIds: [] },
+    );
+  });
+
   it('searches timestamped transcripts in ASR mode', async () => {
     const user = userEvent.setup();
     const onAsrSearch = vi.fn();

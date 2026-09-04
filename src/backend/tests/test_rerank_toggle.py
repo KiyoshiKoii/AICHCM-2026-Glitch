@@ -4,6 +4,7 @@ from backend.config import Settings
 from backend.schemas.search import (
     ParsedQuery,
     SearchHit,
+    TemporalEventSearchRequest,
     TemporalVideoSearchRequest,
     TextSearchRequest,
 )
@@ -72,11 +73,23 @@ def test_text_search_request_disables_rerank_by_default():
     assert request.top_k == 100
     assert request.text_weight == 0.5
     assert request.visual_weight == 0.5
+    assert request.asr_weight == 0.0
 
 
 def test_text_search_request_rejects_zero_fusion_weights():
     with pytest.raises(ValueError, match="cannot both be zero"):
         TextSearchRequest(query="a person", text_weight=0.0, visual_weight=0.0)
+
+
+def test_text_search_request_accepts_asr_only_fusion():
+    request = TextSearchRequest(
+        query="a person speaks",
+        text_weight=0.0,
+        visual_weight=0.0,
+        asr_weight=1.0,
+    )
+
+    assert request.asr_weight == 1.0
 
 
 def test_text_search_request_normalizes_batch_and_video_filters():
@@ -145,6 +158,41 @@ def test_temporal_video_request_rejects_zero_kis_text_visual_weights():
         )
 
 
+def test_temporal_event_options_validate_and_normalize_per_event_controls():
+    request = TemporalEventSearchRequest(
+        query="E1: the cook opens the stove",
+        event_options=[
+            {
+                "event_id": "e1",
+                "text_weight": 0.3,
+                "visual_weight": 0.7,
+                "use_rerank": True,
+                "verify_camera_motion": True,
+                "motion_weight": 0.65,
+            }
+        ],
+    )
+
+    option = request.event_options[0]
+    assert option.event_id == "E1"
+    assert option.text_weight == 0.3
+    assert option.visual_weight == 0.7
+    assert option.use_rerank is True
+    assert option.verify_camera_motion is True
+    assert option.motion_weight == 0.65
+
+
+def test_temporal_event_options_reject_duplicate_event_ids():
+    with pytest.raises(ValueError, match="duplicate event_id"):
+        TemporalVideoSearchRequest(
+            query="E1: first\nE2: second",
+            event_options=[
+                {"event_id": "E1"},
+                {"event_id": "e1"},
+            ],
+        )
+
+
 @pytest.mark.asyncio
 async def test_search_skips_gemini_reranking_when_disabled():
     service, reranker = build_service()
@@ -182,6 +230,64 @@ async def test_qwen_visual_pipeline_always_uses_raw_user_query():
     )
 
     assert dev1.calls[0]["visual_prompt"] == "nguyên câu truy vấn dài của người dùng"
+
+
+@pytest.mark.asyncio
+async def test_search_fuses_asr_passage_with_frames_inside_its_time_window(monkeypatch) -> None:
+    class ASRWindowPipeline:
+        async def search_text(self, payload: dict) -> dict:
+            return {"data": [{"frame_id": "L26_V001_f0008", "score": 0.9}]}
+
+        async def search_asr(self, payload: dict) -> dict:
+            assert payload["query"] == "squid with wine"
+            return {
+                "data": [
+                    {
+                        "asr_id": "L26_V001_asr_000009",
+                        "video_id": "L26_V001",
+                        "start_ms": 12_000,
+                        "end_ms": 18_000,
+                        "text": "add white wine and pepper to the squid",
+                        "score": 1.0,
+                    }
+                ]
+            }
+
+    monkeypatch.setattr(
+        "backend.utils.keyframe_mapper.get_nearest_keyframe_position",
+        lambda _video_id, _timestamp_ms: (7, {"frame_index": 175, "timestamp_ms": 12_000, "fps": 25.0}),
+    )
+    monkeypatch.setattr(
+        "backend.utils.keyframe_mapper.get_keyframe_position",
+        lambda _video_id, ordinal: (
+            {"frame_index": 200, "timestamp_ms": 15_000, "fps": 25.0}
+            if ordinal == 8
+            else {"frame_index": 175, "timestamp_ms": 12_000, "fps": 25.0}
+        ),
+    )
+    pipeline = ASRWindowPipeline()
+    service = SearchService(
+        settings=Settings(gemini_api_key=None),
+        parser=FakeParser(),
+        dev1=pipeline,
+        dev2=pipeline,
+    )
+
+    response = await service.search_text(
+        "squid with wine",
+        10,
+        use_rerank=False,
+        text_weight=0.3,
+        visual_weight=0.3,
+        asr_weight=0.4,
+        batch_ids=["L26"],
+    )
+
+    hit = response.data.results[0]
+    assert hit.frame_id == "L26_V001_f0008"
+    assert hit.metadata["asr_temporal_match"] is True
+    assert hit.metadata["transcript"] == "add white wine and pepper to the squid"
+    assert hit.metadata["source_ranks"] == {"dev1": 1, "dev2": 1, "asr": 1}
 
 
 @pytest.mark.asyncio
