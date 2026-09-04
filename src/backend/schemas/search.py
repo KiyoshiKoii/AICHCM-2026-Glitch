@@ -218,6 +218,12 @@ class TextSearchRequest(BaseModel):
         le=1.0,
         description="Relative weight of visual/Qwen retrieval.",
     )
+    asr_weight: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=1.0,
+        description="Relative weight of timestamped ASR retrieval.",
+    )
     use_rerank: bool = Field(
         default=False,
         description="Call Gemini to re-rank the retrieved results.",
@@ -240,8 +246,35 @@ class TextSearchRequest(BaseModel):
 
     @model_validator(mode="after")
     def validate_fusion_weights(self) -> "TextSearchRequest":
+        if self.text_weight + self.visual_weight + self.asr_weight <= 0:
+            raise ValueError(
+                "text_weight and visual_weight cannot both be zero unless asr_weight is positive"
+            )
+        return self
+
+
+class TemporalEventOptions(BaseModel):
+    """Retrieval/verifier controls belonging to one explicitly numbered event."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    event_id: str = Field(pattern=r"(?i)^E[1-8]$")
+    text_weight: float = Field(default=0.5, ge=0.0, le=1.0)
+    visual_weight: float = Field(default=0.5, ge=0.0, le=1.0)
+    use_rerank: bool = False
+    requires_after_previous: bool = False
+    verify_camera_motion: bool = False
+    motion_weight: float = Field(default=0.7, ge=0.0, le=1.0)
+
+    @field_validator("event_id")
+    @classmethod
+    def normalize_event_id(cls, value: str) -> str:
+        return value.upper()
+
+    @model_validator(mode="after")
+    def validate_kis_weights(self) -> "TemporalEventOptions":
         if self.text_weight + self.visual_weight <= 0:
-            raise ValueError("text_weight and visual_weight cannot both be zero")
+            raise ValueError("event text_weight and visual_weight cannot both be zero")
         return self
 
 
@@ -252,6 +285,7 @@ class TemporalEventSearchRequest(BaseModel):
     top_k_videos: int = Field(default=20, ge=1, le=100)
     text_weight: float = Field(default=0.5, ge=0.0, le=1.0)
     visual_weight: float = Field(default=0.5, ge=0.0, le=1.0)
+    event_options: list[TemporalEventOptions] = Field(default_factory=list, max_length=8)
 
     @field_validator("query")
     @classmethod
@@ -270,6 +304,9 @@ class TemporalEventSearchRequest(BaseModel):
     def validate_kis_fusion_weights(self) -> "TemporalEventSearchRequest":
         if self.text_weight + self.visual_weight <= 0:
             raise ValueError("text_weight and visual_weight cannot both be zero")
+        event_ids = [item.event_id for item in self.event_options]
+        if len(event_ids) != len(set(event_ids)):
+            raise ValueError("event_options must not contain duplicate event_id values")
         return self
 
 
@@ -290,6 +327,7 @@ class TemporalVideoSearchRequest(BaseModel):
     use_rerank: bool = False
     text_weight: float = Field(default=0.5, ge=0.0, le=1.0)
     visual_weight: float = Field(default=0.5, ge=0.0, le=1.0)
+    event_options: list[TemporalEventOptions] = Field(default_factory=list, max_length=8)
 
     @field_validator("query")
     @classmethod
@@ -310,6 +348,9 @@ class TemporalVideoSearchRequest(BaseModel):
             raise ValueError("summary_weight and kis_weight cannot both be zero")
         if self.text_weight + self.visual_weight <= 0:
             raise ValueError("text_weight and visual_weight cannot both be zero")
+        event_ids = [item.event_id for item in self.event_options]
+        if len(event_ids) != len(set(event_ids)):
+            raise ValueError("event_options must not contain duplicate event_id values")
         return self
 
 

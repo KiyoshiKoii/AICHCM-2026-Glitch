@@ -1,15 +1,23 @@
 import asyncio
 import re
+from dataclasses import dataclass
 from typing import Any, Protocol
 
 from backend.config import Settings
 from backend.core.errors import UpstreamError
-from backend.schemas.search import ParsedQuery, TextSearchResponse, SearchHit, SearchData
+from backend.schemas.search import (
+    ParsedQuery,
+    TextSearchResponse,
+    SearchHit,
+    SearchData,
+    UpstreamResult,
+)
 from backend.clients.visual_client import InternalPipelineClient, normalize_upstream_results
 from backend.utils.rrf import reciprocal_rank_fusion
 
 
 from backend.services.llm_reranker import GeminiReRanker
+from backend.services.camera_motion_verifier import CameraMotionVerifier
 from backend.services.query_analyzer import enrich_explicit_interactions
 from backend.services.temporal_video_fusion import (
     KISQuery,
@@ -42,6 +50,147 @@ def _filter_upstream_results(results: list[Any], batch_ids: list[str], video_ids
     return [item for item in results if matches(item)]
 
 
+_KEYFRAME_ID_PATTERN = re.compile(r"^(?P<video_id>L\d+_V\d+)_f(?P<ordinal>\d+)$", re.IGNORECASE)
+
+
+@dataclass(frozen=True)
+class _ASRWindow:
+    """One retrieved transcript passage, anchored to its first keyframe."""
+
+    rank: int
+    anchor_frame_id: str
+    video_id: str
+    start_ms: int
+    end_ms: int
+    score: float
+    metadata: dict[str, Any]
+
+
+def _asr_windows_from_payload(payload: Any) -> tuple[list[UpstreamResult], list[_ASRWindow]]:
+    """Map ASR passages to first keyframes while retaining their time ranges."""
+
+    raw_results = payload.get("data") if isinstance(payload, dict) else None
+    if not isinstance(raw_results, list):
+        return [], []
+
+    from backend.utils.keyframe_mapper import get_nearest_keyframe_position
+
+    anchors: list[UpstreamResult] = []
+    windows: list[_ASRWindow] = []
+    for rank, raw in enumerate(raw_results, start=1):
+        if not isinstance(raw, dict):
+            continue
+        video_id = str(raw.get("video_id", "")).strip().upper()
+        transcript = str(raw.get("text", "")).strip()
+        if not video_id or not transcript:
+            continue
+        try:
+            start_ms = max(0, int(raw.get("start_ms", 0)))
+            end_ms = max(start_ms, int(raw.get("end_ms", start_ms)))
+            score = float(raw.get("score", 0.0))
+        except (TypeError, ValueError):
+            continue
+
+        nearest = get_nearest_keyframe_position(video_id, start_ms)
+        if nearest is None:
+            continue
+        ordinal, position = nearest
+        frame_id = f"{video_id}_f{ordinal:04d}"
+        metadata = {
+            "asr_id": raw.get("asr_id"),
+            "transcript": transcript,
+            "timestamp_ms": start_ms,
+            "seek_timestamp_ms": start_ms,
+            "asr_start_ms": start_ms,
+            "asr_end_ms": end_ms,
+            "start_segment_index": raw.get("start_segment_index"),
+            "end_segment_index": raw.get("end_segment_index"),
+            "fps": position.get("fps"),
+        }
+        anchors.append(UpstreamResult(frame_id=frame_id, score=score, metadata=metadata))
+        windows.append(
+            _ASRWindow(
+                rank=rank,
+                anchor_frame_id=frame_id,
+                video_id=video_id,
+                start_ms=start_ms,
+                end_ms=end_ms,
+                score=score,
+                metadata=metadata,
+            )
+        )
+    return anchors, windows
+
+
+def _apply_asr_window_evidence(
+    hits: list[SearchHit],
+    windows: list[_ASRWindow],
+    *,
+    asr_weight: float,
+    rrf_k: int = 60,
+    limit: int,
+) -> list[SearchHit]:
+    """Boost visual/caption frames whose timestamps fall inside an ASR passage.
+
+    ASR is timestamped at passage level, while Qwen and caption search are
+    keyframe-level.  Matching only equal frame IDs would discard valid
+    evidence (for example, speech may start several seconds before the action
+    becomes visible), so a matching transcript passage supports all retrieved
+    keyframes within its interval.
+    """
+
+    if asr_weight <= 0 or not windows:
+        return hits[:limit]
+
+    from backend.utils.keyframe_mapper import get_keyframe_position
+
+    windows_by_video: dict[str, list[_ASRWindow]] = {}
+    for window in windows:
+        windows_by_video.setdefault(window.video_id, []).append(window)
+
+    for hit in hits:
+        parsed = _KEYFRAME_ID_PATTERN.fullmatch(hit.frame_id)
+        if parsed is None:
+            continue
+        video_id = parsed.group("video_id").upper()
+        position = get_keyframe_position(video_id, int(parsed.group("ordinal")))
+        if position is None:
+            continue
+        timestamp_ms = int(position["timestamp_ms"])
+        matches = [
+            window
+            for window in windows_by_video.get(video_id, [])
+            if window.start_ms <= timestamp_ms <= window.end_ms
+        ]
+        if not matches:
+            continue
+
+        # A passage can support more than one keyframe. Keep the strongest
+        # passage and attach its transcript so the result remains inspectable.
+        evidence = min(matches, key=lambda item: (item.rank, -item.score))
+        metadata = dict(hit.metadata)
+        source_ranks = dict(metadata.get("source_ranks", {}))
+        source_scores = dict(metadata.get("source_scores", {}))
+        source_ranks.setdefault("asr", evidence.rank)
+        source_scores.setdefault("asr", evidence.score)
+        metadata.update(evidence.metadata)
+        metadata["source_ranks"] = source_ranks
+        metadata["source_scores"] = source_scores
+        metadata["asr_temporal_match"] = True
+        hit.metadata = metadata
+
+        # The anchor frame already received its ASR RRF contribution. Nearby
+        # visual/caption frames need one equivalent contribution from the
+        # same spoken passage.
+        if hit.frame_id != evidence.anchor_frame_id:
+            hit.score += asr_weight / (rrf_k + evidence.rank)
+
+    return sorted(
+        hits,
+        key=lambda item: (-item.score, item.frame_id),
+    )[:limit]
+
+
 class QueryParser(Protocol):
     async def parse(self, query: str) -> ParsedQuery: ...
 
@@ -63,6 +212,7 @@ class SearchService:
             api_key=settings.gemini_api_key,
             model_name=settings.gemini_rerank_model,
         )
+        self.camera_motion_verifier = CameraMotionVerifier()
 
     async def search_text(
         self,
@@ -72,6 +222,7 @@ class SearchService:
         use_rerank: bool = True,
         text_weight: float = 0.5,
         visual_weight: float = 0.5,
+        asr_weight: float = 0.0,
         batch_ids: list[str] | None = None,
         video_ids: list[str] | None = None,
     ) -> TextSearchResponse:
@@ -105,49 +256,79 @@ class SearchService:
             # The visual service is Qwen-only and intentionally receives the
             # complete raw user wording. Gemini parsing above remains for the
             # semantic/Elasticsearch route and optional Gemini reranking.
-            dev1_task = self.dev1.search_text(
-                {
-                    "visual_prompt": query,
-                    "batch_ids": batch_ids,
-                    "video_ids": video_ids,
-                    "top_k": top_k * 2,
-                }
-            )
-            dev2_task = self.dev2.search_text(
-                {
-                    "keywords": semantic_keywords,
-                    "object_queries": object_queries,
-                    "spatial_queries": spatial_queries,
-                    "interaction_queries": interaction_queries,
-                    "ocr_queries": ocr_queries,
-                    "program_queries": program_queries,
-                    "batch_ids": batch_ids,
-                    "video_ids": video_ids,
-                    "top_k": top_k * 2,
-                }
-            )
-            
-            dev1_res, dev2_res = await asyncio.gather(dev1_task, dev2_task, return_exceptions=True)
-            
-            rankings = {}
+            tasks: dict[str, Any] = {
+                "dev1": self.dev1.search_text(
+                    {
+                        "visual_prompt": query,
+                        "batch_ids": batch_ids,
+                        "video_ids": video_ids,
+                        "top_k": top_k * 2,
+                    }
+                ),
+                "dev2": self.dev2.search_text(
+                    {
+                        "keywords": semantic_keywords,
+                        "object_queries": object_queries,
+                        "spatial_queries": spatial_queries,
+                        "interaction_queries": interaction_queries,
+                        "ocr_queries": ocr_queries,
+                        "program_queries": program_queries,
+                        "batch_ids": batch_ids,
+                        "video_ids": video_ids,
+                        "top_k": top_k * 2,
+                    }
+                ),
+            }
+            if asr_weight > 0:
+                tasks["asr"] = self.dev2.search_asr(
+                    {
+                        "query": query,
+                        "batch_ids": batch_ids,
+                        "video_ids": video_ids,
+                        "top_k": top_k * 2,
+                    }
+                )
+
+            task_names = list(tasks)
+            task_results = await asyncio.gather(*tasks.values(), return_exceptions=True)
+            responses = dict(zip(task_names, task_results, strict=True))
+
+            rankings: dict[str, list[UpstreamResult]] = {}
+            dev1_res = responses["dev1"]
             if not isinstance(dev1_res, Exception):
                 rankings["dev1"] = _filter_upstream_results(
                     normalize_upstream_results(dev1_res, source="dev1"), batch_ids, video_ids
                 )
-            
+
+            dev2_res = responses["dev2"]
             if not isinstance(dev2_res, Exception):
                 rankings["dev2"] = _filter_upstream_results(
                     normalize_upstream_results(dev2_res, source="dev2"), batch_ids, video_ids
                 )
-                
+
+            asr_windows: list[_ASRWindow] = []
+            asr_res = responses.get("asr")
+            if asr_weight > 0 and asr_res is not None and not isinstance(asr_res, Exception):
+                asr_anchors, asr_windows = _asr_windows_from_payload(asr_res)
+                if asr_anchors:
+                    rankings["asr"] = _filter_upstream_results(asr_anchors, batch_ids, video_ids)
+
+            candidate_limit = max(top_k * 4, top_k)
             merged_hits = reciprocal_rank_fusion(
                 rankings,
-                limit=top_k,
+                limit=candidate_limit,
                 thumbnail_base_url=self.settings.thumbnail_base_url,
                 source_weights={
                     "dev1": visual_weight,
                     "dev2": text_weight,
+                    "asr": asr_weight,
                 },
+            )
+            merged_hits = _apply_asr_window_evidence(
+                merged_hits,
+                asr_windows,
+                asr_weight=asr_weight,
+                limit=top_k,
             )
         except Exception as e:
             raise UpstreamError(f"Failed to fetch from upstream pipelines: {e}")
@@ -181,7 +362,11 @@ class SearchService:
             
         return TextSearchResponse(
             status="success",
-            message="Retrieved successfully from Visual & Semantic Pipelines",
+            message=(
+                "Retrieved successfully from visual, caption and ASR pipelines"
+                if asr_weight > 0
+                else "Retrieved successfully from Visual & Semantic Pipelines"
+            ),
             data=SearchData(
                 total_results=len(merged_hits),
                 results=merged_hits,
@@ -311,6 +496,7 @@ class SearchService:
         top_k_videos: int = 20,
         text_weight: float = 0.5,
         visual_weight: float = 0.5,
+        event_options: list[Any] | None = None,
     ) -> dict[str, Any]:
         """Locate event evidence, using scoped KIS after a video is chosen.
 
@@ -327,6 +513,7 @@ class SearchService:
                 video_ids=selected_video_ids,
                 text_weight=text_weight,
                 visual_weight=visual_weight,
+                event_options=event_options or [],
             )
 
         try:
@@ -374,9 +561,16 @@ class SearchService:
         candidates_per_event: int = 10,
         text_weight: float = 0.5,
         visual_weight: float = 0.5,
+        event_options: list[Any] | None = None,
     ) -> dict[str, Any]:
         """Return KIS candidates for every explicitly selected TRAKE event."""
-        specs = build_kis_queries(query, None)
+        specs = build_kis_queries(
+            query,
+            None,
+            event_options=event_options or [],
+            default_text_weight=text_weight,
+            default_visual_weight=visual_weight,
+        )
         rankings = await asyncio.gather(
             *(
                 self._search_event_with_standard_kis(
@@ -384,12 +578,20 @@ class SearchService:
                     top_k=candidates_per_event,
                     batch_ids=batch_ids,
                     video_ids=video_ids,
-                    text_weight=text_weight,
-                    visual_weight=visual_weight,
+                    use_rerank=spec.use_rerank,
+                    text_weight=spec.text_weight,
+                    visual_weight=spec.visual_weight,
                 )
                 for spec in specs
             )
         )
+        rankings = await asyncio.gather(
+            *(
+                self._apply_camera_motion_verification(spec, hits)
+                for spec, hits in zip(specs, rankings)
+            )
+        )
+        rankings = self._apply_selected_event_order(specs, rankings)
 
         events: list[dict[str, Any]] = []
         for spec, hits in zip(specs, rankings):
@@ -415,6 +617,8 @@ class SearchService:
                         "thumbnail_url": hit.thumbnail_url,
                         "source_ranks": metadata.get("source_ranks", {}),
                         "caption": self._kis_caption(metadata),
+                        "camera_motion": metadata.get("camera_motion"),
+                        "event_order": metadata.get("event_order"),
                     }
                 )
 
@@ -431,6 +635,13 @@ class SearchService:
                             "event_id": spec.event_id,
                             "description": spec.description,
                             "visual_prompt": spec.visual_prompt,
+                            "weights": {
+                                "text": spec.text_weight,
+                                "visual": spec.visual_weight,
+                            },
+                            "requires_after_previous": spec.requires_after_previous,
+                            "verify_camera_motion": spec.verify_camera_motion,
+                            "motion_weight": spec.motion_weight,
                         }
                         for spec in specs
                     ],
@@ -456,7 +667,7 @@ class SearchService:
     ) -> list[SearchHit]:
         """Reuse the public KIS path, including Gemini interaction parsing."""
         response = await self.search_text(
-            spec.description,
+            spec.visual_prompt,
             top_k,
             use_rerank=use_rerank,
             text_weight=text_weight,
@@ -469,6 +680,121 @@ class SearchService:
         # to influence the video score, but only when the user explicitly
         # enables it.
         return response.data.llm_reranked_results or response.data.results
+
+    async def _apply_camera_motion_verification(
+        self,
+        spec: KISQuery,
+        hits: list[SearchHit],
+        *,
+        max_videos: int = 10,
+    ) -> list[SearchHit]:
+        """Re-rank only a small KIS finalist pool for one configured event."""
+
+        if not spec.verify_camera_motion or not hits:
+            return hits
+        if not self.camera_motion_verifier.has_explicit_camera_constraint(spec.description):
+            return hits
+
+        by_video: dict[str, list[SearchHit]] = {}
+        for hit in hits:
+            video_id = (hit.video_name or hit.frame_id.rsplit("_f", 1)[0]).upper()
+            if video_id:
+                by_video.setdefault(video_id, []).append(hit)
+        finalists = sorted(
+            by_video,
+            key=lambda video_id: max(float(hit.score) for hit in by_video[video_id]),
+            reverse=True,
+        )[:max_videos]
+        if not finalists:
+            return hits
+
+        async def verify(video_id: str):
+            candidates = sorted(by_video[video_id], key=lambda hit: -float(hit.score))[:3]
+            frame_indices = [
+                hit.frame_index
+                if isinstance(hit.frame_index, int)
+                else self._kis_frame_index(hit.frame_id, hit.metadata)
+                for hit in candidates
+            ]
+            result = await asyncio.to_thread(
+                self.camera_motion_verifier.verify,
+                video_id=video_id,
+                description=spec.description,
+                frame_indices=frame_indices,
+            )
+            return video_id, result
+
+        verified = dict(await asyncio.gather(*(verify(video_id) for video_id in finalists)))
+        max_score = max(float(hit.score) for hit in hits)
+        motion_weight = min(1.0, max(0.0, spec.motion_weight))
+        for video_id, video_hits in by_video.items():
+            result = verified.get(video_id)
+            if result is None or not bool(result.details.get("available")):
+                continue
+            for hit in video_hits:
+                relative_kis = float(hit.score) / max_score if max_score > 0 else 0.0
+                hit.score = max_score * (
+                    (1.0 - motion_weight) * relative_kis
+                    + motion_weight * result.score
+                )
+                hit.metadata["camera_motion"] = {
+                    "score": round(result.score, 8),
+                    "weight": motion_weight,
+                    "reason": result.reason,
+                    **result.details,
+                }
+        return sorted(hits, key=lambda hit: -float(hit.score))
+
+    def _apply_selected_event_order(
+        self,
+        specs: list[KISQuery],
+        rankings: list[list[SearchHit]],
+    ) -> list[list[SearchHit]]:
+        """Promote selected-video candidates that satisfy an enabled E(i-1) -> E(i) relation."""
+
+        ordered_rankings = [list(hits) for hits in rankings]
+        for index, spec in enumerate(specs):
+            if index == 0 or not spec.requires_after_previous or not ordered_rankings[index]:
+                continue
+            previous_hits = ordered_rankings[index - 1]
+            if not previous_hits:
+                continue
+            previous_max = max(float(hit.score) for hit in previous_hits)
+            previous_candidates = [
+                (
+                    self._kis_frame_index(hit.frame_id, hit.metadata),
+                    float(hit.score) / previous_max if previous_max > 0 else 0.0,
+                )
+                for hit in previous_hits[:10]
+            ]
+            current_hits = ordered_rankings[index]
+            current_max = max(float(hit.score) for hit in current_hits)
+            for hit in current_hits:
+                position = self._kis_frame_index(hit.frame_id, hit.metadata)
+                relation_score = 0.0
+                matched_previous_position: int | None = None
+                for previous_position, previous_score in previous_candidates:
+                    if position <= previous_position:
+                        continue
+                    compactness = 1.0 / (1.0 + (position - previous_position) / 1000.0)
+                    candidate_score = previous_score * compactness
+                    if candidate_score > relation_score:
+                        relation_score = candidate_score
+                        matched_previous_position = previous_position
+                relative_kis = float(hit.score) / current_max if current_max > 0 else 0.0
+                hit.score = current_max * (0.55 * relative_kis + 0.45 * relation_score)
+                hit.metadata["event_order"] = {
+                    "requires_after_previous": True,
+                    "satisfies_order": matched_previous_position is not None,
+                    "previous_event_id": specs[index - 1].event_id,
+                    "previous_frame_index": matched_previous_position,
+                    "score": round(relation_score, 8),
+                }
+            ordered_rankings[index] = sorted(
+                current_hits,
+                key=lambda hit: -float(hit.score),
+            )
+        return ordered_rankings
 
     @staticmethod
     def _kis_frame_index(frame_id: str, metadata: dict[str, Any]) -> int:
@@ -506,6 +832,7 @@ class SearchService:
         use_rerank: bool = False,
         text_weight: float = 0.5,
         visual_weight: float = 0.5,
+        event_options: list[Any] | None = None,
     ) -> dict[str, Any]:
         """Rank videos by summary evidence and the existing frame-level KIS."""
 
@@ -541,9 +868,61 @@ class SearchService:
         # The temporal query plan remains useful for summary retrieval above,
         # but rewriting an event here made a card's evidence diverge from the
         # same event queried after the user selects that video.
-        kis_queries = build_kis_queries(query, None) if kis_weight > 0 else []
-        rerank_kis_events = bool(use_rerank and kis_queries)
-        frame_pool = min(500, max(200, top_k_videos * 15))
+        kis_queries = (
+            build_kis_queries(
+                query,
+                None,
+                event_options=event_options or [],
+                default_text_weight=text_weight,
+                default_visual_weight=visual_weight,
+                default_use_rerank=use_rerank,
+            )
+            if kis_weight > 0
+            else []
+        )
+        rerank_kis_events = bool(
+            kis_queries and (use_rerank or any(spec.use_rerank for spec in kis_queries))
+        )
+        ordered_sequence = any(spec.requires_after_previous for spec in kis_queries)
+        sequence_scope: list[str] = list(video_ids or [])
+        broad_candidate_count = 0
+        if ordered_sequence and not sequence_scope:
+            # A batch-wide top-N list is too shallow to contain every stage
+            # for the same video. First retrieve by the complete wording,
+            # then evaluate each stage only inside a small candidate pool.
+            broad_spec = KISQuery(
+                event_id="C0",
+                description=query,
+                visual_prompt=query,
+                prompt_variants=(),
+                semantic_keywords=(query,),
+            )
+            broad_hits = await self._search_event_with_standard_kis(
+                broad_spec,
+                top_k=min(500, max(300, top_k_videos * 5)),
+                batch_ids=batch_ids or [],
+                video_ids=[],
+                use_rerank=False,
+                text_weight=text_weight,
+                visual_weight=visual_weight,
+            )
+            broad_scores, _ = aggregate_kis_rankings([(broad_spec, broad_hits)])
+            broad_ids = sorted(
+                broad_scores,
+                key=lambda video_id: (-broad_scores[video_id], video_id),
+            )[:30]
+            summary_ids = [
+                str(item.get("video_id", "")).upper()
+                for item in summary_candidates[:10]
+                if isinstance(item, dict) and str(item.get("video_id", "")).strip()
+            ]
+            sequence_scope = list(dict.fromkeys([*broad_ids, *summary_ids]))[:35]
+            broad_candidate_count = len(broad_ids)
+
+        frame_pool = min(
+            500,
+            max(200, (len(sequence_scope) if ordered_sequence else top_k_videos) * 12),
+        )
         kis_rankings: list[tuple[KISQuery, list[SearchHit]]] = []
         if kis_queries:
             ranking_results = await asyncio.gather(
@@ -552,15 +931,24 @@ class SearchService:
                         spec,
                         top_k=frame_pool,
                         batch_ids=batch_ids or [],
-                        video_ids=video_ids or [],
-                        use_rerank=rerank_kis_events,
-                        text_weight=text_weight,
-                        visual_weight=visual_weight,
+                        video_ids=sequence_scope if ordered_sequence else (video_ids or []),
+                        use_rerank=use_rerank or spec.use_rerank,
+                        text_weight=spec.text_weight,
+                        visual_weight=spec.visual_weight,
                     )
                     for spec in kis_queries
                 )
             )
             kis_rankings = list(zip(kis_queries, ranking_results))
+
+        if kis_rankings:
+            verified_rankings = await asyncio.gather(
+                *(
+                    self._apply_camera_motion_verification(spec, hits)
+                    for spec, hits in kis_rankings
+                )
+            )
+            kis_rankings = list(zip(kis_queries, verified_rankings))
 
         kis_scores, kis_evidence = aggregate_kis_rankings(kis_rankings)
         # Summary search returns only documents matching the query. A KIS hit
@@ -627,6 +1015,9 @@ class SearchService:
                     "query_count": len(kis_queries),
                     "frame_pool": frame_pool,
                     "video_hits": len(kis_scores),
+                    "ordered_sequence": ordered_sequence,
+                    "candidate_scope_size": len(sequence_scope) if ordered_sequence else 0,
+                    "broad_candidate_count": broad_candidate_count,
                     "gemini_rerank": rerank_kis_events,
                     "weights": {
                         "text": text_weight,
@@ -637,6 +1028,13 @@ class SearchService:
                             "event_id": spec.event_id,
                             "description": spec.description,
                             "visual_prompt": spec.visual_prompt,
+                            "weights": {
+                                "text": spec.text_weight,
+                                "visual": spec.visual_weight,
+                            },
+                            "requires_after_previous": spec.requires_after_previous,
+                            "verify_camera_motion": spec.verify_camera_motion,
+                            "motion_weight": spec.motion_weight,
                         }
                         for spec in kis_queries
                     ],
