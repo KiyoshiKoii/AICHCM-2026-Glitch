@@ -5,8 +5,21 @@ const TABS = [
   { id: 'kis-asr', label: 'KIS + ASR' },
   { id: 'asr', label: 'ASR Search' },
   { id: 'vqa', label: 'VQA' },
+  { id: 'video', label: 'Video Search' },
   { id: 'temporal', label: 'Temporal Events' },
 ];
+
+const normalizeBatchId = (value) => {
+  const digits = String(value || '').match(/\d{1,2}/)?.[0];
+  if (!digits) return '';
+  return `L${String(Number(digits)).padStart(2, '0')}`;
+};
+
+const normalizeVideoSuffix = (value) => {
+  const digits = String(value || '').match(/\d{1,3}/)?.[0];
+  if (!digits) return '';
+  return `V${String(Number(digits)).padStart(3, '0')}`;
+};
 
 const createTemporalEvent = () => ({
   description: '',
@@ -24,6 +37,7 @@ function SearchBar({
   onAsrSearch,
   onTemporalVideoSearch,
   onTemporalEventSearch,
+  onVideoSearch,
   selectedTemporalVideo = null,
   onClearTemporalVideo,
   filters = { batchIds: [], videoIds: [] },
@@ -38,6 +52,8 @@ function SearchBar({
   const [temporalEvents, setTemporalEvents] = useState([createTemporalEvent()]);
   const [summaryWeightPercent, setSummaryWeightPercent] = useState(75);
   const [temporalSearchMode, setTemporalSearchMode] = useState('summary-kis');
+  const [videoBatchInput, setVideoBatchInput] = useState('L21');
+  const [videoIdInput, setVideoIdInput] = useState('001');
 
   const handleSubmit = (event) => {
     event?.preventDefault();
@@ -47,6 +63,13 @@ function SearchBar({
       if (trimmed && trimmedQuestion) {
         onVqaSearch?.({ query: trimmed, question: trimmedQuestion, useRerank });
       }
+      return;
+    }
+    if (activeTab === 'video') {
+      const batchId = normalizeBatchId(videoBatchInput);
+      const videoId = normalizeVideoSuffix(videoIdInput);
+      if (!batchId || !videoId) return;
+      onVideoSearch?.({ batchId, videoId });
       return;
     }
     if (activeTab === 'temporal') {
@@ -155,7 +178,7 @@ function SearchBar({
         ))}
       </div>
 
-      {activeTab !== 'temporal' && (
+      {(activeTab !== 'temporal' && activeTab !== 'video') && (
         <label className="search-field-label">
           <span>
             {activeTab === 'vqa'
@@ -178,6 +201,36 @@ function SearchBar({
         </label>
       )}
 
+      {activeTab === 'video' && (
+        <section className="video-search-panel" aria-label="Direct video lookup">
+          <label className="search-field-label">
+            <span>Video batch</span>
+            <input
+              className="video-search-input"
+              type="text"
+              value={videoBatchInput}
+              onChange={(event) => setVideoBatchInput(event.target.value)}
+              placeholder="L25"
+              aria-label="Video batch"
+            />
+          </label>
+          <label className="search-field-label">
+            <span>Video id</span>
+            <input
+              className="video-search-input"
+              type="text"
+              value={videoIdInput}
+              onChange={(event) => setVideoIdInput(event.target.value)}
+              placeholder="032"
+              aria-label="Video id"
+            />
+          </label>
+          <div className="video-search-preview" aria-live="polite">
+            <span>Target</span>
+            <strong>{normalizeBatchId(videoBatchInput) || 'L--'}_{normalizeVideoSuffix(videoIdInput) || 'V---'}</strong>
+          </div>
+        </section>
+      )}
       {activeTab === 'temporal' && (
         <section className="temporal-search" aria-label="Temporal event search form">
           <div className="temporal-workflow-steps" aria-label="TRAKE workflow">
@@ -497,7 +550,9 @@ function SearchBar({
               ? selectedTemporalVideo
                 ? `Tìm sự kiện trong ${selectedTemporalVideo.video_id}`
                 : 'Tìm video'
-              : 'Tìm kiếm'}
+              : activeTab === 'video'
+                ? 'Mở video'
+                : 'Tìm kiếm'}
         </button>
       </div>
     </form>
@@ -505,3 +560,6 @@ function SearchBar({
 }
 
 export default SearchBar;
+
+
+

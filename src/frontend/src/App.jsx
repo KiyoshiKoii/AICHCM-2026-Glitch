@@ -189,6 +189,29 @@ function App() {
     }
   };
 
+  const openVideoSearch = ({ batchId, videoId }) => {
+    const normalizedVideoId = `${batchId}_${videoId}`;
+    const frameId = `${normalizedVideoId}_f0001`;
+    activeSearchController.current?.abort();
+    activeSearchController.current = null;
+    setIsLoading(false);
+    setCurrentPage(1);
+    setLastQuery({ mode: 'video-search', videoId: normalizedVideoId });
+    setVqaQuestion(null);
+    setFrameContext(null);
+    setTemporalVideoCandidates([]);
+    setSelectedTemporalVideo(null);
+    setLlmResults([]);
+    setResults([]);
+    setSelectedFrame({
+      frame_id: frameId,
+      video_name: normalizedVideoId,
+      frame_index: 1,
+      thumbnail_url: `/media/thumbnails/${frameId}.jpg`,
+      metadata: { timestamp_ms: 0, seek_timestamp_ms: 0 },
+    });
+  };
+
   const runTemporalEventSearch = async (
     query,
     videoId,
@@ -294,6 +317,7 @@ function App() {
           onAsrSearch={runAsrSearch}
           onTemporalVideoSearch={runTemporalVideoSearch}
           onTemporalEventSearch={runTemporalEventSearch}
+          onVideoSearch={openVideoSearch}
           selectedTemporalVideo={selectedTemporalVideo}
           onClearTemporalVideo={clearTemporalVideo}
           filters={searchFilters}
@@ -409,3 +433,5 @@ function App() {
 }
 
 export default App;
+
+

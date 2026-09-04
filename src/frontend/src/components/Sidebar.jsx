@@ -7,6 +7,7 @@ function Sidebar({
   onAsrSearch,
   onTemporalVideoSearch,
   onTemporalEventSearch,
+  onVideoSearch,
   selectedTemporalVideo,
   onClearTemporalVideo,
   onFiltersChange,
@@ -20,6 +21,7 @@ function Sidebar({
         onAsrSearch={onAsrSearch}
         onTemporalVideoSearch={onTemporalVideoSearch}
         onTemporalEventSearch={onTemporalEventSearch}
+        onVideoSearch={onVideoSearch}
         selectedTemporalVideo={selectedTemporalVideo}
         onClearTemporalVideo={onClearTemporalVideo}
         filters={filters}
@@ -31,3 +33,5 @@ function Sidebar({
 }
 
 export default Sidebar;
+
+
