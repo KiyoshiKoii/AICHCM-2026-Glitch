@@ -40,6 +40,18 @@ describe('TemporalVideoCandidates', () => {
     );
   });
 
+  it('keeps long summaries in a keyboard-focusable scroll region', () => {
+    render(<TemporalVideoCandidates candidates={[{
+      video_id: 'L26_V311',
+      score: 0.9,
+      summary_score: 0,
+      kis_score: 0.9,
+      summary_vi: 'Mô tả dài của video để người dùng có thể cuộn đọc toàn bộ nội dung.',
+    }]} />);
+
+    expect(screen.getByLabelText('Video summary for L26_V311')).toHaveAttribute('tabindex', '0');
+  });
+
   it('cycles a video thumbnail through the best evidence for its events', async () => {
     const user = userEvent.setup();
     render(

@@ -99,11 +99,17 @@ function TemporalVideoCard({ candidate, index, isSelected, onSelect }) {
             Tổng {formatScore(candidate.score)}
           </span>
         </div>
-        <p>{summary || (
+        <p
+          className="temporal-video-summary"
+          tabIndex={0}
+          aria-label={`Video summary for ${videoId}`}
+        >
+          {summary || (
           candidate.kis_score > 0
             ? 'Chưa có summary được lập chỉ mục; video này được đề xuất từ KIS.'
             : 'Chưa có mô tả video.'
-        )}</p>
+          )}
+        </p>
         <div className="temporal-video-score-row">
           <span>Summary {formatScore(candidate.summary_score)}</span>
           <span>KIS {formatScore(candidate.kis_score ?? candidate.event_score)}</span>

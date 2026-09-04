@@ -1147,16 +1147,22 @@
   font-weight: 800;
 }
 
-.temporal-video-card-body p {
-  display: -webkit-box;
+.temporal-video-summary {
   min-height: 42px;
+  max-height: 96px;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   color: var(--text);
   font-size: 12px;
   line-height: 1.45;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  scrollbar-width: thin;
+}
+
+.temporal-video-summary:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 2px;
 }
 
 .temporal-video-score-row {
