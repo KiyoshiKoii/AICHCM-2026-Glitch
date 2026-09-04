@@ -368,6 +368,7 @@ def aggregate_kis_rankings(
         video_id: set() for video_id in candidate_ids
     }
     for index in relation_indexes:
+        current_spec = rankings[index][0]
         raw_scores: dict[str, tuple[float, tuple[int, str], tuple[int, str]]] = {}
         for video_id in candidate_ids:
             previous = sorted(
@@ -381,7 +382,7 @@ def aggregate_kis_rankings(
             best: tuple[float, tuple[int, str], tuple[int, str]] | None = None
             for previous_position, previous_score, previous_id in previous:
                 for current_position, current_score, current_id in current:
-                    if current_position < previous_position + specs[index].min_frame_gap:
+                    if current_position < previous_position + current_spec.min_frame_gap:
                         continue
                     span = current_position - previous_position
                     compactness = 1.0 / (1.0 + span / 1000.0)
@@ -416,6 +417,9 @@ def aggregate_kis_rankings(
         # valid frame pair at the configured minimum gap must not win merely
         # because both events match the same ingredient/frame.
         if any(score <= 0 for score in relation_scores[video_id]):
+            for item in evidence.setdefault(video_id, []):
+                item["sequence_selected"] = False
+                item["sequence_score"] = 0.0
             continue
         scores[video_id] = 0.55 * base_scores[video_id] + 0.45 * order_score
         selected = selected_pairs[video_id]

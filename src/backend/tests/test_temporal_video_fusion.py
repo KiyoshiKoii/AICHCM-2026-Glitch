@@ -117,7 +117,7 @@ def test_aggregate_kis_rankings_rewards_ordered_compact_chain() -> None:
         ]
     )
 
-    assert scores["L26_V001"] > scores["L26_V002"]
+    assert scores["L26_V001"] > scores.get("L26_V002", 0.0)
     assert all(item["sequence_selected"] for item in evidence["L26_V001"])
     assert not any(item["sequence_selected"] for item in evidence["L26_V002"])
 
@@ -400,6 +400,7 @@ async def test_selected_temporal_video_applies_controls_per_event() -> None:
             "visual_prompt": "riders enter the bridge",
             "weights": {"text": 0.2, "visual": 0.8},
             "requires_after_previous": False,
+            "min_frame_gap": 30,
             "verify_camera_motion": False,
             "motion_weight": 0.7,
         },
@@ -409,6 +410,7 @@ async def test_selected_temporal_video_applies_controls_per_event() -> None:
             "visual_prompt": "riders leave the bridge",
             "weights": {"text": 0.7, "visual": 0.3},
             "requires_after_previous": True,
+            "min_frame_gap": 30,
             "verify_camera_motion": False,
             "motion_weight": 0.7,
         },
