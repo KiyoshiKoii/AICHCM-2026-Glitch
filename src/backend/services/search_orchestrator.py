@@ -1048,3 +1048,16 @@ class SearchService:
             }
         )
         return payload
+
+    async def get_video_summaries(self, video_ids: list[str]) -> dict[str, Any]:
+        """Return exact indexed summaries for UI display, never for ranking."""
+        try:
+            payload = await self.dev2.get_video_summaries(video_ids)
+        except Exception as exc:
+            raise UpstreamError(f"Failed to fetch video summaries from Dev2: {exc}") from exc
+
+        data = payload.get("data") if isinstance(payload, dict) else None
+        summaries = data.get("summaries") if isinstance(data, dict) else None
+        if not isinstance(summaries, dict):
+            raise UpstreamError("Dev2 video summaries response has no summaries object")
+        return {"status": "success", "data": {"summaries": summaries}}

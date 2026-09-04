@@ -13,6 +13,7 @@ import {
   searchAsr,
   searchTemporalEvents,
   searchTemporalVideos,
+  getVideoSummaries,
   getFrameContext,
 } from './api/apiClient.js';
 import './App.css';
@@ -155,7 +156,41 @@ function App() {
       );
       if (activeSearchController.current !== controller) return;
       const data = response.data || {};
-      setTemporalVideoCandidates(data.candidates || data.video_selection?.candidates || []);
+      const candidates = data.candidates || data.video_selection?.candidates || [];
+      const missingSummaryIds = candidates
+        .filter((candidate) => !candidate.summary_vi && !candidate.summary_en)
+        .map((candidate) => candidate.video_id)
+        .filter(Boolean);
+
+      // Event-only mode has summaryWeight=0, but its cards must still show a
+      // description. This is display hydration only: it never changes scores
+      // or result ordering returned by the temporal retrieval endpoint.
+      if (missingSummaryIds.length) {
+        try {
+          const summaryResponse = await getVideoSummaries(missingSummaryIds, controller.signal);
+          if (activeSearchController.current !== controller) return;
+          const summaries = summaryResponse.data?.summaries || {};
+          const hydratedCandidates = candidates.map((candidate) => {
+            const summary = summaries[String(candidate.video_id).toUpperCase()];
+            return summary
+              ? {
+                ...candidate,
+                summary_vi: candidate.summary_vi || summary.summary_vi,
+                summary_en: candidate.summary_en || summary.summary_en,
+                content_profile: candidate.content_profile || summary.content_profile,
+              }
+              : candidate;
+          });
+          setTemporalVideoCandidates(hydratedCandidates);
+          return;
+        } catch (summaryError) {
+          if (isAborted(summaryError)) return;
+          // The video search itself succeeded, so retain its candidates when
+          // summary display hydration is temporarily unavailable.
+          console.warn('Unable to hydrate temporal result summaries:', summaryError);
+        }
+      }
+      setTemporalVideoCandidates(candidates);
     } catch (err) {
       if (isAborted(err)) return;
       console.error(err);

@@ -24,6 +24,7 @@ vi.mock('./api/apiClient.js', () => ({
   searchAsr: vi.fn(),
   searchTemporalEvents: vi.fn(),
   searchTemporalVideos: vi.fn(),
+  getVideoSummaries: vi.fn(),
 }));
 
 import App from './App.jsx';

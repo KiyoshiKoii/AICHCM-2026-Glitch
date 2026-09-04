@@ -1,5 +1,10 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { searchByText, searchTemporalEvents, searchTemporalVideos } from './apiClient.js';
+import {
+  getVideoSummaries,
+  searchByText,
+  searchTemporalEvents,
+  searchTemporalVideos,
+} from './apiClient.js';
 
 
 const eventOptions = [{
@@ -88,5 +93,20 @@ describe('temporal API client', () => {
       requires_after_previous: true,
       verify_camera_motion: true,
     });
+  });
+
+  it('requests exact summaries for temporal result cards', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(mockResponse());
+    vi.stubGlobal('fetch', fetchMock);
+
+    await getVideoSummaries(['L26_V311']);
+
+    expect(fetchMock).toHaveBeenCalledWith(
+      '/api/v1/search/video-summaries',
+      expect.objectContaining({
+        method: 'POST',
+        body: JSON.stringify({ video_ids: ['L26_V311'] }),
+      }),
+    );
   });
 });

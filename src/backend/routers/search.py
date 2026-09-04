@@ -13,6 +13,7 @@ from backend.schemas.search import (
     TemporalVideoSearchRequest,
     TextSearchRequest,
     TextSearchResponse,
+    VideoSummariesRequest,
 )
 from backend.routers.dependencies import get_search_service
 from backend.services.search_orchestrator import SearchService
@@ -109,3 +110,12 @@ async def search_temporal_videos(
         use_rerank=body.use_rerank,
         event_options=body.event_options,
     )
+
+
+@router.post("/video-summaries")
+async def get_video_summaries(
+    body: VideoSummariesRequest,
+    service: Annotated[SearchService, Depends(get_search_service)],
+) -> dict:
+    """Fetch summaries for result cards without affecting retrieval scores."""
+    return await service.get_video_summaries(body.video_ids)

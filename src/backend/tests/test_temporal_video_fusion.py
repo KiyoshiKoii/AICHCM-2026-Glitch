@@ -263,6 +263,17 @@ class _SemanticPipeline:
             },
         }
 
+    async def get_video_summaries(self, video_ids: list[str]) -> dict:
+        return {
+            "status": "success",
+            "data": {
+                "summaries": {
+                    video_id: {"summary_vi": f"Tóm tắt {video_id}"}
+                    for video_id in video_ids
+                }
+            },
+        }
+
 
 class _Reranker:
     client = object()
@@ -400,6 +411,23 @@ async def test_temporal_video_search_uses_visual_and_caption_kis() -> None:
     assert "interaction_queries" in semantic.text_payloads[0]
     assert semantic.temporal_payloads[0]["summary_weight"] == 1.0
     assert semantic.temporal_payloads[0]["event_weight"] == 0.0
+
+
+@pytest.mark.asyncio
+async def test_video_summary_lookup_is_display_only() -> None:
+    service = SearchService(
+        settings=Settings(),
+        parser=_Parser(),
+        dev1=_VisualPipeline(),
+        dev2=_SemanticPipeline(),
+    )
+
+    response = await service.get_video_summaries(["L26_V311"])
+
+    assert response == {
+        "status": "success",
+        "data": {"summaries": {"L26_V311": {"summary_vi": "Tóm tắt L26_V311"}}},
+    }
 
 
 @pytest.mark.asyncio

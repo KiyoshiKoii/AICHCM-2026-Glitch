@@ -202,3 +202,18 @@ export const searchTemporalVideos = async (
   }
   return response.json();
 };
+
+export const getVideoSummaries = async (videoIds, signal) => {
+  if (!videoIds?.length) return { data: { summaries: {} } };
+
+  const response = await fetch('/api/v1/search/video-summaries', {
+    method: 'POST',
+    signal,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ video_ids: videoIds }),
+  });
+  if (!response.ok) {
+    throw new Error(`Video summary lookup failed with status ${response.status}`);
+  }
+  return response.json();
+};

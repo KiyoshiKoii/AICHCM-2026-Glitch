@@ -354,6 +354,24 @@ class TemporalVideoSearchRequest(BaseModel):
         return self
 
 
+class VideoSummariesRequest(BaseModel):
+    """Exact video IDs whose indexed summaries are needed for display only."""
+
+    video_ids: list[str] = Field(min_length=1, max_length=100)
+
+    @field_validator("video_ids", mode="before")
+    @classmethod
+    def normalize_video_ids(cls, value: Any) -> list[str]:
+        values = _normalize_filter_values(value)
+        invalid = [item for item in values if not _VIDEO_ID_PATTERN.fullmatch(item)]
+        if invalid:
+            raise ValueError(
+                "video_ids must contain complete IDs such as L26_V311; "
+                f"invalid={invalid}"
+            )
+        return values
+
+
 class ASRSearchRequest(BaseModel):
     query: str = Field(min_length=2, max_length=2000)
     top_k: int = Field(default=50, ge=1, le=200)
