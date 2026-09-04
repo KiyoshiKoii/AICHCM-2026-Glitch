@@ -78,6 +78,7 @@ def test_aggregate_kis_rankings_rewards_ordered_compact_chain() -> None:
             (),
             index,
             requires_after_previous=index > 1,
+            min_frame_gap=1,
         )
         for index in range(1, 4)
     ]
@@ -149,6 +150,7 @@ def test_selected_video_order_constraint_promotes_later_event_frame() -> None:
         (),
         sequence_position=2,
         requires_after_previous=True,
+        min_frame_gap=10,
     )
     rankings = [
         [SearchHit(frame_id="L26_V074_f0010", frame_index=100, score=1.0, thumbnail_url="")],
@@ -162,7 +164,35 @@ def test_selected_video_order_constraint_promotes_later_event_frame() -> None:
 
     assert result[1][0].frame_id == "L26_V074_f0011"
     assert result[1][0].metadata["event_order"]["satisfies_order"] is True
-    assert result[1][1].metadata["event_order"]["satisfies_order"] is False
+    assert len(result[1]) == 1
+    assert result[1][0].metadata["event_order"]["minimum_frame_gap"] == 10
+
+
+def test_selected_video_order_constraint_filters_duplicate_or_nearby_frames() -> None:
+    service = SearchService.__new__(SearchService)
+    first = KISQuery("E1", "first", "first", (), ())
+    second = KISQuery(
+        "E2",
+        "second",
+        "second",
+        (),
+        (),
+        sequence_position=2,
+        requires_after_previous=True,
+        min_frame_gap=30,
+    )
+    rankings = [
+        [SearchHit(frame_id="L26_V074_f0010", frame_index=100, score=1.0, thumbnail_url="")],
+        [
+            SearchHit(frame_id="L26_V074_f0010", frame_index=100, score=1.0, thumbnail_url=""),
+            SearchHit(frame_id="L26_V074_f0011", frame_index=120, score=0.9, thumbnail_url=""),
+            SearchHit(frame_id="L26_V074_f0012", frame_index=130, score=0.8, thumbnail_url=""),
+        ],
+    ]
+
+    result = service._apply_selected_event_order([first, second], rankings)
+
+    assert [hit.frame_id for hit in result[1]] == ["L26_V074_f0012"]
 
 
 @pytest.mark.asyncio

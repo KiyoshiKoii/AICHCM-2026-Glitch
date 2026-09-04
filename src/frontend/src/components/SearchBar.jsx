@@ -33,6 +33,7 @@ const createTemporalEvent = () => ({
   textWeightPercent: 50,
   useRerank: false,
   requiresAfterPrevious: false,
+  minFrameGap: 30,
   verifyCameraMotion: false,
   motionWeightPercent: 70,
   settingsOpen: false,
@@ -98,6 +99,7 @@ function SearchBar({
         visualWeight: (100 - item.textWeightPercent) / 100,
         useRerank: item.useRerank,
         requiresAfterPrevious: item.requiresAfterPrevious,
+        minFrameGap: item.minFrameGap,
         verifyCameraMotion: item.verifyCameraMotion,
         motionWeight: item.motionWeightPercent / 100,
       }));
@@ -403,6 +405,7 @@ function SearchBar({
                     </label>
 
                     {index > 0 && (
+                      <>
                       <label className="search-rerank-toggle temporal-event-toggle">
                         <input
                           type="checkbox"
@@ -411,6 +414,23 @@ function SearchBar({
                         />
                         <span>E{index + 1} must occur after E{index}</span>
                       </label>
+                      {item.requiresAfterPrevious && (
+                        <label className="temporal-frame-gap-control">
+                          <span>Minimum gap after E{index} (native frames)</span>
+                          <input
+                            type="number"
+                            min="1"
+                            max="3600"
+                            value={item.minFrameGap}
+                            onChange={(event) => updateTemporalEvent(index, {
+                              minFrameGap: Math.min(3600, Math.max(1, Number(event.target.value) || 1)),
+                            })}
+                            aria-label={`Event ${index + 1} minimum frame gap`}
+                          />
+                          <small>Default 30 frames (about one second at 30 fps).</small>
+                        </label>
+                      )}
+                      </>
                     )}
 
                     <label className="search-rerank-toggle temporal-event-toggle">

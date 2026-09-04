@@ -101,6 +101,7 @@ const serializeTemporalEventOptions = (eventOptions = []) => eventOptions.map((o
   visual_weight: option.visualWeight,
   use_rerank: option.useRerank,
   requires_after_previous: option.requiresAfterPrevious,
+  min_frame_gap: option.minFrameGap ?? 30,
   verify_camera_motion: option.verifyCameraMotion,
   motion_weight: option.motionWeight,
 }));

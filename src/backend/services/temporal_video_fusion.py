@@ -36,6 +36,7 @@ class KISQuery:
     visual_weight: float = 0.5
     use_rerank: bool = False
     requires_after_previous: bool = False
+    min_frame_gap: int = 30
     verify_camera_motion: bool = False
     motion_weight: float = 0.7
 
@@ -225,6 +226,10 @@ def build_kis_queries(
                         infer_sequence and index > 1,
                     )
                 ),
+                min_frame_gap=min(
+                    3600,
+                    max(1, int(_option_value(option, "min_frame_gap", 30))),
+                ),
                 verify_camera_motion=bool(
                     _option_value(option, "verify_camera_motion", False)
                 ),
@@ -376,7 +381,7 @@ def aggregate_kis_rankings(
             best: tuple[float, tuple[int, str], tuple[int, str]] | None = None
             for previous_position, previous_score, previous_id in previous:
                 for current_position, current_score, current_id in current:
-                    if current_position <= previous_position:
+                    if current_position < previous_position + specs[index].min_frame_gap:
                         continue
                     span = current_position - previous_position
                     compactness = 1.0 / (1.0 + span / 1000.0)
@@ -407,6 +412,11 @@ def aggregate_kis_rankings(
         )
         # Order is an explicit constraint. It strongly reranks only videos
         # that can satisfy every selected "after previous" relation.
+        # "After previous" is a hard temporal constraint. A video without a
+        # valid frame pair at the configured minimum gap must not win merely
+        # because both events match the same ingredient/frame.
+        if any(score <= 0 for score in relation_scores[video_id]):
+            continue
         scores[video_id] = 0.55 * base_scores[video_id] + 0.45 * order_score
         selected = selected_pairs[video_id]
         video_evidence = evidence.setdefault(video_id, [])

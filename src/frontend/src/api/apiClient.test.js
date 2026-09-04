@@ -69,6 +69,7 @@ describe('temporal API client', () => {
         visual_weight: 0.7,
         use_rerank: true,
         requires_after_previous: true,
+        min_frame_gap: 30,
         verify_camera_motion: true,
         motion_weight: 0.65,
       }],

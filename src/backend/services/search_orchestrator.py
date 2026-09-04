@@ -571,11 +571,18 @@ class SearchService:
             default_text_weight=text_weight,
             default_visual_weight=visual_weight,
         )
+        # An ordered successor may need to look past the strongest duplicate
+        # frames around E(i-1) before it reaches a genuinely later moment.
+        retrieval_candidates_per_event = (
+            max(candidates_per_event, 50)
+            if any(spec.requires_after_previous for spec in specs)
+            else candidates_per_event
+        )
         rankings = await asyncio.gather(
             *(
                 self._search_event_with_standard_kis(
                     spec,
-                    top_k=candidates_per_event,
+                    top_k=retrieval_candidates_per_event,
                     batch_ids=batch_ids,
                     video_ids=video_ids,
                     use_rerank=spec.use_rerank,
@@ -595,7 +602,7 @@ class SearchService:
 
         events: list[dict[str, Any]] = []
         for spec, hits in zip(specs, rankings):
-            for rank, hit in enumerate(hits, start=1):
+            for rank, hit in enumerate(hits[:candidates_per_event], start=1):
                 metadata = hit.metadata if isinstance(hit.metadata, dict) else {}
                 events.append(
                     {
@@ -640,6 +647,7 @@ class SearchService:
                                 "visual": spec.visual_weight,
                             },
                             "requires_after_previous": spec.requires_after_previous,
+                            "min_frame_gap": spec.min_frame_gap,
                             "verify_camera_motion": spec.verify_camera_motion,
                             "motion_weight": spec.motion_weight,
                         }
@@ -769,18 +777,23 @@ class SearchService:
             ]
             current_hits = ordered_rankings[index]
             current_max = max(float(hit.score) for hit in current_hits)
+            valid_hits: list[SearchHit] = []
             for hit in current_hits:
                 position = self._kis_frame_index(hit.frame_id, hit.metadata)
                 relation_score = 0.0
                 matched_previous_position: int | None = None
                 for previous_position, previous_score in previous_candidates:
-                    if position <= previous_position:
+                    if position < previous_position + spec.min_frame_gap:
                         continue
                     compactness = 1.0 / (1.0 + (position - previous_position) / 1000.0)
                     candidate_score = previous_score * compactness
                     if candidate_score > relation_score:
                         relation_score = candidate_score
                         matched_previous_position = previous_position
+                # Do not retain the same/nearby frame as an E(i) candidate:
+                # when "after previous" is enabled, this is a hard rule.
+                if matched_previous_position is None:
+                    continue
                 relative_kis = float(hit.score) / current_max if current_max > 0 else 0.0
                 hit.score = current_max * (0.55 * relative_kis + 0.45 * relation_score)
                 hit.metadata["event_order"] = {
@@ -788,10 +801,12 @@ class SearchService:
                     "satisfies_order": matched_previous_position is not None,
                     "previous_event_id": specs[index - 1].event_id,
                     "previous_frame_index": matched_previous_position,
+                    "minimum_frame_gap": spec.min_frame_gap,
                     "score": round(relation_score, 8),
                 }
+                valid_hits.append(hit)
             ordered_rankings[index] = sorted(
-                current_hits,
+                valid_hits,
                 key=lambda hit: -float(hit.score),
             )
         return ordered_rankings
@@ -1033,6 +1048,7 @@ class SearchService:
                                 "visual": spec.visual_weight,
                             },
                             "requires_after_previous": spec.requires_after_previous,
+                            "min_frame_gap": spec.min_frame_gap,
                             "verify_camera_motion": spec.verify_camera_motion,
                             "motion_weight": spec.motion_weight,
                         }

@@ -263,6 +263,7 @@ class TemporalEventOptions(BaseModel):
     visual_weight: float = Field(default=0.5, ge=0.0, le=1.0)
     use_rerank: bool = False
     requires_after_previous: bool = False
+    min_frame_gap: int = Field(default=30, ge=1, le=3600)
     verify_camera_motion: bool = False
     motion_weight: float = Field(default=0.7, ge=0.0, le=1.0)
 
