@@ -228,10 +228,25 @@ class TextSearchRequest(BaseModel):
         default=False,
         description="Call Gemini to re-rank the retrieved results.",
     )
+    verify_camera_motion: bool = Field(
+        default=False,
+        description="Re-rank KIS finalists with camera-motion verification.",
+    )
+    camera_motion_query: str = Field(
+        default="",
+        max_length=1000,
+        description="Camera/shot motion only; query remains the visual KIS target.",
+    )
+    motion_weight: float = Field(default=0.7, ge=0.0, le=1.0)
 
     @field_validator("query")
     @classmethod
     def normalize_query(cls, value: str) -> str:
+        return " ".join(value.split())
+
+    @field_validator("camera_motion_query")
+    @classmethod
+    def normalize_camera_motion_query(cls, value: str) -> str:
         return " ".join(value.split())
 
     @field_validator("batch_ids", mode="before")

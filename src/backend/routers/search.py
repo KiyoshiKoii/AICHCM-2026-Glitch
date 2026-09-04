@@ -33,6 +33,9 @@ async def search_text(
         text_weight=body.text_weight,
         visual_weight=body.visual_weight,
         asr_weight=body.asr_weight,
+        verify_camera_motion=body.verify_camera_motion,
+        camera_motion_query=body.camera_motion_query,
+        motion_weight=body.motion_weight,
         batch_ids=body.batch_ids,
         video_ids=body.video_ids,
     )

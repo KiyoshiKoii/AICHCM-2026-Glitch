@@ -223,6 +223,9 @@ class SearchService:
         text_weight: float = 0.5,
         visual_weight: float = 0.5,
         asr_weight: float = 0.0,
+        verify_camera_motion: bool = False,
+        camera_motion_query: str = "",
+        motion_weight: float = 0.7,
         batch_ids: list[str] | None = None,
         video_ids: list[str] | None = None,
     ) -> TextSearchResponse:
@@ -252,10 +255,12 @@ class SearchService:
             ocr_queries = []
             program_queries = []
 
+        motion_description = " ".join((camera_motion_query or query).split())
+
         try:
-            # The visual service is Qwen-only and intentionally receives the
-            # complete raw user wording. Gemini parsing above remains for the
-            # semantic/Elasticsearch route and optional Gemini reranking.
+            # The visual/caption query and camera-motion query are intentionally
+            # separate. Qwen/Elasticsearch build the candidate pool from the
+            # visible target; OpenCV consumes only the optional motion wording.
             tasks: dict[str, Any] = {
                 "dev1": self.dev1.search_text(
                     {
@@ -350,6 +355,23 @@ class SearchService:
             
             hit.video_name = video_name
             hit.frame_index = true_frame_idx if true_frame_idx is not None else frame_index
+
+        if verify_camera_motion:
+            motion_spec = KISQuery(
+                event_id="KIS",
+                description=motion_description,
+                visual_prompt=query,
+                prompt_variants=(),
+                semantic_keywords=(query,),
+                verify_camera_motion=True,
+                motion_weight=motion_weight,
+            )
+            merged_hits = await self._apply_camera_motion_verification(
+                motion_spec,
+                merged_hits,
+                max_videos=30,
+                max_anchors=1,
+            )
             
         # Execute LLM Reranking on Top 100
         llm_reranked_results = None
@@ -695,6 +717,7 @@ class SearchService:
         hits: list[SearchHit],
         *,
         max_videos: int = 10,
+        max_anchors: int = 3,
     ) -> list[SearchHit]:
         """Re-rank only a small KIS finalist pool for one configured event."""
 
@@ -717,7 +740,9 @@ class SearchService:
             return hits
 
         async def verify(video_id: str):
-            candidates = sorted(by_video[video_id], key=lambda hit: -float(hit.score))[:3]
+            candidates = sorted(by_video[video_id], key=lambda hit: -float(hit.score))[
+                :max_anchors
+            ]
             frame_indices = [
                 hit.frame_index
                 if isinstance(hit.frame_index, int)
@@ -770,7 +795,11 @@ class SearchService:
             previous_max = max(float(hit.score) for hit in previous_hits)
             previous_candidates = [
                 (
-                    self._kis_frame_index(hit.frame_id, hit.metadata),
+                    (
+                        hit.frame_index
+                        if isinstance(hit.frame_index, int)
+                        else self._kis_frame_index(hit.frame_id, hit.metadata)
+                    ),
                     float(hit.score) / previous_max if previous_max > 0 else 0.0,
                 )
                 for hit in previous_hits[:10]
@@ -779,7 +808,11 @@ class SearchService:
             current_max = max(float(hit.score) for hit in current_hits)
             valid_hits: list[SearchHit] = []
             for hit in current_hits:
-                position = self._kis_frame_index(hit.frame_id, hit.metadata)
+                position = (
+                    hit.frame_index
+                    if isinstance(hit.frame_index, int)
+                    else self._kis_frame_index(hit.frame_id, hit.metadata)
+                )
                 relation_score = 0.0
                 matched_previous_position: int | None = None
                 for previous_position, previous_score in previous_candidates:

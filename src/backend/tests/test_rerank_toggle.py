@@ -74,6 +74,19 @@ def test_text_search_request_disables_rerank_by_default():
     assert request.text_weight == 0.5
     assert request.visual_weight == 0.5
     assert request.asr_weight == 0.0
+    assert request.verify_camera_motion is False
+    assert request.camera_motion_query == ""
+
+
+def test_text_search_request_normalizes_separate_camera_motion_query():
+    request = TextSearchRequest(
+        query="nguyên liệu hải sản",
+        verify_camera_motion=True,
+        camera_motion_query="  máy quay chéo lên   và dừng tại cảnh đích  ",
+    )
+
+    assert request.query == "nguyên liệu hải sản"
+    assert request.camera_motion_query == "máy quay chéo lên và dừng tại cảnh đích"
 
 
 def test_text_search_request_rejects_zero_fusion_weights():
@@ -214,7 +227,6 @@ async def test_search_runs_gemini_reranking_when_enabled():
 
 
 @pytest.mark.asyncio
-@pytest.mark.asyncio
 async def test_qwen_visual_pipeline_always_uses_raw_user_query():
     dev1 = FakePipeline()
     service = SearchService(
@@ -230,6 +242,45 @@ async def test_qwen_visual_pipeline_always_uses_raw_user_query():
     )
 
     assert dev1.calls[0]["visual_prompt"] == "nguyên câu truy vấn dài của người dùng"
+
+
+@pytest.mark.asyncio
+async def test_motion_search_keeps_visual_and_motion_inputs_separate():
+    dev1 = FakePipeline()
+    dev2 = FakePipeline()
+    service = SearchService(
+        settings=Settings(),
+        parser=FakeParser(),
+        dev1=dev1,
+        dev2=dev2,
+    )
+    recorded: dict[str, object] = {}
+
+    async def record_motion(spec, hits, **kwargs):
+        recorded["description"] = spec.description
+        recorded["visual_prompt"] = spec.visual_prompt
+        recorded["kwargs"] = kwargs
+        return hits
+
+    service._apply_camera_motion_verification = record_motion
+    visual_query = "nguyên liệu hải sản"
+    motion_query = "máy quay chéo lên và kết thúc tại cảnh đích"
+
+    await service.search_text(
+        visual_query,
+        10,
+        use_rerank=False,
+        verify_camera_motion=True,
+        camera_motion_query=motion_query,
+    )
+
+    assert dev1.calls[0]["visual_prompt"] == "nguyên liệu hải sản"
+    assert dev2.calls[0]["keywords"][0] == "nguyên liệu hải sản"
+    assert recorded == {
+        "description": motion_query,
+        "visual_prompt": "nguyên liệu hải sản",
+        "kwargs": {"max_videos": 30, "max_anchors": 1},
+    }
 
 
 @pytest.mark.asyncio
