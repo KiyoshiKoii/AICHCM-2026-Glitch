@@ -120,6 +120,31 @@ describe('VideoFrameModal', () => {
     pause.mockRestore();
   });
 
+  it('opens direct video lookup at an exact native video frame', async () => {
+    const pause = vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
+    render(
+      <VideoFrameModal
+        result={{
+          ...result,
+          frame_id: 'L26_V001_f0001',
+          frame_index: 103,
+          metadata: { seek_frame_index: 103 },
+        }}
+        onClose={vi.fn()}
+      />,
+    );
+
+    const video = document.querySelector('video');
+    Object.defineProperty(video, 'readyState', { configurable: true, value: 1 });
+    fireEvent.loadedMetadata(video);
+
+    await waitFor(() => expect(video.currentTime).toBeCloseTo(4.12));
+    expect(screen.getByText('103', { selector: '.video-frame-readout strong' })).toBeInTheDocument();
+    expect(screen.getByText('Frame 103', { selector: '.video-frame-header span' })).toBeInTheDocument();
+    expect(pause).toHaveBeenCalled();
+    pause.mockRestore();
+  });
+
   it('closes when Escape is pressed', async () => {
     const onClose = vi.fn();
     render(<VideoFrameModal result={result} onClose={onClose} />);

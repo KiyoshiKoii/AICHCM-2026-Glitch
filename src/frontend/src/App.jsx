@@ -189,14 +189,19 @@ function App() {
     }
   };
 
-  const openVideoSearch = ({ batchId, videoId }) => {
+  const openVideoSearch = ({ batchId, videoId, frameIndex = null }) => {
     const normalizedVideoId = `${batchId}_${videoId}`;
-    const frameId = `${normalizedVideoId}_f0001`;
+    const timelineAnchorId = `${normalizedVideoId}_f0001`;
+    const hasRequestedFrame = Number.isInteger(frameIndex) && frameIndex >= 0;
     activeSearchController.current?.abort();
     activeSearchController.current = null;
     setIsLoading(false);
     setCurrentPage(1);
-    setLastQuery({ mode: 'video-search', videoId: normalizedVideoId });
+    setLastQuery({
+      mode: 'video-search',
+      videoId: normalizedVideoId,
+      frameIndex: hasRequestedFrame ? frameIndex : null,
+    });
     setVqaQuestion(null);
     setFrameContext(null);
     setTemporalVideoCandidates([]);
@@ -204,11 +209,13 @@ function App() {
     setLlmResults([]);
     setResults([]);
     setSelectedFrame({
-      frame_id: frameId,
+      frame_id: timelineAnchorId,
       video_name: normalizedVideoId,
-      frame_index: 1,
-      thumbnail_url: `/media/thumbnails/${frameId}.jpg`,
-      metadata: { timestamp_ms: 0, seek_timestamp_ms: 0 },
+      frame_index: hasRequestedFrame ? frameIndex : 0,
+      thumbnail_url: `/media/thumbnails/${timelineAnchorId}.jpg`,
+      metadata: hasRequestedFrame
+        ? { seek_frame_index: frameIndex }
+        : { timestamp_ms: 0, seek_timestamp_ms: 0 },
     });
   };
 

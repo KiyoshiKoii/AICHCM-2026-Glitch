@@ -84,6 +84,9 @@ function VideoFrameModal({ result, onClose }) {
   const [activeFrame, setActiveFrame] = useState(result);
   const [playbackFrame, setPlaybackFrame] = useState(nativeFrame(result));
   const [playbackTime, setPlaybackTime] = useState(0);
+  const requestedNativeFrame = Number(result?.metadata?.seek_frame_index);
+  const hasRequestedNativeFrame = Number.isInteger(requestedNativeFrame)
+    && requestedNativeFrame >= 0;
 
   const videoId = videoIdFromResult(result);
   const frames = useMemo(() => {
@@ -112,7 +115,14 @@ function VideoFrameModal({ result, onClose }) {
         const nextContext = response?.data || null;
         setContext(nextContext);
         if (nextContext?.center_frame) {
-          setActiveFrame({ ...result, ...nextContext.center_frame });
+          setActiveFrame(hasRequestedNativeFrame
+            ? {
+                ...result,
+                ...nextContext.center_frame,
+                frame_id: null,
+                frame_index: requestedNativeFrame,
+              }
+            : { ...result, ...nextContext.center_frame });
         }
       })
       .catch(() => {
@@ -146,12 +156,23 @@ function VideoFrameModal({ result, onClose }) {
   const seekInitialFrame = () => {
     if (initialSeekDoneRef.current) return;
     const exactSeekTimestamp = Number(result?.metadata?.seek_timestamp_ms);
+    const timelineFps = Number(context?.center_frame?.fps || result?.metadata?.fps);
+    const requestedFrameTimestamp = hasRequestedNativeFrame
+      && Number.isFinite(timelineFps)
+      && timelineFps > 0
+      ? requestedNativeFrame * 1_000 / timelineFps
+      : Number.NaN;
     const initialFrame = {
       ...result,
       ...(context?.center_frame || {}),
-      timestamp_ms: Number.isFinite(exactSeekTimestamp)
-        ? exactSeekTimestamp
-        : context?.center_frame?.timestamp_ms ?? result?.metadata?.timestamp_ms,
+      ...(hasRequestedNativeFrame
+        ? { frame_id: null, frame_index: requestedNativeFrame, fps: timelineFps }
+        : {}),
+      timestamp_ms: Number.isFinite(requestedFrameTimestamp)
+        ? requestedFrameTimestamp
+        : Number.isFinite(exactSeekTimestamp)
+          ? exactSeekTimestamp
+          : context?.center_frame?.timestamp_ms ?? result?.metadata?.timestamp_ms,
     };
     const timestampMs = Number(initialFrame.timestamp_ms);
     if (!Number.isFinite(timestampMs)) return;
@@ -293,7 +314,7 @@ function VideoFrameModal({ result, onClose }) {
         <header className="video-frame-header">
           <div>
             <strong>{videoId}</strong>
-            <span>{result.frame_id}</span>
+            <span>{hasRequestedNativeFrame ? `Frame ${requestedNativeFrame}` : result.frame_id}</span>
           </div>
           <button type="button" className="video-frame-close" onClick={onClose} aria-label="Đóng video">
             ×
