@@ -66,6 +66,36 @@ describe('SearchBar', () => {
     );
   });
 
+  it('passes the optional camera-motion verifier for a regular KIS search', async () => {
+    const user = userEvent.setup();
+    const onSearch = vi.fn();
+    render(<SearchBar onSearch={onSearch} />);
+
+    await user.type(getTextInput(), 'nguyên liệu hải sản');
+    await user.click(screen.getByRole('checkbox', { name: /verify shot transition/i }));
+    await user.type(
+      screen.getByRole('textbox', { name: /camera motion query/i }),
+      'máy quay chéo lên và kết thúc tại cảnh đích',
+    );
+    fireEvent.change(screen.getByRole('slider', { name: /kis camera motion weight/i }), {
+      target: { value: '60' },
+    });
+    await user.click(getSubmitButton());
+
+    expect(onSearch).toHaveBeenCalledWith(
+      'nguyên liệu hải sản',
+      false,
+      {
+        textWeight: 0.5,
+        visualWeight: 0.5,
+        verifyCameraMotion: true,
+        cameraMotionQuery: 'máy quay chéo lên và kết thúc tại cảnh đích',
+        motionWeight: 0.6,
+      },
+      { batchIds: [], videoIds: [] },
+    );
+  });
+
   it('does not call onSearch when the query is empty or whitespace-only', async () => {
     const user = userEvent.setup();
     const onSearch = vi.fn();

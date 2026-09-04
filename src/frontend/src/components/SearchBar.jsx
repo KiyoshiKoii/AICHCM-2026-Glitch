@@ -56,6 +56,9 @@ function SearchBar({
   const [useRerank, setUseRerank] = useState(false);
   const [textWeightPercent, setTextWeightPercent] = useState(50);
   const [kisFusionWeightPercent, setKisFusionWeightPercent] = useState(65);
+  const [verifyKisCameraMotion, setVerifyKisCameraMotion] = useState(false);
+  const [kisCameraMotionQuery, setKisCameraMotionQuery] = useState('');
+  const [kisMotionWeightPercent, setKisMotionWeightPercent] = useState(70);
   const [temporalContext, setTemporalContext] = useState('');
   const [temporalEvents, setTemporalEvents] = useState([createTemporalEvent()]);
   const [summaryWeightPercent, setSummaryWeightPercent] = useState(75);
@@ -135,6 +138,8 @@ function SearchBar({
 
     const trimmed = query.trim();
     if (!trimmed) return;
+    const trimmedMotionQuery = kisCameraMotionQuery.trim();
+    if (activeTab === 'text' && verifyKisCameraMotion && !trimmedMotionQuery) return;
     const isKisAsrFusion = activeTab === 'kis-asr';
     const kisWeight = isKisAsrFusion ? kisFusionWeightPercent / 100 : 1;
     const asrWeight = isKisAsrFusion ? 1 - kisWeight : 0;
@@ -143,13 +148,20 @@ function SearchBar({
       useRerank,
       isKisAsrFusion
         ? {
-            textWeight: (textWeightPercent / 100) * kisWeight,
-            visualWeight: ((100 - textWeightPercent) / 100) * kisWeight,
-            asrWeight,
-          }
+          textWeight: (textWeightPercent / 100) * kisWeight,
+          visualWeight: ((100 - textWeightPercent) / 100) * kisWeight,
+          asrWeight,
+        }
         : {
             textWeight: textWeightPercent / 100,
             visualWeight: (100 - textWeightPercent) / 100,
+            ...(verifyKisCameraMotion
+              ? {
+                verifyCameraMotion: true,
+                cameraMotionQuery: trimmedMotionQuery,
+                motionWeight: kisMotionWeightPercent / 100,
+              }
+              : {}),
           },
       filters,
     );
@@ -196,7 +208,9 @@ function SearchBar({
               ? 'Event description'
               : activeTab === 'asr'
                 ? 'Nội dung lời thoại'
-                : 'Search query'}
+                : activeTab === 'text'
+                  ? 'Nội dung ảnh / frame cần tìm'
+                  : 'Search query'}
           </span>
           <textarea
             className="search-textarea"
@@ -570,6 +584,58 @@ function SearchBar({
                 <span>KIS visual + caption</span>
                 <span>ASR</span>
               </div>
+            </>
+          )}
+          {activeTab === 'text' && (
+            <>
+              <label className="search-rerank-toggle temporal-event-toggle kis-motion-toggle">
+                <input
+                  type="checkbox"
+                  checked={verifyKisCameraMotion}
+                  onChange={(event) => setVerifyKisCameraMotion(event.target.checked)}
+                />
+                <span>Verify shot transition / camera motion</span>
+              </label>
+              {verifyKisCameraMotion && (
+                <>
+                  <label className="search-field-label kis-motion-query-field">
+                    <span>Camera / shot motion</span>
+                    <textarea
+                      className="search-textarea"
+                      rows={3}
+                      value={kisCameraMotionQuery}
+                      onChange={(event) => setKisCameraMotionQuery(event.target.value)}
+                      onKeyDown={handleKeyDown}
+                      aria-label="Camera motion query"
+                      required
+                      placeholder="VD: máy quay chéo lên và kết thúc tại cảnh đích"
+                    />
+                    <small>Ô Search query phía trên chỉ mô tả nội dung ảnh cần tìm.</small>
+                  </label>
+                  <div className="fusion-weight-control temporal-motion-weight-control kis-motion-weight-control">
+                    <div className="fusion-weight-header">
+                      <span>KIS / Camera motion</span>
+                      <span>
+                        KIS {100 - kisMotionWeightPercent}% / Motion {kisMotionWeightPercent}%
+                      </span>
+                    </div>
+                    <input
+                      className="fusion-weight-slider"
+                      type="range"
+                      min="0"
+                      max="100"
+                      step="5"
+                      value={kisMotionWeightPercent}
+                      onChange={(event) => setKisMotionWeightPercent(Number(event.target.value))}
+                      aria-label="KIS camera motion weight"
+                    />
+                    <div className="fusion-weight-scale" aria-hidden="true">
+                      <span>KIS visual + caption</span>
+                      <span>Camera motion</span>
+                    </div>
+                  </div>
+                </>
+              )}
             </>
           )}
         </div>

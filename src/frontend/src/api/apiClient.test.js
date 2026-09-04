@@ -48,6 +48,31 @@ describe('temporal API client', () => {
     });
   });
 
+  it('serializes optional camera-motion verification for KIS search', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(mockResponse());
+    vi.stubGlobal('fetch', fetchMock);
+
+    await searchByText(
+      'nguyên liệu hải sản',
+      100,
+      false,
+      {
+        textWeight: 0.5,
+        visualWeight: 0.5,
+        verifyCameraMotion: true,
+        cameraMotionQuery: 'máy quay chéo lên và kết thúc tại cảnh đích',
+        motionWeight: 0.6,
+      },
+    );
+
+    const payload = JSON.parse(fetchMock.mock.calls[0][1].body);
+    expect(payload).toMatchObject({
+      verify_camera_motion: true,
+      camera_motion_query: 'máy quay chéo lên và kết thúc tại cảnh đích',
+      motion_weight: 0.6,
+    });
+  });
+
   it('serializes per-event options for candidate-video ranking', async () => {
     const fetchMock = vi.fn().mockResolvedValue(mockResponse());
     vi.stubGlobal('fetch', fetchMock);
