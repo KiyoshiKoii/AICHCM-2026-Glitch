@@ -21,6 +21,13 @@ const normalizeVideoSuffix = (value) => {
   return `V${String(Number(digits)).padStart(3, '0')}`;
 };
 
+const normalizeNativeFrame = (value) => {
+  const normalized = String(value || '').trim();
+  if (!normalized) return null;
+  if (!/^\d{1,9}$/.test(normalized)) return undefined;
+  return Number(normalized);
+};
+
 const createTemporalEvent = () => ({
   description: '',
   textWeightPercent: 50,
@@ -54,6 +61,7 @@ function SearchBar({
   const [temporalSearchMode, setTemporalSearchMode] = useState('summary-kis');
   const [videoBatchInput, setVideoBatchInput] = useState('L21');
   const [videoIdInput, setVideoIdInput] = useState('001');
+  const [videoFrameInput, setVideoFrameInput] = useState('');
 
   const handleSubmit = (event) => {
     event?.preventDefault();
@@ -68,8 +76,9 @@ function SearchBar({
     if (activeTab === 'video') {
       const batchId = normalizeBatchId(videoBatchInput);
       const videoId = normalizeVideoSuffix(videoIdInput);
-      if (!batchId || !videoId) return;
-      onVideoSearch?.({ batchId, videoId });
+      const frameIndex = normalizeNativeFrame(videoFrameInput);
+      if (!batchId || !videoId || frameIndex === undefined) return;
+      onVideoSearch?.({ batchId, videoId, frameIndex });
       return;
     }
     if (activeTab === 'temporal') {
@@ -225,9 +234,26 @@ function SearchBar({
               aria-label="Video id"
             />
           </label>
+          <label className="search-field-label video-search-frame-field">
+            <span>Frame (optional)</span>
+            <input
+              className="video-search-input"
+              type="text"
+              inputMode="numeric"
+              value={videoFrameInput}
+              onChange={(event) => setVideoFrameInput(event.target.value)}
+              placeholder="e.g. 2450"
+              aria-label="Video frame"
+            />
+          </label>
           <div className="video-search-preview" aria-live="polite">
             <span>Target</span>
-            <strong>{normalizeBatchId(videoBatchInput) || 'L--'}_{normalizeVideoSuffix(videoIdInput) || 'V---'}</strong>
+            <strong>
+              {normalizeBatchId(videoBatchInput) || 'L--'}_{normalizeVideoSuffix(videoIdInput) || 'V---'}
+              {normalizeNativeFrame(videoFrameInput) === null
+                ? ' · first frame'
+                : ` · frame ${normalizeNativeFrame(videoFrameInput) ?? '—'}`}
+            </strong>
           </div>
         </section>
       )}

@@ -157,12 +157,15 @@
 }
 
 .search-tabs {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 6px;
+  width: 100%;
 }
 
 .search-tab {
-  flex: 1;
+  min-width: 0;
+  width: 100%;
   font: inherit;
   font-size: 13px;
   font-weight: 600;
@@ -223,6 +226,10 @@
 .video-search-input:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+.video-search-frame-field {
+  grid-column: 1 / -1;
 }
 
 .video-search-preview {

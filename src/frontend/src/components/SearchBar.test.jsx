@@ -112,6 +112,41 @@ describe('SearchBar', () => {
     );
   });
 
+  it('opens a requested video at the specified frame', async () => {
+    const user = userEvent.setup();
+    const onVideoSearch = vi.fn();
+    render(<SearchBar onVideoSearch={onVideoSearch} />);
+
+    await user.click(screen.getByRole('tab', { name: 'Video Search' }));
+    await user.clear(screen.getByRole('textbox', { name: 'Video batch' }));
+    await user.type(screen.getByRole('textbox', { name: 'Video batch' }), '26');
+    await user.clear(screen.getByRole('textbox', { name: 'Video id' }));
+    await user.type(screen.getByRole('textbox', { name: 'Video id' }), '74');
+    await user.type(screen.getByRole('textbox', { name: 'Video frame' }), '103');
+    await user.click(screen.getByRole('button', { name: /video/i }));
+
+    expect(onVideoSearch).toHaveBeenCalledWith({
+      batchId: 'L26',
+      videoId: 'V074',
+      frameIndex: 103,
+    });
+  });
+
+  it('defaults direct video lookup to the first frame', async () => {
+    const user = userEvent.setup();
+    const onVideoSearch = vi.fn();
+    render(<SearchBar onVideoSearch={onVideoSearch} />);
+
+    await user.click(screen.getByRole('tab', { name: 'Video Search' }));
+    await user.click(screen.getByRole('button', { name: /video/i }));
+
+    expect(onVideoSearch).toHaveBeenCalledWith({
+      batchId: 'L21',
+      videoId: 'V001',
+      frameIndex: null,
+    });
+  });
+
   it('calls onVqaSearch with description and question in VQA mode', async () => {
     const user = userEvent.setup();
     const onVqaSearch = vi.fn();
